@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 97%;
+    --foreground: 210 11% 25%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 210 11% 25%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 11% 25%;
+    
+    --primary: 151 41% 30%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 151 41% 40%;
+    --secondary-foreground: 0 0% 100%;
+    
+    --muted: 210 11% 96%;
+    --muted-foreground: 210 11% 40%;
+    
+    --accent: 151 41% 60%;
+    --accent-foreground: 210 11% 25%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 210 11% 90%;
+    --input: 210 11% 90%;
+    --ring: 151 41% 40%;
+    
+    --radius: 0.5rem;
+
+    --chart-1: 151 41% 30%;
+    --chart-2: 151 41% 40%;
+    --chart-3: 151 41% 50%;
+    --chart-4: 151 41% 60%;
+    --chart-5: 151 41% 70%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold;
+  }
+}
+
+@layer components {
+  .form-progress-bar .active {
+    @apply bg-primary text-white;
+  }
+  
+  .form-progress-bar .completed {
+    @apply bg-accent text-white;
+  }
+}
