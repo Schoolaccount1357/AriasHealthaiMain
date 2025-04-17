@@ -44,8 +44,8 @@ export function PlatformPreview() {
           <div className="bg-muted rounded-lg p-4 border border-border mb-4">
             <div className="aspect-w-16 aspect-h-9 mb-4">
               <img 
-                src="https://images.unsplash.com/photo-1591115765373-5207764f72e4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=450&q=80" 
-                alt="Video chat interface preview" 
+                src="https://images.unsplash.com/photo-1499540633125-484965b60031?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=450&q=80" 
+                alt="Video chat interface with diverse veterans" 
                 className="rounded-lg object-cover w-full h-48" 
               />
             </div>

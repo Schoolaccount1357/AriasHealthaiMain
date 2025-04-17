@@ -25,8 +25,8 @@ export function Hero() {
           </div>
           <div className="md:w-1/2 bg-secondary">
             <img 
-              src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=600&q=80" 
-              alt="Veterans supporting each other" 
+              src="https://images.unsplash.com/photo-1566766292186-246eae775a64?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=600&q=80" 
+              alt="Diverse group of veterans" 
               className="w-full h-full object-cover"
             />
           </div>
