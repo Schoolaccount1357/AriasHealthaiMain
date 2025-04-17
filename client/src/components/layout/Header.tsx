@@ -22,7 +22,7 @@ export function Header() {
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
             <Users className="h-8 w-8 text-primary" />
-            <span className="ml-2 text-xl font-semibold text-primary">Veterans Connect</span>
+            <span className="ml-2 text-xl font-semibold text-primary">AriasHealth.ai</span>
           </div>
           
           {/* Desktop Navigation */}

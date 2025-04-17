@@ -17,80 +17,60 @@ export interface IStorage {
   updateVeteranFormStatus(id: number, status: string): Promise<Veteran | undefined>;
 }
 
-export class MemStorage implements IStorage {
-  private users: Map<number, User>;
-  private veteranForms: Map<number, Veteran>;
-  private userCurrentId: number;
-  private veteranCurrentId: number;
-
-  constructor() {
-    this.users = new Map();
-    this.veteranForms = new Map();
-    this.userCurrentId = 1;
-    this.veteranCurrentId = 1;
-  }
-
+export class DatabaseStorage implements IStorage {
   // User operations
   async getUser(id: number): Promise<User | undefined> {
-    return this.users.get(id);
+    const [user] = await db.select().from(users).where(eq(users.id, id));
+    return user || undefined;
   }
 
   async getUserByUsername(username: string): Promise<User | undefined> {
-    return Array.from(this.users.values()).find(
-      (user) => user.username === username,
-    );
+    const [user] = await db.select().from(users).where(eq(users.username, username));
+    return user || undefined;
   }
 
   async createUser(insertUser: InsertUser): Promise<User> {
-    const id = this.userCurrentId++;
-    const user: User = { ...insertUser, id };
-    this.users.set(id, user);
+    const [user] = await db
+      .insert(users)
+      .values(insertUser)
+      .returning();
     return user;
   }
 
   // Veteran form operations
   async createVeteranForm(form: InsertVeteran): Promise<Veteran> {
-    const id = this.veteranCurrentId++;
-    const createdAt = new Date();
-    const status = "pending";
-    
-    const veteran: Veteran = { 
-      ...form, 
-      id, 
-      createdAt, 
-      status 
-    };
-    
-    this.veteranForms.set(id, veteran);
+    const [veteran] = await db
+      .insert(veterans)
+      .values({
+        ...form,
+        status: "pending"
+      })
+      .returning();
     return veteran;
   }
 
   async getVeteranForm(id: number): Promise<Veteran | undefined> {
-    return this.veteranForms.get(id);
+    const [veteran] = await db.select().from(veterans).where(eq(veterans.id, id));
+    return veteran || undefined;
   }
 
   async getVeteranFormByEmail(email: string): Promise<Veteran | undefined> {
-    return Array.from(this.veteranForms.values()).find(
-      (form) => form.email === email
-    );
+    const [veteran] = await db.select().from(veterans).where(eq(veterans.email, email));
+    return veteran || undefined;
   }
 
   async getAllVeteranForms(): Promise<Veteran[]> {
-    return Array.from(this.veteranForms.values());
+    return await db.select().from(veterans);
   }
 
   async updateVeteranFormStatus(id: number, status: string): Promise<Veteran | undefined> {
-    const form = await this.getVeteranForm(id);
-    if (!form) return undefined;
-    
-    const updatedForm: Veteran = {
-      ...form,
-      status
-    };
-    
-    this.veteranForms.set(id, updatedForm);
-    return updatedForm;
+    const [updatedVeteran] = await db
+      .update(veterans)
+      .set({ status })
+      .where(eq(veterans.id, id))
+      .returning();
+    return updatedVeteran || undefined;
   }
 }
 
-export const storage = new MemStorage();
+export const storage = new DatabaseStorage();

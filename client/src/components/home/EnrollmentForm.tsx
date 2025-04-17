@@ -179,13 +179,42 @@ export function EnrollmentForm() {
   // Handle final form submission
   const handleSubmit = () => {
     const form = getActiveForm();
-    form.handleSubmit((finalStepData) => {
+    form.handleSubmit((finalStepData: any) => {
       // Combine all form data
-      const completeFormData: EnrollmentFormData = {
+      const formValues = {
         ...basicInfoForm.getValues(),
         ...militaryBackgroundForm.getValues(),
         ...healthHistoryForm.getValues(),
         ...finalStepData
+      };
+      
+      // Ensure all required fields are present
+      const completeFormData: EnrollmentFormData = {
+        // Basic Info
+        firstName: formValues.firstName,
+        lastName: formValues.lastName,
+        email: formValues.email,
+        phone: formValues.phone,
+        dob: formValues.dob,
+        gender: formValues.gender,
+        
+        // Military Background
+        branch: formValues.branch,
+        rank: formValues.rank,
+        serviceYears: formValues.serviceYears,
+        deploymentCount: formValues.deploymentCount,
+        
+        // Health History
+        sudsHistory: formValues.sudsHistory,
+        currentStatus: formValues.currentStatus,
+        treatmentHistory: formValues.treatmentHistory,
+        mentalHealthConditions: formValues.mentalHealthConditions,
+        
+        // Preferences
+        communicationPreference: formValues.communicationPreference,
+        goals: formValues.goals,
+        peerPreferences: formValues.peerPreferences,
+        additionalInfo: formValues.additionalInfo
       };
       
       submitFormMutation.mutate(completeFormData);
