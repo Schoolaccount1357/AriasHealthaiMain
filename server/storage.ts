@@ -1,4 +1,6 @@
 import { veterans, type Veteran, type InsertVeteran, users, type User, type InsertUser } from "@shared/schema";
+import { db } from "./db";
+import { eq } from "drizzle-orm";
 
 // Interface for storage operations
 export interface IStorage {

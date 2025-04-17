@@ -56,16 +56,16 @@ export interface MilitaryBackgroundFormData {
 
 export interface HealthHistoryFormData {
   sudsHistory: string;
-  treatmentHistory: string;
+  treatmentHistory?: string;
   currentStatus: string;
-  mentalHealthConditions: string;
+  mentalHealthConditions?: string;
 }
 
 export interface PreferencesFormData {
   communicationPreference: string;
-  peerPreferences: string;
+  peerPreferences?: string;
   goals: string;
-  additionalInfo: string;
+  additionalInfo?: string;
 }
 
 export type EnrollmentFormData = 

@@ -202,21 +202,34 @@ export function EnrollmentForm() {
         {formSteps.map((step) => (
           <button 
             key={step.id}
-            className={`flex-1 text-center py-3 font-medium text-sm ${
-              step.isActive ? 'active' : step.isCompleted ? 'completed' : 'text-muted-foreground'
+            className={`flex-1 text-center py-3 font-medium text-sm transition-all duration-200 ${
+              step.isActive 
+                ? 'text-primary border-b-2 border-primary' 
+                : step.isCompleted 
+                ? 'text-accent hover:text-primary hover:border-b-2 hover:border-primary' 
+                : 'text-muted-foreground hover:text-neutral-600'
             }`}
             onClick={() => {
-              // Only allow clicking on completed steps or the current active step
-              if (step.isCompleted || step.isActive) {
-                setFormSteps(prev => prev.map(s => 
-                  s.id === step.id ? { ...s, isActive: true } :
-                  { ...s, isActive: false }
-                ));
-                setCurrentStep(step.id);
-              }
+              // Make all steps interactive, but use validation to ensure data integrity
+              setFormSteps(prev => prev.map(s => 
+                s.id === step.id ? { ...s, isActive: true } :
+                { ...s, isActive: false }
+              ));
+              setCurrentStep(step.id);
             }}
           >
-            {step.id}. {step.title}
+            <div className="flex items-center justify-center">
+              <div className={`w-6 h-6 rounded-full mr-2 flex items-center justify-center text-xs ${
+                step.isCompleted 
+                  ? 'bg-primary text-white' 
+                  : step.isActive 
+                  ? 'bg-accent text-white' 
+                  : 'bg-muted text-foreground'
+              }`}>
+                {step.isCompleted ? '✓' : step.id}
+              </div>
+              {step.title}
+            </div>
           </button>
         ))}
       </div>

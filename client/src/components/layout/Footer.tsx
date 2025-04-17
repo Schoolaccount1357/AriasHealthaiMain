@@ -5,23 +5,23 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="bg-neutral-dark text-white">
+    <footer className="bg-primary text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Column 1 - About */}
           <div>
-            <h3 className="font-bold text-lg mb-4">Veterans Connect</h3>
-            <p className="text-neutral-lighter text-sm mb-4">
+            <h3 className="font-bold text-xl mb-4">Veterans Connect</h3>
+            <p className="text-white/80 text-sm mb-4">
               Supporting veterans through connection, community, and compassionate care.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-white hover:text-accent transition-colors" aria-label="Facebook">
+              <a href="#" className="text-white hover:text-white/80 transition-colors" aria-label="Facebook">
                 <Facebook className="h-6 w-6" />
               </a>
-              <a href="#" className="text-white hover:text-accent transition-colors" aria-label="Twitter">
+              <a href="#" className="text-white hover:text-white/80 transition-colors" aria-label="Twitter">
                 <Twitter className="h-6 w-6" />
               </a>
-              <a href="#" className="text-white hover:text-accent transition-colors" aria-label="Instagram">
+              <a href="#" className="text-white hover:text-white/80 transition-colors" aria-label="Instagram">
                 <Instagram className="h-6 w-6" />
               </a>
             </div>
@@ -30,41 +30,41 @@ export function Footer() {
           {/* Column 2 - Resources */}
           <div>
             <h3 className="font-bold text-lg mb-4">Resources</h3>
-            <ul className="space-y-2 text-sm text-neutral-lighter">
-              <li><a href="#" className="hover:text-accent transition-colors">SUDS Information</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">VA Resources</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">Recovery Support</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">Crisis Help</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">Family Support</a></li>
+            <ul className="space-y-2 text-sm text-white/90">
+              <li><a href="#" className="hover:text-white transition-colors">SUDS Information</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">VA Resources</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Recovery Support</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Crisis Help</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Family Support</a></li>
             </ul>
           </div>
           
           {/* Column 3 - Program */}
           <div>
             <h3 className="font-bold text-lg mb-4">Program</h3>
-            <ul className="space-y-2 text-sm text-neutral-lighter">
-              <li><a href="#" className="hover:text-accent transition-colors">How It Works</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">Success Stories</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">Research & Outcomes</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">Partner With Us</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">Volunteer</a></li>
+            <ul className="space-y-2 text-sm text-white/90">
+              <li><a href="#" className="hover:text-white transition-colors">How It Works</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Success Stories</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Research & Outcomes</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Partner With Us</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Volunteer</a></li>
             </ul>
           </div>
           
           {/* Column 4 - Contact */}
           <div>
             <h3 className="font-bold text-lg mb-4">Contact</h3>
-            <ul className="space-y-2 text-sm text-neutral-lighter">
+            <ul className="space-y-2 text-sm text-white/90">
               <li className="flex items-start">
-                <Mail className="h-5 w-5 mr-2 text-accent" />
+                <Mail className="h-5 w-5 mr-2 text-white" />
                 <span>support@veteransconnect.org</span>
               </li>
               <li className="flex items-start">
-                <Phone className="h-5 w-5 mr-2 text-accent" />
+                <Phone className="h-5 w-5 mr-2 text-white" />
                 <span>1-800-555-VETS (8387)</span>
               </li>
               <li className="flex items-start">
-                <MapPin className="h-5 w-5 mr-2 text-accent" />
+                <MapPin className="h-5 w-5 mr-2 text-white" />
                 <span>123 Veterans Way<br />Washington, DC 20001</span>
               </li>
             </ul>
@@ -72,13 +72,13 @@ export function Footer() {
         </div>
         
         {/* Footer Bottom */}
-        <div className="mt-8 pt-8 border-t border-neutral text-center text-sm text-neutral-lighter">
+        <div className="mt-8 pt-8 border-t border-white/20 text-center text-sm text-white/80">
           <p>
             &copy; {currentYear} Veterans Connect. All rights reserved. | 
-            <Link href="/privacy-policy" className="hover:text-accent transition-colors ml-1 mr-1">
+            <Link href="/privacy-policy" className="text-white hover:text-white/80 transition-colors ml-1 mr-1 font-medium">
               Privacy Policy
             </Link> | 
-            <Link href="/terms-of-service" className="hover:text-accent transition-colors ml-1">
+            <Link href="/terms-of-service" className="text-white hover:text-white/80 transition-colors ml-1 font-medium">
               Terms of Service
             </Link>
           </p>
