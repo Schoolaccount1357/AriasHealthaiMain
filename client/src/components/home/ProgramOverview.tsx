@@ -4,24 +4,24 @@ export function ProgramOverview() {
   const programSteps: ProgramStep[] = [
     {
       id: 1,
-      title: "Complete the Pre-Enrollment Form",
-      description: "Fill out our secure questionnaire to help us understand your background and needs."
+      title: "Join the Waitlist",
+      description: "Sign up to be among the first to access AriasHealth.ai when we launch. No commitment required."
     },
     {
       id: 2,
-      title: "AI-Powered Peer Pairing",
-      description: "AriasHealth.ai's advanced NLP algorithms match you with peers who share similar military experiences and substance use recovery paths."
+      title: "Built For Veterans",
+      description: "Our platform is designed specifically for veterans transitioning out of service, recovering from trauma, or seeking supportive community."
     },
     {
       id: 3,
-      title: "Connect Through Video & Chat",
-      description: "Join secure group sessions or one-on-one conversations in our private platform designed for veterans."
+      title: "Privacy Commitment",
+      description: "Your data is protected with enterprise-grade security and HIPAA-compliant practices. Your privacy is our priority."
     }
   ];
 
   return (
     <section className="mb-12">
-      <h2 className="text-2xl font-bold mb-6 text-foreground">How AriasHealth.ai Works</h2>
+      <h2 className="text-2xl font-bold mb-6 text-foreground">Who It's For</h2>
       
       <div className="grid md:grid-cols-3 gap-6">
         {programSteps.map((step) => (

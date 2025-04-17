@@ -32,14 +32,19 @@ export function PlatformPreview() {
 
   return (
     <section className="mb-12">
-      <h2 className="text-2xl font-bold mb-6 text-foreground">AriasHealth.ai Matching Platform</h2>
+      <h2 className="text-2xl font-bold mb-6 text-foreground">Our Solution</h2>
       
+      <p className="mb-6 text-muted-foreground">
+        AriasHealth.ai uses AI to create safer spaces for real-time peer connection, anonymous reflection, and proactive support. No waitlists. No judgment.
+      </p>
+      
+      <h3 className="text-xl font-semibold mb-4">Key Features</h3>
       <div className="grid md:grid-cols-2 gap-8">
-        {/* Video Chat Preview */}
+        {/* Event-Based Group Video Support */}
         <div className="bg-white p-6 rounded-lg shadow">
           <h3 className="font-semibold text-lg mb-4 flex items-center">
             <PlayCircle className="h-5 w-5 mr-2 text-primary" />
-            Secure Video Chat
+            Event-Based Group Video Support
           </h3>
           <div className="bg-muted rounded-lg p-4 border border-border mb-4">
             <div className="aspect-w-16 aspect-h-9 mb-4">
@@ -81,47 +86,32 @@ export function PlatformPreview() {
             </div>
           </div>
           <p className="text-foreground">
-            Connect face-to-face with peers in a secure, HIPAA-compliant video environment designed specifically for veterans.
+            Connect face-to-face with peers in secure, HIPAA-compliant video sessions designed specifically for veterans dealing with substance use recovery.
           </p>
         </div>
         
-        {/* AI Matching Preview */}
+        {/* AI-Powered Features */}
         <div className="bg-white p-6 rounded-lg shadow">
           <h3 className="font-semibold text-lg mb-4 flex items-center">
             <Users className="h-5 w-5 mr-2 text-primary" />
-            AI-Powered Peer Pairing
+            AI-Powered Support Systems
           </h3>
           <div className="bg-muted rounded-lg p-4 border border-border mb-4">
-            {peerMatches.map((peer, index) => (
-              <div key={peer.id} className={index > 0 ? "mt-4" : ""}>
-                <div className="flex items-center mb-2">
-                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-medium mr-3">
-                    {peer.initial}
-                  </div>
-                  <div className="flex-1">
-                    <div className="text-sm font-semibold">{peer.name}</div>
-                    <div className="text-xs text-muted-foreground">{peer.branch} • {peer.matchPercentage}% Match</div>
-                  </div>
-                  <Button variant="default" size="sm" className="text-sm">
-                    Connect
-                  </Button>
-                </div>
-                
-                <div className="text-sm">
-                  <div className="font-medium mb-1">Matching Factors:</div>
-                  <div className="flex flex-wrap gap-2 mb-2">
-                    {peer.matchFactors.map((factor, idx) => (
-                      <Badge key={idx} variant="outline" className="bg-accent/20 text-secondary border-0 text-xs">
-                        {factor}
-                      </Badge>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
+            <div className="mb-4 border-b pb-3">
+              <h4 className="font-medium mb-2">Behavioral Pattern Recognition</h4>
+              <p className="text-sm text-muted-foreground">AI technology identifies patterns in your interactions and provides personalized support recommendations.</p>
+            </div>
+            <div className="mb-4 border-b pb-3">
+              <h4 className="font-medium mb-2">AI Moderation for Safer Conversations</h4>
+              <p className="text-sm text-muted-foreground">Our platform ensures all interactions remain supportive and constructive with real-time AI moderation.</p>
+            </div>
+            <div>
+              <h4 className="font-medium mb-2">Anonymous Journaling & Reflection</h4>
+              <p className="text-sm text-muted-foreground">Express yourself honestly with private journaling tools that provide insights and track your progress.</p>
+            </div>
           </div>
           <p className="text-foreground">
-            AriasHealth.ai's NLP-powered algorithm matches you with peers who have similar SUDS experiences, creating optimized connections for better recovery outcomes.
+            AriasHealth.ai combines advanced technology with human connection, creating a comprehensive support system for veterans in recovery.
           </p>
         </div>
       </div>

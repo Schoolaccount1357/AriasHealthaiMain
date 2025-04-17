@@ -19,7 +19,7 @@ export function Hero() {
               size="lg"
             >
               <Link href="#enrollment-form">
-                Enroll Now
+                Join the Waitlist
               </Link>
             </Button>
           </div>

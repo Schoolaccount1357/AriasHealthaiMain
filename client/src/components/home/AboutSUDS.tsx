@@ -4,25 +4,24 @@ import { ArrowRight } from "lucide-react";
 export function AboutSUDS() {
   return (
     <section className="mb-12 bg-white p-6 md:p-8 rounded-lg shadow-lg">
-      <h2 className="text-2xl font-bold mb-4 text-foreground">Understanding Substance Use Disorders</h2>
+      <h2 className="text-2xl font-bold mb-4 text-foreground">Problem Statement</h2>
       
       <div className="prose max-w-none">
         <p className="mb-4">
-          Substance Use Disorders (SUDS) affect many veterans who have served our country. 
-          These conditions can develop from various factors including:
+          Many Veterans face isolation, stigma, and barriers to care — especially in substance use recovery.
+          Traditional services don't always meet them where they are.
         </p>
         
         <ul className="mb-4 list-disc pl-5 space-y-2">
-          <li>Combat exposure and related trauma</li>
-          <li>Transition challenges when returning to civilian life</li>
-          <li>Physical injuries and related pain management</li>
-          <li>Mental health conditions including PTSD, depression, and anxiety</li>
+          <li>Limited access to timely mental health support</li>
+          <li>Difficulty connecting with peers who truly understand their experiences</li>
+          <li>Stigma around seeking help for substance use disorders</li>
+          <li>Lack of privacy and anonymity in traditional support environments</li>
         </ul>
         
         <p className="mb-4">
-          Recovery is possible with the right support network. AriasHealth.ai creates a 
-          confidential environment where veterans are matched with ideal peers who understand 
-          their specific challenges based on our AI pairing technology.
+          At AriasHealth.ai, we believe that combining AI technology with peer-to-peer connection creates
+          a powerful support system that meets veterans exactly where they are in their recovery journey.
         </p>
         
         <div className="bg-accent/20 p-4 rounded-lg my-4">
