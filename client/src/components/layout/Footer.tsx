@@ -10,9 +10,9 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Column 1 - About */}
           <div>
-            <h3 className="font-bold text-xl mb-4">Veterans Connect</h3>
+            <h3 className="font-bold text-xl mb-4">AriasHealth.ai</h3>
             <p className="text-white/80 text-sm mb-4">
-              Supporting veterans through connection, community, and compassionate care.
+              AI-powered peer matching for veterans dealing with substance use disorders.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-white hover:text-white/80 transition-colors" aria-label="Facebook">
@@ -57,7 +57,7 @@ export function Footer() {
             <ul className="space-y-2 text-sm text-white/90">
               <li className="flex items-start">
                 <Mail className="h-5 w-5 mr-2 text-white" />
-                <span>support@veteransconnect.org</span>
+                <span>support@ariashealth.ai</span>
               </li>
               <li className="flex items-start">
                 <Phone className="h-5 w-5 mr-2 text-white" />
@@ -74,7 +74,7 @@ export function Footer() {
         {/* Footer Bottom */}
         <div className="mt-8 pt-8 border-t border-white/20 text-center text-sm text-white/80">
           <p>
-            &copy; {currentYear} Veterans Connect. All rights reserved. | 
+            &copy; {currentYear} AriasHealth.ai. All rights reserved. | 
             <Link href="/privacy-policy" className="text-white hover:text-white/80 transition-colors ml-1 mr-1 font-medium">
               Privacy Policy
             </Link> | 
