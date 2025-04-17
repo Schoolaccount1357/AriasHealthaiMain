@@ -9,8 +9,8 @@ export function ProgramOverview() {
     },
     {
       id: 2,
-      title: "AI Matching Technology",
-      description: "Our system analyzes your responses to find peers with similar experiences and complementary recovery journeys."
+      title: "AI-Powered Peer Pairing",
+      description: "AriasHealth.ai's advanced NLP algorithms match you with peers who share similar military experiences and substance use recovery paths."
     },
     {
       id: 3,
@@ -21,7 +21,7 @@ export function ProgramOverview() {
 
   return (
     <section className="mb-12">
-      <h2 className="text-2xl font-bold mb-6 text-foreground">How Our Program Works</h2>
+      <h2 className="text-2xl font-bold mb-6 text-foreground">How AriasHealth.ai Works</h2>
       
       <div className="grid md:grid-cols-3 gap-6">
         {programSteps.map((step) => (

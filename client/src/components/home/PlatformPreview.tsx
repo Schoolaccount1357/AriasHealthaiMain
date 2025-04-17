@@ -32,7 +32,7 @@ export function PlatformPreview() {
 
   return (
     <section className="mb-12">
-      <h2 className="text-2xl font-bold mb-6 text-foreground">Platform Preview</h2>
+      <h2 className="text-2xl font-bold mb-6 text-foreground">AriasHealth.ai Matching Platform</h2>
       
       <div className="grid md:grid-cols-2 gap-8">
         {/* Video Chat Preview */}
@@ -89,7 +89,7 @@ export function PlatformPreview() {
         <div className="bg-white p-6 rounded-lg shadow">
           <h3 className="font-semibold text-lg mb-4 flex items-center">
             <Users className="h-5 w-5 mr-2 text-primary" />
-            AI-Powered Matching
+            AI-Powered Peer Pairing
           </h3>
           <div className="bg-muted rounded-lg p-4 border border-border mb-4">
             {peerMatches.map((peer, index) => (
@@ -121,7 +121,7 @@ export function PlatformPreview() {
             ))}
           </div>
           <p className="text-foreground">
-            Our proprietary matching algorithm connects you with peers who understand your specific experiences and recovery needs.
+            AriasHealth.ai's NLP-powered algorithm matches you with peers who have similar SUDS experiences, creating optimized connections for better recovery outcomes.
           </p>
         </div>
       </div>

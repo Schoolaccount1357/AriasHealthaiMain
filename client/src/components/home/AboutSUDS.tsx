@@ -20,9 +20,9 @@ export function AboutSUDS() {
         </ul>
         
         <p className="mb-4">
-          Recovery is possible with the right support network. Our platform creates a 
-          confidential environment where veterans can connect with peers who understand 
-          their unique challenges.
+          Recovery is possible with the right support network. AriasHealth.ai creates a 
+          confidential environment where veterans are matched with ideal peers who understand 
+          their specific challenges based on our AI pairing technology.
         </p>
         
         <div className="bg-accent/20 p-4 rounded-lg my-4">

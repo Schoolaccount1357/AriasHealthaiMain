@@ -1,0 +1,97 @@
+Short Description for Website (Prelaunch)
+AriasHealth.ai is an AI-powered platform providing peer-supported mental health care tailored for Veterans, with a special focus on those navigating substance use recovery. Combining group video experiences, behavioral pattern detection, and anonymous journaling, Arias helps users build trust, access real-time support, and find meaning through community — anytime, anywhere.
+
+📄 Design Doc – AriasHealth.ai Prelaunch Website (v0.1)
+🔹 Objective
+Launch a concise, emotionally resonant landing page that introduces AriasHealth.ai, gathers early access signups, and builds credibility with Veteran communities and mental health stakeholders.
+
+🔹 Audience
+Veterans (especially those dealing with SUDs or social isolation)
+
+Veteran caregivers and spouses
+
+Peer counselors
+
+Mental health professionals
+
+Funders (VA, DoD innovation arms, nonprofit orgs)
+
+🔹 Page Sections
+Hero Section
+
+Headline: “Mental Health, Reimagined for Veterans”
+
+Subheadline: AI-powered, peer-driven support to help Veterans feel seen, heard, and connected.
+
+CTA: Join the Waitlist [Button]
+
+Problem Statement
+
+Many Veterans face isolation, stigma, and barriers to care — especially in substance use recovery. Traditional services don’t always meet them where they are.
+
+Our Solution
+
+AriasHealth.ai uses AI to create safer spaces for real-time peer connection, anonymous reflection, and proactive support. No waitlists. No judgment.
+
+Key Features
+
+📹 Event-Based Group Video Support
+
+📈 Behavioral Pattern Recognition
+
+🧠 AI Moderation for Safer Conversations
+
+✍️ Anonymous Journaling & Reflection Tools
+
+Who It's For
+
+Built by and for Veterans — including those transitioning out, recovering from trauma, or seeking community.
+
+Join Us
+
+Short form for:
+
+Email
+
+Service status (e.g., Active Duty / Veteran / Family Member)
+
+Optional: Why are you interested?
+
+FAQ / Privacy Commitment
+
+How we use your data (HIPAA-lite / GDPR principles)
+
+When AriasHealth will be available
+
+Who is building this?
+
+Footer
+
+Contact info
+
+Social media / LinkedIn
+
+Partners or funding acknowledgments (if applicable)
+
+🔹 Technical Requirements
+Responsive (mobile-first)
+
+CMS optional (e.g., Webflow, Framer, or HTML/CSS static)
+
+Integrations:
+
+Mailchimp or similar for early signups
+
+Optional: Airtable or Notion backend for user interest tracking
+
+🔹 Next Steps
+ Approve landing copy & structure
+
+ Design wireframes (low-fidelity)
+
+ Build initial static page
+
+ Set up domain + analytics
+
+ Begin limited outreach (veteran orgs, LinkedIn)
+

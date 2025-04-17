@@ -8,10 +8,10 @@ export function Hero() {
         <div className="md:flex">
           <div className="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
             <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              AI-Powered Peer Matching for Veterans
+              Mental Health, Reimagined for Veterans
             </h1>
             <p className="text-accent mb-6">
-              AriasHealth.ai uses advanced AI technology to pair veterans with peers who understand your SUDS journey, creating meaningful connections that support recovery.
+              AI-powered, peer-driven support to help Veterans feel seen, heard, and connected, with a special focus on substance use recovery.
             </p>
             <Button 
               asChild
