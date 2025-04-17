@@ -85,3 +85,31 @@ export const preferencesSchema = z.object({
   goals: z.string().min(1, "Goals are required"),
   additionalInfo: z.string().optional(),
 });
+
+// Waitlist schema for pre-launch
+export const waitlist = pgTable("waitlist", {
+  id: serial("id").primaryKey(),
+  email: text("email").notNull().unique(),
+  firstName: text("first_name"),
+  lastName: text("last_name"),
+  serviceStatus: text("service_status").notNull(), // Active Duty / Veteran / Family Member
+  reasonForInterest: text("reason_for_interest"),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+});
+
+export const insertWaitlistSchema = createInsertSchema(waitlist).omit({
+  id: true,
+  createdAt: true,
+});
+
+export type InsertWaitlist = z.infer<typeof insertWaitlistSchema>;
+export type Waitlist = typeof waitlist.$inferSelect;
+
+// Waitlist validation schema
+export const waitlistSchema = z.object({
+  email: z.string().email("Invalid email address"),
+  firstName: z.string().optional(),
+  lastName: z.string().optional(),
+  serviceStatus: z.string().min(1, "Please select your service status"),
+  reasonForInterest: z.string().optional(),
+});

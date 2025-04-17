@@ -37,7 +37,16 @@ export interface SecurityFeature {
   label: string;
 }
 
-// Form data types for multi-step form
+// Waitlist form data (simpler than the full enrollment form)
+export interface WaitlistFormData {
+  email: string;
+  firstName?: string;
+  lastName?: string;
+  serviceStatus: string; // Active Duty / Veteran / Family Member
+  reasonForInterest?: string;
+}
+
+// Legacy form data types - keeping for reference
 export interface BasicInfoFormData {
   firstName: string;
   lastName: string;
@@ -68,8 +77,4 @@ export interface PreferencesFormData {
   additionalInfo?: string;
 }
 
-export type EnrollmentFormData = 
-  BasicInfoFormData & 
-  MilitaryBackgroundFormData & 
-  HealthHistoryFormData & 
-  PreferencesFormData;
+export type EnrollmentFormData = WaitlistFormData;

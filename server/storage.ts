@@ -1,4 +1,4 @@
-import { veterans, type Veteran, type InsertVeteran, users, type User, type InsertUser } from "@shared/schema";
+import { veterans, type Veteran, type InsertVeteran, users, type User, type InsertUser, waitlist, type Waitlist, type InsertWaitlist } from "@shared/schema";
 import { db } from "./db";
 import { eq } from "drizzle-orm";
 
@@ -15,6 +15,11 @@ export interface IStorage {
   getVeteranFormByEmail(email: string): Promise<Veteran | undefined>;
   getAllVeteranForms(): Promise<Veteran[]>;
   updateVeteranFormStatus(id: number, status: string): Promise<Veteran | undefined>;
+  
+  // Waitlist operations
+  addToWaitlist(entry: InsertWaitlist): Promise<Waitlist>;
+  getWaitlistByEmail(email: string): Promise<Waitlist | undefined>;
+  getAllWaitlistEntries(): Promise<Waitlist[]>;
 }
 
 export class DatabaseStorage implements IStorage {
@@ -70,6 +75,24 @@ export class DatabaseStorage implements IStorage {
       .where(eq(veterans.id, id))
       .returning();
     return updatedVeteran || undefined;
+  }
+  
+  // Waitlist operations
+  async addToWaitlist(entry: InsertWaitlist): Promise<Waitlist> {
+    const [waitlistEntry] = await db
+      .insert(waitlist)
+      .values(entry)
+      .returning();
+    return waitlistEntry;
+  }
+
+  async getWaitlistByEmail(email: string): Promise<Waitlist | undefined> {
+    const [waitlistEntry] = await db.select().from(waitlist).where(eq(waitlist.email, email));
+    return waitlistEntry || undefined;
+  }
+
+  async getAllWaitlistEntries(): Promise<Waitlist[]> {
+    return await db.select().from(waitlist);
   }
 }
 
