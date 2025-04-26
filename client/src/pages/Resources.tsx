@@ -169,15 +169,13 @@ export default function Resources() {
             Call 988 - Press 1
           </Button>
           <Button 
-            variant="outline" 
-            className="border-[#3e64dd] text-white hover:bg-[#3e64dd]/20"
+            className="bg-[#3e64dd] hover:bg-[#2a4bba]"
             size="lg"
           >
             Text 838255
           </Button>
           <Button 
-            variant="outline" 
-            className="border-[#3e64dd] text-white hover:bg-[#3e64dd]/20"
+            className="bg-[#3e64dd] hover:bg-[#2a4bba]"
             size="lg"
           >
             Chat Online
