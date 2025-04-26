@@ -163,36 +163,45 @@ export default function Resources() {
         </p>
         <div className="flex flex-wrap gap-4">
           <Button 
+            asChild
             className="bg-[#3e64dd] hover:bg-[#2a4bba] transition-all duration-300 relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98]"
             size="lg"
           >
-            <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
-            <span className="relative z-10 flex items-center">
-              <Phone className="h-4 w-4 mr-2 transition-transform duration-300 group-hover:scale-110" />
-              Call 988 - Press 1
-            </span>
+            <a href="tel:988" className="flex items-center justify-center">
+              <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
+              <span className="relative z-10 flex items-center">
+                <Phone className="h-4 w-4 mr-2 transition-transform duration-300 group-hover:scale-110" />
+                Call 988 - Press 1
+              </span>
+            </a>
           </Button>
           <Button 
+            asChild
             className="bg-[#3e64dd] hover:bg-[#2a4bba] transition-all duration-300 relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98]"
             size="lg"
           >
-            <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
-            <span className="relative z-10 flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 transition-transform duration-300 group-hover:scale-110" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-              </svg>
-              Text 838255
-            </span>
+            <a href="sms:838255" className="flex items-center justify-center">
+              <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
+              <span className="relative z-10 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 transition-transform duration-300 group-hover:scale-110" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                </svg>
+                Text 838255
+              </span>
+            </a>
           </Button>
           <Button 
+            asChild
             className="bg-[#3e64dd] hover:bg-[#2a4bba] transition-all duration-300 relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98]"
             size="lg"
           >
-            <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
-            <span className="relative z-10 flex items-center">
-              <Globe className="h-4 w-4 mr-2 transition-transform duration-300 group-hover:scale-110" />
-              Chat Online
-            </span>
+            <a href="https://www.veteranscrisisline.net/get-help/chat" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
+              <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
+              <span className="relative z-10 flex items-center">
+                <Globe className="h-4 w-4 mr-2 transition-transform duration-300 group-hover:scale-110" />
+                Chat Online
+              </span>
+            </a>
           </Button>
         </div>
       </div>
