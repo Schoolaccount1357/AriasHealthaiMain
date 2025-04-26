@@ -44,6 +44,54 @@ export default function ResourceLocator() {
 
   // Sample state data - in a real application, this would come from an API
   const stateData: StateData = {
+    "Alabama": {
+      resources: [
+        {
+          name: "Birmingham VA Medical Center",
+          description: "Comprehensive healthcare services for Veterans",
+          address: "700 19th St S, Birmingham, AL 35233",
+          phone: "(205) 933-8101",
+          website: "https://www.birmingham.va.gov/",
+          category: "VA"
+        }
+      ]
+    },
+    "Alaska": {
+      resources: [
+        {
+          name: "Alaska VA Healthcare System",
+          description: "Comprehensive healthcare services for Veterans",
+          address: "1201 N Muldoon Rd, Anchorage, AK 99504",
+          phone: "(907) 257-4700",
+          website: "https://www.alaska.va.gov/",
+          category: "VA"
+        }
+      ]
+    },
+    "Arizona": {
+      resources: [
+        {
+          name: "Phoenix VA Health Care System",
+          description: "Comprehensive healthcare services for Veterans",
+          address: "650 E Indian School Rd, Phoenix, AZ 85012",
+          phone: "(602) 277-5551",
+          website: "https://www.phoenix.va.gov/",
+          category: "VA"
+        }
+      ]
+    },
+    "Arkansas": {
+      resources: [
+        {
+          name: "Central Arkansas Veterans Healthcare System",
+          description: "Comprehensive healthcare services for Veterans",
+          address: "4300 W 7th St, Little Rock, AR 72205",
+          phone: "(501) 257-1000",
+          website: "https://www.littlerock.va.gov/",
+          category: "VA"
+        }
+      ]
+    },
     "California": {
       resources: [
         {
@@ -69,6 +117,473 @@ export default function ResourceLocator() {
           phone: "(415) 252-4788",
           website: "https://www.swords-to-plowshares.org/",
           category: "Employment"
+        }
+      ]
+    },
+    "Colorado": {
+      resources: [
+        {
+          name: "Rocky Mountain Regional VA Medical Center",
+          description: "Comprehensive healthcare services for Veterans",
+          address: "1700 N Wheeling St, Aurora, CO 80045",
+          phone: "(303) 399-8020",
+          website: "https://www.va.gov/eastern-colorado-health-care/",
+          category: "VA"
+        }
+      ]
+    },
+    "Connecticut": {
+      resources: [
+        {
+          name: "VA Connecticut Healthcare System",
+          description: "Comprehensive healthcare services for Veterans",
+          address: "950 Campbell Ave, West Haven, CT 06516",
+          phone: "(203) 932-5711",
+          website: "https://www.connecticut.va.gov/",
+          category: "VA"
+        }
+      ]
+    },
+    "Delaware": {
+      resources: [
+        {
+          name: "Wilmington VA Medical Center",
+          description: "Comprehensive healthcare services for Veterans",
+          address: "1601 Kirkwood Hwy, Wilmington, DE 19805",
+          phone: "(302) 994-2511",
+          website: "https://www.wilmington.va.gov/",
+          category: "VA"
+        }
+      ]
+    },
+    "Florida": {
+      resources: [
+        {
+          name: "James A. Haley Veterans' Hospital",
+          description: "Comprehensive healthcare services for Veterans",
+          address: "13000 Bruce B. Downs Blvd, Tampa, FL 33612",
+          phone: "(813) 972-2000",
+          website: "https://www.tampa.va.gov/",
+          category: "VA"
+        },
+        {
+          name: "Veterans Recovery Resources",
+          description: "Substance use and mental health treatment for Veterans",
+          address: "1156 Springhill Ave, Mobile, FL 36604",
+          phone: "(866) 648-7334",
+          website: "https://veteransrecoveryresources.org/",
+          category: "Treatment"
+        },
+        {
+          name: "Crisis Center of Tampa Bay",
+          description: "Crisis support services",
+          phone: "(813) 964-1964",
+          website: "https://www.crisiscenter.com/",
+          category: "Crisis"
+        }
+      ]
+    },
+    "Georgia": {
+      resources: [
+        {
+          name: "Atlanta VA Health Care System",
+          description: "Comprehensive healthcare services for Veterans",
+          address: "1670 Clairmont Rd, Decatur, GA 30033",
+          phone: "(404) 321-6111",
+          website: "https://www.atlanta.va.gov/",
+          category: "VA"
+        }
+      ]
+    },
+    "Hawaii": {
+      resources: [
+        {
+          name: "VA Pacific Islands Health Care System",
+          description: "Comprehensive healthcare services for Veterans",
+          address: "459 Patterson Rd, Honolulu, HI 96819",
+          phone: "(808) 433-0600",
+          website: "https://www.va.gov/pacific-islands-health-care/",
+          category: "VA"
+        }
+      ]
+    },
+    "Idaho": {
+      resources: [
+        {
+          name: "Boise VA Medical Center",
+          description: "Comprehensive healthcare services for Veterans",
+          address: "500 W Fort St, Boise, ID 83702",
+          phone: "(208) 422-1000",
+          website: "https://www.boise.va.gov/",
+          category: "VA"
+        }
+      ]
+    },
+    "Illinois": {
+      resources: [
+        {
+          name: "Jesse Brown VA Medical Center",
+          description: "Comprehensive healthcare services for Veterans",
+          address: "820 S Damen Ave, Chicago, IL 60612",
+          phone: "(312) 569-8387",
+          website: "https://www.jesse-brown.va.gov/",
+          category: "VA"
+        }
+      ]
+    },
+    "Indiana": {
+      resources: [
+        {
+          name: "Richard L. Roudebush VA Medical Center",
+          description: "Comprehensive healthcare services for Veterans",
+          address: "1481 W 10th St, Indianapolis, IN 46202",
+          phone: "(317) 554-0000",
+          website: "https://www.indianapolis.va.gov/",
+          category: "VA"
+        }
+      ]
+    },
+    "Iowa": {
+      resources: [
+        {
+          name: "Iowa City VA Health Care System",
+          description: "Comprehensive healthcare services for Veterans",
+          address: "601 Hwy 6 W, Iowa City, IA 52246",
+          phone: "(319) 338-0581",
+          website: "https://www.iowacity.va.gov/",
+          category: "VA"
+        }
+      ]
+    },
+    "Kansas": {
+      resources: [
+        {
+          name: "Colmery-O'Neil VA Medical Center",
+          description: "Comprehensive healthcare services for Veterans",
+          address: "2200 SW Gage Blvd, Topeka, KS 66622",
+          phone: "(785) 350-3111",
+          website: "https://www.topeka.va.gov/",
+          category: "VA"
+        }
+      ]
+    },
+    "Kentucky": {
+      resources: [
+        {
+          name: "Robley Rex VA Medical Center",
+          description: "Comprehensive healthcare services for Veterans",
+          address: "800 Zorn Ave, Louisville, KY 40206",
+          phone: "(502) 287-4000",
+          website: "https://www.louisville.va.gov/",
+          category: "VA"
+        }
+      ]
+    },
+    "Louisiana": {
+      resources: [
+        {
+          name: "Southeast Louisiana Veterans Health Care System",
+          description: "Comprehensive healthcare services for Veterans",
+          address: "2400 Canal St, New Orleans, LA 70119",
+          phone: "(504) 507-2000",
+          website: "https://www.neworleans.va.gov/",
+          category: "VA"
+        }
+      ]
+    },
+    "Maine": {
+      resources: [
+        {
+          name: "VA Maine Healthcare System",
+          description: "Comprehensive healthcare services for Veterans",
+          address: "1 VA Center, Augusta, ME 04330",
+          phone: "(207) 623-8411",
+          website: "https://www.maine.va.gov/",
+          category: "VA"
+        }
+      ]
+    },
+    "Maryland": {
+      resources: [
+        {
+          name: "Baltimore VA Medical Center",
+          description: "Comprehensive healthcare services for Veterans",
+          address: "10 N Greene St, Baltimore, MD 21201",
+          phone: "(410) 605-7000",
+          website: "https://www.maryland.va.gov/",
+          category: "VA"
+        }
+      ]
+    },
+    "Massachusetts": {
+      resources: [
+        {
+          name: "VA Boston Healthcare System",
+          description: "Comprehensive healthcare services for Veterans",
+          address: "150 S Huntington Ave, Boston, MA 02130",
+          phone: "(857) 203-6000",
+          website: "https://www.boston.va.gov/",
+          category: "VA"
+        }
+      ]
+    },
+    "Michigan": {
+      resources: [
+        {
+          name: "John D. Dingell VA Medical Center",
+          description: "Comprehensive healthcare services for Veterans",
+          address: "4646 John R St, Detroit, MI 48201",
+          phone: "(313) 576-1000",
+          website: "https://www.detroit.va.gov/",
+          category: "VA"
+        }
+      ]
+    },
+    "Minnesota": {
+      resources: [
+        {
+          name: "Minneapolis VA Health Care System",
+          description: "Comprehensive healthcare services for Veterans",
+          address: "1 Veterans Dr, Minneapolis, MN 55417",
+          phone: "(612) 725-2000",
+          website: "https://www.minneapolis.va.gov/",
+          category: "VA"
+        }
+      ]
+    },
+    "Mississippi": {
+      resources: [
+        {
+          name: "G.V. (Sonny) Montgomery VA Medical Center",
+          description: "Comprehensive healthcare services for Veterans",
+          address: "1500 E Woodrow Wilson Ave, Jackson, MS 39216",
+          phone: "(601) 362-4471",
+          website: "https://www.jackson.va.gov/",
+          category: "VA"
+        }
+      ]
+    },
+    "Missouri": {
+      resources: [
+        {
+          name: "Harry S. Truman Memorial Veterans' Hospital",
+          description: "Comprehensive healthcare services for Veterans",
+          address: "800 Hospital Dr, Columbia, MO 65201",
+          phone: "(573) 814-6000",
+          website: "https://www.columbiamo.va.gov/",
+          category: "VA"
+        }
+      ]
+    },
+    "Montana": {
+      resources: [
+        {
+          name: "Montana VA Health Care System",
+          description: "Comprehensive healthcare services for Veterans",
+          address: "3687 Veterans Dr, Fort Harrison, MT 59636",
+          phone: "(406) 442-6410",
+          website: "https://www.montana.va.gov/",
+          category: "VA"
+        }
+      ]
+    },
+    "Nebraska": {
+      resources: [
+        {
+          name: "VA Nebraska-Western Iowa Health Care System",
+          description: "Comprehensive healthcare services for Veterans",
+          address: "4101 Woolworth Ave, Omaha, NE 68105",
+          phone: "(402) 346-8800",
+          website: "https://www.nebraska.va.gov/",
+          category: "VA"
+        }
+      ]
+    },
+    "Nevada": {
+      resources: [
+        {
+          name: "VA Southern Nevada Healthcare System",
+          description: "Comprehensive healthcare services for Veterans",
+          address: "6900 N Pecos Rd, North Las Vegas, NV 89086",
+          phone: "(702) 791-9000",
+          website: "https://www.lasvegas.va.gov/",
+          category: "VA"
+        }
+      ]
+    },
+    "New Hampshire": {
+      resources: [
+        {
+          name: "Manchester VA Medical Center",
+          description: "Comprehensive healthcare services for Veterans",
+          address: "718 Smyth Rd, Manchester, NH 03104",
+          phone: "(603) 624-4366",
+          website: "https://www.manchester.va.gov/",
+          category: "VA"
+        }
+      ]
+    },
+    "New Jersey": {
+      resources: [
+        {
+          name: "VA New Jersey Health Care System",
+          description: "Comprehensive healthcare services for Veterans",
+          address: "385 Tremont Ave, East Orange, NJ 07018",
+          phone: "(973) 676-1000",
+          website: "https://www.newjersey.va.gov/",
+          category: "VA"
+        }
+      ]
+    },
+    "New Mexico": {
+      resources: [
+        {
+          name: "New Mexico VA Health Care System",
+          description: "Comprehensive healthcare services for Veterans",
+          address: "1501 San Pedro Dr SE, Albuquerque, NM 87108",
+          phone: "(505) 265-1711",
+          website: "https://www.albuquerque.va.gov/",
+          category: "VA"
+        }
+      ]
+    },
+    "New York": {
+      resources: [
+        {
+          name: "VA NY Harbor Healthcare System",
+          description: "Comprehensive healthcare services for Veterans",
+          address: "423 E. 23rd Street, New York, NY 10010",
+          phone: "(212) 686-7500",
+          website: "https://www.va.gov/new-york-harbor-health-care/",
+          category: "VA"
+        },
+        {
+          name: "Services for the UnderServed (SUS)",
+          description: "Housing and mental health services for Veterans",
+          address: "463 7th Ave, 17th Floor, New York, NY 10018",
+          phone: "(212) 633-6900",
+          website: "https://sus.org/",
+          category: "Housing"
+        }
+      ]
+    },
+    "North Carolina": {
+      resources: [
+        {
+          name: "Durham VA Health Care System",
+          description: "Comprehensive healthcare services for Veterans",
+          address: "508 Fulton St, Durham, NC 27705",
+          phone: "(919) 286-0411",
+          website: "https://www.durham.va.gov/",
+          category: "VA"
+        }
+      ]
+    },
+    "North Dakota": {
+      resources: [
+        {
+          name: "Fargo VA Health Care System",
+          description: "Comprehensive healthcare services for Veterans",
+          address: "2101 Elm St, Fargo, ND 58102",
+          phone: "(701) 232-3241",
+          website: "https://www.fargo.va.gov/",
+          category: "VA"
+        }
+      ]
+    },
+    "Ohio": {
+      resources: [
+        {
+          name: "Louis Stokes Cleveland VA Medical Center",
+          description: "Comprehensive healthcare services for Veterans",
+          address: "10701 East Blvd, Cleveland, OH 44106",
+          phone: "(216) 791-3800",
+          website: "https://www.cleveland.va.gov/",
+          category: "VA"
+        }
+      ]
+    },
+    "Oklahoma": {
+      resources: [
+        {
+          name: "Oklahoma City VA Health Care System",
+          description: "Comprehensive healthcare services for Veterans",
+          address: "921 NE 13th St, Oklahoma City, OK 73104",
+          phone: "(405) 456-1000",
+          website: "https://www.oklahoma.va.gov/",
+          category: "VA"
+        }
+      ]
+    },
+    "Oregon": {
+      resources: [
+        {
+          name: "VA Portland Health Care System",
+          description: "Comprehensive healthcare services for Veterans",
+          address: "3710 SW US Veterans Hospital Rd, Portland, OR 97239",
+          phone: "(503) 220-8262",
+          website: "https://www.portland.va.gov/",
+          category: "VA"
+        }
+      ]
+    },
+    "Pennsylvania": {
+      resources: [
+        {
+          name: "Corporal Michael J. Crescenz VA Medical Center",
+          description: "Comprehensive healthcare services for Veterans",
+          address: "3900 Woodland Ave, Philadelphia, PA 19104",
+          phone: "(215) 823-5800",
+          website: "https://www.philadelphia.va.gov/",
+          category: "VA"
+        }
+      ]
+    },
+    "Rhode Island": {
+      resources: [
+        {
+          name: "Providence VA Medical Center",
+          description: "Comprehensive healthcare services for Veterans",
+          address: "830 Chalkstone Ave, Providence, RI 02908",
+          phone: "(401) 273-7100",
+          website: "https://www.providence.va.gov/",
+          category: "VA"
+        }
+      ]
+    },
+    "South Carolina": {
+      resources: [
+        {
+          name: "Ralph H. Johnson VA Medical Center",
+          description: "Comprehensive healthcare services for Veterans",
+          address: "109 Bee St, Charleston, SC 29401",
+          phone: "(843) 577-5011",
+          website: "https://www.charleston.va.gov/",
+          category: "VA"
+        }
+      ]
+    },
+    "South Dakota": {
+      resources: [
+        {
+          name: "Sioux Falls VA Health Care System",
+          description: "Comprehensive healthcare services for Veterans",
+          address: "2501 W 22nd St, Sioux Falls, SD 57105",
+          phone: "(605) 336-3230",
+          website: "https://www.siouxfalls.va.gov/",
+          category: "VA"
+        }
+      ]
+    },
+    "Tennessee": {
+      resources: [
+        {
+          name: "Tennessee Valley Healthcare System",
+          description: "Comprehensive healthcare services for Veterans",
+          address: "1310 24th Ave S, Nashville, TN 37212",
+          phone: "(615) 327-4751",
+          website: "https://www.tennesseevalley.va.gov/",
+          category: "VA"
         }
       ]
     },
@@ -100,50 +615,99 @@ export default function ResourceLocator() {
         }
       ]
     },
-    "Florida": {
+    "Utah": {
       resources: [
         {
-          name: "James A. Haley Veterans' Hospital",
+          name: "VA Salt Lake City Health Care System",
           description: "Comprehensive healthcare services for Veterans",
-          address: "13000 Bruce B. Downs Blvd, Tampa, FL 33612",
-          phone: "(813) 972-2000",
-          website: "https://www.tampa.va.gov/",
+          address: "500 Foothill Dr, Salt Lake City, UT 84148",
+          phone: "(801) 582-1565",
+          website: "https://www.saltlakecity.va.gov/",
           category: "VA"
-        },
-        {
-          name: "Veterans Recovery Resources",
-          description: "Substance use and mental health treatment for Veterans",
-          address: "1156 Springhill Ave, Mobile, FL 36604",
-          phone: "(866) 648-7334",
-          website: "https://veteransrecoveryresources.org/",
-          category: "Treatment"
-        },
-        {
-          name: "Crisis Center of Tampa Bay",
-          description: "Crisis support services",
-          phone: "(813) 964-1964",
-          website: "https://www.crisiscenter.com/",
-          category: "Crisis"
         }
       ]
     },
-    "New York": {
+    "Vermont": {
       resources: [
         {
-          name: "VA NY Harbor Healthcare System",
+          name: "White River Junction VA Medical Center",
           description: "Comprehensive healthcare services for Veterans",
-          address: "423 E. 23rd Street, New York, NY 10010",
-          phone: "(212) 686-7500",
-          website: "https://www.va.gov/new-york-harbor-health-care/",
+          address: "215 N Main St, White River Junction, VT 05009",
+          phone: "(802) 295-9363",
+          website: "https://www.whiteriverjunction.va.gov/",
           category: "VA"
-        },
+        }
+      ]
+    },
+    "Virginia": {
+      resources: [
         {
-          name: "Services for the UnderServed (SUS)",
-          description: "Housing and mental health services for Veterans",
-          address: "463 7th Ave, 17th Floor, New York, NY 10018",
-          phone: "(212) 633-6900",
-          website: "https://sus.org/",
-          category: "Housing"
+          name: "Hunter Holmes McGuire VA Medical Center",
+          description: "Comprehensive healthcare services for Veterans",
+          address: "1201 Broad Rock Blvd, Richmond, VA 23249",
+          phone: "(804) 675-5000",
+          website: "https://www.richmond.va.gov/",
+          category: "VA"
+        }
+      ]
+    },
+    "Washington": {
+      resources: [
+        {
+          name: "VA Puget Sound Health Care System",
+          description: "Comprehensive healthcare services for Veterans",
+          address: "1660 S Columbian Way, Seattle, WA 98108",
+          phone: "(206) 762-1010",
+          website: "https://www.pugetsound.va.gov/",
+          category: "VA"
+        }
+      ]
+    },
+    "Washington DC": {
+      resources: [
+        {
+          name: "Washington DC VA Medical Center",
+          description: "Comprehensive healthcare services for Veterans",
+          address: "50 Irving St NW, Washington, DC 20422",
+          phone: "(202) 745-8000",
+          website: "https://www.washingtondc.va.gov/",
+          category: "VA"
+        }
+      ]
+    },
+    "West Virginia": {
+      resources: [
+        {
+          name: "Huntington VA Medical Center",
+          description: "Comprehensive healthcare services for Veterans",
+          address: "1540 Spring Valley Dr, Huntington, WV 25704",
+          phone: "(304) 429-6741",
+          website: "https://www.huntington.va.gov/",
+          category: "VA"
+        }
+      ]
+    },
+    "Wisconsin": {
+      resources: [
+        {
+          name: "Clement J. Zablocki VA Medical Center",
+          description: "Comprehensive healthcare services for Veterans",
+          address: "5000 W National Ave, Milwaukee, WI 53295",
+          phone: "(414) 384-2000",
+          website: "https://www.milwaukee.va.gov/",
+          category: "VA"
+        }
+      ]
+    },
+    "Wyoming": {
+      resources: [
+        {
+          name: "Cheyenne VA Medical Center",
+          description: "Comprehensive healthcare services for Veterans",
+          address: "2360 E Pershing Blvd, Cheyenne, WY 82001",
+          phone: "(307) 778-7550",
+          website: "https://www.cheyenne.va.gov/",
+          category: "VA"
         }
       ]
     }
