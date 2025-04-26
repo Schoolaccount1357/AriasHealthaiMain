@@ -18,6 +18,8 @@ import {
 } from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
 import { MapPin, Phone, Building, Shield } from "lucide-react";
+import { MainLayout } from "@/components/layout/MainLayout";
+import { PageHeader } from "@/components/ui/PageHeader";
 
 interface StateResource {
   name: string;
@@ -171,13 +173,11 @@ export default function ResourceLocator() {
     : [];
 
   return (
-    <div className="container mx-auto py-10 px-4 sm:px-6 lg:px-8">
-      <div className="mb-10 text-center">
-        <h1 className="text-3xl font-bold mb-4">Find Local Support Resources</h1>
-        <p className="text-lg max-w-3xl mx-auto">
-          Connect with veteran support services in your area. Select your state or enter your ZIP code to find resources near you.
-        </p>
-      </div>
+    <MainLayout>
+      <PageHeader
+        title="Find Local Support Resources"
+        description="Connect with veteran support services in your area. Select your state or enter your ZIP code to find resources near you."
+      />
 
       <div className="bg-[#141e2f] text-white p-6 rounded-lg mb-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -354,6 +354,6 @@ export default function ResourceLocator() {
           </div>
         </div>
       )}
-    </div>
+    </MainLayout>
   );
 }

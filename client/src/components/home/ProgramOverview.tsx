@@ -4,18 +4,18 @@ export function ProgramOverview() {
   const programSteps: ProgramStep[] = [
     {
       id: 1,
-      title: "Join the Waitlist",
-      description: "Sign up to be among the first to access AriasHealth.ai when we launch. No commitment required."
+      title: "Complete Waitlist Form",
+      description: "Fill out the simple form below with your basic information to reserve your spot for early access."
     },
     {
       id: 2,
-      title: "Built For Veterans",
-      description: "Our platform is designed specifically for veterans transitioning out of service, recovering from trauma, or seeking supportive community."
+      title: "Receive Confirmation",
+      description: "You'll receive an email confirmation and updates about our launch. We'll notify you when the platform becomes available."
     },
     {
       id: 3,
-      title: "Privacy Commitment",
-      description: "Your data is protected with enterprise-grade security and HIPAA-compliant practices. Your privacy is our priority."
+      title: "Get Early Access",
+      description: "Waitlist members will be the first to experience our AI-powered matching and veteran support community."
     }
   ];
 
