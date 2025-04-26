@@ -11,6 +11,7 @@ export function Header() {
     { href: "/", label: "Home" },
     { href: "/resources", label: "Resources" },
     { href: "/resource-locator", label: "Find Local Support" },
+    { href: "/video-call", label: "Video Chat" },
     { href: "/contact", label: "Contact" }
   ];
 

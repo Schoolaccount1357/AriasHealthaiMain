@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Users, Mail, Phone, MapPin, Facebook, Twitter, Instagram } from "lucide-react";
+import { Users, Mail, Facebook, Twitter, Instagram } from "lucide-react";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -59,14 +59,7 @@ export function Footer() {
                 <Mail className="h-5 w-5 mr-2 text-white" />
                 <span>info@ariashealth.ai</span>
               </li>
-              <li className="flex items-start">
-                <Phone className="h-5 w-5 mr-2 text-white" />
-                <span>1-800-555-VETS (8387)</span>
-              </li>
-              <li className="flex items-start">
-                <MapPin className="h-5 w-5 mr-2 text-white" />
-                <span>123 Veterans Way<br />Washington, DC 20001</span>
-              </li>
+
             </ul>
           </div>
         </div>
