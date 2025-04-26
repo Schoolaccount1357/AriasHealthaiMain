@@ -145,13 +145,11 @@ export default function Resources() {
   ];
 
   return (
-    <div className="container mx-auto py-10 px-4 sm:px-6 lg:px-8">
-      <div className="mb-10 text-center">
-        <h1 className="text-3xl font-bold mb-4">Veteran Support Resources</h1>
-        <p className="text-lg max-w-3xl mx-auto">
-          We've compiled trusted resources to support your journey. If you're in crisis, please call the Veterans Crisis Line at 1-800-273-8255 and Press 1.
-        </p>
-      </div>
+    <MainLayout>
+      <PageHeader
+        title="Veteran Support Resources"
+        description="We've compiled trusted resources to support your journey. If you're in crisis, please call the Veterans Crisis Line at 1-800-273-8255 and Press 1."
+      />
 
       <div className="mb-10 bg-[#141e2f] text-white p-6 rounded-lg">
         <div className="flex items-center mb-4">
