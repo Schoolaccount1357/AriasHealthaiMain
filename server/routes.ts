@@ -4,6 +4,8 @@ import { storage } from "./storage";
 import { insertVeteranSchema, basicInfoSchema, militaryBackgroundSchema, healthHistorySchema, preferencesSchema, insertWaitlistSchema, waitlistSchema } from "@shared/schema";
 import { ZodError } from "zod";
 import { fromZodError } from "zod-validation-error";
+import { Server as SocketIOServer } from "socket.io";
+import { WebSocket } from "ws";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // API endpoint for submitting veteran pre-enrollment forms
@@ -152,5 +154,86 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   const httpServer = createServer(app);
+  
+  // Setup WebSocket server for video chat
+  const io = new SocketIOServer(httpServer, {
+    path: '/ws',
+    cors: {
+      origin: "*",
+      methods: ["GET", "POST"]
+    }
+  });
+  
+  // Store active users
+  const activeUsers: Record<string, string> = {};
+  const userRooms: Record<string, string> = {};
+  
+  io.on('connection', (socket) => {
+    console.log('A user connected:', socket.id);
+    
+    // User joins with their username
+    socket.on('join', ({ username, room }) => {
+      // Store user info
+      activeUsers[socket.id] = username;
+      userRooms[socket.id] = room;
+      
+      // Join the room
+      socket.join(room);
+      
+      // Notify others in room
+      socket.to(room).emit('user-joined', { 
+        id: socket.id, 
+        username 
+      });
+      
+      // Send list of connected users in the room to the new user
+      const usersInRoom = [];
+      for (const [id, user] of Object.entries(activeUsers)) {
+        if (userRooms[id] === room && id !== socket.id) {
+          usersInRoom.push({ id, username: user });
+        }
+      }
+      socket.emit('room-users', usersInRoom);
+      
+      console.log(`${username} joined room ${room}`);
+    });
+    
+    // Handle WebRTC signaling
+    socket.on('signal', ({ to, signal }) => {
+      io.to(to).emit('signal', {
+        from: socket.id,
+        signal,
+        username: activeUsers[socket.id]
+      });
+    });
+    
+    // Handle messages
+    socket.on('message', ({ content, room }) => {
+      io.to(room).emit('message', {
+        content,
+        from: socket.id,
+        username: activeUsers[socket.id],
+        time: new Date().toISOString()
+      });
+    });
+    
+    // Handle disconnections
+    socket.on('disconnect', () => {
+      const room = userRooms[socket.id];
+      if (room) {
+        socket.to(room).emit('user-left', {
+          id: socket.id,
+          username: activeUsers[socket.id]
+        });
+      }
+      
+      // Remove user from active users
+      delete activeUsers[socket.id];
+      delete userRooms[socket.id];
+      
+      console.log('User disconnected:', socket.id);
+    });
+  });
+  
   return httpServer;
 }
