@@ -1,6 +1,10 @@
 import React from 'react';
-import { Mic, MicOff, Video, VideoOff, Monitor, Phone, MessageSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { 
+  Mic, MicOff, Video, VideoOff, 
+  ScreenShare, MonitorX,
+  MessageSquare, PhoneOff 
+} from 'lucide-react';
 
 interface VideoControlsProps {
   isAudioEnabled: boolean;
@@ -10,8 +14,8 @@ interface VideoControlsProps {
   onToggleAudio: () => void;
   onToggleVideo: () => void;
   onToggleScreenShare: () => void;
-  onEndCall: () => void;
   onToggleMessagesPanel: () => void;
+  onEndCall: () => void;
 }
 
 export function VideoControls({
@@ -22,54 +26,54 @@ export function VideoControls({
   onToggleAudio,
   onToggleVideo,
   onToggleScreenShare,
-  onEndCall,
-  onToggleMessagesPanel
+  onToggleMessagesPanel,
+  onEndCall
 }: VideoControlsProps) {
   return (
-    <div className="flex items-center justify-center space-x-3 p-4 bg-[#141e2f] rounded-lg shadow-lg">
+    <div className="flex justify-center items-center space-x-4 p-4 bg-gray-800 rounded-lg">
       <Button
-        variant="outline"
-        size="icon"
+        variant="ghost"
+        className={`rounded-full w-12 h-12 ${isAudioEnabled ? 'bg-gray-700' : 'bg-red-600'}`}
         onClick={onToggleAudio}
-        className={`rounded-full ${isAudioEnabled ? 'bg-gray-100' : 'bg-red-100 text-red-500'}`}
+        title={isAudioEnabled ? "Mute Microphone" : "Unmute Microphone"}
       >
-        {isAudioEnabled ? <Mic /> : <MicOff />}
+        {isAudioEnabled ? <Mic size={24} /> : <MicOff size={24} />}
       </Button>
       
       <Button
-        variant="outline"
-        size="icon"
+        variant="ghost"
+        className={`rounded-full w-12 h-12 ${isVideoEnabled ? 'bg-gray-700' : 'bg-red-600'}`}
         onClick={onToggleVideo}
-        className={`rounded-full ${isVideoEnabled ? 'bg-gray-100' : 'bg-red-100 text-red-500'}`}
+        title={isVideoEnabled ? "Turn Off Camera" : "Turn On Camera"}
       >
-        {isVideoEnabled ? <Video /> : <VideoOff />}
+        {isVideoEnabled ? <Video size={24} /> : <VideoOff size={24} />}
       </Button>
       
       <Button
-        variant="outline"
-        size="icon"
+        variant="ghost"
+        className={`rounded-full w-12 h-12 ${isScreenSharing ? 'bg-green-600' : 'bg-gray-700'}`}
         onClick={onToggleScreenShare}
-        className={`rounded-full ${isScreenSharing ? 'bg-blue-100 text-blue-500' : 'bg-gray-100'}`}
+        title={isScreenSharing ? "Stop Sharing Screen" : "Share Screen"}
       >
-        <Monitor />
+        {isScreenSharing ? <StopScreenShare size={24} /> : <ScreenShare size={24} />}
       </Button>
       
       <Button
-        variant="outline"
-        size="icon"
+        variant="ghost"
+        className={`rounded-full w-12 h-12 ${isMessagesPanelOpen ? 'bg-blue-600' : 'bg-gray-700'}`}
         onClick={onToggleMessagesPanel}
-        className={`rounded-full ${isMessagesPanelOpen ? 'bg-blue-100 text-blue-500' : 'bg-gray-100'}`}
+        title={isMessagesPanelOpen ? "Close Chat" : "Open Chat"}
       >
-        <MessageSquare />
+        <MessageSquare size={24} />
       </Button>
       
       <Button
-        variant="destructive"
-        size="icon"
+        variant="ghost"
+        className="rounded-full w-12 h-12 bg-red-600"
         onClick={onEndCall}
-        className="rounded-full bg-red-500 hover:bg-red-600"
+        title="End Call"
       >
-        <Phone className="rotate-135" />
+        <PhoneOff size={24} />
       </Button>
     </div>
   );

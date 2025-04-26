@@ -1,5 +1,4 @@
-import React, { useEffect, useRef } from 'react';
-import { User } from 'lucide-react';
+import React, { useRef, useEffect } from 'react';
 
 interface VideoStreamProps {
   stream: MediaStream | null;
@@ -25,28 +24,35 @@ export function VideoStream({
   }, [stream]);
   
   return (
-    <div className="relative rounded-lg overflow-hidden h-full bg-gray-800">
+    <div className="relative h-full w-full bg-black rounded-lg overflow-hidden">
       {stream ? (
         <video
           ref={videoRef}
-          className={`w-full h-full object-cover ${isScreenSharing ? 'object-contain bg-black' : 'object-cover'}`}
           autoPlay
           playsInline
           muted={muted}
+          className="h-full w-full object-cover"
         />
       ) : (
-        <div className="flex items-center justify-center h-full bg-gray-800">
-          <div className="flex flex-col items-center">
-            <div className="bg-[#141e2f] w-20 h-20 flex items-center justify-center rounded-full mb-2">
-              <User className="w-10 h-10 text-gray-400" />
-            </div>
-            <p className="text-white">{username}</p>
+        <div className="flex items-center justify-center h-full">
+          <div className="bg-gray-700 rounded-full h-20 w-20 flex items-center justify-center">
+            <span className="text-xl text-white font-semibold">
+              {username.charAt(0).toUpperCase()}
+            </span>
           </div>
         </div>
       )}
       
-      <div className="absolute bottom-2 left-2 px-2 py-1 bg-black/50 text-white text-sm rounded-md">
-        {username} {isSelf && '(You)'}
+      <div className="absolute bottom-2 left-2 right-2 flex justify-between items-center">
+        <div className="bg-black bg-opacity-50 text-white px-2 py-1 rounded-md text-sm">
+          {username} {isSelf && '(You)'}
+        </div>
+        
+        {isScreenSharing && (
+          <div className="bg-blue-600 text-white px-2 py-1 rounded-md text-xs">
+            Screen Sharing
+          </div>
+        )}
       </div>
     </div>
   );

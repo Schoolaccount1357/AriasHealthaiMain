@@ -1,90 +1,89 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Send } from 'lucide-react';
+import { Message } from '../../types/videochat';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Message } from '../../types/videochat';
+import { Send } from 'lucide-react';
 
 interface ChatPanelProps {
   messages: Message[];
-  onSendMessage: (content: string) => void;
+  onSendMessage: (message: string) => void;
   open: boolean;
 }
 
 export function ChatPanel({ messages, onSendMessage, open }: ChatPanelProps) {
-  const [message, setMessage] = useState('');
+  const [messageInput, setMessageInput] = useState('');
   const messagesEndRef = useRef<HTMLDivElement>(null);
   
-  // Scroll to bottom when new messages arrive
+  // Scroll to bottom when messages change
   useEffect(() => {
-    if (messagesEndRef.current) {
+    if (messagesEndRef.current && open) {
       messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
     }
-  }, [messages]);
+  }, [messages, open]);
   
-  // Handle message send
   const handleSendMessage = (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (message.trim()) {
-      onSendMessage(message);
-      setMessage('');
+    if (messageInput.trim()) {
+      onSendMessage(messageInput);
+      setMessageInput('');
     }
   };
   
-  if (!open) return null;
-  
   return (
-    <div className="flex flex-col h-full bg-white rounded-lg shadow-lg overflow-hidden">
-      <div className="p-3 bg-[#141e2f] text-white font-semibold">
-        Chat
+    <div className="flex flex-col h-full">
+      <div className="bg-gray-800 p-3 border-b border-gray-700">
+        <h3 className="text-lg font-semibold">Chat</h3>
       </div>
       
-      <div className="flex-1 p-4 overflow-y-auto bg-gray-50">
+      <div className="flex-1 p-4 overflow-y-auto" style={{ maxHeight: 'calc(100vh - 180px)' }}>
         {messages.length === 0 ? (
-          <div className="flex h-full items-center justify-center text-gray-400">
-            No messages yet.
+          <div className="flex items-center justify-center h-full text-gray-400">
+            <p>No messages yet</p>
           </div>
         ) : (
-          messages.map((msg, index) => (
-            <div 
-              key={index} 
-              className={`mb-3 max-w-[80%] ${msg.from === 'self' ? 'ml-auto' : ''}`}
-            >
-              <div className="text-xs text-gray-500 mb-1">
-                {msg.username}, {new Date(msg.time).toLocaleTimeString()}
+          <div className="space-y-4">
+            {messages.map((message, index) => (
+              <div 
+                key={index} 
+                className={`flex flex-col ${message.from === 'self' ? 'items-end' : 'items-start'}`}
+              >
+                <div className="flex items-center mb-1">
+                  <span className="text-xs font-semibold text-gray-400 mr-2">
+                    {message.from === 'self' ? 'You' : message.username}
+                  </span>
+                  <span className="text-xs text-gray-500">{message.time}</span>
+                </div>
+                <div 
+                  className={`px-3 py-2 rounded-lg ${
+                    message.from === 'self' 
+                      ? 'bg-blue-600 text-white' 
+                      : 'bg-gray-700 text-white'
+                  }`}
+                >
+                  {message.content}
+                </div>
               </div>
-              <div className={`p-3 rounded-lg ${
-                msg.from === 'self' 
-                  ? 'bg-[#3e64dd] text-white'
-                  : 'bg-gray-200 text-gray-800'
-              }`}>
-                {msg.content}
-              </div>
-            </div>
-          ))
+            ))}
+            <div ref={messagesEndRef} />
+          </div>
         )}
-        <div ref={messagesEndRef} />
       </div>
       
-      <form onSubmit={handleSendMessage} className="p-3 border-t">
-        <div className="flex">
+      <div className="p-3 border-t border-gray-700">
+        <form onSubmit={handleSendMessage} className="flex space-x-2">
           <Input
             type="text"
+            value={messageInput}
+            onChange={(e) => setMessageInput(e.target.value)}
             placeholder="Type a message..."
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            className="flex-1 mr-2"
+            className="bg-gray-700 border-gray-600 text-white"
           />
-          <Button
-            type="submit"
-            variant="default"
-            className="bg-[#3e64dd]"
-            disabled={!message.trim()}
-          >
-            <Send className="w-5 h-5" />
+          <Button type="submit" size="icon" disabled={!messageInput.trim()}>
+            <Send size={18} />
           </Button>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
   );
 }

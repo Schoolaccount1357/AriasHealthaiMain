@@ -68,9 +68,9 @@ export function EnrollmentForm() {
     <div className="w-full max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-6 md:p-10">
       <div className="text-center mb-10" id="enrollment-form">
         <div className="max-w-3xl mx-auto bg-gradient-to-r from-[#141e2f] to-[#2a4bba] p-4 rounded-lg text-white mb-8">
-          <h3 className="text-lg font-bold mb-2">Help Build a Future Without Isolation</h3>
+          <h3 className="text-lg font-bold mb-2">Help Shape the Future of Peer Support</h3>
           <p className="text-sm">
-            We're conducting a research study for veterans and civilians overcoming substance use. 
+            We're conducting a research study to improve mental health resources through technology.
             Your voice matters.
           </p>
         </div>
