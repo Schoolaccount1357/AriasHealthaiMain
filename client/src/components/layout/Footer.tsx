@@ -73,6 +73,9 @@ export function Footer() {
         
         {/* Footer Bottom */}
         <div className="mt-8 pt-8 border-t border-white/20 text-center text-sm text-white/80">
+          <div className="mb-2">
+            <p>AriasHealth.ai was incubated at Harvard University and MIT</p>
+          </div>
           <p>
             &copy; {currentYear} AriasHealth.ai. All rights reserved. | 
             <Link href="/privacy-policy" className="text-white hover:text-white/80 transition-colors ml-1 mr-1 font-medium">

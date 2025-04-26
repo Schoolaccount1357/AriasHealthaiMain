@@ -18,6 +18,12 @@ export function FinalCTA() {
             Join the Waitlist
           </Link>
         </Button>
+        
+        <div className="mt-8 pt-4 border-t border-white/20">
+          <p className="text-sm text-white/70">
+            AriasHealth.ai was incubated at Harvard University and MIT
+          </p>
+        </div>
       </div>
     </section>
   );
