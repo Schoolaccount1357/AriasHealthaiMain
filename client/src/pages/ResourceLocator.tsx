@@ -744,14 +744,14 @@ export default function ResourceLocator() {
       />
 
       <div className="bg-[#141e2f] text-white p-4 sm:p-6 rounded-lg mb-6 sm:mb-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-          <div className="space-y-1 sm:space-y-2">
-            <label className="text-xs sm:text-sm font-medium">State</label>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-4">
+          <div className="space-y-2">
+            <label className="text-sm font-medium">State</label>
             <Select
               value={selectedState}
               onValueChange={setSelectedState}
             >
-              <SelectTrigger className="bg-[#1c2537] border-none text-white h-10">
+              <SelectTrigger className="bg-[#1c2537] border-none text-white h-11 sm:h-10">
                 <SelectValue placeholder="Select state" />
               </SelectTrigger>
               <SelectContent className="max-h-[40vh] overflow-y-auto">
@@ -764,24 +764,24 @@ export default function ResourceLocator() {
             </Select>
           </div>
 
-          <div className="space-y-1 sm:space-y-2">
-            <label className="text-xs sm:text-sm font-medium">ZIP Code</label>
+          <div className="space-y-2">
+            <label className="text-sm font-medium">ZIP Code</label>
             <Input
               type="text"
               placeholder="Enter ZIP code"
               value={zipCode}
               onChange={(e) => setZipCode(e.target.value)}
-              className="bg-[#1c2537] border-none text-white placeholder:text-gray-400 h-10"
+              className="bg-[#1c2537] border-none text-white placeholder:text-gray-400 h-11 sm:h-10"
             />
           </div>
 
-          <div className="space-y-1 sm:space-y-2">
-            <label className="text-xs sm:text-sm font-medium">Search Radius (miles)</label>
+          <div className="space-y-2">
+            <label className="text-sm font-medium">Search Radius</label>
             <Select
               value={searchRadius}
               onValueChange={setSearchRadius}
             >
-              <SelectTrigger className="bg-[#1c2537] border-none text-white h-10">
+              <SelectTrigger className="bg-[#1c2537] border-none text-white h-11 sm:h-10">
                 <SelectValue placeholder="Distance" />
               </SelectTrigger>
               <SelectContent>
@@ -793,13 +793,13 @@ export default function ResourceLocator() {
             </Select>
           </div>
 
-          <div className="space-y-1 sm:space-y-2">
-            <label className="text-xs sm:text-sm font-medium">Resource Type</label>
+          <div className="space-y-2">
+            <label className="text-sm font-medium">Resource Type</label>
             <Select
               value={category}
               onValueChange={setCategory}
             >
-              <SelectTrigger className="bg-[#1c2537] border-none text-white h-10">
+              <SelectTrigger className="bg-[#1c2537] border-none text-white h-11 sm:h-10">
                 <SelectValue placeholder="Resource type" />
               </SelectTrigger>
               <SelectContent>
@@ -815,7 +815,7 @@ export default function ResourceLocator() {
         </div>
         
         <Button 
-          className="w-full mt-4 sm:mt-6 bg-[#3e64dd] hover:bg-[#2a4bba]"
+          className="w-full mt-5 sm:mt-6 bg-[#3e64dd] hover:bg-[#2a4bba] py-6 sm:py-4"
           size="lg"
         >
           Search Resources
@@ -829,13 +829,15 @@ export default function ResourceLocator() {
           {filteredResources.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
               {filteredResources.map((resource, index) => (
-                <Card key={index} className="shadow-md">
-                  <CardHeader className="pb-2">
+                <Card key={index} className="shadow-md overflow-hidden">
+                  <CardHeader className="pb-2 pt-4 px-4 sm:px-6">
                     <div className="flex items-start justify-between">
                       <div>
-                        <div className="flex items-center gap-2">
-                          {getCategoryIcon(resource.category)}
-                          <CardTitle className="text-lg sm:text-xl break-words">{resource.name}</CardTitle>
+                        <div className="flex items-start sm:items-center flex-col sm:flex-row sm:gap-2">
+                          <div className="mb-2 sm:mb-0">
+                            {getCategoryIcon(resource.category)}
+                          </div>
+                          <CardTitle className="text-base sm:text-lg md:text-xl break-words">{resource.name}</CardTitle>
                         </div>
                         <div className="mt-1">
                           <span className="inline-flex items-center rounded-full bg-[#141e2f]/10 px-2 py-1 text-xs font-medium text-[#3e64dd]">
@@ -845,7 +847,7 @@ export default function ResourceLocator() {
                       </div>
                     </div>
                   </CardHeader>
-                  <CardContent className="pt-2">
+                  <CardContent className="pt-2 px-4 sm:px-6">
                     <CardDescription className="mb-4 text-sm sm:text-base">{resource.description}</CardDescription>
                     {resource.address && (
                       <div className="flex items-start gap-2 text-xs sm:text-sm mb-2">
@@ -860,34 +862,31 @@ export default function ResourceLocator() {
                       </div>
                     )}
                   </CardContent>
-                  <CardFooter className="border-t pt-4">
-                    <div className="flex justify-between w-full flex-wrap gap-2">
+                  <CardFooter className="border-t pt-4 flex flex-col sm:flex-row sm:justify-between gap-3 px-4 sm:px-6">
+                    <Button 
+                      asChild 
+                      variant="outline"
+                      className="w-full sm:w-auto justify-center text-[#3e64dd] border-[#3e64dd]/30 hover:bg-[#3e64dd]/10"
+                    >
+                      <a href={resource.website} target="_blank" rel="noopener noreferrer">
+                        Visit Website
+                      </a>
+                    </Button>
+                    {resource.address && (
                       <Button 
                         asChild 
-                        variant="link" 
-                        className="p-0 h-auto text-[#3e64dd] text-sm"
+                        variant="outline" 
+                        className="w-full sm:w-auto justify-center"
                       >
-                        <a href={resource.website} target="_blank" rel="noopener noreferrer">
-                          Visit Website
+                        <a 
+                          href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(resource.address)}`} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                        >
+                          Get Directions
                         </a>
                       </Button>
-                      {resource.address && (
-                        <Button 
-                          asChild 
-                          variant="outline" 
-                          size="sm"
-                          className="text-xs sm:text-sm"
-                        >
-                          <a 
-                            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(resource.address)}`} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                          >
-                            Directions
-                          </a>
-                        </Button>
-                      )}
-                    </div>
+                    )}
                   </CardFooter>
                 </Card>
               ))}
