@@ -9,7 +9,6 @@ import ResourceLocator from "@/pages/ResourceLocator";
 import Contact from "@/pages/Contact";
 import PrivacyPolicy from "@/pages/PrivacyPolicy";
 import TermsOfService from "@/pages/TermsOfService";
-import VideoCall from "@/pages/VideoCall";
 
 function Router() {
   return (
@@ -20,7 +19,6 @@ function Router() {
       <Route path="/contact" component={Contact} />
       <Route path="/privacy-policy" component={PrivacyPolicy} />
       <Route path="/terms-of-service" component={TermsOfService} />
-      <Route path="/video-call" component={VideoCall} />
       <Route component={NotFound} />
     </Switch>
   );
