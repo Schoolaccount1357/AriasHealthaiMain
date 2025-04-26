@@ -1,0 +1,239 @@
+Homepage Wireframe
+
+Top Navigation Bar (Sticky)
+
+Logo (left)
+
+Tabs (right): Home | About | Pricing | Resources | FAQ | Contact
+
+CTA Button: Join the Waitlist (highlighted)
+
+Hero Section
+
+Headline:
+
+Stay Connected. Stay Strong.
+
+Subheadline:
+
+A new kind of support for veterans and civilians in recovery.
+
+CTA Button: [ Join the Waitlist ]
+
+Image: (Background or right side) Real-life photo of veterans walking or supportive scene.
+
+Emotional Banner (below hero)
+
+Simple banner text:
+
+Combat loneliness. Prevent relapse. Build your community.
+
+Your Journey with AriasHealth.ai (Unified How It Works + How to Sign Up)
+
+Journey Flow (Horizontal or Vertical, Unified Style)
+
+Icon
+
+Step Title
+
+Short Description
+
+📝 Form Icon
+
+Join the Waitlist
+
+Fill out a simple form to reserve your spot.
+
+🔗 Link Icon (chain)
+
+Get Matched
+
+We’ll connect you with peers who truly understand your journey.
+
+👀 Eye Icon (watch)
+
+Stay Connected
+
+Spot early warning signs together and stay engaged.
+
+❤️ Heart Icon
+
+Grow Stronger
+
+Get real-time encouragement, stay supported, and build lasting recovery.
+
+Unified background (light color)
+
+Smooth arrows connecting steps to show journey.
+
+Study Invitation Section
+
+Mini Header:
+
+Help Build a Future Without Isolation.
+
+Text:
+
+We're conducting a research study for veterans and civilians overcoming substance use. Your voice matters.
+
+CTA Button: [ Learn More About the Study ]
+
+Key Features Grid
+
+AI-Driven Peer Matching
+
+Predictive Relapse Detection
+
+Real-Time Peer Support Tools
+
+Privacy First - HIPAA Compliant
+
+Trust and Security Strip
+
+Shield icon + bullet points:
+
+HIPAA Compliance
+
+Data Encryption
+
+Anonymous Options
+
+24/7 Moderation
+
+FAQ Teaser
+
+Collapsible FAQ preview:
+
+How is my privacy protected?
+
+How does matching work?
+
+Who can join?
+
+What if I need immediate help?
+
+Link: [ See All FAQs ]
+
+Final CTA Section
+
+Quote Text:
+
+You don't have to do this alone. Find your people. Stay connected.
+
+Button: [ Join the Waitlist ]
+
+About Page Wireframe
+
+Hero Section
+
+Headline:
+
+Built for Connection. Built for Recovery.
+
+Subheadline:
+
+Why AriasHealth.ai exists and the difference we're building.
+
+Mission Section
+
+Title:
+
+Our Mission
+
+Content:
+
+To reduce substance use relapse and suicide risk by creating structured, AI-powered peer support for veterans and civilians in recovery.
+
+Why We Started Section
+
+Bullet points style:
+
+49M Americans struggle with substance use.
+
+Veterans face 2-3x higher suicide risk.
+
+Isolation is a major driver of relapse.
+
+Crisis services are stretched thin.
+
+Highlight Quote:
+
+When people stay connected, they stay alive.
+
+How AriasHealth.ai Helps
+
+Mini visual or infographic summarizing:
+
+Personalized peer groups
+
+Predictive analytics to prevent crisis
+
+Ongoing support, not one-time check-ins
+
+Our Vision for the Future
+
+Integrate with VA, DoD, and public health networks.
+
+Build sustainable, digital peer communities.
+
+Save lives by fighting loneliness and isolation at scale.
+
+Pricing Page Wireframe
+
+Hero Section
+
+Headline:
+
+Accessible Support. Powered by Purpose.
+
+Subheadline:
+
+Participation in our research study is free. Our goal is to make recovery support accessible to all.
+
+Research Phase Pricing (CURRENT)
+
+Large box:
+
+FREE
+
+Join our federally funded research study.
+
+Help us build a better future for peer recovery.
+
+No credit card required.
+
+100% HIPAA-compliant, secure.
+
+Button: [ Join the Waitlist ]
+
+Future Pricing Vision (Post-Study)
+
+Simple two-column future roadmap (grayed out to indicate "not yet"):
+
+Plan
+
+What's Included
+
+Basic (Free)
+
+Access to peer group support. Basic matching. Ongoing community access.
+
+Premium (TBD Pricing)
+
+Advanced AI predictive support. Real-time engagement prompts. Direct text alerts. Optional clinician check-ins.
+
+Note: AriasHealth.ai will always offer free core peer support for veterans.
+
+Trust Statement
+
+Text:
+
+We believe cost should never be a barrier to recovery. Our goal is to keep access open, with optional advanced features later for expanded support.
+
+Footer (Shared Across All Pages)
+
+Privacy Policy | Terms of Service | Contact Us
+
+"Veteran Crisis Line: 1-800-273-8255 (Press 1)" emphasized
+
+Mini-slogan: Built for connection. Built for you.
