@@ -17,6 +17,8 @@ import {
   Building2, 
   Activity 
 } from "lucide-react";
+import { MainLayout } from "@/components/layout/MainLayout";
+import { PageHeader } from "@/components/ui/PageHeader";
 
 interface Resource {
   name: string;
@@ -245,6 +247,6 @@ export default function Resources() {
           </Link>
         </Button>
       </div>
-    </div>
+    </MainLayout>
   );
 }
