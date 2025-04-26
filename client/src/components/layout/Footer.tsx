@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Users, Mail, Facebook, Twitter, Instagram } from "lucide-react";
+import { Mail, Instagram } from "lucide-react";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -15,12 +15,6 @@ export function Footer() {
               AI-powered peer matching for veterans dealing with substance use disorders.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-white hover:text-white/80 transition-colors" aria-label="Facebook">
-                <Facebook className="h-6 w-6" />
-              </a>
-              <a href="#" className="text-white hover:text-white/80 transition-colors" aria-label="Twitter">
-                <Twitter className="h-6 w-6" />
-              </a>
               <a href="https://www.instagram.com/p/DIwQCspJw6o/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition-colors" aria-label="Instagram">
                 <Instagram className="h-6 w-6" />
               </a>
