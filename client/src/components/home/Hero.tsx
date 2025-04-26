@@ -6,17 +6,17 @@ export function Hero() {
     <section className="mb-12">
       <div className="bg-[#141e2f] rounded-lg overflow-hidden shadow-lg">
         <div className="md:flex relative">
-          <div className="md:w-1/2 p-8 md:p-12 flex flex-col justify-center z-10">
-            <h1 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-white via-blue-200 to-blue-100 bg-clip-text text-transparent">
+          <div className="md:w-1/2 p-6 sm:p-8 md:p-12 flex flex-col justify-center z-10">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4 bg-gradient-to-r from-white via-blue-200 to-blue-100 bg-clip-text text-transparent">
               Stay Connected. Stay Strong.
             </h1>
-            <p className="text-gray-300 mb-6 text-lg">
+            <p className="text-gray-300 mb-4 md:mb-6 text-base md:text-lg">
               A new kind of support for veterans and civilians in recovery.
             </p>
-            <div className="space-y-4">
+            <div className="space-y-3 md:space-y-4">
               <Button 
                 asChild
-                className="bg-[#3e64dd] text-white hover:bg-[#2a4bba] transition-colors w-full md:w-auto"
+                className="bg-[#3e64dd] text-white hover:bg-[#2a4bba] transition-colors w-full sm:w-auto"
                 size="lg"
               >
                 <Link href="#enrollment-form">
@@ -24,16 +24,16 @@ export function Hero() {
                 </Link>
               </Button>
               
-              <div className="mt-4">
-                <p className="text-sm text-gray-200">
+              <div className="mt-3 md:mt-4">
+                <p className="text-xs sm:text-sm text-gray-200">
                   <span className="text-white font-semibold">Get Early Access:</span> Waitlist members will be the first to experience our AI-powered matching and veteran support community.
                 </p>
               </div>
             </div>
-            <div className="mt-6"></div>
+            <div className="mt-4 md:mt-6"></div>
           </div>
-          <div className="md:w-1/2 relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-[#141e2f] to-transparent z-10 md:block hidden"></div>
+          <div className="h-60 sm:h-72 md:h-auto md:w-1/2 relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-[#141e2f] to-transparent z-10 block"></div>
             <img 
               src="https://images.unsplash.com/photo-1583468982228-19f19164aee2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=600&q=80" 
               alt="Diverse group of veterans supporting each other" 

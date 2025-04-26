@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 export function AboutSUDS() {
   return (
     <section className="mb-12 bg-white p-6 md:p-8 rounded-lg shadow-lg">
-      <h2 className="text-2xl font-bold mb-4 text-foreground">Problem Statement</h2>
+      <h2 className="text-2xl font-bold mb-4 text-foreground">The Challenges Veterans Face</h2>
       
       <div className="prose max-w-none">
         <p className="mb-4">

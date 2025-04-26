@@ -10,8 +10,7 @@ export function Header() {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/resources", label: "Resources" },
-    { href: "/resource-locator", label: "Find Local Support" },
-    { href: "/contact", label: "Contact" }
+    { href: "/resource-locator", label: "Find Local Support" }
   ];
 
   return (

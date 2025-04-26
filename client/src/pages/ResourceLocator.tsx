@@ -743,18 +743,18 @@ export default function ResourceLocator() {
         description="Connect with veteran support services in your area. Select your state or enter your ZIP code to find resources near you."
       />
 
-      <div className="bg-[#141e2f] text-white p-6 rounded-lg mb-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          <div className="space-y-2">
-            <label className="text-sm font-medium">State</label>
+      <div className="bg-[#141e2f] text-white p-4 sm:p-6 rounded-lg mb-6 sm:mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+          <div className="space-y-1 sm:space-y-2">
+            <label className="text-xs sm:text-sm font-medium">State</label>
             <Select
               value={selectedState}
               onValueChange={setSelectedState}
             >
-              <SelectTrigger className="bg-[#1c2537] border-none text-white">
+              <SelectTrigger className="bg-[#1c2537] border-none text-white h-10">
                 <SelectValue placeholder="Select state" />
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent className="max-h-[40vh] overflow-y-auto">
                 {Object.keys(stateData).map(state => (
                   <SelectItem key={state} value={state}>
                     {state}
@@ -764,24 +764,24 @@ export default function ResourceLocator() {
             </Select>
           </div>
 
-          <div className="space-y-2">
-            <label className="text-sm font-medium">ZIP Code</label>
+          <div className="space-y-1 sm:space-y-2">
+            <label className="text-xs sm:text-sm font-medium">ZIP Code</label>
             <Input
               type="text"
               placeholder="Enter ZIP code"
               value={zipCode}
               onChange={(e) => setZipCode(e.target.value)}
-              className="bg-[#1c2537] border-none text-white placeholder:text-gray-400"
+              className="bg-[#1c2537] border-none text-white placeholder:text-gray-400 h-10"
             />
           </div>
 
-          <div className="space-y-2">
-            <label className="text-sm font-medium">Search Radius (miles)</label>
+          <div className="space-y-1 sm:space-y-2">
+            <label className="text-xs sm:text-sm font-medium">Search Radius (miles)</label>
             <Select
               value={searchRadius}
               onValueChange={setSearchRadius}
             >
-              <SelectTrigger className="bg-[#1c2537] border-none text-white">
+              <SelectTrigger className="bg-[#1c2537] border-none text-white h-10">
                 <SelectValue placeholder="Distance" />
               </SelectTrigger>
               <SelectContent>
@@ -793,13 +793,13 @@ export default function ResourceLocator() {
             </Select>
           </div>
 
-          <div className="space-y-2">
-            <label className="text-sm font-medium">Resource Type</label>
+          <div className="space-y-1 sm:space-y-2">
+            <label className="text-xs sm:text-sm font-medium">Resource Type</label>
             <Select
               value={category}
               onValueChange={setCategory}
             >
-              <SelectTrigger className="bg-[#1c2537] border-none text-white">
+              <SelectTrigger className="bg-[#1c2537] border-none text-white h-10">
                 <SelectValue placeholder="Resource type" />
               </SelectTrigger>
               <SelectContent>
@@ -815,7 +815,7 @@ export default function ResourceLocator() {
         </div>
         
         <Button 
-          className="w-full mt-6 bg-[#3e64dd] hover:bg-[#2a4bba]"
+          className="w-full mt-4 sm:mt-6 bg-[#3e64dd] hover:bg-[#2a4bba]"
           size="lg"
         >
           Search Resources
@@ -824,10 +824,10 @@ export default function ResourceLocator() {
 
       {selectedState && (
         <div>
-          <h2 className="text-2xl font-bold mb-6">Resources in {selectedState}</h2>
+          <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Resources in {selectedState}</h2>
           
           {filteredResources.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
               {filteredResources.map((resource, index) => (
                 <Card key={index} className="shadow-md">
                   <CardHeader className="pb-2">
@@ -835,7 +835,7 @@ export default function ResourceLocator() {
                       <div>
                         <div className="flex items-center gap-2">
                           {getCategoryIcon(resource.category)}
-                          <CardTitle className="text-xl">{resource.name}</CardTitle>
+                          <CardTitle className="text-lg sm:text-xl break-words">{resource.name}</CardTitle>
                         </div>
                         <div className="mt-1">
                           <span className="inline-flex items-center rounded-full bg-[#141e2f]/10 px-2 py-1 text-xs font-medium text-[#3e64dd]">
@@ -846,26 +846,26 @@ export default function ResourceLocator() {
                     </div>
                   </CardHeader>
                   <CardContent className="pt-2">
-                    <CardDescription className="mb-4">{resource.description}</CardDescription>
+                    <CardDescription className="mb-4 text-sm sm:text-base">{resource.description}</CardDescription>
                     {resource.address && (
-                      <div className="flex items-start gap-2 text-sm mb-2">
-                        <MapPin className="h-4 w-4 mt-0.5 text-[#3e64dd]" />
-                        <span>{resource.address}</span>
+                      <div className="flex items-start gap-2 text-xs sm:text-sm mb-2">
+                        <MapPin className="h-4 w-4 mt-0.5 text-[#3e64dd] flex-shrink-0" />
+                        <span className="break-words">{resource.address}</span>
                       </div>
                     )}
                     {resource.phone && (
-                      <div className="flex items-center gap-2 text-sm">
-                        <Phone className="h-4 w-4 text-[#3e64dd]" />
+                      <div className="flex items-center gap-2 text-xs sm:text-sm">
+                        <Phone className="h-4 w-4 text-[#3e64dd] flex-shrink-0" />
                         <span>{resource.phone}</span>
                       </div>
                     )}
                   </CardContent>
                   <CardFooter className="border-t pt-4">
-                    <div className="flex justify-between w-full">
+                    <div className="flex justify-between w-full flex-wrap gap-2">
                       <Button 
                         asChild 
                         variant="link" 
-                        className="p-0 h-auto text-[#3e64dd]"
+                        className="p-0 h-auto text-[#3e64dd] text-sm"
                       >
                         <a href={resource.website} target="_blank" rel="noopener noreferrer">
                           Visit Website
@@ -876,6 +876,7 @@ export default function ResourceLocator() {
                           asChild 
                           variant="outline" 
                           size="sm"
+                          className="text-xs sm:text-sm"
                         >
                           <a 
                             href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(resource.address)}`} 
@@ -892,24 +893,24 @@ export default function ResourceLocator() {
               ))}
             </div>
           ) : (
-            <div className="text-center py-12 bg-gray-50 rounded-lg">
-              <p className="text-lg text-gray-600">No resources found with the selected filters.</p>
-              <p className="mt-2">Try changing your search criteria or <Link href="/resources" className="text-[#3e64dd] hover:underline">browse all resources</Link>.</p>
+            <div className="text-center py-8 sm:py-12 bg-gray-50 rounded-lg">
+              <p className="text-base sm:text-lg text-gray-600">No resources found with the selected filters.</p>
+              <p className="mt-2 text-sm sm:text-base">Try changing your search criteria or <Link href="/resources" className="text-[#3e64dd] hover:underline">browse all resources</Link>.</p>
             </div>
           )}
         </div>
       )}
 
       {!selectedState && (
-        <div className="bg-gray-50 rounded-lg p-8 text-center">
-          <h3 className="text-xl font-semibold mb-4">Select a state to view resources</h3>
-          <p className="text-gray-600 mb-6">Once you select a state, we'll show you available local resources for veterans.</p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+        <div className="bg-gray-50 rounded-lg p-4 sm:p-8 text-center">
+          <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">Select a state to view resources</h3>
+          <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">Once you select a state, we'll show you available local resources for veterans.</p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 sm:gap-3 max-h-[60vh] overflow-y-auto p-1">
             {Object.keys(stateData).map((state) => (
               <Button 
                 key={state}
                 variant="outline" 
-                className="hover:bg-[#3e64dd]/10 hover:text-[#3e64dd]"
+                className="hover:bg-[#3e64dd]/10 hover:text-[#3e64dd] text-xs sm:text-sm px-1 sm:px-2"
                 onClick={() => setSelectedState(state)}
               >
                 {state}
