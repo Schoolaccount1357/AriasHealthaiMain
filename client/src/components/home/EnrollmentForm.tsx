@@ -67,8 +67,8 @@ export function EnrollmentForm() {
   return (
     <div className="w-full max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-6 md:p-10">
       <div className="text-center mb-10">
-        <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-700 bg-clip-text text-transparent mb-4">Join the Waitlist</h2>
-        <p className="text-gray-600">
+        <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-700 bg-clip-text text-transparent mb-4" id="enrollment-form">Join the Waitlist</h2>
+        <p className="text-gray-600 mb-4">
           Be among the first to access AriasHealth.ai's revolutionary peer support platform when we launch
         </p>
       </div>

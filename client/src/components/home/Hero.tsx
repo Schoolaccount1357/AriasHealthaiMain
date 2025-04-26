@@ -13,16 +13,25 @@ export function Hero() {
             <p className="text-gray-300 mb-6 text-lg">
               A new kind of support for veterans and civilians in recovery.
             </p>
-            <Button 
-              asChild
-              className="bg-[#3e64dd] text-white hover:bg-[#2a4bba] transition-colors"
-              size="lg"
-            >
-              <Link href="#enrollment-form">
-                Join the Waitlist
-              </Link>
-            </Button>
-            <div className="mt-8"></div>
+            <div className="space-y-4">
+              <Button 
+                asChild
+                className="bg-[#3e64dd] text-white hover:bg-[#2a4bba] transition-colors w-full md:w-auto"
+                size="lg"
+              >
+                <Link href="#enrollment-form">
+                  Join the Waitlist
+                </Link>
+              </Button>
+              
+              <div className="bg-white/10 rounded-lg p-4 mt-4">
+                <h3 className="text-lg font-semibold mb-2">Get Early Access</h3>
+                <p className="text-sm text-gray-200">
+                  Waitlist members will be the first to experience our AI-powered matching and veteran support community.
+                </p>
+              </div>
+            </div>
+            <div className="mt-6"></div>
           </div>
           <div className="md:w-1/2 relative">
             <div className="absolute inset-0 bg-gradient-to-r from-[#141e2f] to-transparent z-10 md:block hidden"></div>
