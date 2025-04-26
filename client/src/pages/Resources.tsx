@@ -163,22 +163,36 @@ export default function Resources() {
         </p>
         <div className="flex flex-wrap gap-4">
           <Button 
-            className="bg-[#3e64dd] hover:bg-[#2a4bba]"
+            className="bg-[#3e64dd] hover:bg-[#2a4bba] transition-all duration-300 relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98]"
             size="lg"
           >
-            Call 988 - Press 1
+            <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
+            <span className="relative z-10 flex items-center">
+              <Phone className="h-4 w-4 mr-2 transition-transform duration-300 group-hover:scale-110" />
+              Call 988 - Press 1
+            </span>
           </Button>
           <Button 
-            className="bg-[#3e64dd] hover:bg-[#2a4bba]"
+            className="bg-[#3e64dd] hover:bg-[#2a4bba] transition-all duration-300 relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98]"
             size="lg"
           >
-            Text 838255
+            <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
+            <span className="relative z-10 flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 transition-transform duration-300 group-hover:scale-110" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+              </svg>
+              Text 838255
+            </span>
           </Button>
           <Button 
-            className="bg-[#3e64dd] hover:bg-[#2a4bba]"
+            className="bg-[#3e64dd] hover:bg-[#2a4bba] transition-all duration-300 relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98]"
             size="lg"
           >
-            Chat Online
+            <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
+            <span className="relative z-10 flex items-center">
+              <Globe className="h-4 w-4 mr-2 transition-transform duration-300 group-hover:scale-110" />
+              Chat Online
+            </span>
           </Button>
         </div>
       </div>
@@ -208,10 +222,14 @@ export default function Resources() {
                   <Button 
                     asChild 
                     variant="link" 
-                    className="p-0 h-auto text-[#3e64dd]"
+                    className="p-0 h-auto text-[#3e64dd] group relative overflow-hidden"
                   >
-                    <a href={resource.website} target="_blank" rel="noopener noreferrer">
-                      Visit Website
+                    <a href={resource.website} target="_blank" rel="noopener noreferrer" className="inline-flex items-center">
+                      <span className="relative z-10 inline-flex items-center transition-all duration-300 group-hover:translate-x-1">
+                        Visit Website
+                        <Globe className="h-3 w-3 ml-1 transition-transform duration-300 group-hover:translate-x-1 group-hover:scale-110" />
+                      </span>
+                      <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#3e64dd]/40 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
                     </a>
                   </Button>
                 </div>
@@ -221,10 +239,17 @@ export default function Resources() {
               <Button 
                 asChild 
                 variant="outline" 
-                className="w-full"
+                className="w-full group transition-all duration-300 relative overflow-hidden hover:border-[#3e64dd] hover:text-[#3e64dd]"
               >
-                <Link href="/resource-locator">
-                  Find local resources
+                <Link href="/resource-locator" className="flex items-center justify-center">
+                  <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-[#3e64dd]/0 via-[#3e64dd]/10 to-[#3e64dd]/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
+                  <span className="relative z-10 flex items-center justify-center">
+                    Find local resources
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </span>
                 </Link>
               </Button>
             </CardFooter>
@@ -238,10 +263,16 @@ export default function Resources() {
         </p>
         <Button 
           asChild 
-          className="bg-[#3e64dd] hover:bg-[#2a4bba]"
+          className="bg-[#3e64dd] hover:bg-[#2a4bba] transition-all duration-300 relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98]"
         >
-          <Link href="/resource-locator">
-            Find Resources in Your State
+          <Link href="/resource-locator" className="flex items-center justify-center">
+            <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
+            <span className="relative z-10 flex items-center justify-center">
+              Find Resources in Your State
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </span>
           </Link>
         </Button>
       </div>
