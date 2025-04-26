@@ -34,10 +34,10 @@ export function PlatformPreview() {
   ];
 
   return (
-    <section className="mb-12">
-      <h2 className="text-2xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-indigo-700 bg-clip-text text-transparent">Mental Health, Reimagined for Veterans</h2>
+    <section className="mb-12 mt-6">
+      <h2 className="text-3xl font-bold mb-8 text-center text-gradient">Mental Health, Reimagined for Veterans</h2>
       
-      <p className="mb-6 text-muted-foreground">
+      <p className="mb-8 text-lg text-center max-w-4xl mx-auto">
         AriasHealth.ai leverages cutting-edge artificial intelligence to create a personalized mental health experience built specifically for veterans. Our platform provides peer-to-peer connection with those who truly understand your experiences.
       </p>
       

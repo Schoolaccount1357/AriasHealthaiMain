@@ -22,6 +22,7 @@ export function Hero() {
                 Join the Waitlist
               </Link>
             </Button>
+            <div className="mt-8"></div>
           </div>
           <div className="md:w-1/2">
             <img 

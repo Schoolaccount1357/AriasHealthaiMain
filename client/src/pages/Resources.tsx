@@ -18,6 +18,21 @@ import {
   Activity 
 } from "lucide-react";
 
+interface Resource {
+  name: string;
+  description: string;
+  website: string;
+  phone?: string;
+  chat?: boolean;
+  text?: string | boolean;
+}
+
+interface ResourceCategory {
+  title: string;
+  icon: JSX.Element;
+  resources: Resource[];
+}
+
 export default function Resources() {
   const resourceCategories = [
     {
@@ -188,8 +203,8 @@ export default function Resources() {
                     {resource.phone && (
                       <p>📞 {resource.phone}</p>
                     )}
-                    {resource.text && (
-                      <p>✉️ {resource.text}</p>
+                    {'text' in resource && resource.text && (
+                      <p>✉️ {typeof resource.text === 'string' ? resource.text : 'Text Available'}</p>
                     )}
                   </div>
                   <Button 
