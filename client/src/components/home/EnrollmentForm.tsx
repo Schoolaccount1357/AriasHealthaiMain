@@ -65,35 +65,35 @@ export function EnrollmentForm() {
   };
   
   return (
-    <div className="w-full max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-6 md:p-10">
-      <div className="text-center mb-10" id="enrollment-form">
-        <div className="max-w-3xl mx-auto bg-gradient-to-r from-[#141e2f] to-[#2a4bba] p-4 rounded-lg text-white mb-8">
-          <h3 className="text-lg font-bold mb-2">Help Shape the Future of Peer Support</h3>
-          <p className="text-sm">
+    <div className="w-full max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-5 sm:p-6 md:p-10" id="enrollment-form">
+      <div className="text-center mb-6 sm:mb-10">
+        <div className="max-w-3xl mx-auto bg-gradient-to-r from-[#141e2f] to-[#2a4bba] p-4 rounded-lg text-white mb-6 sm:mb-8">
+          <h3 className="text-base sm:text-lg font-bold mb-2">Help Shape the Future of Peer Support</h3>
+          <p className="text-xs sm:text-sm">
             We're conducting a research study to improve mental health resources through technology.
             Your voice matters.
           </p>
         </div>
         
-        <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-700 bg-clip-text text-transparent mb-4">Join the Waitlist</h2>
-        <p className="text-gray-600 mb-2">
+        <h2 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-700 bg-clip-text text-transparent mb-3 sm:mb-4">Join the Waitlist</h2>
+        <p className="text-sm sm:text-base text-gray-600 mb-2">
           Be among the first to access AriasHealth.ai's revolutionary peer support platform when we launch
         </p>
       </div>
       
       <Form {...waitlistForm}>
-        <form onSubmit={waitlistForm.handleSubmit(handleSubmit)} className="space-y-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <form onSubmit={waitlistForm.handleSubmit(handleSubmit)} className="space-y-5 sm:space-y-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             <FormField
               control={waitlistForm.control}
               name="firstName"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>First Name (Optional)</FormLabel>
+                  <FormLabel className="text-sm sm:text-base">First Name (Optional)</FormLabel>
                   <FormControl>
-                    <Input placeholder="Enter your first name" {...field} />
+                    <Input placeholder="Enter your first name" className="h-11 sm:h-10" {...field} />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage className="text-xs sm:text-sm" />
                 </FormItem>
               )}
             />
@@ -103,11 +103,11 @@ export function EnrollmentForm() {
               name="lastName"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Last Name (Optional)</FormLabel>
+                  <FormLabel className="text-sm sm:text-base">Last Name (Optional)</FormLabel>
                   <FormControl>
-                    <Input placeholder="Enter your last name" {...field} />
+                    <Input placeholder="Enter your last name" className="h-11 sm:h-10" {...field} />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage className="text-xs sm:text-sm" />
                 </FormItem>
               )}
             />
@@ -118,11 +118,11 @@ export function EnrollmentForm() {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Email</FormLabel>
+                <FormLabel className="text-sm sm:text-base">Email</FormLabel>
                 <FormControl>
-                  <Input placeholder="Enter your email" type="email" {...field} />
+                  <Input placeholder="Enter your email" type="email" className="h-11 sm:h-10" {...field} />
                 </FormControl>
-                <FormMessage />
+                <FormMessage className="text-xs sm:text-sm" />
               </FormItem>
             )}
           />
@@ -132,13 +132,13 @@ export function EnrollmentForm() {
             name="serviceStatus"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Service Status</FormLabel>
+                <FormLabel className="text-sm sm:text-base">Service Status</FormLabel>
                 <Select 
                   onValueChange={field.onChange} 
                   defaultValue={field.value}
                 >
                   <FormControl>
-                    <SelectTrigger>
+                    <SelectTrigger className="h-11 sm:h-10">
                       <SelectValue placeholder="Select your status" />
                     </SelectTrigger>
                   </FormControl>
@@ -150,7 +150,7 @@ export function EnrollmentForm() {
                     <SelectItem value="other">Other</SelectItem>
                   </SelectContent>
                 </Select>
-                <FormMessage />
+                <FormMessage className="text-xs sm:text-sm" />
               </FormItem>
             )}
           />
@@ -160,30 +160,30 @@ export function EnrollmentForm() {
             name="reasonForInterest"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Why are you interested in AriasHealth.ai? (Optional)</FormLabel>
+                <FormLabel className="text-sm sm:text-base">Why are you interested in AriasHealth.ai? (Optional)</FormLabel>
                 <FormControl>
                   <Textarea 
                     placeholder="Tell us why you're interested in our platform"
-                    className="min-h-[100px]"
+                    className="min-h-[120px] sm:min-h-[100px]"
                     {...field}
                   />
                 </FormControl>
-                <FormMessage />
+                <FormMessage className="text-xs sm:text-sm" />
               </FormItem>
             )}
           />
           
-          <div className="flex justify-center pt-4">
+          <div className="flex justify-center pt-2 sm:pt-4">
             <Button 
               type="submit" 
-              className="w-full max-w-md bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 text-white font-semibold py-3"
+              className="w-full py-6 sm:py-3 text-base sm:max-w-md bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 text-white font-semibold"
               disabled={waitlistSubmitMutation.isPending}
             >
               {waitlistSubmitMutation.isPending ? "Processing..." : "Join the Waitlist"}
             </Button>
           </div>
           
-          <p className="text-center text-sm text-gray-500 mt-4">
+          <p className="text-center text-xs sm:text-sm text-gray-500 mt-4">
             By joining, you'll be first to know when we launch. We respect your privacy and will never share your information.
           </p>
         </form>
