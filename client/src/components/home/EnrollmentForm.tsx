@@ -65,7 +65,7 @@ export function EnrollmentForm() {
   };
   
   return (
-    <div className="w-full max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-5 sm:p-6 md:p-10" id="enrollment-form">
+    <div className="w-full max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-5 sm:p-6 md:p-10">
       <div className="text-center mb-6 sm:mb-10">
         <div className="max-w-3xl mx-auto bg-gradient-to-r from-[#141e2f] to-[#2a4bba] p-4 rounded-lg text-white mb-6 sm:mb-8">
           <h3 className="text-base sm:text-lg font-bold mb-2">Help Shape the Future of Peer Support</h3>

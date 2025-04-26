@@ -9,6 +9,7 @@
   --background-dark: #141e2f;
   --background-card: #1c2537;
   --accent: #8DEFC9;
+  scroll-behavior: smooth;
 }
 
 body {
