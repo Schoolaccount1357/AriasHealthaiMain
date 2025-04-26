@@ -9,8 +9,8 @@ export function Header() {
   
   const navLinks = [
     { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
     { href: "/resources", label: "Resources" },
+    { href: "/resource-locator", label: "Find Local Support" },
     { href: "/faq", label: "FAQ" },
     { href: "/contact", label: "Contact" }
   ];
