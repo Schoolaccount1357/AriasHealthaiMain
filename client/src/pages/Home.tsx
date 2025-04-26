@@ -20,7 +20,6 @@ export default function Home() {
         <Hero />
         <KeyFeatures />
         <EnrollmentForm />
-        <StudyInvitation />
         <PlatformPreview />
         <AboutSUDS />
         <TrustAndSecurity />
