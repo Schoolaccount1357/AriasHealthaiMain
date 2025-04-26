@@ -24,10 +24,9 @@ export function Hero() {
                 </Link>
               </Button>
               
-              <div className="bg-white/10 rounded-lg p-4 mt-4">
-                <h3 className="text-lg font-semibold mb-2">Get Early Access</h3>
+              <div className="mt-4">
                 <p className="text-sm text-gray-200">
-                  Waitlist members will be the first to experience our AI-powered matching and veteran support community.
+                  <span className="text-white font-semibold">Get Early Access:</span> Waitlist members will be the first to experience our AI-powered matching and veteran support community.
                 </p>
               </div>
             </div>
