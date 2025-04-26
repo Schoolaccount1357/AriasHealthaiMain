@@ -51,7 +51,31 @@ export function useVideoChat(initialUsername: string, initialRoomId: string) {
       // Handle existing users in the room
       socketRef.current.on('room-users', (users: User[]) => {
         users.forEach(user => {
-          // Create peer connection for each user
+          if (user.id) {
+            // Create peer connection for each user
+            const peer = createPeer(user.id, socketRef.current!.id, stream);
+            
+            setRoomState(prev => ({
+              ...prev,
+              peers: {
+                ...prev.peers,
+                [user.id]: {
+                  peerId: user.id,
+                  peer,
+                  username: user.username || 'Anonymous'
+                }
+              }
+            }));
+          }
+        });
+      });
+      
+      // Handle new users joining
+      socketRef.current.on('user-joined', (user: User) => {
+        console.log('User joined:', user);
+        
+        if (user.id) {
+          // Create peer connection for new user
           const peer = createPeer(user.id, socketRef.current!.id, stream);
           
           setRoomState(prev => ({
@@ -61,31 +85,11 @@ export function useVideoChat(initialUsername: string, initialRoomId: string) {
               [user.id]: {
                 peerId: user.id,
                 peer,
-                username: user.username
+                username: user.username || 'Anonymous'
               }
             }
           }));
-        });
-      });
-      
-      // Handle new users joining
-      socketRef.current.on('user-joined', (user: User) => {
-        console.log('User joined:', user);
-        
-        // Create peer connection for new user
-        const peer = createPeer(user.id, socketRef.current!.id, stream);
-        
-        setRoomState(prev => ({
-          ...prev,
-          peers: {
-            ...prev.peers,
-            [user.id]: {
-              peerId: user.id,
-              peer,
-              username: user.username
-            }
-          }
-        }));
+        }
       });
       
       // Handle WebRTC signaling
@@ -106,7 +110,7 @@ export function useVideoChat(initialUsername: string, initialRoomId: string) {
               [from]: {
                 peerId: from,
                 peer,
-                username
+                username: username || 'Anonymous'
               }
             }
           }));
