@@ -53,7 +53,12 @@ export default function PrivacyPolicy() {
               We may update this Privacy Policy as the platform grows. If we make major changes, we'll post an updated version here.
             </p>
 
-            <h2 className="text-xl font-bold mt-8 mb-4">6. Contact Us</h2>
+            <h2 className="text-xl font-bold mt-8 mb-4">6. Children's Privacy</h2>
+            <p>
+              Our services are intended for individuals 18 years and older. We do not knowingly collect personal information from individuals under the age of 18. If you become aware that a minor has provided us with personal information, please contact us at info@ariashealth.ai, and we will take steps to delete the information.
+            </p>
+
+            <h2 className="text-xl font-bold mt-8 mb-4">7. Contact Us</h2>
             <p>
               If you have any questions about how your information is handled, reach out anytime:<br/>
               📧 info@ariashealth.ai
