@@ -21,17 +21,8 @@ export function Hero() {
               >
                 <Link href="#enrollment-form" className="flex items-center justify-center">
                   <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
-                  <span className="relative z-10 flex items-center">
+                  <span className="relative z-10">
                     Join the waitlist below
-                    <svg 
-                      xmlns="http://www.w3.org/2000/svg" 
-                      className="h-5 w-5 ml-1 transition-transform duration-300 group-hover:translate-x-1" 
-                      fill="none" 
-                      viewBox="0 0 24 24" 
-                      stroke="currentColor"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
                   </span>
                 </Link>
               </Button>
