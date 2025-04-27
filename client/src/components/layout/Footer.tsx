@@ -25,7 +25,7 @@ export function Footer() {
           <div>
             <h3 className="font-bold text-lg mb-4">Resources</h3>
             <ul className="space-y-2 text-sm text-white/90">
-              <li><a href="https://www.ptsd.va.gov" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">SUDS Information</a></li>
+              <li><a href="https://www.mentalhealth.va.gov/substance-use/index.asp" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">SUDS Information</a></li>
               <li><a href="https://www.va.gov/health/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">VA Resources</a></li>
               <li><a href="https://www.maketheconnection.net" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Recovery Support</a></li>
               <li><a href="https://www.veteranscrisisline.net" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Crisis Help</a></li>
