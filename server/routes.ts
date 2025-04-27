@@ -1,11 +1,12 @@
 import type { Express, Request, Response } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
-import { insertVeteranSchema, basicInfoSchema, militaryBackgroundSchema, healthHistorySchema, preferencesSchema, insertWaitlistSchema, waitlistSchema } from "@shared/schema";
+import { insertVeteranSchema, basicInfoSchema, militaryBackgroundSchema, healthHistorySchema, preferencesSchema, insertWaitlistSchema, waitlistSchema, insertResourceUsageSchema } from "@shared/schema";
 import { ZodError } from "zod";
 import { fromZodError } from "zod-validation-error";
 import { Server as SocketIOServer } from "socket.io";
 import { WebSocket } from "ws";
+import crypto from "crypto";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // API endpoint for submitting veteran pre-enrollment forms
@@ -149,6 +150,60 @@ export async function registerRoutes(app: Express): Promise<Server> {
     } catch (error) {
       return res.status(500).json({ 
         message: "An error occurred while retrieving waitlist entries" 
+      });
+    }
+  });
+  
+  // API endpoint for tracking resource usage (e.g., crisis hotline clicks)
+  app.post("/api/resource/track", async (req: Request, res: Response) => {
+    try {
+      const { resourceType } = req.body;
+      
+      if (!resourceType || !["call", "text", "chat"].includes(resourceType)) {
+        return res.status(400).json({ 
+          message: "Invalid resource type. Must be 'call', 'text', or 'chat'" 
+        });
+      }
+      
+      // Get basic info from the request for analytics
+      const userAgent = req.headers['user-agent'] || '';
+      const referrer = req.headers['referer'] || '';
+      // Hash the IP address for privacy
+      const ipHash = crypto.createHash('sha256').update(req.ip || '').digest('hex');
+      
+      // Log the resource usage
+      const usage = await storage.logResourceUsage({
+        resourceType,
+        userAgent,
+        ipHash,
+        referrer,
+        timestamp: new Date()
+      });
+      
+      return res.status(201).json({
+        message: "Resource usage tracked successfully",
+        data: { resourceType }
+      });
+    } catch (error) {
+      console.error("Error tracking resource usage:", error);
+      return res.status(500).json({ 
+        message: "An error occurred while tracking resource usage" 
+      });
+    }
+  });
+  
+  // API endpoint for getting resource usage statistics
+  app.get("/api/resource/stats", async (_req: Request, res: Response) => {
+    try {
+      const stats = await storage.getResourceUsageStats();
+      return res.status(200).json({
+        message: "Resource usage statistics retrieved successfully",
+        data: stats
+      });
+    } catch (error) {
+      console.error("Error getting resource stats:", error);
+      return res.status(500).json({ 
+        message: "An error occurred while retrieving resource statistics" 
       });
     }
   });

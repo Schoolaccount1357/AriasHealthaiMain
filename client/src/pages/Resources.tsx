@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import { MainLayout } from "@/components/layout/MainLayout";
 import { PageHeader } from "@/components/ui/PageHeader";
+import { useResourceTracking } from "@/hooks/use-resource-tracking";
 
 interface Resource {
   name: string;
