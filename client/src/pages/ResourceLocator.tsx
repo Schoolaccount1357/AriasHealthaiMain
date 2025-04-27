@@ -52,7 +52,44 @@ export default function ResourceLocator() {
           address: "700 19th Street South, Birmingham, AL 35233",
           phone: "(205) 933-8101",
           website: "https://www.birmingham.va.gov/",
-          category: "VA"
+          category: "VA",
+          zipCode: "35233"
+        },
+        {
+          name: "Three Hots and A Cot",
+          description: "Transitional housing for veterans",
+          address: "2124 Old Montgomery Highway, Birmingham, AL 35216",
+          phone: "(205) 377-3779",
+          website: "https://cotsforvets.org",
+          category: "Housing",
+          zipCode: "35216"
+        },
+        {
+          name: "Still Serving Veterans",
+          description: "Employment assistance and career counseling",
+          address: "626 Clinton Avenue W, Huntsville, AL 35801",
+          phone: "(256) 883-7035",
+          website: "https://ssv.org",
+          category: "Employment",
+          zipCode: "35801"
+        },
+        {
+          name: "Veterans Recovery Program",
+          description: "Substance abuse and mental health treatment",
+          address: "1000 Medical Center Parkway, Birmingham, AL 35235",
+          phone: "(205) 481-7223",
+          website: "https://veteransrecovery.org",
+          category: "Treatment",
+          zipCode: "35235"
+        },
+        {
+          name: "Alabama Veterans Crisis Center",
+          description: "24/7 crisis intervention and support",
+          address: "1721 University Boulevard, Birmingham, AL 35233",
+          phone: "(205) 212-4000",
+          website: "https://alvetscenter.org",
+          category: "Crisis",
+          zipCode: "35233"
         }
       ]
     },
