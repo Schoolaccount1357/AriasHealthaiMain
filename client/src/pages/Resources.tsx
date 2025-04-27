@@ -67,7 +67,7 @@ export default function Resources() {
           name: "VA Substance Use Disorder Program",
           description: "Treatment and support for Veterans with substance use issues",
           phone: "1-800-827-1000",
-          website: "https://www.va.gov/health/substance-use-disorder/",
+          website: "https://www.va.gov/health-care/health-needs-conditions/substance-use-problems/",
           chat: false
         },
         {
