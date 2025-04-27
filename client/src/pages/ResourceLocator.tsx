@@ -162,7 +162,44 @@ export default function ResourceLocator() {
           address: "4300 West 7th Street, Little Rock, AR 72205",
           phone: "(501) 257-1000",
           website: "https://www.littlerock.va.gov/",
-          category: "VA"
+          category: "VA",
+          zipCode: "72205"
+        },
+        {
+          name: "St. Francis House Veterans Program",
+          description: "Transitional housing and support services",
+          address: "2701 S Elm St, Little Rock, AR 72204",
+          phone: "(501) 664-5036",
+          website: "https://stfrancisministries.org",
+          category: "Housing",
+          zipCode: "72204"
+        },
+        {
+          name: "Arkansas Veterans Industries",
+          description: "Employment and job training for veterans",
+          address: "2200 Fort Roots Drive, North Little Rock, AR 72114",
+          phone: "(501) 257-3288",
+          website: "https://arkansasveterans.org",
+          category: "Employment",
+          zipCode: "72114"
+        },
+        {
+          name: "Veterans Recovery Center",
+          description: "Mental health and substance abuse treatment",
+          address: "1000 Main Street, Little Rock, AR 72201",
+          phone: "(501) 372-4361",
+          website: "https://vrcarkansas.org",
+          category: "Treatment",
+          zipCode: "72201"
+        },
+        {
+          name: "Arkansas Veterans Crisis Line",
+          description: "24/7 crisis support and intervention",
+          address: "1200 John Barrow Rd, Little Rock, AR 72205",
+          phone: "(800) 273-8255",
+          website: "https://arkansasveteranscrisis.org",
+          category: "Crisis",
+          zipCode: "72205"
         }
       ]
     },
