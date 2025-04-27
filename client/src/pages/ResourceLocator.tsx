@@ -341,6 +341,17 @@ export default function ResourceLocator() {
           <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">Select a state to view resources</h3>
           <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">Select a state below to view available local resources for veterans.</p>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 sm:gap-3 max-h-[60vh] overflow-y-auto p-1">
+            {Object.entries(stateData).map(([state, data]) => (
+              <Button 
+                key={state}
+                variant="outline" 
+                className="w-full justify-between flex-col py-4"
+                onClick={() => setSelectedState(state)}
+              >
+                <span className="font-medium">{state}</span>
+                <span className="text-sm text-gray-500">{data.resources.length} resources</span>
+              </Button>
+            ))}
             {Object.keys(stateData).map((state) => (
               <Button 
                 key={state}
