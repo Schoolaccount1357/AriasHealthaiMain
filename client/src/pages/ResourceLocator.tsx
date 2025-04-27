@@ -113,7 +113,44 @@ export default function ResourceLocator() {
           address: "650 E. Indian School Road, Phoenix, AZ 85012",
           phone: "(602) 277-5551",
           website: "https://www.phoenix.va.gov/",
-          category: "VA"
+          category: "VA",
+          zipCode: "85012"
+        },
+        {
+          name: "U.S.VETS - Phoenix",
+          description: "Transitional housing and permanent housing assistance",
+          address: "3507 N. Central Ave, Phoenix, AZ 85012",
+          phone: "(602) 305-8585",
+          website: "https://usvets.org/locations/phoenix/",
+          category: "Housing",
+          zipCode: "85012"
+        },
+        {
+          name: "Arizona Veterans StandDown Alliance",
+          description: "Employment and job training services",
+          address: "1125 W. Jackson Street, Phoenix, AZ 85007",
+          phone: "(602) 340-9393",
+          website: "https://arizonastanddown.org",
+          category: "Employment",
+          zipCode: "85007"
+        },
+        {
+          name: "Southwest Behavioral Health Services",
+          description: "Mental health and substance abuse treatment",
+          address: "3450 N. 3rd Street, Phoenix, AZ 85012",
+          phone: "(602) 265-8338",
+          website: "https://www.sbhservices.org/",
+          category: "Treatment",
+          zipCode: "85012"
+        },
+        {
+          name: "Arizona Coalition for Military Families",
+          description: "Crisis intervention and support services",
+          address: "2929 N Central Ave, Phoenix, AZ 85012",
+          phone: "(602) 753-8802",
+          website: "https://arizonacoalition.org/",
+          category: "Crisis",
+          zipCode: "85012"
         }
       ]
     },
