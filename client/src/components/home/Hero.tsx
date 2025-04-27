@@ -7,7 +7,7 @@ export function Hero() {
       <div className="bg-[#141e2f] rounded-lg overflow-hidden shadow-lg">
         <div className="md:flex relative">
           <div className="md:w-1/2 p-6 sm:p-8 md:p-12 flex flex-col justify-center z-10">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4 bg-gradient-to-r from-white via-blue-200 to-blue-100 bg-clip-text text-transparent pt-4"> {/* Added padding-top here */}
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 md:mb-8 bg-gradient-to-r from-white via-blue-200 to-blue-100 bg-clip-text text-transparent pt-4">
               Stay Connected. Stay Strong.
             </h1>
             <p className="text-gray-300 mb-4 md:mb-6 text-base md:text-lg">
