@@ -10,6 +10,7 @@ export default function PrivacyPolicy() {
       <main className="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="bg-white p-8 rounded-lg shadow-lg">
           <h1 className="text-3xl font-bold mb-6 text-foreground">AriasHealth.ai Privacy Policy</h1>
+          <p className="text-sm text-muted-foreground mb-6">Last Updated: January 2024</p>
 
           <div className="prose max-w-none text-sm sm:text-base">
             <p className="lead text-base sm:text-lg mb-6">
