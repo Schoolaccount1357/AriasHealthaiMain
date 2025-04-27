@@ -25,11 +25,11 @@ export function Footer() {
           <div>
             <h3 className="font-bold text-lg mb-4">Resources</h3>
             <ul className="space-y-2 text-sm text-white/90">
-              <li><a href="#" className="hover:text-white transition-colors">SUDS Information</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">VA Resources</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Recovery Support</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Crisis Help</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Family Support</a></li>
+              <li><Link href="/resources" className="hover:text-white transition-colors">SUDS Information</Link></li>
+              <li><Link href="/resource-locator" className="hover:text-white transition-colors">VA Resources</Link></li>
+              <li><Link href="/resources" className="hover:text-white transition-colors">Recovery Support</Link></li>
+              <li><Link href="/resources#crisis" className="hover:text-white transition-colors">Crisis Help</Link></li>
+              <li><Link href="/resources#family" className="hover:text-white transition-colors">Family Support</Link></li>
             </ul>
           </div>
           
@@ -37,11 +37,11 @@ export function Footer() {
           <div>
             <h3 className="font-bold text-lg mb-4">Program</h3>
             <ul className="space-y-2 text-sm text-white/90">
-              <li><a href="#" className="hover:text-white transition-colors">How It Works</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Success Stories</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Research & Outcomes</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Partner With Us</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Volunteer</a></li>
+              <li><Link href="/#how-it-works" className="hover:text-white transition-colors">How It Works</Link></li>
+              <li><Link href="/#success-stories" className="hover:text-white transition-colors">Success Stories</Link></li>
+              <li><Link href="/#research" className="hover:text-white transition-colors">Research & Outcomes</Link></li>
+              <li><Link href="/contact" className="hover:text-white transition-colors">Partner With Us</Link></li>
+              <li><Link href="/contact" className="hover:text-white transition-colors">Volunteer</Link></li>
             </ul>
           </div>
           
