@@ -100,7 +100,44 @@ export default function ResourceLocator() {
           address: "3801 Miranda Ave, Palo Alto, CA 94304",
           phone: "(650) 493-5000",
           website: "https://www.paloalto.va.gov/",
-          category: "VA"
+          category: "VA",
+          zipCode: "94304"
+        },
+        {
+          name: "New Directions for Veterans",
+          description: "Transitional housing and substance abuse treatment",
+          address: "11303 Wilshire Blvd, Los Angeles, CA 90073",
+          phone: "(310) 914-4045",
+          website: "https://ndvets.org",
+          category: "Housing",
+          zipCode: "90073"
+        },
+        {
+          name: "Veterans Village of San Diego",
+          description: "Comprehensive treatment program for veterans",
+          address: "4141 Pacific Highway, San Diego, CA 92110",
+          phone: "(619) 393-2000",
+          website: "https://vvsd.net",
+          category: "Treatment",
+          zipCode: "92110"
+        },
+        {
+          name: "Swords to Plowshares",
+          description: "Employment training and job placement services",
+          address: "1060 Howard St, San Francisco, CA 94103",
+          phone: "(415) 252-4788",
+          website: "https://www.swords-to-plowshares.org",
+          category: "Employment",
+          zipCode: "94103"
+        },
+        {
+          name: "Veterans Resource Center - Sacramento",
+          description: "Crisis intervention and support services",
+          address: "1001 S Street, Sacramento, CA 95811",
+          phone: "(916) 393-8387",
+          website: "https://www.vetsresource.org",
+          category: "Crisis",
+          zipCode: "95811"
         }
       ]
     },
