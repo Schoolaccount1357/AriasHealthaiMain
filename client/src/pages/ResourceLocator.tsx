@@ -842,11 +842,10 @@ export default function ResourceLocator() {
               <Button 
                 key={state}
                 variant="outline" 
-                className="w-full flex flex-col items-center justify-center py-4"
+                className="w-full flex items-center justify-center py-4"
                 onClick={() => setSelectedState(state)}
               >
                 <span className="font-medium text-center">{state}</span>
-                <span className="text-sm text-gray-500 text-center">{data.resources.length} resources</span>
               </Button>
             ))}
             {Object.keys(stateData).map((state) => (
