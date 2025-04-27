@@ -358,7 +358,44 @@ export default function ResourceLocator() {
           address: "1601 Kirkwood Highway, Wilmington, DE 19805",
           phone: "(302) 994-2511",
           website: "https://www.wilmington.va.gov/",
-          category: "VA"
+          category: "VA",
+          zipCode: "19805"
+        },
+        {
+          name: "Veterans Outreach Center",
+          description: "Housing assistance and support services",
+          address: "802 West Street, Wilmington, DE 19801",
+          phone: "(302) 777-1800",
+          website: "https://delawareveterans.org",
+          category: "Housing",
+          zipCode: "19801"
+        },
+        {
+          name: "Delaware Veterans Job Bank",
+          description: "Employment services and job training",
+          address: "4425 North Market Street, Wilmington, DE 19802",
+          phone: "(302) 761-8200",
+          website: "https://labor.delaware.gov/divisions/employment-training/veterans-services/",
+          category: "Employment",
+          zipCode: "19802"
+        },
+        {
+          name: "Delaware Veterans Treatment Center",
+          description: "Mental health and substance abuse treatment",
+          address: "500 West 10th Street, Wilmington, DE 19801",
+          phone: "(302) 655-3261",
+          website: "https://www.delawarevetcenter.org",
+          category: "Treatment",
+          zipCode: "19801"
+        },
+        {
+          name: "Delaware Veterans Crisis Line",
+          description: "24/7 crisis support and intervention",
+          address: "1901 North DuPont Highway, New Castle, DE 19720",
+          phone: "(800) 273-8255",
+          website: "https://veterans.delaware.gov/crisis",
+          category: "Crisis",
+          zipCode: "19720"
         }
       ]
     },
