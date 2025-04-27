@@ -38,6 +38,13 @@ interface StateData {
 
 export default function ResourceLocator() {
   const [selectedState, setSelectedState] = useState<string>("");
+const [hoveredState, setHoveredState] = useState<string | null>(null);
+const [hoveredResources, setHoveredResources] = useState<StateResource[] | null>(null);
+
+const handleStateHover = (state: string | null, resources: StateResource[] | null) => {
+  setHoveredState(state);
+  setHoveredResources(resources);
+};
   const [zipCode, setZipCode] = useState<string>("");
   const [searchRadius, setSearchRadius] = useState<string>("25");
   const [category, setCategory] = useState<string>("all");
@@ -901,7 +908,16 @@ export default function ResourceLocator() {
       )}
 
       {!selectedState && (
-        <div className="bg-gray-50 rounded-lg p-4 sm:p-8 text-center">
+        <div className="bg-[#141e2f] rounded-lg p-4 sm:p-8">
+          <div className="h-[400px] mb-6">
+            <ResponsiveUSMap data={stateData} onStateHover={handleStateHover} />
+          </div>
+          {hoveredState && hoveredResources && (
+            <div className="text-white mb-6">
+              <h3 className="text-xl font-semibold mb-2">{hoveredState}</h3>
+              <p>{hoveredResources.length} resources available</p>
+            </div>
+          )}
           <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">Select a state to view resources</h3>
           <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">Select a state below to view available local resources for veterans.</p>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 sm:gap-3 max-h-[60vh] overflow-y-auto p-1">
