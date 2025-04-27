@@ -750,13 +750,19 @@ export default function ResourceLocator() {
         <Button 
           className="w-full mt-5 sm:mt-6 bg-[#3e64dd] hover:bg-[#2a4bba] py-6 sm:py-4"
           size="lg"
+          onClick={() => {
+            if (selectedState) {
+              const element = document.getElementById('resources-section');
+              element?.scrollIntoView({ behavior: 'smooth' });
+            }
+          }}
         >
           Search Resources
         </Button>
       </div>
 
       {selectedState && (
-        <div>
+        <div id="resources-section">
           <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Resources in {selectedState}</h2>
 
           {filteredResources.length > 0 ? (
@@ -846,16 +852,6 @@ export default function ResourceLocator() {
                 onClick={() => setSelectedState(state)}
               >
                 <span className="font-medium text-center">{state}</span>
-              </Button>
-            ))}
-            {Object.keys(stateData).map((state) => (
-              <Button 
-                key={state}
-                variant="outline" 
-                className="w-full justify-center"
-                onClick={() => setSelectedState(state)}
-              >
-                {state}
               </Button>
             ))}
           </div>
