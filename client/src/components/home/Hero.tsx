@@ -22,7 +22,7 @@ export function Hero() {
                 <Link href="#enrollment-form" className="flex items-center justify-center">
                   <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
                   <span className="relative z-10 flex items-center">
-                    Join the Waitlist
+                    Join the waitlist below
                     <svg 
                       xmlns="http://www.w3.org/2000/svg" 
                       className="h-5 w-5 ml-1 transition-transform duration-300 group-hover:translate-x-1" 
@@ -35,7 +35,7 @@ export function Hero() {
                   </span>
                 </Link>
               </Button>
-              
+
               <div className="mt-3 md:mt-4">
                 <p className="text-xs sm:text-sm text-gray-200">
                   <span className="text-white font-semibold">Get Early Access:</span> Waitlist members will be the first to experience our AI-powered matching and veteran support community.
@@ -54,12 +54,12 @@ export function Hero() {
           </div>
         </div>
       </div>
-      
+
       {/* Emotional Banner */}
       <div className="mt-8 bg-gradient-to-r from-blue-600 to-indigo-700 p-4 sm:p-6 rounded-lg text-center text-white">
         <p className="text-base sm:text-xl font-medium">Combat loneliness. Prevent relapse. Build your community.</p>
       </div>
-      
+
       {/* Your Journey with AriasHealth.ai */}
       <div className="mt-12 bg-gray-50 p-4 sm:p-8 rounded-lg">
         <h2 className="text-xl sm:text-2xl font-bold text-center mb-6 sm:mb-8">Your Journey with AriasHealth.ai</h2>
@@ -85,7 +85,7 @@ export function Hero() {
               </svg>
             </div>
           </div>
-          
+
           <div className="relative flex flex-col items-center text-center p-4 sm:p-6 bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer group hover:-translate-y-1">
             <div className="bg-[#141e2f] w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 rounded-full flex items-center justify-center transform transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 sm:h-8 sm:w-8 text-[#3e64dd] transition-all duration-300 group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -107,7 +107,7 @@ export function Hero() {
               </svg>
             </div>
           </div>
-          
+
           <div className="relative flex flex-col items-center text-center p-4 sm:p-6 bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer group hover:-translate-y-1">
             <div className="bg-[#141e2f] w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 rounded-full flex items-center justify-center transform transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 sm:h-8 sm:w-8 text-[#3e64dd] transition-all duration-300 group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -130,7 +130,7 @@ export function Hero() {
               </svg>
             </div>
           </div>
-          
+
           <div className="relative flex flex-col items-center text-center p-4 sm:p-6 bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer group hover:-translate-y-1">
             <div className="bg-[#141e2f] w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 rounded-full flex items-center justify-center transform transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 sm:h-8 sm:w-8 text-[#3e64dd] transition-all duration-300 group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
