@@ -1,3 +1,4 @@
+
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 
@@ -41,23 +42,17 @@ export default function PrivacyPolicy() {
               We take privacy seriously and use reasonable measures to protect your information. That said, AriasHealth.ai is still in its early development phase, and no online system is 100% guaranteed secure.
             </p>
 
-            <h2 className="text-xl font-bold mt-8 mb-4">4. Important Note About HIPAA</h2>
-            <p>
-              AriasHealth.ai is not yet HIPAA-compliant. We are actively working toward building a platform with enhanced security standards, but for now, we ask that you do not submit sensitive health information through the website.
-            </p>
-            <p>You'll be notified when HIPAA-compliant features are available.</p>
-
-            <h2 className="text-xl font-bold mt-8 mb-4">5. Your Choices</h2>
+            <h2 className="text-xl font-bold mt-8 mb-4">4. Your Choices</h2>
             <p>
               You can ask us to update or delete your information at any time by contacting us at info@ariashealth.ai. We will remove your personally identifiable information if requested.
             </p>
 
-            <h2 className="text-xl font-bold mt-8 mb-4">6. Updates to This Policy</h2>
+            <h2 className="text-xl font-bold mt-8 mb-4">5. Updates to This Policy</h2>
             <p>
               We may update this Privacy Policy as the platform grows. If we make major changes, we'll post an updated version here.
             </p>
 
-            <h2 className="text-xl font-bold mt-8 mb-4">7. Contact Us</h2>
+            <h2 className="text-xl font-bold mt-8 mb-4">6. Contact Us</h2>
             <p>
               If you have any questions about how your information is handled, reach out anytime:<br/>
               📧 info@ariashealth.ai
