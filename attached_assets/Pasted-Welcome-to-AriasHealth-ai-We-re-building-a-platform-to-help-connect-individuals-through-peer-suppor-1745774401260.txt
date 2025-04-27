@@ -1,0 +1,57 @@
+Welcome to AriasHealth.ai! We’re building a platform to help connect individuals through peer support and wellness-focused groups.
+ This Privacy Policy explains how we collect and use your information as we grow.
+
+1. Information We Collect
+Right now, we collect only the basic information you choose to share, such as:
+Your name
+
+
+Your email address
+
+
+Your interests or service affiliation (for matching into groups)
+
+
+Any feedback you choose to provide through surveys or forms
+
+
+We also collect general technical info (like device type and browser type) to help improve the site.
+We do not collect or store medical records or detailed health information at this time.
+
+2. How We Use Your Information
+We use your information to:
+Match you with peer groups based on shared interests
+
+
+Communicate updates, invitations, and opportunities to participate
+
+
+Improve our early platform and plan future services
+
+
+Understand general trends through anonymized, aggregate data
+
+
+We never sell your personal information to third parties.
+
+3. Data Security
+We take privacy seriously and use reasonable measures to protect your information.
+ That said, AriasHealth.ai is still in its early development phase, and no online system is 100% guaranteed secure.
+
+4. Important Note About HIPAA
+AriasHealth.ai is not yet HIPAA-compliant.
+ We are actively working toward building a platform with enhanced security standards, but for now, we ask that you do not submit sensitive health information through the website.
+You’ll be notified when HIPAA-compliant features are available.
+
+5. Your Choices
+You can ask us to update or delete your information at any time by contacting us at info@ariashealth.ai.
+ We will remove your personally identifiable information if requested.
+
+6. Updates to This Policy
+We may update this Privacy Policy as the platform grows.
+ If we make major changes, we’ll post an updated version here.
+
+7. Contact Us
+If you have any questions about how your information is handled, reach out anytime:
+ 📧 info@ariashealth.ai
+
