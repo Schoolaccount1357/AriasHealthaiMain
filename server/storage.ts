@@ -1,6 +1,6 @@
-import { veterans, type Veteran, type InsertVeteran, users, type User, type InsertUser, waitlist, type Waitlist, type InsertWaitlist } from "@shared/schema";
+import { veterans, type Veteran, type InsertVeteran, users, type User, type InsertUser, waitlist, type Waitlist, type InsertWaitlist, resourceUsage, type ResourceUsage, type InsertResourceUsage } from "@shared/schema";
 import { db } from "./db";
-import { eq } from "drizzle-orm";
+import { eq, sql } from "drizzle-orm";
 
 // Interface for storage operations
 export interface IStorage {
@@ -20,6 +20,11 @@ export interface IStorage {
   addToWaitlist(entry: InsertWaitlist): Promise<Waitlist>;
   getWaitlistByEmail(email: string): Promise<Waitlist | undefined>;
   getAllWaitlistEntries(): Promise<Waitlist[]>;
+  
+  // Resource Usage operations
+  logResourceUsage(data: InsertResourceUsage): Promise<ResourceUsage>;
+  getResourceUsageStats(): Promise<{ resourceType: string; count: number }[]>;
+  getResourceUsageByType(type: string): Promise<ResourceUsage[]>;
 }
 
 export class DatabaseStorage implements IStorage {
@@ -93,6 +98,34 @@ export class DatabaseStorage implements IStorage {
 
   async getAllWaitlistEntries(): Promise<Waitlist[]> {
     return await db.select().from(waitlist);
+  }
+
+  // Resource Usage operations
+  async logResourceUsage(data: InsertResourceUsage): Promise<ResourceUsage> {
+    const [usage] = await db
+      .insert(resourceUsage)
+      .values(data)
+      .returning();
+    return usage;
+  }
+
+  async getResourceUsageStats(): Promise<{ resourceType: string; count: number }[]> {
+    const result = await db
+      .select({
+        resourceType: resourceUsage.resourceType,
+        count: sql<number>`count(*)`,
+      })
+      .from(resourceUsage)
+      .groupBy(resourceUsage.resourceType);
+    
+    return result;
+  }
+
+  async getResourceUsageByType(type: string): Promise<ResourceUsage[]> {
+    return await db
+      .select()
+      .from(resourceUsage)
+      .where(eq(resourceUsage.resourceType, type));
   }
 }
 

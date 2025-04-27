@@ -113,3 +113,22 @@ export const waitlistSchema = z.object({
   serviceStatus: z.string().min(1, "Please select your service status"),
   reasonForInterest: z.string().optional(),
 });
+
+// Resource usage tracking
+export const resourceUsage = pgTable("resource_usage", {
+  id: serial("id").primaryKey(),
+  resourceType: text("resource_type").notNull(), // 'call', 'text', 'chat'
+  timestamp: timestamp("timestamp").defaultNow().notNull(),
+  userAgent: text("user_agent"), // Store browser/device info
+  ipHash: text("ip_hash"), // Store hashed IP to avoid duplicate counting while preserving privacy
+  referrer: text("referrer"), // Which page they came from
+  createdAt: timestamp("created_at").defaultNow().notNull()
+});
+
+export const insertResourceUsageSchema = createInsertSchema(resourceUsage).omit({
+  id: true,
+  createdAt: true
+});
+
+export type InsertResourceUsage = z.infer<typeof insertResourceUsageSchema>;
+export type ResourceUsage = typeof resourceUsage.$inferSelect;
