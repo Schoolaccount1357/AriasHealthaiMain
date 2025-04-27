@@ -903,9 +903,8 @@ export default function ResourceLocator() {
       {!selectedState && (
         <div className="bg-gray-50 rounded-lg p-4 sm:p-8 text-center">
           <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">Select a state to view resources</h3>
-          <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">Click on a state in the map or select from the list below to view available local resources for veterans.</p>
-          <USMap selectedState={selectedState} onStateSelect={setSelectedState} />
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 sm:gap-3 max-h-[40vh] overflow-y-auto p-1">
+          <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">Select a state below to view available local resources for veterans.</p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 sm:gap-3 max-h-[60vh] overflow-y-auto p-1">
             {Object.keys(stateData).map((state) => (
               <Button 
                 key={state}
