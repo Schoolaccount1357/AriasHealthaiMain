@@ -1,0 +1,111 @@
+AriasHealth.ai Privacy Policy
+Our Privacy Policy explains how AriasHealth.ai collects, uses, and discloses information about you to provide you with the best experience on our platform. The terms “AriasHealth.ai,” “we,” “us,” and “our” refer to Arias Health Technologies, Inc. We use the terms “you,” “your,” and “user” to mean any person using the AriasHealth.ai services or participating in related activities. We are committed to safeguarding your privacy and ensuring that your personal information is protected.
+
+By using our service, you consent to the practices described in this Privacy Policy, to our Terms and Conditions, and to the additional notices outlined below.
+
+1. Information We Collect
+1.1. Directly Provided Information
+We collect information that you voluntarily provide to us. This may occur when you fill out onboarding forms, select peer group interests, complete surveys, provide feedback, or otherwise communicate with us. Examples of collected information include:
+
+Name
+
+Email address
+
+Service affiliation (e.g., veteran status, caregiver status)
+
+Geographic region (e.g., city or state, not precise location)
+
+Interests, wellness goals, and preferences related to peer group matching
+
+Optional demographic data you choose to share (such as age range or self-identified health interests)
+
+1.2. Automatically Collected Information
+When you interact with AriasHealth.ai, we automatically collect certain data, such as:
+
+Browser type, device information, and language settings
+
+General location information (based on IP address, city-level only)
+
+Timestamps and interaction logs related to onboarding or survey responses
+
+1.3. Communication Data
+We may collect contact information and communication preferences when you sign up, join the waitlist, or interact with our team.
+
+2. Use of Collected Information
+2.1. Peer Group Creation and Service Improvement
+We use collected information to:
+
+Suggest and build peer groups based on shared interests or wellness goals
+
+Better understand user needs for future platform development
+
+Offer customized updates and event suggestions that align with your preferences
+
+2.2. Communication
+We may contact you regarding:
+
+Service updates, group assignments, or new feature rollouts
+
+Invitations to participate in user feedback surveys
+
+Information relevant to your peer group interests
+
+Administrative notices or technical support communications
+
+2.3. Data Research and Analysis
+We may use aggregated and anonymized data (without personal identifiers) to:
+
+Analyze service trends
+
+Improve platform design and user experience
+
+Inform development of future features
+
+Note: Data used for analysis is de-identified to protect individual privacy.
+
+3. Data Sharing
+3.1. Peer Groups
+If you choose to join a peer group through AriasHealth.ai, limited profile information (such as your name or selected interest categories) may be visible to other group members. We do not automatically share email addresses, phone numbers, or sensitive health information within peer groups.
+
+Important: Sharing personal information within peer groups is voluntary and at your own discretion.
+
+3.2. Service Providers
+We may engage trusted third-party service providers to help us operate and improve our platform (e.g., survey tools, secure database services). These providers will only access information necessary to perform tasks on our behalf and are contractually obligated to maintain confidentiality and security standards.
+
+3.3. Legal Obligations
+We may disclose your information if required to do so by law, such as in response to a court order, subpoena, or lawful government request.
+
+4. Data Security
+We use reasonable and appropriate physical, administrative, and technical safeguards designed to protect your information. However, no method of transmission over the Internet or method of electronic storage is 100% secure.
+
+5. Data Retention
+We retain your information for as long as necessary to fulfill the purposes outlined in this Privacy Policy or as otherwise required by law. You may request deletion of your personal information at any time by contacting us at info@ariashealth.ai.
+
+Aggregated, anonymized data may be retained indefinitely for research and service improvement purposes.
+
+6. Children's Privacy
+Our services are intended for individuals 18 years and older. We do not knowingly collect personal information from individuals under the age of 18. If you become aware that a minor has provided us with personal information, please contact us at info@ariashealth.ai, and we will take steps to delete the information.
+
+7. Beta Disclaimer
+AriasHealth.ai is currently in a beta testing phase. As such, features may change, be added, or be removed without prior notice. While we strive for quality and security, users acknowledge that the platform may contain bugs, errors, or interruptions. Your participation helps us improve the service, and we appreciate your understanding as we continue to develop.
+
+8. Medical Disclaimer
+AriasHealth.ai is a peer support and community-building platform. It is not a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition. Never disregard professional medical advice because of something you have read or seen on AriasHealth.ai.
+
+Participation in AriasHealth.ai groups is voluntary, and users are responsible for their own wellbeing.
+
+9. User Responsibility
+Users are solely responsible for their interactions with other users. AriasHealth.ai does not control and is not responsible for the actions of any users inside or outside the platform. We encourage all participants to exercise caution, set personal boundaries, and prioritize their safety.
+
+10. HIPAA Notice
+AriasHealth.ai’s current prelaunch website and early platform are not yet HIPAA-compliant. While we take privacy and security seriously, users should understand that the platform is still under development and should not submit sensitive personal health information at this stage.
+
+We are actively building the infrastructure necessary to support HIPAA-compliant operations for future versions of AriasHealth.ai. Enhanced security measures and data protection protocols will be implemented as we move toward active service iterations.
+We encourage users to wait until the fully secured platform is available before sharing any protected health information.
+
+11. Changes to this Privacy Policy
+We may update this Privacy Policy from time to time to reflect changes in our practices or applicable laws. We encourage you to review this page periodically for the latest information. Your continued use of the service after changes are made constitutes acceptance of the revised Privacy Policy.
+
+Contact Us
+If you have any questions about this Privacy Policy or your personal data, please contact us at:
+📧 info@ariashealth.ai

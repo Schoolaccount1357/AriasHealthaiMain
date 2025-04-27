@@ -8,105 +8,164 @@ export default function PrivacyPolicy() {
       
       <main className="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="bg-white p-8 rounded-lg shadow-lg">
-          <h1 className="text-3xl font-bold mb-6 text-foreground">Privacy Policy</h1>
+          <h1 className="text-3xl font-bold mb-6 text-foreground">AriasHealth.ai Privacy Policy</h1>
           
-          <div className="prose max-w-none">
-            <p className="lead text-lg mb-6">
+          <div className="prose max-w-none text-sm sm:text-base">
+            <p className="lead text-base sm:text-lg mb-6">
               Last updated: {new Date().toLocaleDateString()}
             </p>
             
-            <h2 className="text-xl font-bold mt-8 mb-4">1. Introduction</h2>
-            <p>
-              Veterans Connect ("we," "our," or "us") is committed to protecting the privacy and security of your personal information. 
-              This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our platform.
+            <p className="mb-6">
+              Our Privacy Policy explains how AriasHealth.ai collects, uses, and discloses information about you to provide you with the best experience on our platform. The terms "AriasHealth.ai," "we," "us," and "our" refer to Arias Health Technologies, Inc. We use the terms "you," "your," and "user" to mean any person using the AriasHealth.ai services or participating in related activities. We are committed to safeguarding your privacy and ensuring that your personal information is protected.
             </p>
             
-            <h2 className="text-xl font-bold mt-8 mb-4">2. Information We Collect</h2>
-            <p>We collect the following types of information:</p>
-            <ul className="list-disc pl-5 space-y-2 mb-4">
-              <li>
-                <strong>Personal Information:</strong> Name, email address, phone number, date of birth, gender,
-                and other information you provide in the enrollment form.
-              </li>
-              <li>
-                <strong>Military Service Information:</strong> Branch of service, rank, years of service, and deployment history.
-              </li>
-              <li>
-                <strong>Health Information:</strong> Information related to substance use disorders, treatment history,
-                mental health conditions, and recovery status that you choose to provide.
-              </li>
-              <li>
-                <strong>Usage Data:</strong> Information about how you interact with our platform, including login times,
-                features used, and connections made.
-              </li>
-            </ul>
-            
-            <h2 className="text-xl font-bold mt-8 mb-4">3. How We Use Your Information</h2>
-            <p>We use the information we collect to:</p>
-            <ul className="list-disc pl-5 space-y-2 mb-4">
-              <li>Provide and maintain our platform services</li>
-              <li>Match you with appropriate peer support connections</li>
-              <li>Improve and personalize your experience</li>
-              <li>Communicate with you about the platform and support services</li>
-              <li>Ensure the security and integrity of our services</li>
-              <li>Comply with legal obligations</li>
-            </ul>
-            
-            <h2 className="text-xl font-bold mt-8 mb-4">4. HIPAA Compliance</h2>
-            <p>
-              We are committed to maintaining the privacy and security of your health information in accordance with the
-              Health Insurance Portability and Accountability Act (HIPAA). Any protected health information (PHI) you share
-              with us is handled according to HIPAA standards and regulations.
+            <p className="mb-6">
+              By using our service, you consent to the practices described in this Privacy Policy, to our Terms and Conditions, and to the additional notices outlined below.
             </p>
             
-            <h2 className="text-xl font-bold mt-8 mb-4">5. How We Protect Your Information</h2>
-            <p>
-              We implement appropriate technical and organizational measures to protect the security of your personal information,
-              including:
-            </p>
-            <ul className="list-disc pl-5 space-y-2 mb-4">
-              <li>End-to-end encryption for all communications</li>
-              <li>Secure data storage with access controls</li>
-              <li>Regular security assessments and testing</li>
-              <li>Staff training on privacy and security practices</li>
-            </ul>
+            <h2 className="text-xl font-bold mt-8 mb-4">1. Information We Collect</h2>
             
-            <h2 className="text-xl font-bold mt-8 mb-4">6. Sharing Your Information</h2>
+            <h3 className="text-lg font-semibold mt-4 mb-2">1.1. Directly Provided Information</h3>
             <p>
-              We do not sell, trade, or otherwise transfer your personal information to outside parties except in the
-              following circumstances:
+              We collect information that you voluntarily provide to us. This may occur when you fill out onboarding forms, select peer group interests, complete surveys, provide feedback, or otherwise communicate with us. Examples of collected information include:
             </p>
-            <ul className="list-disc pl-5 space-y-2 mb-4">
-              <li>When required by law or to protect our rights</li>
-              <li>With your consent for the purpose of establishing peer support connections</li>
-              <li>With service providers who assist us in operating our platform (all of whom are bound by confidentiality agreements)</li>
+            <ul className="list-disc pl-5 space-y-1 my-3">
+              <li>Name</li>
+              <li>Email address</li>
+              <li>Service affiliation (e.g., veteran status, caregiver status)</li>
+              <li>Geographic region (e.g., city or state, not precise location)</li>
+              <li>Interests, wellness goals, and preferences related to peer group matching</li>
+              <li>Optional demographic data you choose to share (such as age range or self-identified health interests)</li>
             </ul>
-            
-            <h2 className="text-xl font-bold mt-8 mb-4">7. Your Rights</h2>
-            <p>You have the right to:</p>
-            <ul className="list-disc pl-5 space-y-2 mb-4">
-              <li>Access the personal information we hold about you</li>
-              <li>Request correction of inaccurate information</li>
-              <li>Request deletion of your information</li>
-              <li>Withdraw consent at any time</li>
-              <li>Lodge a complaint with a supervisory authority</li>
-            </ul>
-            
-            <h2 className="text-xl font-bold mt-8 mb-4">8. Changes to This Privacy Policy</h2>
+
+            <h3 className="text-lg font-semibold mt-4 mb-2">1.2. Automatically Collected Information</h3>
             <p>
-              We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new
-              Privacy Policy on this page and updating the "Last updated" date.
+              When you interact with AriasHealth.ai, we automatically collect certain data, such as:
+            </p>
+            <ul className="list-disc pl-5 space-y-1 my-3">
+              <li>Browser type, device information, and language settings</li>
+              <li>General location information (based on IP address, city-level only)</li>
+              <li>Timestamps and interaction logs related to onboarding or survey responses</li>
+            </ul>
+
+            <h3 className="text-lg font-semibold mt-4 mb-2">1.3. Communication Data</h3>
+            <p>
+              We may collect contact information and communication preferences when you sign up, join the waitlist, or interact with our team.
+            </p>
+
+            <h2 className="text-xl font-bold mt-8 mb-4">2. Use of Collected Information</h2>
+            
+            <h3 className="text-lg font-semibold mt-4 mb-2">2.1. Peer Group Creation and Service Improvement</h3>
+            <p>
+              We use collected information to:
+            </p>
+            <ul className="list-disc pl-5 space-y-1 my-3">
+              <li>Suggest and build peer groups based on shared interests or wellness goals</li>
+              <li>Better understand user needs for future platform development</li>
+              <li>Offer customized updates and event suggestions that align with your preferences</li>
+            </ul>
+
+            <h3 className="text-lg font-semibold mt-4 mb-2">2.2. Communication</h3>
+            <p>
+              We may contact you regarding:
+            </p>
+            <ul className="list-disc pl-5 space-y-1 my-3">
+              <li>Service updates, group assignments, or new feature rollouts</li>
+              <li>Invitations to participate in user feedback surveys</li>
+              <li>Information relevant to your peer group interests</li>
+              <li>Administrative notices or technical support communications</li>
+            </ul>
+
+            <h3 className="text-lg font-semibold mt-4 mb-2">2.3. Data Research and Analysis</h3>
+            <p>
+              We may use aggregated and anonymized data (without personal identifiers) to:
+            </p>
+            <ul className="list-disc pl-5 space-y-1 my-3">
+              <li>Analyze service trends</li>
+              <li>Improve platform design and user experience</li>
+              <li>Inform development of future features</li>
+            </ul>
+            <p className="italic">
+              Note: Data used for analysis is de-identified to protect individual privacy.
+            </p>
+
+            <h2 className="text-xl font-bold mt-8 mb-4">3. Data Sharing</h2>
+            
+            <h3 className="text-lg font-semibold mt-4 mb-2">3.1. Peer Groups</h3>
+            <p>
+              If you choose to join a peer group through AriasHealth.ai, limited profile information (such as your name or selected interest categories) may be visible to other group members. We do not automatically share email addresses, phone numbers, or sensitive health information within peer groups.
+            </p>
+            <p className="italic mt-2">
+              Important: Sharing personal information within peer groups is voluntary and at your own discretion.
+            </p>
+
+            <h3 className="text-lg font-semibold mt-4 mb-2">3.2. Service Providers</h3>
+            <p>
+              We may engage trusted third-party service providers to help us operate and improve our platform (e.g., survey tools, secure database services). These providers will only access information necessary to perform tasks on our behalf and are contractually obligated to maintain confidentiality and security standards.
+            </p>
+
+            <h3 className="text-lg font-semibold mt-4 mb-2">3.3. Legal Obligations</h3>
+            <p>
+              We may disclose your information if required to do so by law, such as in response to a court order, subpoena, or lawful government request.
+            </p>
+
+            <h2 className="text-xl font-bold mt-8 mb-4">4. Data Security</h2>
+            <p>
+              We use reasonable and appropriate physical, administrative, and technical safeguards designed to protect your information. However, no method of transmission over the Internet or method of electronic storage is 100% secure.
+            </p>
+
+            <h2 className="text-xl font-bold mt-8 mb-4">5. Data Retention</h2>
+            <p>
+              We retain your information for as long as necessary to fulfill the purposes outlined in this Privacy Policy or as otherwise required by law. You may request deletion of your personal information at any time by contacting us at info@ariashealth.ai.
+            </p>
+            <p className="mt-2">
+              Aggregated, anonymized data may be retained indefinitely for research and service improvement purposes.
+            </p>
+
+            <h2 className="text-xl font-bold mt-8 mb-4">6. Children's Privacy</h2>
+            <p>
+              Our services are intended for individuals 18 years and older. We do not knowingly collect personal information from individuals under the age of 18. If you become aware that a minor has provided us with personal information, please contact us at info@ariashealth.ai, and we will take steps to delete the information.
             </p>
             
-            <h2 className="text-xl font-bold mt-8 mb-4">9. Contact Us</h2>
+            <h2 className="text-xl font-bold mt-8 mb-4">7. Beta Disclaimer</h2>
             <p>
-              If you have any questions about this Privacy Policy, please contact us at:
+              AriasHealth.ai is currently in a beta testing phase. As such, features may change, be added, or be removed without prior notice. While we strive for quality and security, users acknowledge that the platform may contain bugs, errors, or interruptions. Your participation helps us improve the service, and we appreciate your understanding as we continue to develop.
             </p>
-            <ul className="list-none pl-0 space-y-1 mb-4">
-              <li>Email: privacy@veteransconnect.org</li>
-              <li>Phone: 1-800-555-VETS (8387)</li>
-              <li>Mail: 123 Veterans Way, Washington, DC 20001</li>
-            </ul>
+
+            <h2 className="text-xl font-bold mt-8 mb-4">8. Medical Disclaimer</h2>
+            <p>
+              AriasHealth.ai is a peer support and community-building platform. It is not a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition. Never disregard professional medical advice because of something you have read or seen on AriasHealth.ai.
+            </p>
+            <p className="mt-2">
+              Participation in AriasHealth.ai groups is voluntary, and users are responsible for their own wellbeing.
+            </p>
+            
+            <h2 className="text-xl font-bold mt-8 mb-4">9. User Responsibility</h2>
+            <p>
+              Users are solely responsible for their interactions with other users. AriasHealth.ai does not control and is not responsible for the actions of any users inside or outside the platform. We encourage all participants to exercise caution, set personal boundaries, and prioritize their safety.
+            </p>
+            
+            <h2 className="text-xl font-bold mt-8 mb-4">10. HIPAA Notice</h2>
+            <p>
+              AriasHealth.ai's current prelaunch website and early platform are not yet HIPAA-compliant. While we take privacy and security seriously, users should understand that the platform is still under development and should not submit sensitive personal health information at this stage.
+            </p>
+            <p className="mt-2">
+              We are actively building the infrastructure necessary to support HIPAA-compliant operations for future versions of AriasHealth.ai. Enhanced security measures and data protection protocols will be implemented as we move toward active service iterations.
+              We encourage users to wait until the fully secured platform is available before sharing any protected health information.
+            </p>
+
+            <h2 className="text-xl font-bold mt-8 mb-4">11. Changes to this Privacy Policy</h2>
+            <p>
+              We may update this Privacy Policy from time to time to reflect changes in our practices or applicable laws. We encourage you to review this page periodically for the latest information. Your continued use of the service after changes are made constitutes acceptance of the revised Privacy Policy.
+            </p>
+            
+            <h2 className="text-xl font-bold mt-8 mb-4">Contact Us</h2>
+            <p>
+              If you have any questions about this Privacy Policy or your personal data, please contact us at:
+            </p>
+            <p className="mb-4">
+              📧 info@ariashealth.ai
+            </p>
           </div>
         </div>
       </main>
