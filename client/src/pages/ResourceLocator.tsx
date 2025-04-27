@@ -260,7 +260,44 @@ export default function ResourceLocator() {
           address: "1700 North Wheeling Street, Aurora, CO 80045",
           phone: "(303) 399-8020",
           website: "https://www.denver.va.gov/",
-          category: "VA"
+          category: "VA",
+          zipCode: "80045"
+        },
+        {
+          name: "Colorado Veterans Resource Coalition",
+          description: "Housing assistance and support services",
+          address: "400 W. Bijou Street, Colorado Springs, CO 80905",
+          phone: "(719) 477-2560",
+          website: "https://cvrc.org",
+          category: "Housing",
+          zipCode: "80905"
+        },
+        {
+          name: "Denver Vet Center",
+          description: "Mental health and counseling services",
+          address: "7465 E. 1st Ave, Suite B, Denver, CO 80230",
+          phone: "(303) 326-0645",
+          website: "https://www.va.gov/denver-vet-center/",
+          category: "Treatment",
+          zipCode: "80230"
+        },
+        {
+          name: "Veterans Crisis Line Colorado",
+          description: "24/7 crisis support and suicide prevention",
+          address: "1055 Clermont Street, Denver, CO 80220",
+          phone: "(800) 273-8255",
+          website: "https://www.veteranscrisisline.net",
+          category: "Crisis",
+          zipCode: "80220"
+        },
+        {
+          name: "Colorado Veterans Job Connect",
+          description: "Employment services and job training",
+          address: "1515 Arapahoe Street, Denver, CO 80202",
+          phone: "(303) 318-8850",
+          website: "https://cdle.colorado.gov/vets",
+          category: "Employment",
+          zipCode: "80202"
         }
       ]
     },
