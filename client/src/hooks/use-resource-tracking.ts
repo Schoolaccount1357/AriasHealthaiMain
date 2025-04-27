@@ -9,13 +9,7 @@ export function useResourceTracking() {
   
   const trackResourceUsage = useMutation({
     mutationFn: async (resourceType: ResourceType) => {
-      return apiRequest("/api/resource/track", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ resourceType })
-      });
+      return apiRequest("POST", "/api/resource/track", { resourceType });
     },
     onError: (error) => {
       // We don't want to show errors to users for tracking - just log to console
