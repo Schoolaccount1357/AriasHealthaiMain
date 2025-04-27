@@ -309,7 +309,44 @@ export default function ResourceLocator() {
           address: "950 Campbell Avenue, West Haven, CT 06516",
           phone: "(203) 932-5711",
           website: "https://www.connecticut.va.gov/",
-          category: "VA"
+          category: "VA",
+          zipCode: "06516"
+        },
+        {
+          name: "Columbus House Veterans Program",
+          description: "Transitional housing and support services for veterans",
+          address: "586 Ella T Grasso Boulevard, New Haven, CT 06519",
+          phone: "(203) 401-4400",
+          website: "https://www.columbushouse.org/programs/veterans",
+          category: "Housing",
+          zipCode: "06519"
+        },
+        {
+          name: "CT Veterans Job Program",
+          description: "Employment assistance and job training",
+          address: "25 Sigourney Street, Hartford, CT 06106",
+          phone: "(860) 263-6000",
+          website: "https://www.ctdol.state.ct.us/veterans/default.htm",
+          category: "Employment",
+          zipCode: "06106"
+        },
+        {
+          name: "Veterans Recovery Center - CT",
+          description: "Substance abuse and mental health treatment",
+          address: "287 W Main St, New Britain, CT 06052",
+          phone: "(860) 224-7885",
+          website: "https://www.wheelerhealth.org/services/veterans-services/",
+          category: "Treatment",
+          zipCode: "06052"
+        },
+        {
+          name: "CT Veterans Crisis Support",
+          description: "24/7 crisis intervention and support",
+          address: "1 Long Wharf Drive, New Haven, CT 06511",
+          phone: "(800) 273-8255",
+          website: "https://www.211ct.org/search/veterans",
+          category: "Crisis",
+          zipCode: "06511"
         }
       ]
     },
