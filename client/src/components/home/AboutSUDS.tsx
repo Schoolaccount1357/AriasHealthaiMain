@@ -39,7 +39,7 @@ export function AboutSUDS() {
       
       <div className="mt-5 sm:mt-6">
         <a 
-          href="https://www.mentalhealth.va.gov/substance-use/index.asp"
+          href="https://www.va.gov/health-care/health-needs-conditions/substance-use-problems/"
           target="_blank"
           rel="noopener noreferrer"
           className="group text-primary hover:text-secondary font-medium inline-flex items-center text-sm sm:text-base relative overflow-hidden"
