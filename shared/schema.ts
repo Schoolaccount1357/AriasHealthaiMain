@@ -132,3 +132,24 @@ export const insertResourceUsageSchema = createInsertSchema(resourceUsage).omit(
 
 export type InsertResourceUsage = z.infer<typeof insertResourceUsageSchema>;
 export type ResourceUsage = typeof resourceUsage.$inferSelect;
+
+// State resource usage tracking
+export const stateResourceUsage = pgTable("state_resource_usage", {
+  id: serial("id").primaryKey(),
+  state: text("state").notNull(),
+  resourceName: text("resource_name").notNull(),
+  category: text("category").notNull(), // 'VA', 'Crisis', 'Treatment', 'Housing', 'Employment'
+  timestamp: timestamp("timestamp").defaultNow().notNull(),
+  userAgent: text("user_agent"),
+  ipHash: text("ip_hash"),
+  referrer: text("referrer"),
+  createdAt: timestamp("created_at").defaultNow().notNull()
+});
+
+export const insertStateResourceUsageSchema = createInsertSchema(stateResourceUsage).omit({
+  id: true,
+  createdAt: true
+});
+
+export type InsertStateResourceUsage = z.infer<typeof insertStateResourceUsageSchema>;
+export type StateResourceUsage = typeof stateResourceUsage.$inferSelect;

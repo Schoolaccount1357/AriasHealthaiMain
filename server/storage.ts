@@ -1,4 +1,4 @@
-import { veterans, type Veteran, type InsertVeteran, users, type User, type InsertUser, waitlist, type Waitlist, type InsertWaitlist, resourceUsage, type ResourceUsage, type InsertResourceUsage } from "@shared/schema";
+import { veterans, type Veteran, type InsertVeteran, users, type User, type InsertUser, waitlist, type Waitlist, type InsertWaitlist, resourceUsage, type ResourceUsage, type InsertResourceUsage, stateResourceUsage, type StateResourceUsage, type InsertStateResourceUsage } from "@shared/schema";
 import { db } from "./db";
 import { eq, sql } from "drizzle-orm";
 
@@ -25,6 +25,12 @@ export interface IStorage {
   logResourceUsage(data: InsertResourceUsage): Promise<ResourceUsage>;
   getResourceUsageStats(): Promise<{ resourceType: string; count: number }[]>;
   getResourceUsageByType(type: string): Promise<ResourceUsage[]>;
+  
+  // State Resource Usage operations
+  logStateResourceUsage(data: InsertStateResourceUsage): Promise<StateResourceUsage>;
+  getStateResourceUsageStats(): Promise<{ state: string; count: number }[]>;
+  getStateResourceUsageByState(state: string): Promise<StateResourceUsage[]>;
+  getStateResourceUsageByCategory(category: string): Promise<StateResourceUsage[]>;
 }
 
 export class DatabaseStorage implements IStorage {
@@ -126,6 +132,41 @@ export class DatabaseStorage implements IStorage {
       .select()
       .from(resourceUsage)
       .where(eq(resourceUsage.resourceType, type));
+  }
+  
+  // State Resource Usage operations
+  async logStateResourceUsage(data: InsertStateResourceUsage): Promise<StateResourceUsage> {
+    const [usage] = await db
+      .insert(stateResourceUsage)
+      .values(data)
+      .returning();
+    return usage;
+  }
+
+  async getStateResourceUsageStats(): Promise<{ state: string; count: number }[]> {
+    const result = await db
+      .select({
+        state: stateResourceUsage.state,
+        count: sql<number>`count(*)`,
+      })
+      .from(stateResourceUsage)
+      .groupBy(stateResourceUsage.state);
+    
+    return result;
+  }
+
+  async getStateResourceUsageByState(state: string): Promise<StateResourceUsage[]> {
+    return await db
+      .select()
+      .from(stateResourceUsage)
+      .where(eq(stateResourceUsage.state, state));
+  }
+  
+  async getStateResourceUsageByCategory(category: string): Promise<StateResourceUsage[]> {
+    return await db
+      .select()
+      .from(stateResourceUsage)
+      .where(eq(stateResourceUsage.category, category));
   }
 }
 
