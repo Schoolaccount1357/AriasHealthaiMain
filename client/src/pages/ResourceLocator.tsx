@@ -3131,7 +3131,7 @@ export default function ResourceLocator() {
           description: "Financial assistance program for veterans with urgent needs related to housing, utilities, and other emergency situations",
           address: "700 Summer St NE, Salem, OR 97301",
           phone: "(800) 692-9666",
-          website: "https://www.oregon.gov/odva/Services/Pages/Emergency-Assistance.aspx",
+          website: "https://www.oregon.gov/odva/Connect/Pages/Assistance.aspx",
           category: "Housing"
         }
       ]
