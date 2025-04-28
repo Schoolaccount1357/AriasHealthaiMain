@@ -10,6 +10,7 @@ import { TrustAndSecurity } from "@/components/home/TrustAndSecurity";
 import { StudyInvitation } from "@/components/home/StudyInvitation";
 import { KeyFeatures } from "@/components/home/KeyFeatures";
 import { FinalCTA } from "@/components/home/FinalCTA";
+import { CrisisResources } from "@/components/common/CrisisResources";
 
 export default function Home() {
   return (
