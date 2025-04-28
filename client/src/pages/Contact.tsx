@@ -1,9 +1,10 @@
-import { MainLayout } from "@/components/layout/MainLayout";
-import { PageHeader } from "@/components/ui/PageHeader";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { 
+import {
   Form,
   FormControl,
   FormDescription,
@@ -12,172 +13,212 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import * as z from "zod";
-import { Mail, MessageSquare, Phone, MapPin } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { InfoIcon } from "lucide-react";
 
+// Define form schema with minimal PII collection
 const contactFormSchema = z.object({
-  name: z.string().min(2, {
-    message: "Name must be at least 2 characters."
+  inquiryType: z.string({
+    required_error: "Please select an inquiry type",
   }),
-  email: z.string().email({
-    message: "Please enter a valid email address."
-  }),
-  subject: z.string().min(5, {
-    message: "Subject must be at least 5 characters."
-  }),
-  message: z.string().min(10, {
-    message: "Message must be at least 10 characters."
+  email: z.string().email("Please enter a valid email address").optional(),
+  message: z
+    .string()
+    .min(10, "Message must be at least 10 characters")
+    .max(1000, "Message must not exceed 1000 characters"),
+  anonymousSubmission: z.boolean().default(false),
+  privacyConsent: z.boolean().refine((val) => val === true, {
+    message: "You must agree to the privacy policy",
   }),
 });
 
 type ContactFormValues = z.infer<typeof contactFormSchema>;
 
 export default function Contact() {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isAnonymous, setIsAnonymous] = useState(false);
+
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
-      name: "",
+      inquiryType: "",
       email: "",
-      subject: "",
       message: "",
+      anonymousSubmission: false,
+      privacyConsent: false,
     },
   });
 
   function onSubmit(data: ContactFormValues) {
-    console.log(data);
-    // Here you would typically send the data to your API
-    alert("Thank you for your message. We'll get back to you soon!");
-    form.reset();
+    setIsSubmitting(true);
+    
+    // Simulate API call
+    setTimeout(() => {
+      console.log(data);
+      
+      toast({
+        title: "Message Sent",
+        description: "Thank you for your message. We will respond as soon as possible.",
+      });
+      
+      form.reset();
+      setIsSubmitting(false);
+    }, 1500);
   }
 
   return (
-    <MainLayout>
-      <PageHeader
-        title="Contact Us" 
-        description="Have questions about AriasHealth.ai? Get in touch with our team."
-      />
-
-      <div className="grid md:grid-cols-2 gap-12">
-        <div>
-          <div className="bg-[#141e2f] text-white p-8 rounded-lg">
-            <h3 className="text-xl font-semibold mb-6">Get In Touch</h3>
-            
-            <div className="space-y-4">
-              <div className="flex items-start">
-                <Mail className="mr-3 h-5 w-5 text-[#3e64dd] mt-0.5" />
-                <div>
-                  <p className="font-medium">Email</p>
-                  <p className="text-gray-300">support@ariashealth.ai</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <Phone className="mr-3 h-5 w-5 text-[#3e64dd] mt-0.5" />
-                <div>
-                  <p className="font-medium">Phone</p>
-                  <p className="text-gray-300">(888) 555-1234</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <MapPin className="mr-3 h-5 w-5 text-[#3e64dd] mt-0.5" />
-                <div>
-                  <p className="font-medium">Office</p>
-                  <p className="text-gray-300">1234 Innovation Dr, Suite 500<br />San Diego, CA 92121</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="mt-8">
-              <h4 className="font-medium mb-3">Hours of Operation</h4>
-              <p className="text-gray-300">Monday - Friday: 9:00 AM - 5:00 PM PST</p>
-            </div>
-            
-            <div className="mt-8">
-              <p className="text-sm text-gray-300">
-                For immediate crisis support, please call the Veterans Crisis Line at 988 and press 1.
-              </p>
-            </div>
-          </div>
-        </div>
+    <div className="container mx-auto py-12 px-4 md:px-6">
+      <div className="max-w-2xl mx-auto">
+        <h1 className="text-3xl font-bold mb-6">Contact Us</h1>
         
-        <div>
-          <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-              <FormField
-                control={form.control}
-                name="name"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Name</FormLabel>
+        <Alert className="mb-6">
+          <InfoIcon className="h-4 w-4" />
+          <AlertTitle>Enhanced Privacy</AlertTitle>
+          <AlertDescription>
+            We've designed this form with privacy in mind. You can choose to submit anonymously,
+            and we only collect the information necessary to respond to your inquiry.
+          </AlertDescription>
+        </Alert>
+        
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+            <FormField
+              control={form.control}
+              name="inquiryType"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Inquiry Type</FormLabel>
+                  <Select onValueChange={field.onChange} defaultValue={field.value}>
                     <FormControl>
-                      <Input placeholder="Your name" {...field} />
+                      <SelectTrigger>
+                        <SelectValue placeholder="Select the type of inquiry" />
+                      </SelectTrigger>
                     </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              
+                    <SelectContent>
+                      <SelectItem value="general">General Questions</SelectItem>
+                      <SelectItem value="resources">Veteran Resources</SelectItem>
+                      <SelectItem value="support">Technical Support</SelectItem>
+                      <SelectItem value="feedback">Feedback</SelectItem>
+                      <SelectItem value="partnership">Partnerships</SelectItem>
+                      <SelectItem value="other">Other</SelectItem>
+                    </SelectContent>
+                  </Select>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            
+            <FormField
+              control={form.control}
+              name="anonymousSubmission"
+              render={({ field }) => (
+                <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4">
+                  <FormControl>
+                    <Checkbox
+                      checked={field.value}
+                      onCheckedChange={(checked) => {
+                        field.onChange(checked);
+                        setIsAnonymous(checked as boolean);
+                      }}
+                    />
+                  </FormControl>
+                  <div className="space-y-1 leading-none">
+                    <FormLabel>Submit Anonymously</FormLabel>
+                    <FormDescription>
+                      You can choose to contact us without providing your email address.
+                      Note that we won't be able to respond directly to anonymous inquiries.
+                    </FormDescription>
+                  </div>
+                </FormItem>
+              )}
+            />
+            
+            {!isAnonymous && (
               <FormField
                 control={form.control}
                 name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Email</FormLabel>
+                    <FormLabel>Email Address (Optional)</FormLabel>
                     <FormControl>
-                      <Input type="email" placeholder="youremail@example.com" {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              
-              <FormField
-                control={form.control}
-                name="subject"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Subject</FormLabel>
-                    <FormControl>
-                      <Input placeholder="What is this regarding?" {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              
-              <FormField
-                control={form.control}
-                name="message"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Message</FormLabel>
-                    <FormControl>
-                      <Textarea 
-                        placeholder="How can we help you?" 
-                        className="min-h-[150px]" 
-                        {...field} 
+                      <Input
+                        placeholder="your.email@example.com"
+                        {...field}
+                        type="email"
                       />
                     </FormControl>
+                    <FormDescription>
+                      We'll only use your email to respond to your inquiry.
+                    </FormDescription>
                     <FormMessage />
                   </FormItem>
                 )}
               />
-              
-              <Button 
-                type="submit" 
-                className="w-full bg-[#3e64dd] hover:bg-[#2a4bba]"
-                size="lg"
-              >
-                <MessageSquare className="mr-2 h-4 w-4" />
-                Send Message
-              </Button>
-            </form>
-          </Form>
-        </div>
+            )}
+            
+            <FormField
+              control={form.control}
+              name="message"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Message</FormLabel>
+                  <FormControl>
+                    <Textarea
+                      placeholder="Please describe your inquiry..."
+                      className="min-h-[150px]"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormDescription>
+                    Please avoid including sensitive personal information in your message.
+                  </FormDescription>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            
+            <FormField
+              control={form.control}
+              name="privacyConsent"
+              render={({ field }) => (
+                <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                  <FormControl>
+                    <Checkbox
+                      checked={field.value}
+                      onCheckedChange={field.onChange}
+                    />
+                  </FormControl>
+                  <div className="space-y-1 leading-none">
+                    <FormLabel>Privacy Consent</FormLabel>
+                    <FormDescription>
+                      I agree to the processing of my data as described in the{" "}
+                      <a href="/privacy-policy" className="underline">
+                        Privacy Policy
+                      </a>.
+                    </FormDescription>
+                  </div>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            
+            <Button type="submit" disabled={isSubmitting}>
+              {isSubmitting ? "Sending..." : "Submit"}
+            </Button>
+          </form>
+        </Form>
       </div>
-    </MainLayout>
+    </div>
   );
 }

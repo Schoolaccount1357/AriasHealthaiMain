@@ -55,7 +55,7 @@ export function VideoControls({
         onClick={onToggleScreenShare}
         title={isScreenSharing ? "Stop Sharing Screen" : "Share Screen"}
       >
-        {isScreenSharing ? <StopScreenShare size={24} /> : <ScreenShare size={24} />}
+        {isScreenSharing ? <MonitorX size={24} /> : <ScreenShare size={24} />}
       </Button>
       
       <Button

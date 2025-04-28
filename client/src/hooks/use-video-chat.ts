@@ -53,7 +53,7 @@ export function useVideoChat(initialUsername: string, initialRoomId: string) {
         users.forEach(user => {
           if (user.id) {
             // Create peer connection for each user
-            const peer = createPeer(user.id, socketRef.current!.id, stream);
+            const peer = createPeer(user.id, socketRef.current?.id || '', stream);
             
             setRoomState(prev => ({
               ...prev,
@@ -76,7 +76,7 @@ export function useVideoChat(initialUsername: string, initialRoomId: string) {
         
         if (user.id) {
           // Create peer connection for new user
-          const peer = createPeer(user.id, socketRef.current!.id, stream);
+          const peer = createPeer(user.id, socketRef.current?.id || '', stream);
           
           setRoomState(prev => ({
             ...prev,
