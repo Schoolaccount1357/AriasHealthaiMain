@@ -1459,6 +1459,13 @@ export default function ResourceLocator() {
         </div>
       )}
 
+      {/* Add crisis resources section when no state or country is selected */}
+      {!selectedState && !selectedCountry && (
+        <div className="mb-10 mt-8">
+          <CrisisResources variant="compact" className="shadow-md" />
+        </div>
+      )}
+      
       {!selectedState && !selectedCountry && (
         <div className="bg-gray-50 rounded-lg p-4 sm:p-8 text-center">
           {isInternational ? (
@@ -1471,7 +1478,10 @@ export default function ResourceLocator() {
                     key={country}
                     variant="outline" 
                     className="w-full flex items-center justify-center py-4 border-[#3e64dd]/30 text-[#3e64dd] hover:bg-[#3e64dd]/10 hover:text-[#3e64dd] hover:border-[#3e64dd]"
-                    onClick={() => setSelectedCountry(country)}
+                    onClick={() => {
+                      trackNavClick({ navType: "country_select", value: country });
+                      setSelectedCountry(country);
+                    }}
                   >
                     <span className="font-medium text-center">{country}</span>
                   </Button>
@@ -1488,7 +1498,10 @@ export default function ResourceLocator() {
                     key={state}
                     variant="outline" 
                     className="w-full flex items-center justify-center py-4 border-[#3e64dd]/30 text-[#3e64dd] hover:bg-[#3e64dd]/10 hover:text-[#3e64dd] hover:border-[#3e64dd]"
-                    onClick={() => setSelectedState(state)}
+                    onClick={() => {
+                      trackNavClick({ navType: "state_select", value: state });
+                      setSelectedState(state);
+                    }}
                   >
                     <span className="font-medium text-center">{state}</span>
                   </Button>
@@ -1499,12 +1512,7 @@ export default function ResourceLocator() {
         </div>
       )}
       
-      {/* Add crisis resources section when state or country is selected */}
-      {(selectedState || selectedCountry) && (
-        <div className="mb-8">
-          <CrisisResources variant="compact" className="shadow-md" />
-        </div>
-      )}
+      {/* We've moved the crisis resources section above the state/country selectors */}
       
       {/* Floating help button that appears after scroll */}
       {showFloatingHelp && (
