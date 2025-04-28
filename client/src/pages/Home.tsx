@@ -10,11 +10,12 @@ import { TrustAndSecurity } from "@/components/home/TrustAndSecurity";
 import { StudyInvitation } from "@/components/home/StudyInvitation";
 import { KeyFeatures } from "@/components/home/KeyFeatures";
 import { FinalCTA } from "@/components/home/FinalCTA";
-import { CrisisResources } from "@/components/common/CrisisResources";
 import { useState, useEffect } from "react";
+import { useResourceTracking } from "@/hooks/use-resource-tracking";
 
 export default function Home() {
   const [showFloatingHelp, setShowFloatingHelp] = useState(false);
+  const { trackResourceClick } = useResourceTracking();
 
   // Show the floating help button after user has scrolled down a bit
   useEffect(() => {
@@ -40,10 +41,7 @@ export default function Home() {
       <main className="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Hero />
         
-        {/* Crisis resources placed prominently but not distracting from main content */}
-        <div className="my-8">
-          <CrisisResources variant="compact" className="shadow-md" />
-        </div>
+        {/* Crisis resources removed from main content, only using floating button */}
         
         <KeyFeatures />
         <section id="enrollment-form" className="scroll-mt-20 pt-4">
@@ -56,11 +54,11 @@ export default function Home() {
         <FinalCTA />
       </main>
       
-      {/* Floating help button that appears after scroll */}
+      {/* Floating help button that appears after scroll, with usage tracking */}
       {showFloatingHelp && (
         <div className="fixed bottom-6 right-6 z-50 transition-all duration-300 animate-fade-in">
           <button 
-            onClick={() => window.location.href = "tel:988"}
+            onClick={() => trackResourceClick("call", () => window.location.href = "tel:988")}
             className="bg-[#3e64dd] text-white p-3 rounded-full shadow-lg hover:bg-[#2a4bba] transition-colors"
             aria-label="Get immediate help - Call 988"
           >
