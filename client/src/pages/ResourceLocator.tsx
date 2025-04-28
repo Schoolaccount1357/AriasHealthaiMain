@@ -373,36 +373,108 @@ export default function ResourceLocator() {
     "Thailand": {
       resources: [
         {
-          name: "Bangkok Veterans Support Network",
-          description: "Support services for veterans in Thailand",
-          address: "Sukhumvit Road, Bangkok, Thailand",
-          phone: "+66 2 254 0717",
-          website: "https://www.va.gov/health-care/foreign-medical-program/",
+          name: "U.S. Embassy Bangkok - Veterans Affairs",
+          description: "Information on applying for VA benefits and assistance for U.S. veterans in Thailand",
+          address: "95 Wireless Road, Lumpini, Pathumwan, Bangkok 10330, Thailand",
+          phone: "+66 2 205 4000",
+          website: "https://th.usembassy.gov/u-s-citizen-services/veterans-affairs/",
           category: "VA"
         },
         {
-          name: "Mental Health & PTSD Clinic - Bangkok",
-          description: "Mental health and PTSD treatment services",
-          address: "Sukhumvit Soi 49, Bangkok, Thailand",
-          phone: "+66 2 765 9246",
-          website: "https://bangkokhospital.com/en/",
+          name: "Joint U.S. Military Advisory Group Thailand (JUSMAGTHAI)",
+          description: "General assistance with Department of Defense (DoD) matters for retired U.S. service members",
+          address: "7 Sathorn Tai Road, Bangkok, Thailand",
+          phone: "+66 2 287 1036",
+          website: "https://myarmybenefits.us.army.mil/",
+          category: "VA"
+        },
+        {
+          name: "The Beekeeper House",
+          description: "Specialized trauma and PTSD treatment using evidence-based therapies like EMDR, neurofeedback, and mindfulness",
+          address: "Chiang Mai, Thailand",
+          phone: "+66 62 436 3975",
+          website: "https://beekeeperhouse.com/",
           category: "Treatment"
         },
         {
-          name: "Chiang Mai Veteran Support Group",
-          description: "Peer support network for veterans in Northern Thailand",
-          address: "Nimmanhaemin Road, Chiang Mai, Thailand",
-          phone: "+66 53 211 843",
-          website: "https://www.chiangmaiveterans.org/",
+          name: "Bangkok Mental Health Hospital",
+          description: "PTSD treatments including CBT, EMDR, group therapy, and mindfulness exercises",
+          address: "Bangkok, Thailand",
+          phone: "+66 2 136 3888",
+          website: "https://bangkokmentalhealthhospital.com/",
+          category: "Treatment"
+        },
+        {
+          name: "Miracles Asia",
+          description: "Residential programs for veterans dealing with PTSD and addiction, focusing on long-term recovery",
+          address: "Phuket, Thailand",
+          phone: "+66 98 317 1919",
+          website: "https://miraclesasia.com/",
+          category: "Treatment"
+        },
+        {
+          name: "The Diamond Rehab Thailand",
+          description: "Personalized PTSD and trauma treatment programs combining psychotherapy and holistic wellness practices",
+          address: "Phuket, Thailand",
+          phone: "+66 98 721 8529",
+          website: "https://diamondrehabthailand.com/",
+          category: "Treatment"
+        },
+        {
+          name: "Veterans of Foreign Wars (VFW) Post 9951",
+          description: "Assistance with VA benefits and claims in Bangkok",
+          address: "Bangkok, Thailand",
+          phone: "+66 81 889 0202",
+          website: "https://vfw9951.org/",
+          category: "Housing"
+        },
+        {
+          name: "Veterans of Foreign Wars (VFW) Post 9876",
+          description: "Offers 'buddy-buddy' program for peer support in Pattaya",
+          address: "Pattaya, Thailand",
+          phone: "+66 89 807 2335",
+          website: "https://vfw9876.org/",
           category: "Crisis"
         },
         {
-          name: "Pattaya Veterans Association",
-          description: "Housing and living assistance information",
-          address: "Beach Road, Pattaya, Thailand",
-          phone: "+66 38 428 750",
-          website: "https://www.pattayaveterans.com/",
+          name: "Veterans of Foreign Wars (VFW) Post 12074",
+          description: "Community support and veteran assistance in Chiang Mai",
+          address: "Chiang Mai, Thailand",
+          phone: "+66 81 111 5956",
+          website: "https://vfw12146.org/",
           category: "Housing"
+        },
+        {
+          name: "American Legion Thailand Post TH01",
+          description: "Assists veterans, spouses, and dependents with benefit questions and claims",
+          address: "Bangkok, Thailand",
+          phone: "+66 89 999 1570",
+          website: "https://americanlegionthailand.com/",
+          category: "Housing"
+        },
+        {
+          name: "Veterans First Pattaya",
+          description: "Supports veterans' mental health with personalized treatment plans addressing trauma and PTSD",
+          address: "Pattaya, Thailand",
+          phone: "+66 89 249 1646",
+          website: "https://www.facebook.com/VeteransFirstPattaya/",
+          category: "Crisis"
+        },
+        {
+          name: "Horizon Rehab Center",
+          description: "Hospital-affiliated residential and outpatient treatment for mental health and addiction recovery",
+          address: "Bangkok, Thailand",
+          phone: "+66 82 695 3494",
+          website: "https://recovery.com/",
+          category: "Treatment"
+        },
+        {
+          name: "Manarom Hospital",
+          description: "Comprehensive mental health services including counseling, psychotherapy, and group therapy",
+          address: "Bangkok, Thailand",
+          phone: "+66 2 282 0796",
+          website: "https://www.manarom.com/",
+          category: "Treatment"
         }
       ]
     },
