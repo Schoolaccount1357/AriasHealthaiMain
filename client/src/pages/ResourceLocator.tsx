@@ -345,28 +345,52 @@ export default function ResourceLocator() {
     "Vietnam": {
       resources: [
         {
-          name: "American Medical Clinic - Ho Chi Minh City",
-          description: "Medical services for veterans (FMP eligible)",
-          address: "34 Le Duan Blvd, District 1, Ho Chi Minh City, Vietnam",
-          phone: "+84 28 3827 6699",
-          website: "https://www.vietnammedicalpractice.com",
+          name: "U.S. Embassy & Consulate Services - Vietnam",
+          description: "Assistance with Veterans Affairs benefits, claims processing, and information on available services",
+          address: "7 Lang Ha Street, Ba Dinh District, Hanoi, Vietnam",
+          phone: "+84 24 3850 5000",
+          website: "https://vn.usembassy.gov/",
           category: "VA"
         },
         {
-          name: "Veterans Support Group - Hanoi",
-          description: "Informal support network for veterans in Vietnam",
-          address: "5 Nguyen Sieu Street, Hoan Kiem District, Hanoi, Vietnam",
-          phone: "+84 24 3935 2400",
-          website: "https://www.va.gov/health-care/foreign-medical-program/",
-          category: "Crisis"
+          name: "U.S. Consulate General - Ho Chi Minh City",
+          description: "Assistance with Veterans Affairs benefits and claims for veterans in southern Vietnam",
+          address: "4 Le Duan Blvd, District 1, Ho Chi Minh City, Vietnam",
+          phone: "+84 28 3520 4200",
+          website: "https://vn.usembassy.gov/embassy-consulate/ho-chi-minh-city/",
+          category: "VA"
         },
         {
-          name: "Family Medical Practice - Vietnam",
-          description: "Mental health and PTSD services for veterans",
-          address: "Diamond Plaza, 34 Le Duan, District 1, Ho Chi Minh City, Vietnam",
+          name: "Foreign Medical Program (FMP) - Vietnam",
+          description: "Reimburses medical services related to VA-rated service-connected conditions",
+          address: "N/A - U.S. based program",
+          phone: "+1 833 930 0816",
+          website: "https://www.va.gov/health-care/foreign-medical-program/",
+          category: "Treatment"
+        },
+        {
+          name: "Family Medical Practice Vietnam",
+          description: "Medical care, mental health services including PTSD counseling (FMP reimbursement eligible)",
+          address: "Diamond Plaza, 34 Le Duan Blvd, District 1, Ho Chi Minh City, Vietnam",
           phone: "+84 28 3822 7848",
           website: "https://www.vietnammedicalpractice.com",
           category: "Treatment"
+        },
+        {
+          name: "International SOS Vietnam",
+          description: "Emergency medical services, specialist consultations, medical evacuations (FMP eligible)",
+          address: "167A Nam Ky Khoi Nghia Street, District 3, Ho Chi Minh City, Vietnam",
+          phone: "+84 28 3829 8520",
+          website: "https://www.internationalsos.com/locations/asia-pacific/vietnam",
+          category: "Crisis"
+        },
+        {
+          name: "Veterans Crisis Line - International Access",
+          description: "Confidential support for veterans in crisis and their families",
+          address: "N/A - Call from anywhere",
+          phone: "Dial 988, then press 1",
+          website: "https://www.veteranscrisisline.net/",
+          category: "Crisis"
         }
       ]
     },
