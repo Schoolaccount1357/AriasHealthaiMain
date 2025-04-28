@@ -47,7 +47,7 @@ export default function ResourceLocator() {
   const [searchRadius, setSearchRadius] = useState<string>("25");
   const [category, setCategory] = useState<string>("all");
   const [showFloatingHelp, setShowFloatingHelp] = useState(false);
-  const { trackStateResourceClick, trackResourceClick } = useResourceTracking();
+  const { trackStateResourceClick, trackResourceClick, trackNavClick } = useResourceTracking();
   
   // Show the floating help button after user has scrolled down a bit
   useEffect(() => {
@@ -1203,6 +1203,7 @@ export default function ResourceLocator() {
           <Button
             variant={!isInternational ? "default" : "outline"}
             onClick={() => {
+              trackNavClick({ navType: "toggle", value: "United States" });
               setIsInternational(false);
               setSelectedState("");
               setSelectedCountry("");
@@ -1214,6 +1215,7 @@ export default function ResourceLocator() {
           <Button
             variant={isInternational ? "default" : "outline"}
             onClick={() => {
+              trackNavClick({ navType: "toggle", value: "International" });
               setIsInternational(true);
               setSelectedState("");
               setSelectedCountry("");
@@ -1230,7 +1232,10 @@ export default function ResourceLocator() {
               <label className="text-sm font-medium">Country</label>
               <Select
                 value={selectedCountry}
-                onValueChange={setSelectedCountry}
+                onValueChange={(value) => {
+                  trackNavClick({ navType: "country_select", value });
+                  setSelectedCountry(value);
+                }}
               >
                 <SelectTrigger className="bg-[#1c2537] border-none text-white h-11 sm:h-10">
                   <SelectValue placeholder="Select country" />
@@ -1249,7 +1254,10 @@ export default function ResourceLocator() {
               <label className="text-sm font-medium">State</label>
               <Select
                 value={selectedState}
-                onValueChange={setSelectedState}
+                onValueChange={(value) => {
+                  trackNavClick({ navType: "state_select", value });
+                  setSelectedState(value);
+                }}
               >
                 <SelectTrigger className="bg-[#1c2537] border-none text-white h-11 sm:h-10">
                   <SelectValue placeholder="Select state" />

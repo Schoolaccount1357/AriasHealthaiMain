@@ -1,4 +1,4 @@
-import { veterans, type Veteran, type InsertVeteran, users, type User, type InsertUser, waitlist, type Waitlist, type InsertWaitlist, resourceUsage, type ResourceUsage, type InsertResourceUsage, stateResourceUsage, type StateResourceUsage, type InsertStateResourceUsage } from "@shared/schema";
+import { veterans, type Veteran, type InsertVeteran, users, type User, type InsertUser, waitlist, type Waitlist, type InsertWaitlist, resourceUsage, type ResourceUsage, type InsertResourceUsage, stateResourceUsage, type StateResourceUsage, type InsertStateResourceUsage, navUsage, type NavUsage, type InsertNavUsage } from "@shared/schema";
 import { db } from "./db";
 import { eq, sql } from "drizzle-orm";
 
@@ -31,6 +31,11 @@ export interface IStorage {
   getStateResourceUsageStats(): Promise<{ state: string; count: number }[]>;
   getStateResourceUsageByState(state: string): Promise<StateResourceUsage[]>;
   getStateResourceUsageByCategory(category: string): Promise<StateResourceUsage[]>;
+  
+  // Navigation Tracking operations
+  logNavUsage(data: InsertNavUsage): Promise<NavUsage>;
+  getNavUsageStats(): Promise<{ navType: string; count: number }[]>;
+  getNavUsageByType(navType: string): Promise<NavUsage[]>;
 }
 
 export class DatabaseStorage implements IStorage {
@@ -167,6 +172,34 @@ export class DatabaseStorage implements IStorage {
       .select()
       .from(stateResourceUsage)
       .where(eq(stateResourceUsage.category, category));
+  }
+  
+  // Navigation tracking operations
+  async logNavUsage(data: InsertNavUsage): Promise<NavUsage> {
+    const [usage] = await db
+      .insert(navUsage)
+      .values(data)
+      .returning();
+    return usage;
+  }
+  
+  async getNavUsageStats(): Promise<{ navType: string; count: number }[]> {
+    const result = await db
+      .select({
+        navType: navUsage.navType,
+        count: sql<number>`count(*)`,
+      })
+      .from(navUsage)
+      .groupBy(navUsage.navType);
+    
+    return result;
+  }
+  
+  async getNavUsageByType(navType: string): Promise<NavUsage[]> {
+    return await db
+      .select()
+      .from(navUsage)
+      .where(eq(navUsage.navType, navType));
   }
 }
 
