@@ -99,33 +99,33 @@ export default function ResourceLocator() {
         {
           name: "Veterans of Foreign Wars - Post 10810",
           description: "Support services for veterans and their families in Germany",
-          address: "Hermannstraße 123, 66879 Reichenbach-Steegen, Germany",
-          phone: "+49 6371 5942 8900",
+          address: "CMR 480 Box G.D., APO, AE 09128",
+          phone: "+49 151 9048 81899",
           website: "https://www.vfw10810.org/",
           category: "Treatment"
         },
         {
-          name: "American Counseling Services Network - Germany",
-          description: "Mental health counseling for veterans in Germany",
-          address: "Kaiserstraße 75, 66849 Landstuhl, Germany",
-          phone: "+49 6371 4582 66",
-          website: "https://www.acsn-europe.org/",
+          name: "American Medical Center - Landstuhl",
+          description: "Primary care and referrals for mental health services",
+          address: "66849 Landstuhl, Germany",
+          phone: "+49 6371 9464 0",
+          website: "https://landstuhl.tricare.mil/",
           category: "Treatment"
         },
         {
           name: "USO Kaiserslautern",
           description: "Transition assistance for veterans leaving military service",
-          address: "Kaiserstraße 34, 67661 Kaiserslautern, Germany",
-          phone: "+49 631 3406 4908",
+          address: "Kleber Kaserne, Kaiserslautern, Germany",
+          phone: "+49 61114 3541 5100",
           website: "https://europe.uso.org/kaiserslautern/",
           category: "Employment"
         },
         {
           name: "Veterans Crisis Support - Germany",
-          description: "Crisis intervention services for veterans in Germany",
+          description: "Crisis intervention services for veterans in Germany - call 988 and press 1 for assistance",
           address: "Ramstein Air Base, 66877 Ramstein-Miesenbach, Germany",
           phone: "+49 6371 47 7777",
-          website: "https://www.ramstein.af.mil/Veteran-Resources/",
+          website: "https://www.veteranscrisisline.net/get-help/european-support",
           category: "Crisis"
         }
       ]
