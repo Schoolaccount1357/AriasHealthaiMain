@@ -19,26 +19,26 @@ export function PlatformPreview() {
       id: 1,
       name: "John D.",
       initial: "JD",
-      branch: "Army Veteran",
+      branch: "Healthcare Professional",
       matchPercentage: 92,
-      matchFactors: ["Combat Experience", "PTSD Management", "Peer Support"]
+      matchFactors: ["Career Transition", "Stress Management", "Peer Support"]
     },
     {
       id: 2,
       name: "Maria S.",
       initial: "MS",
-      branch: "Navy Veteran",
+      branch: "Financial Advisor",
       matchPercentage: 87,
-      matchFactors: ["Medical Background", "Depression Recovery", "Family Support"]
+      matchFactors: ["Life Changes", "Resilience Building", "Family Support"]
     }
   ];
 
   return (
     <section className="mb-12 mt-6">
-      <h2 className="text-3xl font-bold mb-8 text-center text-gradient">Mental Health, Reimagined for Veterans</h2>
+      <h2 className="text-3xl font-bold mb-8 text-center text-gradient">A Global Wellness and Resilience Platform</h2>
       
       <p className="mb-8 text-lg text-center max-w-4xl mx-auto">
-        AriasHealth.ai leverages cutting-edge artificial intelligence to create a personalized mental health experience built specifically for veterans. Our platform provides peer-to-peer connection with those who truly understand your experiences.
+        AriasHealth.ai leverages cutting-edge artificial intelligence to create a personalized wellness experience for people facing major life transitions. Our platform provides peer-to-peer connection with those who truly understand your journey.
       </p>
       
       <h3 className="text-xl font-semibold mb-4">Platform Features</h3>
