@@ -132,7 +132,7 @@ export const speedLimiter = slowDown({
  * Bot Detection Middleware
  * Identifies and handles suspicious automation
  */
-export function botDetection(req: Request, res: Response, next: NextFunction) {
+export async function botDetection(req: Request, res: Response, next: NextFunction) {
   const userAgent = req.headers['user-agent'] || '';
   const ip = getClientIp(req) || 'unknown';
   
@@ -154,12 +154,20 @@ export function botDetection(req: Request, res: Response, next: NextFunction) {
     ) {
       // This would verify if it's a real search engine bot by doing reverse DNS lookup
       // For simplicity, we just log and allow
-      logSecurityEvent(req, 'LEGITIMATE_BOT', `Search engine bot detected: ${userAgent}`);
+      try {
+        await logSecurityEvent(req, 'LEGITIMATE_BOT', `Search engine bot detected: ${userAgent}`);
+      } catch (error) {
+        console.error('Failed to log legitimate bot event:', error);
+      }
       return next();
     }
     
     // Log and possibly block suspicious bots
-    logSecurityEvent(req, 'SUSPICIOUS_BOT', `Suspicious bot detected: ${userAgent}`);
+    try {
+      await logSecurityEvent(req, 'SUSPICIOUS_BOT', `Suspicious bot detected: ${userAgent}`);
+    } catch (error) {
+      console.error('Failed to log suspicious bot event:', error);
+    }
     
     // Increase detection score for this IP
     increaseDetectionScore(ip, 'bot_signature', 10);
@@ -192,7 +200,11 @@ export function botDetection(req: Request, res: Response, next: NextFunction) {
   // 1. Multiple user agents from same IP
   if (trafficRecord.userAgents.size > 3) {
     trafficRecord.suspicious = true;
-    logSecurityEvent(req, 'MULTIPLE_USER_AGENTS', `IP ${ip} using multiple (${trafficRecord.userAgents.size}) User-Agents`);
+    try {
+      await logSecurityEvent(req, 'MULTIPLE_USER_AGENTS', `IP ${ip} using multiple (${trafficRecord.userAgents.size}) User-Agents`);
+    } catch (error) {
+      console.error('Failed to log multiple user agents event:', error);
+    }
     increaseDetectionScore(ip, 'multiple_user_agents', 15);
   }
   
@@ -200,7 +212,11 @@ export function botDetection(req: Request, res: Response, next: NextFunction) {
   const pathCount = trafficRecord.paths.get(req.path) || 0;
   if (pathCount > 15) { // More than 15 hits to same path 
     trafficRecord.suspicious = true;
-    logSecurityEvent(req, 'PATH_FREQUENCY', `IP ${ip} accessed ${req.path} ${pathCount} times`);
+    try {
+      await logSecurityEvent(req, 'PATH_FREQUENCY', `IP ${ip} accessed ${req.path} ${pathCount} times`);
+    } catch (error) {
+      console.error('Failed to log path frequency event:', error);
+    }
     increaseDetectionScore(ip, 'path_frequency', 5);
   }
   
@@ -208,7 +224,11 @@ export function botDetection(req: Request, res: Response, next: NextFunction) {
   const timeDiff = Date.now() - trafficRecord.lastAccess;
   if (trafficRecord.count > 10 && timeDiff < 1000) { // 10+ requests in under 1 second
     trafficRecord.suspicious = true;
-    logSecurityEvent(req, 'HIGH_VELOCITY', `IP ${ip} sending high velocity requests`);
+    try {
+      await logSecurityEvent(req, 'HIGH_VELOCITY', `IP ${ip} sending high velocity requests`);
+    } catch (error) {
+      console.error('Failed to log high velocity event:', error);
+    }
     increaseDetectionScore(ip, 'high_velocity', 20);
   }
   
@@ -228,7 +248,11 @@ export function botDetection(req: Request, res: Response, next: NextFunction) {
       geoStore.set(country, countryMap);
       
       // Check for unusual geo-based spikes
-      checkForGeoAnomalies(country, hourKey);
+      try {
+        await checkForGeoAnomalies(country, hourKey);
+      } catch (error) {
+        console.error('Failed to check geo anomalies:', error);
+      }
     }
   }
   
@@ -237,7 +261,11 @@ export function botDetection(req: Request, res: Response, next: NextFunction) {
   
   if (score >= 50) {
     // High risk - challenge or block
-    logSecurityEvent(req, 'HIGH_RISK_IP', `High risk IP ${ip} with score ${score}`);
+    try {
+      await logSecurityEvent(req, 'HIGH_RISK_IP', `High risk IP ${ip} with score ${score}`);
+    } catch (error) {
+      console.error('Failed to log high risk IP event:', error);
+    }
     
     // For high-risk IPs, we would implement a CAPTCHA or other challenge
     // For this implementation, we'll just add a delay proportional to the score
@@ -247,7 +275,11 @@ export function botDetection(req: Request, res: Response, next: NextFunction) {
     return;
   } else if (score >= 30) {
     // Medium risk - add delay and monitor
-    logSecurityEvent(req, 'MEDIUM_RISK_IP', `Medium risk IP ${ip} with score ${score}`);
+    try {
+      await logSecurityEvent(req, 'MEDIUM_RISK_IP', `Medium risk IP ${ip} with score ${score}`);
+    } catch (error) {
+      console.error('Failed to log medium risk IP event:', error);
+    }
     
     setTimeout(() => {
       next();
@@ -279,7 +311,11 @@ export async function checkIpReputation(req: Request, res: Response, next: NextF
   if (cached && (now - cached.lastCheck) < 3600000) { // 1 hour cache
     if (cached.score < 20) {
       // Very bad reputation
-      logSecurityEvent(req, 'BAD_REPUTATION_IP', `Bad reputation IP: ${ip}, score: ${cached.score}`);
+      try {
+        await logSecurityEvent(req, 'BAD_REPUTATION_IP', `Bad reputation IP: ${ip}, score: ${cached.score}`);
+      } catch (error) {
+        console.error('Failed to log bad reputation IP event:', error);
+      }
       
       // For very bad IPs, we might want to block, but for now just delay
       setTimeout(() => {
@@ -317,7 +353,11 @@ export async function checkIpReputation(req: Request, res: Response, next: NextF
     
     // Take action based on score
     if (reputationScore < 20) {
-      logSecurityEvent(req, 'BAD_REPUTATION_IP', `Bad reputation IP: ${ip}, score: ${reputationScore}`);
+      try {
+        await logSecurityEvent(req, 'BAD_REPUTATION_IP', `Bad reputation IP: ${ip}, score: ${reputationScore}`);
+      } catch (error) {
+        console.error('Failed to log bad reputation IP event:', error);
+      }
       
       // For very bad IPs, delay significantly
       setTimeout(() => {
@@ -372,7 +412,7 @@ export function enhancedLogging(req: Request, res: Response, next: NextFunction)
   
   // Capture response status for error tracking
   const originalEnd = res.end;
-  res.end = function(...args) {
+  res.end = async function(...args) {
     // If this is an error response, log it
     if (res.statusCode >= 400) {
       securityLogger.warn({
@@ -393,7 +433,11 @@ export function enhancedLogging(req: Request, res: Response, next: NextFunction)
         
         // Flag IPs with multiple consecutive errors (potential scanning)
         if (trafficRecord.consecutiveFailures >= 5) {
-          logSecurityEvent(req, 'CONSECUTIVE_ERRORS', `IP ${ip} had ${trafficRecord.consecutiveFailures} consecutive errors`);
+          try {
+            await logSecurityEvent(req, 'CONSECUTIVE_ERRORS', `IP ${ip} had ${trafficRecord.consecutiveFailures} consecutive errors`);
+          } catch (error) {
+            console.error('Failed to log consecutive errors event:', error);
+          }
           increaseDetectionScore(ip, 'consecutive_errors', 20);
         }
         
@@ -470,7 +514,7 @@ export function sanitizeInputs(req: Request, res: Response, next: NextFunction) 
  * CAPTCHA Verification Middleware
  * This checks for high-risk requests and can be conditionally enabled
  */
-export function conditionalCaptcha(req: Request, res: Response, next: NextFunction) {
+export async function conditionalCaptcha(req: Request, res: Response, next: NextFunction) {
   const ip = getClientIp(req) || 'unknown';
   const score = getDetectionScore(ip) || 0;
   
@@ -480,7 +524,11 @@ export function conditionalCaptcha(req: Request, res: Response, next: NextFuncti
     // const captchaToken = req.body.captchaToken;
     
     // For now, we'll just log that a CAPTCHA would be required
-    logSecurityEvent(req, 'CAPTCHA_REQUIRED', `CAPTCHA would be required for high-risk IP ${ip}`);
+    try {
+      await logSecurityEvent(req, 'CAPTCHA_REQUIRED', `CAPTCHA would be required for high-risk IP ${ip}`);
+    } catch (error) {
+      console.error('Failed to log CAPTCHA required event:', error);
+    }
     
     // Continue without blocking in this implementation
     next();
@@ -561,7 +609,7 @@ async function logSecurityEvent(req: Request, eventType: string, message: string
       countryCode,
       isTor: false, // Would require lookup
       isProxy: false, // Would require lookup
-      ipReputation: score,
+      ipReputation: Math.round(score),
       sessionId,
       timestamp: new Date()
     });
@@ -675,7 +723,7 @@ async function checkForGeoAnomalies(country: string, hourKey: string) {
           countryCode: country,
           isTor: false,
           isProxy: false,
-          ipReputation: 50, // Neutral score
+          ipReputation: Math.round(50), // Neutral score
           sessionId: 'system',
           timestamp: new Date()
         });
