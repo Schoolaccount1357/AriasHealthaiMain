@@ -20,6 +20,7 @@ import { Input } from "@/components/ui/input";
 import { MapPin, Phone, Building, Shield } from "lucide-react";
 import { MainLayout } from "@/components/layout/MainLayout";
 import { PageHeader } from "@/components/ui/PageHeader";
+import { useResourceTracking } from "@/hooks/use-resource-tracking";
 
 interface StateResource {
   name: string;
@@ -28,6 +29,7 @@ interface StateResource {
   phone?: string;
   website: string;
   category: "VA" | "Crisis" | "Treatment" | "Housing" | "Employment";
+  zipCode?: string;
 }
 
 interface StateData {
@@ -41,6 +43,7 @@ export default function ResourceLocator() {
   const [zipCode, setZipCode] = useState<string>("");
   const [searchRadius, setSearchRadius] = useState<string>("25");
   const [category, setCategory] = useState<string>("all");
+  const { trackStateResourceClick } = useResourceTracking();
 
   // Sample state data - in a real application, this would come from an API
   const stateData: StateData = {
@@ -1062,27 +1065,39 @@ export default function ResourceLocator() {
                   </CardContent>
                   <CardFooter className="border-t pt-4 flex flex-col sm:flex-row sm:justify-between gap-3 px-4 sm:px-6">
                     <Button 
-                      asChild 
                       variant="outline"
                       className="w-full sm:w-auto justify-center text-[#3e64dd] border-[#3e64dd]/30 hover:bg-[#3e64dd]/10"
+                      onClick={() => {
+                        trackStateResourceClick({
+                          state: selectedState,
+                          resourceName: resource.name,
+                          category: resource.category
+                        }, () => {
+                          window.open(resource.website, "_blank", "noopener,noreferrer");
+                        });
+                      }}
                     >
-                      <a href={resource.website} target="_blank" rel="noopener noreferrer">
-                        Visit Website
-                      </a>
+                      Visit Website
                     </Button>
                     {resource.address && (
                       <Button 
-                        asChild 
                         variant="outline" 
                         className="w-full sm:w-auto justify-center"
+                        onClick={() => {
+                          trackStateResourceClick({
+                            state: selectedState,
+                            resourceName: resource.name,
+                            category: resource.category
+                          }, () => {
+                            window.open(
+                              `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(resource.address || '')}`,
+                              "_blank",
+                              "noopener,noreferrer"
+                            );
+                          });
+                        }}
                       >
-                        <a 
-                          href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(resource.address)}`} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                        >
-                          Get Directions
-                        </a>
+                        Get Directions
                       </Button>
                     )}
                   </CardFooter>

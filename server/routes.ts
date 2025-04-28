@@ -207,6 +207,62 @@ export async function registerRoutes(app: Express): Promise<Server> {
       });
     }
   });
+  
+  // API endpoint for tracking state-specific resource usage
+  app.post("/api/resource/track-state", async (req: Request, res: Response) => {
+    try {
+      const { state, resourceName, category } = req.body;
+      
+      if (!state || !resourceName || !category) {
+        return res.status(400).json({
+          message: "Missing required fields: state, resourceName, or category"
+        });
+      }
+      
+      // Get basic info from the request for analytics
+      const userAgent = req.headers['user-agent'] || '';
+      const referrer = req.headers['referer'] || '';
+      // Hash the IP address for privacy
+      const ipHash = crypto.createHash('sha256').update(req.ip || '').digest('hex');
+      
+      // Log the state resource usage
+      const usage = await storage.logStateResourceUsage({
+        state,
+        resourceName,
+        category,
+        userAgent,
+        ipHash,
+        referrer,
+        timestamp: new Date()
+      });
+      
+      return res.status(201).json({
+        message: "State resource usage tracked successfully",
+        data: { state, resourceName, category }
+      });
+    } catch (error) {
+      console.error("Error tracking state resource usage:", error);
+      return res.status(500).json({
+        message: "An error occurred while tracking state resource usage"
+      });
+    }
+  });
+  
+  // API endpoint for getting state resource usage statistics
+  app.get("/api/resource/state-stats", async (_req: Request, res: Response) => {
+    try {
+      const stats = await storage.getStateResourceUsageStats();
+      return res.status(200).json({
+        message: "State resource usage statistics retrieved successfully",
+        data: stats
+      });
+    } catch (error) {
+      console.error("Error getting state resource stats:", error);
+      return res.status(500).json({
+        message: "An error occurred while retrieving state resource statistics"
+      });
+    }
+  });
 
   const httpServer = createServer(app);
   
