@@ -2020,11 +2020,67 @@ export default function ResourceLocator() {
       resources: [
         {
           name: "Robert J. Dole VA Medical Center",
-          description: "VA healthcare services in Kansas",
-          address: "5500 East Kellogg, Wichita, KS 67218",
+          description: "Comprehensive healthcare services for veterans in southern Kansas",
+          address: "5500 East Kellogg Drive, Wichita, KS 67218",
           phone: "(316) 685-2221",
-          website: "https://www.wichita.va.gov/",
+          website: "https://www.va.gov/eastern-kansas-health-care/locations/robert-j-dole-va-medical-center/",
           category: "VA"
+        },
+        {
+          name: "Colmery-O'Neil VA Medical Center",
+          description: "Full-service medical center offering primary care, specialty care, and mental health services",
+          address: "2200 SW Gage Blvd, Topeka, KS 66622",
+          phone: "(785) 350-3111",
+          website: "https://www.va.gov/eastern-kansas-health-care/locations/colmery-oneil-va-medical-center/",
+          category: "VA"
+        },
+        {
+          name: "Dwight D. Eisenhower VA Medical Center",
+          description: "Comprehensive medical services for veterans in northeast Kansas",
+          address: "4101 S. 4th Street, Leavenworth, KS 66048",
+          phone: "(913) 682-2000",
+          website: "https://www.va.gov/eastern-kansas-health-care/locations/dwight-d-eisenhower-va-medical-center/",
+          category: "VA"
+        },
+        {
+          name: "Dodge City VA Clinic",
+          description: "Primary care and mental health services for rural veterans",
+          address: "400 W. Frontview, Suite 1, Dodge City, KS 67801",
+          phone: "(620) 225-9049",
+          website: "https://www.va.gov/eastern-kansas-health-care/locations/dodge-city-va-clinic/",
+          category: "Treatment"
+        },
+        {
+          name: "Hays VA Clinic",
+          description: "Primary care and telehealth services for rural veterans",
+          address: "207-B E 7th Street, Hays, KS 67601",
+          phone: "(785) 625-8700",
+          website: "https://www.va.gov/wichita-health-care/locations/hays-community-based-outpatient-clinic/",
+          category: "Treatment"
+        },
+        {
+          name: "Kansas Commission on Veterans Affairs Office",
+          description: "State agency providing benefits assistance and support services",
+          address: "700 SW Jackson St., Suite 1004, Topeka, KS 66603",
+          phone: "(785) 296-3976",
+          website: "https://kcva.ks.gov/",
+          category: "Employment"
+        },
+        {
+          name: "Kansas Soldiers' Home",
+          description: "Long-term care and housing for eligible Kansas veterans",
+          address: "15810 Fort Dodge Rd., Fort Dodge, KS 67843",
+          phone: "(620) 227-2121",
+          website: "https://kcva.ks.gov/veteran-homes/fort-dodge-home",
+          category: "Housing"
+        },
+        {
+          name: "Kansas Veterans Crisis Line",
+          description: "24/7 confidential support for veterans in crisis",
+          address: "Statewide service",
+          phone: "988, then press 1",
+          website: "https://www.veteranscrisisline.net/",
+          category: "Crisis"
         }
       ]
     },
@@ -2032,11 +2088,67 @@ export default function ResourceLocator() {
       resources: [
         {
           name: "Lexington VA Health Care System",
-          description: "VA healthcare services in Kentucky",
+          description: "Comprehensive medical, surgical, and mental health services for Kentucky veterans",
           address: "1101 Veterans Drive, Lexington, KY 40502",
           phone: "(859) 233-4511",
-          website: "https://www.lexington.va.gov/",
+          website: "https://www.va.gov/lexington-health-care/",
           category: "VA"
+        },
+        {
+          name: "Robley Rex VA Medical Center",
+          description: "Full-service medical center serving veterans in Louisville and surrounding areas",
+          address: "800 Zorn Avenue, Louisville, KY 40206",
+          phone: "(502) 287-4000",
+          website: "https://www.va.gov/louisville-health-care/",
+          category: "VA"
+        },
+        {
+          name: "Bowling Green VA Clinic",
+          description: "Primary care, mental health, and telehealth services",
+          address: "1830 Destiny Lane, Bowling Green, KY 42104",
+          phone: "(270) 782-0120",
+          website: "https://www.va.gov/tennessee-valley-health-care/locations/bowling-green-community-based-outpatient-clinic/",
+          category: "Treatment"
+        },
+        {
+          name: "Owensboro VA Clinic",
+          description: "Primary care and mental health services for veterans",
+          address: "3400 New Hartford Road, Owensboro, KY 42303",
+          phone: "(270) 684-5034",
+          website: "https://www.va.gov/louisville-health-care/locations/owensboro-va-clinic/",
+          category: "Treatment"
+        },
+        {
+          name: "Hazard VA Clinic",
+          description: "Primary care and mental health services for rural veterans in eastern Kentucky",
+          address: "210 Black Gold Blvd., Hazard, KY 41701",
+          phone: "(606) 436-2350",
+          website: "https://www.va.gov/lexington-health-care/locations/hazard-va-clinic/",
+          category: "Treatment"
+        },
+        {
+          name: "Kentucky Department of Veterans Affairs",
+          description: "State agency providing benefits assistance and support services",
+          address: "1111 Louisville Road, Frankfort, KY 40601",
+          phone: "(502) 564-9203",
+          website: "https://veterans.ky.gov/",
+          category: "Employment"
+        },
+        {
+          name: "Thomson-Hood Veterans Center",
+          description: "State veterans nursing home providing long-term care",
+          address: "100 Veterans Drive, Wilmore, KY 40390",
+          phone: "(859) 858-2814",
+          website: "https://veterans.ky.gov/nursinghomes/Pages/thomson-hood.aspx",
+          category: "Housing"
+        },
+        {
+          name: "Kentucky Veterans Crisis Line",
+          description: "24/7 confidential support for veterans in crisis",
+          address: "Statewide service",
+          phone: "988, then press 1",
+          website: "https://www.veteranscrisisline.net/",
+          category: "Crisis"
         }
       ]
     },
@@ -2044,11 +2156,75 @@ export default function ResourceLocator() {
       resources: [
         {
           name: "Southeast Louisiana Veterans Health Care System",
-          description: "VA healthcare services in Louisiana",
+          description: "Comprehensive healthcare services for veterans in New Orleans and surrounding areas",
           address: "2400 Canal Street, New Orleans, LA 70119",
           phone: "(504) 568-0811",
-          website: "https://www.neworleans.va.gov/",
+          website: "https://www.va.gov/southeast-louisiana-health-care/",
           category: "VA"
+        },
+        {
+          name: "Overton Brooks VA Medical Center",
+          description: "Full-service medical center serving veterans in northwest Louisiana",
+          address: "510 East Stoner Avenue, Shreveport, LA 71101",
+          phone: "(318) 221-8411",
+          website: "https://www.va.gov/shreveport-health-care/",
+          category: "VA"
+        },
+        {
+          name: "Alexandria VA Medical Center",
+          description: "Comprehensive healthcare services for central Louisiana veterans",
+          address: "2495 Shreveport Highway, Pineville, LA 71360",
+          phone: "(318) 473-0010",
+          website: "https://www.va.gov/alexandria-health-care/",
+          category: "VA"
+        },
+        {
+          name: "Baton Rouge VA Clinic",
+          description: "Primary care, mental health, and specialty services",
+          address: "7968 Essen Park Avenue, Baton Rouge, LA 70809",
+          phone: "(225) 761-3400",
+          website: "https://www.va.gov/southeast-louisiana-health-care/locations/baton-rouge-va-clinic/",
+          category: "Treatment"
+        },
+        {
+          name: "Lafayette VA Clinic",
+          description: "Primary care and mental health services for veterans in Acadiana region",
+          address: "2100 Jefferson Street, Lafayette, LA 70501",
+          phone: "(337) 262-0870",
+          website: "https://www.va.gov/alexandria-health-care/locations/lafayette-va-clinic/",
+          category: "Treatment"
+        },
+        {
+          name: "Houma VA Clinic",
+          description: "Primary care and mental health services for veterans in bayou region",
+          address: "1750 Martin Luther King Jr. Blvd., Houma, LA 70360",
+          phone: "(985) 851-0188",
+          website: "https://www.va.gov/southeast-louisiana-health-care/locations/houma-va-clinic/",
+          category: "Treatment"
+        },
+        {
+          name: "Louisiana Department of Veterans Affairs",
+          description: "State agency providing veterans benefits assistance and services",
+          address: "1885 Wooddale Blvd., Baton Rouge, LA 70806",
+          phone: "(225) 219-5000",
+          website: "https://vetaffairs.la.gov/",
+          category: "Employment"
+        },
+        {
+          name: "Louisiana Veterans Home",
+          description: "Long-term care and nursing home services for Louisiana veterans",
+          address: "4739 Highway 10, Jackson, LA 70748",
+          phone: "(225) 634-5265",
+          website: "https://vetaffairs.la.gov/benefit/veteran-homes/",
+          category: "Housing"
+        },
+        {
+          name: "Louisiana Veterans Crisis Line",
+          description: "24/7 confidential support for veterans in crisis",
+          address: "Statewide service",
+          phone: "988, then press 1",
+          website: "https://www.veteranscrisisline.net/",
+          category: "Crisis"
         }
       ]
     },
