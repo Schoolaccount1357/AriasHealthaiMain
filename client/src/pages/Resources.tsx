@@ -224,7 +224,7 @@ export default function Resources() {
           </div>
           
           <div className="bg-[#1b2c45] p-4 rounded-md">
-            <h3 className="font-semibold text-lg mb-2">Outside the United States</h3>
+            <h3 className="font-semibold text-lg mb-2">International</h3>
             <div className="flex flex-wrap gap-4">
               <Button 
                 onClick={() => trackResourceClick("call", () => window.location.href = "tel:0018002738255")}
