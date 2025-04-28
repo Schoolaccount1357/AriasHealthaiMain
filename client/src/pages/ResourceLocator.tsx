@@ -1380,11 +1380,115 @@ export default function ResourceLocator() {
       resources: [
         {
           name: "Boise VA Medical Center",
-          description: "VA healthcare services in Idaho",
+          description: "Primary and specialty care, mental health services, surgery, pain management, social work, vision care, and more",
           address: "500 West Fort Street, Boise, ID 83702",
           phone: "(208) 422-1000",
-          website: "https://www.boise.va.gov/",
+          website: "https://www.va.gov/boise-health-care/",
           category: "VA"
+        },
+        {
+          name: "Caldwell VA Clinic",
+          description: "Community-Based Outpatient Clinic offering primary care and mental health services",
+          address: "713 Haystack Way, Caldwell, ID 83605",
+          phone: "(208) 454-4820",
+          website: "https://www.va.gov/boise-health-care/locations/caldwell-va-clinic/",
+          category: "VA"
+        },
+        {
+          name: "Coeur d'Alene VA Clinic",
+          description: "Community-Based Outpatient Clinic offering primary care and mental health services",
+          address: "915 W. Ironwood Dr., Suite 101, Coeur d'Alene, ID 83814",
+          phone: "(208) 665-1711",
+          website: "https://www.va.gov/boise-health-care/locations/coeur-dalene-va-clinic/",
+          category: "VA"
+        },
+        {
+          name: "Idaho Falls VA Clinic",
+          description: "Community-Based Outpatient Clinic offering primary care and mental health services",
+          address: "640 S. Woodruff Ave., Idaho Falls, ID 83401",
+          phone: "(208) 522-2922",
+          website: "https://www.va.gov/boise-health-care/locations/idaho-falls-va-clinic/",
+          category: "VA"
+        },
+        {
+          name: "Twin Falls VA Clinic",
+          description: "Community-Based Outpatient Clinic offering primary care and mental health services",
+          address: "260 2nd Ave. E., Twin Falls, ID 83301",
+          phone: "(208) 732-0959",
+          website: "https://www.va.gov/boise-health-care/locations/twin-falls-va-clinic/",
+          category: "VA"
+        },
+        {
+          name: "Boise Vet Center",
+          description: "Counseling, PTSD treatment, substance abuse programs, and other mental health services",
+          address: "2424 Bank Dr., Boise, ID 83705",
+          phone: "(208) 342-3612",
+          website: "https://www.va.gov/find-locations/facility/vc_0507V",
+          category: "Treatment"
+        },
+        {
+          name: "East Idaho Vet Center",
+          description: "Counseling, PTSD treatment, substance abuse programs, and other mental health services",
+          address: "1555 Pocatello Creek Rd., Suite C, Pocatello, ID 83201",
+          phone: "(208) 232-0316",
+          website: "https://www.va.gov/find-locations/facility/vc_0548V",
+          category: "Treatment"
+        },
+        {
+          name: "Veterans Crisis Line",
+          description: "24/7 confidential support for veterans in crisis",
+          address: "Nationwide service",
+          phone: "988, then press 1",
+          website: "https://www.veteranscrisisline.net/",
+          category: "Crisis"
+        },
+        {
+          name: "Boise Veterans Home",
+          description: "State veterans home providing skilled nursing care for Idaho veterans",
+          address: "320 Collins Rd., Boise, ID 83702",
+          phone: "(208) 780-1600",
+          website: "https://veterans.idaho.gov/veterans-homes/",
+          category: "Housing"
+        },
+        {
+          name: "Lewiston Veterans Home",
+          description: "State veterans home providing skilled nursing care for Idaho veterans",
+          address: "821 21st Ave., Lewiston, ID 83501",
+          phone: "(208) 750-3600",
+          website: "https://veterans.idaho.gov/veterans-homes/",
+          category: "Housing"
+        },
+        {
+          name: "Pocatello Veterans Home",
+          description: "State veterans home providing skilled nursing care for Idaho veterans",
+          address: "1957 Alvin Ricken Dr., Pocatello, ID 83201",
+          phone: "(208) 235-7800",
+          website: "https://veterans.idaho.gov/veterans-homes/",
+          category: "Housing"
+        },
+        {
+          name: "Idaho Division of Veterans Services Employment Services",
+          description: "Assistance with job training, employment accommodations, and job placement",
+          address: "351 Collins Road, Boise, ID 83702",
+          phone: "(208) 780-1300",
+          website: "https://veterans.idaho.gov/benefits-and-services/",
+          category: "Employment"
+        },
+        {
+          name: "Idaho Legal Aid Services - Veterans",
+          description: "Legal assistance to veterans on issues such as benefits, housing, and family law",
+          address: "1447 S. Tyrell Lane, Boise, ID 83706",
+          phone: "(208) 746-7541",
+          website: "https://www.idaholegalaid.org/node/2232/veterans-issues",
+          category: "Treatment"
+        },
+        {
+          name: "Idaho Veterans Chamber of Commerce",
+          description: "Support in education, housing, entrepreneurship, workforce management, family, and wellness services",
+          address: "Boise, ID",
+          phone: "(208) 917-5612",
+          website: "https://idahoveteranschamber.org/",
+          category: "Employment"
         }
       ]
     },
