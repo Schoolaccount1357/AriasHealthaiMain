@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import { useState, useEffect } from "react";
 import {
   Card,
   CardContent,
@@ -19,6 +20,7 @@ import {
 } from "lucide-react";
 import { MainLayout } from "@/components/layout/MainLayout";
 import { PageHeader } from "@/components/ui/PageHeader";
+import { CrisisResources } from "@/components/common/CrisisResources";
 import { useResourceTracking } from "@/hooks/use-resource-tracking";
 
 interface Resource {
@@ -38,6 +40,24 @@ interface ResourceCategory {
 
 export default function Resources() {
   const { trackResourceClick } = useResourceTracking();
+  const [showFloatingHelp, setShowFloatingHelp] = useState(false);
+  
+  // Show the floating help button after user has scrolled down a bit
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowFloatingHelp(true);
+      } else {
+        setShowFloatingHelp(false);
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   
   const resourceCategories = [
     {
@@ -226,17 +246,20 @@ export default function Resources() {
                     )}
                   </div>
                   <Button 
-                    asChild 
                     variant="link" 
                     className="p-0 h-auto text-[#3e64dd] group relative overflow-hidden"
+                    onClick={() => {
+                      // Track resource usage with a generic "website" type
+                      trackResourceClick("website", () => window.open(resource.website, "_blank", "noopener,noreferrer"));
+                    }}
                   >
-                    <a href={resource.website} target="_blank" rel="noopener noreferrer" className="inline-flex items-center">
+                    <span className="inline-flex items-center">
                       <span className="relative z-10 inline-flex items-center transition-all duration-300 group-hover:translate-x-1">
                         Visit Website
                         <Globe className="h-3 w-3 ml-1 transition-transform duration-300 group-hover:translate-x-1 group-hover:scale-110" />
                       </span>
                       <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#3e64dd]/40 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
-                    </a>
+                    </span>
                   </Button>
                 </div>
               ))}
@@ -282,6 +305,21 @@ export default function Resources() {
           </Link>
         </Button>
       </div>
+      
+      {/* Floating help button that appears after scroll */}
+      {showFloatingHelp && (
+        <div className="fixed bottom-6 right-6 z-50 transition-all duration-300 animate-fade-in">
+          <button 
+            onClick={() => trackResourceClick("call", () => window.location.href = "tel:988")}
+            className="bg-[#3e64dd] text-white p-3 rounded-full shadow-lg hover:bg-[#2a4bba] transition-colors"
+            aria-label="Get immediate help - Call 988"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+          </button>
+        </div>
+      )}
     </MainLayout>
   );
 }
