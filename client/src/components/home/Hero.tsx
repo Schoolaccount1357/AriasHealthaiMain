@@ -11,7 +11,7 @@ export function Hero() {
               Stay Connected. Stay Strong.
             </h1>
             <p className="text-gray-300 mb-4 md:mb-6 text-base md:text-lg">
-              A new kind of support for people facing major life transitions.
+              A new kind of support for veterans and civilians in recovery.
             </p>
             <div className="space-y-3 md:space-y-4">
               <Button 
@@ -29,7 +29,7 @@ export function Hero() {
 
               <div className="mt-3 md:mt-4">
                 <p className="text-xs sm:text-sm text-gray-200">
-                  <span className="text-white font-semibold">Get Early Access:</span> Waitlist members will be the first to experience our AI-powered matching and global wellness community.
+                  <span className="text-white font-semibold">Get Early Access:</span> Waitlist members will be the first to experience our AI-powered matching and veteran support community.
                 </p>
               </div>
             </div>
@@ -39,7 +39,7 @@ export function Hero() {
             <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#141e2f] to-transparent z-10 block"></div>
             <img 
               src="https://images.unsplash.com/photo-1583468982228-19f19164aee2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=600&q=80" 
-              alt="Diverse group of people supporting each other" 
+              alt="Diverse group of veterans supporting each other" 
               className="w-full h-full object-cover"
             />
           </div>

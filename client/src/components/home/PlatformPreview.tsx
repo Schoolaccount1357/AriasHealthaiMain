@@ -19,17 +19,17 @@ export function PlatformPreview() {
       id: 1,
       name: "John D.",
       initial: "JD",
-      branch: "Healthcare Professional",
+      branch: "Army Veteran",
       matchPercentage: 92,
-      matchFactors: ["Career Transition", "Stress Management", "Peer Support"]
+      matchFactors: ["Combat Experience", "PTSD Management", "Peer Support"]
     },
     {
       id: 2,
       name: "Maria S.",
       initial: "MS",
-      branch: "Financial Advisor",
+      branch: "Navy Veteran",
       matchPercentage: 87,
-      matchFactors: ["Life Changes", "Resilience Building", "Family Support"]
+      matchFactors: ["Medical Background", "Depression Recovery", "Family Support"]
     }
   ];
 
@@ -77,7 +77,7 @@ export function PlatformPreview() {
             </div>
           </div>
           <p className="text-foreground">
-            Our proprietary matching algorithm connects you with peers who share similar military experiences and mental health journeys, creating meaningful connections.
+            Our proprietary matching algorithm connects you with peers who share similar life experiences and wellness journeys, creating meaningful connections.
           </p>
         </div>
         
@@ -85,7 +85,7 @@ export function PlatformPreview() {
         <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
           <h3 className="font-semibold text-lg mb-4 flex items-center">
             <Brain className="h-5 w-5 mr-2 text-primary" />
-            Personalized Mental Health Support
+            Personalized Wellness Support
           </h3>
           <div className="bg-muted rounded-lg p-4 border border-border mb-4">
             <div className="mb-4 border-b pb-3">
@@ -100,14 +100,14 @@ export function PlatformPreview() {
                 <Users className="h-4 w-4 mr-2 text-primary" />
                 Secure Group Support Sessions
               </h4>
-              <p className="text-sm text-muted-foreground">Join moderated group sessions with other veterans who understand your unique challenges and experiences.</p>
+              <p className="text-sm text-muted-foreground">Join moderated group sessions with others who understand your unique challenges and life experiences.</p>
             </div>
             <div>
               <h4 className="font-medium mb-2 flex items-center">
                 <Shield className="h-4 w-4 mr-2 text-primary" />
-                Military-Specific Privacy Controls
+                Enhanced Privacy Controls
               </h4>
-              <p className="text-sm text-muted-foreground">Our platform is built with military-grade security to ensure your mental health journey remains private and protected.</p>
+              <p className="text-sm text-muted-foreground">Our platform is built with enterprise-grade security to ensure your wellness journey remains private and protected.</p>
             </div>
           </div>
           <p className="text-foreground">
