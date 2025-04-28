@@ -174,6 +174,50 @@ export default function Resources() {
           website: "https://www.veteranspeersupport.org"
         }
       ]
+    },
+    {
+      title: "International Resources",
+      icon: <Globe className="h-6 w-6 text-[#3e64dd]" />,
+      resources: [
+        {
+          name: "Philippines - Manila VA Clinic",
+          description: "The only full VA clinic outside U.S. territories - accepts VA insurance",
+          website: "https://www.va.gov/manila-philippines-health-care/",
+          phone: "+63 (02) 8396-3616"
+        },
+        {
+          name: "Foreign Medical Program (FMP)",
+          description: "VA program that provides healthcare benefits to veterans with service-connected conditions living or traveling abroad",
+          website: "https://www.va.gov/communitycare/programs/veterans/fmp/",
+          phone: "1-877-345-8179"
+        },
+        {
+          name: "Veterans Crisis Line (International)",
+          description: "Support for veterans in crisis available worldwide",
+          website: "https://www.veteranscrisisline.net/get-help/military-crisis-line",
+          phone: "001-800-273-8255"
+        },
+        {
+          name: "Germany Resources",
+          description: "FMP coverage with German healthcare providers, some U.S. military bases have base hospitals",
+          website: "https://germany.usembassy.gov/u-s-citizen-services/"
+        },
+        {
+          name: "Japan Resources",
+          description: "FMP coverage available and some support from VA Manila Clinic remotely",
+          website: "https://jp.usembassy.gov/u-s-citizen-services/doctors/"
+        },
+        {
+          name: "South Korea Resources",
+          description: "FMP coverage and some U.S. Army hospitals at military bases",
+          website: "https://kr.usembassy.gov/u-s-citizen-services/"
+        },
+        {
+          name: "Mexico Resources",
+          description: "FMP coverage with good network of doctors in Baja California, Mexico City, and Guadalajara",
+          website: "https://mx.usembassy.gov/u-s-citizen-services/doctors/"
+        }
+      ]
     }
   ];
 
