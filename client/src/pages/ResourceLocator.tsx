@@ -1459,12 +1459,7 @@ export default function ResourceLocator() {
         </div>
       )}
 
-      {/* Add crisis resources section when no state or country is selected */}
-      {!selectedState && !selectedCountry && (
-        <div className="mb-10 mt-8">
-          <CrisisResources variant="compact" className="shadow-md" />
-        </div>
-      )}
+      {/* Crisis resources section removed for now since international emergency numbers aren't available yet */}
       
       {!selectedState && !selectedCountry && (
         <div className="bg-gray-50 rounded-lg p-4 sm:p-8 text-center">
