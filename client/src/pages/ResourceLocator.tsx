@@ -137,7 +137,7 @@ export default function ResourceLocator() {
           description: "Medical support for veterans in Japan",
           address: "United States Fleet Activities Yokosuka, Japan",
           phone: "+81 46 816 5600",
-          website: "https://www.med.navy.mil/Naval-Hospital-Yokosuka/",
+          website: "https://yokosuka.tricare.mil/",
           category: "VA"
         },
         {
