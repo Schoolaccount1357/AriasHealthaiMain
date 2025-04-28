@@ -1289,7 +1289,7 @@ export default function ResourceLocator() {
           description: "VA healthcare services in Connecticut",
           address: "950 Campbell Avenue, West Haven, CT 06516",
           phone: "(203) 932-5711",
-          website: "https://www.connecticut.va.gov/",
+          website: "https://www.va.gov/connecticut-health-care/",
           category: "VA",
           zipCode: "06516"
         },
@@ -1338,7 +1338,7 @@ export default function ResourceLocator() {
           description: "VA healthcare services in Delaware",
           address: "1601 Kirkwood Highway, Wilmington, DE 19805",
           phone: "(302) 994-2511",
-          website: "https://www.wilmington.va.gov/",
+          website: "https://www.va.gov/wilmington-health-care/",
           category: "VA",
           zipCode: "19805"
         },
@@ -1387,7 +1387,7 @@ export default function ResourceLocator() {
           description: "Comprehensive healthcare services for Veterans",
           address: "13000 Bruce B. Downs Blvd, Tampa, FL 33612",
           phone: "(813) 972-2000",
-          website: "https://www.tampa.va.gov/",
+          website: "https://www.va.gov/tampa-health-care/",
           category: "VA"
         },
         {
@@ -1427,7 +1427,7 @@ export default function ResourceLocator() {
           description: "State-of-the-art healthcare facility providing primary care, specialty services, and mental health",
           address: "13800 Veterans Way, Orlando, FL 32827",
           phone: "(407) 631-1000",
-          website: "https://www.orlando.va.gov/",
+          website: "https://www.va.gov/orlando-health-care/",
           category: "VA"
         },
         {
@@ -1435,7 +1435,7 @@ export default function ResourceLocator() {
           description: "Comprehensive healthcare services including primary care, specialty care, and mental health",
           address: "7305 N. Military Trail, West Palm Beach, FL 33410",
           phone: "(561) 422-8262",
-          website: "https://www.westpalmbeach.va.gov/",
+          website: "https://www.va.gov/west-palm-beach-health-care/",
           category: "VA"
         },
         {
