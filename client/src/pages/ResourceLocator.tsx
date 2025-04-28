@@ -1367,12 +1367,164 @@ export default function ResourceLocator() {
     "Hawaii": {
       resources: [
         {
-          name: "VA Pacific Islands Health Care System",
-          description: "VA healthcare services in Hawaii",
+          name: "Spark M. Matsunaga VA Medical Center",
+          description: "Primary and specialty care, mental health services, PTSD treatment, geriatrics, suicide prevention, and more",
           address: "459 Patterson Road, Honolulu, HI 96819",
           phone: "(808) 433-0600",
-          website: "https://www.hawaii.va.gov/",
+          website: "https://www.va.gov/pacific-islands-health-care/",
           category: "VA"
+        },
+        {
+          name: "Daniel K. Akaka VA Clinic",
+          description: "Multispecialty outpatient care including primary care, women's health, mental health, geriatrics, dentistry, and pharmacy",
+          address: "91-1051 Franklin D. Roosevelt Avenue, Kapolei, HI 96707",
+          phone: "(800) 214-1306",
+          website: "https://www.va.gov/pacific-islands-health-care/locations/daniel-k-akaka-department-of-veterans-affairs-outpatient-clinic/",
+          category: "VA"
+        },
+        {
+          name: "Hilo Community-Based Outpatient Clinic",
+          description: "Primary care and mental health services for veterans",
+          address: "1285 Waianuenue Avenue, Suite 211, Hilo, HI 96720",
+          phone: "(808) 935-3781",
+          website: "https://www.va.gov/pacific-islands-health-care/locations/hilo-community-based-outpatient-clinic/",
+          category: "VA"
+        },
+        {
+          name: "Kailua-Kona Community-Based Outpatient Clinic",
+          description: "Primary care and mental health services for veterans",
+          address: "35-377 Hualalai Road, Kailua-Kona, HI 96740",
+          phone: "(808) 329-0774",
+          website: "https://www.va.gov/pacific-islands-health-care/locations/kailua-kona-community-based-outpatient-clinic/",
+          category: "VA"
+        },
+        {
+          name: "Maui Community-Based Outpatient Clinic",
+          description: "Primary care and mental health services for veterans",
+          address: "203 Ho'ohana Street, Suite 303, Kahului, HI 96732",
+          phone: "(808) 871-2454",
+          website: "https://www.va.gov/pacific-islands-health-care/locations/maui-community-based-outpatient-clinic/",
+          category: "VA"
+        },
+        {
+          name: "Kauai Community-Based Outpatient Clinic",
+          description: "Primary care and mental health services for veterans",
+          address: "4485 Pahe'e Street, Suite 150, Lihue, HI 96766",
+          phone: "(808) 246-0497",
+          website: "https://www.va.gov/pacific-islands-health-care/locations/kauai-community-based-outpatient-clinic/",
+          category: "VA"
+        },
+        {
+          name: "National Center for PTSD – Pacific Islands Division",
+          description: "Specialized care for PTSD and related mental health conditions",
+          address: "3375 Koapaka Street, Suite I-560, Honolulu, HI 96819",
+          phone: "(808) 566-1546",
+          website: "https://www.ptsd.va.gov/about/divisions/pacific/index.asp",
+          category: "Treatment"
+        },
+        {
+          name: "Honolulu Vet Center",
+          description: "Readjustment counseling and outreach services for veterans and their families",
+          address: "1680 Kapiolani Blvd., Suite F-3, Honolulu, HI 96814",
+          phone: "(808) 973-8387",
+          website: "https://www.va.gov/find-locations/facility/vc_0237V",
+          category: "Treatment"
+        },
+        {
+          name: "Hilo Vet Center",
+          description: "Readjustment counseling and outreach services for veterans and their families",
+          address: "70 Lanihuli Street, Suite 102, Hilo, HI 96720",
+          phone: "(808) 969-3833",
+          website: "https://www.va.gov/find-locations/facility/vc_0228V",
+          category: "Treatment"
+        },
+        {
+          name: "Kona Vet Center",
+          description: "Readjustment counseling and outreach services for veterans and their families",
+          address: "73-4976 Kamanu Street, Kailua-Kona, HI 96740",
+          phone: "(808) 329-0574",
+          website: "https://www.va.gov/find-locations/facility/vc_0543V",
+          category: "Treatment"
+        },
+        {
+          name: "Maui Vet Center",
+          description: "Readjustment counseling and outreach services for veterans and their families",
+          address: "157 Ma'a Street, Kahului, HI 96732",
+          phone: "(808) 242-8557",
+          website: "https://www.va.gov/find-locations/facility/vc_0233V",
+          category: "Treatment"
+        },
+        {
+          name: "Kauai Vet Center",
+          description: "Readjustment counseling and outreach services for veterans and their families",
+          address: "4485 Pahe'e Street, Suite 101, Lihue, HI 96766",
+          phone: "(808) 246-1163",
+          website: "https://www.va.gov/find-locations/facility/vc_0224V",
+          category: "Treatment"
+        },
+        {
+          name: "West Oahu Vet Center",
+          description: "Readjustment counseling and outreach services for veterans and their families",
+          address: "91-1051 Franklin D. Roosevelt Avenue, Kapolei, HI 96707",
+          phone: "(808) 674-2414",
+          website: "https://www.va.gov/find-locations/facility/vc_0217V",
+          category: "Treatment"
+        },
+        {
+          name: "Veterans Crisis Line",
+          description: "24/7 confidential support for veterans in crisis",
+          address: "Nationwide service",
+          phone: "988, then press 1",
+          website: "https://www.veteranscrisisline.net/",
+          category: "Crisis"
+        },
+        {
+          name: "U.S. VETS – Barber's Point",
+          description: "Transitional and permanent housing, employment assistance, and counseling for homeless and at-risk veterans",
+          address: "91-1039 Shangrila Street, Kapolei, HI 96707",
+          phone: "(808) 672-2977",
+          website: "https://www.usvetsinc.org/hawaii/",
+          category: "Housing"
+        },
+        {
+          name: "Hawaii Public Housing Authority – VASH Program",
+          description: "Rental assistance vouchers for homeless veterans with VA case management and clinical services",
+          address: "1002 North School Street, Honolulu, HI 96817",
+          phone: "(808) 832-4692",
+          website: "https://hpha.hawaii.gov/federally_funded_programs/",
+          category: "Housing"
+        },
+        {
+          name: "Hawaii Department of Labor – Veterans Program",
+          description: "Employment and training services including job search assistance, resume writing, and interview preparation",
+          address: "830 Punchbowl Street, Room 329, Honolulu, HI 96813",
+          phone: "(808) 586-8841",
+          website: "https://labor.hawaii.gov/jobs/vets/",
+          category: "Employment"
+        },
+        {
+          name: "U.S. VETS – Employment Services",
+          description: "Job readiness workshops, vocational training, and job placement assistance for veterans",
+          address: "91-1039 Shangrila Street, Kapolei, HI 96707",
+          phone: "(808) 672-2977",
+          website: "https://www.usvetsinc.org/hawaii/",
+          category: "Employment"
+        },
+        {
+          name: "Hawaii State Office of Veterans Services",
+          description: "Assistance with education benefits, GI Bill, scholarships and tuition assistance programs",
+          address: "459 Patterson Road, E-Wing, Room 1-A103, Honolulu, HI 96819",
+          phone: "(808) 433-0420",
+          website: "https://dod.hawaii.gov/ovs/",
+          category: "Employment"
+        },
+        {
+          name: "Legal Aid Society of Hawaii – Veterans Project",
+          description: "Free legal assistance to veterans on VA benefits, housing, family law, and consumer rights",
+          address: "924 Bethel Street, Honolulu, HI 96813",
+          phone: "(808) 536-4302",
+          website: "https://www.legalaidhawaii.org/veterans-project.html",
+          category: "Treatment"
         }
       ]
     },
