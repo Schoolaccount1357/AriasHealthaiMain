@@ -556,6 +556,157 @@ export function formProtection(route = 'default') {
 /**
  * Log a security event to the security log and database
  */
+// Country code to full country name mapping
+const countryCodeToName: Record<string, string> = {
+  "US": "United States",
+  "GB": "United Kingdom",
+  "CA": "Canada",
+  "AU": "Australia",
+  "DE": "Germany",
+  "FR": "France",
+  "JP": "Japan",
+  "KR": "South Korea",
+  "CN": "China",
+  "RU": "Russia",
+  "IN": "India",
+  "BR": "Brazil",
+  "ZA": "South Africa",
+  "SG": "Singapore",
+  "NZ": "New Zealand",
+  "MX": "Mexico",
+  "ES": "Spain",
+  "IT": "Italy",
+  // Add more as needed
+};
+
+/**
+ * Country information middleware
+ * Extracts and enriches requests with country data
+ */
+export function countryInfoMiddleware(req: Request, res: Response, next: NextFunction) {
+  const countryCode = (req.headers['cf-ipcountry'] as string) || null;
+  
+  if (countryCode) {
+    const countryName = countryCodeToName[countryCode] || `Unknown (${countryCode})`;
+    
+    // Store in res.locals for other middleware to use
+    res.locals = res.locals || {};
+    res.locals.geoData = {
+      countryCode,
+      countryName
+    };
+  }
+  
+  next();
+}
+
+/**
+ * Visitor Activity Logging Middleware
+ * Logs visitor activity to database for analytics
+ */
+export async function visitorActivityLogger(req: Request, res: Response, next: NextFunction) {
+  // Skip for static assets and non-GET requests to reduce database load
+  if (req.method !== 'GET' || 
+      req.path.match(/\.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$/)) {
+    return next();
+  }
+  
+  const ip = getClientIp(req) || 'unknown';
+  const userAgent = req.headers['user-agent'] || 'unknown';
+  const countryCode = (req.headers['cf-ipcountry'] as string) || 
+                      (res.locals?.geoData?.countryCode as string) || null;
+  const countryName = res.locals?.geoData?.countryName as string || null;
+  const referrer = req.headers['referer'] as string || 'direct';
+  const pageViewed = req.originalUrl || req.url;
+  
+  // Detect device type, browser, and OS from user agent
+  let deviceType = 'unknown';
+  let browser = 'unknown';
+  let operatingSystem = 'unknown';
+  
+  // Very basic UA parsing - in production you'd use a proper UA parser library
+  if (userAgent.includes('Mobile') || userAgent.includes('Android') || userAgent.includes('iPhone')) {
+    deviceType = 'mobile';
+  } else if (userAgent.includes('Tablet') || userAgent.includes('iPad')) {
+    deviceType = 'tablet';
+  } else {
+    deviceType = 'desktop';
+  }
+  
+  if (userAgent.includes('Firefox')) {
+    browser = 'Firefox';
+  } else if (userAgent.includes('Chrome') && !userAgent.includes('Edg')) {
+    browser = 'Chrome';
+  } else if (userAgent.includes('Safari') && !userAgent.includes('Chrome')) {
+    browser = 'Safari';
+  } else if (userAgent.includes('Edg')) {
+    browser = 'Edge';
+  } else if (userAgent.includes('MSIE') || userAgent.includes('Trident/')) {
+    browser = 'Internet Explorer';
+  }
+  
+  if (userAgent.includes('Windows')) {
+    operatingSystem = 'Windows';
+  } else if (userAgent.includes('Mac OS')) {
+    operatingSystem = 'macOS';
+  } else if (userAgent.includes('Linux')) {
+    operatingSystem = 'Linux';
+  } else if (userAgent.includes('Android')) {
+    operatingSystem = 'Android';
+  } else if (userAgent.includes('iOS') || userAgent.includes('iPhone') || userAgent.includes('iPad')) {
+    operatingSystem = 'iOS';
+  }
+  
+  // Check if visitor is a bot
+  let isBotDetected = false;
+  let botCategory = null;
+  
+  if (
+    userAgent.includes('bot') ||
+    userAgent.includes('crawl') ||
+    userAgent.includes('spider') ||
+    userAgent.includes('scrape')
+  ) {
+    isBotDetected = true;
+    
+    if (userAgent.includes('Googlebot')) {
+      botCategory = 'Google';
+    } else if (userAgent.includes('bingbot')) {
+      botCategory = 'Bing';
+    } else if (userAgent.includes('YandexBot')) {
+      botCategory = 'Yandex';
+    } else if (userAgent.includes('Baiduspider')) {
+      botCategory = 'Baidu';
+    } else {
+      botCategory = 'Other Bot';
+    }
+  }
+  
+  // Store this visit in the database asynchronously
+  try {
+    await storage.logVisitorActivity({
+      ipAddress: ip,
+      userAgent,
+      eventType: 'PAGE_VIEW',
+      deviceType,
+      browser,
+      operatingSystem,
+      isBotDetected,
+      botCategory,
+      pageViewed,
+      referrer,
+      countryCode,
+      countryName,
+      timestamp: new Date()
+    });
+  } catch (error) {
+    console.error('Failed to log visitor activity:', error);
+    // Continue execution even if logging fails
+  }
+  
+  next();
+}
+
 async function logSecurityEvent(req: Request, eventType: string, message: string) {
   const ip = getClientIp(req) || 'unknown';
   const userAgent = req.headers['user-agent'] || 'unknown';

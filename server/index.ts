@@ -14,7 +14,8 @@ import {
   enhancedLogging,
   speedLimiter,
   conditionalCaptcha,
-  formProtection
+  formProtection,
+  countryInfoMiddleware
 } from './middleware/security';
 import { defaultLogger } from './utils/logger';
 
@@ -29,6 +30,9 @@ const app = express();
 // Basic Express middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+// Country information middleware
+app.use(countryInfoMiddleware);
 
 // Enhanced logging for all requests
 app.use(enhancedLogging);

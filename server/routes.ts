@@ -351,6 +351,120 @@ export async function registerRoutes(app: Express): Promise<Server> {
       });
     }
   });
+  
+  // New Analytics and Security Endpoints
+  
+  // API endpoint for getting bot activity statistics
+  app.get("/api/security/bot-activity", async (_req: Request, res: Response) => {
+    try {
+      const stats = await storage.getBotActivityStats();
+      return res.status(200).json({
+        message: "Bot activity statistics retrieved successfully",
+        data: stats
+      });
+    } catch (error) {
+      console.error("Error getting bot activity stats:", error);
+      return res.status(500).json({
+        message: "An error occurred while retrieving bot activity statistics"
+      });
+    }
+  });
+  
+  // API endpoint for getting country origin statistics from security logs
+  app.get("/api/security/country-origins", async (_req: Request, res: Response) => {
+    try {
+      const stats = await storage.getCountryOriginStats();
+      return res.status(200).json({
+        message: "Country origin statistics retrieved successfully",
+        data: stats
+      });
+    } catch (error) {
+      console.error("Error getting country origin stats:", error);
+      return res.status(500).json({
+        message: "An error occurred while retrieving country origin statistics"
+      });
+    }
+  });
+  
+  // API endpoint for getting visitor activity statistics
+  app.get("/api/analytics/visitor-activity", async (_req: Request, res: Response) => {
+    try {
+      const stats = await storage.getVisitorActivityStats();
+      return res.status(200).json({
+        message: "Visitor activity statistics retrieved successfully",
+        data: stats
+      });
+    } catch (error) {
+      console.error("Error getting visitor activity stats:", error);
+      return res.status(500).json({
+        message: "An error occurred while retrieving visitor activity statistics"
+      });
+    }
+  });
+  
+  // API endpoint for getting visitor country statistics
+  app.get("/api/analytics/visitor-countries", async (_req: Request, res: Response) => {
+    try {
+      const stats = await storage.getVisitorCountryStats();
+      return res.status(200).json({
+        message: "Visitor country statistics retrieved successfully",
+        data: stats
+      });
+    } catch (error) {
+      console.error("Error getting visitor country stats:", error);
+      return res.status(500).json({
+        message: "An error occurred while retrieving visitor country statistics"
+      });
+    }
+  });
+  
+  // API endpoint for getting visitor bot statistics
+  app.get("/api/analytics/visitor-bots", async (_req: Request, res: Response) => {
+    try {
+      const stats = await storage.getBotVisitorStats();
+      return res.status(200).json({
+        message: "Visitor bot statistics retrieved successfully",
+        data: stats
+      });
+    } catch (error) {
+      console.error("Error getting visitor bot stats:", error);
+      return res.status(500).json({
+        message: "An error occurred while retrieving visitor bot statistics"
+      });
+    }
+  });
+  
+  // API endpoint for getting visitor device type statistics
+  app.get("/api/analytics/device-types", async (_req: Request, res: Response) => {
+    try {
+      const stats = await storage.getDeviceTypeStats();
+      return res.status(200).json({
+        message: "Device type statistics retrieved successfully",
+        data: stats
+      });
+    } catch (error) {
+      console.error("Error getting device type stats:", error);
+      return res.status(500).json({
+        message: "An error occurred while retrieving device type statistics"
+      });
+    }
+  });
+  
+  // API endpoint for getting most viewed pages
+  app.get("/api/analytics/most-viewed-pages", async (_req: Request, res: Response) => {
+    try {
+      const stats = await storage.getMostViewedPages();
+      return res.status(200).json({
+        message: "Most viewed pages retrieved successfully",
+        data: stats
+      });
+    } catch (error) {
+      console.error("Error getting most viewed pages:", error);
+      return res.status(500).json({
+        message: "An error occurred while retrieving most viewed pages"
+      });
+    }
+  });
 
   const httpServer = createServer(app);
   
