@@ -893,92 +893,100 @@ export default function ResourceLocator() {
     "Israel": {
       resources: [
         {
-          name: "Veterans Support Services - Tel Aviv",
-          description: "FMP assistance and medical referrals",
-          address: "HaYarkon Street, Tel Aviv, Israel",
+          name: "U.S. Embassy Branch Office - Tel Aviv",
+          description: "Provides assistance to veterans, including information on the Foreign Medical Program (FMP) and medical referrals",
+          address: "71 HaYarkon Street, Tel Aviv 6343229, Israel",
           phone: "+972 3 519 7575",
-          website: "https://www.va.gov/health-care/foreign-medical-program/",
+          website: "https://il.usembassy.gov/u-s-citizen-services/veterans-affairs/",
           category: "VA"
         },
         {
-          name: "American Medical Center - Jerusalem",
-          description: "Medical services for U.S. veterans",
-          address: "King David Street, Jerusalem, Israel",
-          phone: "+972 2 625 8844",
-          website: "https://www.terem.com/en/",
+          name: "Tel Aviv University - National PTSD Clinic",
+          description: "Specialized trauma treatment for veterans and civilians, launched in January 2024",
+          address: "Tel Aviv University, Tel Aviv, Israel",
+          phone: "+972 3 640 8111",
+          website: "https://english.tau.ac.il/",
           category: "Treatment"
         },
         {
-          name: "PTSD Treatment Center - Tel Aviv",
-          description: "Specialized trauma treatment for veterans",
-          address: "Weizmann Street, Tel Aviv, Israel",
-          phone: "+972 3 697 3650",
-          website: "https://www.traumacenter.org.il/",
-          category: "Crisis"
+          name: "Foreign Medical Program Support",
+          description: "Assistance with VA-rated, service-connected conditions for veterans residing in Israel",
+          address: "PO Box 200, Spring City, PA 19475, USA",
+          phone: "Main: +1-833-930-0816",
+          website: "https://www.va.gov/health-care/foreign-medical-program/",
+          category: "VA"
         }
       ]
     },
     "United Arab Emirates": {
       resources: [
         {
-          name: "U.S. Veterans Support - Dubai",
-          description: "FMP assistance and medical referrals",
-          address: "Sheikh Zayed Road, Dubai, UAE",
-          phone: "+971 4 309 4000",
-          website: "https://www.va.gov/health-care/foreign-medical-program/",
+          name: "U.S. Embassy - Abu Dhabi",
+          description: "Provides assistance to veterans with FMP information and consular services",
+          address: "P.O. Box 4009, Abu Dhabi, UAE",
+          phone: "+971 2 414 2200",
+          website: "https://ae.usembassy.gov/u-s-citizen-services/",
           category: "VA"
         },
         {
           name: "American Hospital Dubai",
-          description: "Medical services eligible for FMP reimbursement",
-          address: "Oud Metha Road, Dubai, UAE",
+          description: "Medical services eligible for FMP reimbursement, recognized for high standards of care",
+          address: "19th Street, Oud Metha, Dubai, UAE",
           phone: "+971 4 377 6666",
           website: "https://www.ahdubai.com/",
           category: "Treatment"
         },
         {
-          name: "Veterans Mental Health Services - Abu Dhabi",
-          description: "Mental health support for veterans",
+          name: "Aspris Wellbeing Centre - Abu Dhabi",
+          description: "Provides mental health support services, including for veterans",
           address: "Al Bateen, Abu Dhabi, UAE",
-          phone: "+971 2 666 8044",
-          website: "https://www.amheldubai.ae/",
+          phone: "+971 2 651 8111",
+          website: "https://www.asprismentalhealth.ae/",
           category: "Crisis"
         },
         {
-          name: "Veterans Employment Network - UAE",
-          description: "Employment assistance in security and oil/gas sectors",
-          address: "Dubai Internet City, Dubai, UAE",
-          phone: "+971 4 391 1122",
-          website: "https://www.veteransjobs-uae.com/",
-          category: "Employment"
+          name: "Foreign Medical Program Support",
+          description: "Assistance with VA-rated, service-connected conditions for veterans residing in UAE",
+          address: "PO Box 200, Spring City, PA 19475, USA",
+          phone: "Main: +1-833-930-0816",
+          website: "https://www.va.gov/health-care/foreign-medical-program/",
+          category: "VA"
         }
       ]
     },
     "South Africa": {
       resources: [
         {
-          name: "U.S. Veterans Support - Cape Town",
-          description: "FMP assistance and medical referrals",
-          address: "Adderley Street, Cape Town, South Africa",
-          phone: "+27 21 702 7300",
-          website: "https://www.va.gov/health-care/foreign-medical-program/",
+          name: "U.S. Embassy - Pretoria",
+          description: "Provides FMP assistance and medical referrals for U.S. veterans in South Africa",
+          address: "877 Pretorius Street, Arcadia, Pretoria, 0083, South Africa",
+          phone: "+27 12 431 4000",
+          website: "https://za.usembassy.gov/u-s-citizen-services/",
           category: "VA"
         },
         {
           name: "Mediclinic Cape Town",
           description: "Medical services eligible for FMP reimbursement",
-          address: "21 Hof Street, Gardens, Cape Town, South Africa",
+          address: "21 Hof Street, Oranjezicht, Cape Town, 8001, South Africa",
           phone: "+27 21 464 5500",
           website: "https://www.mediclinic.co.za/",
           category: "Treatment"
         },
         {
-          name: "PTSD Treatment Center - Johannesburg",
-          description: "Trauma and PTSD services for veterans",
+          name: "Recovery Direct - Johannesburg",
+          description: "Specializes in trauma and PTSD services for veterans",
           address: "Sandton, Johannesburg, South Africa",
           phone: "+27 11 884 4030",
-          website: "https://www.psychotherapy.co.za/",
+          website: "https://www.recoverydirect.net/",
           category: "Crisis"
+        },
+        {
+          name: "Foreign Medical Program Support",
+          description: "Assistance with VA-rated, service-connected conditions for veterans residing in South Africa",
+          address: "PO Box 200, Spring City, PA 19475, USA",
+          phone: "Main: +1-833-930-0816",
+          website: "https://www.va.gov/health-care/foreign-medical-program/",
+          category: "VA"
         }
       ]
     }
