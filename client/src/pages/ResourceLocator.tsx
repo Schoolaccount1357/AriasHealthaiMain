@@ -541,7 +541,7 @@ export default function ResourceLocator() {
           description: "FMP assistance and medical referrals",
           address: "Vassilissis Sofias Avenue, Athens, Greece",
           phone: "+30 210 721 2951",
-          website: "https://www.veterans.gov/fmp",
+          website: "https://www.va.gov/health-care/foreign-medical-program/",
           category: "VA"
         },
         {
@@ -569,7 +569,7 @@ export default function ResourceLocator() {
           description: "FMP assistance and medical referrals",
           address: "HaYarkon Street, Tel Aviv, Israel",
           phone: "+972 3 519 7575",
-          website: "https://www.veterans.gov/fmp",
+          website: "https://www.va.gov/health-care/foreign-medical-program/",
           category: "VA"
         },
         {
@@ -597,7 +597,7 @@ export default function ResourceLocator() {
           description: "FMP assistance and medical referrals",
           address: "Sheikh Zayed Road, Dubai, UAE",
           phone: "+971 4 309 4000",
-          website: "https://www.veterans.gov/fmp",
+          website: "https://www.va.gov/health-care/foreign-medical-program/",
           category: "VA"
         },
         {
@@ -633,7 +633,7 @@ export default function ResourceLocator() {
           description: "FMP assistance and medical referrals",
           address: "Adderley Street, Cape Town, South Africa",
           phone: "+27 21 702 7300",
-          website: "https://www.veterans.gov/fmp",
+          website: "https://www.va.gov/health-care/foreign-medical-program/",
           category: "VA"
         },
         {
