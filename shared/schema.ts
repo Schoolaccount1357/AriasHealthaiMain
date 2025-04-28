@@ -153,3 +153,23 @@ export const insertStateResourceUsageSchema = createInsertSchema(stateResourceUs
 
 export type InsertStateResourceUsage = z.infer<typeof insertStateResourceUsageSchema>;
 export type StateResourceUsage = typeof stateResourceUsage.$inferSelect;
+
+// Navigation usage tracking (for US/International toggle and state/country selection)
+export const navUsage = pgTable("nav_usage", {
+  id: serial("id").primaryKey(),
+  navType: text("nav_type").notNull(), // 'toggle', 'state_select', 'country_select'
+  value: text("value").notNull(), // what was clicked/selected
+  timestamp: timestamp("timestamp").defaultNow().notNull(),
+  userAgent: text("user_agent"),
+  ipHash: text("ip_hash"),
+  referrer: text("referrer"),
+  createdAt: timestamp("created_at").defaultNow().notNull()
+});
+
+export const insertNavUsageSchema = createInsertSchema(navUsage).omit({
+  id: true,
+  createdAt: true
+});
+
+export type InsertNavUsage = z.infer<typeof insertNavUsageSchema>;
+export type NavUsage = typeof navUsage.$inferSelect;

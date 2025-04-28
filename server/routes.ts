@@ -263,6 +263,45 @@ export async function registerRoutes(app: Express): Promise<Server> {
       });
     }
   });
+  
+  // API endpoint for tracking navigation UI interactions
+  app.post("/api/resource/track-nav", async (req: Request, res: Response) => {
+    try {
+      const { navType, value } = req.body;
+      
+      if (!navType || !value) {
+        return res.status(400).json({ 
+          message: "Missing required fields: navType or value" 
+        });
+      }
+      
+      // Get basic info from the request for analytics
+      const userAgent = req.headers['user-agent'] || '';
+      const referrer = req.headers['referer'] || '';
+      // Hash the IP address for privacy
+      const ipHash = crypto.createHash('sha256').update(req.ip || '').digest('hex');
+      
+      // Log the navigation usage
+      const usage = await storage.logNavUsage({
+        navType,
+        value,
+        userAgent,
+        ipHash,
+        referrer,
+        timestamp: new Date()
+      });
+      
+      return res.status(201).json({
+        message: "Navigation usage tracked successfully",
+        data: { navType, value }
+      });
+    } catch (error) {
+      console.error("Error tracking navigation usage:", error);
+      return res.status(500).json({ 
+        message: "An error occurred while tracking navigation usage" 
+      });
+    }
+  });
 
   const httpServer = createServer(app);
   

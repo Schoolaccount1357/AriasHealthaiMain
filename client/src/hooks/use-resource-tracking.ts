@@ -9,6 +9,11 @@ type StateResourceTracking = {
   category: string;
 };
 
+type NavResourceTracking = {
+  navType: "toggle" | "state_select" | "country_select";
+  value: string;
+};
+
 export function useResourceTracking() {
   const { toast } = useToast();
   
@@ -31,6 +36,16 @@ export function useResourceTracking() {
       console.error("Failed to track state resource usage:", error);
     }
   });
+  
+  const trackNavUsage = useMutation({
+    mutationFn: async (data: NavResourceTracking) => {
+      return apiRequest("POST", "/api/resource/track-nav", data);
+    },
+    onError: (error) => {
+      // We don't want to show errors to users for tracking - just log to console
+      console.error("Failed to track navigation usage:", error);
+    }
+  });
 
   const trackResourceClick = (resourceType: ResourceType, action: () => void) => {
     // Track the resource usage
@@ -47,6 +62,16 @@ export function useResourceTracking() {
     // Execute the action (e.g., visiting the website)
     action();
   };
+  
+  const trackNavClick = (data: NavResourceTracking, action?: () => void) => {
+    // Track the navigation usage
+    trackNavUsage.mutate(data);
+    
+    // Execute the action if provided
+    if (action) {
+      action();
+    }
+  };
 
-  return { trackResourceClick, trackStateResourceClick };
+  return { trackResourceClick, trackStateResourceClick, trackNavClick };
 }
