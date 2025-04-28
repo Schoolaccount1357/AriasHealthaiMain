@@ -1,14 +1,39 @@
 import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
+import { getClientIp } from 'request-ip';
 import helmet from "helmet";
-import { additionalSecurityHeaders, simpleRateLimit, sanitizeInputs } from './middleware/security';
+import path from "path";
+import fs from "fs";
+import { 
+  additionalSecurityHeaders, 
+  simpleRateLimit, 
+  sanitizeInputs,
+  botDetection,
+  checkIpReputation,
+  enhancedLogging,
+  speedLimiter,
+  conditionalCaptcha,
+  formProtection
+} from './middleware/security';
+import { defaultLogger } from './utils/logger';
+
+// Create logs directory if it doesn't exist
+const logsDir = path.join(process.cwd(), 'logs');
+if (!fs.existsSync(logsDir)) {
+  fs.mkdirSync(logsDir, { recursive: true });
+}
 
 const app = express();
+
+// Basic Express middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-// Security enhancements
+// Enhanced logging for all requests
+app.use(enhancedLogging);
+
+// Security enhancements - helmet configuration
 app.use(helmet({
   contentSecurityPolicy: {
     directives: {
@@ -31,8 +56,26 @@ app.use(helmet({
 // Add additional security headers
 app.use(additionalSecurityHeaders);
 
-// Apply rate limiting to API endpoints
+// Bot detection - identify and slow down automation
+app.use(botDetection);
+
+// IP reputation checking - assign risk scores to IPs
+app.use(checkIpReputation);
+
+// Progressive speed limiting for suspicious behaviors
+app.use('/api', speedLimiter);
+
+// Apply standard rate limiting to API endpoints
 app.use('/api', simpleRateLimit);
+
+// Apply conditional CAPTCHA to sensitive POST endpoints
+app.use('/api/contact', conditionalCaptcha);
+app.use('/api/veterans/enroll', conditionalCaptcha);
+app.use('/api/waitlist/join', conditionalCaptcha);
+
+// Apply brute force protection to authentication routes
+app.use('/api/login', formProtection('login'));
+app.use('/api/register', formProtection('register'));
 
 // Apply input sanitization to all routes
 app.use(sanitizeInputs);
@@ -52,6 +95,40 @@ app.use((req, res, next) => {
   if (app.get("env") === "production") {
     res.setHeader("Strict-Transport-Security", "max-age=31536000; includeSubDomains");
   }
+  next();
+});
+
+// Log detailed information about each request
+app.use((req, res, next) => {
+  const ip = getClientIp(req) || req.ip || 'unknown';
+  const userAgent = req.headers['user-agent'] || 'unknown';
+  const referer = req.headers['referer'] || 'none';
+  
+  // Add request start time for response time calculation
+  const requestStartTime = Date.now();
+  
+  // Intercept res.end to calculate response time
+  const originalEnd = res.end;
+  res.end = function(...args) {
+    const responseTime = Date.now() - requestStartTime;
+    
+    // Only log detailed information for API routes
+    if (req.path.startsWith('/api')) {
+      defaultLogger.info({
+        type: 'REQUEST',
+        method: req.method,
+        path: req.path,
+        ip: ip,
+        userAgent: userAgent,
+        referer: referer,
+        statusCode: res.statusCode,
+        responseTime: responseTime
+      });
+    }
+    
+    return originalEnd.apply(res, args);
+  };
+  
   next();
 });
 
