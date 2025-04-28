@@ -3283,8 +3283,64 @@ export default function ResourceLocator() {
           description: "VA healthcare services in Texas",
           address: "2002 Holcombe Boulevard, Houston, TX 77030",
           phone: "(713) 791-1414",
-          website: "https://www.houston.va.gov/",
+          website: "https://www.va.gov/houston-health-care/",
           category: "VA"
+        },
+        {
+          name: "HUD-Veterans Affairs Supportive Housing (HUD-VASH)",
+          description: "Collaborative program between HUD and VA, providing housing vouchers combined with case management and clinical services for homeless veterans",
+          address: "Statewide service administered by Texas Department of Housing and Community Affairs (TDHCA)",
+          phone: "Contact your local VA Medical Center",
+          website: "https://www.va.gov/homeless/hud-vash.asp",
+          category: "Housing"
+        },
+        {
+          name: "Supportive Services for Veteran Families (SSVF)",
+          description: "VA program preventing homelessness by offering temporary financial assistance for rent, utilities, security deposits, and moving costs",
+          address: "Multiple locations throughout Texas",
+          phone: "1-877-4AID-VET (1-877-424-3838)",
+          website: "https://www.va.gov/homeless/ssvf/",
+          category: "Housing"
+        },
+        {
+          name: "Veterans Housing Assistance Program (VHAP)",
+          description: "Texas Veterans Land Board program offering low-interest loans for land, home purchases, and home improvements with little or no down payment",
+          address: "1700 N. Congress Avenue, Austin, TX 78701",
+          phone: "1-800-252-8387",
+          website: "https://vlb.texas.gov/homes/index.html",
+          category: "Housing"
+        },
+        {
+          name: "Endeavors",
+          description: "Provides permanent supportive housing, homelessness prevention programs, and mental health services for veterans, including those with disabilities and female veterans",
+          address: "6363 De Zavala Rd, San Antonio, TX 78249",
+          phone: "(210) 431-6466",
+          website: "https://endeavors.org/programs/veteran-services/",
+          category: "Housing"
+        },
+        {
+          name: "Operation Homefront",
+          description: "Offers transitional housing, permanent housing, and critical financial assistance for rent, utilities, and food for military and veteran families",
+          address: "1355 Central Parkway S, Suite 100, San Antonio, TX 78232",
+          phone: "(210) 659-7756",
+          website: "https://operationhomefront.org/",
+          category: "Housing"
+        },
+        {
+          name: "SAMMinistries - Veterans' Housing Stability Program",
+          description: "Provides rental assistance, case management, and financial literacy education with a focus on homeless prevention and rapid re-housing",
+          address: "1919 NW Loop 410, Suite 100, San Antonio, TX 78213",
+          phone: "(210) 340-0302",
+          website: "https://www.samm.org/housing/",
+          category: "Housing"
+        },
+        {
+          name: "National Call Center for Homeless Veterans",
+          description: "24/7 confidential support connecting veterans to VA services and community resources",
+          address: "Nationwide service",
+          phone: "1-877-4AID-VET (1-877-424-3838)",
+          website: "https://www.va.gov/homeless/nationalcallcenter.asp",
+          category: "Crisis"
         }
       ]
     },
@@ -3295,7 +3351,7 @@ export default function ResourceLocator() {
           description: "VA healthcare services in Utah",
           address: "500 Foothill Drive, Salt Lake City, UT 84148",
           phone: "(801) 582-1565",
-          website: "https://www.saltlakecity.va.gov/",
+          website: "https://www.va.gov/salt-lake-city-health-care/",
           category: "VA"
         }
       ]
