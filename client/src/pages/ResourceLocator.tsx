@@ -533,24 +533,24 @@ export default function ResourceLocator() {
     "Australia": {
       resources: [
         {
-          name: "U.S. Veterans Support - Sydney",
-          description: "Assistance with FMP claims and medical referrals",
-          address: "Martin Place, Sydney, NSW 2000, Australia",
+          name: "U.S. Consulate General - Sydney",
+          description: "Consular services including assistance with Federal Benefits Unit (FBU) claims and medical referrals",
+          address: "Level 10, MLC Centre, 19-29 Martin Place, Sydney, NSW 2000, Australia",
           phone: "+61 2 9373 9200",
-          website: "https://www.va.gov/health-care/foreign-medical-program/",
+          website: "https://au.usembassy.gov/embassy-consulates/sydney/",
           category: "VA"
         },
         {
           name: "Returned and Services League (RSL) Clubs",
-          description: "Australian veterans clubs that welcome U.S. veterans",
+          description: "Support services, camaraderie, and community engagement for veterans including U.S. veterans",
           address: "Multiple locations throughout Australia",
           phone: "+61 2 9264 8188",
-          website: "https://www.rslnsw.org.au/",
-          category: "Crisis"
+          website: "https://www.rslnational.org/",
+          category: "Housing"
         },
         {
           name: "Veterans Mental Health Services - Melbourne",
-          description: "Mental health services for veterans (FMP eligible)",
+          description: "Mental health services for veterans eligible under the Foreign Medical Program (FMP)",
           address: "299 Swanston Street, Melbourne, VIC 3000, Australia",
           phone: "+61 3 9662 2911",
           website: "https://www.openarms.gov.au/",
@@ -561,7 +561,39 @@ export default function ResourceLocator() {
           description: "Job placement assistance for U.S. veterans in Australia",
           address: "Brisbane, QLD, Australia",
           phone: "+61 7 3305 1400",
-          website: "https://www.usvets-australia.org/",
+          website: "https://www.dva.gov.au/civilian-life/finding-employment-after-service",
+          category: "Employment"
+        },
+        {
+          name: "Open Arms - Veterans & Families Counselling",
+          description: "Free and confidential counselling and support services (U.S. veterans may inquire about eligibility)",
+          address: "Multiple locations across Australia",
+          phone: "+61 1800 011 046",
+          website: "https://www.openarms.gov.au/",
+          category: "Treatment"
+        },
+        {
+          name: "Soldier On Australia",
+          description: "Mental health support, employment assistance, and social connection activities for all veterans including those from allied nations",
+          address: "Multiple locations across Australia",
+          phone: "+61 1300 620 380",
+          website: "https://soldieron.org.au/",
+          category: "Crisis"
+        },
+        {
+          name: "Veteran Employment Program",
+          description: "Australian Government initiative supporting veterans transitioning to civilian employment",
+          address: "Canberra, ACT, Australia",
+          phone: "+61 1800 555 254",
+          website: "https://veteransemployment.gov.au/",
+          category: "Employment"
+        },
+        {
+          name: "RSL Veterans' Employment Program",
+          description: "Employment support including resume development and job placement assistance for all veterans residing in Australia",
+          address: "Multiple RSL locations across Australia",
+          phone: "+61 2 9264 8188",
+          website: "https://rslnsw.org.au/veterans-services/employment/",
           category: "Employment"
         }
       ]
