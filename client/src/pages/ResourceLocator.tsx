@@ -3080,11 +3080,59 @@ export default function ResourceLocator() {
       resources: [
         {
           name: "VA Portland Health Care System",
-          description: "VA healthcare services in Oregon",
+          description: "Comprehensive medical services including primary and specialty care, mental health services, rehabilitation, caregiver support, and resources for homeless veterans",
           address: "3710 Southwest US Veterans Hospital Road, Portland, OR 97239",
           phone: "(503) 220-8262",
           website: "https://www.portland.va.gov/",
           category: "VA"
+        },
+        {
+          name: "Oregon Department of Veterans' Affairs (ODVA)",
+          description: "Benefits assistance, healthcare navigation, education and employment resources, financial assistance programs, and housing support",
+          address: "700 Summer St NE, Salem, OR 97301",
+          phone: "(800) 692-9666",
+          website: "https://www.oregon.gov/odva/",
+          category: "Employment"
+        },
+        {
+          name: "Vet Centers in Oregon",
+          description: "Community-based counseling centers offering individual and group therapy for veterans and their families",
+          address: "Multiple locations throughout Oregon",
+          phone: "(877) 927-8387",
+          website: "https://www.va.gov/find-locations/?facilityType=vet_center&state=OR",
+          category: "Crisis"
+        },
+        {
+          name: "Portland VA Research Foundation (PVARF)",
+          description: "Supports medical research and education activities for veterans healthcare improvement",
+          address: "3710 SW US Veterans Hospital Rd, Portland, OR 97239",
+          phone: "(503) 220-8262 ext. 56937",
+          website: "https://www.pvarf.org/",
+          category: "Treatment"
+        },
+        {
+          name: "Center to Improve Veteran Involvement in Care (CIVIC)",
+          description: "Conducts research to empower veterans in managing their health and healthcare",
+          address: "3710 SW US Veterans Hospital Rd, Portland, OR 97239",
+          phone: "(503) 220-8262",
+          website: "https://www.portland.va.gov/research/civic/",
+          category: "Treatment"
+        },
+        {
+          name: "Veteran Readiness and Employment (VR&E) Program - Oregon",
+          description: "Assists veterans with service-connected disabilities in preparing for, finding, and maintaining suitable employment",
+          address: "100 SW Main Street, Floor 2, Portland, OR 97204",
+          phone: "(800) 827-1000",
+          website: "https://www.va.gov/careers-employment/vocational-rehabilitation/",
+          category: "Employment"
+        },
+        {
+          name: "Oregon Veterans' Emergency Financial Assistance Program",
+          description: "Financial assistance program for veterans with urgent needs related to housing, utilities, and other emergency situations",
+          address: "700 Summer St NE, Salem, OR 97301",
+          phone: "(800) 692-9666",
+          website: "https://www.oregon.gov/odva/Services/Pages/Emergency-Assistance.aspx",
+          category: "Housing"
         }
       ]
     },
