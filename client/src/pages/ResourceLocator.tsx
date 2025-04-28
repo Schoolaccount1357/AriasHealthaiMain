@@ -1146,15 +1146,7 @@ export default function ResourceLocator() {
           category: "VA",
           zipCode: "72205"
         },
-        {
-          name: "St. Francis House Veterans Program",
-          description: "Transitional housing and support services",
-          address: "2701 S Elm St, Little Rock, AR 72204",
-          phone: "(501) 664-5036",
-          website: "https://stfrancisministries.org",
-          category: "Housing",
-          zipCode: "72204"
-        },
+
         {
           name: "Arkansas Veterans Industries",
           description: "Employment and job training for veterans",
