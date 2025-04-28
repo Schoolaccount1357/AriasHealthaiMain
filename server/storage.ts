@@ -462,8 +462,9 @@ export class DatabaseStorage implements IStorage {
     };
     
     return result.map(item => ({
-      ...item,
-      countryName: countryMap[item.countryCode] || `Unknown (${item.countryCode})`
+      countryCode: item.countryCode || 'unknown',
+      countryName: item.countryCode ? (countryMap[item.countryCode] || `Unknown (${item.countryCode})`) : 'Unknown',
+      count: item.count
     }));
   }
   
@@ -530,7 +531,10 @@ export class DatabaseStorage implements IStorage {
       .groupBy(visitorActivityLog.botCategory)
       .orderBy(sql`count(*) desc`);
     
-    return result;
+    return result.map(item => ({
+      botCategory: item.botCategory || 'Unknown Bot',
+      count: item.count
+    }));
   }
   
   async getVisitorCountryStats(): Promise<{ countryCode: string; countryName: string; count: number }[]> {
@@ -545,7 +549,11 @@ export class DatabaseStorage implements IStorage {
       .groupBy(visitorActivityLog.countryCode, visitorActivityLog.countryName)
       .orderBy(sql`count(*) desc`);
     
-    return result;
+    return result.map(item => ({
+      countryCode: item.countryCode || 'unknown',
+      countryName: item.countryName || 'Unknown',
+      count: item.count
+    }));
   }
   
   async getDeviceTypeStats(): Promise<{ deviceType: string; count: number }[]> {
@@ -559,7 +567,10 @@ export class DatabaseStorage implements IStorage {
       .groupBy(visitorActivityLog.deviceType)
       .orderBy(sql`count(*) desc`);
     
-    return result;
+    return result.map(item => ({
+      deviceType: item.deviceType || 'unknown',
+      count: item.count
+    }));
   }
   
   async getBrowserStats(): Promise<{ browser: string; count: number }[]> {
@@ -573,7 +584,10 @@ export class DatabaseStorage implements IStorage {
       .groupBy(visitorActivityLog.browser)
       .orderBy(sql`count(*) desc`);
     
-    return result;
+    return result.map(item => ({
+      browser: item.browser || 'unknown',
+      count: item.count
+    }));
   }
   
   async getOperatingSystemStats(): Promise<{ operatingSystem: string; count: number }[]> {
@@ -587,7 +601,10 @@ export class DatabaseStorage implements IStorage {
       .groupBy(visitorActivityLog.operatingSystem)
       .orderBy(sql`count(*) desc`);
     
-    return result;
+    return result.map(item => ({
+      operatingSystem: item.operatingSystem || 'unknown',
+      count: item.count
+    }));
   }
   
   async getMostViewedPages(limit: number = 10): Promise<{ pageViewed: string; count: number }[]> {
@@ -602,7 +619,10 @@ export class DatabaseStorage implements IStorage {
       .orderBy(sql`count(*) desc`)
       .limit(limit);
     
-    return result;
+    return result.map(item => ({
+      pageViewed: item.pageViewed || '/',
+      count: item.count
+    }));
   }
   
   async getTopReferrers(limit: number = 10): Promise<{ referrer: string; count: number }[]> {
@@ -623,7 +643,10 @@ export class DatabaseStorage implements IStorage {
       .orderBy(sql`count(*) desc`)
       .limit(limit);
     
-    return result;
+    return result.map(item => ({
+      referrer: item.referrer || 'unknown',
+      count: item.count
+    }));
   }
 }
 

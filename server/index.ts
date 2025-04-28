@@ -15,7 +15,8 @@ import {
   speedLimiter,
   conditionalCaptcha,
   formProtection,
-  countryInfoMiddleware
+  countryInfoMiddleware,
+  visitorActivityLogger
 } from './middleware/security';
 import { defaultLogger } from './utils/logger';
 
@@ -36,6 +37,9 @@ app.use(countryInfoMiddleware);
 
 // Enhanced logging for all requests
 app.use(enhancedLogging);
+
+// Visitor activity tracking for analytics
+app.use(visitorActivityLogger);
 
 // Security enhancements - helmet configuration
 app.use(helmet({
