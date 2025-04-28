@@ -2,7 +2,7 @@ import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
 
-type ResourceType = "call" | "text" | "chat";
+type ResourceType = "call" | "text" | "chat" | "website";
 type StateResourceTracking = {
   state: string;
   resourceName: string;

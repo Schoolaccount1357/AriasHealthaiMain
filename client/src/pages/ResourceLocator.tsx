@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import {
   Card,
@@ -20,6 +20,7 @@ import { Input } from "@/components/ui/input";
 import { MapPin, Phone, Building, Shield } from "lucide-react";
 import { MainLayout } from "@/components/layout/MainLayout";
 import { PageHeader } from "@/components/ui/PageHeader";
+import { CrisisResources } from "@/components/common/CrisisResources";
 import { useResourceTracking } from "@/hooks/use-resource-tracking";
 
 interface StateResource {
@@ -40,12 +41,263 @@ interface StateData {
 
 export default function ResourceLocator() {
   const [selectedState, setSelectedState] = useState<string>("");
+  const [selectedCountry, setSelectedCountry] = useState<string>("");
+  const [isInternational, setIsInternational] = useState<boolean>(false);
   const [zipCode, setZipCode] = useState<string>("");
   const [searchRadius, setSearchRadius] = useState<string>("25");
   const [category, setCategory] = useState<string>("all");
-  const { trackStateResourceClick } = useResourceTracking();
+  const [showFloatingHelp, setShowFloatingHelp] = useState(false);
+  const { trackStateResourceClick, trackResourceClick } = useResourceTracking();
+  
+  // Show the floating help button after user has scrolled down a bit
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowFloatingHelp(true);
+      } else {
+        setShowFloatingHelp(false);
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   // Sample state data - in a real application, this would come from an API
+  // Create an interface for the country data
+  interface CountryData {
+    [country: string]: {
+      resources: StateResource[];
+    };
+  }
+  
+  // Sample international data with countries that have U.S. military veterans 
+  const countryData: CountryData = {
+    "Germany": {
+      resources: [
+        {
+          name: "Landstuhl Regional Medical Center",
+          description: "The largest U.S. military hospital outside the United States",
+          address: "Dr. Hitzelberger Straße, 66849 Landstuhl, Germany",
+          phone: "+49 6371 9464 0",
+          website: "https://landstuhl.tricare.mil/",
+          category: "VA"
+        },
+        {
+          name: "Veterans of Foreign Wars - Post 10810",
+          description: "Support services for veterans and their families in Germany",
+          address: "Hermannstraße 123, 66879 Reichenbach-Steegen, Germany",
+          phone: "+49 6371 5942 8900",
+          website: "https://www.vfw10810.org/",
+          category: "Treatment"
+        },
+        {
+          name: "American Counseling Services Network - Germany",
+          description: "Mental health counseling for veterans in Germany",
+          address: "Kaiserstraße 75, 66849 Landstuhl, Germany",
+          phone: "+49 6371 4582 66",
+          website: "https://www.acsn-europe.org/",
+          category: "Treatment"
+        },
+        {
+          name: "USO Kaiserslautern",
+          description: "Transition assistance for veterans leaving military service",
+          address: "Kaiserstraße 34, 67661 Kaiserslautern, Germany",
+          phone: "+49 631 3406 4908",
+          website: "https://europe.uso.org/kaiserslautern/",
+          category: "Employment"
+        },
+        {
+          name: "Veterans Crisis Support - Germany",
+          description: "Crisis intervention services for veterans in Germany",
+          address: "Ramstein Air Base, 66877 Ramstein-Miesenbach, Germany",
+          phone: "+49 6371 47 7777",
+          website: "https://www.ramstein.af.mil/Veteran-Resources/",
+          category: "Crisis"
+        }
+      ]
+    },
+    "Japan": {
+      resources: [
+        {
+          name: "U.S. Naval Hospital Yokosuka",
+          description: "Medical support for veterans in Japan",
+          address: "United States Fleet Activities Yokosuka, Japan",
+          phone: "+81 46 816 5600",
+          website: "https://www.med.navy.mil/Naval-Hospital-Yokosuka/",
+          category: "VA"
+        },
+        {
+          name: "Veterans of Foreign Wars - Post 1054",
+          description: "Support for veterans in Japan",
+          address: "Building 6002, Yokosuka Naval Base, Japan",
+          phone: "+81 46 896 5801",
+          website: "https://www.vfw1054.org/",
+          category: "Housing"
+        },
+        {
+          name: "American Counseling Center - Tokyo",
+          description: "Mental health services for veterans in Japan",
+          address: "4-20-3 Ebisu, Shibuya-ku, Tokyo, Japan",
+          phone: "+81 3 4550 1146",
+          website: "https://www.accjapan.org/",
+          category: "Treatment"
+        },
+        {
+          name: "USO Okinawa",
+          description: "Support and resources for transitioning veterans",
+          address: "Building 217, Kadena Air Base, Okinawa, Japan",
+          phone: "+81 98 970 7788",
+          website: "https://okinawa.uso.org/",
+          category: "Employment"
+        },
+        {
+          name: "Military Crisis Line - Japan",
+          description: "Crisis support for veterans in Japan",
+          address: "Yokota Air Base, Fussa, Tokyo, Japan",
+          phone: "DSN: 118 or +81 3 4570 1110",
+          website: "https://www.veteranscrisisline.net/get-help/military-crisis-line",
+          category: "Crisis"
+        }
+      ]
+    },
+    "South Korea": {
+      resources: [
+        {
+          name: "121st Combat Support Hospital",
+          description: "Medical support for veterans in South Korea",
+          address: "United States Army Garrison Yongsan, Seoul, South Korea",
+          phone: "+82 2 7913 6120",
+          website: "https://www.korea.amedd.army.mil/",
+          category: "VA"
+        },
+        {
+          name: "Veterans of Foreign Wars - Post 10216",
+          description: "Support for veterans in South Korea",
+          address: "Building 5700, Camp Humphreys, Pyeongtaek, South Korea",
+          phone: "+82 31 691 9900",
+          website: "https://www.vfwkorea.org/",
+          category: "Housing"
+        },
+        {
+          name: "Army Substance Abuse Program - Korea",
+          description: "Substance abuse treatment for veterans",
+          address: "Building 572, USAG Yongsan, Seoul, South Korea",
+          phone: "+82 2 7913 3445",
+          website: "https://8tharmy.korea.army.mil/site/resources/asap.asp",
+          category: "Treatment"
+        },
+        {
+          name: "Military One Source - Korea",
+          description: "Employment and transition resources",
+          address: "USAG Camp Humphreys, Pyeongtaek, South Korea",
+          phone: "+82 31 690 7311",
+          website: "https://www.militaryonesource.mil/",
+          category: "Employment"
+        },
+        {
+          name: "Crisis Response Team - USAG Korea",
+          description: "Crisis intervention services for veterans",
+          address: "Building 1105, USAG Camp Humphreys, Pyeongtaek, South Korea",
+          phone: "+82 31 869 5911",
+          website: "https://korea.army.mil/mental-health/",
+          category: "Crisis"
+        }
+      ]
+    },
+    "United Kingdom": {
+      resources: [
+        {
+          name: "RAF Lakenheath Hospital",
+          description: "Medical support for veterans in the UK",
+          address: "RAF Lakenheath, Brandon, Suffolk IP27 9PN, UK",
+          phone: "+44 1638 528 000",
+          website: "https://www.lakenheath.af.mil/Resources/Clinic/",
+          category: "VA"
+        },
+        {
+          name: "Veterans UK",
+          description: "Official UK government veterans support service",
+          address: "Ministry of Defence, Norcross, Thornton-Cleveleys FY5 3WP, UK",
+          phone: "+44 808 1914 218",
+          website: "https://www.gov.uk/government/organisations/veterans-uk",
+          category: "Housing"
+        },
+        {
+          name: "Combat Stress",
+          description: "Mental health services for veterans",
+          address: "Tyrwhitt House, Oaklawn Road, Leatherhead KT22 0BX, UK",
+          phone: "+44 800 138 1619",
+          website: "https://combatstress.org.uk/",
+          category: "Treatment"
+        },
+        {
+          name: "The Poppy Factory",
+          description: "Employment support for veterans with health conditions",
+          address: "20 Petersham Road, Richmond TW10 6UR, UK",
+          phone: "+44 20 8940 3305",
+          website: "https://www.poppyfactory.org/",
+          category: "Employment"
+        },
+        {
+          name: "Veterans Crisis Line UK",
+          description: "Crisis support for US veterans in the UK",
+          address: "RAF Croughton, Nr Brackley NN13 5NQ, UK",
+          phone: "+44 20 3695 0097",
+          website: "https://www.veteranscrisisline.net/get-help/european-support",
+          category: "Crisis"
+        }
+      ]
+    },
+    "Italy": {
+      resources: [
+        {
+          name: "U.S. Naval Hospital Naples",
+          description: "Medical support for veterans in Italy",
+          address: "Naval Support Activity Naples, Gricignano di Aversa, Italy",
+          phone: "+39 081 811 6000",
+          website: "https://www.med.navy.mil/Naval-Hospital-Naples/",
+          category: "VA"
+        },
+        {
+          name: "American Red Cross - Naples",
+          description: "Support services for veterans and families",
+          address: "PSC 817 Box 29, FPO AE 09622, Naples, Italy",
+          phone: "+39 081 568 5939",
+          website: "https://www.redcross.org/local/overseas/italy.html",
+          category: "Housing"
+        },
+        {
+          name: "Behavioral Health Services - Aviano",
+          description: "Mental health services for veterans",
+          address: "Area F, Aviano Air Base, 33081 Aviano, Italy",
+          phone: "+39 0434 30 7500",
+          website: "https://www.aviano.af.mil/Units/Medical-Group/",
+          category: "Treatment"
+        },
+        {
+          name: "Transition Assistance Program - Italy",
+          description: "Employment support and transition assistance",
+          address: "Building 2, Naval Support Activity Naples, Italy",
+          phone: "+39 081 811 6372",
+          website: "https://www.cnic.navy.mil/regions/cnreurafcent/installations/nsa_naples/ffr/support_services/career_support/transition_assistance.html",
+          category: "Employment"
+        },
+        {
+          name: "Military Crisis Line - Italy",
+          description: "Crisis intervention for veterans",
+          address: "U.S. Naval Hospital, Naples, Italy",
+          phone: "DSN: 314-626-4357 or +39 081 568 4357",
+          website: "https://www.veteranscrisisline.net/get-help/european-support",
+          category: "Crisis"
+        }
+      ]
+    }
+  };
+  
   const stateData: StateData = {
     "Alabama": {
       resources: [
@@ -925,11 +1177,18 @@ export default function ResourceLocator() {
     }
   };
 
-  const filteredResources = selectedState
-    ? stateData[selectedState]?.resources.filter(
-        resource => category === "all" || resource.category === category
-      ) || []
-    : [];
+  // Get resources based on whether domestic or international is selected
+  const filteredResources = isInternational
+    ? (selectedCountry 
+        ? countryData[selectedCountry]?.resources.filter(
+            resource => category === "all" || resource.category === category
+          ) || []
+        : [])
+    : (selectedState
+        ? stateData[selectedState]?.resources.filter(
+            resource => category === "all" || resource.category === category
+          ) || []
+        : []);
 
   return (
     <MainLayout>
@@ -1129,6 +1388,28 @@ export default function ResourceLocator() {
               </Button>
             ))}
           </div>
+        </div>
+      )}
+      
+      {/* Add crisis resources section at the top when state is selected */}
+      {selectedState && (
+        <div className="mb-8">
+          <CrisisResources variant="compact" className="shadow-md" />
+        </div>
+      )}
+      
+      {/* Floating help button that appears after scroll */}
+      {showFloatingHelp && (
+        <div className="fixed bottom-6 right-6 z-50 transition-all duration-300 animate-fade-in">
+          <button 
+            onClick={() => trackResourceClick("call", () => window.location.href = "tel:988")}
+            className="bg-[#3e64dd] text-white p-3 rounded-full shadow-lg hover:bg-[#2a4bba] transition-colors"
+            aria-label="Get immediate help - Call 988"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+          </button>
         </div>
       )}
     </MainLayout>
