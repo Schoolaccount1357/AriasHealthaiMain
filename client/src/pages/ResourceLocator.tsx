@@ -44,7 +44,7 @@ export default function ResourceLocator() {
   const [selectedCountry, setSelectedCountry] = useState<string>("");
   const [isInternational, setIsInternational] = useState<boolean>(false);
   const [zipCode, setZipCode] = useState<string>("");
-  const [searchRadius, setSearchRadius] = useState<string>("25");
+  // Removed search radius state as it's no longer needed
   const [category, setCategory] = useState<string>("all");
   const { trackStateResourceClick, trackResourceClick, trackNavClick } = useResourceTracking();
 
@@ -221,16 +221,16 @@ export default function ResourceLocator() {
     "United Kingdom": {
       resources: [
         {
-          name: "RAF Lakenheath Hospital",
-          description: "Medical support for veterans in the UK",
+          name: "RAF Lakenheath Hospital (48th Medical Group)",
+          description: "Medical care for U.S. military personnel, families, and eligible veterans stationed in the UK",
           address: "RAF Lakenheath, Brandon, Suffolk IP27 9PN, UK",
-          phone: "+44 1638 528 000",
+          phone: "+44 1638 528010",
           website: "https://www.lakenheath.af.mil/Resources/Clinic/",
           category: "VA"
         },
         {
           name: "Veterans UK",
-          description: "Official UK government veterans support service",
+          description: "Support on pensions, compensation, welfare, and housing for UK veterans",
           address: "Ministry of Defence, Norcross, Thornton-Cleveleys FY5 3WP, UK",
           phone: "+44 808 1914 218",
           website: "https://www.gov.uk/government/organisations/veterans-uk",
@@ -238,7 +238,7 @@ export default function ResourceLocator() {
         },
         {
           name: "Combat Stress",
-          description: "Mental health services for veterans",
+          description: "Mental health services for veterans including treatment for PTSD, anxiety, and depression",
           address: "Tyrwhitt House, Oaklawn Road, Leatherhead KT22 0BX, UK",
           phone: "+44 800 138 1619",
           website: "https://combatstress.org.uk/",
@@ -254,10 +254,50 @@ export default function ResourceLocator() {
         },
         {
           name: "Veterans Crisis Line UK",
-          description: "Crisis support for US veterans in the UK",
+          description: "Crisis support for U.S. veterans residing in the UK",
           address: "RAF Croughton, Nr Brackley NN13 5NQ, UK",
           phone: "+44 20 3695 0097",
           website: "https://www.veteranscrisisline.net/get-help/european-support",
+          category: "Crisis"
+        },
+        {
+          name: "Op COURAGE",
+          description: "NHS specialist service providing mental health support to veterans and service leavers",
+          address: "Available across England",
+          phone: "+44 0300 323 0117",
+          website: "https://www.nhs.uk/nhs-services/armed-forces-community/mental-health/veterans-reservists/",
+          category: "Treatment"
+        },
+        {
+          name: "Togetherall",
+          description: "Free, anonymous online community offering 24/7 mental health support for UK veterans",
+          address: "London, UK",
+          phone: "N/A - Online Service",
+          website: "https://togetherall.com/en-gb/",
+          category: "Crisis"
+        },
+        {
+          name: "SSAFA - The Armed Forces Charity",
+          description: "Practical, emotional, and financial support to veterans and their families",
+          address: "Queen Elizabeth House, 4 St Dunstan's Hill, London, EC3R 8AD, UK",
+          phone: "+44 800 260 6767",
+          website: "https://www.ssafa.org.uk/",
+          category: "Housing"
+        },
+        {
+          name: "Forces Employment Charity",
+          description: "Career advice, job placements, and training programs for veterans",
+          address: "First Floor, 10 Victoria Street, London, SW1H 0NB, UK",
+          phone: "+44 121 236 0058",
+          website: "https://www.forcesemployment.org.uk/",
+          category: "Employment"
+        },
+        {
+          name: "Veterans' Gateway",
+          description: "Single point of contact for veterans seeking advice and support 24/7",
+          address: "Nationwide service, UK",
+          phone: "+44 808 802 1212",
+          website: "https://www.veteransgateway.org.uk/",
           category: "Crisis"
         }
       ]
@@ -1700,23 +1740,7 @@ export default function ResourceLocator() {
                 />
               </div>
 
-              <div className="space-y-2">
-                <label className="text-sm font-medium">Search Radius</label>
-                <Select
-                  value={searchRadius}
-                  onValueChange={setSearchRadius}
-                >
-                  <SelectTrigger className="bg-[#1c2537] border-none text-white h-11 sm:h-10">
-                    <SelectValue placeholder="Distance" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="10">10 miles</SelectItem>
-                    <SelectItem value="25">25 miles</SelectItem>
-                    <SelectItem value="50">50 miles</SelectItem>
-                    <SelectItem value="100">100 miles</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
+              {/* Search radius component has been removed */}
             </>
           )}
 
