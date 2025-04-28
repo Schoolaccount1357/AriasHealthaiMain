@@ -718,7 +718,7 @@ export default function ResourceLocator() {
       resources: [
         {
           name: "Foreign Medical Program (FMP) - France",
-          description: "Provides healthcare benefits to veterans with VA-rated, service-connected conditions residing in France",
+          description: "Provides healthcare benefits to U.S. veterans with VA-rated, service-connected conditions residing in France",
           address: "PO Box 200, Spring City, PA 19475, USA",
           phone: "Main: +1-833-930-0816 or Germany Toll-Free: 0800-1800-011",
           website: "https://www.va.gov/health-care/foreign-medical-program/",
@@ -726,26 +726,50 @@ export default function ResourceLocator() {
         },
         {
           name: "American Hospital of Paris",
-          description: "Medical services for U.S. veterans",
+          description: "Private, not-for-profit hospital established in 1906, recognized by U.S. Congress and the French government with dual accreditation",
           address: "63 Boulevard Victor Hugo, 92200 Neuilly-sur-Seine, France",
           phone: "+33 1 46 41 25 25",
           website: "https://www.american-hospital.org/en/",
           category: "Treatment"
         },
         {
-          name: "Veterans Mental Health Services - Paris",
-          description: "PTSD and mental health support for veterans",
-          address: "92 Boulevard du Montparnasse, 75014 Paris, France",
-          phone: "+33 1 45 65 25 25",
-          website: "https://www.american-hospital.org/en/",
+          name: "Sainte-Anne Hospital Center",
+          description: "Specializes in psychiatry, neurology, neurosurgery, neuroimaging, and addiction for comprehensive mental health services",
+          address: "1 Rue Cabanis, 75014 Paris, France",
+          phone: "+33 1 45 65 81 00",
+          website: "http://www.ch-sainte-anne.fr/",
+          category: "Treatment"
+        },
+        {
+          name: "Medical and Psychological Emergency Units (CUMP)",
+          description: "Immediate assistance for veterans affected by traumatic events such as natural disasters or terrorist attacks",
+          address: "Various locations throughout France",
+          phone: "Emergency: 15 (SAMU)",
+          website: "https://www.gouvernement.fr/risques",
+          category: "Treatment"
+        },
+        {
+          name: "Suicide Écoute",
+          description: "24/7 free, compassionate, and confidential support by phone for individuals in crisis",
+          address: "Paris, France",
+          phone: "+33 1 45 39 40 00",
+          website: "https://www.suicide-ecoute.fr/",
+          category: "Crisis"
+        },
+        {
+          name: "3114 – National Suicide Prevention Number",
+          description: "France's national suicide prevention hotline, offering free and confidential support 24/7",
+          address: "Nationwide service, France",
+          phone: "3114",
+          website: "https://3114.fr/",
           category: "Crisis"
         },
         {
           name: "U.S. Veterans Network - France",
-          description: "Employment assistance for U.S. veterans",
+          description: "Employment assistance for U.S. veterans residing in France",
           address: "Paris, France",
           phone: "+33 1 42 60 38 48",
-          website: "https://www.americanlegion.fr/",
+          website: "https://www.legion.org/veteransbenefits/employment",
           category: "Employment"
         }
       ]
