@@ -733,12 +733,44 @@ export default function ResourceLocator() {
     "Alaska": {
       resources: [
         {
-          name: "Alaska VA Healthcare System",
-          description: "VA healthcare services in Alaska",
-          address: "1201 N Muldoon Road, Anchorage, AK 99504",
-          phone: "(907) 257-4700",
-          website: "https://www.alaska.va.gov/",
+          name: "Colonel Mary Louise Rasmuson Campus - Alaska VA Healthcare System",
+          description: "Comprehensive primary care, mental health services, and programs for homeless veterans",
+          address: "1201 North Muldoon Road, Anchorage, AK 99504-6104",
+          phone: "888-353-7574",
+          website: "https://www.va.gov/alaska-health-care/",
           category: "VA"
+        },
+        {
+          name: "Joint Base Elmendorf-Richardson VA Medical Center",
+          description: "Specialty care services, mental health care, and 24/7 emergency care",
+          address: "5955 Zeamer Avenue, Joint Base Elmendorf-Richardson, AK 99506-3702",
+          phone: "888-353-7574",
+          website: "https://www.va.gov/alaska-health-care/locations/joint-base-elmendorf-richardson/",
+          category: "VA"
+        },
+        {
+          name: "Fairbanks VA Clinic",
+          description: "Primary care, mental health care, audiology, and women's health services",
+          address: "2555 Phillips Field Road, Fairbanks, AK 99709-3933",
+          phone: "888-353-7574",
+          website: "https://www.va.gov/alaska-health-care/locations/fairbanks-va-clinic/",
+          category: "Treatment"
+        },
+        {
+          name: "Anchorage Vet Center",
+          description: "Counseling and outreach services to veterans and their families",
+          address: "4201 Tudor Centre Drive, Suite 115, Anchorage, AK 99508",
+          phone: "907-563-6966",
+          website: "https://www.va.gov/find-locations/facility/vc_0521V",
+          category: "Crisis"
+        },
+        {
+          name: "Alaska Office of Veterans Affairs",
+          description: "Information on healthcare benefits, eligibility and services for Alaska veterans",
+          address: "1111 West 8th Street, Juneau, AK 99801",
+          phone: "907-465-2151",
+          website: "https://veterans.alaska.gov/",
+          category: "Employment"
         }
       ]
     },
