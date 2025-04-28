@@ -165,6 +165,14 @@ export default function ResourceLocator() {
           category: "VA"
         },
         {
+          name: "Foreign Medical Program (FMP) - Japan",
+          description: "Provides healthcare benefits to veterans with VA-rated, service-connected conditions residing in Japan",
+          address: "PO Box 200, Spring City, PA 19475, USA",
+          phone: "Japan Toll-Free: 00531-13-0871",
+          website: "https://www.va.gov/health-care/foreign-medical-program/",
+          category: "VA"
+        },
+        {
           name: "Veterans of Foreign Wars - Post 1054",
           description: "Support for veterans in Japan",
           address: "Building 6002, Yokosuka Naval Base, Japan",
@@ -189,11 +197,11 @@ export default function ResourceLocator() {
           category: "Employment"
         },
         {
-          name: "Military Crisis Line - Japan",
-          description: "Crisis support for veterans in Japan",
-          address: "Yokota Air Base, Fussa, Tokyo, Japan",
-          phone: "DSN: 118 or +81 3 4570 1110",
-          website: "https://www.veteranscrisisline.net/get-help/military-crisis-line",
+          name: "Veterans Crisis Line - Pacific",
+          description: "24/7 support for veterans, service members, and their families in crisis",
+          address: "Accessible throughout Japan",
+          phone: "Pacific Region: 844-702-5493 or DSN 988",
+          website: "https://www.veteranscrisisline.net/get-help/",
           category: "Crisis"
         }
       ]
@@ -203,9 +211,17 @@ export default function ResourceLocator() {
         {
           name: "Brian D. Allgood Army Community Hospital",
           description: "Comprehensive medical care for active-duty, retirees, and families (formerly 121st Combat Support Hospital)",
-          address: "USAG Yongsan, Seoul, South Korea",
+          address: "USAG Humphreys, Pyeongtaek, South Korea",
           phone: "+82 2 7917 3155",
           website: "https://briandallgood.tricare.mil/",
+          category: "VA"
+        },
+        {
+          name: "Foreign Medical Program (FMP) - South Korea",
+          description: "Provides healthcare benefits to veterans with VA-rated, service-connected conditions residing in South Korea",
+          address: "PO Box 200, Spring City, PA 19475, USA",
+          phone: "Main: +1-833-930-0816 or U.S./Canada Toll-Free: 877-345-8179",
+          website: "https://www.va.gov/health-care/foreign-medical-program/",
           category: "VA"
         },
         {
@@ -217,9 +233,9 @@ export default function ResourceLocator() {
           category: "Housing"
         },
         {
-          name: "Army Substance Abuse Program (ASAP) - USAG Yongsan",
+          name: "Army Substance Abuse Program (ASAP) - USAG Humphreys",
           description: "Substance abuse prevention, counseling, and rehabilitation services",
-          address: "USAG Yongsan, Seoul, South Korea",
+          address: "USAG Humphreys, Pyeongtaek, South Korea",
           phone: "+82 2 7913 3445",
           website: "https://crg.health.mil/",
           category: "Treatment"
@@ -233,11 +249,11 @@ export default function ResourceLocator() {
           category: "Employment"
         },
         {
-          name: "Crisis Response Team - USAG Humphreys",
-          description: "Crisis intervention services and mental health emergency support",
-          address: "USAG Camp Humphreys, Pyeongtaek, South Korea",
-          phone: "+82 31 869 5911",
-          website: "https://home.army.mil/humphreys/about/our-community/behavioral-health",
+          name: "Veterans Crisis Line - Pacific",
+          description: "24/7 support for veterans, service members, and their families in crisis",
+          address: "Accessible throughout South Korea",
+          phone: "Pacific Region: 844-702-5493 or DSN 988",
+          website: "https://www.veteranscrisisline.net/get-help/",
           category: "Crisis"
         }
       ]
