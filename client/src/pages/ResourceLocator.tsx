@@ -306,43 +306,67 @@ export default function ResourceLocator() {
       resources: [
         {
           name: "U.S. Naval Hospital Naples",
-          description: "Medical support for veterans in Italy",
-          address: "Naval Support Activity Naples, Gricignano di Aversa, Italy",
+          description: "Comprehensive medical care for active-duty service members, retirees, and their families",
+          address: "Via Contrada Boscariello, Gricignano di Aversa (CE) 81030, Italy",
           phone: "+39 081 811 6000",
-          website: "https://www.med.navy.mil/Naval-Hospital-Naples/",
+          website: "https://naples.tricare.mil/",
           category: "VA"
         },
         {
           name: "American Red Cross - Naples",
-          description: "Support services for veterans and families",
-          address: "PSC 817 Box 29, FPO AE 09622, Naples, Italy",
-          phone: "+39 081 568 5939",
+          description: "Emergency communication services, financial assistance, and referral services for veterans and families",
+          address: "Village Forum Building, PSC 817 Box 27, FPO AE 09622, Naples, Italy",
+          phone: "+39 081 568 4788",
           website: "https://www.redcross.org/local/overseas/italy.html",
           category: "Housing"
         },
         {
-          name: "Behavioral Health Services - Aviano",
-          description: "Mental health services for veterans",
-          address: "Area F, Aviano Air Base, 33081 Aviano, Italy",
-          phone: "+39 0434 30 7500",
-          website: "https://www.aviano.af.mil/Units/Medical-Group/",
+          name: "Behavioral Health Services - Aviano Air Base",
+          description: "Mental health services including individual/group therapy, substance use education, and family counseling",
+          address: "31st Medical Group, Aviano Air Base, Italy",
+          phone: "+39 0434 30 5321",
+          website: "https://aviano.tricare.mil/Health-Services/Mental-Health",
           category: "Treatment"
         },
         {
-          name: "Transition Assistance Program - Italy",
-          description: "Employment support and transition assistance",
-          address: "Building 2, Naval Support Activity Naples, Italy",
+          name: "Transition Assistance Program - Naples",
+          description: "Resources for transition to civilian life, employment assistance and veterans' benefits information",
+          address: "Fleet and Family Support Center, Naval Support Activity Naples, Italy",
           phone: "+39 081 811 6372",
           website: "https://www.cnic.navy.mil/regions/cnreurafcent/installations/nsa_naples/ffr/support_services/career_support/transition_assistance.html",
           category: "Employment"
         },
         {
-          name: "Military Crisis Line - Italy",
-          description: "Crisis intervention for veterans",
-          address: "U.S. Naval Hospital, Naples, Italy",
-          phone: "DSN: 314-626-4357 or +39 081 568 4357",
+          name: "Military Crisis Line - Europe",
+          description: "24/7 confidential support to veterans in crisis",
+          address: "Accessible throughout Europe",
+          phone: "00800 1273 8255 (TALK)",
           website: "https://www.veteranscrisisline.net/get-help/european-support",
           category: "Crisis"
+        },
+        {
+          name: "U.S. Army Garrison (USAG) Italy - Vicenza",
+          description: "Healthcare services including mental health resources, veteran healthcare, and family care options",
+          address: "Caserma Ederle, Viale Della Pace, 36100 Vicenza, Italy",
+          phone: "+39 0444 71 7114",
+          website: "https://home.army.mil/italy/index.php/about/Garrison/directorate-health-services",
+          category: "VA"
+        },
+        {
+          name: "American University of Rome - Veterans Aid",
+          description: "Educational benefits for U.S. veterans and families using Post-9/11 GI Bill, plus Veterans Club for community support",
+          address: "Via Pietro Roselli 4, 00153 Rome, Italy",
+          phone: "+39 06 5833 0919",
+          website: "https://aur.edu/admissions/veterans",
+          category: "Employment"
+        },
+        {
+          name: "John Cabot University - Veteran Benefits",
+          description: "VA educational and training benefit programs, assistance with enrollment certification and military transfer credits",
+          address: "Via della Lungara 233, 00165 Rome, Italy",
+          phone: "+39 06 681 9121",
+          website: "https://www.johncabot.edu/admissions/veterans-benefits.aspx",
+          category: "Employment"
         }
       ]
     },
