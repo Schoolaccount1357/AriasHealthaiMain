@@ -3356,12 +3356,52 @@ export default function ResourceLocator() {
     "Virginia": {
       resources: [
         {
-          name: "Hunter Holmes McGuire VA Medical Center",
-          description: "VA healthcare services in Virginia",
+          name: "Richmond VA Medical Center",
+          description: "Comprehensive healthcare including addiction care, mental health services, primary and specialty care, and hospice support",
           address: "1201 Broad Rock Boulevard, Richmond, VA 23249",
           phone: "(804) 675-5000",
-          website: "https://www.richmond.va.gov/",
+          website: "https://www.va.gov/richmond-health-care/",
           category: "VA"
+        },
+        {
+          name: "HUD-Veterans Affairs Supportive Housing (HUD-VASH)",
+          description: "Combines HUD rental assistance with VA case management and clinical services for homeless veterans",
+          address: "Statewide service",
+          phone: "(877) 424-3838",
+          website: "https://www.va.gov/homeless/hud-vash.asp",
+          category: "Housing"
+        },
+        {
+          name: "Supportive Services for Veteran Families (SSVF)",
+          description: "Provides rental assistance, utility payments, security deposits, and moving costs for very low-income veteran families",
+          address: "Statewide service",
+          phone: "(877) 424-3838",
+          website: "https://www.va.gov/homeless/ssvf/",
+          category: "Housing"
+        },
+        {
+          name: "Virginia Department of Veterans Services (DVS)",
+          description: "Assistance with VA claims and benefits, education and employment resources, and behavioral health services",
+          address: "101 N. 14th Street, 17th Floor, Richmond, VA 23219",
+          phone: "(804) 786-0286",
+          website: "https://www.dvs.virginia.gov/",
+          category: "Employment"
+        },
+        {
+          name: "Virginia Disabled American Veterans (DAV)",
+          description: "Housing assistance, employment services, medical assistance, and transportation support for veterans",
+          address: "Statewide service",
+          phone: "(804) 917-3650",
+          website: "https://dav.org/veterans/find-your-local-office/",
+          category: "Crisis"
+        },
+        {
+          name: "Virginia Beach Community Development Corporation",
+          description: "Housing assistance and support services for veterans and their families",
+          address: "2400 Potters Road, Virginia Beach, VA 23454",
+          phone: "(757) 463-9516",
+          website: "https://www.vbcdc.org",
+          category: "Housing"
         }
       ]
     },
