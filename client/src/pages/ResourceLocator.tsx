@@ -1000,7 +1000,7 @@ export default function ResourceLocator() {
           description: "Primary VA healthcare facility in Alabama",
           address: "700 19th Street South, Birmingham, AL 35233",
           phone: "(205) 933-8101",
-          website: "https://www.birmingham.va.gov/",
+          website: "https://www.va.gov/birmingham-health-care/",
           category: "VA",
           zipCode: "35233"
         },
@@ -1093,7 +1093,7 @@ export default function ResourceLocator() {
           description: "Comprehensive VA healthcare in Arizona",
           address: "650 E. Indian School Road, Phoenix, AZ 85012",
           phone: "(602) 277-5551",
-          website: "https://www.phoenix.va.gov/",
+          website: "https://www.va.gov/phoenix-health-care/",
           category: "VA",
           zipCode: "85012"
         },
@@ -1142,7 +1142,7 @@ export default function ResourceLocator() {
           description: "VA healthcare services in Arkansas",
           address: "4300 West 7th Street, Little Rock, AR 72205",
           phone: "(501) 257-1000",
-          website: "https://www.littlerock.va.gov/",
+          website: "https://www.va.gov/central-arkansas-health-care/",
           category: "VA",
           zipCode: "72205"
         },
@@ -1240,7 +1240,7 @@ export default function ResourceLocator() {
           description: "VA healthcare services in Colorado",
           address: "1700 North Wheeling Street, Aurora, CO 80045",
           phone: "(303) 399-8020",
-          website: "https://www.denver.va.gov/",
+          website: "https://www.va.gov/eastern-colorado-health-care/",
           category: "VA",
           zipCode: "80045"
         },
