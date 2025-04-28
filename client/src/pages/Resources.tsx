@@ -73,6 +73,14 @@ export default function Resources() {
           text: "Text 838255"
         },
         {
+          name: "Veterans Crisis Line (Overseas)",
+          description: "For veterans located outside the United States",
+          phone: "001-800-273-8255 or DSN 118*",
+          website: "https://www.veteranscrisisline.net/get-help/military-crisis-line",
+          chat: true,
+          text: "Text to 838255"
+        },
+        {
           name: "SAMHSA National Helpline",
           description: "Treatment referral and information service for individuals facing mental health or substance use disorders",
           phone: "1-800-662-4357",
@@ -181,46 +189,82 @@ export default function Resources() {
           <PanelLeftOpen className="h-8 w-8 mr-3 text-[#3e64dd]" />
           <h2 className="text-2xl font-semibold">Need immediate help?</h2>
         </div>
-        <p className="mb-5">
+        <p className="mb-3">
           If you're in crisis or having thoughts of suicide, speak with a trained counselor now.
         </p>
-        <div className="flex flex-wrap gap-4">
-          <Button 
-            onClick={() => trackResourceClick("call", () => window.location.href = "tel:988")}
-            className="bg-[#3e64dd] hover:bg-[#2a4bba] transition-all duration-300 relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98]"
-            size="lg"
-          >
-            <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
-            <span className="relative z-10 flex items-center">
-              <Phone className="h-4 w-4 mr-2 transition-transform duration-300 group-hover:scale-110" />
-              Call 988 - Press 1
-            </span>
-          </Button>
-          <Button 
-            onClick={() => trackResourceClick("text", () => window.location.href = "sms:838255")}
-            className="bg-[#3e64dd] hover:bg-[#2a4bba] transition-all duration-300 relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98]"
-            size="lg"
-          >
-            <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
-            <span className="relative z-10 flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 transition-transform duration-300 group-hover:scale-110" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-              </svg>
-              Text 838255
-            </span>
-          </Button>
-          <Button 
-            onClick={() => trackResourceClick("chat", () => window.open("https://www.veteranscrisisline.net/get-help/chat", "_blank"))}
-            className="bg-[#3e64dd] hover:bg-[#2a4bba] transition-all duration-300 relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98]"
-            size="lg"
-          >
-            <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
-            <span className="relative z-10 flex items-center">
-              <Globe className="h-4 w-4 mr-2 transition-transform duration-300 group-hover:scale-110" />
-              Chat Online
-            </span>
-          </Button>
+        <div className="mb-5">
+          <div className="bg-[#1b2c45] p-4 rounded-md mb-3">
+            <h3 className="font-semibold text-lg mb-2">In the United States</h3>
+            <div className="flex flex-wrap gap-4">
+              <Button 
+                onClick={() => trackResourceClick("call", () => window.location.href = "tel:988")}
+                className="bg-[#3e64dd] hover:bg-[#2a4bba] transition-all duration-300 relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98]"
+                size="lg"
+              >
+                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
+                <span className="relative z-10 flex items-center">
+                  <Phone className="h-4 w-4 mr-2 transition-transform duration-300 group-hover:scale-110" />
+                  Call 988 - Press 1
+                </span>
+              </Button>
+              <Button 
+                onClick={() => trackResourceClick("text", () => window.location.href = "sms:838255")}
+                className="bg-[#3e64dd] hover:bg-[#2a4bba] transition-all duration-300 relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98]"
+                size="lg"
+              >
+                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
+                <span className="relative z-10 flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 transition-transform duration-300 group-hover:scale-110" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                  </svg>
+                  Text 838255
+                </span>
+              </Button>
+            </div>
+          </div>
+          
+          <div className="bg-[#1b2c45] p-4 rounded-md">
+            <h3 className="font-semibold text-lg mb-2">Outside the United States</h3>
+            <div className="flex flex-wrap gap-4">
+              <Button 
+                onClick={() => trackResourceClick("call", () => window.location.href = "tel:0018002738255")}
+                className="bg-[#3e64dd] hover:bg-[#2a4bba] transition-all duration-300 relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98]"
+                size="lg"
+              >
+                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
+                <span className="relative z-10 flex items-center">
+                  <Phone className="h-4 w-4 mr-2 transition-transform duration-300 group-hover:scale-110" />
+                  Call 001-800-273-8255
+                </span>
+              </Button>
+              <Button 
+                onClick={() => trackResourceClick("text", () => window.location.href = "sms:838255")}
+                className="bg-[#3e64dd] hover:bg-[#2a4bba] transition-all duration-300 relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98]"
+                size="lg"
+              >
+                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
+                <span className="relative z-10 flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 transition-transform duration-300 group-hover:scale-110" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                  </svg>
+                  Text to 838255
+                </span>
+              </Button>
+            </div>
+          </div>
         </div>
+        
+        <Button 
+          onClick={() => trackResourceClick("chat", () => window.open("https://www.veteranscrisisline.net/get-help/chat", "_blank"))}
+          className="bg-[#3e64dd] hover:bg-[#2a4bba] transition-all duration-300 relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98] w-full"
+          size="lg"
+        >
+          <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
+          <span className="relative z-10 flex items-center">
+            <Globe className="h-4 w-4 mr-2 transition-transform duration-300 group-hover:scale-110" />
+            Chat Online (Available Worldwide)
+          </span>
+        </Button>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -239,10 +283,34 @@ export default function Resources() {
                   <CardDescription className="mb-2">{resource.description}</CardDescription>
                   <div className="text-sm space-y-1">
                     {resource.phone && (
-                      <p>📞 {resource.phone}</p>
+                      <p>
+                        📞{' '}
+                        <button 
+                          onClick={() => {
+                            const phoneNumber = resource.phone?.split(' ')[0].replace(/-/g, '');
+                            trackResourceClick("call", () => window.location.href = `tel:${phoneNumber}`);
+                          }}
+                          className="text-[#3e64dd] hover:underline focus:outline-none"
+                        >
+                          {resource.phone}
+                        </button>
+                      </p>
                     )}
                     {'text' in resource && resource.text && (
-                      <p>✉️ {typeof resource.text === 'string' ? resource.text : 'Text Available'}</p>
+                      <p>
+                        ✉️{' '}
+                        {typeof resource.text === 'string' ? (
+                          <button 
+                            onClick={() => {
+                              const textNumber = resource.text?.toString().split(' ')[1] || "838255";
+                              trackResourceClick("text", () => window.location.href = `sms:${textNumber}`);
+                            }}
+                            className="text-[#3e64dd] hover:underline focus:outline-none"
+                          >
+                            {resource.text}
+                          </button>
+                        ) : 'Text Available'}
+                      </p>
                     )}
                   </div>
                   <Button 
@@ -297,7 +365,7 @@ export default function Resources() {
           <Link href="/resource-locator" className="flex items-center justify-center">
             <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
             <span className="relative z-10 flex items-center justify-center">
-              Find Resources in Your State
+              Find Resources in Your State and Country
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
@@ -309,15 +377,28 @@ export default function Resources() {
       {/* Floating help button that appears after scroll */}
       {showFloatingHelp && (
         <div className="fixed bottom-6 right-6 z-50 transition-all duration-300 animate-fade-in">
-          <button 
-            onClick={() => trackResourceClick("call", () => window.location.href = "tel:988")}
-            className="bg-[#3e64dd] text-white p-3 rounded-full shadow-lg hover:bg-[#2a4bba] transition-colors"
-            aria-label="Get immediate help - Call 988"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-            </svg>
-          </button>
+          <div className="flex flex-col gap-2">
+            <button 
+              onClick={() => trackResourceClick("call", () => window.location.href = "tel:988")}
+              className="bg-[#3e64dd] text-white p-3 rounded-full shadow-lg hover:bg-[#2a4bba] transition-colors"
+              aria-label="Get immediate help - Call 988 (US)"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <span className="sr-only">US</span>
+            </button>
+            <button 
+              onClick={() => trackResourceClick("call", () => window.location.href = "tel:0018002738255")}
+              className="bg-[#3e64dd] text-white p-3 rounded-full shadow-lg hover:bg-[#2a4bba] transition-colors"
+              aria-label="Get immediate help - Call 001-800-273-8255 (International)"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <span className="sr-only">Int'l</span>
+            </button>
+          </div>
         </div>
       )}
     </MainLayout>
