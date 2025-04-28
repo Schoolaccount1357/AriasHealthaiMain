@@ -5,7 +5,8 @@ import {
   resourceUsage, type ResourceUsage, type InsertResourceUsage, 
   stateResourceUsage, type StateResourceUsage, type InsertStateResourceUsage, 
   navUsage, type NavUsage, type InsertNavUsage,
-  securityLogs, type SecurityLog, type InsertSecurityLog
+  securityLogs, type SecurityLog, type InsertSecurityLog,
+  visitorActivityLog, type VisitorActivityLog, type InsertVisitorActivityLog
 } from "@shared/schema";
 import { db } from "./db";
 import { eq, sql, desc, and, or, like } from "drizzle-orm";
@@ -59,7 +60,23 @@ export interface IStorage {
   getUnresolvedEvents(): Promise<SecurityLog[]>;
   resolveSecurityEvent(id: number, resolvedBy: number, notes?: string): Promise<SecurityLog | undefined>;
   getSecurityEventsStats(): Promise<{ eventType: string; count: number }[]>;
+  getBotActivityStats(): Promise<{ botCategory: string; count: number }[]>;
+  getCountryOriginStats(): Promise<{ countryCode: string; countryName: string; count: number }[]>;
   getTrendingIPs(limit?: number): Promise<{ ipAddress: string; count: number; lastSeen: Date }[]>;
+  
+  // Visitor Activity Logging operations
+  logVisitorActivity(data: InsertVisitorActivityLog): Promise<VisitorActivityLog>;
+  getVisitorActivityByCountry(countryCode: string): Promise<VisitorActivityLog[]>;
+  getVisitorActivityByEventType(eventType: string): Promise<VisitorActivityLog[]>;
+  getVisitorActivityByDateRange(startDate: Date, endDate: Date): Promise<VisitorActivityLog[]>;
+  getVisitorActivityStats(): Promise<{ eventType: string; count: number }[]>;
+  getBotVisitorStats(): Promise<{ botCategory: string; count: number }[]>;
+  getVisitorCountryStats(): Promise<{ countryCode: string; countryName: string; count: number }[]>;
+  getDeviceTypeStats(): Promise<{ deviceType: string; count: number }[]>;
+  getBrowserStats(): Promise<{ browser: string; count: number }[]>;
+  getOperatingSystemStats(): Promise<{ operatingSystem: string; count: number }[]>;
+  getMostViewedPages(limit?: number): Promise<{ pageViewed: string; count: number }[]>;
+  getTopReferrers(limit?: number): Promise<{ referrer: string; count: number }[]>;
 }
 
 export class DatabaseStorage implements IStorage {
@@ -384,6 +401,225 @@ export class DatabaseStorage implements IStorage {
       })
       .from(securityLogs)
       .groupBy(securityLogs.ipAddress)
+      .orderBy(sql`count(*) desc`)
+      .limit(limit);
+    
+    return result;
+  }
+  
+  // New methods for enhanced security logging and reporting
+  
+  async getBotActivityStats(): Promise<{ botCategory: string; count: number }[]> {
+    const result = await db
+      .select({
+        botCategory: securityLogs.eventType,
+        count: sql<number>`count(*)`,
+      })
+      .from(securityLogs)
+      .where(
+        or(
+          like(securityLogs.eventType, '%BOT%'),
+          like(securityLogs.eventType, '%AUTOMATION%'),
+          like(securityLogs.eventType, '%SCRAPER%')
+        )
+      )
+      .groupBy(securityLogs.eventType)
+      .orderBy(sql`count(*) desc`);
+    
+    return result;
+  }
+  
+  async getCountryOriginStats(): Promise<{ countryCode: string; countryName: string; count: number }[]> {
+    // Since we don't currently store country names, we'll just use the country code for now
+    // In a real implementation, we would join with a country lookup table
+    const result = await db
+      .select({
+        countryCode: securityLogs.countryCode,
+        countryName: sql<string>`''`,  // Placeholder for country name
+        count: sql<number>`count(*)`,
+      })
+      .from(securityLogs)
+      .where(sql`${securityLogs.countryCode} IS NOT NULL`)
+      .groupBy(securityLogs.countryCode)
+      .orderBy(sql`count(*) desc`);
+    
+    // Map the country codes to names (in a real implementation this would be from a DB table)
+    const countryMap: {[key: string]: string} = {
+      "US": "United States",
+      "GB": "United Kingdom",
+      "CA": "Canada",
+      "AU": "Australia",
+      "DE": "Germany",
+      "FR": "France",
+      "JP": "Japan",
+      "KR": "South Korea",
+      "CN": "China",
+      "RU": "Russia",
+      "IN": "India",
+      "BR": "Brazil",
+      "ZA": "South Africa",
+      // Add more mappings as needed
+    };
+    
+    return result.map(item => ({
+      ...item,
+      countryName: countryMap[item.countryCode] || `Unknown (${item.countryCode})`
+    }));
+  }
+  
+  // Visitor Activity Logging operations
+  
+  async logVisitorActivity(data: InsertVisitorActivityLog): Promise<VisitorActivityLog> {
+    const [log] = await db
+      .insert(visitorActivityLog)
+      .values(data)
+      .returning();
+    return log;
+  }
+  
+  async getVisitorActivityByCountry(countryCode: string): Promise<VisitorActivityLog[]> {
+    return await db
+      .select()
+      .from(visitorActivityLog)
+      .where(eq(visitorActivityLog.countryCode, countryCode))
+      .orderBy(desc(visitorActivityLog.timestamp));
+  }
+  
+  async getVisitorActivityByEventType(eventType: string): Promise<VisitorActivityLog[]> {
+    return await db
+      .select()
+      .from(visitorActivityLog)
+      .where(eq(visitorActivityLog.eventType, eventType))
+      .orderBy(desc(visitorActivityLog.timestamp));
+  }
+  
+  async getVisitorActivityByDateRange(startDate: Date, endDate: Date): Promise<VisitorActivityLog[]> {
+    return await db
+      .select()
+      .from(visitorActivityLog)
+      .where(
+        and(
+          sql`${visitorActivityLog.timestamp} >= ${startDate}`,
+          sql`${visitorActivityLog.timestamp} <= ${endDate}`
+        )
+      )
+      .orderBy(desc(visitorActivityLog.timestamp));
+  }
+  
+  async getVisitorActivityStats(): Promise<{ eventType: string; count: number }[]> {
+    const result = await db
+      .select({
+        eventType: visitorActivityLog.eventType,
+        count: sql<number>`count(*)`,
+      })
+      .from(visitorActivityLog)
+      .groupBy(visitorActivityLog.eventType)
+      .orderBy(sql`count(*) desc`);
+    
+    return result;
+  }
+  
+  async getBotVisitorStats(): Promise<{ botCategory: string; count: number }[]> {
+    const result = await db
+      .select({
+        botCategory: visitorActivityLog.botCategory,
+        count: sql<number>`count(*)`,
+      })
+      .from(visitorActivityLog)
+      .where(eq(visitorActivityLog.isBotDetected, true))
+      .groupBy(visitorActivityLog.botCategory)
+      .orderBy(sql`count(*) desc`);
+    
+    return result;
+  }
+  
+  async getVisitorCountryStats(): Promise<{ countryCode: string; countryName: string; count: number }[]> {
+    const result = await db
+      .select({
+        countryCode: visitorActivityLog.countryCode,
+        countryName: visitorActivityLog.countryName,
+        count: sql<number>`count(*)`,
+      })
+      .from(visitorActivityLog)
+      .where(sql`${visitorActivityLog.countryCode} IS NOT NULL`)
+      .groupBy(visitorActivityLog.countryCode, visitorActivityLog.countryName)
+      .orderBy(sql`count(*) desc`);
+    
+    return result;
+  }
+  
+  async getDeviceTypeStats(): Promise<{ deviceType: string; count: number }[]> {
+    const result = await db
+      .select({
+        deviceType: visitorActivityLog.deviceType,
+        count: sql<number>`count(*)`,
+      })
+      .from(visitorActivityLog)
+      .where(sql`${visitorActivityLog.deviceType} IS NOT NULL`)
+      .groupBy(visitorActivityLog.deviceType)
+      .orderBy(sql`count(*) desc`);
+    
+    return result;
+  }
+  
+  async getBrowserStats(): Promise<{ browser: string; count: number }[]> {
+    const result = await db
+      .select({
+        browser: visitorActivityLog.browser,
+        count: sql<number>`count(*)`,
+      })
+      .from(visitorActivityLog)
+      .where(sql`${visitorActivityLog.browser} IS NOT NULL`)
+      .groupBy(visitorActivityLog.browser)
+      .orderBy(sql`count(*) desc`);
+    
+    return result;
+  }
+  
+  async getOperatingSystemStats(): Promise<{ operatingSystem: string; count: number }[]> {
+    const result = await db
+      .select({
+        operatingSystem: visitorActivityLog.operatingSystem,
+        count: sql<number>`count(*)`,
+      })
+      .from(visitorActivityLog)
+      .where(sql`${visitorActivityLog.operatingSystem} IS NOT NULL`)
+      .groupBy(visitorActivityLog.operatingSystem)
+      .orderBy(sql`count(*) desc`);
+    
+    return result;
+  }
+  
+  async getMostViewedPages(limit: number = 10): Promise<{ pageViewed: string; count: number }[]> {
+    const result = await db
+      .select({
+        pageViewed: visitorActivityLog.pageViewed,
+        count: sql<number>`count(*)`,
+      })
+      .from(visitorActivityLog)
+      .where(sql`${visitorActivityLog.pageViewed} IS NOT NULL`)
+      .groupBy(visitorActivityLog.pageViewed)
+      .orderBy(sql`count(*) desc`)
+      .limit(limit);
+    
+    return result;
+  }
+  
+  async getTopReferrers(limit: number = 10): Promise<{ referrer: string; count: number }[]> {
+    const result = await db
+      .select({
+        referrer: visitorActivityLog.referrer,
+        count: sql<number>`count(*)`,
+      })
+      .from(visitorActivityLog)
+      .where(
+        and(
+          sql`${visitorActivityLog.referrer} IS NOT NULL`,
+          sql`${visitorActivityLog.referrer} != ''`,
+          sql`${visitorActivityLog.referrer} != 'direct'`
+        )
+      )
+      .groupBy(visitorActivityLog.referrer)
       .orderBy(sql`count(*) desc`)
       .limit(limit);
     

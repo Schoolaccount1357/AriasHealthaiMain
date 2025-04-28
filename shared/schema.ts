@@ -208,3 +208,36 @@ export const insertSecurityLogSchema = createInsertSchema(securityLogs).omit({
 
 export type InsertSecurityLog = z.infer<typeof insertSecurityLogSchema>;
 export type SecurityLog = typeof securityLogs.$inferSelect;
+
+// Visitor activity log for comprehensive tracking of site visitors
+export const visitorActivityLog = pgTable("visitor_activity_log", {
+  id: serial("id").primaryKey(),
+  timestamp: timestamp("timestamp").defaultNow().notNull(),
+  ipAddress: varchar("ip_address", { length: 50 }).notNull(), // Store hashed IP for privacy
+  countryCode: varchar("country_code", { length: 2 }), // Country code
+  countryName: varchar("country_name", { length: 100 }), // Full country name
+  city: varchar("city", { length: 100 }), // City if available
+  userAgent: text("user_agent"), // Store user agent for device/browser analytics
+  browser: varchar("browser", { length: 50 }), // Extracted browser info
+  operatingSystem: varchar("operating_system", { length: 50 }), // Extracted OS info
+  deviceType: varchar("device_type", { length: 20 }), // mobile, desktop, tablet, etc.
+  referrer: text("referrer"), // Where the visitor came from
+  landingPage: text("landing_page"), // First page visited
+  pageViewed: text("page_viewed"), // Current page being viewed
+  eventType: varchar("event_type", { length: 50 }).notNull(), // 'PAGE_VIEW', 'RESOURCE_CLICK', 'FORM_SUBMIT', etc.
+  eventData: json("event_data"), // Additional data about the event
+  sessionId: varchar("session_id", { length: 255 }), // For tracking user journey
+  userId: integer("user_id"), // If authenticated
+  isBotDetected: boolean("is_bot_detected").default(false), // Flag for bot traffic
+  botCategory: varchar("bot_category", { length: 50 }), // 'SEARCH_ENGINE', 'SCRAPER', 'UNKNOWN', etc.
+  botConfidence: integer("bot_confidence"), // 0-100 confidence score
+  createdAt: timestamp("created_at").defaultNow().notNull()
+});
+
+export const insertVisitorActivityLogSchema = createInsertSchema(visitorActivityLog).omit({
+  id: true,
+  createdAt: true
+});
+
+export type InsertVisitorActivityLog = z.infer<typeof insertVisitorActivityLogSchema>;
+export type VisitorActivityLog = typeof visitorActivityLog.$inferSelect;
