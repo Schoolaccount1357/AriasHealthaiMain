@@ -1,6 +1,14 @@
-import { veterans, type Veteran, type InsertVeteran, users, type User, type InsertUser, waitlist, type Waitlist, type InsertWaitlist, resourceUsage, type ResourceUsage, type InsertResourceUsage, stateResourceUsage, type StateResourceUsage, type InsertStateResourceUsage, navUsage, type NavUsage, type InsertNavUsage } from "@shared/schema";
+import { 
+  veterans, type Veteran, type InsertVeteran, 
+  users, type User, type InsertUser, 
+  waitlist, type Waitlist, type InsertWaitlist, 
+  resourceUsage, type ResourceUsage, type InsertResourceUsage, 
+  stateResourceUsage, type StateResourceUsage, type InsertStateResourceUsage, 
+  navUsage, type NavUsage, type InsertNavUsage,
+  securityLogs, type SecurityLog, type InsertSecurityLog
+} from "@shared/schema";
 import { db } from "./db";
-import { eq, sql } from "drizzle-orm";
+import { eq, sql, desc, and, or, like } from "drizzle-orm";
 
 // Interface for storage operations
 export interface IStorage {
@@ -39,6 +47,19 @@ export interface IStorage {
   getStateClicksAnalytics(): Promise<{ state: string; count: number }[]>;
   getCountryClicksAnalytics(): Promise<{ country: string; count: number }[]>;
   getRegionTypeComparison(): Promise<{ regionType: string; count: number }[]>;
+  
+  // Security Logging operations
+  logSecurityEvent(data: InsertSecurityLog): Promise<SecurityLog>;
+  getSecurityEventsByIP(ip: string): Promise<SecurityLog[]>;
+  getRecentSecurityEvents(limit?: number): Promise<SecurityLog[]>;
+  getHighSeverityEvents(daysBack?: number): Promise<SecurityLog[]>;
+  getSecurityEventsForSession(sessionId: string): Promise<SecurityLog[]>;
+  getSecurityEventsByCountry(countryCode: string): Promise<SecurityLog[]>;
+  getEventsByType(eventType: string): Promise<SecurityLog[]>;
+  getUnresolvedEvents(): Promise<SecurityLog[]>;
+  resolveSecurityEvent(id: number, resolvedBy: number, notes?: string): Promise<SecurityLog | undefined>;
+  getSecurityEventsStats(): Promise<{ eventType: string; count: number }[]>;
+  getTrendingIPs(limit?: number): Promise<{ ipAddress: string; count: number; lastSeen: Date }[]>;
 }
 
 export class DatabaseStorage implements IStorage {
@@ -246,6 +267,125 @@ export class DatabaseStorage implements IStorage {
       .where(eq(navUsage.navType, 'toggle'))
       .groupBy(navUsage.value)
       .orderBy(sql`count(*) desc`);
+    
+    return result;
+  }
+  
+  // Security Logging operations
+  async logSecurityEvent(data: InsertSecurityLog): Promise<SecurityLog> {
+    const [log] = await db
+      .insert(securityLogs)
+      .values(data)
+      .returning();
+    return log;
+  }
+
+  async getSecurityEventsByIP(ip: string): Promise<SecurityLog[]> {
+    return await db
+      .select()
+      .from(securityLogs)
+      .where(eq(securityLogs.ipAddress, ip))
+      .orderBy(desc(securityLogs.timestamp));
+  }
+
+  async getRecentSecurityEvents(limit: number = 100): Promise<SecurityLog[]> {
+    return await db
+      .select()
+      .from(securityLogs)
+      .orderBy(desc(securityLogs.timestamp))
+      .limit(limit);
+  }
+
+  async getHighSeverityEvents(daysBack: number = 7): Promise<SecurityLog[]> {
+    const dateThreshold = new Date();
+    dateThreshold.setDate(dateThreshold.getDate() - daysBack);
+    
+    return await db
+      .select()
+      .from(securityLogs)
+      .where(
+        and(
+          or(
+            eq(securityLogs.severity, 'HIGH'),
+            eq(securityLogs.severity, 'CRITICAL')
+          ),
+          sql`${securityLogs.timestamp} > ${dateThreshold}`
+        )
+      )
+      .orderBy(desc(securityLogs.timestamp));
+  }
+
+  async getSecurityEventsForSession(sessionId: string): Promise<SecurityLog[]> {
+    return await db
+      .select()
+      .from(securityLogs)
+      .where(eq(securityLogs.sessionId, sessionId))
+      .orderBy(desc(securityLogs.timestamp));
+  }
+
+  async getSecurityEventsByCountry(countryCode: string): Promise<SecurityLog[]> {
+    return await db
+      .select()
+      .from(securityLogs)
+      .where(eq(securityLogs.countryCode, countryCode))
+      .orderBy(desc(securityLogs.timestamp));
+  }
+
+  async getEventsByType(eventType: string): Promise<SecurityLog[]> {
+    return await db
+      .select()
+      .from(securityLogs)
+      .where(eq(securityLogs.eventType, eventType))
+      .orderBy(desc(securityLogs.timestamp));
+  }
+
+  async getUnresolvedEvents(): Promise<SecurityLog[]> {
+    return await db
+      .select()
+      .from(securityLogs)
+      .where(eq(securityLogs.resolved, false))
+      .orderBy(desc(securityLogs.timestamp));
+  }
+
+  async resolveSecurityEvent(id: number, resolvedBy: number, notes?: string): Promise<SecurityLog | undefined> {
+    const [event] = await db
+      .update(securityLogs)
+      .set({ 
+        resolved: true,
+        resolvedBy,
+        resolvedAt: new Date(),
+        notes: notes || null
+      })
+      .where(eq(securityLogs.id, id))
+      .returning();
+    
+    return event || undefined;
+  }
+
+  async getSecurityEventsStats(): Promise<{ eventType: string; count: number }[]> {
+    const result = await db
+      .select({
+        eventType: securityLogs.eventType,
+        count: sql<number>`count(*)`,
+      })
+      .from(securityLogs)
+      .groupBy(securityLogs.eventType)
+      .orderBy(sql`count(*) desc`);
+    
+    return result;
+  }
+
+  async getTrendingIPs(limit: number = 10): Promise<{ ipAddress: string; count: number; lastSeen: Date }[]> {
+    const result = await db
+      .select({
+        ipAddress: securityLogs.ipAddress,
+        count: sql<number>`count(*)`,
+        lastSeen: sql<Date>`max(${securityLogs.timestamp})`,
+      })
+      .from(securityLogs)
+      .groupBy(securityLogs.ipAddress)
+      .orderBy(sql`count(*) desc`)
+      .limit(limit);
     
     return result;
   }

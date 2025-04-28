@@ -1,4 +1,4 @@
-import { pgTable, text, serial, integer, boolean, timestamp, json } from "drizzle-orm/pg-core";
+import { pgTable, text, serial, integer, boolean, timestamp, json, varchar } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 
@@ -173,3 +173,38 @@ export const insertNavUsageSchema = createInsertSchema(navUsage).omit({
 
 export type InsertNavUsage = z.infer<typeof insertNavUsageSchema>;
 export type NavUsage = typeof navUsage.$inferSelect;
+
+// Security logs for tracking suspicious activities
+export const securityLogs = pgTable("security_logs", {
+  id: serial("id").primaryKey(),
+  timestamp: timestamp("timestamp").defaultNow().notNull(),
+  eventType: varchar("event_type", { length: 50 }).notNull(), // 'RATE_LIMIT_EXCEEDED', 'SUSPICIOUS_BOT', etc.
+  severity: varchar("severity", { length: 20 }).notNull(), // 'LOW', 'MEDIUM', 'HIGH', 'CRITICAL'
+  ipAddress: varchar("ip_address", { length: 50 }).notNull(), // Store full IP for security investigation
+  userAgent: text("user_agent"), // Store complete user agent
+  url: text("url"), // The URL that was accessed
+  message: text("message"), // Description of the event
+  metadata: json("metadata"), // Additional structured data about the event
+  countryCode: varchar("country_code", { length: 2 }), // Country code if available
+  isTor: boolean("is_tor").default(false), // Flag for Tor exit nodes
+  isProxy: boolean("is_proxy").default(false), // Flag for proxy/VPN
+  ipReputation: integer("ip_reputation"), // Reputation score (0-100, lower is worse)
+  userId: integer("user_id"), // Link to user if authenticated
+  sessionId: varchar("session_id", { length: 255 }), // Track session for correlating events
+  resolved: boolean("resolved").default(false), // Whether this security event was reviewed/resolved
+  resolvedBy: integer("resolved_by"), // Which admin resolved it
+  resolvedAt: timestamp("resolved_at"), // When it was resolved
+  notes: text("notes"), // Admin notes on resolution
+  createdAt: timestamp("created_at").defaultNow().notNull()
+});
+
+export const insertSecurityLogSchema = createInsertSchema(securityLogs).omit({
+  id: true,
+  resolved: true,
+  resolvedBy: true,
+  resolvedAt: true,
+  createdAt: true
+});
+
+export type InsertSecurityLog = z.infer<typeof insertSecurityLogSchema>;
+export type SecurityLog = typeof securityLogs.$inferSelect;

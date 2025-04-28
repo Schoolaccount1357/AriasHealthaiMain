@@ -8,6 +8,7 @@ import { createRollingFileLogger } from '../utils/logger';
 import { Reader } from '@maxmind/geoip2-node';
 import { IPReputationClient } from 'ip-reputation-js-client';
 import ExpressBrute from 'express-brute';
+import { storage } from '../storage';
 
 // Initialize our security metrics and loggers
 const securityLogDir = path.join(process.cwd(), 'logs');
@@ -104,9 +105,9 @@ export const simpleRateLimit = rateLimit({
   max: 100, // Max 100 requests per minute per IP
   standardHeaders: true,
   legacyHeaders: false,
-  handler: (req, res) => {
+  handler: async (req, res) => {
     const ip = getClientIp(req) || 'unknown';
-    logSecurityEvent(req, 'RATE_LIMIT_EXCEEDED', `Rate limit exceeded for IP: ${ip}`);
+    await logSecurityEvent(req, 'RATE_LIMIT_EXCEEDED', `Rate limit exceeded for IP: ${ip}`);
     res.status(429).json({
       error: 'Too many requests, please try again later.'
     });
@@ -121,9 +122,9 @@ export const speedLimiter = slowDown({
   windowMs: 5 * 60 * 1000, // 5 minutes
   delayAfter: 50, // slow down after 50 requests in window
   delayMs: (hits) => hits * 50, // add 50ms per hit over threshold
-  onLimitReached: (req, res, options) => {
+  onLimitReached: async (req, res, options) => {
     const ip = getClientIp(req) || 'unknown';
-    logSecurityEvent(req, 'SPEED_LIMIT', `Speed limit reached for IP: ${ip}, hits: ${options.delayAfter}`);
+    await logSecurityEvent(req, 'SPEED_LIMIT', `Speed limit reached for IP: ${ip}, hits: ${options.delayAfter}`);
   }
 });
 
@@ -505,18 +506,69 @@ export function formProtection(route = 'default') {
 // Helper Functions
 
 /**
- * Log a security event to the security log
+ * Log a security event to the security log and database
  */
-function logSecurityEvent(req: Request, eventType: string, message: string) {
+async function logSecurityEvent(req: Request, eventType: string, message: string) {
+  const ip = getClientIp(req) || 'unknown';
+  const userAgent = req.headers['user-agent'] || 'unknown';
+  const url = req.originalUrl || req.url;
+  const sessionId = req.session?.id || 'no-session';
+  const countryCode = (req.headers['cf-ipcountry'] as string) || null;
+  
+  // Determine severity based on event type
+  let severity = 'LOW';
+  if (eventType.includes('HIGH_RISK') || 
+      eventType === 'BAD_REPUTATION_IP' || 
+      eventType === 'RATE_LIMIT_EXCEEDED') {
+    severity = 'HIGH';
+  } else if (eventType.includes('MEDIUM_RISK') || 
+            eventType === 'SUSPICIOUS_BOT' || 
+            eventType === 'MULTIPLE_USER_AGENTS') {
+    severity = 'MEDIUM';  
+  } else if (eventType === 'GEO_ANOMALY') {
+    severity = 'CRITICAL';
+  }
+  
+  // Calculate IP reputation score
+  const score = getDetectionScore(ip);
+  
+  // First, log to file
   securityLogger.warn({
     type: eventType,
     timestamp: new Date().toISOString(),
-    ip: getClientIp(req) || 'unknown',
-    userAgent: req.headers['user-agent'] || 'unknown',
-    url: req.originalUrl || req.url,
+    ip,
+    userAgent,
+    url,
     message,
-    sessionId: req.session?.id || 'no-session'
+    sessionId,
+    severity
   });
+
+  // Then, store in database
+  try {
+    await storage.logSecurityEvent({
+      eventType,
+      severity,
+      ipAddress: ip,
+      userAgent,
+      url,
+      message,
+      metadata: { 
+        headers: req.headers,
+        path: req.path,
+        method: req.method
+      },
+      countryCode,
+      isTor: false, // Would require lookup
+      isProxy: false, // Would require lookup
+      ipReputation: score,
+      sessionId,
+      timestamp: new Date()
+    });
+  } catch (error) {
+    console.error('Failed to store security event in database:', error);
+    // Continue execution even if DB logging fails
+  }
 }
 
 /**
@@ -565,7 +617,7 @@ function increaseDetectionScore(ip: string, reason: string, amount: number) {
 /**
  * Check for geographic anomalies in traffic
  */
-function checkForGeoAnomalies(country: string, hourKey: string) {
+async function checkForGeoAnomalies(country: string, hourKey: string) {
   const countryMap = geoStore.get(country);
   if (!countryMap) return;
   
@@ -588,17 +640,48 @@ function checkForGeoAnomalies(country: string, hourKey: string) {
     
     // If current traffic is 300% above average, that's unusual
     if (currentHourCount > avgPrevious * 3 && currentHourCount > 50) {
+      // Calculate percentage increase
+      const percentIncrease = ((currentHourCount / avgPrevious) * 100).toFixed(1) + '%';
+      
       // Log the anomaly
       console.warn(`Traffic anomaly detected for country ${country}: Current: ${currentHourCount}, Avg: ${avgPrevious.toFixed(2)}`);
       
+      // Log to file
       securityLogger.warn({
         type: 'GEO_TRAFFIC_ANOMALY',
         timestamp: new Date().toISOString(),
         country,
         currentHourCount,
         averagePreviousCount: avgPrevious,
-        percentIncrease: ((currentHourCount / avgPrevious) * 100).toFixed(1) + '%'
+        percentIncrease
       });
+      
+      // Log to database
+      try {
+        await storage.logSecurityEvent({
+          eventType: 'GEO_ANOMALY',
+          severity: 'CRITICAL',
+          ipAddress: 'multiple', // This is a pattern, not a single IP
+          userAgent: 'system',
+          url: 'n/a',
+          message: `Unusual traffic spike from ${country}: ${currentHourCount} requests (${percentIncrease} above normal)`,
+          metadata: { 
+            country,
+            currentHourCount,
+            averagePrevious: avgPrevious,
+            percentIncrease,
+            hourKey
+          },
+          countryCode: country,
+          isTor: false,
+          isProxy: false,
+          ipReputation: 50, // Neutral score
+          sessionId: 'system',
+          timestamp: new Date()
+        });
+      } catch (error) {
+        console.error('Failed to store geo anomaly in database:', error);
+      }
     }
   }
 }
