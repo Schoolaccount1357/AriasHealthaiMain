@@ -1355,12 +1355,92 @@ export default function ResourceLocator() {
     "Georgia": {
       resources: [
         {
-          name: "Atlanta VA Health Care System",
-          description: "VA healthcare services in Georgia",
+          name: "Atlanta VA Medical Center",
+          description: "Comprehensive care including primary, specialty, and mental health services",
           address: "1670 Clairmont Road, Decatur, GA 30033",
           phone: "(404) 321-6111",
-          website: "https://www.atlanta.va.gov/",
+          website: "https://www.va.gov/atlanta-health-care/",
           category: "VA"
+        },
+        {
+          name: "Charlie Norwood VA Medical Center",
+          description: "Wide range of health, support, and facility services for Veterans in northeast Georgia and western South Carolina",
+          address: "950 15th Street, Augusta, GA 30904",
+          phone: "(706) 733-0188",
+          website: "https://www.va.gov/augusta-health-care/",
+          category: "VA"
+        },
+        {
+          name: "Carl Vinson VA Medical Center",
+          description: "Health, support, and facility services for Veterans in central and southern Georgia",
+          address: "1826 Veterans Blvd, Dublin, GA 31021",
+          phone: "(478) 272-1210",
+          website: "https://www.va.gov/dublin-health-care/",
+          category: "VA"
+        },
+        {
+          name: "Albany VA Clinic",
+          description: "Primary care, mental health services, and specialty care for veterans",
+          address: "526 West Broad Avenue, Albany, GA 31701",
+          phone: "(229) 446-9000",
+          website: "https://www.va.gov/dublin-health-care/locations/albany-va-clinic/",
+          category: "VA"
+        },
+        {
+          name: "Athens VA Clinic",
+          description: "Primary care, mental health services, and specialty care for veterans",
+          address: "9249 Highway 29 N, Athens, GA 30601",
+          phone: "(706) 227-4534",
+          website: "https://www.va.gov/atlanta-health-care/locations/athens-va-clinic/",
+          category: "VA"
+        },
+        {
+          name: "Brunswick VA Clinic",
+          description: "Primary care, mental health services, and specialty care for veterans",
+          address: "1111 Glynco Parkway, Brunswick, GA 31525",
+          phone: "(912) 261-2355",
+          website: "https://www.va.gov/charleston-health-care/locations/brunswick-va-clinic/",
+          category: "VA"
+        },
+        {
+          name: "Atlanta Vet Center",
+          description: "Readjustment counseling and outreach services to Veterans and their families",
+          address: "1440 Dutch Valley Place, Suite 1100, Atlanta, GA 30324",
+          phone: "(404) 347-7264",
+          website: "https://www.va.gov/find-locations/facility/vc_0221V",
+          category: "Treatment"
+        },
+        {
+          name: "Augusta Vet Center",
+          description: "Readjustment counseling and outreach services to Veterans and their families",
+          address: "2050 Walton Way, Suite 100, Augusta, GA 30904",
+          phone: "(706) 729-5762",
+          website: "https://www.va.gov/find-locations/facility/vc_0204V",
+          category: "Treatment"
+        },
+        {
+          name: "Columbus Vet Center",
+          description: "Readjustment counseling and outreach services to Veterans and their families",
+          address: "1824 Victory Drive, Columbus, GA 31901",
+          phone: "(706) 257-7308",
+          website: "https://www.va.gov/find-locations/facility/vc_0203V",
+          category: "Treatment"
+        },
+        {
+          name: "Georgia War Veterans Nursing Home",
+          description: "Skilled nursing care facility managed by the Georgia Department of Veterans Service",
+          address: "1101 15th Street, Augusta, GA 30901",
+          phone: "(706) 721-2531",
+          website: "https://veterans.georgia.gov/georgia-war-veterans-nursing-homes",
+          category: "Housing"
+        },
+        {
+          name: "Georgia Department of Veterans Service",
+          description: "Assists veterans with claims, benefits, and other services through numerous field offices across Georgia",
+          address: "Floyd Veterans Memorial Building, 2 M.L.K. Jr. Drive SE, Atlanta, GA 30334",
+          phone: "(404) 656-2300",
+          website: "https://veterans.georgia.gov/",
+          category: "Employment"
         }
       ]
     },
@@ -1648,11 +1728,123 @@ export default function ResourceLocator() {
       resources: [
         {
           name: "Jesse Brown VA Medical Center",
-          description: "VA healthcare services in Illinois",
+          description: "Comprehensive care including primary, specialty, and mental health services",
           address: "820 South Damen Avenue, Chicago, IL 60612",
           phone: "(312) 569-8387",
-          website: "https://www.chicago.va.gov/",
+          website: "https://www.va.gov/chicago-health-care/",
           category: "VA"
+        },
+        {
+          name: "Edward Hines Jr. VA Hospital",
+          description: "Primary, extended, and specialty care to Veteran patients in the Chicago area",
+          address: "5000 South 5th Avenue, Hines, IL 60141",
+          phone: "(708) 202-8387",
+          website: "https://www.va.gov/hines-health-care/",
+          category: "VA"
+        },
+        {
+          name: "VA Illiana Health Care System",
+          description: "Health, support, and facility services for Veterans at multiple locations serving a 30-county area",
+          address: "1900 East Main Street, Danville, IL 61832",
+          phone: "(217) 554-3000",
+          website: "https://www.va.gov/illiana-health-care/",
+          category: "VA"
+        },
+        {
+          name: "Captain James A. Lovell Federal Health Care Center",
+          description: "Fully integrated federal health care facility serving both Veterans and active-duty service members",
+          address: "3001 Green Bay Road, North Chicago, IL 60064",
+          phone: "(847) 688-1900",
+          website: "https://www.va.gov/lovell-fhcc-health-care/",
+          category: "VA"
+        },
+        {
+          name: "Aurora VA Clinic",
+          description: "Community-Based Outpatient Clinic offering primary care and mental health services",
+          address: "161 S. Lincolnway, Suite 200, North Aurora, IL 60542",
+          phone: "(630) 859-2504",
+          website: "https://www.va.gov/hines-health-care/locations/aurora-va-clinic/",
+          category: "VA"
+        },
+        {
+          name: "Bloomington VA Clinic",
+          description: "Community-Based Outpatient Clinic offering primary care and mental health services",
+          address: "207 Hamilton Road, Bloomington, IL 61704",
+          phone: "(309) 663-6574",
+          website: "https://www.va.gov/illiana-health-care/locations/bloomington-va-clinic/",
+          category: "VA"
+        },
+        {
+          name: "Carbondale VA Clinic",
+          description: "Community-Based Outpatient Clinic offering primary care and mental health services",
+          address: "1130 East Walnut Street, Carbondale, IL 62901",
+          phone: "(618) 351-1031",
+          website: "https://www.va.gov/marion-health-care/locations/carbondale-va-clinic/",
+          category: "VA"
+        },
+        {
+          name: "Chicago Heights Vet Center",
+          description: "Readjustment counseling and outreach services to Veterans and their families",
+          address: "1600 S. Halsted Street, Chicago Heights, IL 60411",
+          phone: "(708) 754-0340",
+          website: "https://www.va.gov/find-locations/facility/vc_0227V",
+          category: "Treatment"
+        },
+        {
+          name: "Evanston Vet Center",
+          description: "Readjustment counseling and outreach services to Veterans and their families",
+          address: "1901 Howard Street, Evanston, IL 60202",
+          phone: "(847) 332-1019",
+          website: "https://www.va.gov/find-locations/facility/vc_0215V",
+          category: "Treatment"
+        },
+        {
+          name: "Oak Park Vet Center",
+          description: "Readjustment counseling and outreach services to Veterans and their families",
+          address: "155 S. Oak Park Avenue, Oak Park, IL 60302",
+          phone: "(708) 383-3225",
+          website: "https://www.va.gov/find-locations/facility/vc_0223V",
+          category: "Treatment"
+        },
+        {
+          name: "Illinois Veterans' Home at Anna",
+          description: "Long-term skilled nursing care for Illinois veterans",
+          address: "792 North Main Street, Anna, IL 62906",
+          phone: "(618) 833-6302",
+          website: "https://www2.illinois.gov/veterans/facilities/Pages/anna.aspx",
+          category: "Housing"
+        },
+        {
+          name: "Illinois Veterans' Home at LaSalle",
+          description: "Long-term skilled nursing care for Illinois veterans",
+          address: "1015 O'Conor Avenue, LaSalle, IL 61301",
+          phone: "(815) 223-0303",
+          website: "https://www2.illinois.gov/veterans/facilities/Pages/lasalle.aspx",
+          category: "Housing"
+        },
+        {
+          name: "Illinois Veterans' Home at Manteno",
+          description: "Long-term skilled nursing care for Illinois veterans",
+          address: "1 Veterans Drive, Manteno, IL 60950",
+          phone: "(815) 468-6581",
+          website: "https://www2.illinois.gov/veterans/facilities/Pages/manteno.aspx",
+          category: "Housing"
+        },
+        {
+          name: "Illinois Veterans' Home at Quincy",
+          description: "Long-term skilled nursing care for Illinois veterans",
+          address: "1707 North 12th Street, Quincy, IL 62301",
+          phone: "(217) 222-8641",
+          website: "https://www2.illinois.gov/veterans/facilities/Pages/quincy.aspx",
+          category: "Housing"
+        },
+        {
+          name: "Illinois Department of Veterans' Affairs",
+          description: "Assists Veterans and their families in navigating federal, state, and local resources and benefits",
+          address: "833 South Spring Street, Springfield, IL 62704",
+          phone: "(217) 782-6641",
+          website: "https://www2.illinois.gov/veterans/",
+          category: "Employment"
         }
       ]
     },
