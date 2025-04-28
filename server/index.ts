@@ -2,6 +2,7 @@ import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
 import helmet from "helmet";
+import { additionalSecurityHeaders, simpleRateLimit, sanitizeInputs } from './middleware/security';
 
 const app = express();
 app.use(express.json());
@@ -16,10 +17,25 @@ app.use(helmet({
       styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
       fontSrc: ["'self'", "https://fonts.gstatic.com"],
       imgSrc: ["'self'", "data:", "https://*"],
-      connectSrc: ["'self'", "https://*"],
+      connectSrc: ["'self'", "https://*", "wss://*", "ws://*"],
+      mediaSrc: ["'self'", "blob:"],
+      frameSrc: ["'self'"],
     },
   },
+  // Set cross-origin options
+  crossOriginEmbedderPolicy: false,
+  crossOriginOpenerPolicy: { policy: "same-origin-allow-popups" },
+  crossOriginResourcePolicy: { policy: "cross-origin" },
 }));
+
+// Add additional security headers
+app.use(additionalSecurityHeaders);
+
+// Apply rate limiting to API endpoints
+app.use('/api', simpleRateLimit);
+
+// Apply input sanitization to all routes
+app.use(sanitizeInputs);
 
 // HTTPS enforcement in production
 app.use((req, res, next) => {
