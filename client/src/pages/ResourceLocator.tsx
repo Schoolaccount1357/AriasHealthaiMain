@@ -3327,11 +3327,11 @@ export default function ResourceLocator() {
           category: "Housing"
         },
         {
-          name: "SAMMinistries - Veterans' Housing Stability Program",
-          description: "Provides rental assistance, case management, and financial literacy education with a focus on homeless prevention and rapid re-housing",
-          address: "1919 NW Loop 410, Suite 100, San Antonio, TX 78213",
-          phone: "(210) 340-0302",
-          website: "https://www.samm.org/housing/",
+          name: "SAMMinistries",
+          description: "SAM Ministries (Serving Area Missions) is a Christian organization focused on humanitarian aid, development projects, and supporting communities",
+          address: "PO Box 31871, Bellingham, WA 98228",
+          phone: "",
+          website: "https://samministries.org",
           category: "Housing"
         },
         {
