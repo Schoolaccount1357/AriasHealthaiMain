@@ -302,6 +302,55 @@ export async function registerRoutes(app: Express): Promise<Server> {
       });
     }
   });
+  
+  // API endpoint for getting state click analytics
+  app.get("/api/analytics/state-clicks", async (_req: Request, res: Response) => {
+    try {
+      const stats = await storage.getStateClicksAnalytics();
+      console.log("State click analytics:", stats);
+      return res.status(200).json({
+        message: "State click analytics retrieved successfully",
+        data: stats
+      });
+    } catch (error) {
+      console.error("Error getting state click analytics:", error);
+      return res.status(500).json({
+        message: "An error occurred while retrieving state click analytics"
+      });
+    }
+  });
+  
+  // API endpoint for getting country click analytics
+  app.get("/api/analytics/country-clicks", async (_req: Request, res: Response) => {
+    try {
+      const stats = await storage.getCountryClicksAnalytics();
+      return res.status(200).json({
+        message: "Country click analytics retrieved successfully",
+        data: stats
+      });
+    } catch (error) {
+      console.error("Error getting country click analytics:", error);
+      return res.status(500).json({
+        message: "An error occurred while retrieving country click analytics"
+      });
+    }
+  });
+  
+  // API endpoint for getting US vs International toggle comparison
+  app.get("/api/analytics/region-comparison", async (_req: Request, res: Response) => {
+    try {
+      const stats = await storage.getRegionTypeComparison();
+      return res.status(200).json({
+        message: "Region type comparison retrieved successfully",
+        data: stats
+      });
+    } catch (error) {
+      console.error("Error getting region type comparison:", error);
+      return res.status(500).json({
+        message: "An error occurred while retrieving region type comparison"
+      });
+    }
+  });
 
   const httpServer = createServer(app);
   

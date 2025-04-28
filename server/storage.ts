@@ -36,6 +36,9 @@ export interface IStorage {
   logNavUsage(data: InsertNavUsage): Promise<NavUsage>;
   getNavUsageStats(): Promise<{ navType: string; count: number }[]>;
   getNavUsageByType(navType: string): Promise<NavUsage[]>;
+  getStateClicksAnalytics(): Promise<{ state: string; count: number }[]>;
+  getCountryClicksAnalytics(): Promise<{ country: string; count: number }[]>;
+  getRegionTypeComparison(): Promise<{ regionType: string; count: number }[]>;
 }
 
 export class DatabaseStorage implements IStorage {
@@ -200,6 +203,51 @@ export class DatabaseStorage implements IStorage {
       .select()
       .from(navUsage)
       .where(eq(navUsage.navType, navType));
+  }
+  
+  // Analytics for state clicks
+  async getStateClicksAnalytics(): Promise<{ state: string; count: number }[]> {
+    const result = await db
+      .select({
+        state: navUsage.value,
+        count: sql<number>`count(*)`,
+      })
+      .from(navUsage)
+      .where(eq(navUsage.navType, 'state_select'))
+      .groupBy(navUsage.value)
+      .orderBy(sql`count(*) desc`);
+    
+    return result;
+  }
+  
+  // Analytics for country clicks
+  async getCountryClicksAnalytics(): Promise<{ country: string; count: number }[]> {
+    const result = await db
+      .select({
+        country: navUsage.value,
+        count: sql<number>`count(*)`,
+      })
+      .from(navUsage)
+      .where(eq(navUsage.navType, 'country_select'))
+      .groupBy(navUsage.value)
+      .orderBy(sql`count(*) desc`);
+    
+    return result;
+  }
+  
+  // Analytics for US vs International toggle comparison
+  async getRegionTypeComparison(): Promise<{ regionType: string; count: number }[]> {
+    const result = await db
+      .select({
+        regionType: navUsage.value,
+        count: sql<number>`count(*)`,
+      })
+      .from(navUsage)
+      .where(eq(navUsage.navType, 'toggle'))
+      .groupBy(navUsage.value)
+      .orderBy(sql`count(*) desc`);
+    
+    return result;
   }
 }
 
