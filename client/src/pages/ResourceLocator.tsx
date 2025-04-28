@@ -777,64 +777,88 @@ export default function ResourceLocator() {
     "Portugal": {
       resources: [
         {
-          name: "U.S. Veterans Support - Lisbon",
-          description: "FMP information and referrals",
-          address: "Avenida das Forças Armadas, Lisbon, Portugal",
+          name: "U.S. Embassy Lisbon",
+          description: "Provides assistance with information related to the Foreign Medical Program (FMP) and other consular services for U.S. veterans",
+          address: "Avenida das Forças Armadas 1600-081 Lisbon, Portugal",
           phone: "+351 21 727 3300",
-          website: "https://www.va.gov/health-care/foreign-medical-program/",
+          website: "https://pt.usembassy.gov/",
           category: "VA"
         },
         {
-          name: "American Veterans Services - Azores",
-          description: "Support services for veterans in the Azores",
-          address: "Lajes Field, Terceira Island, Azores, Portugal",
-          phone: "+351 295 57 1037",
-          website: "https://www.va.gov/health-care/foreign-medical-program/",
+          name: "Lajes Field - Terceira Island, Azores",
+          description: "U.S. military base with medical facilities and various support services potentially accessible to veterans",
+          address: "Lajes Field, Azores, Portugal",
+          phone: "+351 295 57 1115",
+          website: "https://www.facebook.com/LajesField/",
           category: "Treatment"
         },
         {
-          name: "Mental Health Center - Lisbon",
-          description: "English-speaking mental health services",
-          address: "Rua Castilho, Lisbon, Portugal",
-          phone: "+351 21 353 0475",
-          website: "https://www.lisbontherapy.com/",
-          category: "Crisis"
+          name: "U.S. Embassy Medical Referrals",
+          description: "Referrals to appropriate English-speaking medical and mental health services in Portugal",
+          address: "Avenida das Forças Armadas 1600-081 Lisbon, Portugal",
+          phone: "+351 21 727 3300",
+          website: "https://pt.usembassy.gov/u-s-citizen-services/",
+          category: "Treatment"
+        },
+        {
+          name: "Hospital da Luz",
+          description: "Major private hospital with English-speaking providers that may accept FMP reimbursement",
+          address: "Avenida Lusíada 100, 1500-650 Lisbon, Portugal",
+          phone: "+351 21 710 4400",
+          website: "https://www.hospitaldaluz.pt/en/",
+          category: "Treatment"
+        },
+        {
+          name: "Foreign Medical Program Support",
+          description: "Assistance with VA-rated, service-connected conditions for veterans residing in Portugal",
+          address: "PO Box 200, Spring City, PA 19475, USA",
+          phone: "Main: +1-833-930-0816",
+          website: "https://www.va.gov/health-care/foreign-medical-program/",
+          category: "VA"
         }
       ]
     },
     "Belgium": {
       resources: [
         {
-          name: "Veterans Support Office - Brussels",
-          description: "FMP assistance and NATO base connections",
-          address: "Boulevard du Régent, Brussels, Belgium",
+          name: "U.S. Embassy Brussels",
+          description: "Provides assistance with FMP-related inquiries and other consular services for veterans",
+          address: "Regentlaan 27 Boulevard du Régent, B-1000 Brussels, Belgium",
           phone: "+32 2 811 4000",
-          website: "https://www.va.gov/health-care/foreign-medical-program/",
+          website: "https://be.usembassy.gov/",
           category: "VA"
         },
         {
           name: "SHAPE Healthcare Facility",
-          description: "Medical services for eligible veterans",
-          address: "SHAPE, 7010 Mons, Belgium",
+          description: "Offers outpatient services including family practice, pediatrics, optometry, dental, and behavioral health",
+          address: "Building 401, Avenue d'Oslo, 7010 Mons, Belgium",
           phone: "+32 65 44 5824",
-          website: "https://tricare-overseas.com/",
+          website: "https://mhs-europe.tricare.mil/SHAPE",
           category: "Treatment"
         },
         {
-          name: "Veterans Crisis Support - Belgium",
-          description: "Crisis intervention for veterans",
+          name: "Community Help Service (CHS) - Brussels",
+          description: "Provides confidential, English-speaking mental health support and crisis intervention services",
           address: "Brussels, Belgium",
-          phone: "+32 2 648 4000",
-          website: "https://www.veteranscrisisline.net/get-help/european-support",
+          phone: "+32 2 648 40 14",
+          website: "https://www.chsbelgium.org/",
           category: "Crisis"
         },
         {
-          name: "NATO Veterans Employment Assistance",
-          description: "Employment opportunities through NATO connections",
-          address: "SHAPE, Mons, Belgium",
+          name: "NATO Employment Opportunities",
+          description: "Employment opportunities through NATO connections for veterans",
+          address: "SHAPE Human Resources Office, Mons, Belgium",
           phone: "+32 65 44 3333",
-          website: "https://www.natovetsjobs.com/",
+          website: "https://www.nato.int/careers",
           category: "Employment"
+        },
+        {
+          name: "Foreign Medical Program Support",
+          description: "Assistance with VA-rated, service-connected conditions for veterans residing in Belgium",
+          address: "PO Box 200, Spring City, PA 19475, USA",
+          phone: "Main: +1-833-930-0816 or Germany Toll-Free: 0800-1800-011",
+          website: "https://www.va.gov/health-care/foreign-medical-program/",
+          category: "VA"
         }
       ]
     },
