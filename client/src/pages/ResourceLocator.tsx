@@ -145,7 +145,7 @@ export default function ResourceLocator() {
           description: "Support for veterans in Japan",
           address: "Building 6002, Yokosuka Naval Base, Japan",
           phone: "+81 46 896 5801",
-          website: "https://www.vfw1054.org/",
+          website: "https://vfwpacific.org/di/vfw/v2/default.asp",
           category: "Housing"
         },
         {
@@ -313,7 +313,7 @@ export default function ResourceLocator() {
           description: "Support services for veterans in Thailand",
           address: "Sukhumvit Road, Bangkok, Thailand",
           phone: "+66 2 254 0717",
-          website: "https://www.veterans.gov/fmp",
+          website: "https://www.va.gov/health-care/foreign-medical-program/",
           category: "VA"
         },
         {
@@ -357,7 +357,7 @@ export default function ResourceLocator() {
           description: "Informal support network for veterans in Vietnam",
           address: "5 Nguyen Sieu Street, Hoan Kiem District, Hanoi, Vietnam",
           phone: "+84 24 3935 2400",
-          website: "https://www.veterans.gov/fmp",
+          website: "https://www.va.gov/health-care/foreign-medical-program/",
           category: "Crisis"
         },
         {
@@ -377,7 +377,7 @@ export default function ResourceLocator() {
           description: "Assistance with FMP claims and medical referrals",
           address: "Martin Place, Sydney, NSW 2000, Australia",
           phone: "+61 2 9373 9200",
-          website: "https://www.veterans.gov/fmp",
+          website: "https://www.va.gov/health-care/foreign-medical-program/",
           category: "VA"
         },
         {
@@ -413,7 +413,7 @@ export default function ResourceLocator() {
           description: "FMP claims assistance and medical referrals",
           address: "Queen Street, Auckland, New Zealand",
           phone: "+64 9 379 9779",
-          website: "https://www.veterans.gov/fmp",
+          website: "https://www.va.gov/health-care/foreign-medical-program/",
           category: "VA"
         },
         {
@@ -441,7 +441,7 @@ export default function ResourceLocator() {
           description: "FMP claims assistance and referrals",
           address: "2 Avenue Gabriel, 75008 Paris, France",
           phone: "+33 1 43 12 22 22",
-          website: "https://www.veterans.gov/fmp",
+          website: "https://www.va.gov/health-care/foreign-medical-program/",
           category: "VA"
         },
         {
@@ -477,7 +477,7 @@ export default function ResourceLocator() {
           description: "FMP information and referrals",
           address: "Avenida das Forças Armadas, Lisbon, Portugal",
           phone: "+351 21 727 3300",
-          website: "https://www.veterans.gov/fmp",
+          website: "https://www.va.gov/health-care/foreign-medical-program/",
           category: "VA"
         },
         {
@@ -485,7 +485,7 @@ export default function ResourceLocator() {
           description: "Support services for veterans in the Azores",
           address: "Lajes Field, Terceira Island, Azores, Portugal",
           phone: "+351 295 57 1037",
-          website: "https://www.veterans.gov/fmp",
+          website: "https://www.va.gov/health-care/foreign-medical-program/",
           category: "Treatment"
         },
         {
@@ -505,7 +505,7 @@ export default function ResourceLocator() {
           description: "FMP assistance and NATO base connections",
           address: "Boulevard du Régent, Brussels, Belgium",
           phone: "+32 2 811 4000",
-          website: "https://www.veterans.gov/fmp",
+          website: "https://www.va.gov/health-care/foreign-medical-program/",
           category: "VA"
         },
         {
