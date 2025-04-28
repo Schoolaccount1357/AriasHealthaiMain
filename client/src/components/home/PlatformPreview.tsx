@@ -35,10 +35,10 @@ export function PlatformPreview() {
 
   return (
     <section className="mb-12 mt-6">
-      <h2 className="text-3xl font-bold mb-8 text-center text-gradient">A Global Wellness and Resilience Platform</h2>
+      <h2 className="text-3xl font-bold mb-8 text-center text-gradient">Mental Health, Reimagined for Veterans</h2>
       
       <p className="mb-8 text-lg text-center max-w-4xl mx-auto">
-        AriasHealth.ai leverages cutting-edge artificial intelligence to create a personalized wellness experience for people facing major life transitions. Our platform provides peer-to-peer connection with those who truly understand your journey.
+        AriasHealth.ai leverages cutting-edge artificial intelligence to create a personalized mental health experience built specifically for veterans. Our platform provides peer-to-peer connection with those who truly understand your experiences.
       </p>
       
       <h3 className="text-xl font-semibold mb-4">Platform Features</h3>
@@ -77,7 +77,7 @@ export function PlatformPreview() {
             </div>
           </div>
           <p className="text-foreground">
-            Our proprietary matching algorithm connects you with peers who share similar life experiences and wellness journeys, creating meaningful connections.
+            Our proprietary matching algorithm connects you with peers who share similar military experiences and mental health journeys, creating meaningful connections.
           </p>
         </div>
         
@@ -85,7 +85,7 @@ export function PlatformPreview() {
         <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
           <h3 className="font-semibold text-lg mb-4 flex items-center">
             <Brain className="h-5 w-5 mr-2 text-primary" />
-            Personalized Wellness Support
+            Personalized Mental Health Support
           </h3>
           <div className="bg-muted rounded-lg p-4 border border-border mb-4">
             <div className="mb-4 border-b pb-3">
@@ -93,21 +93,21 @@ export function PlatformPreview() {
                 <UserCog className="h-4 w-4 mr-2 text-primary" />
                 Tailored Therapeutic Approach
               </h4>
-              <p className="text-sm text-muted-foreground">Our AI analyzes communication patterns to identify emotional states and recommend personalized coping strategies.</p>
+              <p className="text-sm text-muted-foreground">Our AI analyzes communication patterns to identify PTSD triggers and recommend personalized coping strategies for veterans.</p>
             </div>
             <div className="mb-4 border-b pb-3">
               <h4 className="font-medium mb-2 flex items-center">
                 <Users className="h-4 w-4 mr-2 text-primary" />
                 Secure Group Support Sessions
               </h4>
-              <p className="text-sm text-muted-foreground">Join moderated group sessions with others who understand your unique challenges and life experiences.</p>
+              <p className="text-sm text-muted-foreground">Join moderated group sessions with other veterans who understand your unique military experiences and post-service challenges.</p>
             </div>
             <div>
               <h4 className="font-medium mb-2 flex items-center">
                 <Shield className="h-4 w-4 mr-2 text-primary" />
                 Enhanced Privacy Controls
               </h4>
-              <p className="text-sm text-muted-foreground">Our platform is built with enterprise-grade security to ensure your wellness journey remains private and protected.</p>
+              <p className="text-sm text-muted-foreground">Our platform is built with military-grade security to ensure your mental health journey remains private and protected.</p>
             </div>
           </div>
           <p className="text-foreground">
