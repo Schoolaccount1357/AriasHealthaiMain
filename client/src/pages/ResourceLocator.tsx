@@ -58,6 +58,34 @@ export default function ResourceLocator() {
   
   // Sample international data with countries that have U.S. military veterans 
   const countryData: CountryData = {
+    "Philippines": {
+      resources: [
+        {
+          name: "Manila VA Outpatient Clinic",
+          description: "The only full VA clinic outside U.S. territories",
+          address: "PSC 501 BLDG 7, FPO AP 96515-1100, Manila, Philippines",
+          phone: "+63 (02) 8396-3616",
+          website: "https://www.va.gov/manila-philippines-health-care/",
+          category: "VA"
+        },
+        {
+          name: "Veterans Service Center - Manila",
+          description: "Benefits assistance and claims processing",
+          address: "1131 Roxas Blvd, Ermita, Manila, 1000 Metro Manila, Philippines",
+          phone: "+63 (02) 8550-3888",
+          website: "https://www.benefits.va.gov/manila/",
+          category: "VA"
+        },
+        {
+          name: "Philippine Crisis Support",
+          description: "Mental health support for veterans in the Philippines",
+          address: "U.S. Embassy, 1201 Roxas Blvd, Manila, Philippines",
+          phone: "+63 (02) 5301-2000",
+          website: "https://ph.usembassy.gov/u-s-citizen-services/",
+          category: "Crisis"
+        }
+      ]
+    },
     "Germany": {
       resources: [
         {
