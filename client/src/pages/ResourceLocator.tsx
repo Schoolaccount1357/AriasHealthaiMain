@@ -149,11 +149,11 @@ export default function ResourceLocator() {
           category: "Housing"
         },
         {
-          name: "American Counseling Center - Tokyo",
-          description: "Mental health services for veterans in Japan",
-          address: "4-20-3 Ebisu, Shibuya-ku, Tokyo, Japan",
-          phone: "+81 3 4550 1146",
-          website: "https://www.accjapan.org/",
+          name: "Meguro Counseling Center - Tokyo",
+          description: "Psychological counseling and medication guidance for veterans with PTSD, TBI, anxiety, depression",
+          address: "Meguro, Tokyo, Japan",
+          phone: "+81 3 5431 3096",
+          website: "https://megurocounseling.com/",
           category: "Treatment"
         },
         {
