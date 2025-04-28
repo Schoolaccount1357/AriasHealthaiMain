@@ -3315,7 +3315,7 @@ export default function ResourceLocator() {
           description: "Provides permanent supportive housing, homelessness prevention programs, and mental health services for veterans, including those with disabilities and female veterans",
           address: "6363 De Zavala Rd, San Antonio, TX 78249",
           phone: "(210) 431-6466",
-          website: "https://endeavors.org/programs/veteran-services/",
+          website: "https://endeavors.org/veteran-services/",
           category: "Housing"
         },
         {
