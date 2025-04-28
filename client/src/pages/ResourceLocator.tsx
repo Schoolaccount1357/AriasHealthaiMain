@@ -1245,6 +1245,110 @@ export default function ResourceLocator() {
           phone: "(813) 972-2000",
           website: "https://www.tampa.va.gov/",
           category: "VA"
+        },
+        {
+          name: "Bay Pines VA Healthcare System",
+          description: "Comprehensive healthcare services including primary care, mental health, and specialty care",
+          address: "10000 Bay Pines Blvd, Bay Pines, FL 33744",
+          phone: "(727) 398-6661",
+          website: "https://www.va.gov/bay-pines-health-care/",
+          category: "VA"
+        },
+        {
+          name: "Bruce W. Carter VA Medical Center",
+          description: "Full-service healthcare facility offering primary care, specialty services, and mental health",
+          address: "1201 NW 16th Street, Miami, FL 33125",
+          phone: "(305) 575-7000",
+          website: "https://www.va.gov/miami-health-care/",
+          category: "VA"
+        },
+        {
+          name: "Malcom Randall VA Medical Center",
+          description: "Comprehensive medical care including surgery, mental health, and specialty services",
+          address: "1601 SW Archer Road, Gainesville, FL 32608",
+          phone: "(352) 376-1611",
+          website: "https://www.northflorida.va.gov/locations/gainesville.asp",
+          category: "VA"
+        },
+        {
+          name: "Lake City VA Medical Center",
+          description: "Medical care for veterans including primary care, specialty care, and mental health services",
+          address: "619 South Marion Avenue, Lake City, FL 32025",
+          phone: "(386) 755-3016",
+          website: "https://www.northflorida.va.gov/locations/lakecity.asp",
+          category: "VA"
+        },
+        {
+          name: "Orlando VA Medical Center",
+          description: "State-of-the-art healthcare facility providing primary care, specialty services, and mental health",
+          address: "13800 Veterans Way, Orlando, FL 32827",
+          phone: "(407) 631-1000",
+          website: "https://www.orlando.va.gov/",
+          category: "VA"
+        },
+        {
+          name: "West Palm Beach VA Medical Center",
+          description: "Comprehensive healthcare services including primary care, specialty care, and mental health",
+          address: "7305 N. Military Trail, West Palm Beach, FL 33410",
+          phone: "(561) 422-8262",
+          website: "https://www.westpalmbeach.va.gov/",
+          category: "VA"
+        },
+        {
+          name: "Florida Veterans Support Line",
+          description: "24/7 confidential support and resource referrals from trained specialists, many of whom are veterans",
+          address: "Statewide service",
+          phone: "1-844-MyFLVet (1-844-693-5838)",
+          website: "https://www.myflfamilies.com/service-programs/mental-health/florida-veterans-support-line/",
+          category: "Crisis"
+        },
+        {
+          name: "Home Base Florida",
+          description: "Clinical care, wellness, and support for veterans and families dealing with PTSD and traumatic brain injury",
+          address: "3050 Horseshoe Drive N, Naples, FL 34104",
+          phone: "(239) 338-8389",
+          website: "https://homebase.org/florida/",
+          category: "Treatment"
+        },
+        {
+          name: "HUD-VASH Program Florida",
+          description: "Combines HUD housing vouchers with VA supportive services to assist homeless veterans",
+          address: "Multiple locations throughout Florida",
+          phone: "Contact local VA Medical Center",
+          website: "https://www.va.gov/homeless/hud-vash.asp",
+          category: "Housing"
+        },
+        {
+          name: "Volunteers of America Florida",
+          description: "Transitional housing and support services for veterans dealing with homelessness, mental health, and substance abuse",
+          address: "1771 N. Semoran Blvd, Suite A, Orlando, FL 32807",
+          phone: "(407) 273-6686",
+          website: "https://www.voaflorida.org/veterans/",
+          category: "Housing"
+        },
+        {
+          name: "Florida Department of Veterans' Affairs (FDVA)",
+          description: "State agency providing benefits assistance, employment services, and connecting veterans to resources",
+          address: "11351 Ulmerton Road, Suite 311, Largo, FL 33778",
+          phone: "(727) 518-3202",
+          website: "https://www.floridavets.org/",
+          category: "Employment"
+        },
+        {
+          name: "Wounded Warrior Project - Jacksonville",
+          description: "Programs for wounded veterans including employment assistance, mental health, and transition support",
+          address: "4899 Belfort Road, Suite 300, Jacksonville, FL 32256",
+          phone: "(904) 296-7350",
+          website: "https://www.woundedwarriorproject.org/",
+          category: "Employment"
+        },
+        {
+          name: "Clearwater Vet Center",
+          description: "Counseling services for combat veterans and families including PTSD treatment and bereavement counseling",
+          address: "29259 US Hwy 19 North, Clearwater, FL 33761",
+          phone: "(727) 549-3600",
+          website: "https://www.va.gov/find-locations/facility/vc_0525V",
+          category: "Treatment"
         }
       ]
     },
