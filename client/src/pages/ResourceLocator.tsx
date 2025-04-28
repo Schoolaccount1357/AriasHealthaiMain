@@ -3326,14 +3326,7 @@ export default function ResourceLocator() {
           website: "https://operationhomefront.org/",
           category: "Housing"
         },
-        {
-          name: "SAMMinistries",
-          description: "SAM Ministries (Serving Area Missions) is a Christian organization focused on humanitarian aid, development projects, and supporting communities",
-          address: "PO Box 31871, Bellingham, WA 98228",
-          phone: "",
-          website: "https://samministries.org",
-          category: "Housing"
-        },
+
         {
           name: "National Call Center for Homeless Veterans",
           description: "24/7 confidential support connecting veterans to VA services and community resources",
