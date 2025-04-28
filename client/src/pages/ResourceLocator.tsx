@@ -177,43 +177,43 @@ export default function ResourceLocator() {
     "South Korea": {
       resources: [
         {
-          name: "121st Combat Support Hospital",
-          description: "Medical support for veterans in South Korea",
-          address: "United States Army Garrison Yongsan, Seoul, South Korea",
-          phone: "+82 2 7913 6120",
-          website: "https://www.korea.amedd.army.mil/",
+          name: "Brian D. Allgood Army Community Hospital",
+          description: "Comprehensive medical care for active-duty, retirees, and families (formerly 121st Combat Support Hospital)",
+          address: "USAG Yongsan, Seoul, South Korea",
+          phone: "+82 2 7917 3155",
+          website: "https://briandallgood.tricare.mil/",
           category: "VA"
         },
         {
-          name: "Veterans of Foreign Wars - Post 10216",
-          description: "Support for veterans in South Korea",
-          address: "Building 5700, Camp Humphreys, Pyeongtaek, South Korea",
+          name: "Veterans of Foreign Wars - Post 10223",
+          description: "Support and assistance with VA claims for veterans near Camp Humphreys",
+          address: "Anjeong-ri, near Camp Humphreys, Pyeongtaek, South Korea",
           phone: "+82 31 691 9900",
-          website: "https://www.vfwkorea.org/",
+          website: "https://www.vfw10223.org/",
           category: "Housing"
         },
         {
-          name: "Army Substance Abuse Program - Korea",
-          description: "Substance abuse treatment for veterans",
-          address: "Building 572, USAG Yongsan, Seoul, South Korea",
+          name: "Army Substance Abuse Program (ASAP) - USAG Yongsan",
+          description: "Substance abuse prevention, counseling, and rehabilitation services",
+          address: "USAG Yongsan, Seoul, South Korea",
           phone: "+82 2 7913 3445",
-          website: "https://8tharmy.korea.army.mil/site/resources/asap.asp",
+          website: "https://crg.health.mil/",
           category: "Treatment"
         },
         {
-          name: "Military One Source - Korea",
-          description: "Employment and transition resources",
+          name: "Military OneSource - Camp Humphreys",
+          description: "Employment assistance, resume building, job search support, and career counseling",
           address: "USAG Camp Humphreys, Pyeongtaek, South Korea",
           phone: "+82 31 690 7311",
           website: "https://www.militaryonesource.mil/",
           category: "Employment"
         },
         {
-          name: "Crisis Response Team - USAG Korea",
-          description: "Crisis intervention services for veterans",
-          address: "Building 1105, USAG Camp Humphreys, Pyeongtaek, South Korea",
+          name: "Crisis Response Team - USAG Humphreys",
+          description: "Crisis intervention services and mental health emergency support",
+          address: "USAG Camp Humphreys, Pyeongtaek, South Korea",
           phone: "+82 31 869 5911",
-          website: "https://korea.army.mil/mental-health/",
+          website: "https://home.army.mil/humphreys/about/our-community/behavioral-health",
           category: "Crisis"
         }
       ]
