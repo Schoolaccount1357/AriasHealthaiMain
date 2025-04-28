@@ -62,25 +62,25 @@ export default function ResourceLocator() {
       resources: [
         {
           name: "Manila VA Outpatient Clinic",
-          description: "The only full VA clinic outside U.S. territories",
-          address: "PSC 501 BLDG 7, FPO AP 96515-1100, Manila, Philippines",
-          phone: "+63 (02) 8396-3616",
+          description: "The only full VA clinic outside U.S. territories - outpatient care for service-connected conditions",
+          address: "1501 Roxas Boulevard, NOX3 Seafront Compound, Pasay City, PH 01302",
+          phone: "+63 (2) 8550-3888",
           website: "https://www.va.gov/manila-philippines-health-care/",
           category: "VA"
         },
         {
           name: "Veterans Service Center - Manila",
-          description: "Benefits assistance and claims processing",
-          address: "1131 Roxas Blvd, Ermita, Manila, 1000 Metro Manila, Philippines",
-          phone: "+63 (02) 8550-3888",
+          description: "Benefits assistance, claims processing, compensation, pension, and vocational rehabilitation",
+          address: "1131 Roxas Boulevard, Ermita, Manila, 0930 Philippines",
+          phone: "+63 (2) 8550-3888",
           website: "https://www.benefits.va.gov/manila/",
           category: "VA"
         },
         {
           name: "Philippine Crisis Support",
-          description: "Mental health support for veterans in the Philippines",
-          address: "U.S. Embassy, 1201 Roxas Blvd, Manila, Philippines",
-          phone: "+63 (02) 5301-2000",
+          description: "Mental health support, suicide prevention resources for veterans",
+          address: "U.S. Embassy, 1201 Roxas Boulevard, Ermita, Manila, 1000 Philippines",
+          phone: "+63 (2) 5301-2000",
           website: "https://ph.usembassy.gov/u-s-citizen-services/",
           category: "Crisis"
         }
