@@ -62,9 +62,9 @@ export default function ResourceLocator() {
       resources: [
         {
           name: "Manila VA Outpatient Clinic",
-          description: "The only full VA clinic outside U.S. territories - outpatient care for service-connected conditions",
+          description: "The only full-service VA clinic outside U.S. territories, offering primary care, mental health services, and assistance with FMP",
           address: "1501 Roxas Boulevard, NOX3 Seafront Compound, Pasay City, PH 01302",
-          phone: "+63 (2) 8550-3888",
+          phone: "+63 (02) 8550-3888 / U.S. Line: 808-433-5254",
           website: "https://www.va.gov/manila-philippines-health-care/",
           category: "VA"
         },
@@ -72,8 +72,16 @@ export default function ResourceLocator() {
           name: "Veterans Service Center - Manila",
           description: "Benefits assistance, claims processing, compensation, pension, and vocational rehabilitation",
           address: "1131 Roxas Boulevard, Ermita, Manila, 0930 Philippines",
-          phone: "+63 (2) 8550-3888",
+          phone: "Toll-Free (Philippines): #MyVA (#6982)",
           website: "https://www.benefits.va.gov/manila/",
+          category: "VA"
+        },
+        {
+          name: "Foreign Medical Program (FMP) - Philippines",
+          description: "Provides healthcare benefits to veterans with VA-rated, service-connected conditions residing in the Philippines",
+          address: "P.O. Box 469061, Denver, CO 80246-9061, USA",
+          phone: "877-345-8179 (U.S./Canada)",
+          website: "https://www.va.gov/communitycare/programs/veterans/fmp/",
           category: "VA"
         },
         {
@@ -82,6 +90,14 @@ export default function ResourceLocator() {
           address: "U.S. Embassy, 1201 Roxas Boulevard, Ermita, Manila, 1000 Philippines",
           phone: "+63 (2) 5301-2000",
           website: "https://ph.usembassy.gov/u-s-citizen-services/",
+          category: "Crisis"
+        },
+        {
+          name: "Veterans Crisis Line (International Access)",
+          description: "24/7 support for veterans, service members, and their families, even if not enrolled in VA benefits",
+          address: "Nationwide service",
+          phone: "Pacific Region: 844-702-5493 or DSN 988",
+          website: "https://www.veteranscrisisline.net/",
           category: "Crisis"
         }
       ]
@@ -94,6 +110,14 @@ export default function ResourceLocator() {
           address: "Dr. Hitzelberger Straße, 66849 Landstuhl, Germany",
           phone: "+49 6371 9464 0",
           website: "https://landstuhl.tricare.mil/",
+          category: "VA"
+        },
+        {
+          name: "Foreign Medical Program (FMP) - Germany",
+          description: "Provides healthcare benefits to veterans with VA-rated, service-connected conditions residing in Germany",
+          address: "P.O. Box 469061, Denver, CO 80246-9061, USA",
+          phone: "Germany: 0800-1800011",
+          website: "https://www.va.gov/communitycare/programs/veterans/fmp/",
           category: "VA"
         },
         {
@@ -121,10 +145,10 @@ export default function ResourceLocator() {
           category: "Employment"
         },
         {
-          name: "Veterans Crisis Support - Germany",
-          description: "Crisis intervention services for veterans in Germany - call 988 and press 1 for assistance",
+          name: "Veterans Crisis Line - Europe",
+          description: "24/7 crisis intervention services for veterans in Germany and Europe",
           address: "Ramstein Air Base, 66877 Ramstein-Miesenbach, Germany",
-          phone: "+49 6371 47 7777",
+          phone: "Europe: 844-702-5495 or DSN 988",
           website: "https://www.veteranscrisisline.net/get-help/european-support",
           category: "Crisis"
         }
