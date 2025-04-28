@@ -1198,56 +1198,107 @@ export default function ResourceLocator() {
       />
 
       <div className="bg-[#141e2f] text-white p-4 sm:p-6 rounded-lg mb-6 sm:mb-10">
+        {/* Toggle between US and International */}
+        <div className="flex items-center justify-start gap-4 mb-6">
+          <Button
+            variant={!isInternational ? "default" : "outline"}
+            onClick={() => {
+              setIsInternational(false);
+              setSelectedState("");
+              setSelectedCountry("");
+            }}
+            className={`rounded-full px-6 font-medium ${!isInternational ? 'bg-[#3e64dd] hover:bg-[#2a4bba] text-white' : 'text-[#3e64dd] border-[#3e64dd] hover:bg-[#3e64dd]/10'}`}
+          >
+            United States
+          </Button>
+          <Button
+            variant={isInternational ? "default" : "outline"}
+            onClick={() => {
+              setIsInternational(true);
+              setSelectedState("");
+              setSelectedCountry("");
+            }}
+            className={`rounded-full px-6 font-medium ${isInternational ? 'bg-[#3e64dd] hover:bg-[#2a4bba] text-white' : 'text-[#3e64dd] border-[#3e64dd] hover:bg-[#3e64dd]/10'}`}
+          >
+            International
+          </Button>
+        </div>
+        
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-4">
-          <div className="space-y-2">
-            <label className="text-sm font-medium">State</label>
-            <Select
-              value={selectedState}
-              onValueChange={setSelectedState}
-            >
-              <SelectTrigger className="bg-[#1c2537] border-none text-white h-11 sm:h-10">
-                <SelectValue placeholder="Select state" />
-              </SelectTrigger>
-              <SelectContent className="max-h-[40vh] overflow-y-auto">
-                {Object.keys(stateData).map(state => (
-                  <SelectItem key={state} value={state}>
-                    {state}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-          </div>
+          {isInternational ? (
+            <div className="space-y-2">
+              <label className="text-sm font-medium">Country</label>
+              <Select
+                value={selectedCountry}
+                onValueChange={setSelectedCountry}
+              >
+                <SelectTrigger className="bg-[#1c2537] border-none text-white h-11 sm:h-10">
+                  <SelectValue placeholder="Select country" />
+                </SelectTrigger>
+                <SelectContent className="max-h-[40vh] overflow-y-auto">
+                  {Object.keys(countryData).map(country => (
+                    <SelectItem key={country} value={country}>
+                      {country}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+          ) : (
+            <div className="space-y-2">
+              <label className="text-sm font-medium">State</label>
+              <Select
+                value={selectedState}
+                onValueChange={setSelectedState}
+              >
+                <SelectTrigger className="bg-[#1c2537] border-none text-white h-11 sm:h-10">
+                  <SelectValue placeholder="Select state" />
+                </SelectTrigger>
+                <SelectContent className="max-h-[40vh] overflow-y-auto">
+                  {Object.keys(stateData).map(state => (
+                    <SelectItem key={state} value={state}>
+                      {state}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+          )}
 
-          <div className="space-y-2">
-            <label className="text-sm font-medium">ZIP Code</label>
-            <Input
-              type="text"
-              placeholder="Enter ZIP code"
-              value={zipCode}
-              onChange={(e) => setZipCode(e.target.value)}
-              className="bg-[#1c2537] border-none text-white placeholder:text-gray-400 h-11 sm:h-10"
-            />
-          </div>
+          {!isInternational && (
+            <>
+              <div className="space-y-2">
+                <label className="text-sm font-medium">ZIP Code</label>
+                <Input
+                  type="text"
+                  placeholder="Enter ZIP code"
+                  value={zipCode}
+                  onChange={(e) => setZipCode(e.target.value)}
+                  className="bg-[#1c2537] border-none text-white placeholder:text-gray-400 h-11 sm:h-10"
+                />
+              </div>
 
-          <div className="space-y-2">
-            <label className="text-sm font-medium">Search Radius</label>
-            <Select
-              value={searchRadius}
-              onValueChange={setSearchRadius}
-            >
-              <SelectTrigger className="bg-[#1c2537] border-none text-white h-11 sm:h-10">
-                <SelectValue placeholder="Distance" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="10">10 miles</SelectItem>
-                <SelectItem value="25">25 miles</SelectItem>
-                <SelectItem value="50">50 miles</SelectItem>
-                <SelectItem value="100">100 miles</SelectItem>
-              </SelectContent>
-            </Select>
-          </div>
+              <div className="space-y-2">
+                <label className="text-sm font-medium">Search Radius</label>
+                <Select
+                  value={searchRadius}
+                  onValueChange={setSearchRadius}
+                >
+                  <SelectTrigger className="bg-[#1c2537] border-none text-white h-11 sm:h-10">
+                    <SelectValue placeholder="Distance" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="10">10 miles</SelectItem>
+                    <SelectItem value="25">25 miles</SelectItem>
+                    <SelectItem value="50">50 miles</SelectItem>
+                    <SelectItem value="100">100 miles</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+            </>
+          )}
 
-          <div className="space-y-2">
+          <div className={`space-y-2 ${isInternational ? 'sm:col-span-3 lg:col-span-3' : ''}`}>
             <label className="text-sm font-medium">Resource Type</label>
             <Select
               value={category}
@@ -1272,7 +1323,7 @@ export default function ResourceLocator() {
           className="w-full mt-5 sm:mt-6 bg-[#3e64dd] hover:bg-[#2a4bba] py-6 sm:py-4"
           size="lg"
           onClick={() => {
-            if (selectedState) {
+            if (selectedState || selectedCountry) {
               const element = document.getElementById('resources-section');
               element?.scrollIntoView({ behavior: 'smooth' });
             }
@@ -1282,9 +1333,11 @@ export default function ResourceLocator() {
         </Button>
       </div>
 
-      {selectedState && (
+      {(selectedState || selectedCountry) && (
         <div id="resources-section">
-          <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Resources in {selectedState}</h2>
+          <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">
+            Resources in {isInternational ? selectedCountry : selectedState}
+          </h2>
 
           {filteredResources.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
@@ -1327,13 +1380,24 @@ export default function ResourceLocator() {
                       variant="outline"
                       className="w-full sm:w-auto justify-center text-[#3e64dd] border-[#3e64dd]/30 hover:bg-[#3e64dd]/10"
                       onClick={() => {
-                        trackStateResourceClick({
-                          state: selectedState,
-                          resourceName: resource.name,
-                          category: resource.category
-                        }, () => {
-                          window.open(resource.website, "_blank", "noopener,noreferrer");
-                        });
+                        // Track based on whether we're looking at a state or country
+                        if (isInternational) {
+                          trackStateResourceClick({
+                            state: selectedCountry, // Use country as the "state" for tracking
+                            resourceName: resource.name,
+                            category: resource.category
+                          }, () => {
+                            window.open(resource.website, "_blank", "noopener,noreferrer");
+                          });
+                        } else {
+                          trackStateResourceClick({
+                            state: selectedState,
+                            resourceName: resource.name,
+                            category: resource.category
+                          }, () => {
+                            window.open(resource.website, "_blank", "noopener,noreferrer");
+                          });
+                        }
                       }}
                     >
                       Visit Website
@@ -1343,17 +1407,32 @@ export default function ResourceLocator() {
                         variant="outline" 
                         className="w-full sm:w-auto justify-center"
                         onClick={() => {
-                          trackStateResourceClick({
-                            state: selectedState,
-                            resourceName: resource.name,
-                            category: resource.category
-                          }, () => {
-                            window.open(
-                              `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(resource.address || '')}`,
-                              "_blank",
-                              "noopener,noreferrer"
-                            );
-                          });
+                          // Track based on whether we're looking at a state or country
+                          if (isInternational) {
+                            trackStateResourceClick({
+                              state: selectedCountry, // Use country as the "state" for tracking
+                              resourceName: resource.name,
+                              category: resource.category
+                            }, () => {
+                              window.open(
+                                `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(resource.address || '')}`,
+                                "_blank",
+                                "noopener,noreferrer"
+                              );
+                            });
+                          } else {
+                            trackStateResourceClick({
+                              state: selectedState,
+                              resourceName: resource.name,
+                              category: resource.category
+                            }, () => {
+                              window.open(
+                                `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(resource.address || '')}`,
+                                "_blank",
+                                "noopener,noreferrer"
+                              );
+                            });
+                          }
                         }}
                       >
                         Get Directions
@@ -1372,27 +1451,48 @@ export default function ResourceLocator() {
         </div>
       )}
 
-      {!selectedState && (
+      {!selectedState && !selectedCountry && (
         <div className="bg-gray-50 rounded-lg p-4 sm:p-8 text-center">
-          <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">Select a state to view resources</h3>
-          <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">Select a state below to view available local resources for veterans.</p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 sm:gap-3 max-h-[60vh] overflow-y-auto p-1">
-            {Object.entries(stateData).map(([state, data]) => (
-              <Button 
-                key={state}
-                variant="outline" 
-                className="w-full flex items-center justify-center py-4"
-                onClick={() => setSelectedState(state)}
-              >
-                <span className="font-medium text-center">{state}</span>
-              </Button>
-            ))}
-          </div>
+          {isInternational ? (
+            <>
+              <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">Select a country to view international resources</h3>
+              <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">Find resources for U.S. veterans living overseas in these countries.</p>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 sm:gap-3 max-h-[60vh] overflow-y-auto p-1">
+                {Object.entries(countryData).map(([country, data]) => (
+                  <Button 
+                    key={country}
+                    variant="outline" 
+                    className="w-full flex items-center justify-center py-4 border-[#3e64dd]/30 text-[#3e64dd] hover:bg-[#3e64dd]/10 hover:text-[#3e64dd] hover:border-[#3e64dd]"
+                    onClick={() => setSelectedCountry(country)}
+                  >
+                    <span className="font-medium text-center">{country}</span>
+                  </Button>
+                ))}
+              </div>
+            </>
+          ) : (
+            <>
+              <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">Select a state to view resources</h3>
+              <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">Select a state below to view available local resources for veterans.</p>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 sm:gap-3 max-h-[60vh] overflow-y-auto p-1">
+                {Object.entries(stateData).map(([state, data]) => (
+                  <Button 
+                    key={state}
+                    variant="outline" 
+                    className="w-full flex items-center justify-center py-4 border-[#3e64dd]/30 text-[#3e64dd] hover:bg-[#3e64dd]/10 hover:text-[#3e64dd] hover:border-[#3e64dd]"
+                    onClick={() => setSelectedState(state)}
+                  >
+                    <span className="font-medium text-center">{state}</span>
+                  </Button>
+                ))}
+              </div>
+            </>
+          )}
         </div>
       )}
       
-      {/* Add crisis resources section at the top when state is selected */}
-      {selectedState && (
+      {/* Add crisis resources section when state or country is selected */}
+      {(selectedState || selectedCountry) && (
         <div className="mb-8">
           <CrisisResources variant="compact" className="shadow-md" />
         </div>
