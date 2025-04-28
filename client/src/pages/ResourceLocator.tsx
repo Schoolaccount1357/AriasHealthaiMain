@@ -2231,36 +2231,244 @@ export default function ResourceLocator() {
     "Maine": {
       resources: [
         {
-          name: "VA Maine Healthcare System",
-          description: "VA healthcare services in Maine",
+          name: "Togus VA Medical Center",
+          description: "Comprehensive medical care, including emergency services, mental health care, and specialty services",
           address: "1 VA Center, Augusta, ME 04330",
           phone: "(207) 623-8411",
-          website: "https://www.maine.va.gov/",
+          website: "https://www.va.gov/maine-health-care/",
           category: "VA"
+        },
+        {
+          name: "Bangor VA Clinic",
+          description: "Primary care, mental health, and specialty services for veterans in northern Maine",
+          address: "35 State Hospital Drive, Bangor, ME 04401",
+          phone: "(207) 561-3600",
+          website: "https://www.va.gov/maine-health-care/locations/bangor-va-clinic/",
+          category: "Treatment"
+        },
+        {
+          name: "Portland VA Clinic",
+          description: "Comprehensive outpatient services for veterans in southern Maine",
+          address: "144 Fore Street, Portland, ME 04101",
+          phone: "(207) 623-8411 x7490",
+          website: "https://www.va.gov/maine-health-care/locations/portland-va-clinic/",
+          category: "Treatment"
+        },
+        {
+          name: "Lewiston VA Clinic",
+          description: "Primary care and mental health services for veterans in central Maine",
+          address: "15 Challenger Drive, Lewiston, ME 04240",
+          phone: "(207) 330-2700",
+          website: "https://www.va.gov/maine-health-care/locations/lewiston-auburn-va-clinic/",
+          category: "Treatment"
+        },
+        {
+          name: "Caribou VA Clinic",
+          description: "Primary care and telehealth services for rural veterans in northern Maine",
+          address: "163 Van Buren Road, Suite 6, Caribou, ME 04736",
+          phone: "(207) 493-3800",
+          website: "https://www.va.gov/maine-health-care/locations/caribou-va-clinic/",
+          category: "Treatment"
+        },
+        {
+          name: "Bangor Vet Center",
+          description: "Readjustment counseling and outreach services for veterans and their families",
+          address: "207 Parkway S., Suite 2, Brewer, ME 04412",
+          phone: "(207) 947-3391",
+          website: "https://www.va.gov/find-locations/facility/vc_0524V",
+          category: "Treatment"
+        },
+        {
+          name: "Veterans Inc. Housing Program",
+          description: "Transitional and permanent housing assistance for homeless veterans",
+          address: "393 Main Street, Saco, ME 04072",
+          phone: "(800) 482-2565",
+          website: "https://www.veteransinc.org/services/housing-programs/",
+          category: "Housing"
+        },
+        {
+          name: "Maine Bureau of Veterans' Services",
+          description: "State agency providing benefits assistance, emergency financial aid, and employment support",
+          address: "117 State House Station, Augusta, ME 04330",
+          phone: "(207) 430-6035",
+          website: "https://www.maine.gov/veterans/",
+          category: "Employment"
+        },
+        {
+          name: "Maine Veterans Crisis Line",
+          description: "24/7 confidential support for veterans in crisis",
+          address: "Statewide service",
+          phone: "988, then press 1",
+          website: "https://www.veteranscrisisline.net/",
+          category: "Crisis"
         }
       ]
     },
     "Maryland": {
       resources: [
         {
-          name: "VA Maryland Health Care System",
-          description: "VA healthcare services in Maryland",
+          name: "Baltimore VA Medical Center",
+          description: "Comprehensive healthcare services including primary care, specialty services, and emergency care",
           address: "10 North Greene Street, Baltimore, MD 21201",
           phone: "(410) 605-7000",
-          website: "https://www.maryland.va.gov/",
+          website: "https://www.va.gov/maryland-health-care/locations/baltimore-va-medical-center/",
           category: "VA"
+        },
+        {
+          name: "Perry Point VA Medical Center",
+          description: "Primary care and specialty health services, including mental health care, audiology, and dental services",
+          address: "Perry Point, MD 21902",
+          phone: "(410) 642-2411",
+          website: "https://www.va.gov/maryland-health-care/locations/perry-point-va-medical-center/",
+          category: "VA"
+        },
+        {
+          name: "Loch Raven VA Medical Center",
+          description: "Rehabilitation and extended care services for Maryland veterans",
+          address: "3900 Loch Raven Boulevard, Baltimore, MD 21218",
+          phone: "(410) 605-7000",
+          website: "https://www.va.gov/maryland-health-care/locations/loch-raven-va-medical-center/",
+          category: "VA"
+        },
+        {
+          name: "Glen Burnie VA Outpatient Clinic",
+          description: "Primary care, mental health, and specialty services for veterans in Anne Arundel County",
+          address: "808 Landmark Drive, Suite 128, Glen Burnie, MD 21061",
+          phone: "(410) 590-4140",
+          website: "https://www.va.gov/maryland-health-care/locations/glen-burnie-va-outpatient-clinic/",
+          category: "Treatment"
+        },
+        {
+          name: "Cambridge VA Outpatient Clinic",
+          description: "Primary care and mental health services for veterans on Maryland's Eastern Shore",
+          address: "830 Chesapeake Drive, Cambridge, MD 21613",
+          phone: "(410) 228-6243",
+          website: "https://www.va.gov/maryland-health-care/locations/cambridge-va-outpatient-clinic/",
+          category: "Treatment"
+        },
+        {
+          name: "Fort Meade VA Outpatient Clinic",
+          description: "Primary care and mental health services for veterans in central Maryland",
+          address: "2479 5th Street, Fort Meade, MD 20755",
+          phone: "(410) 305-5300",
+          website: "https://www.va.gov/maryland-health-care/locations/fort-meade-va-outpatient-clinic/",
+          category: "Treatment"
+        },
+        {
+          name: "Baltimore Vet Center",
+          description: "Readjustment counseling and outreach services for combat veterans and their families",
+          address: "1777 Reisterstown Road, Suite 199, Baltimore, MD 21208",
+          phone: "(410) 764-9400",
+          website: "https://www.va.gov/find-locations/facility/vc_0407V",
+          category: "Treatment"
+        },
+        {
+          name: "Maryland Center for Veterans Education and Training (MCVET)",
+          description: "Comprehensive housing, substance abuse treatment, and employment services for homeless veterans",
+          address: "301 N. High Street, Baltimore, MD 21202",
+          phone: "(410) 576-9626",
+          website: "http://www.mcvet.org/",
+          category: "Housing"
+        },
+        {
+          name: "Maryland Department of Veterans Affairs",
+          description: "State agency providing advocacy and assistance with benefits, employment, and education",
+          address: "16 Francis Street, Annapolis, MD 21401",
+          phone: "(410) 260-3838",
+          website: "https://veterans.maryland.gov/",
+          category: "Employment"
+        },
+        {
+          name: "Maryland Veterans Crisis Line",
+          description: "24/7 confidential support for veterans in crisis",
+          address: "Statewide service",
+          phone: "988, then press 1",
+          website: "https://www.veteranscrisisline.net/",
+          category: "Crisis"
         }
       ]
     },
     "Massachusetts": {
       resources: [
         {
-          name: "VA Boston Healthcare System",
-          description: "VA healthcare services in Massachusetts",
+          name: "Jamaica Plain VA Medical Center",
+          description: "Comprehensive healthcare services including primary care, specialty care, and mental health services",
           address: "150 South Huntington Avenue, Boston, MA 02130",
           phone: "(857) 364-4000",
-          website: "https://www.boston.va.gov/",
+          website: "https://www.va.gov/boston-health-care/locations/jamaica-plain-campus/",
           category: "VA"
+        },
+        {
+          name: "West Roxbury VA Medical Center",
+          description: "Surgical, inpatient, and critical care services for Massachusetts veterans",
+          address: "1400 VFW Parkway, West Roxbury, MA 02132",
+          phone: "(857) 364-4000",
+          website: "https://www.va.gov/boston-health-care/locations/west-roxbury-campus/",
+          category: "VA"
+        },
+        {
+          name: "Brockton VA Medical Center",
+          description: "Mental health, long-term care, and primary care services",
+          address: "940 Belmont Street, Brockton, MA 02301",
+          phone: "(508) 583-4500",
+          website: "https://www.va.gov/boston-health-care/locations/brockton-campus/",
+          category: "VA"
+        },
+        {
+          name: "Edith Nourse Rogers Memorial Veterans Hospital",
+          description: "Comprehensive medical care, including mental health services and long-term care",
+          address: "200 Springs Road, Bedford, MA 01730",
+          phone: "(781) 687-2000",
+          website: "https://www.va.gov/bedford-health-care/",
+          category: "VA"
+        },
+        {
+          name: "Edward P. Boland VA Medical Center",
+          description: "Primary and specialty care, rehabilitation programs, and mental health services for western Massachusetts veterans",
+          address: "421 North Main Street, Leeds, MA 01053",
+          phone: "(413) 584-4040",
+          website: "https://www.va.gov/central-western-massachusetts-health-care/locations/northampton-va-medical-center/",
+          category: "VA"
+        },
+        {
+          name: "Boston Vet Center",
+          description: "Readjustment counseling and outreach services for combat veterans and their families",
+          address: "7 Drydock Avenue, Suite 2070, Boston, MA 02210",
+          phone: "(857) 203-6461",
+          website: "https://www.va.gov/find-locations/facility/vc_0606V",
+          category: "Treatment"
+        },
+        {
+          name: "Lowell VA Clinic",
+          description: "Primary care and mental health services for veterans in northern Massachusetts",
+          address: "130 Marshall Road, Lowell, MA 01852",
+          phone: "(978) 671-9000",
+          website: "https://www.va.gov/bedford-health-care/locations/lowell-va-clinic/",
+          category: "Treatment"
+        },
+        {
+          name: "New England Center and Home for Veterans",
+          description: "Transitional and permanent housing, clinical support, and employment services for homeless and at-risk veterans",
+          address: "17 Court Street, Boston, MA 02108",
+          phone: "(617) 371-1800",
+          website: "https://www.nechv.org/",
+          category: "Housing"
+        },
+        {
+          name: "Massachusetts Department of Veterans' Services",
+          description: "State agency connecting veterans to benefits, employment, and education opportunities",
+          address: "600 Washington Street, 7th Floor, Boston, MA 02111",
+          phone: "(617) 210-5480",
+          website: "https://www.mass.gov/orgs/massachusetts-department-of-veterans-services",
+          category: "Employment"
+        },
+        {
+          name: "Massachusetts Veterans Crisis Line",
+          description: "24/7 confidential support for veterans in crisis",
+          address: "Statewide service",
+          phone: "988, then press 1",
+          website: "https://www.veteranscrisisline.net/",
+          category: "Crisis"
         }
       ]
     },
