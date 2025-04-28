@@ -1624,10 +1624,90 @@ export default function ResourceLocator() {
       resources: [
         {
           name: "Sioux Falls VA Health Care System",
-          description: "VA healthcare services in South Dakota",
-          address: "2501 West 22nd Street, Sioux Falls, SD 57105",
+          description: "Primary and specialty care, mental health, PTSD treatment, rehabilitation, palliative care, and more",
+          address: "2501 W 22nd St, Sioux Falls, SD 57105",
           phone: "(605) 336-3230",
-          website: "https://www.siouxfalls.va.gov/",
+          website: "https://www.va.gov/sioux-falls-health-care/",
+          category: "VA"
+        },
+        {
+          name: "VA Black Hills Health Care System - Fort Meade",
+          description: "Comprehensive medical and mental health services, including PTSD care and substance use treatment",
+          address: "113 Comanche Rd, Fort Meade, SD 57741",
+          phone: "(605) 347-2511",
+          website: "https://www.va.gov/black-hills-health-care/locations/fort-meade-va-medical-center/",
+          category: "VA"
+        },
+        {
+          name: "VA Black Hills Health Care System - Hot Springs",
+          description: "Comprehensive medical services and residential rehabilitation programs",
+          address: "500 N 5th St, Hot Springs, SD 57747",
+          phone: "(605) 745-2000",
+          website: "https://www.va.gov/black-hills-health-care/locations/hot-springs-va-medical-center/",
+          category: "VA"
+        },
+        {
+          name: "Sioux Falls Vet Center",
+          description: "Confidential counseling for combat veterans and families, PTSD treatment, and military sexual trauma counseling",
+          address: "3800 S Kiwanis Ave, Suite 100, Sioux Falls, SD 57105",
+          phone: "(605) 330-4552",
+          website: "https://www.va.gov/find-locations/facility/vc_0631V",
+          category: "Treatment"
+        },
+        {
+          name: "Rapid City Vet Center",
+          description: "Confidential counseling for combat veterans and families, bereavement counseling, and trauma treatment",
+          address: "621 6th St, Suite 101, Rapid City, SD 57701",
+          phone: "(605) 348-0077",
+          website: "https://www.va.gov/find-locations/facility/vc_0632V",
+          category: "Treatment"
+        },
+        {
+          name: "Veterans Crisis Line",
+          description: "24/7 confidential support for veterans in crisis",
+          address: "Nationwide service",
+          phone: "988, then press 1",
+          website: "https://www.veteranscrisisline.net/",
+          category: "Crisis"
+        },
+        {
+          name: "South Dakota Veterans Cemetery",
+          description: "State-operated cemetery offering burial services for veterans and eligible family members",
+          address: "Sioux Falls, SD",
+          phone: "(605) 336-3230",
+          website: "https://vetaffairs.sd.gov/veteranscemetery/default.aspx",
+          category: "Housing"
+        },
+        {
+          name: "Black Hills National Cemetery",
+          description: "Federally operated cemetery providing burial services for veterans and eligible family members",
+          address: "Sturgis, SD",
+          phone: "(605) 347-3830",
+          website: "https://www.cem.va.gov/cems/nchp/blackhills.asp",
+          category: "Housing"
+        },
+        {
+          name: "University of South Dakota - Veterans' Services",
+          description: "Assists veterans and families with applying for and receiving education benefits, including GI Bill support",
+          address: "414 E Clark St, Vermillion, SD 57069",
+          phone: "(605) 677-5331",
+          website: "https://www.usd.edu/veterans",
+          category: "Employment"
+        },
+        {
+          name: "Veteran Readiness and Employment (VR&E) Program",
+          description: "Vocational counseling, training, and job placement assistance for veterans with service-connected disabilities",
+          address: "910 5th St, Suite 105, Rapid City, SD 57701",
+          phone: "(605) 341-8165",
+          website: "https://www.benefits.va.gov/vocrehab/",
+          category: "Employment"
+        },
+        {
+          name: "South Dakota Department of Veterans Affairs",
+          description: "Assistance with benefits claims, education, and employment resources for veterans",
+          address: "425 E Capitol Ave, Pierre, SD 57501",
+          phone: "(605) 773-3269",
+          website: "https://vetaffairs.sd.gov/",
           category: "VA"
         }
       ]
