@@ -398,6 +398,103 @@ export default function Resources() {
         ))}
       </div>
 
+      {/* International Resources section - moved to bottom */}
+      {resourceCategories.find(category => category.title === "International Resources") && (
+        <div className="mt-16 mb-6">
+          <h2 className="text-2xl font-bold mb-6 text-center">
+            <span className="bg-gradient-to-r from-[#3e64dd] to-[#10066A] bg-clip-text text-transparent">
+              International Resources
+            </span>
+          </h2>
+          <Card className="shadow-lg hover:shadow-xl transition-shadow border-t-4 border-t-[#3e64dd]">
+            <CardHeader>
+              <div className="flex items-center gap-3">
+                <Globe className="h-6 w-6 text-[#3e64dd]" />
+                <CardTitle>Support for Veterans Worldwide</CardTitle>
+              </div>
+              <CardDescription className="text-base mt-2">
+                Resources and support services available for veterans living outside the United States
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {resourceCategories.find(category => category.title === "International Resources")?.resources.map((resource, resourceIndex) => (
+                  <div key={resourceIndex} className="border rounded-md p-4 hover:shadow-md transition-shadow bg-white/50">
+                    <h3 className="font-semibold mb-1">{resource.name}</h3>
+                    <CardDescription className="mb-2">{resource.description}</CardDescription>
+                    <div className="text-sm space-y-1">
+                      {resource.phone && (
+                        <p>
+                          📞{' '}
+                          <button 
+                            onClick={() => {
+                              const phoneNumber = resource.phone?.split(' ')[0].replace(/-/g, '');
+                              trackResourceClick("call", () => window.location.href = `tel:${phoneNumber}`);
+                            }}
+                            className="text-[#3e64dd] hover:underline focus:outline-none"
+                          >
+                            {resource.phone}
+                          </button>
+                        </p>
+                      )}
+                      {'text' in resource && resource.text && (
+                        <p>
+                          ✉️{' '}
+                          {typeof resource.text === 'string' ? (
+                            <button 
+                              onClick={() => {
+                                const textNumber = resource.text?.toString().split(' ')[1] || "838255";
+                                trackResourceClick("text", () => window.location.href = `sms:${textNumber}`);
+                              }}
+                              className="text-[#3e64dd] hover:underline focus:outline-none"
+                            >
+                              {resource.text}
+                            </button>
+                          ) : 'Text Available'}
+                        </p>
+                      )}
+                    </div>
+                    <Button 
+                      variant="link" 
+                      className="p-0 h-auto text-[#3e64dd] group relative overflow-hidden mt-2"
+                      onClick={() => {
+                        trackResourceClick("website", () => window.open(resource.website, "_blank", "noopener,noreferrer"));
+                      }}
+                    >
+                      <span className="inline-flex items-center">
+                        <span className="relative z-10 inline-flex items-center transition-all duration-300 group-hover:translate-x-1">
+                          Visit Website
+                          <Globe className="h-3 w-3 ml-1 transition-transform duration-300 group-hover:translate-x-1 group-hover:scale-110" />
+                        </span>
+                        <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#3e64dd]/40 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
+                      </span>
+                    </Button>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+            <CardFooter>
+              <Button 
+                asChild 
+                variant="outline" 
+                className="w-full group transition-all duration-300 relative overflow-hidden hover:border-[#3e64dd] hover:text-[#3e64dd]"
+              >
+                <Link href="/resource-locator" className="flex items-center justify-center">
+                  <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-[#3e64dd]/0 via-[#3e64dd]/10 to-[#3e64dd]/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
+                  <span className="relative z-10 flex items-center justify-center">
+                    Find Country-Specific Resources
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </span>
+                </Link>
+              </Button>
+            </CardFooter>
+          </Card>
+        </div>
+      )}
+
       <div className="mt-12 text-center">
         <p className="text-sm text-muted-foreground mb-4">
           Disclaimer: This list is not exhaustive. Resources are provided for informational purposes only.
