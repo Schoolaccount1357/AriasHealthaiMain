@@ -642,26 +642,74 @@ export default function ResourceLocator() {
       resources: [
         {
           name: "Foreign Medical Program (FMP) - New Zealand",
-          description: "Provides healthcare benefits to veterans with VA-rated, service-connected conditions residing in New Zealand",
+          description: "Provides healthcare benefits to U.S. veterans with VA-rated, service-connected conditions residing in New Zealand",
           address: "PO Box 200, Spring City, PA 19475, USA",
           phone: "Main: +1-833-930-0816 or Australia Toll-Free: 1-800-354-965",
           website: "https://www.va.gov/health-care/foreign-medical-program/",
           category: "VA"
         },
         {
+          name: "Veterans' Affairs New Zealand (VANZ)",
+          description: "Provides support to New Zealand veterans, including health, rehabilitation, and financial assistance",
+          address: "Wellington, New Zealand",
+          phone: "NZ: 0800 483 8372 | Australia: 1800 483 837 | International: +64 4 495 2070",
+          website: "https://www.veteransaffairs.mil.nz/",
+          category: "VA"
+        },
+        {
           name: "Mental Health Services for Veterans - Wellington",
-          description: "PTSD and mental health services for veterans",
+          description: "Offers mental health and PTSD treatment services for veterans",
           address: "Lambton Quay, Wellington, New Zealand",
           phone: "+64 4 801 5050",
           website: "https://www.mentalhealth.org.nz/",
           category: "Treatment"
         },
         {
-          name: "Veterans Crisis Support - New Zealand",
-          description: "Emergency support for veterans in crisis",
-          address: "Auckland, New Zealand",
-          phone: "+64 800 838 200",
-          website: "https://www.veteranscrisisline.net/get-help/",
+          name: "Wellington Hospital Mental Health Services",
+          description: "Provides comprehensive mental health services, including inpatient care for veterans",
+          address: "Riddiford Street, Newtown, Wellington 6021, New Zealand",
+          phone: "+64 4 385 5999",
+          website: "https://www.ccdhb.org.nz/our-services/mental-health-addiction-and-intellectual-disability-service/",
+          category: "Treatment"
+        },
+        {
+          name: "Royal New Zealand Returned and Services' Association (RSA)",
+          description: "Offers support to veterans and their families, including advocacy, welfare services, and community engagement",
+          address: "National Office, Wellington, New Zealand",
+          phone: "+64 4 384 7994",
+          website: "https://www.rsa.org.nz/",
+          category: "Employment"
+        },
+        {
+          name: "Veterans Crisis Support - Lifeline Aotearoa",
+          description: "24/7 crisis support and suicide prevention services for veterans",
+          address: "National service, New Zealand",
+          phone: "0800 543 354",
+          website: "https://www.lifeline.org.nz/",
+          category: "Crisis"
+        },
+        {
+          name: "Samaritans New Zealand",
+          description: "Confidential support for anyone in emotional distress or suicidal crisis",
+          address: "National service, New Zealand",
+          phone: "0800 726 666",
+          website: "https://www.samaritans.org.nz/",
+          category: "Crisis"
+        },
+        {
+          name: "Need to Talk - New Zealand",
+          description: "Free call or text service for mental health support",
+          address: "National service, New Zealand",
+          phone: "1737 (call or text)",
+          website: "https://1737.org.nz/",
+          category: "Crisis"
+        },
+        {
+          name: "NZDF4U Support Line",
+          description: "Confidential support line for New Zealand Defence Force personnel and veterans",
+          address: "National service, New Zealand",
+          phone: "0800 693 348",
+          website: "https://www.nzdf.mil.nz/nzdf/health-and-wellbeing/",
           category: "Crisis"
         }
       ]
@@ -2476,11 +2524,75 @@ export default function ResourceLocator() {
       resources: [
         {
           name: "John D. Dingell VA Medical Center",
-          description: "VA healthcare services in Michigan",
+          description: "Comprehensive medical care including acute medical, surgical, psychiatric, neurological, and dermatological inpatient care",
           address: "4646 John R. Street, Detroit, MI 48201",
           phone: "(313) 576-1000",
-          website: "https://www.detroit.va.gov/",
+          website: "https://www.va.gov/detroit-health-care/",
           category: "VA"
+        },
+        {
+          name: "Battle Creek VA Medical Center",
+          description: "Comprehensive healthcare services including mental health, primary care, and specialty services",
+          address: "5500 Armstrong Road, Battle Creek, MI 49037",
+          phone: "(269) 966-5600",
+          website: "https://www.va.gov/battle-creek-health-care/",
+          category: "VA"
+        },
+        {
+          name: "Ann Arbor VA Medical Center",
+          description: "Tertiary care, specialty services, research and education for Michigan veterans",
+          address: "2215 Fuller Road, Ann Arbor, MI 48105",
+          phone: "(734) 769-7100",
+          website: "https://www.va.gov/ann-arbor-health-care/",
+          category: "VA"
+        },
+        {
+          name: "Oscar G. Johnson VA Medical Center",
+          description: "Primary care and specialty services for veterans in Michigan's Upper Peninsula",
+          address: "325 East H Street, Iron Mountain, MI 49801",
+          phone: "(906) 774-3300",
+          website: "https://www.va.gov/iron-mountain-health-care/",
+          category: "VA"
+        },
+        {
+          name: "Grand Rapids VA Clinic",
+          description: "Primary care, mental health, and specialty services for West Michigan veterans",
+          address: "3019 Coit Avenue NE, Grand Rapids, MI 49505",
+          phone: "(616) 365-9575",
+          website: "https://www.va.gov/battle-creek-health-care/locations/grand-rapids-va-clinic/",
+          category: "Treatment"
+        },
+        {
+          name: "Detroit Vet Center",
+          description: "Readjustment counseling services for combat veterans and their families",
+          address: "4161 Cass Avenue, Detroit, MI 48201",
+          phone: "(313) 831-6509",
+          website: "https://www.va.gov/find-locations/facility/vc_0310V",
+          category: "Treatment"
+        },
+        {
+          name: "Volunteers of America Michigan Veterans Housing Program",
+          description: "Transitional housing and supportive services for homeless veterans",
+          address: "430 N. Larch Street, Lansing, MI 48912",
+          phone: "(517) 484-4414",
+          website: "https://www.voami.org/veterans-services",
+          category: "Housing"
+        },
+        {
+          name: "Michigan Veterans Affairs Agency",
+          description: "Connects veterans and their families with benefits, employment services, and resources",
+          address: "222 Washington Square North, Lansing, MI 48933",
+          phone: "(800) 642-4838",
+          website: "https://www.michigan.gov/mvaa",
+          category: "Employment"
+        },
+        {
+          name: "Michigan Veterans Crisis Line",
+          description: "24/7 confidential support for veterans in crisis",
+          address: "Statewide service",
+          phone: "988, then press 1",
+          website: "https://www.veteranscrisisline.net/",
+          category: "Crisis"
         }
       ]
     },
@@ -2488,11 +2600,75 @@ export default function ResourceLocator() {
       resources: [
         {
           name: "Minneapolis VA Health Care System",
-          description: "VA healthcare services in Minnesota",
+          description: "Full range of services including primary care, specialty care, and mental health services",
           address: "1 Veterans Drive, Minneapolis, MN 55417",
           phone: "(612) 725-2000",
-          website: "https://www.minneapolis.va.gov/",
+          website: "https://www.va.gov/minneapolis-health-care/",
           category: "VA"
+        },
+        {
+          name: "St. Cloud VA Health Care System",
+          description: "Primary care, mental health services, and select specialty care for central Minnesota veterans",
+          address: "4801 Veterans Drive, St. Cloud, MN 56303",
+          phone: "(320) 252-1670",
+          website: "https://www.va.gov/st-cloud-health-care/",
+          category: "VA"
+        },
+        {
+          name: "Rochester VA Clinic",
+          description: "Primary care and mental health services for veterans in southeastern Minnesota",
+          address: "3000 55th Street NW, Rochester, MN 55901",
+          phone: "(507) 252-0885",
+          website: "https://www.va.gov/minneapolis-health-care/locations/rochester-va-clinic/",
+          category: "Treatment"
+        },
+        {
+          name: "Maplewood VA Clinic",
+          description: "Primary care, mental health, and specialty services for Twin Cities veterans",
+          address: "2785 White Bear Avenue North, Suite 210, Maplewood, MN 55109",
+          phone: "(651) 290-3040",
+          website: "https://www.va.gov/minneapolis-health-care/locations/maplewood-va-clinic/",
+          category: "Treatment"
+        },
+        {
+          name: "Duluth VA Clinic",
+          description: "Primary care and specialty services for veterans in northern Minnesota",
+          address: "3520 Tower Avenue, Superior, WI 54880",
+          phone: "(715) 398-2400", 
+          website: "https://www.va.gov/minneapolis-health-care/locations/twin-ports-va-clinic/",
+          category: "Treatment"
+        },
+        {
+          name: "St. Paul Vet Center",
+          description: "Readjustment counseling and outreach services for combat veterans and their families",
+          address: "550 County Road D, Suite 10, New Brighton, MN 55112",
+          phone: "(651) 644-4022",
+          website: "https://www.va.gov/find-locations/facility/vc_0643V",
+          category: "Treatment"
+        },
+        {
+          name: "Minnesota Assistance Council for Veterans (MACV)",
+          description: "Housing assistance, supportive services, and employment help for homeless veterans",
+          address: "1000 University Avenue West, Suite 150, St. Paul, MN 55104",
+          phone: "(833) 222-6228",
+          website: "https://www.mac-v.org/",
+          category: "Housing"
+        },
+        {
+          name: "Minnesota Department of Veterans Affairs",
+          description: "State agency providing benefits assistance, education resources, and employment support",
+          address: "20 West 12th Street, St. Paul, MN 55155",
+          phone: "(651) 296-2562",
+          website: "https://mn.gov/mdva/",
+          category: "Employment"
+        },
+        {
+          name: "Minnesota Veterans Crisis Line",
+          description: "24/7 confidential support for veterans in crisis",
+          address: "Statewide service",
+          phone: "988, then press 1",
+          website: "https://www.veteranscrisisline.net/",
+          category: "Crisis"
         }
       ]
     },
@@ -2500,11 +2676,75 @@ export default function ResourceLocator() {
       resources: [
         {
           name: "G.V. (Sonny) Montgomery VA Medical Center",
-          description: "VA healthcare services in Mississippi",
+          description: "Comprehensive medical services including primary care, specialty care, mental health services, and more",
           address: "1500 East Woodrow Wilson Avenue, Jackson, MS 39216",
           phone: "(601) 362-4471",
-          website: "https://www.jackson.va.gov/",
+          website: "https://www.va.gov/jackson-health-care/",
           category: "VA"
+        },
+        {
+          name: "Gulf Coast Veterans Health Care System",
+          description: "Comprehensive healthcare services for veterans living in coastal Mississippi",
+          address: "400 Veterans Avenue, Biloxi, MS 39531",
+          phone: "(228) 523-5000",
+          website: "https://www.va.gov/gulf-coast-health-care/locations/biloxi-va-medical-center/",
+          category: "VA"
+        },
+        {
+          name: "Kosciusko VA Clinic",
+          description: "Primary care and mental health services for veterans in central Mississippi",
+          address: "332 Highway 12 West, Kosciusko, MS 39090",
+          phone: "(601) 362-4471 x5800",
+          website: "https://www.va.gov/jackson-health-care/locations/kosciusko-va-clinic/",
+          category: "Treatment"
+        },
+        {
+          name: "Meridian VA Clinic",
+          description: "Primary care, mental health, and telehealth services for eastern Mississippi veterans",
+          address: "2103 13th Street, Meridian, MS 39301",
+          phone: "(601) 482-3275",
+          website: "https://www.va.gov/jackson-health-care/locations/meridian-va-clinic/",
+          category: "Treatment"
+        },
+        {
+          name: "Greenville VA Clinic",
+          description: "Primary care and mental health services for veterans in the Mississippi Delta",
+          address: "1502 South Colorado Street, Greenville, MS 38703",
+          phone: "(662) 332-9872",
+          website: "https://www.va.gov/jackson-health-care/locations/greenville-va-clinic/",
+          category: "Treatment"
+        },
+        {
+          name: "Jackson Vet Center",
+          description: "Readjustment counseling and outreach services for combat veterans and their families",
+          address: "1755 Lelia Drive, Suite 104, Jackson, MS 39216",
+          phone: "(601) 965-5477",
+          website: "https://www.va.gov/find-locations/facility/vc_0734V",
+          category: "Treatment"
+        },
+        {
+          name: "Mississippi State Veterans Homes",
+          description: "Long-term care facilities specifically for Mississippi veterans",
+          address: "Multiple locations across Mississippi",
+          phone: "(601) 576-4850",
+          website: "https://www.msva.ms.gov/state-veterans-homes",
+          category: "Housing"
+        },
+        {
+          name: "Mississippi Department of Veterans Affairs",
+          description: "State agency providing benefits assistance, education support, and employment resources",
+          address: "P.O. Box 5947, Pearl, MS 39288",
+          phone: "(601) 576-4850",
+          website: "https://www.msva.ms.gov/",
+          category: "Employment"
+        },
+        {
+          name: "Mississippi Veterans Crisis Line",
+          description: "24/7 confidential support for veterans in crisis",
+          address: "Statewide service",
+          phone: "988, then press 1",
+          website: "https://www.veteranscrisisline.net/",
+          category: "Crisis"
         }
       ]
     },
@@ -2512,23 +2752,151 @@ export default function ResourceLocator() {
       resources: [
         {
           name: "Harry S. Truman Memorial Veterans' Hospital",
-          description: "VA healthcare services in Missouri",
+          description: "Primary care and specialty health services including audiology, mental health care, cardiology, surgery, dentistry, neurology, and orthopedics",
           address: "800 Hospital Drive, Columbia, MO 65201",
           phone: "(573) 814-6000",
-          website: "https://www.columbiamo.va.gov/",
+          website: "https://www.va.gov/columbia-missouri-health-care/",
           category: "VA"
+        },
+        {
+          name: "Kansas City VA Medical Center",
+          description: "Comprehensive healthcare services including primary care, specialty care, and mental health services",
+          address: "4801 E. Linwood Boulevard, Kansas City, MO 64128",
+          phone: "(816) 861-4700",
+          website: "https://www.va.gov/kansas-city-health-care/",
+          category: "VA"
+        },
+        {
+          name: "St. Louis VA Health Care System - John Cochran Division",
+          description: "Primary, specialty, and ambulatory care services, including surgery and specialized outpatient services",
+          address: "915 North Grand Boulevard, St. Louis, MO 63106",
+          phone: "(314) 652-4100",
+          website: "https://www.va.gov/st-louis-health-care/locations/john-cochran-division/",
+          category: "VA"
+        },
+        {
+          name: "St. Louis VA Health Care System - Jefferson Barracks Division",
+          description: "Mental health, geriatric, rehabilitation, and long-term care services",
+          address: "1 Jefferson Barracks Drive, St. Louis, MO 63125",
+          phone: "(314) 652-4100",
+          website: "https://www.va.gov/st-louis-health-care/locations/jefferson-barracks-division/",
+          category: "VA"
+        },
+        {
+          name: "Gene Taylor VA Clinic",
+          description: "Primary care and mental health services for veterans in southwest Missouri",
+          address: "600 North Main Street, Mt. Vernon, MO 65712",
+          phone: "(417) 466-4000",
+          website: "https://www.va.gov/fayetteville-arkansas-health-care/locations/gene-taylor-community-based-outpatient-clinic/",
+          category: "Treatment"
+        },
+        {
+          name: "Columbia Vet Center",
+          description: "Readjustment counseling services for combat veterans and their families",
+          address: "4040 Rangeline Street, Suite 105, Columbia, MO 65202",
+          phone: "(573) 814-6206",
+          website: "https://www.va.gov/find-locations/facility/vc_0704V",
+          category: "Treatment"
+        },
+        {
+          name: "St. Louis Veterans Home",
+          description: "Long-term skilled nursing care for Missouri veterans",
+          address: "10600 Lewis & Clark Boulevard, St. Louis, MO 63136",
+          phone: "(314) 340-6389",
+          website: "https://mvc.dps.mo.gov/homes/stlouis.php",
+          category: "Housing"
+        },
+        {
+          name: "Missouri Veterans Commission",
+          description: "State agency providing benefits assistance, employment support, and education resources",
+          address: "205 Jefferson Street, 12th Floor, Jefferson City, MO 65101",
+          phone: "(573) 751-3779",
+          website: "https://mvc.dps.mo.gov/",
+          category: "Employment"
+        },
+        {
+          name: "Missouri Veterans Crisis Line",
+          description: "24/7 confidential support for veterans in crisis",
+          address: "Statewide service",
+          phone: "988, then press 1",
+          website: "https://www.veteranscrisisline.net/",
+          category: "Crisis"
         }
       ]
     },
     "Montana": {
       resources: [
         {
-          name: "VA Montana Health Care System",
-          description: "VA healthcare services in Montana",
-          address: "1900 Williams Street, Fort Harrison, MT 59636",
+          name: "Fort Harrison VA Medical Center",
+          description: "Comprehensive range of health services including primary care, mental health services, and specialty care",
+          address: "3687 Veterans Drive, Fort Harrison, MT 59636",
           phone: "(406) 442-6410",
-          website: "https://www.montana.va.gov/",
+          website: "https://www.va.gov/montana-health-care/",
           category: "VA"
+        },
+        {
+          name: "Benjamin Charles Steele VA Clinic",
+          description: "Primary care, mental health services, and specialty care for veterans in eastern Montana",
+          address: "1766 Majestic Lane, Billings, MT 59102",
+          phone: "(406) 373-3500",
+          website: "https://www.va.gov/montana-health-care/locations/benjamin-charles-steele-va-clinic/",
+          category: "Treatment"
+        },
+        {
+          name: "Anaconda VA Clinic",
+          description: "Primary care and telehealth services for veterans in southwestern Montana",
+          address: "118 E. 7th Street, Anaconda, MT 59711",
+          phone: "(406) 496-3000",
+          website: "https://www.va.gov/montana-health-care/locations/anaconda-va-clinic/",
+          category: "Treatment"
+        },
+        {
+          name: "Bozeman VA Clinic",
+          description: "Primary care and mental health services for veterans in the Gallatin Valley",
+          address: "300 North Willson Avenue, Suite 703G, Bozeman, MT 59715",
+          phone: "(406) 582-5300",
+          website: "https://www.va.gov/montana-health-care/locations/bozeman-va-clinic/",
+          category: "Treatment"
+        },
+        {
+          name: "Great Falls VA Clinic",
+          description: "Primary care, mental health, and select specialty services for central Montana veterans",
+          address: "1417 9th Street South, Suite 200, Great Falls, MT 59405",
+          phone: "(406) 791-3200",
+          website: "https://www.va.gov/montana-health-care/locations/great-falls-va-clinic/",
+          category: "Treatment"
+        },
+        {
+          name: "Missoula VA Clinic",
+          description: "Primary care and mental health services for western Montana veterans",
+          address: "2687 Palmer Street, Suite C, Missoula, MT 59808",
+          phone: "(406) 829-5400",
+          website: "https://www.va.gov/montana-health-care/locations/david-j-thatcher-va-clinic/",
+          category: "Treatment"
+        },
+        {
+          name: "Montana Veterans' Home",
+          description: "Long-term care facility for Montana veterans",
+          address: "400 Veterans Drive, Columbia Falls, MT 59912",
+          phone: "(406) 892-3256",
+          website: "https://dphhs.mt.gov/sltc/homelivingoptions/montanaveteranshomes/index",
+          category: "Housing"
+        },
+        {
+          name: "Montana Veterans Affairs Division",
+          description: "State agency providing benefits assistance, employment services, and education support",
+          address: "1956 Mt. Majo Street, Fort Harrison, MT 59636",
+          phone: "(406) 324-3740",
+          website: "https://montanadma.org/montana-veterans-affairs",
+          category: "Employment"
+        },
+        {
+          name: "Montana Veterans Crisis Line",
+          description: "24/7 confidential support for veterans in crisis",
+          address: "Statewide service",
+          phone: "988, then press 1",
+          website: "https://www.veteranscrisisline.net/",
+          category: "Crisis"
         }
       ]
     },
