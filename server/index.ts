@@ -1,10 +1,43 @@
 import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
+import helmet from "helmet";
 
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+// Security enhancements
+app.use(helmet({
+  contentSecurityPolicy: {
+    directives: {
+      defaultSrc: ["'self'"],
+      scriptSrc: ["'self'", "'unsafe-inline'", "'unsafe-eval'"],
+      styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
+      fontSrc: ["'self'", "https://fonts.gstatic.com"],
+      imgSrc: ["'self'", "data:", "https://*"],
+      connectSrc: ["'self'", "https://*"],
+    },
+  },
+}));
+
+// HTTPS enforcement in production
+app.use((req, res, next) => {
+  if (app.get("env") === "production" && req.headers["x-forwarded-proto"] !== "https") {
+    const host = req.headers.host || '';
+    const url = req.url || '';
+    return res.redirect(301, `https://${host}${url}`);
+  }
+  next();
+});
+
+// HTTP Strict Transport Security
+app.use((req, res, next) => {
+  if (app.get("env") === "production") {
+    res.setHeader("Strict-Transport-Security", "max-age=31536000; includeSubDomains");
+  }
+  next();
+});
 
 app.use((req, res, next) => {
   const start = Date.now();
@@ -59,7 +92,7 @@ app.use((req, res, next) => {
   // ALWAYS serve the app on port 5000
   // this serves both the API and the client.
   // It is the only port that is not firewalled.
-  const port = process.env.PORT || 5000;
+  const port = parseInt(process.env.PORT || "5000", 10);
   server.listen(port, "0.0.0.0", () => {
     log(`serving on port ${port}`);
   });
