@@ -79,9 +79,9 @@ export default function ResourceLocator() {
         {
           name: "Foreign Medical Program (FMP) - Philippines",
           description: "Provides healthcare benefits to veterans with VA-rated, service-connected conditions residing in the Philippines",
-          address: "P.O. Box 469061, Denver, CO 80246-9061, USA",
-          phone: "877-345-8179 (U.S./Canada)",
-          website: "https://www.va.gov/communitycare/programs/veterans/fmp/",
+          address: "PO Box 200, Spring City, PA 19475, USA",
+          phone: "Main: +1-833-930-0816 or U.S./Canada Toll-Free: 877-345-8179",
+          website: "https://www.va.gov/health-care/foreign-medical-program/",
           category: "VA"
         },
         {
@@ -115,9 +115,9 @@ export default function ResourceLocator() {
         {
           name: "Foreign Medical Program (FMP) - Germany",
           description: "Provides healthcare benefits to veterans with VA-rated, service-connected conditions residing in Germany",
-          address: "P.O. Box 469061, Denver, CO 80246-9061, USA",
-          phone: "Germany: 0800-1800011",
-          website: "https://www.va.gov/communitycare/programs/veterans/fmp/",
+          address: "PO Box 200, Spring City, PA 19475, USA",
+          phone: "Main: +1-833-930-0816 or Germany Toll-Free: 0800-1800-011",
+          website: "https://www.va.gov/health-care/foreign-medical-program/",
           category: "VA"
         },
         {
@@ -539,10 +539,10 @@ export default function ResourceLocator() {
         {
           name: "Foreign Medical Program (FMP) - Vietnam",
           description: "Reimburses medical services related to VA-rated service-connected conditions",
-          address: "N/A - U.S. based program",
-          phone: "+1 833 930 0816",
+          address: "PO Box 200, Spring City, PA 19475, USA",
+          phone: "+1-833-930-0816",
           website: "https://www.va.gov/health-care/foreign-medical-program/",
-          category: "Treatment"
+          category: "VA"
         },
         {
           name: "Family Medical Practice Vietnam",
@@ -641,10 +641,10 @@ export default function ResourceLocator() {
     "New Zealand": {
       resources: [
         {
-          name: "Auckland Veterans Support Center",
-          description: "FMP claims assistance and medical referrals",
-          address: "Queen Street, Auckland, New Zealand",
-          phone: "+64 9 379 9779",
+          name: "Foreign Medical Program (FMP) - New Zealand",
+          description: "Provides healthcare benefits to veterans with VA-rated, service-connected conditions residing in New Zealand",
+          address: "PO Box 200, Spring City, PA 19475, USA",
+          phone: "Main: +1-833-930-0816 or Australia Toll-Free: 1-800-354-965",
           website: "https://www.va.gov/health-care/foreign-medical-program/",
           category: "VA"
         },
@@ -669,10 +669,10 @@ export default function ResourceLocator() {
     "France": {
       resources: [
         {
-          name: "Veterans Administration Support - Paris",
-          description: "FMP claims assistance and referrals",
-          address: "2 Avenue Gabriel, 75008 Paris, France",
-          phone: "+33 1 43 12 22 22",
+          name: "Foreign Medical Program (FMP) - France",
+          description: "Provides healthcare benefits to veterans with VA-rated, service-connected conditions residing in France",
+          address: "PO Box 200, Spring City, PA 19475, USA",
+          phone: "Main: +1-833-930-0816 or Germany Toll-Free: 0800-1800-011",
           website: "https://www.va.gov/health-care/foreign-medical-program/",
           category: "VA"
         },
