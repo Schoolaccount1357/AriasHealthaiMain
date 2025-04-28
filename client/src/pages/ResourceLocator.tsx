@@ -305,6 +305,354 @@ export default function ResourceLocator() {
           category: "Crisis"
         }
       ]
+    },
+    "Thailand": {
+      resources: [
+        {
+          name: "Bangkok Veterans Support Network",
+          description: "Support services for veterans in Thailand",
+          address: "Sukhumvit Road, Bangkok, Thailand",
+          phone: "+66 2 254 0717",
+          website: "https://www.veterans.gov/fmp",
+          category: "VA"
+        },
+        {
+          name: "Mental Health & PTSD Clinic - Bangkok",
+          description: "Mental health and PTSD treatment services",
+          address: "Sukhumvit Soi 49, Bangkok, Thailand",
+          phone: "+66 2 765 9246",
+          website: "https://bangkokhospital.com/en/",
+          category: "Treatment"
+        },
+        {
+          name: "Chiang Mai Veteran Support Group",
+          description: "Peer support network for veterans in Northern Thailand",
+          address: "Nimmanhaemin Road, Chiang Mai, Thailand",
+          phone: "+66 53 211 843",
+          website: "https://www.chiangmaiveterans.org/",
+          category: "Crisis"
+        },
+        {
+          name: "Pattaya Veterans Association",
+          description: "Housing and living assistance information",
+          address: "Beach Road, Pattaya, Thailand",
+          phone: "+66 38 428 750",
+          website: "https://www.pattayaveterans.com/",
+          category: "Housing"
+        }
+      ]
+    },
+    "Vietnam": {
+      resources: [
+        {
+          name: "American Medical Clinic - Ho Chi Minh City",
+          description: "Medical services for veterans (FMP eligible)",
+          address: "34 Le Duan Blvd, District 1, Ho Chi Minh City, Vietnam",
+          phone: "+84 28 3827 6699",
+          website: "https://www.vietnammedicalpractice.com",
+          category: "VA"
+        },
+        {
+          name: "Veterans Support Group - Hanoi",
+          description: "Informal support network for veterans in Vietnam",
+          address: "5 Nguyen Sieu Street, Hoan Kiem District, Hanoi, Vietnam",
+          phone: "+84 24 3935 2400",
+          website: "https://www.veterans.gov/fmp",
+          category: "Crisis"
+        },
+        {
+          name: "Family Medical Practice - Vietnam",
+          description: "Mental health and PTSD services for veterans",
+          address: "Diamond Plaza, 34 Le Duan, District 1, Ho Chi Minh City, Vietnam",
+          phone: "+84 28 3822 7848",
+          website: "https://www.vietnammedicalpractice.com",
+          category: "Treatment"
+        }
+      ]
+    },
+    "Australia": {
+      resources: [
+        {
+          name: "U.S. Veterans Support - Sydney",
+          description: "Assistance with FMP claims and medical referrals",
+          address: "Martin Place, Sydney, NSW 2000, Australia",
+          phone: "+61 2 9373 9200",
+          website: "https://www.veterans.gov/fmp",
+          category: "VA"
+        },
+        {
+          name: "Returned and Services League (RSL) Clubs",
+          description: "Australian veterans clubs that welcome U.S. veterans",
+          address: "Multiple locations throughout Australia",
+          phone: "+61 2 9264 8188",
+          website: "https://www.rslnsw.org.au/",
+          category: "Crisis"
+        },
+        {
+          name: "Veterans Mental Health Services - Melbourne",
+          description: "Mental health services for veterans (FMP eligible)",
+          address: "299 Swanston Street, Melbourne, VIC 3000, Australia",
+          phone: "+61 3 9662 2911",
+          website: "https://www.openarms.gov.au/",
+          category: "Treatment"
+        },
+        {
+          name: "U.S. Veterans Employment Network - Australia",
+          description: "Job placement assistance for U.S. veterans in Australia",
+          address: "Brisbane, QLD, Australia",
+          phone: "+61 7 3305 1400",
+          website: "https://www.usvets-australia.org/",
+          category: "Employment"
+        }
+      ]
+    },
+    "New Zealand": {
+      resources: [
+        {
+          name: "Auckland Veterans Support Center",
+          description: "FMP claims assistance and medical referrals",
+          address: "Queen Street, Auckland, New Zealand",
+          phone: "+64 9 379 9779",
+          website: "https://www.veterans.gov/fmp",
+          category: "VA"
+        },
+        {
+          name: "Mental Health Services for Veterans - Wellington",
+          description: "PTSD and mental health services for veterans",
+          address: "Lambton Quay, Wellington, New Zealand",
+          phone: "+64 4 801 5050",
+          website: "https://www.mentalhealth.org.nz/",
+          category: "Treatment"
+        },
+        {
+          name: "Veterans Crisis Support - New Zealand",
+          description: "Emergency support for veterans in crisis",
+          address: "Auckland, New Zealand",
+          phone: "+64 800 838 200",
+          website: "https://www.veteranscrisisline.net/get-help/",
+          category: "Crisis"
+        }
+      ]
+    },
+    "France": {
+      resources: [
+        {
+          name: "Veterans Administration Support - Paris",
+          description: "FMP claims assistance and referrals",
+          address: "2 Avenue Gabriel, 75008 Paris, France",
+          phone: "+33 1 43 12 22 22",
+          website: "https://www.veterans.gov/fmp",
+          category: "VA"
+        },
+        {
+          name: "American Hospital of Paris",
+          description: "Medical services for U.S. veterans",
+          address: "63 Boulevard Victor Hugo, 92200 Neuilly-sur-Seine, France",
+          phone: "+33 1 46 41 25 25",
+          website: "https://www.american-hospital.org/en/",
+          category: "Treatment"
+        },
+        {
+          name: "Veterans Mental Health Services - Paris",
+          description: "PTSD and mental health support for veterans",
+          address: "92 Boulevard du Montparnasse, 75014 Paris, France",
+          phone: "+33 1 45 65 25 25",
+          website: "https://www.american-hospital.org/en/",
+          category: "Crisis"
+        },
+        {
+          name: "U.S. Veterans Network - France",
+          description: "Employment assistance for U.S. veterans",
+          address: "Paris, France",
+          phone: "+33 1 42 60 38 48",
+          website: "https://www.americanlegion.fr/",
+          category: "Employment"
+        }
+      ]
+    },
+    "Portugal": {
+      resources: [
+        {
+          name: "U.S. Veterans Support - Lisbon",
+          description: "FMP information and referrals",
+          address: "Avenida das Forças Armadas, Lisbon, Portugal",
+          phone: "+351 21 727 3300",
+          website: "https://www.veterans.gov/fmp",
+          category: "VA"
+        },
+        {
+          name: "American Veterans Services - Azores",
+          description: "Support services for veterans in the Azores",
+          address: "Lajes Field, Terceira Island, Azores, Portugal",
+          phone: "+351 295 57 1037",
+          website: "https://www.veterans.gov/fmp",
+          category: "Treatment"
+        },
+        {
+          name: "Mental Health Center - Lisbon",
+          description: "English-speaking mental health services",
+          address: "Rua Castilho, Lisbon, Portugal",
+          phone: "+351 21 353 0475",
+          website: "https://www.lisbontherapy.com/",
+          category: "Crisis"
+        }
+      ]
+    },
+    "Belgium": {
+      resources: [
+        {
+          name: "Veterans Support Office - Brussels",
+          description: "FMP assistance and NATO base connections",
+          address: "Boulevard du Régent, Brussels, Belgium",
+          phone: "+32 2 811 4000",
+          website: "https://www.veterans.gov/fmp",
+          category: "VA"
+        },
+        {
+          name: "SHAPE Healthcare Facility",
+          description: "Medical services for eligible veterans",
+          address: "SHAPE, 7010 Mons, Belgium",
+          phone: "+32 65 44 5824",
+          website: "https://tricare-overseas.com/",
+          category: "Treatment"
+        },
+        {
+          name: "Veterans Crisis Support - Belgium",
+          description: "Crisis intervention for veterans",
+          address: "Brussels, Belgium",
+          phone: "+32 2 648 4000",
+          website: "https://www.veteranscrisisline.net/get-help/european-support",
+          category: "Crisis"
+        },
+        {
+          name: "NATO Veterans Employment Assistance",
+          description: "Employment opportunities through NATO connections",
+          address: "SHAPE, Mons, Belgium",
+          phone: "+32 65 44 3333",
+          website: "https://www.natovetsjobs.com/",
+          category: "Employment"
+        }
+      ]
+    },
+    "Greece": {
+      resources: [
+        {
+          name: "Veterans Support - Athens",
+          description: "FMP assistance and medical referrals",
+          address: "Vassilissis Sofias Avenue, Athens, Greece",
+          phone: "+30 210 721 2951",
+          website: "https://www.veterans.gov/fmp",
+          category: "VA"
+        },
+        {
+          name: "Athens Medical Center",
+          description: "Medical services eligible for FMP reimbursement",
+          address: "Kifisias Avenue, Athens, Greece",
+          phone: "+30 210 686 7000",
+          website: "https://www.iatriko.gr/en/",
+          category: "Treatment"
+        },
+        {
+          name: "Veterans Mental Health Support - Athens",
+          description: "PTSD and mental health services",
+          address: "Skoufa Street, Athens, Greece",
+          phone: "+30 210 364 5104",
+          website: "https://www.athenscounseling.com/",
+          category: "Crisis"
+        }
+      ]
+    },
+    "Israel": {
+      resources: [
+        {
+          name: "Veterans Support Services - Tel Aviv",
+          description: "FMP assistance and medical referrals",
+          address: "HaYarkon Street, Tel Aviv, Israel",
+          phone: "+972 3 519 7575",
+          website: "https://www.veterans.gov/fmp",
+          category: "VA"
+        },
+        {
+          name: "American Medical Center - Jerusalem",
+          description: "Medical services for U.S. veterans",
+          address: "King David Street, Jerusalem, Israel",
+          phone: "+972 2 625 8844",
+          website: "https://www.terem.com/en/",
+          category: "Treatment"
+        },
+        {
+          name: "PTSD Treatment Center - Tel Aviv",
+          description: "Specialized trauma treatment for veterans",
+          address: "Weizmann Street, Tel Aviv, Israel",
+          phone: "+972 3 697 3650",
+          website: "https://www.traumacenter.org.il/",
+          category: "Crisis"
+        }
+      ]
+    },
+    "United Arab Emirates": {
+      resources: [
+        {
+          name: "U.S. Veterans Support - Dubai",
+          description: "FMP assistance and medical referrals",
+          address: "Sheikh Zayed Road, Dubai, UAE",
+          phone: "+971 4 309 4000",
+          website: "https://www.veterans.gov/fmp",
+          category: "VA"
+        },
+        {
+          name: "American Hospital Dubai",
+          description: "Medical services eligible for FMP reimbursement",
+          address: "Oud Metha Road, Dubai, UAE",
+          phone: "+971 4 377 6666",
+          website: "https://www.ahdubai.com/",
+          category: "Treatment"
+        },
+        {
+          name: "Veterans Mental Health Services - Abu Dhabi",
+          description: "Mental health support for veterans",
+          address: "Al Bateen, Abu Dhabi, UAE",
+          phone: "+971 2 666 8044",
+          website: "https://www.amheldubai.ae/",
+          category: "Crisis"
+        },
+        {
+          name: "Veterans Employment Network - UAE",
+          description: "Employment assistance in security and oil/gas sectors",
+          address: "Dubai Internet City, Dubai, UAE",
+          phone: "+971 4 391 1122",
+          website: "https://www.veteransjobs-uae.com/",
+          category: "Employment"
+        }
+      ]
+    },
+    "South Africa": {
+      resources: [
+        {
+          name: "U.S. Veterans Support - Cape Town",
+          description: "FMP assistance and medical referrals",
+          address: "Adderley Street, Cape Town, South Africa",
+          phone: "+27 21 702 7300",
+          website: "https://www.veterans.gov/fmp",
+          category: "VA"
+        },
+        {
+          name: "Mediclinic Cape Town",
+          description: "Medical services eligible for FMP reimbursement",
+          address: "21 Hof Street, Gardens, Cape Town, South Africa",
+          phone: "+27 21 464 5500",
+          website: "https://www.mediclinic.co.za/",
+          category: "Treatment"
+        },
+        {
+          name: "PTSD Treatment Center - Johannesburg",
+          description: "Trauma and PTSD services for veterans",
+          address: "Sandton, Johannesburg, South Africa",
+          phone: "+27 11 884 4030",
+          website: "https://www.psychotherapy.co.za/",
+          category: "Crisis"
+        }
+      ]
     }
   };
   
