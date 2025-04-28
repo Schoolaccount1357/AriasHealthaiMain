@@ -1795,7 +1795,7 @@ export default function ResourceLocator() {
           description: "Fully integrated federal health care facility serving both Veterans and active-duty service members",
           address: "3001 Green Bay Road, North Chicago, IL 60064",
           phone: "(847) 688-1900",
-          website: "https://www.va.gov/lovell-fhcc-health-care/",
+          website: "https://www.va.gov/lovell-federal-health-care-va/",
           category: "VA"
         },
         {
@@ -1892,23 +1892,127 @@ export default function ResourceLocator() {
       resources: [
         {
           name: "Richard L. Roudebush VA Medical Center",
-          description: "VA healthcare services in Indiana",
-          address: "1481 West 10th Street, Indianapolis, IN 46202",
+          description: "Primary VA healthcare facility in Indianapolis",
+          address: "1481 W. 10th Street, Indianapolis, IN 46202",
           phone: "(317) 554-0000",
-          website: "https://www.indianapolis.va.gov/",
+          website: "https://www.va.gov/indiana-health-care/locations/richard-l-roudebush-va-medical-center/",
           category: "VA"
+        },
+        {
+          name: "VA Northern Indiana Health Care System – Fort Wayne Campus",
+          description: "Comprehensive healthcare services for veterans in northern Indiana",
+          address: "2121 Lake Ave, Fort Wayne, IN 46805",
+          phone: "(260) 426-5431",
+          website: "https://www.va.gov/northern-indiana-health-care/locations/fort-wayne-va-medical-center/",
+          category: "VA"
+        },
+        {
+          name: "VA Northern Indiana Health Care System – Marion Campus",
+          description: "Medical, surgical, and mental health services for veterans",
+          address: "1700 E. 38th Street, Marion, IN 46953",
+          phone: "(765) 674-3321",
+          website: "https://www.va.gov/northern-indiana-health-care/locations/marion-va-medical-center/",
+          category: "VA"
+        },
+        {
+          name: "Adam Benjamin Jr. Outpatient Clinic",
+          description: "Community-based outpatient care for veterans in Crown Point area",
+          address: "9330 Broadway, Crown Point, IN 46307",
+          phone: "(219) 662-5000",
+          website: "https://www.va.gov/northern-indiana-health-care/locations/crown-point-va-clinic/",
+          category: "Treatment"
+        },
+        {
+          name: "Bloomington VA Clinic",
+          description: "Primary care and mental health services",
+          address: "455 S. Landmark Avenue, Bloomington, IN 47403",
+          phone: "(812) 336-5723",
+          website: "https://www.va.gov/indiana-health-care/locations/bloomington-va-clinic/",
+          category: "Treatment"
+        },
+        {
+          name: "Hoosier Veterans Assistance Foundation",
+          description: "Transitional housing and support services for homeless veterans",
+          address: "964 N. Pennsylvania St., Indianapolis, IN 46204",
+          phone: "(317) 951-0688",
+          website: "https://hvafofindiana.org/",
+          category: "Housing"
+        },
+        {
+          name: "INVET's Veteran Employment Program",
+          description: "Career counseling, job placement, and employment assistance",
+          address: "777 N. Meridian St., Indianapolis, IN 46204",
+          phone: "(844) 480-0009",
+          website: "https://www.in.gov/dva/veteran-services/employment/",
+          category: "Employment"
+        },
+        {
+          name: "Indiana Veterans Crisis Response Team",
+          description: "24/7 crisis intervention and emergency mental health support",
+          address: "Statewide service",
+          phone: "988, then press 1",
+          website: "https://www.veteranscrisisline.net/",
+          category: "Crisis"
         }
       ]
     },
     "Iowa": {
       resources: [
         {
-          name: "Iowa City VA Health Care System",
-          description: "VA healthcare services in Iowa",
+          name: "Iowa City VA Medical Center",
+          description: "Comprehensive medical, surgical, and mental health services for veterans in eastern Iowa",
           address: "601 Highway 6 West, Iowa City, IA 52246",
           phone: "(319) 338-0581",
-          website: "https://www.iowacity.va.gov/",
+          website: "https://www.va.gov/iowa-city-health-care/locations/iowa-city-va-medical-center/",
           category: "VA"
+        },
+        {
+          name: "Des Moines VA Medical Center",
+          description: "Primary and specialty care services for veterans in central Iowa",
+          address: "3600 30th Street, Des Moines, IA 50310",
+          phone: "(515) 699-5999",
+          website: "https://www.va.gov/central-iowa-health-care/locations/des-moines-va-medical-center/",
+          category: "VA"
+        },
+        {
+          name: "Cedar Rapids VA Clinic",
+          description: "Primary care and mental health services for veterans in the Cedar Rapids area",
+          address: "2230 Wiley Blvd SW, Cedar Rapids, IA 52404",
+          phone: "(319) 369-3500",
+          website: "https://www.va.gov/iowa-city-health-care/locations/cedar-rapids-va-clinic/",
+          category: "Treatment"
+        },
+        {
+          name: "Waterloo VA Clinic",
+          description: "Primary care, mental health, and specialty services",
+          address: "1515 Black Hawk Village Dr, Waterloo, IA 50702",
+          phone: "(319) 272-2323",
+          website: "https://www.va.gov/iowa-city-health-care/locations/waterloo-va-clinic/",
+          category: "Treatment"
+        },
+        {
+          name: "Iowa Veterans Home",
+          description: "Long-term care and residential services for Iowa veterans",
+          address: "1301 Summit St, Marshalltown, IA 50158",
+          phone: "(641) 752-1501",
+          website: "https://ivh.iowa.gov/",
+          category: "Housing"
+        },
+        {
+          name: "Iowa Workforce Development Veterans Services",
+          description: "Employment and training services specifically for veterans",
+          address: "1000 E Grand Ave, Des Moines, IA 50319",
+          phone: "(515) 281-5387",
+          website: "https://www.iowaworkforcedevelopment.gov/veteran-services",
+          category: "Employment"
+        },
+        {
+          name: "Iowa Veterans Crisis Line",
+          description: "24/7 confidential support for veterans in crisis",
+          address: "Statewide service",
+          phone: "988, then press 1",
+          website: "https://www.veteranscrisisline.net/",
+          category: "Crisis"
         }
       ]
     },
