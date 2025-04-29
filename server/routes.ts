@@ -370,6 +370,23 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
   
+  // API endpoint for getting detailed bot activity list with severity
+  app.get("/api/security/bot-activity-list", async (req: Request, res: Response) => {
+    try {
+      const limit = req.query.limit ? parseInt(req.query.limit as string) : 20;
+      const botList = await storage.getBotActivityList(limit);
+      return res.status(200).json({
+        message: "Detailed bot activity list retrieved successfully",
+        data: botList
+      });
+    } catch (error) {
+      console.error("Error getting detailed bot activity list:", error);
+      return res.status(500).json({
+        message: "An error occurred while retrieving detailed bot activity list"
+      });
+    }
+  });
+  
   // API endpoint for getting country origin statistics from security logs
   app.get("/api/security/country-origins", async (_req: Request, res: Response) => {
     try {

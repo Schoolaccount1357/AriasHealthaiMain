@@ -60,7 +60,17 @@ export interface IStorage {
   getUnresolvedEvents(): Promise<SecurityLog[]>;
   resolveSecurityEvent(id: number, resolvedBy: number, notes?: string): Promise<SecurityLog | undefined>;
   getSecurityEventsStats(): Promise<{ eventType: string; count: number }[]>;
-  getBotActivityStats(): Promise<{ botCategory: string; count: number }[]>;
+  getBotActivityStats(): Promise<{ botCategory: string; count: number; severity: string; isSuspicious: boolean }[]>;
+  getBotActivityList(limit?: number): Promise<{
+    id: number;
+    timestamp: Date;
+    botCategory: string;
+    severity: string;
+    ipAddress: string;
+    countryCode: string | null;
+    userAgent: string | null;
+    isSuspicious: boolean;
+  }[]>;
   getCountryOriginStats(): Promise<{ countryCode: string; countryName: string; count: number }[]>;
   getTrendingIPs(limit?: number): Promise<{ ipAddress: string; count: number; lastSeen: Date }[]>;
   
@@ -409,11 +419,12 @@ export class DatabaseStorage implements IStorage {
   
   // New methods for enhanced security logging and reporting
   
-  async getBotActivityStats(): Promise<{ botCategory: string; count: number }[]> {
+  async getBotActivityStats(): Promise<{ botCategory: string; count: number; severity: string; isSuspicious: boolean }[]> {
     const result = await db
       .select({
         botCategory: securityLogs.eventType,
         count: sql<number>`count(*)`,
+        severity: securityLogs.severity,
       })
       .from(securityLogs)
       .where(
@@ -423,10 +434,58 @@ export class DatabaseStorage implements IStorage {
           like(securityLogs.eventType, '%SCRAPER%')
         )
       )
-      .groupBy(securityLogs.eventType)
+      .groupBy(securityLogs.eventType, securityLogs.severity)
       .orderBy(sql`count(*) desc`);
     
-    return result;
+    // Add isSuspicious flag based on event type and severity
+    return result.map(item => ({
+      ...item,
+      isSuspicious: item.botCategory.includes('SUSPICIOUS') || 
+                    item.severity === 'HIGH' || 
+                    item.severity === 'CRITICAL' ||
+                    (item.botCategory.includes('BOT') && !item.botCategory.includes('LEGITIMATE'))
+    }));
+  }
+  
+  async getBotActivityList(limit: number = 20): Promise<{
+    id: number;
+    timestamp: Date;
+    botCategory: string;
+    severity: string;
+    ipAddress: string;
+    countryCode: string | null;
+    userAgent: string | null;
+    isSuspicious: boolean;
+  }[]> {
+    const result = await db
+      .select({
+        id: securityLogs.id,
+        timestamp: securityLogs.timestamp,
+        botCategory: securityLogs.eventType,
+        severity: securityLogs.severity,
+        ipAddress: securityLogs.ipAddress,
+        countryCode: securityLogs.countryCode,
+        userAgent: securityLogs.userAgent,
+      })
+      .from(securityLogs)
+      .where(
+        or(
+          like(securityLogs.eventType, '%BOT%'),
+          like(securityLogs.eventType, '%AUTOMATION%'),
+          like(securityLogs.eventType, '%SCRAPER%')
+        )
+      )
+      .orderBy(desc(securityLogs.timestamp))
+      .limit(limit);
+    
+    // Add isSuspicious flag
+    return result.map(item => ({
+      ...item,
+      isSuspicious: item.botCategory.includes('SUSPICIOUS') || 
+                    item.severity === 'HIGH' || 
+                    item.severity === 'CRITICAL' ||
+                    (item.botCategory.includes('BOT') && !item.botCategory.includes('LEGITIMATE'))
+    }));
   }
   
   async getCountryOriginStats(): Promise<{ countryCode: string; countryName: string; count: number }[]> {
