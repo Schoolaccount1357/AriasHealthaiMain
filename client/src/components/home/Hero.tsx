@@ -2,6 +2,13 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 
 export function Hero() {
+  const scrollToEnrollmentForm = () => {
+    const enrollmentFormSection = document.getElementById('enrollment-form');
+    if (enrollmentFormSection) {
+      enrollmentFormSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="mb-12">
       <div className="bg-[#141e2f] rounded-lg overflow-hidden shadow-lg">
@@ -15,16 +22,14 @@ export function Hero() {
             </p>
             <div className="space-y-3 md:space-y-4">
               <Button 
-                asChild
+                onClick={scrollToEnrollmentForm}
                 className="bg-[#3e64dd] text-white hover:bg-[#2a4bba] transition-all duration-300 w-full py-6 sm:py-4 sm:w-auto relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98]"
                 size="lg"
               >
-                <Link href="#enrollment-form" className="flex items-center justify-center">
-                  <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
-                  <span className="relative z-10">
-                    Join the waitlist below
-                  </span>
-                </Link>
+                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
+                <span className="relative z-10">
+                  Join the waitlist below
+                </span>
               </Button>
 
               <div className="mt-3 md:mt-4">

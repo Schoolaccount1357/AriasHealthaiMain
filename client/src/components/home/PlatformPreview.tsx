@@ -118,7 +118,15 @@ export function PlatformPreview() {
       
       <div className="mt-8 text-center">
         <p className="text-sm text-gray-500 mb-4">Coming soon - join our waitlist to be the first to experience the future of veteran mental health support</p>
-        <Button className="bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800">
+        <Button 
+          className="bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800"
+          onClick={() => {
+            const enrollmentFormSection = document.getElementById('enrollment-form');
+            if (enrollmentFormSection) {
+              enrollmentFormSection.scrollIntoView({ behavior: 'smooth' });
+            }
+          }}
+        >
           Join the Waitlist
         </Button>
       </div>
