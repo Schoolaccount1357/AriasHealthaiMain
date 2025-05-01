@@ -510,7 +510,9 @@ export default function Resources() {
                             >
                               {resource.text}
                             </button>
-                          ) : 'Text Available'}
+                          ) : (
+                            <span>Text Available</span>
+                          )}
                         </p>
                       )}
                     </div>
