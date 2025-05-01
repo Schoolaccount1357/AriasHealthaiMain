@@ -400,26 +400,103 @@ export default function Resources() {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {resourceCategories.find(category => category.title === "International Resources")?.resources.map((resource, resourceIndex) => (
-                  <div key={resourceIndex} className="border rounded-md p-4 hover:shadow-md transition-shadow bg-white/50">
-                    <h3 className="font-semibold mb-1">{resource.name}</h3>
-                    <CardDescription className="mb-2">{resource.description}</CardDescription>
-                    <div className="text-sm space-y-1">
-                      {resource.phone && (
-                        <p>
-                          📞{' '}
-                          <button 
-                            onClick={() => {
-                              const phoneNumber = resource.phone?.split(' ')[0].replace(/-/g, '');
-                              trackResourceClick("call", () => window.location.href = `tel:${phoneNumber}`);
-                            }}
-                            className="text-[#3e64dd] hover:underline focus:outline-none"
-                          >
-                            {resource.phone}
-                          </button>
-                        </p>
-                      )}
+            {/* FMP Detailed Section */}
+            <div className="mb-8 bg-white p-6 rounded-lg shadow-md border border-gray-100">
+              <h3 className="text-xl font-bold mb-4 text-[#003366] flex items-center gap-2">
+                <Globe className="h-6 w-6 text-[#3e64dd]" />
+                Foreign Medical Program (FMP)
+              </h3>
+              <p className="mb-4">
+                The FMP is a U.S. Department of Veterans Affairs program that provides healthcare benefits 
+                for eligible veterans with service-connected conditions living or traveling abroad.
+              </p>
+              <div className="space-y-2">
+                <div className="flex items-start">
+                  <span className="font-bold mr-2">📞 U.S. Toll-Free:</span>
+                  <button 
+                    onClick={() => trackResourceClick("call", () => window.location.href = "tel:18773458179")}
+                    className="text-[#3e64dd] hover:underline"
+                  >
+                    1-877-345-8179
+                  </button>
+                </div>
+                <div className="flex items-start">
+                  <span className="font-bold mr-2">📞 International:</span>
+                  <button 
+                    onClick={() => trackResourceClick("call", () => window.location.href = "tel:+13033317590")}
+                    className="text-[#3e64dd] hover:underline"
+                  >
+                    +1-303-331-7590
+                  </button>
+                </div>
+                <div className="flex items-start">
+                  <span className="font-bold mr-2">📧 Email:</span>
+                  <a 
+                    href="mailto:vhacofmp@va.gov" 
+                    className="text-[#3e64dd] hover:underline"
+                    onClick={() => trackResourceClick("website", () => {})}
+                  >
+                    vhacofmp@va.gov
+                  </a>
+                </div>
+                <div className="flex items-start">
+                  <span className="font-bold mr-2">📄 Enrollment Form:</span>
+                  <a 
+                    href="https://www.va.gov/vaforms/medical/pdf/10-7959f-1.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#3e64dd] hover:underline"
+                    onClick={() => trackResourceClick("website", () => {})}
+                  >
+                    VA Form 10-7959f-1 (PDF)
+                  </a>
+                </div>
+                <div className="flex items-start">
+                  <span className="font-bold mr-2">🌐 Official Website:</span>
+                  <a 
+                    href="https://www.va.gov/health-care/foreign-medical-program/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#3e64dd] hover:underline"
+                    onClick={() => trackResourceClick("website", () => {})}
+                  >
+                    Visit FMP Site
+                  </a>
+                </div>
+              </div>
+              <div className="mt-4 pt-4 border-t border-gray-200">
+                <h4 className="font-bold text-gray-700 mb-2">📬 Mailing Address:</h4>
+                <p className="text-gray-600">
+                  Foreign Medical Program<br />
+                  VHA Office of Community Care<br />
+                  PO Box 469061<br />
+                  Denver, CO 80246-9061, USA
+                </p>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {resourceCategories.find(category => category.title === "International Resources")?.resources
+                .filter(resource => resource.name !== "Foreign Medical Program (FMP)") // Filter out the FMP as we've added it separately
+                .map((resource, resourceIndex) => (
+                <div key={resourceIndex} className="border rounded-md p-4 hover:shadow-md transition-shadow bg-white/50">
+                  <h3 className="font-semibold mb-1">{resource.name}</h3>
+                  <CardDescription className="mb-2">{resource.description}</CardDescription>
+                  <div className="text-sm space-y-1">
+                    {resource.phone && (
+                      <p>
+                        📞{' '}
+                        <button 
+                          onClick={() => {
+                            const phoneNumber = resource.phone?.split(' ')[0].replace(/-/g, '');
+                            trackResourceClick("call", () => window.location.href = `tel:${phoneNumber}`);
+                          }}
+                          className="text-[#3e64dd] hover:underline focus:outline-none"
+                        >
+                          {resource.phone}
+                        </button>
+                      </p>
+                    )}
                       {'text' in resource && resource.text && (
                         <p>
                           ✉️{' '}
