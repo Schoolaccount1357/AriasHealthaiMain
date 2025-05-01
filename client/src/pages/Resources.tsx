@@ -171,7 +171,7 @@ export default function Resources() {
         {
           name: "Foreign Medical Program (FMP)",
           description: "VA program that provides healthcare benefits to veterans with service-connected conditions living or traveling abroad",
-          website: "https://www.va.gov/communitycare/programs/veterans/fmp/",
+          website: "https://www.va.gov/health-care/foreign-medical-program/",
           phone: "1-877-345-8179"
         },
         {
