@@ -18,7 +18,7 @@ export function Hero() {
               Stay Connected. Stay Strong.
             </h1>
             <p className="text-gray-300 mb-4 md:mb-6 text-base md:text-lg">
-              A new kind of support for veterans and civilians in recovery.
+              A new kind of support for veterans and service members in transition.
             </p>
             <div className="space-y-3 md:space-y-4">
               <Button 
