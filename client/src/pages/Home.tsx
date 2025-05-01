@@ -18,6 +18,14 @@ export default function Home() {
       <Header />
       
       <main className="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Top heading and description */}
+        <div className="mb-8">
+          <h1 className="text-3xl font-bold mb-4 text-center text-gradient">Mental Health, Reimagined for Veterans</h1>
+          <p className="mb-6 text-lg text-center max-w-4xl mx-auto">
+            AriasHealth.ai leverages cutting-edge artificial intelligence to create a personalized mental health experience built specifically for veterans. Our platform provides peer-to-peer connection with those who truly understand your experiences.
+          </p>
+        </div>
+
         <Hero />
         
         {/* Crisis resources removed from main content */}

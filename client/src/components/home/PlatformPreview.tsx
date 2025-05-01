@@ -35,11 +35,7 @@ export function PlatformPreview() {
 
   return (
     <section className="mb-12 mt-6">
-      <h2 className="text-3xl font-bold mb-8 text-center text-gradient">Mental Health, Reimagined for Veterans</h2>
-      
-      <p className="mb-8 text-lg text-center max-w-4xl mx-auto">
-        AriasHealth.ai leverages cutting-edge artificial intelligence to create a personalized mental health experience built specifically for veterans. Our platform provides peer-to-peer connection with those who truly understand your experiences.
-      </p>
+      <h2 className="text-3xl font-bold mb-8 text-center text-gradient">Platform Preview</h2>
       
       <h3 className="text-xl font-semibold mb-4">Platform Features</h3>
       <div className="grid md:grid-cols-2 gap-8">
