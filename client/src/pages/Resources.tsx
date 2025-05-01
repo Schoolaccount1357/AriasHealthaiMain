@@ -417,7 +417,7 @@ export default function Resources() {
                 <div className="flex items-start">
                   <span className="font-bold mr-2">📄 Enrollment Form:</span>
                   <a 
-                    href="https://www.va.gov/vaforms/medical/pdf/10-7959f-1.pdf"
+                    href="https://www.va.gov/vaforms/medical/pdf/VA%20Form%2010-7959f-1.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-[#3e64dd] hover:underline"
