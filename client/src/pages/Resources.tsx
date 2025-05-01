@@ -163,12 +163,6 @@ export default function Resources() {
       icon: <Globe className="h-6 w-6 text-[#3e64dd]" />,
       resources: [
         {
-          name: "Philippines - Manila VA Clinic",
-          description: "The only full VA clinic outside U.S. territories - accepts VA insurance",
-          website: "https://www.va.gov/manila-philippines-health-care/",
-          phone: "+63 (02) 8396-3616"
-        },
-        {
           name: "Foreign Medical Program (FMP)",
           description: "VA program that provides healthcare benefits to veterans with service-connected conditions living or traveling abroad",
           website: "https://www.va.gov/health-care/foreign-medical-program/",
@@ -178,27 +172,8 @@ export default function Resources() {
           name: "Veterans Crisis Line (International)",
           description: "Support for veterans in crisis available worldwide",
           website: "https://www.veteranscrisisline.net/get-help/military-crisis-line",
-          phone: "001-800-273-8255"
-        },
-        {
-          name: "Germany Resources",
-          description: "FMP coverage with German healthcare providers, some U.S. military bases have base hospitals",
-          website: "https://germany.usembassy.gov/u-s-citizen-services/"
-        },
-        {
-          name: "Japan Resources",
-          description: "FMP coverage available and some support from VA Manila Clinic remotely",
-          website: "https://jp.usembassy.gov/u-s-citizen-services/doctors/"
-        },
-        {
-          name: "South Korea Resources",
-          description: "FMP coverage and some U.S. Army hospitals at military bases",
-          website: "https://kr.usembassy.gov/u-s-citizen-services/"
-        },
-        {
-          name: "Mexico Resources",
-          description: "FMP coverage with good network of doctors in Baja California, Mexico City, and Guadalajara",
-          website: "https://mx.usembassy.gov/u-s-citizen-services/doctors/"
+          phone: "001-800-273-8255",
+          text: "Text to 838255"
         }
       ]
     }
@@ -476,63 +451,44 @@ export default function Resources() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {resourceCategories.find(category => category.title === "International Resources")?.resources
-                .filter(resource => resource.name !== "Foreign Medical Program (FMP)") // Filter out the FMP as we've added it separately
-                .map((resource, resourceIndex) => (
-                <div key={resourceIndex} className="border rounded-md p-4 hover:shadow-md transition-shadow bg-white/50">
-                  <h3 className="font-semibold mb-1">{resource.name}</h3>
-                  <CardDescription className="mb-2">{resource.description}</CardDescription>
-                  <div className="text-sm space-y-1">
-                    {resource.phone && (
-                      <p>
-                        📞{' '}
-                        <button 
-                          onClick={() => {
-                            const phoneNumber = resource.phone?.split(' ')[0].replace(/-/g, '');
-                            trackResourceClick("call", () => window.location.href = `tel:${phoneNumber}`);
-                          }}
-                          className="text-[#3e64dd] hover:underline focus:outline-none"
-                        >
-                          {resource.phone}
-                        </button>
-                      </p>
-                    )}
-                      {'text' in resource && resource.text && (
-                        <p>
-                          ✉️{' '}
-                          {typeof resource.text === 'string' ? (
-                            <button 
-                              onClick={() => {
-                                const textNumber = resource.text?.toString().split(' ')[1] || "838255";
-                                trackResourceClick("text", () => window.location.href = `sms:${textNumber}`);
-                              }}
-                              className="text-[#3e64dd] hover:underline focus:outline-none"
-                            >
-                              {resource.text}
-                            </button>
-                          ) : (
-                            <span>Text Available</span>
-                          )}
-                        </p>
-                      )}
-                    </div>
-                    <Button 
-                      variant="link" 
-                      className="p-0 h-auto text-[#3e64dd] group relative overflow-hidden mt-2"
-                      onClick={() => {
-                        trackResourceClick("website", () => window.open(resource.website, "_blank", "noopener,noreferrer"));
-                      }}
+              {/* Display only Veterans Crisis Line (International) */}
+              <div className="border rounded-md p-4 hover:shadow-md transition-shadow bg-white/50 mt-6">
+                <h3 className="font-semibold mb-1">Veterans Crisis Line (International)</h3>
+                <CardDescription className="mb-2">Support for veterans in crisis available worldwide</CardDescription>
+                <div className="text-sm space-y-1">
+                  <p>
+                    📞{' '}
+                    <button 
+                      onClick={() => trackResourceClick("call", () => window.location.href = "tel:0018002738255")}
+                      className="text-[#3e64dd] hover:underline focus:outline-none"
                     >
-                      <span className="inline-flex items-center">
-                        <span className="relative z-10 inline-flex items-center transition-all duration-300 group-hover:translate-x-1">
-                          Visit Website
-                          <Globe className="h-3 w-3 ml-1 transition-transform duration-300 group-hover:translate-x-1 group-hover:scale-110" />
-                        </span>
-                        <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#3e64dd]/40 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
-                      </span>
-                    </Button>
-                  </div>
-                ))}
+                      001-800-273-8255
+                    </button>
+                  </p>
+                  <p>
+                    ✉️{' '}
+                    <button 
+                      onClick={() => trackResourceClick("text", () => window.location.href = "sms:838255")}
+                      className="text-[#3e64dd] hover:underline focus:outline-none"
+                    >
+                      Text to 838255
+                    </button>
+                  </p>
+                </div>
+                <Button 
+                  variant="link" 
+                  className="p-0 h-auto text-[#3e64dd] group relative overflow-hidden mt-2"
+                  onClick={() => trackResourceClick("website", () => window.open("https://www.veteranscrisisline.net/get-help/military-crisis-line", "_blank", "noopener,noreferrer"))}
+                >
+                  <span className="inline-flex items-center">
+                    <span className="relative z-10 inline-flex items-center transition-all duration-300 group-hover:translate-x-1">
+                      Visit Website
+                      <Globe className="h-3 w-3 ml-1 transition-transform duration-300 group-hover:translate-x-1 group-hover:scale-110" />
+                    </span>
+                    <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#3e64dd]/40 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
+                  </span>
+                </Button>
+              </div>
               </div>
             </CardContent>
             <CardFooter>
