@@ -42,11 +42,11 @@ export function Hero() {
             <div className="mt-4 md:mt-6"></div>
           </div>
           <div className="h-64 sm:h-72 md:h-auto md:w-1/2 relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#141e2f] via-[#141e2f]/40 to-[#141e2f] z-10 block"></div>
+            <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#141e2f] via-[#141e2f]/20 to-[#141e2f] z-10 block"></div>
             <img 
               src={veteransGroupImg} 
               alt="Veterans engaged in a support group discussion with American flag in background" 
-              className="w-full h-full object-cover scale-110 translate-x-4 opacity-90"
+              className="w-full h-full object-cover scale-110 translate-x-4 brightness-105"
             />
           </div>
         </div>
