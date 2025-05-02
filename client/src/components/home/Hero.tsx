@@ -45,20 +45,22 @@ export function Hero() {
 
           {/* Image - Left Side */}
           <div className="h-[280px] sm:h-[340px] md:h-full md:absolute md:inset-y-0 md:left-0 md:w-1/2 relative overflow-hidden md:order-1">
-            {/* Primary left-to-right gradient overlay with smooth transition */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A] via-[#0F172A]/80 to-transparent z-10"></div>
+            {/* Primary left-to-right gradient overlay with gentler transition to enhance visibility */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A] via-[#0F172A]/70 to-transparent z-10"></div>
             
-            {/* Secondary gradients for enhanced blending and depth */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#141e2f] via-[#141e2f]/40 to-transparent z-10 opacity-50"></div>
-            <div className="absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-[#141e2f] to-transparent z-10 opacity-60"></div>
+            {/* Reduced secondary gradient for better clarity */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#141e2f]/90 via-transparent to-transparent z-10 opacity-40"></div>
             
-            {/* Subtle vignette effect for depth */}
-            <div className="absolute inset-0 bg-[#0F172A] opacity-15 z-10 mix-blend-multiply"></div>
+            {/* Image enhancement wrapper for improved brightness/contrast */}
+            <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-white/0 mix-blend-overlay z-10 opacity-30"></div>
+            
+            {/* Boost visibility with slight brightness adjustment */}
+            <div className="absolute inset-0 bg-white opacity-[0.03] mix-blend-overlay z-10"></div>
             
             <img 
               src={veteransGroupImg} 
               alt="Veterans engaged in a support group discussion with American flag in background" 
-              className="w-full h-full object-cover object-center scale-110 md:scale-[1.15] lg:scale-[1.1] transition-all duration-500" 
+              className="w-full h-full object-cover object-center md:object-[center_40%] scale-100 md:scale-[0.98] brightness-110 contrast-[1.05] transition-all duration-500" 
             />
           </div>
         </div>

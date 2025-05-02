@@ -1,49 +1,45 @@
-# Visual Hierarchy and Flow Improvements - Hero Section
+# Hero Section Image and Visual Improvements
 
 ## Modified Files
-- `client/src/components/home/Hero.tsx`: Enhanced the hero section with improved spacing, gradient overlays, and responsive design.
+- `client/src/components/home/Hero.tsx`: Enhanced the hero section with improved image clarity, gradient overlays, and responsive design.
 
 ## Changes Made
 
-### 1. Blend Image into Background with Gradient Overlay
-- Implemented a smooth left-to-right gradient overlay as requested:
+### 1. Improved Image Clarity and Brightness
+- Adjusted contrast and brightness of the hero image so group members are clearly visible:
+  - Added brightness adjustment: `brightness-110`
+  - Enhanced contrast slightly: `contrast-[1.05]`
+  - Applied additional brightness with overlay: `bg-white opacity-[0.03] mix-blend-overlay`
+  - Added subtle highlight gradient: `bg-gradient-to-b from-white/5 to-white/0 mix-blend-overlay opacity-30`
+
+### 2. Zoomed Out the Image to Show More of the Group
+- Reduced scaling to reveal more of the group and emphasize group dynamic:
+  - Changed from `scale-110 md:scale-[1.15]` to `scale-100 md:scale-[0.98]`
+  - Modified object position to better frame the group: `md:object-[center_40%]`
+  - Maintained proper proportions with: `object-cover object-center`
+  - Ensured image fills container with responsive heights: `h-[280px] sm:h-[340px] md:h-full`
+
+### 3. Balanced Gradient Overlay
+- Implemented gentler gradient that doesn't obscure faces:
+  - Main left-to-right gradient: `bg-gradient-to-r from-[#0F172A] via-[#0F172A]/70 to-transparent`
+  - Reduced opacity of secondary gradient: `bg-gradient-to-t from-[#141e2f]/90 via-transparent to-transparent opacity-40`
+  - Removed excessive darkening layers from previous implementation
+  - Used proper z-index for all overlays: `z-10` (below text content which is `z-20`)
+
+### 4. Enhanced Responsiveness
+- Ensured visibility of faces across all screen sizes:
+  - Set specific mobile heights: `h-[280px] sm:h-[340px]`
+  - Used absolute positioning on larger screens: `md:absolute md:inset-y-0 md:left-0`
+  - Adjusted object position differently on mobile vs desktop
+  - Created container heights that grow with screen size: `min-h-[450px] sm:min-h-[480px] md:min-h-[520px] lg:min-h-[550px]`
+
+### 5. Asset Information
+- **Image Used**: `veterans-group.png` (from `src/assets/`)
+- **Image Styling**: 
   ```css
-  bg-gradient-to-r from-[#0F172A] via-[#0F172A]/80 to-transparent
+  w-full h-full object-cover object-center md:object-[center_40%] scale-100 md:scale-[0.98] brightness-110 contrast-[1.05]
   ```
-- Added supplementary gradients for enhanced depth and visual interest:
-  - Vertical bottom fade: `bg-gradient-to-t from-[#141e2f] via-[#141e2f]/40 to-transparent opacity-50`
-  - Right edge fade: `bg-gradient-to-l from-[#141e2f] to-transparent w-1/4 opacity-60`
-  - Subtle vignette for depth: `bg-[#0F172A] opacity-15 mix-blend-multiply`
-- Used absolute positioning with proper z-index (z-10) to overlay the image without affecting text content (z-20)
+- **Gradient Implementation**: Multiple layered absolutely positioned divs with z-index control
+- **Container Structure**: Flex column on mobile, flex row with absolute image positioning on medium screens and up
 
-### 2. Zoomed Out Hero Image for Better Composition
-- Reduced image scaling to show more of the group: `scale-110 md:scale-[1.15] lg:scale-[1.1]`
-- Maintained object-fit:cover for proper proportions: `object-cover object-center`
-- Modified image container height for each breakpoint to ensure visible content: `h-[280px] sm:h-[340px]`
-- Used absolute positioning on medium screens to ensure image fills entire container: `md:absolute md:inset-y-0 md:left-0`
-
-### 3. Aligned Hero Section Height with Image
-- Created a progressive height system for consistent vertical alignment across breakpoints:
-  ```css
-  min-h-[450px] sm:min-h-[480px] md:min-h-[520px] lg:min-h-[550px]
-  ```
-- Used `md:absolute` positioning for the image to ensure it spans full height on tablet/desktop
-- Modified text container spacing to align with image height: `py-12 sm:py-14 md:py-16 lg:py-20`
-- Added `md:ml-auto` to the text container to properly position it in the flex layout
-
-### 4. Enhanced Mobile Responsiveness
-- Created a comprehensive responsive spacing system:
-  - Padding progression: `px-4 sm:px-6 md:px-8 lg:px-10`
-  - Vertical padding: `py-12 sm:py-14 md:py-16 lg:py-20`
-  - Right spacing on container: `md:pr-6 lg:pr-8 xl:pr-12`
-  - Left spacing on text: `md:pl-10 lg:pl-14 xl:pl-20`
-- Ensured image height properly scales on mobile: `h-[280px] sm:h-[340px]`
-- Gap spacing between flex items on mobile: `gap-6 sm:gap-8 md:gap-0`
-- Button and content spacing optimized for touch: `space-y-4 md:space-y-5`
-
-### 5. Overall Design Enhancement
-- Added clear, descriptive comments for component sections
-- Improved semantic markup with appropriate element nesting
-- Refined gradient overlay system for visual depth
-- Enhanced z-index layering to ensure proper element stacking
-- Maintained consistent brand styling while improving visual polish
+These changes collectively make the hero image more vibrant and human-centered, while ensuring the group dynamic is properly emphasized rather than focusing on a single individual.
