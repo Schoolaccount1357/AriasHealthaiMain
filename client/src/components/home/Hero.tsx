@@ -16,7 +16,7 @@ export function Hero() {
         <div className="md:flex relative max-w-7xl mx-auto">
           <div className="md:w-1/2 px-4 sm:px-6 lg:px-8 flex flex-col justify-center z-10">
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-5 bg-gradient-to-r from-white via-blue-200 to-blue-100 bg-clip-text text-transparent">
-              You're not alone. Real support from those who've been there.
+              You are not alone.
             </h1>
             <p className="text-gray-300 mb-4 md:mb-6 text-base md:text-lg">
               Confidential veteran-to-veteran support, built with care.
