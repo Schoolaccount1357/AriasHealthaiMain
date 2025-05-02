@@ -186,7 +186,7 @@ export default function Resources() {
         description="Call the Veterans Crisis Line at 1-800-273-8255 and Press 1 if you need immediate help."
       />
 
-      <div className="mb-10 bg-[#141e2f] text-white p-6 rounded-lg">
+      <div className="mb-6 sm:mb-10 bg-[#141e2f] text-white p-4 sm:p-6 rounded-lg">
         <div className="flex items-center mb-4">
           <PanelLeftOpen className="h-8 w-8 mr-3 text-[#3e64dd]" />
           <h2 className="text-2xl font-semibold">Need immediate help?</h2>
