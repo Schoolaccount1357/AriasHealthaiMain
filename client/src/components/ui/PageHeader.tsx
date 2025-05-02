@@ -1,11 +1,10 @@
-
 interface PageHeaderProps {
   title: string;
   tagline?: string;
   description?: string;
 }
 
-export function PageHeader({ title, tagline, description }: PageHeaderProps) {
+export function PageHeader({ title, tagline = "Mental Health, Reimagined for Veterans", description }: PageHeaderProps) {
   return (
     <div className="mb-10 text-center">
       <h1 className="text-3xl font-bold mb-2">{title}</h1>

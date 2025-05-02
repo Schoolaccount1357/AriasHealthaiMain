@@ -41,7 +41,7 @@ interface ResourceCategory {
 export default function Resources() {
   const { trackResourceClick } = useResourceTracking();
   // Removed floating help button state and scroll listener
-
+  
   const resourceCategories = [
     {
       title: "Crisis Support",
@@ -182,11 +182,11 @@ export default function Resources() {
   return (
     <MainLayout>
       <PageHeader
-        title="Support Resources"
-        description="Call the Veterans Crisis Line at 1-800-273-8255 and Press 1 if you need immediate help."
+        title="Veteran Support Resources"
+        description="We've compiled trusted resources to support your journey. If you're in crisis, please call the Veterans Crisis Line at 1-800-273-8255 and Press 1."
       />
 
-      <div className="mb-6 sm:mb-10 bg-[#141e2f] text-white p-4 sm:p-6 rounded-lg">
+      <div className="mb-10 bg-[#141e2f] text-white p-6 rounded-lg">
         <div className="flex items-center mb-4">
           <PanelLeftOpen className="h-8 w-8 mr-3 text-[#3e64dd]" />
           <h2 className="text-2xl font-semibold">Need immediate help?</h2>
@@ -224,7 +224,7 @@ export default function Resources() {
               </Button>
             </div>
           </div>
-
+          
           <div className="bg-[#1b2c45] p-4 rounded-md">
             <h3 className="font-semibold text-lg mb-2">International</h3>
             <div className="flex flex-wrap gap-4">
@@ -255,7 +255,7 @@ export default function Resources() {
             </div>
           </div>
         </div>
-
+        
         <Button 
           onClick={() => trackResourceClick("chat", () => window.open("https://www.veteranscrisisline.net/get-help/chat", "_blank"))}
           className="bg-[#3e64dd] hover:bg-[#2a4bba] transition-all duration-300 relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98] w-full"
@@ -532,7 +532,7 @@ export default function Resources() {
           </Link>
         </Button>
       </div>
-
+      
       {/* Floating help button removed as requested */}
     </MainLayout>
   );
