@@ -18,7 +18,7 @@ export function Hero() {
               You're not alone. Real support from those who've been there.
             </h1>
             <p className="text-gray-300 mb-4 md:mb-6 text-base md:text-lg">
-              AI-powered peer support built by and for Veterans. Confidential. Human.
+              Veteran-to-veteran support, guided by AI, built with care. Confidential. Compassionate. Yours.
             </p>
             <div className="space-y-3 md:space-y-4">
               <Button 
