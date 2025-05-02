@@ -11,8 +11,8 @@ export function Hero() {
   };
 
   return (
-    <section className="mb-12">
-      <div className="bg-[#141e2f] rounded-lg overflow-hidden shadow-lg">
+    <section className="mb-12 -mx-4 sm:-mx-6 lg:-mx-8">
+      <div className="bg-[#141e2f] overflow-hidden shadow-lg">
         <div className="md:flex relative">
           <div className="md:w-1/2 p-6 sm:p-8 md:p-12 flex flex-col justify-center z-10">
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-5 bg-gradient-to-r from-white via-blue-200 to-blue-100 bg-clip-text text-transparent pt-4 pb-1">
