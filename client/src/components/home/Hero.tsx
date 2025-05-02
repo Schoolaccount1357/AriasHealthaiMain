@@ -14,11 +14,11 @@ export function Hero() {
       <div className="bg-[#141e2f] rounded-lg overflow-hidden shadow-lg">
         <div className="md:flex relative">
           <div className="md:w-1/2 p-6 sm:p-8 md:p-12 flex flex-col justify-center z-10">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 md:mb-8 bg-gradient-to-r from-white via-blue-200 to-blue-100 bg-clip-text text-transparent pt-4 pb-1">
-              Combat isolation. Navigate transitions. Build your community.
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-5 bg-gradient-to-r from-white via-blue-200 to-blue-100 bg-clip-text text-transparent pt-4 pb-1">
+              You're not alone. Real support from those who've been there.
             </h1>
             <p className="text-gray-300 mb-4 md:mb-6 text-base md:text-lg">
-              A new kind of support for veterans and service members in transition.
+              AI-powered peer support built by and for Veterans. Confidential. Human.
             </p>
             <div className="space-y-3 md:space-y-4">
               <Button 
@@ -28,13 +28,13 @@ export function Hero() {
               >
                 <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
                 <span className="relative z-10">
-                  Join the waitlist below
+                  Get Support – Join the Waitlist
                 </span>
               </Button>
 
               <div className="mt-3 md:mt-4">
                 <p className="text-xs sm:text-sm text-gray-200">
-                  <span className="text-white font-semibold">Get Early Access:</span> Waitlist members will be the first to experience our AI-powered matching and veteran support community.
+                  <span className="text-white font-semibold">Early Access:</span> Be among the first to experience veteran-matched support.
                 </p>
               </div>
             </div>
@@ -43,8 +43,8 @@ export function Hero() {
           <div className="h-64 sm:h-72 md:h-auto md:w-1/2 relative">
             <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#141e2f] to-transparent z-10 block"></div>
             <img 
-              src="https://images.unsplash.com/photo-1486068338746-bc8c63a2d7ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&h=900&q=80" 
-              alt="Soldier silhouette with American flag backdrop" 
+              src="https://images.unsplash.com/photo-1620577438516-c7b4d7d40351?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&h=900&q=80" 
+              alt="Veterans talking together in a natural setting" 
               className="w-full h-full object-cover"
             />
           </div>
