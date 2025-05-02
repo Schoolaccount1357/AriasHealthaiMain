@@ -11,25 +11,23 @@ export function Hero() {
 
   return (
     <section className="mb-12">
-      {/* Hero Banner - Using the exact peer-to-peer.png image with black bars */}
+      {/* Hero Banner - Using the new Peertopeer.jpg image */}
       <div className="relative h-[400px] overflow-hidden bg-[#0F172A]">
-        {/* Full width image container with black bars preserved */}
-        <div className="absolute top-0 left-0 h-full w-full overflow-hidden bg-black">
-          <div className="h-full w-full flex items-center justify-center">
-            <img 
-              src="/peer-to-peer-support.png" 
-              alt="Veteran peer support group" 
-              className="max-h-full max-w-full object-contain"
-            />
-          </div>
-          {/* Subtle gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A]/30 via-transparent to-[#0F172A]/90"></div>
+        {/* Left side - Image of veterans in support group */}
+        <div className="absolute top-0 left-0 h-full w-2/3 overflow-hidden">
+          <img 
+            src="/peertopeer-support.jpg" 
+            alt="Veteran peer support group" 
+            className="h-full w-full object-cover object-center"
+          />
+          {/* Gradient overlay from left to right */}
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#0F172A]/20 to-[#0F172A]"></div>
         </div>
         
         {/* Right side - Content area */}
         <div className="absolute top-0 right-0 h-full w-1/2 flex flex-col justify-center items-start pl-8">
           <div className="max-w-xs">
-            <h1 className="text-3xl md:text-4xl font-bold mb-2 text-white">
+            <h1 className="text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-amber-100 via-white to-amber-50 text-transparent bg-clip-text">
               You are not alone.
             </h1>
             <p className="text-sm md:text-base text-white/90 mb-4">
