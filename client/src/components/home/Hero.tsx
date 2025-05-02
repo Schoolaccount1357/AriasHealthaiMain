@@ -13,24 +13,26 @@ export function Hero() {
     <section className="mb-12">
       {/* Hero Container */}
       <div className="flex flex-col lg:flex-row min-h-[600px]">
-        {/* Left Side - Image + Gradient */}
+        {/* Left Side - Image with preserved black bars + subtle gradients */}
         <div className="relative lg:w-1/2">
-          {/* Base Image */}
-          <div className="absolute inset-0">
+          {/* Base Image with preserved black bars */}
+          <div className="absolute inset-0 flex items-center justify-center bg-black">
             <img 
               src="/peer-to-peer-support.png" 
               alt="Veteran peer support group" 
-              className="w-full h-full object-cover"
+              className="w-full h-auto object-contain"
             />
           </div>
-          {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A] via-[#0F172A]/80 to-transparent"></div>
+          {/* Left gradient overlay that doesn't cover the whole image */}
+          <div className="absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-[#0F172A] to-transparent"></div>
+          {/* Right gradient overlay */}
+          <div className="absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-[#0F172A] to-transparent"></div>
         </div>
 
         {/* Right Side - Content */}
         <div className="lg:w-1/2 bg-[#0F172A] p-8 lg:p-12 flex items-center">
           <div className="max-w-lg">
-            <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+            <h1 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-amber-300 to-orange-500 text-transparent bg-clip-text">
               You are not alone.
             </h1>
             <p className="text-lg text-white/90 mb-8">
