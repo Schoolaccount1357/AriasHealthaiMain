@@ -14,7 +14,7 @@ export function Hero() {
     <section className="mb-12 -mx-4 sm:-mx-6 lg:-mx-8 xl:-mx-12 2xl:-mx-24">
       <div className="bg-[#141e2f] overflow-hidden shadow-lg w-screen relative left-1/2 right-1/2 -translate-x-1/2">
         <div className="md:flex relative max-w-7xl mx-auto">
-          <div className="md:w-1/2 px-4 sm:px-6 lg:px-8 flex flex-col justify-center z-10">
+          <div className="md:w-1/2 px-4 sm:px-6 lg:px-8 flex flex-col justify-center z-10 md:order-2"> {/* Changed order for right alignment */}
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-5 bg-gradient-to-r from-white via-blue-200 to-blue-100 bg-clip-text text-transparent">
               You are not alone.
             </h1>
@@ -41,12 +41,12 @@ export function Hero() {
             </div>
             <div className="mt-4 md:mt-6"></div>
           </div>
-          <div className="h-64 sm:h-72 md:h-auto md:w-1/2 relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#141e2f] via-[#141e2f]/20 to-[#141e2f] z-10 block"></div>
+          <div className="h-64 sm:h-72 md:h-auto md:w-1/2 relative overflow-hidden md:order-1"> {/* Changed order for right alignment */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[#141e2f] via-[#141e2f]/20 to-[#141e2f] z-10 block"></div>
             <img 
               src={veteransGroupImg} 
               alt="Veterans engaged in a support group discussion with American flag in background" 
-              className="w-full h-full object-cover scale-110 translate-x-4 brightness-105"
+              className="w-full h-full object-cover scale-110" {/* Removed translate-x-4 */}
             />
           </div>
         </div>
