@@ -13,8 +13,8 @@ export function Hero() {
 
   return (
     <section className="mb-12 -mx-4 sm:-mx-6 lg:-mx-8 xl:-mx-12 2xl:-mx-24">
-      <div className="bg-[#141e2f] overflow-hidden shadow-lg w-screen relative left-1/2 right-1/2 -translate-x-1/2">
-        <div className="flex flex-col md:flex-row relative max-w-7xl mx-auto min-h-[450px] sm:min-h-[480px] md:min-h-[520px] lg:min-h-[550px] gap-6 sm:gap-8 md:gap-0 lg:gap-0 md:pr-6 lg:pr-8 xl:pr-12">
+      <div className="bg-[#141e2f] overflow-hidden shadow-lg w-screen relative left-1/2 right-1/2 -translate-x-1/2 flex flex-col">
+        <div className="flex flex-col md:flex-row relative max-w-7xl mx-auto min-h-[480px] sm:min-h-[520px] md:min-h-[550px] lg:min-h-[580px] gap-6 sm:gap-8 md:gap-0 lg:gap-0 md:pr-6 lg:pr-8 xl:pr-12 w-full">
           {/* Text Content - Right Side */}
           <div className="md:w-1/2 px-4 sm:px-6 md:px-8 lg:px-10 flex flex-col justify-center z-20 md:order-2 py-12 sm:py-14 md:py-16 lg:py-20 md:ml-auto md:pl-10 lg:pl-14 xl:pl-20">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 md:mb-8 lg:mb-10 bg-gradient-to-r from-white via-orange-200 to-orange-100 bg-clip-text text-transparent leading-tight">
@@ -44,16 +44,16 @@ export function Hero() {
           </div>
 
           {/* Image - Left Side */}
-          <div className="h-[280px] sm:h-[340px] md:h-full md:absolute md:inset-y-0 md:left-0 md:w-1/2 relative overflow-hidden md:order-1">
-            {/* Primary left-to-right gradient overlay with balanced transparency */}
+          <div className="h-[300px] sm:h-[360px] md:h-full md:absolute md:inset-y-0 md:left-0 md:w-1/2 relative overflow-hidden md:order-1">
+            {/* Primary left-to-right gradient overlay with enhanced blending */}
             <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A]/90 via-[#0F172A]/60 to-transparent z-10"></div>
             
-            {/* Right side gradient for subtle blending with text */}
-            <div className="absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-[#141e2f]/30 to-transparent z-10"></div>
+            {/* Right side gradient for improved blending with text section */}
+            <div className="absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-[#141e2f]/40 via-[#141e2f]/20 to-transparent z-10"></div>
             
-            {/* Top-to-bottom alignment gradients */}
-            <div className="absolute inset-x-0 top-0 h-1/6 bg-gradient-to-b from-[#0F172A]/40 to-transparent z-10"></div>
-            <div className="absolute inset-x-0 bottom-0 h-1/6 bg-gradient-to-t from-[#0F172A]/40 to-transparent z-10"></div>
+            {/* Enhanced top-to-bottom alignment gradients with deeper coverage */}
+            <div className="absolute inset-x-0 top-0 h-[20%] bg-gradient-to-b from-[#0F172A]/60 via-[#0F172A]/30 to-transparent z-10"></div>
+            <div className="absolute inset-x-0 bottom-0 h-[20%] bg-gradient-to-t from-[#0F172A]/60 via-[#0F172A]/30 to-transparent z-10"></div>
             
             {/* Image enhancement wrapper for improved brightness/contrast */}
             <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-white/0 mix-blend-overlay z-10 opacity-30"></div>
@@ -64,7 +64,7 @@ export function Hero() {
             <img 
               src={peerToPeerImg} 
               alt="Veterans engaged in a peer support group discussion" 
-              className="w-full h-full object-cover object-center md:object-[center_30%] scale-100 md:scale-[0.98] brightness-[1.12] contrast-[1.05] transition-all duration-500" 
+              className="w-full h-full object-cover object-center md:object-[center_45%] scale-100 md:scale-100 brightness-[1.15] contrast-[1.08] transition-all duration-500" 
             />
           </div>
         </div>
