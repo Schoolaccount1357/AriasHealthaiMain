@@ -43,8 +43,8 @@ export function Hero() {
           <div className="h-64 sm:h-72 md:h-auto md:w-1/2 relative">
             <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#141e2f] to-transparent z-10 block"></div>
             <img 
-              src="/soldier_silhouette.png" 
-              alt="Soldier silhouette saluting against blue backdrop" 
+              src="/veteran_support_group.png" 
+              alt="Veterans in a support group having a discussion" 
               className="w-full h-full object-cover"
             />
           </div>
