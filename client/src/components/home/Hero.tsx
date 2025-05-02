@@ -23,8 +23,8 @@ export function Hero() {
       {/* Hero Section - Dark Background with Image */}
       <div className="relative">
         <div className="w-full bg-cover bg-center h-[500px]" 
-             style={{ backgroundImage: "url('/veterans-support-image.jpg')" }}>
-          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+             style={{ backgroundImage: "url('/veteran-hero-image.png')" }}>
+          <div className="absolute inset-0 bg-black bg-opacity-60"></div>
           
           <div className="relative h-full flex flex-col justify-center items-end pr-10 md:pr-20 lg:pr-32">
             <div className="max-w-md text-white text-right">
@@ -33,8 +33,8 @@ export function Hero() {
               
               <Button 
                 onClick={scrollToEnrollmentForm}
-                className="bg-[#3e64dd] text-white hover:bg-[#2a4bba] transition-all duration-300 rounded-md py-2 px-4"
-                size="lg"
+                className="bg-[#3e64dd] text-white hover:bg-[#2a4bba] transition-all duration-300 rounded-md py-2 px-6 text-sm font-medium"
+                size="default"
               >
                 Get Support – Join the Waitlist
               </Button>
