@@ -14,15 +14,16 @@ export function Hero() {
   return (
     <section className="mb-12 -mx-4 sm:-mx-6 lg:-mx-8 xl:-mx-12 2xl:-mx-24">
       <div className="bg-[#141e2f] overflow-hidden shadow-lg w-screen relative left-1/2 right-1/2 -translate-x-1/2">
-        <div className="flex flex-col md:flex-row relative max-w-7xl mx-auto min-h-[480px] md:min-h-[520px]">
-          <div className="md:w-1/2 px-4 sm:px-6 lg:px-8 flex flex-col justify-center z-10 md:order-2 md:pl-[48rem] py-12 md:py-16">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 md:mb-8 bg-gradient-to-r from-white via-orange-200 to-orange-100 bg-clip-text text-transparent leading-tight">
+        <div className="flex flex-col md:flex-row relative max-w-7xl mx-auto min-h-[520px] md:min-h-[580px] gap-8 md:gap-12 lg:gap-16">
+          {/* Text Content - Right Side */}
+          <div className="md:w-1/2 px-6 sm:px-8 lg:px-10 flex flex-col justify-center z-20 md:order-2 py-16 md:py-20 lg:py-24 md:pl-12 lg:pl-16 xl:pl-20">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 md:mb-8 lg:mb-10 bg-gradient-to-r from-white via-orange-200 to-orange-100 bg-clip-text text-transparent leading-tight">
               You are <span className="underline decoration-2">not alone</span>.
             </h1>
-            <p className="text-gray-300 mb-6 md:mb-8 text-lg md:text-xl leading-relaxed">
+            <p className="text-gray-300 mb-8 md:mb-10 text-lg md:text-xl leading-relaxed">
               Confidential veteran-to-veteran support, built with care.
             </p>
-            <div className="space-y-3 md:space-y-4">
+            <div className="space-y-4 md:space-y-5">
               <Button 
                 onClick={scrollToEnrollmentForm}
                 className="bg-[#3e64dd] text-white hover:bg-[#2a4bba] transition-all duration-300 w-full py-6 sm:py-4 sm:w-auto relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98]"
@@ -34,20 +35,28 @@ export function Hero() {
                 </span>
               </Button>
 
-              <div className="mt-3 md:mt-4">
+              <div className="mt-4 md:mt-5">
                 <p className="text-xs sm:text-sm text-gray-200">
                   <span className="text-white font-semibold">Early Access:</span> Be among the first to experience veteran-matched support.
                 </p>
               </div>
             </div>
-            <div className="mt-4 md:mt-6"></div>
           </div>
-          <div className="h-[280px] sm:h-[320px] md:h-full md:w-1/2 relative overflow-hidden md:order-1">
-            <div className="absolute inset-0 bg-gradient-to-r from-[#141e2f] via-[#141e2f]/20 to-[#141e2f] z-10 block opacity-80 md:opacity-60"></div>
+
+          {/* Image - Left Side */}
+          <div className="h-[320px] sm:h-[380px] md:h-full md:w-1/2 relative overflow-hidden md:order-1">
+            {/* Image gradient overlay - using multiple layers for a more refined effect */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A] via-transparent to-transparent z-10 opacity-70"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-[#141e2f] via-[#141e2f]/40 to-transparent z-10 opacity-70 md:opacity-50"></div>
+            <div className="absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-[#141e2f] to-transparent z-10 opacity-80 md:opacity-70"></div>
+            
+            {/* Subtle vignette effect */}
+            <div className="absolute inset-0 bg-[#0F172A] opacity-20 z-10 mix-blend-multiply"></div>
+            
             <img 
               src={veteransGroupImg} 
               alt="Veterans engaged in a support group discussion with American flag in background" 
-              className="w-full h-full object-cover object-center scale-110" 
+              className="w-full h-full object-cover object-center scale-110 transition-all duration-500" 
             />
           </div>
         </div>
