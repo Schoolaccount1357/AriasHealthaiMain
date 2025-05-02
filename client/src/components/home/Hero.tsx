@@ -1,7 +1,7 @@
 
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import veteransGroupImg from "../../assets/veterans-group.png";
+import peerToPeerImg from "@assets/Peer to peer .png";
 
 export function Hero() {
   const scrollToEnrollmentForm = () => {
@@ -62,9 +62,9 @@ export function Hero() {
             <div className="absolute inset-0 bg-white opacity-[0.03] mix-blend-overlay z-10"></div>
             
             <img 
-              src={veteransGroupImg} 
-              alt="Veterans engaged in a support group discussion with American flag in background" 
-              className="w-full h-full object-cover object-center md:object-[center_center] scale-100 md:scale-[0.98] brightness-[1.12] contrast-[1.05] transition-all duration-500" 
+              src={peerToPeerImg} 
+              alt="Veterans engaged in a peer support group discussion" 
+              className="w-full h-full object-cover object-center md:object-[center_30%] scale-100 md:scale-[0.98] brightness-[1.12] contrast-[1.05] transition-all duration-500" 
             />
           </div>
         </div>
