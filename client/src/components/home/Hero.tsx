@@ -11,37 +11,40 @@ export function Hero() {
 
   return (
     <section className="mb-12">
-      {/* Full-width Hero Banner */}
-      <div className="relative min-h-[600px] overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0 w-full h-full bg-black">
-          <img 
-            src="/peer-to-peer-support.png" 
-            alt="Veteran peer support group" 
-            className="w-full h-full object-contain"
-          />
+      {/* Hero Banner - Using the exact peer-to-peer.png image with black bars */}
+      <div className="relative h-[400px] overflow-hidden bg-[#0F172A]">
+        {/* Full width image container with black bars preserved */}
+        <div className="absolute top-0 left-0 h-full w-full overflow-hidden bg-black">
+          <div className="h-full w-full flex items-center justify-center">
+            <img 
+              src="/peer-to-peer-support.png" 
+              alt="Veteran peer support group" 
+              className="max-h-full max-w-full object-contain"
+            />
+          </div>
+          {/* Subtle gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A]/30 via-transparent to-[#0F172A]/90"></div>
         </div>
         
-        {/* Overlay with subtle gradients */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A]/70 via-[#0F172A]/40 to-[#0F172A]/70"></div>
-        
-        {/* Content positioned over the image */}
-        <div className="relative z-10 flex items-center justify-center h-full p-8 lg:p-12">
-          <div className="max-w-lg text-center">
-            <h1 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-amber-200 via-yellow-100 to-amber-200 text-transparent bg-clip-text">
+        {/* Right side - Content area */}
+        <div className="absolute top-0 right-0 h-full w-1/2 flex flex-col justify-center items-start pl-8">
+          <div className="max-w-xs">
+            <h1 className="text-3xl md:text-4xl font-bold mb-2 text-white">
               You are not alone.
             </h1>
-            <p className="text-lg text-white/90 mb-8">
+            <p className="text-sm md:text-base text-white/90 mb-4">
               Confidential veteran-to-veteran support, built with care.
             </p>
+            
             <Button 
               onClick={scrollToEnrollmentForm}
-              className="bg-[#3e64dd] text-white hover:bg-[#2a4bba] transition-all duration-300 rounded-md py-3 px-8 text-lg font-medium"
-              size="lg"
+              className="bg-[#3e64dd] text-white hover:bg-[#2a4bba] transition-all duration-300 rounded-md py-2 px-4 text-sm font-medium"
+              size="default"
             >
               Get Support – Join the Waitlist
             </Button>
-            <p className="mt-4 text-white/80">
+            
+            <p className="mt-2 text-xs md:text-sm text-white/80">
               <span className="font-semibold">Early Access:</span> Be among the first to experience veteran-matched support.
             </p>
           </div>
