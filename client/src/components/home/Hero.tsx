@@ -42,7 +42,7 @@ export function Hero() {
             <div className="mt-4 md:mt-6"></div>
           </div>
           <div className="h-64 sm:h-72 md:h-auto md:w-1/2 relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#141e2f] via-[#141e2f]/80 to-[#141e2f] z-10 block"></div>
+            <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#141e2f]/90 via-transparent to-[#141e2f]/90 z-10 block"></div>
             <img 
               src={veteransGroupImg} 
               alt="Veterans engaged in a support group discussion with American flag in background" 
