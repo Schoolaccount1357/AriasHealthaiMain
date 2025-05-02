@@ -31,9 +31,6 @@ export function Hero() {
             <h1 className="text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-amber-100 via-white to-amber-50 text-transparent bg-clip-text">
               You are not alone.
             </h1>
-            <h2 className="text-lg md:text-xl font-semibold mb-2 text-gradient bg-gradient-to-r from-blue-200 via-blue-100 to-blue-200 text-transparent bg-clip-text">
-              Mental Health, Reimagined for Veterans
-            </h2>
             <p className="text-sm md:text-base text-white/90 mb-4">
               Confidential veteran-to-veteran support, built with care.
             </p>
