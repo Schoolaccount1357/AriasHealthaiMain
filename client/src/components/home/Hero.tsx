@@ -16,9 +16,13 @@ export function Hero() {
         {/* Left side - Image of veterans in support group */}
         <div className="absolute top-0 left-0 h-full w-2/3 overflow-hidden">
           <img 
-            src="/peertopeer-support.jpg" 
+            src="/Peertopeer.jpg" 
             alt="Support group discussion in a bright, welcoming environment" 
             className="h-full w-full object-cover object-center"
+            onError={(e) => {
+              console.error('Image failed to load:', e);
+              e.currentTarget.src = '/veteran-support-group-new.png';
+            }}
           />
           {/* Gradient overlay from left to right */}
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#0F172A]/80 to-[#0F172A]"></div>
