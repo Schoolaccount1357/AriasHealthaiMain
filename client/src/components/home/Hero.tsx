@@ -1,3 +1,4 @@
+
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import veteransGroupImg from "../../assets/veterans-group.png";
