@@ -1,3 +1,13 @@
+
+# Layout Issue Resolution - December 2023
+
+## Duplicate Headline Fix
+- Issue: Duplicate "Mental Health, Reimagined for Veterans" heading was appearing above the hero section
+- Location: The duplicate was in `client/src/pages/Home.tsx` as a static header section before the `<Hero />` component
+- Resolution: Removed the redundant header block while preserving the hero section starting with "Veteran Care Re-imagined"
+
+This ensures the hero section remains as the primary introduction on the homepage while maintaining any other page-specific headers where needed.
+
 # AriasHealth.ai Project Instructions
 
 ## Recent Changes
