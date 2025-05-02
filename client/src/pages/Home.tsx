@@ -22,7 +22,7 @@ export default function Home() {
         <div className="mb-8">
           <h1 className="text-3xl font-bold mb-4 text-center text-gradient">Veteran Care Re-imagined</h1>
           <p className="mb-6 text-lg text-center max-w-4xl mx-auto">
-            AriasHealth.ai leverages cutting-edge artificial intelligence to create a personalized mental health experience built specifically for veterans. Our platform provides peer-to-peer connection with those who truly understand your experiences.
+            AriasHealth.ai leverages cutting-edge technologies for veteran specific mental health support. Our platform provides personlized connections with those who truly understand your experiences.
           </p>
         </div>
 
