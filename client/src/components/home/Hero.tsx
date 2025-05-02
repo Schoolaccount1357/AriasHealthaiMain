@@ -10,7 +10,7 @@ export function Hero() {
   };
 
   return (
-    <section className="relative">
+    <section className="mb-12">
       {/* Hero Container */}
       <div className="flex flex-col lg:flex-row min-h-[600px]">
         {/* Left Side - Image + Gradient */}
@@ -18,7 +18,7 @@ export function Hero() {
           {/* Base Image */}
           <div className="absolute inset-0">
             <img 
-              src="/Peer to peer .png" 
+              src="/peer-to-peer-support.png" 
               alt="Veteran peer support group" 
               className="w-full h-full object-cover"
             />
@@ -49,11 +49,8 @@ export function Hero() {
           </div>
         </div>
       </div>
-    </section>
-  );
-}
 
-{/* Your Journey with AriasHealth.ai */}
+      {/* Your Journey with AriasHealth.ai */}
       <div className="mt-12 bg-gray-50 p-4 sm:p-8 rounded-lg">
         <h2 className="text-xl sm:text-2xl font-bold text-center mb-6 sm:mb-8">Your Journey with AriasHealth.ai</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
