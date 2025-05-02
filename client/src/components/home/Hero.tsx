@@ -16,7 +16,7 @@ export function Hero() {
         {/* Left side - Image of veterans in support group */}
         <div className="absolute top-0 left-0 h-full w-2/3 overflow-hidden">
           <img 
-            src="/Peertopeer.jpg" 
+            src="/Peer to peer .png" 
             alt="Support group discussion in a bright, welcoming environment" 
             className="h-full w-full object-cover object-center"
             onError={(e) => {
@@ -27,7 +27,7 @@ export function Hero() {
           {/* Gradient overlay from left to right */}
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#0F172A]/80 to-[#0F172A]"></div>
         </div>
-        
+
         {/* Right side - Content area */}
         <div className="absolute top-0 right-0 h-full w-1/2 flex flex-col justify-center items-start pl-8">
           <div className="max-w-xs">
@@ -37,7 +37,7 @@ export function Hero() {
             <p className="text-sm md:text-base text-white/90 mb-4">
               Confidential veteran-to-veteran support, built with care.
             </p>
-            
+
             <Button 
               onClick={scrollToEnrollmentForm}
               className="bg-[#3e64dd] text-white hover:bg-[#2a4bba] transition-all duration-300 rounded-md py-2 px-4 text-sm font-medium"
@@ -45,7 +45,7 @@ export function Hero() {
             >
               Get Support – Join the Waitlist
             </Button>
-            
+
             <p className="mt-2 text-xs md:text-sm text-white/80">
               <span className="font-semibold">Early Access:</span> Be among the first to experience veteran-matched support.
             </p>
