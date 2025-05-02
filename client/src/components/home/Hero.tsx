@@ -16,8 +16,8 @@ export function Hero() {
         {/* Left side - Image of veterans in support group */}
         <div className="absolute top-0 left-0 h-full w-2/3 overflow-hidden">
           <img 
-            src="/Peer to peer .png" 
-            alt="Veterans in a support group discussion" 
+            src="/peertopeer-support.jpg" 
+            alt="Support group discussion in a bright, welcoming environment" 
             className="h-full w-full object-cover object-center"
           />
           {/* Gradient overlay from left to right */}
