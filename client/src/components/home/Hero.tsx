@@ -43,8 +43,8 @@ export function Hero() {
           <div className="h-64 sm:h-72 md:h-auto md:w-1/2 relative">
             <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#141e2f] to-transparent z-10 block"></div>
             <img 
-              src="https://images.unsplash.com/photo-1583468982228-19f19164aee2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=600&q=80" 
-              alt="Diverse group of veterans supporting each other" 
+              src="https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&h=800&q=80" 
+              alt="Veterans in a supportive peer conversation outdoors" 
               className="w-full h-full object-cover"
             />
           </div>
@@ -53,7 +53,7 @@ export function Hero() {
 
       {/* Emotional Banner */}
       <div className="mt-8 bg-gradient-to-r from-blue-600 to-indigo-700 p-4 sm:p-6 rounded-lg text-center text-white">
-        <p className="text-base sm:text-xl font-medium">Combat loneliness. Prevent relapse. Build your community.</p>
+        <p className="text-base sm:text-xl font-medium">Combat isolation. Navigate transitions. Build your community.</p>
       </div>
 
       {/* Your Journey with AriasHealth.ai */}
@@ -134,7 +134,7 @@ export function Hero() {
               </svg>
             </div>
             <h3 className="text-lg sm:text-xl font-semibold mb-1 sm:mb-2 text-gray-800 group-hover:text-[#10066A] transition-colors duration-300">Grow Stronger</h3>
-            <p className="text-sm sm:text-base text-gray-600 group-hover:text-gray-800 transition-colors duration-300">Get real-time encouragement, stay supported, and build lasting recovery.</p>
+            <p className="text-sm sm:text-base text-gray-600 group-hover:text-gray-800 transition-colors duration-300">Get real-time encouragement, stay supported, and thrive in your journey.</p>
           </div>
         </div>
       </div>
