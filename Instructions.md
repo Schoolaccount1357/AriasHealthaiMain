@@ -5,33 +5,45 @@
 
 ## Changes Made
 
-### 1. Added Vertical Spacing
-- Increased overall container heights: `min-h-[520px] md:min-h-[580px]`
-- Added gap between flex items: `gap-8 md:gap-12 lg:gap-16`
-- Increased padding around text content: `py-16 md:py-20 lg:py-24`
-- Progressive padding based on screen sizes: `px-6 sm:px-8 lg:px-10`
-- Improved left padding for text content on medium screens and up: `md:pl-12 lg:pl-16 xl:pl-20`
-- Increased spacing between elements: 
-  - Larger margins for heading: `mb-6 md:mb-8 lg:mb-10`
-  - Increased paragraph spacing: `mb-8 md:mb-10`
+### 1. Blend Image into Background with Gradient Overlay
+- Implemented a smooth left-to-right gradient overlay as requested:
+  ```css
+  bg-gradient-to-r from-[#0F172A] via-[#0F172A]/80 to-transparent
+  ```
+- Added supplementary gradients for enhanced depth and visual interest:
+  - Vertical bottom fade: `bg-gradient-to-t from-[#141e2f] via-[#141e2f]/40 to-transparent opacity-50`
+  - Right edge fade: `bg-gradient-to-l from-[#141e2f] to-transparent w-1/4 opacity-60`
+  - Subtle vignette for depth: `bg-[#0F172A] opacity-15 mix-blend-multiply`
+- Used absolute positioning with proper z-index (z-10) to overlay the image without affecting text content (z-20)
 
-### 2. Added Gradient Overlay
-- Implemented a multi-layered gradient approach for more refined blending:
-  - Horizontal gradient from solid navy to transparent: `bg-gradient-to-r from-[#0F172A] via-transparent to-transparent`
-  - Vertical gradient for bottom fade: `bg-gradient-to-t from-[#141e2f] via-[#141e2f]/40 to-transparent`
-  - Right-side gradient for text area blending: `bg-gradient-to-l from-[#141e2f] to-transparent`
-  - Added subtle vignette effect: `bg-[#0F172A] opacity-20 mix-blend-multiply`
-- Controlled opacity layers for different screen sizes
-- Ensured proper z-index placement (z-10) to sit on top of the image but behind text (z-20)
+### 2. Zoomed Out Hero Image for Better Composition
+- Reduced image scaling to show more of the group: `scale-110 md:scale-[1.15] lg:scale-[1.1]`
+- Maintained object-fit:cover for proper proportions: `object-cover object-center`
+- Modified image container height for each breakpoint to ensure visible content: `h-[280px] sm:h-[340px]`
+- Used absolute positioning on medium screens to ensure image fills entire container: `md:absolute md:inset-y-0 md:left-0`
 
-### 3. Improved Responsiveness
-- Increased image height on mobile: `h-[320px] sm:h-[380px]`
-- Progressive spacing system based on breakpoints
-- Maintained visual separation at all screen sizes
-- Added transition effect to image: `transition-all duration-500`
+### 3. Aligned Hero Section Height with Image
+- Created a progressive height system for consistent vertical alignment across breakpoints:
+  ```css
+  min-h-[450px] sm:min-h-[480px] md:min-h-[520px] lg:min-h-[550px]
+  ```
+- Used `md:absolute` positioning for the image to ensure it spans full height on tablet/desktop
+- Modified text container spacing to align with image height: `py-12 sm:py-14 md:py-16 lg:py-20`
+- Added `md:ml-auto` to the text container to properly position it in the flex layout
 
-### 4. Overall Design Enhancement
-- Added detailed comments to mark content sections
-- Improved semantic structure with clear component organization
-- Maintained existing content positioning
-- Enhanced overall visual polish while preserving the original design intent
+### 4. Enhanced Mobile Responsiveness
+- Created a comprehensive responsive spacing system:
+  - Padding progression: `px-4 sm:px-6 md:px-8 lg:px-10`
+  - Vertical padding: `py-12 sm:py-14 md:py-16 lg:py-20`
+  - Right spacing on container: `md:pr-6 lg:pr-8 xl:pr-12`
+  - Left spacing on text: `md:pl-10 lg:pl-14 xl:pl-20`
+- Ensured image height properly scales on mobile: `h-[280px] sm:h-[340px]`
+- Gap spacing between flex items on mobile: `gap-6 sm:gap-8 md:gap-0`
+- Button and content spacing optimized for touch: `space-y-4 md:space-y-5`
+
+### 5. Overall Design Enhancement
+- Added clear, descriptive comments for component sections
+- Improved semantic markup with appropriate element nesting
+- Refined gradient overlay system for visual depth
+- Enhanced z-index layering to ensure proper element stacking
+- Maintained consistent brand styling while improving visual polish
