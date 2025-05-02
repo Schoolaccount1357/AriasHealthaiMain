@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
+import veteransGroupImg from "../../assets/veterans-group.png";
 
 export function Hero() {
   const scrollToEnrollmentForm = () => {
@@ -43,7 +44,7 @@ export function Hero() {
           <div className="h-64 sm:h-72 md:h-auto md:w-1/2 relative">
             <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#141e2f] to-transparent z-10 block"></div>
             <img 
-              src="/veteran-support-group-new.png" 
+              src={veteransGroupImg} 
               alt="Veterans engaged in a support group discussion with American flag in background" 
               className="w-full h-full object-cover"
             />
