@@ -1,6 +1,5 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import PeerSupportImg from "@assets/Peertopeer.jpg";
 
 export function Hero() {
   const scrollToEnrollmentForm = () => {
@@ -12,41 +11,54 @@ export function Hero() {
 
   return (
     <section className="mb-12">
-      {/* Hero Banner - Using the new Peertopeer.jpg image */}
-      <div className="relative h-[400px] overflow-hidden bg-[#0F172A]">
-        {/* Left side - Image of veterans in support group */}
-        <div className="absolute top-0 left-0 h-full w-2/3 overflow-hidden">
+      {/* Full-width Hero Banner */}
+      <div className="relative min-h-[600px] overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 w-full h-full bg-black">
           <img 
-            src={PeerSupportImg} 
-            alt="Support group discussion in a bright, supportive environment" 
-            className="h-full w-full object-cover object-center"
+            src="/peer-to-peer-support.png" 
+            alt="Veteran peer support group" 
+            className="w-full h-full object-contain"
           />
-          {/* Gradient overlay from left to right */}
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#0F172A]/40 to-[#0F172A]"></div>
         </div>
-
-        {/* Right side - Content area */}
-        <div className="absolute top-0 right-0 h-full w-1/2 flex flex-col justify-center items-start pl-8">
-          <div className="max-w-xs">
-            <h1 className="text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-amber-100 via-white to-amber-50 text-transparent bg-clip-text">
+        
+        {/* Overlay with subtle gradients */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A]/70 via-[#0F172A]/40 to-[#0F172A]/70"></div>
+        
+        {/* Content positioned over the image */}
+        <div className="relative z-10 flex items-center justify-center h-full p-8 lg:p-12">
+          <div className="max-w-4xl text-center">
+            <h1 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-amber-200 via-yellow-100 to-amber-200 text-transparent bg-clip-text">
               You are not alone.
             </h1>
-            <h2 className="text-lg md:text-xl font-semibold mb-2 text-gradient bg-gradient-to-r from-blue-200 via-blue-100 to-blue-200 text-transparent bg-clip-text">
+            <h2 className="text-2xl lg:text-3xl mb-4 font-semibold text-gradient bg-gradient-to-r from-blue-100 via-blue-200 to-blue-100 text-transparent bg-clip-text">
               Mental Health, Reimagined for Veterans
             </h2>
-            <p className="text-sm md:text-base text-white/90 mb-4">
+            <p className="text-lg text-white/90 mb-8">
               Confidential veteran-to-veteran support, built with care.
             </p>
 
-            <Button 
-              onClick={scrollToEnrollmentForm}
-              className="bg-[#3e64dd] text-white hover:bg-[#2a4bba] transition-all duration-300 rounded-md py-2 px-4 text-sm font-medium"
-              size="default"
-            >
-              Get Support – Join the Waitlist
-            </Button>
-
-            <p className="mt-2 text-xs md:text-sm text-white/80">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Button 
+                onClick={scrollToEnrollmentForm}
+                className="bg-[#3e64dd] text-white hover:bg-[#2a4bba] transition-all duration-300 rounded-md py-6 px-8 text-lg font-medium w-full sm:w-auto"
+                size="lg"
+              >
+                Get Support – Join the Waitlist
+              </Button>
+              
+              <Link to="/resources">
+                <Button 
+                  variant="outline" 
+                  className="border-white/30 text-white hover:bg-white/10 transition-all duration-300 rounded-md py-6 px-8 text-lg font-medium w-full sm:w-auto"
+                  size="lg"
+                >
+                  Find Resources
+                </Button>
+              </Link>
+            </div>
+            
+            <p className="mt-6 text-white/70">
               <span className="font-semibold">Early Access:</span> Be among the first to experience veteran-matched support.
             </p>
           </div>
