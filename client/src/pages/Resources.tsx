@@ -183,7 +183,7 @@ export default function Resources() {
     <MainLayout>
       <PageHeader
         title="Support Resources"
-        description="We've compiled trusted resources to support your journey. If you're in crisis, please call the Veterans Crisis Line at 1-800-273-8255 and Press 1."
+        description="If you're in crisis, please call the Veterans Crisis Line at 1-800-273-8255 and Press 1."
       />
 
       <div className="mb-10 bg-[#141e2f] text-white p-6 rounded-lg">
