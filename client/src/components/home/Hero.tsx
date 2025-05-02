@@ -15,7 +15,7 @@ export function Hero() {
         <div className="md:flex relative">
           <div className="md:w-1/2 p-6 sm:p-8 md:p-12 flex flex-col justify-center z-10">
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 md:mb-8 bg-gradient-to-r from-white via-blue-200 to-blue-100 bg-clip-text text-transparent pt-4 pb-1">
-              Stay Connected. Stay Strong.
+              Combat isolation. Navigate transitions. Build your community.
             </h1>
             <p className="text-gray-300 mb-4 md:mb-6 text-base md:text-lg">
               A new kind of support for veterans and service members in transition.
@@ -43,17 +43,12 @@ export function Hero() {
           <div className="h-64 sm:h-72 md:h-auto md:w-1/2 relative">
             <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#141e2f] to-transparent z-10 block"></div>
             <img 
-              src="https://images.unsplash.com/photo-1486163320583-a0c09dae01e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&h=800&q=80" 
-              alt="US service member silhouette with American flag" 
+              src="https://images.unsplash.com/photo-1498696391350-8737b3f7314a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&h=800&q=80" 
+              alt="Soldier silhouette saluting with American flag backdrop" 
               className="w-full h-full object-cover"
             />
           </div>
         </div>
-      </div>
-
-      {/* Emotional Banner */}
-      <div className="mt-8 bg-gradient-to-r from-blue-600 to-indigo-700 p-4 sm:p-6 rounded-lg text-center text-white">
-        <p className="text-base sm:text-xl font-medium">Combat isolation. Navigate transitions. Build your community.</p>
       </div>
 
       {/* Your Journey with AriasHealth.ai */}
