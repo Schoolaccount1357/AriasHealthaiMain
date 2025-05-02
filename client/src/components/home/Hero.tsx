@@ -16,16 +16,12 @@ export function Hero() {
         {/* Left side - Image of veterans in support group */}
         <div className="absolute top-0 left-0 h-full w-2/3 overflow-hidden">
           <img 
-            src="/public/peertopeer-support.jpg" 
+            src="/peertopeer-support.jpg" 
             alt="Veteran peer support group" 
             className="h-full w-full object-cover object-center"
-            onError={(e) => {
-              const img = e.target as HTMLImageElement;
-              img.src = "/images/veteran-support-group-new.png";
-            }}
           />
           {/* Gradient overlay from left to right */}
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#0F172A]/20 to-[#0F172A]"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#0F172A]/80 to-[#0F172A]"></div>
         </div>
         
         {/* Right side - Content area */}
