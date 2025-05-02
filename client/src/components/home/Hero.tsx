@@ -17,7 +17,7 @@ export function Hero() {
         <div className="absolute top-0 left-0 h-full w-2/3 overflow-hidden">
           <img 
             src="/Peertopeer.jpg" 
-            alt="Support group discussion in a bright, welcoming environment" 
+            alt="Support group discussion in a bright, supportive environment" 
             className="h-full w-full object-cover object-center"
             onError={(e) => {
               console.error('Image failed to load:', e);
