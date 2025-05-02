@@ -1,6 +1,5 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import veteransGroupImg from "../../assets/veterans-group.png";
 
 export function Hero() {
   const scrollToEnrollmentForm = () => {
@@ -12,42 +11,40 @@ export function Hero() {
 
   return (
     <section className="mb-12">
-      <div className="bg-[#141e2f] rounded-lg overflow-hidden shadow-lg">
-        <div className="md:flex relative">
-          <div className="md:w-1/2 p-6 sm:p-8 md:p-12 flex flex-col justify-center z-10">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-5 bg-gradient-to-r from-white via-blue-200 to-blue-100 bg-clip-text text-transparent pt-4 pb-1">
-              You're not alone. Real support from those who've been there.
-            </h1>
-            <p className="text-gray-300 mb-4 md:mb-6 text-base md:text-lg">
-              Veteran-to-veteran support, guided by AI, built with care. Confidential. Compassionate. Yours.
-            </p>
-            <div className="space-y-3 md:space-y-4">
+      {/* Top Info Section - Light Gray Background */}
+      <div className="bg-gray-50 py-10 text-center">
+        <h2 className="text-3xl font-bold text-[#10066A] mb-4">Veteran Care Re-imagined</h2>
+        <p className="text-gray-600 max-w-3xl mx-auto px-4">
+          AriasHealth.ai leverages cutting-edge technologies for veteran specific mental health support. Our platform
+          provides personlized connections with those who truly understand your experiences.
+        </p>
+      </div>
+
+      {/* Hero Section - Dark Background with Image */}
+      <div className="relative">
+        <div className="w-full bg-cover bg-center h-[500px]" 
+             style={{ backgroundImage: "url('/veterans-support-image.png')" }}>
+          <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+          
+          <div className="relative h-full flex flex-col justify-center items-end pr-10 md:pr-20 lg:pr-32">
+            <div className="max-w-md text-white text-right">
+              <h1 className="text-4xl font-bold mb-3">You are not alone.</h1>
+              <p className="mb-6">Confidential veteran-to-veteran support, built with care.</p>
+              
               <Button 
                 onClick={scrollToEnrollmentForm}
-                className="bg-[#3e64dd] text-white hover:bg-[#2a4bba] transition-all duration-300 w-full py-6 sm:py-4 sm:w-auto relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98]"
+                className="bg-[#3e64dd] text-white hover:bg-[#2a4bba] transition-all duration-300 w-full md:w-auto"
                 size="lg"
               >
-                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
-                <span className="relative z-10">
-                  Get Support – Join the Waitlist
-                </span>
+                Get Support – Join the Waitlist
               </Button>
-
-              <div className="mt-3 md:mt-4">
-                <p className="text-xs sm:text-sm text-gray-200">
-                  <span className="text-white font-semibold">Early Access:</span> Be among the first to experience veteran-matched support.
+              
+              <div className="mt-3">
+                <p className="text-sm">
+                  <span className="font-semibold">Early Access:</span> Be among the first to experience veteran-matched support.
                 </p>
               </div>
             </div>
-            <div className="mt-4 md:mt-6"></div>
-          </div>
-          <div className="h-64 sm:h-72 md:h-auto md:w-1/2 relative">
-            <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#141e2f] to-transparent z-10 block"></div>
-            <img 
-              src={veteransGroupImg} 
-              alt="Veterans engaged in a support group discussion with American flag in background" 
-              className="w-full h-full object-cover"
-            />
           </div>
         </div>
       </div>
