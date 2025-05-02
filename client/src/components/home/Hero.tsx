@@ -13,12 +13,12 @@ export function Hero() {
   return (
     <section className="mb-12 -mx-4 sm:-mx-6 lg:-mx-8 xl:-mx-12 2xl:-mx-24">
       <div className="bg-[#141e2f] overflow-hidden shadow-lg w-screen relative left-1/2 right-1/2 -translate-x-1/2">
-        <div className="md:flex relative max-w-7xl mx-auto">
-          <div className="md:w-1/2 px-4 sm:px-6 lg:px-8 flex flex-col justify-center z-10 md:order-2 md:pl-[48rem]"> {/* Further increased padding for more right alignment */}
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-5 bg-gradient-to-r from-white via-orange-200 to-orange-100 bg-clip-text text-transparent">
+        <div className="flex flex-col md:flex-row relative max-w-7xl mx-auto min-h-[480px] md:min-h-[520px]">
+          <div className="md:w-1/2 px-4 sm:px-6 lg:px-8 flex flex-col justify-center z-10 md:order-2 md:pl-[48rem] py-12 md:py-16">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 md:mb-8 bg-gradient-to-r from-white via-orange-200 to-orange-100 bg-clip-text text-transparent leading-tight">
               You are <span className="underline decoration-2">not alone</span>.
             </h1>
-            <p className="text-gray-300 mb-4 md:mb-6 text-base md:text-lg">
+            <p className="text-gray-300 mb-6 md:mb-8 text-lg md:text-xl leading-relaxed">
               Confidential veteran-to-veteran support, built with care.
             </p>
             <div className="space-y-3 md:space-y-4">
@@ -41,13 +41,12 @@ export function Hero() {
             </div>
             <div className="mt-4 md:mt-6"></div>
           </div>
-          <div className="h-64 sm:h-72 md:h-auto md:w-1/2 relative overflow-hidden md:order-1"> {/* Changed order for right alignment */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[#141e2f] via-[#141e2f]/20 to-[#141e2f] z-10 block"></div>
+          <div className="h-[280px] sm:h-[320px] md:h-full md:w-1/2 relative overflow-hidden md:order-1">
+            <div className="absolute inset-0 bg-gradient-to-r from-[#141e2f] via-[#141e2f]/20 to-[#141e2f] z-10 block opacity-80 md:opacity-60"></div>
             <img 
               src={veteransGroupImg} 
               alt="Veterans engaged in a support group discussion with American flag in background" 
-              className="w-full h-full object-cover scale-110" 
-              /* Removed translate-x-4 */
+              className="w-full h-full object-cover object-center scale-110" 
             />
           </div>
         </div>
