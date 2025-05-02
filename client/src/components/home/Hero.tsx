@@ -16,15 +16,15 @@ export function Hero() {
         <h2 className="text-3xl font-bold text-[#10066A] mb-4">Veteran Care Re-imagined</h2>
         <p className="text-gray-600 max-w-3xl mx-auto px-4">
           AriasHealth.ai leverages cutting-edge technologies for veteran specific mental health support. Our platform
-          provides personlized connections with those who truly understand your experiences.
+          provides personalized connections with those who truly understand your experiences.
         </p>
       </div>
 
       {/* Hero Section - Dark Background with Image */}
       <div className="relative">
         <div className="w-full bg-cover bg-center h-[500px]" 
-             style={{ backgroundImage: "url('/veterans-support-image.png')" }}>
-          <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+             style={{ backgroundImage: "url('/veterans-support-image.jpg')" }}>
+          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
           
           <div className="relative h-full flex flex-col justify-center items-end pr-10 md:pr-20 lg:pr-32">
             <div className="max-w-md text-white text-right">
@@ -33,7 +33,7 @@ export function Hero() {
               
               <Button 
                 onClick={scrollToEnrollmentForm}
-                className="bg-[#3e64dd] text-white hover:bg-[#2a4bba] transition-all duration-300 w-full md:w-auto"
+                className="bg-[#3e64dd] text-white hover:bg-[#2a4bba] transition-all duration-300 rounded-md py-2 px-4"
                 size="lg"
               >
                 Get Support – Join the Waitlist
