@@ -1,0 +1,47 @@
+I have uploaded a new image titled **Peertopeer.jpg**. This image must appear as the **background on the left side** of the hero section on the homepage.
+
+---
+
+### What I NEED:
+
+1. **Set "Peertopeer.jpg" as the left-side hero image**
+   - The image should appear clearly and fully—do NOT crop or hide the group
+   - The image should be placed inside the hero section container (as a `background-image` or `<img>` depending on structure)
+   - If using Tailwind: use `object-cover w-full h-full` for image styling
+   - Use responsive layout so the image adjusts on all screen sizes
+
+2. **Fix the missing image issue**
+   - Right now, the hero section appears with a blank or solid navy background — that’s incorrect
+   - This means the image path is either:
+     - Wrong
+     - Not properly linked
+     - Not recognized in the build
+   - Please verify:
+     - The image file is in the correct public path (e.g., `/public/Peertopeer.jpg`)
+     - The file name matches exactly (case-sensitive)
+     - You’re referencing it properly in the JSX/CSS (e.g., `background-image: url('/Peertopeer.jpg')` or `<img src="/Peertopeer.jpg">`)
+
+3. **Maintain gradient + layout integrity**
+   - Keep the right side with the **dark navy background** (`#0F172A`)
+   - Add a **left-to-right gradient** that blends the image into the right-side text:
+     - CSS: `linear-gradient(to right, #0F172A 0%, rgba(15,23,42,0.8) 40%, transparent 100%)`
+     - Layer it using `::before`, `z-index`, or an absolutely positioned `div`
+
+4. **Text block stays the same**
+   - The section with:
+     - `You are not alone.`
+     - Button + Early Access text
+   - Should remain on the right and aligned properly with the image
+
+5. **Responsiveness**
+   - Ensure the image displays cleanly on desktop, tablet, and mobile breakpoints
+   - Use Tailwind or media queries to prevent distortion or cropping
+
+6. **Document all changes**
+   - Note which file contains the image path
+   - Note if any layout components, tailwind classes, or custom CSS were changed
+   - Save notes in `Instructions.md`
+
+---
+
+This task is to replace the **hero background with the Peertopeer.jpg image**, fix the missing image issue, and ensure proper blend + responsiveness. No further layout redesigns needed.
