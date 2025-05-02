@@ -10,6 +10,13 @@ This ensures the hero section remains as the primary introduction on the homepag
 
 # AriasHealth.ai Project Instructions
 
+## Hero Section Update - December 2023
+- Implemented new hero section design with peer support group image
+- Added left-to-right gradient overlay (#0F172A)
+- Improved responsive layout for all screen sizes
+- Unified dark blue background (#0F172A) for text area
+- Removed duplicate headings and redundant sections
+
 ## Recent Changes
 
 ### Removal of Subheadline from Specific Pages
