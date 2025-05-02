@@ -25,7 +25,7 @@ export function Hero() {
             }}
           />
           {/* Gradient overlay from left to right */}
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#0F172A]/80 to-[#0F172A]"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#0F172A]/40 to-[#0F172A]"></div>
         </div>
 
         {/* Right side - Content area */}
