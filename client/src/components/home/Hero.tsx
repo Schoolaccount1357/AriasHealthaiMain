@@ -46,7 +46,8 @@ export function Hero() {
             <img 
               src={veteransGroupImg} 
               alt="Veterans engaged in a support group discussion with American flag in background" 
-              className="w-full h-full object-cover scale-110" {/* Removed translate-x-4 */}
+              className="w-full h-full object-cover scale-110" 
+              /* Removed translate-x-4 */
             />
           </div>
         </div>
