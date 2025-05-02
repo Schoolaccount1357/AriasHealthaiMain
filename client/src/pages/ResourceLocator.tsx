@@ -3488,8 +3488,8 @@ export default function ResourceLocator() {
   return (
     <MainLayout>
       <PageHeader
-        title="Find Local Support"
-        description="Select your state or enter your ZIP code to find resources near you."
+        title="Find Support Near You"
+        description="Select your location to find resources available in your area."
       />
 
       <div className="bg-[#141e2f] text-white p-4 sm:p-6 rounded-lg mb-6 sm:mb-10">
