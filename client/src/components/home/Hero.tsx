@@ -14,7 +14,7 @@ export function Hero() {
     <section className="mb-12 -mx-4 sm:-mx-6 lg:-mx-8 xl:-mx-12 2xl:-mx-24">
       <div className="bg-[#141e2f] overflow-hidden shadow-lg w-screen relative left-1/2 right-1/2 -translate-x-1/2">
         <div className="md:flex relative max-w-7xl mx-auto">
-          <div className="md:w-1/2 px-4 sm:px-6 lg:px-8 flex flex-col justify-center z-10 md:order-2"> {/* Changed order for right alignment */}
+          <div className="md:w-1/2 px-4 sm:px-6 lg:px-8 flex flex-col justify-center z-10 md:order-2 md:pl-12"> {/* Added md:pl-12 for right spacing */}
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-5 bg-gradient-to-r from-white via-blue-200 to-blue-100 bg-clip-text text-transparent">
               You are not alone.
             </h1>
