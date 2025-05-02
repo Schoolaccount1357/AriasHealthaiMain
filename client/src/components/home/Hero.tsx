@@ -43,8 +43,8 @@ export function Hero() {
           <div className="h-64 sm:h-72 md:h-auto md:w-1/2 relative">
             <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#141e2f] to-transparent z-10 block"></div>
             <img 
-              src="https://images.unsplash.com/photo-1620577438516-c7b4d7d40351?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&h=900&q=80" 
-              alt="Veterans talking together in a natural setting" 
+              src="https://images.unsplash.com/photo-1498496294664-d9372eb521f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&h=900&q=80" 
+              alt="Soldiers walking together" 
               className="w-full h-full object-cover"
             />
           </div>
