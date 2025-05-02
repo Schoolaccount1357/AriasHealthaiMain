@@ -10,46 +10,50 @@ export function Hero() {
   };
 
   return (
-    <section className="mb-12">
-      {/* Top Info Section - Light Gray Background */}
-      <div className="bg-gray-50 py-10 text-center">
-        <h2 className="text-3xl font-bold text-[#10066A] mb-4">Veteran Care Re-imagined</h2>
-        <p className="text-gray-600 max-w-3xl mx-auto px-4">
-          AriasHealth.ai leverages cutting-edge technologies for veteran specific mental health support. Our platform
-          provides personalized connections with those who truly understand your experiences.
-        </p>
-      </div>
+    <section className="relative">
+      {/* Hero Container */}
+      <div className="flex flex-col lg:flex-row min-h-[600px]">
+        {/* Left Side - Image + Gradient */}
+        <div className="relative lg:w-1/2">
+          {/* Base Image */}
+          <div className="absolute inset-0">
+            <img 
+              src="/Peer to peer .png" 
+              alt="Veteran peer support group" 
+              className="w-full h-full object-cover"
+            />
+          </div>
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A] via-[#0F172A]/80 to-transparent"></div>
+        </div>
 
-      {/* Hero Section - Dark Background with Image */}
-      <div className="relative">
-        <div className="w-full bg-cover bg-center h-[500px]" 
-             style={{ backgroundImage: "url('/veteran-hero-image.png')" }}>
-          <div className="absolute inset-0 bg-black bg-opacity-60"></div>
-          
-          <div className="relative h-full flex flex-col justify-center items-end pr-10 md:pr-20 lg:pr-32">
-            <div className="max-w-md text-white text-right">
-              <h1 className="text-4xl font-bold mb-3">You are not alone.</h1>
-              <p className="mb-6">Confidential veteran-to-veteran support, built with care.</p>
-              
-              <Button 
-                onClick={scrollToEnrollmentForm}
-                className="bg-[#3e64dd] text-white hover:bg-[#2a4bba] transition-all duration-300 rounded-md py-2 px-6 text-sm font-medium"
-                size="default"
-              >
-                Get Support – Join the Waitlist
-              </Button>
-              
-              <div className="mt-3">
-                <p className="text-sm">
-                  <span className="font-semibold">Early Access:</span> Be among the first to experience veteran-matched support.
-                </p>
-              </div>
-            </div>
+        {/* Right Side - Content */}
+        <div className="lg:w-1/2 bg-[#0F172A] p-8 lg:p-12 flex items-center">
+          <div className="max-w-lg">
+            <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              You are not alone.
+            </h1>
+            <p className="text-lg text-white/90 mb-8">
+              Confidential veteran-to-veteran support, built with care.
+            </p>
+            <Button 
+              onClick={scrollToEnrollmentForm}
+              className="bg-[#3e64dd] text-white hover:bg-[#2a4bba] transition-all duration-300 rounded-md py-3 px-8 text-lg font-medium"
+              size="lg"
+            >
+              Get Support – Join the Waitlist
+            </Button>
+            <p className="mt-4 text-white/80">
+              <span className="font-semibold">Early Access:</span> Be among the first to experience veteran-matched support.
+            </p>
           </div>
         </div>
       </div>
+    </section>
+  );
+}
 
-      {/* Your Journey with AriasHealth.ai */}
+{/* Your Journey with AriasHealth.ai */}
       <div className="mt-12 bg-gray-50 p-4 sm:p-8 rounded-lg">
         <h2 className="text-xl sm:text-2xl font-bold text-center mb-6 sm:mb-8">Your Journey with AriasHealth.ai</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">

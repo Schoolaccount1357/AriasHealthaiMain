@@ -41,3 +41,31 @@ const shouldHideTagline =
   <h2 className="text-2xl font-semibold mb-4 text-gradient">{tagline}</h2>
 )}
 ```
+# Hero Section Update - December 2023
+
+## Implementation Details
+- Replaced hero section with new design using `Peer to peer .png`
+- Implemented left-to-right gradient overlay for smooth image blending
+- Removed gray background containers
+- Added responsive layout considerations
+
+### Technical Changes
+1. Image Implementation
+   - Added full-width image container with object-cover
+   - Positioned absolutely within left column
+   - Maintained aspect ratio while ensuring full visibility
+
+2. Gradient Overlay
+   - Used Tailwind classes for gradient:
+   - `bg-gradient-to-r from-[#0F172A] via-[#0F172A]/80 to-transparent`
+   - Positioned absolutely over image
+
+3. Content Area
+   - Set solid background color: `#0F172A`
+   - Improved spacing and typography
+   - Enhanced responsive layout with flexbox
+
+4. Responsive Behavior
+   - Stacks vertically on mobile
+   - Maintains content visibility across breakpoints
+   - Preserves image quality and visibility
