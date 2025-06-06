@@ -70,9 +70,9 @@ export function Hero() {
             </div>
             
             {/* Evidence & Research */}
-            <div className="bg-teal-50 rounded-lg p-3 sm:p-4">
-              <h3 className="font-medium mb-2 text-[#0d9488] text-base sm:text-lg">Research Shows:</h3>
-              <ul className="list-disc pl-4 sm:pl-5 space-y-1 text-sm sm:text-base">
+            <div className="bg-[#2c3e50] rounded-lg p-3 sm:p-4">
+              <h3 className="font-medium mb-2 text-white text-base sm:text-lg">Research Shows:</h3>
+              <ul className="list-disc pl-4 sm:pl-5 space-y-1 text-sm sm:text-base text-gray-300">
                 <li>Peer support significantly improves wellness outcomes</li>
                 <li>Shared military experiences enhance therapeutic connections</li>
                 <li>Early intervention leads to better long-term wellness</li>
@@ -80,8 +80,8 @@ export function Hero() {
             </div>
             
             {/* Connection Benefits */}
-            <div className="bg-accent/20 rounded-lg p-3 sm:p-4">
-              <h3 className="font-medium mb-2 text-primary text-base sm:text-lg">Benefits of Peer Connection:</h3>
+            <div className="bg-blue-100 rounded-lg p-3 sm:p-4">
+              <h3 className="font-medium mb-2 text-blue-700 text-base sm:text-lg">Benefits of Peer Connection:</h3>
               <ul className="list-disc pl-4 sm:pl-5 space-y-1 text-sm sm:text-base">
                 <li>Creates meaningful relationships with shared understanding</li>
                 <li>Provides practical insights from lived experiences</li>
