@@ -13,20 +13,20 @@ export function Hero() {
   return (
     <section className="mb-12">
       {/* Hero Banner - Using the new Peertopeer.jpg image */}
-      <div className="relative h-[400px] sm:h-[300px] md:h-[400px] overflow-hidden bg-[#134e4a]">
-        {/* Left side - Image of veterans in support group */}
-        <div className="absolute top-0 left-0 h-full w-full sm:w-2/3 overflow-hidden">
+      <div className="relative h-[400px] sm:h-[300px] md:h-[400px] overflow-hidden bg-gradient-to-r from-[#0a2f2a] via-[#134e4a] to-[#1a5e56]">
+        {/* Right side - Image of veterans in support group */}
+        <div className="absolute top-0 right-0 h-full w-full sm:w-2/3 overflow-hidden">
           <img 
             src={PeerSupportImg} 
             alt="Support group discussion in a bright, supportive environment" 
             className="h-full w-full object-cover object-center"
           />
-          {/* Gradient overlay - bottom to top for mobile, left to right for desktop */}
-          <div className="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-[#134e4a] via-[#134e4a]/60 to-transparent sm:from-transparent sm:via-[#134e4a]/60 sm:to-[#134e4a]"></div>
+          {/* Gradient overlay - bottom to top for mobile, right to left for desktop */}
+          <div className="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-l from-[#0a2f2a] via-[#0a2f2a]/80 to-transparent sm:from-[#0a2f2a] sm:via-[#134e4a]/80 sm:to-transparent"></div>
         </div>
 
-        {/* Content area - positioned at bottom for mobile, right side for desktop */}
-        <div className="absolute bottom-0 sm:top-0 sm:right-0 w-full sm:w-1/2 p-6 pb-8 sm:p-0 flex flex-col justify-end sm:justify-center items-center sm:items-start sm:pl-8">
+        {/* Content area - positioned at bottom for mobile, left side for desktop */}
+        <div className="absolute bottom-0 sm:top-0 sm:left-0 w-full sm:w-1/2 p-6 pb-8 sm:p-0 flex flex-col justify-end sm:justify-center items-center sm:items-start sm:pr-8"></div>
           <div className="max-w-xs mx-auto sm:mx-0 text-center sm:text-left">
             <h1 className="text-3xl md:text-4xl font-bold mb-2 text-white" style={{ textShadow: '0 0 20px rgba(255, 193, 7, 0.6), 0 0 40px rgba(255, 193, 7, 0.3)' }}>
               You are not alone.
