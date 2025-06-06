@@ -33,13 +33,13 @@ export function AccessibilityPanel() {
               <Accessibility className="h-6 w-6" />
             </Button>
           </DialogTrigger>
-          <DialogContent className="sm:max-w-md" aria-describedby="accessibility-description">
+          <DialogContent className="sm:max-w-md">
             <DialogHeader>
               <DialogTitle className="flex items-center gap-2">
                 <Settings className="h-5 w-5" />
                 Accessibility Settings
               </DialogTitle>
-              <DialogDescription id="accessibility-description">
+              <DialogDescription>
                 Customize your viewing experience with accessibility options
               </DialogDescription>
             </DialogHeader>

@@ -155,6 +155,59 @@ body {
   border: 0;
 }
 
+/* Mobile optimization and touch targets */
+.touch-manipulation {
+  touch-action: manipulation;
+}
+
+/* Ensure minimum touch target size (44px) */
+@media (pointer: coarse) {
+  button, 
+  [role="button"], 
+  input[type="submit"], 
+  input[type="button"], 
+  select, 
+  .clickable {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Larger text inputs on mobile */
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="date"],
+  textarea {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+}
+
+/* Mobile-first responsive design improvements */
+@media (max-width: 640px) {
+  /* Larger buttons on mobile */
+  .btn-mobile {
+    padding: 12px 24px;
+    font-size: 16px;
+    min-height: 48px;
+  }
+  
+  /* Better spacing for mobile cards */
+  .card-mobile {
+    margin: 16px;
+    padding: 20px;
+  }
+  
+  /* Thumb-friendly navigation */
+  .nav-mobile {
+    padding: 16px;
+  }
+  
+  /* Optimized form spacing */
+  .form-mobile .space-y-4 > * + * {
+    margin-top: 20px;
+  }
+}
+
 @layer base {
   :root {
     --background: 0 0% 97%;
