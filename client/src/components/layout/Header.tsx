@@ -37,12 +37,12 @@ export function Header() {
                     </linearGradient>
                     <linearGradient id="paint1_linear_custom" x1="166.399" y1="109.845" x2="238.596" y2="352.426" gradientUnits="userSpaceOnUse">
                       <stop stopColor="#8DEFC9" stopOpacity="0.86"/>
-                      <stop offset="0.72" stopColor="blue-600"/>
+                      <stop offset="0.72" stopColor="#252577"/>
                     </linearGradient>
                   </defs>
                 </svg>
               </div>
-              <span className="-ml-4 text-xl font-semibold transition-all duration-300 group-hover:bg-clip-text group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-[blue-600] group-hover:to-[blue-600]" style={{ color: "blue-600" }}>AriasHealth.ai</span>
+              <span className="-ml-4 text-xl font-semibold transition-all duration-300 group-hover:bg-clip-text group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-[#0d9488] group-hover:to-[#252577]" style={{ color: "#0d9488" }}>AriasHealth.ai</span>
             </div>
           </Link>
           
