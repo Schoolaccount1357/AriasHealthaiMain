@@ -37,7 +37,7 @@ export function Hero() {
 
             <Button 
               onClick={scrollToEnrollmentForm}
-              className="bg-[#3e64dd] text-white hover:bg-[#2a4bba] transition-all duration-300 rounded-md py-2 px-4 text-sm font-medium"
+              className="bg-[#0d9488] text-white hover:bg-[#0f766e] transition-all duration-300 rounded-md py-2 px-4 text-sm font-medium"
               size="default"
             >
               Get Support – Join the Waitlist
@@ -71,7 +71,7 @@ export function Hero() {
             
             {/* Evidence & Research */}
             <div className="bg-blue-50 rounded-lg p-3 sm:p-4">
-              <h3 className="font-medium mb-2 text-[#10066A] text-base sm:text-lg">Research Shows:</h3>
+              <h3 className="font-medium mb-2 text-[#0d9488] text-base sm:text-lg">Research Shows:</h3>
               <ul className="list-disc pl-4 sm:pl-5 space-y-1 text-sm sm:text-base">
                 <li>Peer support significantly improves wellness outcomes</li>
                 <li>Shared military experiences enhance therapeutic connections</li>
