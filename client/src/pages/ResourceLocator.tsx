@@ -3751,7 +3751,7 @@ export default function ResourceLocator() {
                   <Button 
                     key={country}
                     variant="outline" 
-                    className="w-full flex items-center justify-center py-4 border-[blue-700]/30 text-[blue-700] hover:bg-[blue-700]/10 hover:text-[blue-700] hover:border-[blue-700]"
+                    className="w-full flex items-center justify-center py-4 border-teal-600/30 text-teal-700 hover:bg-teal-50 hover:text-teal-800 hover:border-teal-600"
                     onClick={() => {
                       trackNavClick({ navType: "country_select", value: country });
                       setSelectedCountry(country);
@@ -3771,7 +3771,7 @@ export default function ResourceLocator() {
                   <Button 
                     key={state}
                     variant="outline" 
-                    className="w-full flex items-center justify-center py-4 border-[blue-700]/30 text-[blue-700] hover:bg-[blue-700]/10 hover:text-[blue-700] hover:border-[blue-700]"
+                    className="w-full flex items-center justify-center py-4 border-teal-600/30 text-teal-700 hover:bg-teal-50 hover:text-teal-800 hover:border-teal-600"
                     onClick={() => {
                       trackNavClick({ navType: "state_select", value: state });
                       setSelectedState(state);
