@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import PeerSupportImg from "@assets/Peertopeer.jpg";
+import PeerSupportImg from "@assets/veterans-discussion.png";
 
 export function Hero() {
   const scrollToEnrollmentForm = () => {
