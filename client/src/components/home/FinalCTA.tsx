@@ -60,26 +60,28 @@ export function FinalCTA() {
 
           {/* Bottom Footer */}
           <div className="mt-8 pt-6 border-t border-white/20 text-center">
-            <h2 className="text-2xl font-bold mb-4 text-white">
-              You don't have to do this alone. Find your people. Stay connected.
-            </h2>
-            <Button 
-              asChild
-              className="bg-[#3e64dd] text-white hover:bg-[#2a4bba] transition-colors mb-6"
-              size="lg"
-            >
-              <Link href="#enrollment-form">
-                Join the Waitlist
-              </Link>
-            </Button>
             <p className="text-sm text-white/70 mb-2">
               AriasHealth.ai was incubated at Harvard University and MIT
             </p>
-            <p className="text-xs text-white/50">
+            <p className="text-xs text-white/50 mb-4">
               © 2025 AriasHealth.ai. All rights reserved. | 
               <a href="#" className="hover:text-white/70 transition-colors ml-1">Privacy Policy</a> | 
               <a href="#" className="hover:text-white/70 transition-colors ml-1">Terms of Service</a>
             </p>
+            <div className="border-t border-white/20 pt-4">
+              <h2 className="text-2xl font-bold mb-4 text-white">
+                You don't have to do this alone. Find your people. Stay connected.
+              </h2>
+              <Button 
+                asChild
+                className="bg-[#3e64dd] text-white hover:bg-[#2a4bba] transition-colors"
+                size="lg"
+              >
+                <Link href="#enrollment-form">
+                  Join the Waitlist
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
