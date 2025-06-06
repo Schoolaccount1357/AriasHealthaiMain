@@ -32,7 +32,7 @@ export function Hero() {
         {/* Content area - positioned at bottom for mobile, right side for desktop */}
         <div className="absolute bottom-0 sm:top-0 sm:right-0 w-full sm:w-1/2 p-6 pb-12 sm:p-0 flex flex-col justify-end sm:justify-center items-center sm:items-start sm:pl-8">
           <div className="w-full max-w-sm mx-auto sm:mx-0 text-center sm:text-left">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 bg-gradient-to-r from-amber-100 via-white to-amber-50 text-transparent bg-clip-text">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]" style={{textShadow: '0 0 20px rgba(255, 255, 255, 0.4), 0 0 30px rgba(255, 255, 255, 0.2)'}}>
               You are not alone.
             </h1>
             <p className="text-sm md:text-base text-white/90 mb-6">
