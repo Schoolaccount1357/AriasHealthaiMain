@@ -3,21 +3,33 @@ import { ArrowRight } from "lucide-react";
 
 export function AboutSUDS() {
   return (
-    <section className="mb-12 bg-white p-5 sm:p-6 md:p-8 rounded-lg shadow-lg">
-      <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-foreground">The Challenges Veterans Face</h2>
+    <section className="mb-12 bg-gradient-to-br from-slate-50 to-blue-50 p-5 sm:p-6 md:p-8 rounded-xl shadow-lg border border-blue-100">
+      <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-[#10066A] text-center">The Challenges Veterans Face</h2>
       
       <div className="prose max-w-none prose-sm sm:prose-base">
-        <p className="mb-3 sm:mb-4 text-sm sm:text-base">
+        <p className="mb-3 sm:mb-4 text-sm sm:text-base text-gray-700 text-center max-w-3xl mx-auto">
           Many Veterans face isolation, stigma, and barriers to care — especially in substance use recovery.
           Traditional services don't always meet them where they are.
         </p>
         
-        <div className="mb-4 bg-gray-50 rounded-lg p-3 sm:p-4">
-          <ul className="list-disc pl-4 sm:pl-5 space-y-1 sm:space-y-2 text-sm sm:text-base">
-            <li>Limited access to timely mental health support</li>
-            <li>Difficulty connecting with peers who truly understand their experiences</li>
-            <li>Stigma around seeking help for substance use disorders</li>
-            <li>Lack of privacy and anonymity in traditional support environments</li>
+        <div className="mb-4 bg-white/70 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-blue-200 shadow-sm">
+          <ul className="grid md:grid-cols-2 gap-3 sm:gap-4 text-sm sm:text-base">
+            <li className="flex items-start space-x-3 p-3 bg-white rounded-lg shadow-sm border-l-4 border-red-400">
+              <div className="w-2 h-2 bg-red-400 rounded-full mt-2 flex-shrink-0"></div>
+              <span className="text-gray-700">Limited access to timely mental health support</span>
+            </li>
+            <li className="flex items-start space-x-3 p-3 bg-white rounded-lg shadow-sm border-l-4 border-orange-400">
+              <div className="w-2 h-2 bg-orange-400 rounded-full mt-2 flex-shrink-0"></div>
+              <span className="text-gray-700">Difficulty connecting with peers who truly understand their experiences</span>
+            </li>
+            <li className="flex items-start space-x-3 p-3 bg-white rounded-lg shadow-sm border-l-4 border-amber-400">
+              <div className="w-2 h-2 bg-amber-400 rounded-full mt-2 flex-shrink-0"></div>
+              <span className="text-gray-700">Stigma around seeking help for substance use disorders</span>
+            </li>
+            <li className="flex items-start space-x-3 p-3 bg-white rounded-lg shadow-sm border-l-4 border-yellow-400">
+              <div className="w-2 h-2 bg-yellow-400 rounded-full mt-2 flex-shrink-0"></div>
+              <span className="text-gray-700">Lack of privacy and anonymity in traditional support environments</span>
+            </li>
           </ul>
         </div>
         

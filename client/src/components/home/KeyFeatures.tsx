@@ -25,7 +25,7 @@ export function KeyFeatures() {
   ];
 
   return (
-    <section className="mb-12">
+    <section className="mb-16">
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         {features.map((feature, index) => (
           <div 
