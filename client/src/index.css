@@ -27,6 +27,134 @@ body {
   background: linear-gradient(90deg, var(--primary), var(--primary-dark));
 }
 
+/* Accessibility Styles */
+.accessibility-high-contrast {
+  --primary: #ffffff;
+  --primary-foreground: #000000;
+  --secondary: #000000;
+  --secondary-foreground: #ffffff;
+  --background: #000000;
+  --foreground: #ffffff;
+  --muted: #333333;
+  --muted-foreground: #ffffff;
+  --card: #111111;
+  --card-foreground: #ffffff;
+  --border: #ffffff;
+  --input: #000000;
+  --ring: #ffffff;
+}
+
+.accessibility-high-contrast * {
+  color: white !important;
+  background-color: black !important;
+  border-color: white !important;
+}
+
+.accessibility-high-contrast button,
+.accessibility-high-contrast .bg-primary {
+  background-color: white !important;
+  color: black !important;
+  border: 2px solid white !important;
+}
+
+.accessibility-high-contrast button:hover {
+  background-color: #cccccc !important;
+  color: black !important;
+}
+
+.accessibility-high-contrast .text-white {
+  color: white !important;
+}
+
+.accessibility-high-contrast .bg-muted {
+  background-color: #333333 !important;
+}
+
+.accessibility-high-contrast input,
+.accessibility-high-contrast textarea,
+.accessibility-high-contrast select {
+  background-color: white !important;
+  color: black !important;
+  border: 2px solid white !important;
+}
+
+/* Font Size Adjustments */
+.accessibility-font-large {
+  font-size: 118% !important;
+}
+
+.accessibility-font-large h1 {
+  font-size: 3rem !important;
+}
+
+.accessibility-font-large h2 {
+  font-size: 2.5rem !important;
+}
+
+.accessibility-font-large h3 {
+  font-size: 2rem !important;
+}
+
+.accessibility-font-large p,
+.accessibility-font-large span,
+.accessibility-font-large div {
+  font-size: 1.125rem !important;
+}
+
+.accessibility-font-extra-large {
+  font-size: 140% !important;
+}
+
+.accessibility-font-extra-large h1 {
+  font-size: 3.5rem !important;
+}
+
+.accessibility-font-extra-large h2 {
+  font-size: 3rem !important;
+}
+
+.accessibility-font-extra-large h3 {
+  font-size: 2.5rem !important;
+}
+
+.accessibility-font-extra-large p,
+.accessibility-font-extra-large span,
+.accessibility-font-extra-large div {
+  font-size: 1.25rem !important;
+}
+
+/* Reduced Motion */
+.accessibility-reduced-motion * {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* Focus indicators for keyboard navigation */
+*:focus-visible {
+  outline: 3px solid #3e64dd !important;
+  outline-offset: 2px !important;
+}
+
+.accessibility-high-contrast *:focus-visible {
+  outline: 3px solid white !important;
+  outline-offset: 2px !important;
+}
+
+/* Screen reader only content */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 @layer base {
   :root {
     --background: 0 0% 97%;
