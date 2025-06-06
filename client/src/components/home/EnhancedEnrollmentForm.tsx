@@ -565,19 +565,19 @@ export function EnhancedEnrollmentForm() {
             <Form {...waitlistForm}>
               <form onSubmit={waitlistForm.handleSubmit(onSubmit)} className="space-y-6">
                 {renderStepContent()}
-
-                {/* Navigation buttons with enhanced visibility */}
-                <div className="pt-6 mt-6 border-t border-border">
-                  <div className="flex flex-col sm:flex-row gap-3 w-full">
+                
+                {/* Navigation buttons */}
+                <div className="mt-8 pt-6 border-t-2 border-slate-200">
+                  <div className="flex gap-4">
                     {currentStep > 1 && (
                       <Button 
                         type="button" 
                         variant="outline" 
                         onClick={previousStep}
-                        className="h-12 sm:h-14 flex-1 text-base font-semibold touch-manipulation min-h-[44px] border-2"
+                        className="flex-1 h-14 text-lg font-semibold border-2 border-slate-400 hover:border-blue-500 hover:text-blue-600"
                         aria-label="Go to previous step"
                       >
-                        <ChevronLeft className="h-5 w-5 mr-2" aria-hidden="true" />
+                        <ChevronLeft className="h-5 w-5 mr-2" />
                         Previous
                       </Button>
                     )}
@@ -586,22 +586,22 @@ export function EnhancedEnrollmentForm() {
                       <Button 
                         type="button" 
                         onClick={nextStep}
-                        className="h-12 sm:h-14 flex-1 text-base font-semibold bg-primary hover:bg-primary/90 text-primary-foreground touch-manipulation min-h-[44px] shadow-md"
+                        className="flex-1 h-14 text-lg font-bold bg-blue-600 hover:bg-blue-700 text-white shadow-xl hover:shadow-2xl"
                         aria-label="Go to next step"
                       >
                         Next Step
-                        <ChevronRight className="h-5 w-5 ml-2" aria-hidden="true" />
+                        <ChevronRight className="h-5 w-5 ml-2" />
                       </Button>
                     ) : (
                       <Button 
                         type="submit" 
-                        className="h-12 sm:h-14 flex-1 text-base font-semibold bg-primary hover:bg-primary/90 text-primary-foreground touch-manipulation min-h-[44px] shadow-md"
+                        className="flex-1 h-14 text-lg font-bold bg-blue-600 hover:bg-blue-700 text-white shadow-xl hover:shadow-2xl"
                         disabled={waitlistSubmitMutation.isPending}
                         aria-label="Submit enrollment form"
                       >
                         {waitlistSubmitMutation.isPending ? (
                           <>
-                            <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
+                            <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
                             Joining...
                           </>
                         ) : (

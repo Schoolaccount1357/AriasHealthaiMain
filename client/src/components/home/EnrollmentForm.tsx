@@ -61,6 +61,23 @@ export function EnrollmentForm() {
       referralSource: ""
     }
   });
+
+  // Step navigation functions
+  const nextStep = () => {
+    if (currentStep < totalSteps) {
+      setCurrentStep(currentStep + 1);
+      announce(`Moved to step ${currentStep + 1} of ${totalSteps}`);
+    }
+  };
+
+  const previousStep = () => {
+    if (currentStep > 1) {
+      setCurrentStep(currentStep - 1);
+      announce(`Moved to step ${currentStep - 1} of ${totalSteps}`);
+    }
+  };
+
+  const progressPercentage = (currentStep / totalSteps) * 100;
   
   // API call to submit waitlist form
   const waitlistSubmitMutation = useMutation({
