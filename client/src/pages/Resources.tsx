@@ -188,7 +188,7 @@ export default function Resources() {
 
       <div className="mb-10 bg-[#141e2f] text-white p-6 rounded-lg">
         <div className="flex items-center mb-4">
-          <PanelLeftOpen className="h-8 w-8 mr-3 text-[blue-700]" />
+          <PanelLeftOpen className="h-8 w-8 mr-3 text-teal-600" />
           <h2 className="text-2xl font-semibold">Need immediate help?</h2>
         </div>
         <p className="mb-3">
