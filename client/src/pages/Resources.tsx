@@ -318,17 +318,14 @@ export default function Resources() {
               <Button 
                 asChild 
                 variant="outline" 
-                className="w-full group transition-all duration-300 relative overflow-hidden hover:border-[blue-700] hover:text-[blue-700]"
+                className="w-full hover:border-blue-700 hover:text-blue-700"
               >
                 <Link href="/resource-locator" className="flex items-center justify-center">
-                  <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-[blue-700]/0 via-[blue-700]/10 to-[blue-700]/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
-                  <span className="relative z-10 flex items-center justify-center">
-                    Find local resources
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                  </span>
+                  Find local resources
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
                 </Link>
               </Button>
             </CardFooter>
