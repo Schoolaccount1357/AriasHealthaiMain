@@ -67,7 +67,7 @@ export function EnrollmentForm() {
   return (
     <div className="w-full max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-5 sm:p-6 md:p-10">
       <div className="text-center mb-6 sm:mb-10">
-        <div className="max-w-3xl mx-auto bg-gradient-to-r from-[#134e4a] to-[#0d9488] p-4 rounded-lg text-white mb-6 sm:mb-8">
+        <div className="max-w-3xl mx-auto bg-[#2c3e50] p-4 rounded-lg text-white mb-6 sm:mb-8">
           <h3 className="text-base sm:text-lg font-bold mb-2">Help Shape the Future of Peer Support</h3>
           <p className="text-xs sm:text-sm">
             We're conducting a research study to improve mental health resources through technology.
@@ -75,7 +75,7 @@ export function EnrollmentForm() {
           </p>
         </div>
         
-        <h2 className="text-2xl sm:text-3xl font-bold text-[#0d9488] mb-3 sm:mb-4">Join the Waitlist</h2>
+        <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-3 sm:mb-4">Join the Waitlist</h2>
         <p className="text-sm sm:text-base text-gray-600 mb-2">
           Be among the first to access AriasHealth.ai's revolutionary peer support platform when we launch
         </p>
