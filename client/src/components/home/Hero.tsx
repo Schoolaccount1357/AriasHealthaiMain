@@ -81,7 +81,7 @@ export function Hero() {
               Text 838255
             </Button>
             <Button 
-              onClick={() => trackResourceClick("chat", () => window.open("https://www.veteranscrisisline.net/get-help/chat", "_blank"))}
+              onClick={() => trackResourceClick("chat", () => window.open("https://www.my.vavet.sites.va.gov/vclchat", "_blank"))}
               size="sm"
               variant="outline"
               className="border-[#3e64dd] text-[#3e64dd] hover:bg-[#3e64dd]/10 text-xs px-3 py-1"
