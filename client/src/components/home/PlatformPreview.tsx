@@ -35,8 +35,6 @@ export function PlatformPreview() {
 
   return (
     <section className="mb-12 mt-6">
-      <h2 className="text-3xl font-bold mb-8 text-center text-gradient">Platform Preview</h2>
-      
       <h3 className="text-xl font-semibold mb-4">Platform Features</h3>
       <div className="grid md:grid-cols-2 gap-8">
         {/* Peer Support Video Platform */}
