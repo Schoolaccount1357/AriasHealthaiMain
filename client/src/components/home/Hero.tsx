@@ -51,7 +51,7 @@ export function Hero() {
       </div>
 
       {/* Crisis Resources Banner - Desktop Only - Aligned with hero content area */}
-      <div className="hidden sm:block bg-[#1e293b] border-l-4 border-[#3e64dd] p-4 ml-auto mr-8 max-w-[50%] -mt-6 relative z-10 rounded-r-lg shadow-lg">
+      <div className="hidden sm:block bg-[#1e293b] border-l-4 border-[#3e64dd] p-4 ml-auto mr-8 max-w-[60%] -mt-6 relative z-10 rounded-r-lg shadow-lg">
         <div className="flex flex-col gap-3">
           {/* Header Section */}
           <div className="flex items-center">
