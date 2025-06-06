@@ -5,22 +5,22 @@ export function KeyFeatures() {
     {
       title: "AI-Driven Peer Matching",
       description: "Our algorithms connect you with peers who share similar experiences, fostering meaningful relationships.",
-      icon: <Brain className="h-10 w-10 text-lime-400" />
+      icon: <Brain className="h-10 w-10 text-teal-600" />
     },
     {
       title: "Predictive Relapse Detection",
       description: "Advanced AI helps identify early warning signs before they become serious problems.",
-      icon: <Activity className="h-10 w-10 text-lime-400" />
+      icon: <Activity className="h-10 w-10 text-teal-600" />
     },
     {
       title: "Real-Time Peer Support Tools",
       description: "Connect through secure video, chat, and messaging when you need support most.",
-      icon: <Users className="h-10 w-10 text-lime-400" />
+      icon: <Users className="h-10 w-10 text-teal-600" />
     },
     {
       title: "Privacy First - HIPAA Compliant",
       description: "Enterprise-grade security keeps your information protected and confidential.",
-      icon: <ShieldCheck className="h-10 w-10 text-lime-400" />
+      icon: <ShieldCheck className="h-10 w-10 text-teal-600" />
     }
   ];
 
@@ -32,7 +32,7 @@ export function KeyFeatures() {
         {features.map((feature, index) => (
           <div 
             key={index} 
-            className="bg-[#2c3e50] p-6 rounded-lg shadow-md border-t-4 border-lime-400 flex flex-col items-center text-center transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
+            className="bg-[#2c3e50] p-6 rounded-lg shadow-md border-t-4 border-teal-400 flex flex-col items-center text-center transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
           >
             <div className="mb-4">
               {feature.icon}
