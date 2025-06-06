@@ -12,7 +12,7 @@ export function Footer() {
           <div>
             <h3 className="font-bold text-xl mb-4">AriasHealth.ai</h3>
             <p className="text-white/80 text-sm mb-4">
-              AI-powered peer support to reduce isolation and prevent substance use.
+              AI-powered peer support to reduce isolation and prevent substance use
             </p>
             <div className="flex space-x-4">
               <a href="https://www.instagram.com/p/DIwQCspJw6o/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition-colors" aria-label="Instagram">
