@@ -50,8 +50,8 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Crisis Resources Banner - Optimized for Mobile */}
-      <div className="bg-[#1e293b] border-l-4 border-[#3e64dd] p-3 sm:p-4 mx-2 sm:mx-6 -mt-4 sm:-mt-6 relative z-10 rounded-r-lg shadow-lg">
+      {/* Crisis Resources Banner - Aligned with hero content area */}
+      <div className="bg-[#1e293b] border-l-4 border-[#3e64dd] p-3 sm:p-4 mx-6 sm:ml-auto sm:mr-8 sm:max-w-[50%] -mt-4 sm:-mt-6 relative z-10 rounded-r-lg shadow-lg">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
           {/* Header Section */}
           <div className="flex items-start sm:items-center">
