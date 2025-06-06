@@ -42,10 +42,6 @@ export function Hero() {
             >
               Get early access to PairLink
             </Button>
-
-            <p className="mt-3 text-xs md:text-sm text-white/80">
-              Join Our Waitlist
-            </p>
           </div>
         </div>
       </div>
