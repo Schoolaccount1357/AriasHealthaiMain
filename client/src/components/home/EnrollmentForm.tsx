@@ -2,13 +2,17 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { useMutation } from "@tanstack/react-query";
+import { useState } from "react";
 import { WaitlistFormData } from "@/utils/types";
 import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
+import { useAccessibility } from "@/contexts/AccessibilityContext";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Progress } from "@/components/ui/progress";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { 
   Form, 
   FormControl, 
@@ -17,20 +21,44 @@ import {
   FormLabel, 
   FormMessage 
 } from "@/components/ui/form";
+import { ChevronLeft, ChevronRight, Clock, Users, Heart } from "lucide-react";
 import { waitlistSchema } from "@shared/schema";
 
 export function EnrollmentForm() {
   const { toast } = useToast();
+  const { announce } = useAccessibility();
+  const [currentStep, setCurrentStep] = useState(1);
+  const totalSteps = 4;
   
-  // Form for waitlist
+  // Form for enhanced waitlist with demographics
   const waitlistForm = useForm<z.infer<typeof waitlistSchema>>({
     resolver: zodResolver(waitlistSchema),
     defaultValues: {
       firstName: "",
       lastName: "",
       email: "",
+      phone: "",
+      dateOfBirth: "",
+      gender: "",
+      race: "",
+      ethnicity: "",
       serviceStatus: "",
-      reasonForInterest: ""
+      militaryBranch: "",
+      serviceYears: "",
+      deploymentHistory: "",
+      location: "",
+      zipCode: "",
+      educationLevel: "",
+      employmentStatus: "",
+      householdIncome: "",
+      substanceUseHistory: "",
+      mentalHealthStatus: "",
+      previousTreatment: "",
+      communicationPreferences: "",
+      supportGroupPreferences: "",
+      languagePreference: "",
+      reasonForInterest: "",
+      referralSource: ""
     }
   });
   

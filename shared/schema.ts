@@ -86,14 +86,38 @@ export const preferencesSchema = z.object({
   additionalInfo: z.string().optional(),
 });
 
-// Waitlist schema for pre-launch
+// Waitlist schema for pre-launch with enhanced demographics
 export const waitlist = pgTable("waitlist", {
   id: serial("id").primaryKey(),
   email: text("email").notNull().unique(),
   firstName: text("first_name"),
   lastName: text("last_name"),
+  phone: text("phone"),
+  dateOfBirth: text("date_of_birth"),
+  gender: text("gender"),
+  race: text("race"),
+  ethnicity: text("ethnicity"),
+  // Military information
   serviceStatus: text("service_status").notNull(), // Active Duty / Veteran / Family Member
+  militaryBranch: text("military_branch"),
+  serviceYears: text("service_years"),
+  deploymentHistory: text("deployment_history"),
+  // Demographics
+  location: text("location"), // State/Region
+  zipCode: text("zip_code"),
+  educationLevel: text("education_level"),
+  employmentStatus: text("employment_status"),
+  householdIncome: text("household_income"),
+  // Substance use and mental health
+  substanceUseHistory: text("substance_use_history"),
+  mentalHealthStatus: text("mental_health_status"),
+  previousTreatment: text("previous_treatment"),
+  // Platform preferences
+  communicationPreferences: text("communication_preferences"), // Email, SMS, Phone
+  supportGroupPreferences: text("support_group_preferences"),
+  languagePreference: text("language_preference"),
   reasonForInterest: text("reason_for_interest"),
+  referralSource: text("referral_source"),
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });
 
@@ -105,13 +129,37 @@ export const insertWaitlistSchema = createInsertSchema(waitlist).omit({
 export type InsertWaitlist = z.infer<typeof insertWaitlistSchema>;
 export type Waitlist = typeof waitlist.$inferSelect;
 
-// Waitlist validation schema
+// Waitlist validation schema with enhanced demographics
 export const waitlistSchema = z.object({
   email: z.string().email("Invalid email address"),
-  firstName: z.string().optional(),
-  lastName: z.string().optional(),
+  firstName: z.string().min(1, "First name is required"),
+  lastName: z.string().min(1, "Last name is required"),
+  phone: z.string().optional(),
+  dateOfBirth: z.string().optional(),
+  gender: z.string().optional(),
+  race: z.string().optional(),
+  ethnicity: z.string().optional(),
+  // Military information
   serviceStatus: z.string().min(1, "Please select your service status"),
+  militaryBranch: z.string().optional(),
+  serviceYears: z.string().optional(),
+  deploymentHistory: z.string().optional(),
+  // Demographics
+  location: z.string().optional(),
+  zipCode: z.string().optional(),
+  educationLevel: z.string().optional(),
+  employmentStatus: z.string().optional(),
+  householdIncome: z.string().optional(),
+  // Substance use and mental health
+  substanceUseHistory: z.string().optional(),
+  mentalHealthStatus: z.string().optional(),
+  previousTreatment: z.string().optional(),
+  // Platform preferences
+  communicationPreferences: z.string().optional(),
+  supportGroupPreferences: z.string().optional(),
+  languagePreference: z.string().optional(),
   reasonForInterest: z.string().optional(),
+  referralSource: z.string().optional(),
 });
 
 // Resource usage tracking
