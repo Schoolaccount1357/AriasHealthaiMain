@@ -26,8 +26,6 @@ export function KeyFeatures() {
 
   return (
     <section className="mb-12">
-      <h2 className="text-2xl font-bold mb-8 text-center text-[#10066A]">Key Features</h2>
-      
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         {features.map((feature, index) => (
           <div 
