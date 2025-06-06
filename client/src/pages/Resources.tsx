@@ -45,7 +45,7 @@ export default function Resources() {
   const resourceCategories = [
     {
       title: "Crisis Support",
-      icon: <Phone className="h-6 w-6 text-[#3e64dd]" />,
+      icon: <Phone className="h-6 w-6 text-[#10066A]" />,
       resources: [
         {
           name: "Veterans Crisis Line",
@@ -75,7 +75,7 @@ export default function Resources() {
     },
     {
       title: "Substance Use Treatment",
-      icon: <Activity className="h-6 w-6 text-[#3e64dd]" />,
+      icon: <Activity className="h-6 w-6 text-[#10066A]" />,
       resources: [
         {
           name: "VA Substance Use Disorder Program",
@@ -94,7 +94,7 @@ export default function Resources() {
     },
     {
       title: "Peer Support Groups",
-      icon: <HeartHandshake className="h-6 w-6 text-[#3e64dd]" />,
+      icon: <HeartHandshake className="h-6 w-6 text-[#10066A]" />,
       resources: [
         {
           name: "Wounded Warrior Project",
@@ -111,7 +111,7 @@ export default function Resources() {
     },
     {
       title: "VA Programs & Benefits",
-      icon: <Building2 className="h-6 w-6 text-[#3e64dd]" />,
+      icon: <Building2 className="h-6 w-6 text-[#10066A]" />,
       resources: [
         {
           name: "VA Health Care",
@@ -128,7 +128,7 @@ export default function Resources() {
     },
     {
       title: "Educational Resources",
-      icon: <BookOpen className="h-6 w-6 text-[#3e64dd]" />,
+      icon: <BookOpen className="h-6 w-6 text-[#10066A]" />,
       resources: [
         {
           name: "PTSD: National Center for PTSD",
@@ -144,7 +144,7 @@ export default function Resources() {
     },
     {
       title: "Online Communities",
-      icon: <Globe className="h-6 w-6 text-[#3e64dd]" />,
+      icon: <Globe className="h-6 w-6 text-[#10066A]" />,
       resources: [
         {
           name: "Rally Point",
@@ -160,7 +160,7 @@ export default function Resources() {
     },
     {
       title: "International Resources",
-      icon: <Globe className="h-6 w-6 text-[#3e64dd]" />,
+      icon: <Globe className="h-6 w-6 text-[#10066A]" />,
       resources: [
         {
           name: "Foreign Medical Program (FMP)",
