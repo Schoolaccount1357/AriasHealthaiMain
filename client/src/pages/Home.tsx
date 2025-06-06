@@ -17,17 +17,21 @@ export default function Home() {
     <div className="min-h-screen flex flex-col">
       <Header />
       
-      <main className="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <main className="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-16">
         <Hero />
         
         {/* Crisis resources removed from main content */}
         
         <KeyFeatures />
-        <section id="enrollment-form" className="scroll-mt-20 pt-4">
+        
+        <section id="enrollment-form" className="scroll-mt-20">
           <EnrollmentForm />
         </section>
+        
         <TrustAndSecurity />
+        
         <FAQSection />
+        
         <FinalCTA />
       </main>
       
