@@ -36,7 +36,6 @@ export default function Home() {
         </section>
         <TrustAndSecurity />
         <FAQSection />
-        <FinalCTA />
       </main>
       
       <Footer />

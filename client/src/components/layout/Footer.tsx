@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { Mail, Instagram } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -62,7 +63,7 @@ export function Footer() {
           <div className="mb-2">
             <p>AriasHealth.ai was incubated at Harvard University and MIT</p>
           </div>
-          <p>
+          <p className="mb-6">
             &copy; {currentYear} AriasHealth.ai. All rights reserved. | 
             <Link href="/privacy-policy" className="text-white hover:text-white/80 transition-colors ml-1 mr-1 font-medium">
               Privacy Policy
@@ -71,6 +72,22 @@ export function Footer() {
               Terms of Service
             </Link>
           </p>
+          
+          {/* Final CTA Section */}
+          <div className="border-t border-white/20 pt-6">
+            <h2 className="text-2xl font-bold mb-4 text-white">
+              You don't have to do this alone. Find your people. Stay connected.
+            </h2>
+            <Button 
+              asChild
+              className="bg-[#3e64dd] text-white hover:bg-[#2a4bba] transition-colors"
+              size="lg"
+            >
+              <Link href="#enrollment-form">
+                Join the Waitlist
+              </Link>
+            </Button>
+          </div>
         </div>
       </div>
     </footer>
