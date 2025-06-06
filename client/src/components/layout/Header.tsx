@@ -42,7 +42,7 @@ export function Header() {
                   </defs>
                 </svg>
               </div>
-              <span className="-ml-4 text-xl font-semibold transition-all duration-300 group-hover:bg-clip-text group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-[#0d9488] group-hover:to-[#252577]" style={{ color: "#0d9488" }}>AriasHealth.ai</span>
+              <span className="-ml-4 text-xl font-semibold text-slate-700 transition-all duration-300 group-hover:bg-clip-text group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-[#0d9488] group-hover:to-[#252577]">AriasHealth.ai</span>
             </div>
           </Link>
           

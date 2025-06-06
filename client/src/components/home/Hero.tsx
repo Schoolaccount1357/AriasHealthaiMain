@@ -28,8 +28,9 @@ export function Hero() {
         {/* Content area - positioned at bottom for mobile, right side for desktop */}
         <div className="absolute bottom-0 sm:top-0 sm:right-0 w-full sm:w-1/2 p-6 pb-8 sm:p-0 flex flex-col justify-end sm:justify-center items-center sm:items-start sm:pl-8">
           <div className="max-w-xs mx-auto sm:mx-0 text-center sm:text-left">
-            <h1 className="text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-amber-100 via-white to-amber-50 text-transparent bg-clip-text">
-              You are not alone.
+            <h1 className="text-3xl md:text-4xl font-bold mb-2">
+              <span className="text-yellow-400">You</span>
+              <span className="text-white"> are not alone.</span>
             </h1>
             <p className="text-sm md:text-base text-white/90 mb-4">
               Confidential veteran-to-veteran support, built with care.
@@ -48,10 +49,10 @@ export function Hero() {
 
       {/* Breaking Down Barriers Through Peer Connection */}
       <div className="mt-12 mb-8 bg-white p-5 sm:p-6 md:p-8 rounded-lg shadow-lg">
-        <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-foreground">Breaking Down Barriers Through Peer Connection</h2>
+        <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-blue-400">Breaking Down Barriers Through Peer Connection</h2>
         
         <div className="prose max-w-none prose-sm sm:prose-base">
-          <p className="mb-3 sm:mb-4 text-sm sm:text-base">
+          <p className="mb-3 sm:mb-4 text-sm sm:text-base text-slate-600">
             Military service brings unique experiences that can impact wellness during the transition to civilian life. 
             Many veterans find strength through connecting with others who share similar backgrounds and understand 
             their journey. Our platform facilitates these meaningful connections.
@@ -60,8 +61,8 @@ export function Hero() {
           <div className="grid md:grid-cols-3 gap-4 sm:gap-6 mb-4">
             {/* Transition Considerations */}
             <div className="bg-gray-50 rounded-lg p-3 sm:p-4">
-              <h3 className="font-medium mb-2 text-foreground text-base sm:text-lg">Transition Considerations:</h3>
-              <ul className="list-disc pl-4 sm:pl-5 space-y-1 sm:space-y-2 text-sm sm:text-base">
+              <h3 className="font-medium mb-2 text-slate-700 text-base sm:text-lg">Transition Considerations:</h3>
+              <ul className="list-disc pl-4 sm:pl-5 space-y-1 sm:space-y-2 text-sm sm:text-base text-slate-600">
                 <li>Navigating civilian healthcare systems</li>
                 <li>Finding peers who understand military experiences</li>
                 <li>Accessing confidential and judgment-free support</li>
@@ -81,8 +82,8 @@ export function Hero() {
             
             {/* Connection Benefits */}
             <div className="bg-blue-100 rounded-lg p-3 sm:p-4">
-              <h3 className="font-medium mb-2 text-blue-800 text-base sm:text-lg">Benefits of Peer Connection:</h3>
-              <ul className="list-disc pl-4 sm:pl-5 space-y-1 text-sm sm:text-base">
+              <h3 className="font-medium mb-2 text-slate-700 text-base sm:text-lg">Benefits of Peer Connection:</h3>
+              <ul className="list-disc pl-4 sm:pl-5 space-y-1 text-sm sm:text-base text-slate-600">
                 <li>Creates meaningful relationships with shared understanding</li>
                 <li>Provides practical insights from lived experiences</li>
                 <li>Builds community and reduces isolation</li>
