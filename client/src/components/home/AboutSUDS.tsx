@@ -8,7 +8,7 @@ export function AboutSUDS() {
       
       <div className="prose max-w-none prose-sm sm:prose-base">
         <p className="mb-3 sm:mb-4 text-sm sm:text-base text-gray-700 text-center max-w-3xl mx-auto">
-          Many Veterans face isolation, stigma, and barriers to care — especially in substance use recovery.
+          Many veterans face barriers to care — especially in substance use recovery.
           Traditional services don't always meet them where they are.
         </p>
         
