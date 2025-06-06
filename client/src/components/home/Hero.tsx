@@ -50,42 +50,44 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Crisis Resources Banner - Clean and Simple */}
-      <div className="bg-[#1e293b] border-l-4 border-[#3e64dd] p-4 mx-4 sm:mx-6 -mt-6 relative z-10 rounded-r-lg shadow-lg">
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <div className="flex items-center">
-            <Phone className="h-5 w-5 mr-3 text-[#3e64dd]" />
-            <div>
-              <h3 className="text-white font-semibold text-sm">Need immediate help?</h3>
-              <p className="text-white/80 text-xs">If you're in crisis or having thoughts of suicide, speak with a trained counselor now.</p>
+      {/* Crisis Resources Banner - Clean and Integrated */}
+      <div className="bg-[#1e293b] p-6 mx-4 sm:mx-6 mb-8 rounded-lg shadow-lg border-l-4 border-[#3e64dd]">
+        <div className="max-w-4xl mx-auto">
+          <div className="flex flex-col space-y-4">
+            <div className="flex items-start space-x-3">
+              <Phone className="h-5 w-5 text-[#3e64dd] mt-0.5 flex-shrink-0" />
+              <div className="flex-1">
+                <h3 className="text-white font-semibold text-sm mb-1">Need immediate help?</h3>
+                <p className="text-white/80 text-xs leading-relaxed">If you're in crisis or having thoughts of suicide, speak with a trained counselor now.</p>
+              </div>
             </div>
-          </div>
-          <div className="flex gap-2 flex-wrap">
-            <Button 
-              onClick={() => trackResourceClick("call", () => window.location.href = "tel:988")}
-              size="sm"
-              className="bg-[#3e64dd] hover:bg-[#2a4bba] text-xs px-3 py-1"
-            >
-              <Phone className="h-3 w-3 mr-1" />
-              Call 988 - Press 1
-            </Button>
-            <Button 
-              onClick={() => trackResourceClick("text", () => window.location.href = "sms:838255")}
-              size="sm"
-              variant="outline"
-              className="border-[#3e64dd] text-[#3e64dd] hover:bg-[#3e64dd]/10 text-xs px-3 py-1"
-            >
-              Text 838255
-            </Button>
-            <Button 
-              onClick={() => trackResourceClick("chat", () => window.open("https://www.veteranscrisisline.net/get-help/chat", "_blank"))}
-              size="sm"
-              variant="outline"
-              className="border-[#3e64dd] text-[#3e64dd] hover:bg-[#3e64dd]/10 text-xs px-3 py-1"
-            >
-              <Globe className="h-3 w-3 mr-1" />
-              Chat Online
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Button 
+                onClick={() => trackResourceClick("call", () => window.location.href = "tel:988")}
+                size="sm"
+                className="bg-[#3e64dd] hover:bg-[#2a4bba] text-white text-xs font-medium flex-1 sm:flex-none"
+              >
+                <Phone className="h-3 w-3 mr-2" />
+                Call 988 - Press 1
+              </Button>
+              <Button 
+                onClick={() => trackResourceClick("text", () => window.location.href = "sms:838255")}
+                size="sm"
+                variant="outline"
+                className="border-white/30 text-white hover:bg-white/10 text-xs font-medium flex-1 sm:flex-none"
+              >
+                Text 838255
+              </Button>
+              <Button 
+                onClick={() => trackResourceClick("chat", () => window.open("https://www.veteranscrisisline.net/get-help/chat", "_blank"))}
+                size="sm"
+                variant="outline"
+                className="border-white/30 text-white hover:bg-white/10 text-xs font-medium flex-1 sm:flex-none"
+              >
+                <Globe className="h-3 w-3 mr-2" />
+                Chat Online
+              </Button>
+            </div>
           </div>
         </div>
       </div>
