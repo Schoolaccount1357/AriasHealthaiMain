@@ -5,25 +5,6 @@ import { Instagram, Mail } from "lucide-react";
 export function FinalCTA() {
   return (
     <footer className="bg-[#141e2f] text-white">
-      {/* Main CTA Section */}
-      <section className="p-10 text-center border-b border-white/20">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold mb-6">
-            You don't have to do this alone. Find your people. Stay connected.
-          </h2>
-          
-          <Button 
-            asChild
-            className="bg-[#3e64dd] text-white hover:bg-[#2a4bba] transition-colors"
-            size="lg"
-          >
-            <Link href="#enrollment-form">
-              Join the Waitlist
-            </Link>
-          </Button>
-        </div>
-      </section>
-
       {/* Footer Links Section */}
       <section className="px-10 py-8">
         <div className="max-w-6xl mx-auto">
@@ -79,6 +60,18 @@ export function FinalCTA() {
 
           {/* Bottom Footer */}
           <div className="mt-8 pt-6 border-t border-white/20 text-center">
+            <h2 className="text-2xl font-bold mb-4 text-white">
+              You don't have to do this alone. Find your people. Stay connected.
+            </h2>
+            <Button 
+              asChild
+              className="bg-[#3e64dd] text-white hover:bg-[#2a4bba] transition-colors mb-6"
+              size="lg"
+            >
+              <Link href="#enrollment-form">
+                Join the Waitlist
+              </Link>
+            </Button>
             <p className="text-sm text-white/70 mb-2">
               AriasHealth.ai was incubated at Harvard University and MIT
             </p>
