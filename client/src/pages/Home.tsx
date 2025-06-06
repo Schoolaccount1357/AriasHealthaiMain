@@ -45,35 +45,52 @@ export default function Home() {
             </div>
           </div>
           
-          {/* Buttons Section - Stacked for mobile */}
-          <div className="flex flex-col gap-2">
+          {/* United States Section */}
+          <div className="border-t border-white/20 pt-2">
+            <p className="text-white/90 text-xs font-medium mb-2">In the United States</p>
+            <div className="flex flex-col gap-2">
+              <Button 
+                onClick={() => trackResourceClick("call", () => window.location.href = "tel:988")}
+                size="sm"
+                className="bg-[#3e64dd] hover:bg-[#2a4bba] text-xs px-3 py-2 w-full"
+              >
+                <Phone className="h-3 w-3 mr-1" />
+                Call 988 - Press 1
+              </Button>
+              <div className="flex gap-2">
+                <Button 
+                  onClick={() => trackResourceClick("text", () => window.location.href = "sms:838255")}
+                  size="sm"
+                  variant="outline"
+                  className="border-[#3e64dd] text-[#3e64dd] hover:bg-[#3e64dd]/10 text-xs px-3 py-2 flex-1"
+                >
+                  Text 838255
+                </Button>
+                <Button 
+                  onClick={() => trackResourceClick("chat", () => window.open("https://www.my.vavet.sites.va.gov/vclchat", "_blank"))}
+                  size="sm"
+                  variant="outline"
+                  className="border-[#3e64dd] text-[#3e64dd] hover:bg-[#3e64dd]/10 text-xs px-3 py-2 flex-1"
+                >
+                  <Globe className="h-3 w-3 mr-1" />
+                  Chat
+                </Button>
+              </div>
+            </div>
+          </div>
+
+          {/* International Section */}
+          <div className="border-t border-white/20 pt-2">
+            <p className="text-white/90 text-xs font-medium mb-2">International</p>
             <Button 
-              onClick={() => trackResourceClick("call", () => window.location.href = "tel:988")}
+              onClick={() => trackResourceClick("call", () => window.location.href = "tel:001-800-273-8255")}
               size="sm"
-              className="bg-[#3e64dd] hover:bg-[#2a4bba] text-xs px-3 py-2 w-full"
+              variant="outline"
+              className="border-[#3e64dd] text-[#3e64dd] hover:bg-[#3e64dd]/10 text-xs px-3 py-2 w-full"
             >
               <Phone className="h-3 w-3 mr-1" />
-              Call 988 - Press 1
+              Call 001-800-273-8255
             </Button>
-            <div className="flex gap-2">
-              <Button 
-                onClick={() => trackResourceClick("text", () => window.location.href = "sms:838255")}
-                size="sm"
-                variant="outline"
-                className="border-[#3e64dd] text-[#3e64dd] hover:bg-[#3e64dd]/10 text-xs px-3 py-2 flex-1"
-              >
-                Text 838255
-              </Button>
-              <Button 
-                onClick={() => trackResourceClick("chat", () => window.open("https://www.my.vavet.sites.va.gov/vclchat", "_blank"))}
-                size="sm"
-                variant="outline"
-                className="border-[#3e64dd] text-[#3e64dd] hover:bg-[#3e64dd]/10 text-xs px-3 py-2 flex-1"
-              >
-                <Globe className="h-3 w-3 mr-1" />
-                Chat
-              </Button>
-            </div>
           </div>
         </div>
       </div>

@@ -52,7 +52,7 @@ export function Hero() {
 
       {/* Crisis Resources Banner - Desktop Only - Aligned with hero content area */}
       <div className="hidden sm:block bg-[#1e293b] border-l-4 border-[#3e64dd] p-4 ml-auto mr-8 max-w-[50%] -mt-6 relative z-10 rounded-r-lg shadow-lg">
-        <div className="flex items-center justify-between gap-4">
+        <div className="flex flex-col gap-3">
           {/* Header Section */}
           <div className="flex items-center">
             <Phone className="h-5 w-5 mr-3 text-[#3e64dd] flex-shrink-0" />
@@ -62,32 +62,49 @@ export function Hero() {
             </div>
           </div>
           
-          {/* Buttons Section */}
-          <div className="flex gap-2">
+          {/* United States Section */}
+          <div className="border-t border-white/20 pt-3">
+            <p className="text-white/90 text-xs font-medium mb-2">In the United States</p>
+            <div className="flex gap-2 mb-2">
+              <Button 
+                onClick={() => trackResourceClick("call", () => window.location.href = "tel:988")}
+                size="sm"
+                className="bg-[#3e64dd] hover:bg-[#2a4bba] text-xs px-3 py-1 flex-shrink-0"
+              >
+                <Phone className="h-3 w-3 mr-1" />
+                Call 988 - Press 1
+              </Button>
+              <Button 
+                onClick={() => trackResourceClick("text", () => window.location.href = "sms:838255")}
+                size="sm"
+                variant="outline"
+                className="border-[#3e64dd] text-[#3e64dd] hover:bg-[#3e64dd]/10 text-xs px-3 py-1"
+              >
+                Text 838255
+              </Button>
+              <Button 
+                onClick={() => trackResourceClick("chat", () => window.open("https://www.my.vavet.sites.va.gov/vclchat", "_blank"))}
+                size="sm"
+                variant="outline"
+                className="border-[#3e64dd] text-[#3e64dd] hover:bg-[#3e64dd]/10 text-xs px-3 py-1"
+              >
+                <Globe className="h-3 w-3 mr-1" />
+                Chat
+              </Button>
+            </div>
+          </div>
+
+          {/* International Section */}
+          <div className="border-t border-white/20 pt-2">
+            <p className="text-white/90 text-xs font-medium mb-2">International</p>
             <Button 
-              onClick={() => trackResourceClick("call", () => window.location.href = "tel:988")}
+              onClick={() => trackResourceClick("call", () => window.location.href = "tel:001-800-273-8255")}
               size="sm"
-              className="bg-[#3e64dd] hover:bg-[#2a4bba] text-xs px-3 py-1 flex-shrink-0"
+              variant="outline"
+              className="border-[#3e64dd] text-[#3e64dd] hover:bg-[#3e64dd]/10 text-xs px-3 py-1"
             >
               <Phone className="h-3 w-3 mr-1" />
-              Call 988 - Press 1
-            </Button>
-            <Button 
-              onClick={() => trackResourceClick("text", () => window.location.href = "sms:838255")}
-              size="sm"
-              variant="outline"
-              className="border-[#3e64dd] text-[#3e64dd] hover:bg-[#3e64dd]/10 text-xs px-3 py-1"
-            >
-              Text 838255
-            </Button>
-            <Button 
-              onClick={() => trackResourceClick("chat", () => window.open("https://www.my.vavet.sites.va.gov/vclchat", "_blank"))}
-              size="sm"
-              variant="outline"
-              className="border-[#3e64dd] text-[#3e64dd] hover:bg-[#3e64dd]/10 text-xs px-3 py-1"
-            >
-              <Globe className="h-3 w-3 mr-1" />
-              Chat
+              Call 001-800-273-8255
             </Button>
           </div>
         </div>
