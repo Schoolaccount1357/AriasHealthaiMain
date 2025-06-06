@@ -13,7 +13,7 @@ export function Hero() {
   return (
     <section className="mb-12">
       {/* Hero Banner - Using the new Peertopeer.jpg image */}
-      <div className="relative h-[400px] sm:h-[300px] md:h-[400px] overflow-hidden bg-[#0F172A]">
+      <div className="relative h-[400px] sm:h-[300px] md:h-[400px] overflow-hidden bg-[#134e4a]">
         {/* Left side - Image of veterans in support group */}
         <div className="absolute top-0 left-0 h-full w-full sm:w-2/3 overflow-hidden">
           <img 
@@ -22,7 +22,7 @@ export function Hero() {
             className="h-full w-full object-cover object-center"
           />
           {/* Gradient overlay - bottom to top for mobile, left to right for desktop */}
-          <div className="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-[#0F172A] via-[#0F172A]/60 to-transparent sm:from-transparent sm:via-[#0F172A]/60 sm:to-[#0F172A]"></div>
+          <div className="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-[#134e4a] via-[#134e4a]/60 to-transparent sm:from-transparent sm:via-[#134e4a]/60 sm:to-[#134e4a]"></div>
         </div>
 
         {/* Content area - positioned at bottom for mobile, right side for desktop */}
@@ -70,7 +70,7 @@ export function Hero() {
             </div>
             
             {/* Evidence & Research */}
-            <div className="bg-blue-50 rounded-lg p-3 sm:p-4">
+            <div className="bg-teal-50 rounded-lg p-3 sm:p-4">
               <h3 className="font-medium mb-2 text-[#0d9488] text-base sm:text-lg">Research Shows:</h3>
               <ul className="list-disc pl-4 sm:pl-5 space-y-1 text-sm sm:text-base">
                 <li>Peer support significantly improves wellness outcomes</li>
