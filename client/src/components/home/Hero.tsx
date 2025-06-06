@@ -50,6 +50,32 @@ export function Hero() {
         </div>
       </div>
 
+      {/* The Challenges Veterans Face */}
+      <div className="mt-12 mb-8 bg-white p-5 sm:p-6 md:p-8 rounded-lg shadow-lg">
+        <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-foreground">The Challenges Veterans Face</h2>
+        
+        <div className="prose max-w-none prose-sm sm:prose-base">
+          <p className="mb-3 sm:mb-4 text-sm sm:text-base">
+            Many Veterans face isolation, stigma, and barriers to care — especially in substance use recovery.
+            Traditional services don't always meet them where they are.
+          </p>
+          
+          <div className="mb-4 bg-gray-50 rounded-lg p-3 sm:p-4">
+            <ul className="list-disc pl-4 sm:pl-5 space-y-1 sm:space-y-2 text-sm sm:text-base">
+              <li>Limited access to timely mental health support</li>
+              <li>Difficulty connecting with peers who truly understand their experiences</li>
+              <li>Stigma around seeking help for substance use disorders</li>
+              <li>Lack of privacy and anonymity in traditional support environments</li>
+            </ul>
+          </div>
+          
+          <p className="mb-3 sm:mb-4 text-sm sm:text-base">
+            At AriasHealth.ai, we believe that combining AI technology with peer-to-peer connection creates
+            a powerful support system that meets veterans exactly where they are in their recovery journey.
+          </p>
+        </div>
+      </div>
+
       {/* Your Journey with AriasHealth.ai */}
       <div className="mt-12 bg-gray-50 p-4 sm:p-8 rounded-lg">
         <h2 className="text-xl sm:text-2xl font-bold text-center mb-6 sm:mb-8">Your Journey with AriasHealth.ai</h2>

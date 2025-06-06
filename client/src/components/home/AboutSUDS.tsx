@@ -4,30 +4,11 @@ import { ArrowRight } from "lucide-react";
 export function AboutSUDS() {
   return (
     <section className="mb-12 bg-white p-5 sm:p-6 md:p-8 rounded-lg shadow-lg">
-      <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-foreground">The Challenges Veterans Face</h2>
+      <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-foreground">How Peer Support Helps Veterans</h2>
       
       <div className="prose max-w-none prose-sm sm:prose-base">
-        <p className="mb-3 sm:mb-4 text-sm sm:text-base">
-          Many Veterans face isolation, stigma, and barriers to care — especially in substance use recovery.
-          Traditional services don't always meet them where they are.
-        </p>
-        
-        <div className="mb-4 bg-gray-50 rounded-lg p-3 sm:p-4">
-          <ul className="list-disc pl-4 sm:pl-5 space-y-1 sm:space-y-2 text-sm sm:text-base">
-            <li>Limited access to timely mental health support</li>
-            <li>Difficulty connecting with peers who truly understand their experiences</li>
-            <li>Stigma around seeking help for substance use disorders</li>
-            <li>Lack of privacy and anonymity in traditional support environments</li>
-          </ul>
-        </div>
-        
-        <p className="mb-3 sm:mb-4 text-sm sm:text-base">
-          At AriasHealth.ai, we believe that combining AI technology with peer-to-peer connection creates
-          a powerful support system that meets veterans exactly where they are in their recovery journey.
-        </p>
-        
         <div className="bg-accent/20 p-3 sm:p-4 rounded-lg my-4">
-          <h3 className="font-medium mb-2 text-primary text-base sm:text-lg">How Peer Support Helps:</h3>
+          <h3 className="font-medium mb-2 text-primary text-base sm:text-lg">Benefits of Peer Connection:</h3>
           <ul className="list-disc pl-4 sm:pl-5 space-y-1 text-sm sm:text-base">
             <li>Reduces feelings of isolation</li>
             <li>Provides practical advice from those with similar experiences</li>
@@ -35,6 +16,11 @@ export function AboutSUDS() {
             <li>Offers hope through seeing others' progress</li>
           </ul>
         </div>
+        
+        <p className="mb-3 sm:mb-4 text-sm sm:text-base">
+          Our AI-powered matching system connects you with veterans who understand your specific challenges,
+          creating meaningful relationships that support long-term recovery and wellness.
+        </p>
       </div>
       
       <div className="mt-5 sm:mt-6">
