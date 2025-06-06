@@ -46,9 +46,9 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Understanding Veteran Challenges & Substance Use Disorders */}
+      {/* Breaking Down Barriers Through Peer Connection */}
       <div className="mt-12 mb-8 bg-white p-5 sm:p-6 md:p-8 rounded-lg shadow-lg">
-        <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-foreground">Understanding Veteran Challenges & How Peer Support Helps</h2>
+        <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-foreground">Breaking Down Barriers Through Peer Connection</h2>
         
         <div className="prose max-w-none prose-sm sm:prose-base">
           <p className="mb-3 sm:mb-4 text-sm sm:text-base">
