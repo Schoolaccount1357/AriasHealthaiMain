@@ -11,7 +11,7 @@ export function TrustAndSecurity() {
   ];
 
   return (
-    <section className="mt-12 mb-12 bg-muted p-6 rounded-lg border border-border">
+    <section className="mt-12 mb-6 bg-muted p-6 rounded-lg border border-border">
       <div className="flex flex-col md:flex-row items-center">
         <div className="md:w-1/3 mb-6 md:mb-0 md:pr-6">
           <div className="flex justify-center">
