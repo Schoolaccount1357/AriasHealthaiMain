@@ -26,13 +26,13 @@ export function KeyFeatures() {
 
   return (
     <section className="mb-12">
-      <h2 className="text-2xl font-bold mb-8 text-center">Key Features</h2>
+      <h2 className="text-2xl font-bold mb-8 text-center text-slate-800">Key Features</h2>
       
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         {features.map((feature, index) => (
           <div 
             key={index} 
-            className="bg-[#2c3e50] p-6 rounded-lg shadow-md border-t-4 border-blue-400 flex flex-col items-center text-center"
+            className="bg-[#2c3e50] p-6 rounded-lg shadow-md border-t-4 border-blue-400 flex flex-col items-center text-center transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
           >
             <div className="mb-4">
               {feature.icon}
