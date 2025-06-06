@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Phone, Globe } from "lucide-react";
 import { useResourceTracking } from "@/hooks/use-resource-tracking";
-import PeerSupportImg from "@assets/Peertopeer.jpg";
+import PeerSupportImg from "@assets/AdobeStock_1368008048.jpeg";
 
 export function Hero() {
   const { trackResourceClick } = useResourceTracking();
@@ -15,7 +15,7 @@ export function Hero() {
   };
 
   return (
-    <section className="mb-0 sm:mb-12">
+    <section className="mb-8 sm:mb-12">
       {/* Hero Banner - Using the new Peertopeer.jpg image */}
       <div className="relative h-[500px] sm:h-[300px] md:h-[400px] overflow-hidden bg-[#0F172A]">
         {/* Left side - Image of veterans in support group */}
