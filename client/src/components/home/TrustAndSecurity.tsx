@@ -19,13 +19,13 @@ export function TrustAndSecurity() {
           </div>
         </div>
         <div className="md:w-2/3">
-          <h2 className="text-xl font-bold mb-2 text-foreground">Your Trust & Security Matter</h2>
-          <p className="mb-4 text-foreground">We understand the sensitive nature of substance use recovery. Our platform features:</p>
+          <h2 className="text-xl font-bold mb-2" style={{ color: "#030C54" }}>Your Trust & Security Matter</h2>
+          <p className="mb-4" style={{ color: "#030C54" }}>We understand the sensitive nature of substance use recovery. Our platform features:</p>
           <div className="grid grid-cols-2 gap-2">
             {securityFeatures.map((feature) => (
               <div key={feature.id} className="flex items-start">
                 <CheckCircle className="h-5 w-5 text-emerald-700 mr-2 mt-0.5" />
-                <span className="text-sm text-foreground">{feature.label}</span>
+                <span className="text-sm" style={{ color: "#030C54" }}>{feature.label}</span>
               </div>
             ))}
           </div>
