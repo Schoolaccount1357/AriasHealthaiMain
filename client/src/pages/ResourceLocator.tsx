@@ -3651,13 +3651,13 @@ export default function ResourceLocator() {
                     <CardDescription className="mb-4 text-sm sm:text-base">{resource.description}</CardDescription>
                     {resource.address && (
                       <div className="flex items-start gap-2 text-xs sm:text-sm mb-2">
-                        <MapPin className="h-4 w-4 mt-0.5 text-[blue-700] flex-shrink-0" />
+                        <MapPin className="h-4 w-4 mt-0.5 text-teal-600 flex-shrink-0" />
                         <span className="break-words">{resource.address}</span>
                       </div>
                     )}
                     {resource.phone && (
                       <div className="flex items-center gap-2 text-xs sm:text-sm">
-                        <Phone className="h-4 w-4 text-[blue-700] flex-shrink-0" />
+                        <Phone className="h-4 w-4 text-teal-600 flex-shrink-0" />
                         <span>{resource.phone}</span>
                       </div>
                     )}
@@ -3665,7 +3665,7 @@ export default function ResourceLocator() {
                   <CardFooter className="border-t pt-4 flex flex-col sm:flex-row sm:justify-between gap-3 px-4 sm:px-6">
                     <Button 
                       variant="outline"
-                      className="w-full sm:w-auto justify-center text-[blue-700] border-[blue-700]/30 hover:bg-[blue-700]/10"
+                      className="w-full sm:w-auto justify-center text-teal-700 border-teal-600/30 hover:bg-teal-50 hover:text-teal-800 hover:border-teal-600"
                       onClick={() => {
                         // Track based on whether we're looking at a state or country
                         if (isInternational) {
@@ -3732,7 +3732,7 @@ export default function ResourceLocator() {
           ) : (
             <div className="text-center py-8 sm:py-12 bg-gray-50 rounded-lg">
               <p className="text-base sm:text-lg text-gray-600">No resources found with the selected filters.</p>
-              <p className="mt-2 text-sm sm:text-base">Try changing your search criteria or <Link href="/resources" className="text-[blue-700] hover:underline">browse all resources</Link>.</p>
+              <p className="mt-2 text-sm sm:text-base">Try changing your search criteria or <Link href="/resources" className="text-teal-700 hover:underline">browse all resources</Link>.</p>
             </div>
           )}
         </div>

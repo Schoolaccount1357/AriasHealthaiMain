@@ -5,12 +5,12 @@ export function KeyFeatures() {
     {
       title: "AI-Driven Peer Matching",
       description: "Our algorithms connect you with peers who share similar experiences, fostering meaningful relationships.",
-      icon: <Brain className="h-10 w-10 text-emerald-700" />
+      icon: <Brain className="h-10 w-10 text-teal-600" />
     },
     {
       title: "Predictive Relapse Detection",
       description: "Advanced AI helps identify early warning signs before they become serious problems.",
-      icon: <Activity className="h-10 w-10 text-emerald-700" />
+      icon: <Activity className="h-10 w-10 text-teal-600" />
     },
     {
       title: "Real-Time Peer Support Tools",
