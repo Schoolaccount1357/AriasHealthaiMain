@@ -3665,7 +3665,8 @@ export default function ResourceLocator() {
                   <CardFooter className="border-t pt-4 flex flex-col sm:flex-row sm:justify-between gap-3 px-4 sm:px-6">
                     <Button 
                       variant="outline"
-                      className="w-full sm:w-auto justify-center text-slate-700 border-teal-600/30 hover:bg-teal-50 hover:text-slate-800 hover:border-teal-600"
+                      className="w-full sm:w-auto justify-center border-teal-600/30 hover:bg-teal-50 hover:border-teal-600"
+                      style={{ color: "#030C54" }}
                       onClick={() => {
                         // Track based on whether we're looking at a state or country
                         if (isInternational) {
@@ -3732,7 +3733,7 @@ export default function ResourceLocator() {
           ) : (
             <div className="text-center py-8 sm:py-12 bg-gray-50 rounded-lg">
               <p className="text-base sm:text-lg text-gray-600">No resources found with the selected filters.</p>
-              <p className="mt-2 text-sm sm:text-base">Try changing your search criteria or <Link href="/resources" className="text-slate-700 hover:underline">browse all resources</Link>.</p>
+              <p className="mt-2 text-sm sm:text-base">Try changing your search criteria or <Link href="/resources" className="hover:underline" style={{ color: "#030C54" }}>browse all resources</Link>.</p>
             </div>
           )}
         </div>
@@ -3751,7 +3752,8 @@ export default function ResourceLocator() {
                   <Button 
                     key={country}
                     variant="outline" 
-                    className="w-full flex items-center justify-center py-4 border-teal-600/30 text-slate-700 hover:bg-teal-50 hover:text-slate-800 hover:border-teal-600"
+                    className="w-full flex items-center justify-center py-4 border-teal-600/30 hover:bg-teal-50 hover:border-teal-600"
+                    style={{ color: "#030C54" }}
                     onClick={() => {
                       trackNavClick({ navType: "country_select", value: country });
                       setSelectedCountry(country);
@@ -3771,7 +3773,8 @@ export default function ResourceLocator() {
                   <Button 
                     key={state}
                     variant="outline" 
-                    className="w-full flex items-center justify-center py-4 border-teal-600/30 text-slate-700 hover:bg-teal-50 hover:text-slate-800 hover:border-teal-600"
+                    className="w-full flex items-center justify-center py-4 border-teal-600/30 hover:bg-teal-50 hover:border-teal-600"
+                    style={{ color: "#030C54" }}
                     onClick={() => {
                       trackNavClick({ navType: "state_select", value: state });
                       setSelectedState(state);

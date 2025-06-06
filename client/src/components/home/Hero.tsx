@@ -51,7 +51,7 @@ export function Hero() {
         <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-blue-400">Breaking Down Barriers Through Peer Connection</h2>
         
         <div className="prose max-w-none prose-sm sm:prose-base">
-          <p className="mb-3 sm:mb-4 text-sm sm:text-base text-slate-600">
+          <p className="mb-3 sm:mb-4 text-sm sm:text-base" style={{ color: "#030C54" }}>
             Military service brings unique experiences that can impact wellness during the transition to civilian life. 
             Many veterans find strength through connecting with others who share similar backgrounds and understand 
             their journey. Our platform facilitates these meaningful connections.
@@ -60,8 +60,8 @@ export function Hero() {
           <div className="grid md:grid-cols-3 gap-4 sm:gap-6 mb-4">
             {/* Transition Considerations */}
             <div className="bg-gray-50 rounded-lg p-3 sm:p-4">
-              <h3 className="font-medium mb-2 text-slate-700 text-base sm:text-lg">Transition Considerations:</h3>
-              <ul className="list-disc pl-4 sm:pl-5 space-y-1 sm:space-y-2 text-sm sm:text-base text-slate-600">
+              <h3 className="font-medium mb-2 text-base sm:text-lg" style={{ color: "#030C54" }}>Transition Considerations:</h3>
+              <ul className="list-disc pl-4 sm:pl-5 space-y-1 sm:space-y-2 text-sm sm:text-base" style={{ color: "#030C54" }}>
                 <li>Navigating civilian healthcare systems</li>
                 <li>Finding peers who understand military experiences</li>
                 <li>Accessing confidential and judgment-free support</li>
@@ -81,8 +81,8 @@ export function Hero() {
             
             {/* Connection Benefits */}
             <div className="bg-blue-100 rounded-lg p-3 sm:p-4">
-              <h3 className="font-medium mb-2 text-slate-700 text-base sm:text-lg">Benefits of Peer Connection:</h3>
-              <ul className="list-disc pl-4 sm:pl-5 space-y-1 text-sm sm:text-base text-slate-600">
+              <h3 className="font-medium mb-2 text-base sm:text-lg" style={{ color: "#030C54" }}>Benefits of Peer Connection:</h3>
+              <ul className="list-disc pl-4 sm:pl-5 space-y-1 text-sm sm:text-base" style={{ color: "#030C54" }}>
                 <li>Creates meaningful relationships with shared understanding</li>
                 <li>Provides practical insights from lived experiences</li>
                 <li>Builds community and reduces isolation</li>
