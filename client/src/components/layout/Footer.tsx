@@ -74,7 +74,7 @@ export function Footer() {
           </p>
           
           {/* Final CTA Section */}
-          <div className="border-t border-white/20 pt-6">
+          <div className="border-t border-white/20 pt-6 bg-[#3e64dd]/10 -mx-8 px-8 pb-8 rounded-lg">
             <h2 className="text-2xl font-bold mb-4 text-white">
               You don't have to do this alone. Find your people. Stay connected.
             </h2>
