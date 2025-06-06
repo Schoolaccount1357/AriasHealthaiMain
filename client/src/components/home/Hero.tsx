@@ -50,47 +50,45 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Crisis Resources Banner - Aligned with hero content area */}
-      <div className="bg-[#1e293b] border-l-4 border-[#3e64dd] p-3 sm:p-4 mx-6 sm:ml-auto sm:mr-8 sm:max-w-[50%] -mt-4 sm:-mt-6 relative z-10 rounded-r-lg shadow-lg">
-        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
+      {/* Crisis Resources Banner - Desktop Only - Aligned with hero content area */}
+      <div className="hidden sm:block bg-[#1e293b] border-l-4 border-[#3e64dd] p-4 ml-auto mr-8 max-w-[50%] -mt-6 relative z-10 rounded-r-lg shadow-lg">
+        <div className="flex items-center justify-between gap-4">
           {/* Header Section */}
-          <div className="flex items-start sm:items-center">
-            <Phone className="h-4 w-4 sm:h-5 sm:w-5 mr-2 sm:mr-3 text-[#3e64dd] flex-shrink-0 mt-0.5 sm:mt-0" />
+          <div className="flex items-center">
+            <Phone className="h-5 w-5 mr-3 text-[#3e64dd] flex-shrink-0" />
             <div className="min-w-0 flex-1">
-              <h3 className="text-white font-semibold text-xs sm:text-sm leading-tight">Need immediate help?</h3>
-              <p className="text-white/80 text-xs leading-tight mt-0.5 sm:mt-1">Crisis support available 24/7</p>
+              <h3 className="text-white font-semibold text-sm leading-tight">Need immediate help?</h3>
+              <p className="text-white/80 text-xs leading-tight mt-1">Crisis support available 24/7</p>
             </div>
           </div>
           
-          {/* Buttons Section - Stacked on mobile, inline on desktop */}
-          <div className="flex flex-col sm:flex-row gap-2 sm:gap-2 w-full sm:w-auto">
+          {/* Buttons Section */}
+          <div className="flex gap-2">
             <Button 
               onClick={() => trackResourceClick("call", () => window.location.href = "tel:988")}
               size="sm"
-              className="bg-[#3e64dd] hover:bg-[#2a4bba] text-xs px-3 py-2 sm:py-1 w-full sm:w-auto flex-shrink-0"
+              className="bg-[#3e64dd] hover:bg-[#2a4bba] text-xs px-3 py-1 flex-shrink-0"
             >
               <Phone className="h-3 w-3 mr-1" />
               Call 988 - Press 1
             </Button>
-            <div className="flex gap-2 sm:gap-2">
-              <Button 
-                onClick={() => trackResourceClick("text", () => window.location.href = "sms:838255")}
-                size="sm"
-                variant="outline"
-                className="border-[#3e64dd] text-[#3e64dd] hover:bg-[#3e64dd]/10 text-xs px-3 py-2 sm:py-1 flex-1 sm:flex-none"
-              >
-                Text 838255
-              </Button>
-              <Button 
-                onClick={() => trackResourceClick("chat", () => window.open("https://www.veteranscrisisline.net/get-help/chat", "_blank"))}
-                size="sm"
-                variant="outline"
-                className="border-[#3e64dd] text-[#3e64dd] hover:bg-[#3e64dd]/10 text-xs px-3 py-2 sm:py-1 flex-1 sm:flex-none"
-              >
-                <Globe className="h-3 w-3 mr-1" />
-                Chat
-              </Button>
-            </div>
+            <Button 
+              onClick={() => trackResourceClick("text", () => window.location.href = "sms:838255")}
+              size="sm"
+              variant="outline"
+              className="border-[#3e64dd] text-[#3e64dd] hover:bg-[#3e64dd]/10 text-xs px-3 py-1"
+            >
+              Text 838255
+            </Button>
+            <Button 
+              onClick={() => trackResourceClick("chat", () => window.open("https://www.veteranscrisisline.net/get-help/chat", "_blank"))}
+              size="sm"
+              variant="outline"
+              className="border-[#3e64dd] text-[#3e64dd] hover:bg-[#3e64dd]/10 text-xs px-3 py-1"
+            >
+              <Globe className="h-3 w-3 mr-1" />
+              Chat
+            </Button>
           </div>
         </div>
       </div>
