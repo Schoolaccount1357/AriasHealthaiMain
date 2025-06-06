@@ -26,7 +26,6 @@ export default function Home() {
         <section id="enrollment-form" className="scroll-mt-20 pt-4">
           <EnrollmentForm />
         </section>
-        <AboutSUDS />
         <TrustAndSecurity />
         <FAQSection />
         <FinalCTA />
