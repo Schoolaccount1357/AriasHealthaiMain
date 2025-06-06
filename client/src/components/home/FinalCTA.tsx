@@ -11,7 +11,7 @@ export function FinalCTA() {
         
         <Button 
           asChild
-          className="bg-[#3e64dd] text-white hover:bg-[#2a4bba] transition-colors"
+          className="bg-[blue-600] text-white hover:bg-[#2a4bba] transition-colors"
           size="lg"
         >
           <Link href="#enrollment-form">

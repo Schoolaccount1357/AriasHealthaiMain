@@ -3458,17 +3458,17 @@ export default function ResourceLocator() {
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case "VA":
-        return <Building className="h-5 w-5 text-[#3e64dd]" />;
+        return <Building className="h-5 w-5 text-[blue-600]" />;
       case "Crisis":
-        return <Phone className="h-5 w-5 text-[#3e64dd]" />;
+        return <Phone className="h-5 w-5 text-[blue-600]" />;
       case "Housing":
-        return <Building className="h-5 w-5 text-[#3e64dd]" />;
+        return <Building className="h-5 w-5 text-[blue-600]" />;
       case "Employment":
-        return <Shield className="h-5 w-5 text-[#3e64dd]" />;
+        return <Shield className="h-5 w-5 text-[blue-600]" />;
       case "Treatment":
-        return <Building className="h-5 w-5 text-[#3e64dd]" />;
+        return <Building className="h-5 w-5 text-[blue-600]" />;
       default:
-        return <MapPin className="h-5 w-5 text-[#3e64dd]" />;
+        return <MapPin className="h-5 w-5 text-[blue-600]" />;
     }
   };
 
@@ -3503,7 +3503,7 @@ export default function ResourceLocator() {
               setSelectedState("");
               setSelectedCountry("");
             }}
-            className={`rounded-full px-6 font-medium ${!isInternational ? 'bg-[#3e64dd] hover:bg-[#2a4bba] text-white' : 'text-[#3e64dd] border-[#3e64dd] hover:bg-[#3e64dd]/10'}`}
+            className={`rounded-full px-6 font-medium ${!isInternational ? 'bg-[blue-600] hover:bg-[#2a4bba] text-white' : 'text-[blue-600] border-[blue-600] hover:bg-[blue-600]/10'}`}
           >
             United States
           </Button>
@@ -3515,7 +3515,7 @@ export default function ResourceLocator() {
               setSelectedState("");
               setSelectedCountry("");
             }}
-            className={`rounded-full px-6 font-medium ${isInternational ? 'bg-[#3e64dd] hover:bg-[#2a4bba] text-white' : 'text-[#3e64dd] border-[#3e64dd] hover:bg-[#3e64dd]/10'}`}
+            className={`rounded-full px-6 font-medium ${isInternational ? 'bg-[blue-600] hover:bg-[#2a4bba] text-white' : 'text-[blue-600] border-[blue-600] hover:bg-[blue-600]/10'}`}
           >
             International
           </Button>
@@ -3607,7 +3607,7 @@ export default function ResourceLocator() {
         </div>
 
         <Button 
-          className="w-full mt-5 sm:mt-6 bg-[#3e64dd] hover:bg-[#2a4bba] py-6 sm:py-4"
+          className="w-full mt-5 sm:mt-6 bg-[blue-600] hover:bg-[#2a4bba] py-6 sm:py-4"
           size="lg"
           onClick={() => {
             if (selectedState || selectedCountry) {
@@ -3640,7 +3640,7 @@ export default function ResourceLocator() {
                           <CardTitle className="text-base sm:text-lg md:text-xl break-words">{resource.name}</CardTitle>
                         </div>
                         <div className="mt-1">
-                          <span className="inline-flex items-center rounded-full bg-[#141e2f]/10 px-2 py-1 text-xs font-medium text-[#3e64dd]">
+                          <span className="inline-flex items-center rounded-full bg-[#141e2f]/10 px-2 py-1 text-xs font-medium text-[blue-600]">
                             {resource.category}
                           </span>
                         </div>
@@ -3651,13 +3651,13 @@ export default function ResourceLocator() {
                     <CardDescription className="mb-4 text-sm sm:text-base">{resource.description}</CardDescription>
                     {resource.address && (
                       <div className="flex items-start gap-2 text-xs sm:text-sm mb-2">
-                        <MapPin className="h-4 w-4 mt-0.5 text-[#3e64dd] flex-shrink-0" />
+                        <MapPin className="h-4 w-4 mt-0.5 text-[blue-600] flex-shrink-0" />
                         <span className="break-words">{resource.address}</span>
                       </div>
                     )}
                     {resource.phone && (
                       <div className="flex items-center gap-2 text-xs sm:text-sm">
-                        <Phone className="h-4 w-4 text-[#3e64dd] flex-shrink-0" />
+                        <Phone className="h-4 w-4 text-[blue-600] flex-shrink-0" />
                         <span>{resource.phone}</span>
                       </div>
                     )}
@@ -3665,7 +3665,7 @@ export default function ResourceLocator() {
                   <CardFooter className="border-t pt-4 flex flex-col sm:flex-row sm:justify-between gap-3 px-4 sm:px-6">
                     <Button 
                       variant="outline"
-                      className="w-full sm:w-auto justify-center text-[#3e64dd] border-[#3e64dd]/30 hover:bg-[#3e64dd]/10"
+                      className="w-full sm:w-auto justify-center text-[blue-600] border-[blue-600]/30 hover:bg-[blue-600]/10"
                       onClick={() => {
                         // Track based on whether we're looking at a state or country
                         if (isInternational) {
@@ -3732,7 +3732,7 @@ export default function ResourceLocator() {
           ) : (
             <div className="text-center py-8 sm:py-12 bg-gray-50 rounded-lg">
               <p className="text-base sm:text-lg text-gray-600">No resources found with the selected filters.</p>
-              <p className="mt-2 text-sm sm:text-base">Try changing your search criteria or <Link href="/resources" className="text-[#3e64dd] hover:underline">browse all resources</Link>.</p>
+              <p className="mt-2 text-sm sm:text-base">Try changing your search criteria or <Link href="/resources" className="text-[blue-600] hover:underline">browse all resources</Link>.</p>
             </div>
           )}
         </div>
@@ -3751,7 +3751,7 @@ export default function ResourceLocator() {
                   <Button 
                     key={country}
                     variant="outline" 
-                    className="w-full flex items-center justify-center py-4 border-[#3e64dd]/30 text-[#3e64dd] hover:bg-[#3e64dd]/10 hover:text-[#3e64dd] hover:border-[#3e64dd]"
+                    className="w-full flex items-center justify-center py-4 border-[blue-600]/30 text-[blue-600] hover:bg-[blue-600]/10 hover:text-[blue-600] hover:border-[blue-600]"
                     onClick={() => {
                       trackNavClick({ navType: "country_select", value: country });
                       setSelectedCountry(country);
@@ -3771,7 +3771,7 @@ export default function ResourceLocator() {
                   <Button 
                     key={state}
                     variant="outline" 
-                    className="w-full flex items-center justify-center py-4 border-[#3e64dd]/30 text-[#3e64dd] hover:bg-[#3e64dd]/10 hover:text-[#3e64dd] hover:border-[#3e64dd]"
+                    className="w-full flex items-center justify-center py-4 border-[blue-600]/30 text-[blue-600] hover:bg-[blue-600]/10 hover:text-[blue-600] hover:border-[blue-600]"
                     onClick={() => {
                       trackNavClick({ navType: "state_select", value: state });
                       setSelectedState(state);

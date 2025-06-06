@@ -12,17 +12,17 @@ export function CrisisResources({ variant = "full", className = "" }: CrisisReso
   
   if (variant === "compact") {
     return (
-      <div className={`p-3 rounded-lg border border-[#3e64dd]/30 bg-[#3e64dd]/5 ${className}`}>
+      <div className={`p-3 rounded-lg border border-[blue-600]/30 bg-[blue-600]/5 ${className}`}>
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm font-medium text-[#3e64dd]">In crisis? Get help now</p>
+            <p className="text-sm font-medium text-[blue-600]">In crisis? Get help now</p>
             <p className="text-xs text-muted-foreground">Free, confidential support 24/7</p>
           </div>
           <div className="flex gap-2">
             <Button 
               onClick={() => trackResourceClick("call", () => window.location.href = "tel:988")}
               size="sm"
-              className="bg-[#3e64dd] hover:bg-[#2a4bba]"
+              className="bg-[blue-600] hover:bg-[#2a4bba]"
             >
               <Phone className="h-3 w-3 mr-1" />
               Call
@@ -31,7 +31,7 @@ export function CrisisResources({ variant = "full", className = "" }: CrisisReso
               onClick={() => trackResourceClick("text", () => window.location.href = "sms:838255")}
               size="sm"
               variant="outline"
-              className="border-[#3e64dd] text-[#3e64dd] hover:bg-[#3e64dd]/10"
+              className="border-[blue-600] text-[blue-600] hover:bg-[blue-600]/10"
             >
               Text
             </Button>
@@ -46,7 +46,7 @@ export function CrisisResources({ variant = "full", className = "" }: CrisisReso
       <div className="flex flex-col space-y-4">
         <div>
           <h2 className="text-xl font-semibold flex items-center">
-            <Phone className="h-5 w-5 mr-2 text-[#3e64dd]" />
+            <Phone className="h-5 w-5 mr-2 text-[blue-600]" />
             Need immediate help?
           </h2>
           <p className="mt-1 text-sm">
@@ -57,7 +57,7 @@ export function CrisisResources({ variant = "full", className = "" }: CrisisReso
         <div className="flex flex-wrap gap-3">
           <Button 
             onClick={() => trackResourceClick("call", () => window.location.href = "tel:988")}
-            className="bg-[#3e64dd] hover:bg-[#2a4bba] transition-all duration-300 relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98]"
+            className="bg-[blue-600] hover:bg-[#2a4bba] transition-all duration-300 relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98]"
             size="sm"
           >
             <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
@@ -69,7 +69,7 @@ export function CrisisResources({ variant = "full", className = "" }: CrisisReso
           
           <Button 
             onClick={() => trackResourceClick("text", () => window.location.href = "sms:838255")}
-            className="bg-[#3e64dd] hover:bg-[#2a4bba] transition-all duration-300 relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98]"
+            className="bg-[blue-600] hover:bg-[#2a4bba] transition-all duration-300 relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98]"
             size="sm"
           >
             <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
@@ -83,7 +83,7 @@ export function CrisisResources({ variant = "full", className = "" }: CrisisReso
           
           <Button 
             onClick={() => trackResourceClick("chat", () => window.open("https://www.veteranscrisisline.net/get-help/chat", "_blank"))}
-            className="bg-[#3e64dd] hover:bg-[#2a4bba] transition-all duration-300 relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98]"
+            className="bg-[blue-600] hover:bg-[#2a4bba] transition-all duration-300 relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98]"
             size="sm"
           >
             <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>

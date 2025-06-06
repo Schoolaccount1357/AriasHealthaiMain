@@ -37,12 +37,12 @@ export function Header() {
                     </linearGradient>
                     <linearGradient id="paint1_linear_custom" x1="166.399" y1="109.845" x2="238.596" y2="352.426" gradientUnits="userSpaceOnUse">
                       <stop stopColor="#8DEFC9" stopOpacity="0.86"/>
-                      <stop offset="0.72" stopColor="#10066A"/>
+                      <stop offset="0.72" stopColor="blue-600"/>
                     </linearGradient>
                   </defs>
                 </svg>
               </div>
-              <span className="-ml-4 text-xl font-semibold transition-all duration-300 group-hover:bg-clip-text group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-[#10066A] group-hover:to-[#3e64dd]" style={{ color: "#10066A" }}>AriasHealth.ai</span>
+              <span className="-ml-4 text-xl font-semibold transition-all duration-300 group-hover:bg-clip-text group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-[blue-600] group-hover:to-[blue-600]" style={{ color: "blue-600" }}>AriasHealth.ai</span>
             </div>
           </Link>
           
@@ -74,7 +74,7 @@ export function Header() {
                   variant="ghost" 
                   size="icon" 
                   aria-label="Menu"
-                  className="group transition-all duration-200 hover:bg-[#10066A]/5"
+                  className="group transition-all duration-200 hover:bg-[blue-600]/5"
                 >
                   <Menu className="h-6 w-6 transition-transform duration-300 group-hover:scale-110 group-hover:text-primary" />
                 </Button>
