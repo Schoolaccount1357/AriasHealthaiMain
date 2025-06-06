@@ -81,7 +81,7 @@ export function Hero() {
             
             {/* Connection Benefits */}
             <div className="bg-blue-100 rounded-lg p-3 sm:p-4">
-              <h3 className="font-medium mb-2 text-blue-700 text-base sm:text-lg">Benefits of Peer Connection:</h3>
+              <h3 className="font-medium mb-2 text-blue-800 text-base sm:text-lg">Benefits of Peer Connection:</h3>
               <ul className="list-disc pl-4 sm:pl-5 space-y-1 text-sm sm:text-base">
                 <li>Creates meaningful relationships with shared understanding</li>
                 <li>Provides practical insights from lived experiences</li>

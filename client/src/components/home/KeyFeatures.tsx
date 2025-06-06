@@ -5,22 +5,22 @@ export function KeyFeatures() {
     {
       title: "AI-Driven Peer Matching",
       description: "Our algorithms connect you with peers who share similar experiences, fostering meaningful relationships.",
-      icon: <Brain className="h-10 w-10 text-[#0d9488]" />
+      icon: <Brain className="h-10 w-10 text-emerald-700" />
     },
     {
       title: "Predictive Relapse Detection",
       description: "Advanced AI helps identify early warning signs before they become serious problems.",
-      icon: <Activity className="h-10 w-10 text-[#0d9488]" />
+      icon: <Activity className="h-10 w-10 text-emerald-700" />
     },
     {
       title: "Real-Time Peer Support Tools",
       description: "Connect through secure video, chat, and messaging when you need support most.",
-      icon: <Users className="h-10 w-10 text-[#0d9488]" />
+      icon: <Users className="h-10 w-10 text-emerald-700" />
     },
     {
       title: "Privacy First - HIPAA Compliant",
       description: "Enterprise-grade security keeps your information protected and confidential.",
-      icon: <ShieldCheck className="h-10 w-10 text-[#0d9488]" />
+      icon: <ShieldCheck className="h-10 w-10 text-emerald-700" />
     }
   ];
 

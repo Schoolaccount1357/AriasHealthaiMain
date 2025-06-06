@@ -45,7 +45,7 @@ export default function Resources() {
   const resourceCategories = [
     {
       title: "Crisis Support",
-      icon: <Phone className="h-6 w-6 text-[#0d9488]" />,
+      icon: <Phone className="h-6 w-6 text-emerald-700" />,
       resources: [
         {
           name: "Veterans Crisis Line",
@@ -75,7 +75,7 @@ export default function Resources() {
     },
     {
       title: "Substance Use Treatment",
-      icon: <Activity className="h-6 w-6 text-[#0d9488]" />,
+      icon: <Activity className="h-6 w-6 text-emerald-700" />,
       resources: [
         {
           name: "VA Substance Use Disorder Program",
@@ -94,7 +94,7 @@ export default function Resources() {
     },
     {
       title: "Peer Support Groups",
-      icon: <HeartHandshake className="h-6 w-6 text-[#0d9488]" />,
+      icon: <HeartHandshake className="h-6 w-6 text-emerald-700" />,
       resources: [
         {
           name: "Wounded Warrior Project",
@@ -111,7 +111,7 @@ export default function Resources() {
     },
     {
       title: "VA Programs & Benefits",
-      icon: <Building2 className="h-6 w-6 text-[#0d9488]" />,
+      icon: <Building2 className="h-6 w-6 text-emerald-700" />,
       resources: [
         {
           name: "VA Health Care",
@@ -128,7 +128,7 @@ export default function Resources() {
     },
     {
       title: "Educational Resources",
-      icon: <BookOpen className="h-6 w-6 text-[#0d9488]" />,
+      icon: <BookOpen className="h-6 w-6 text-emerald-700" />,
       resources: [
         {
           name: "PTSD: National Center for PTSD",
@@ -144,7 +144,7 @@ export default function Resources() {
     },
     {
       title: "Online Communities",
-      icon: <Globe className="h-6 w-6 text-[#0d9488]" />,
+      icon: <Globe className="h-6 w-6 text-emerald-700" />,
       resources: [
         {
           name: "Rally Point",
@@ -160,7 +160,7 @@ export default function Resources() {
     },
     {
       title: "International Resources",
-      icon: <Globe className="h-6 w-6 text-[#0d9488]" />,
+      icon: <Globe className="h-6 w-6 text-emerald-700" />,
       resources: [
         {
           name: "Foreign Medical Program (FMP)",
@@ -188,7 +188,7 @@ export default function Resources() {
 
       <div className="mb-10 bg-[#141e2f] text-white p-6 rounded-lg">
         <div className="flex items-center mb-4">
-          <PanelLeftOpen className="h-8 w-8 mr-3 text-[blue-600]" />
+          <PanelLeftOpen className="h-8 w-8 mr-3 text-[blue-700]" />
           <h2 className="text-2xl font-semibold">Need immediate help?</h2>
         </div>
         <p className="mb-3">
@@ -200,7 +200,7 @@ export default function Resources() {
             <div className="flex flex-wrap gap-4">
               <Button 
                 onClick={() => trackResourceClick("call", () => window.location.href = "tel:988")}
-                className="bg-[blue-600] hover:bg-[#2a4bba] transition-all duration-300 relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98]"
+                className="bg-[blue-700] hover:bg-[#2a4bba] transition-all duration-300 relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98]"
                 size="lg"
               >
                 <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
@@ -211,7 +211,7 @@ export default function Resources() {
               </Button>
               <Button 
                 onClick={() => trackResourceClick("text", () => window.location.href = "sms:838255")}
-                className="bg-[blue-600] hover:bg-[#2a4bba] transition-all duration-300 relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98]"
+                className="bg-[blue-700] hover:bg-[#2a4bba] transition-all duration-300 relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98]"
                 size="lg"
               >
                 <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
@@ -230,7 +230,7 @@ export default function Resources() {
             <div className="flex flex-wrap gap-4">
               <Button 
                 onClick={() => trackResourceClick("call", () => window.location.href = "tel:0018002738255")}
-                className="bg-[blue-600] hover:bg-[#2a4bba] transition-all duration-300 relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98]"
+                className="bg-[blue-700] hover:bg-[#2a4bba] transition-all duration-300 relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98]"
                 size="lg"
               >
                 <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
@@ -241,7 +241,7 @@ export default function Resources() {
               </Button>
               <Button 
                 onClick={() => trackResourceClick("text", () => window.location.href = "sms:838255")}
-                className="bg-[blue-600] hover:bg-[#2a4bba] transition-all duration-300 relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98]"
+                className="bg-[blue-700] hover:bg-[#2a4bba] transition-all duration-300 relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98]"
                 size="lg"
               >
                 <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
@@ -258,7 +258,7 @@ export default function Resources() {
         
         <Button 
           onClick={() => trackResourceClick("chat", () => window.open("https://www.veteranscrisisline.net/get-help/chat", "_blank"))}
-          className="bg-[blue-600] hover:bg-[#2a4bba] transition-all duration-300 relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98] w-full"
+          className="bg-[blue-700] hover:bg-[#2a4bba] transition-all duration-300 relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98] w-full"
           size="lg"
         >
           <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
@@ -292,7 +292,7 @@ export default function Resources() {
                             const phoneNumber = resource.phone?.split(' ')[0].replace(/-/g, '');
                             trackResourceClick("call", () => window.location.href = `tel:${phoneNumber}`);
                           }}
-                          className="text-[blue-600] hover:underline focus:outline-none"
+                          className="text-[blue-700] hover:underline focus:outline-none"
                         >
                           {resource.phone}
                         </button>
@@ -307,7 +307,7 @@ export default function Resources() {
                               const textNumber = resource.text?.toString().split(' ')[1] || "838255";
                               trackResourceClick("text", () => window.location.href = `sms:${textNumber}`);
                             }}
-                            className="text-blue-600 hover:underline focus:outline-none"
+                            className="text-blue-700 hover:underline focus:outline-none"
                           >
                             {resource.text}
                           </button>
@@ -317,7 +317,7 @@ export default function Resources() {
                   </div>
                   <Button 
                     variant="link" 
-                    className="p-0 h-auto text-blue-600 group relative overflow-hidden"
+                    className="p-0 h-auto text-blue-700 group relative overflow-hidden"
                     onClick={() => {
                       // Track resource usage with a generic "website" type
                       trackResourceClick("website", () => window.open(resource.website, "_blank", "noopener,noreferrer"));
@@ -328,7 +328,7 @@ export default function Resources() {
                         Visit Website
                         <Globe className="h-3 w-3 ml-1 transition-transform duration-300 group-hover:translate-x-1 group-hover:scale-110" />
                       </span>
-                      <span className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600/40 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
+                      <span className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-700/40 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
                     </span>
                   </Button>
                 </div>
@@ -338,10 +338,10 @@ export default function Resources() {
               <Button 
                 asChild 
                 variant="outline" 
-                className="w-full group transition-all duration-300 relative overflow-hidden hover:border-[blue-600] hover:text-[blue-600]"
+                className="w-full group transition-all duration-300 relative overflow-hidden hover:border-[blue-700] hover:text-[blue-700]"
               >
                 <Link href="/resource-locator" className="flex items-center justify-center">
-                  <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-[blue-600]/0 via-[blue-600]/10 to-[blue-600]/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
+                  <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-[blue-700]/0 via-[blue-700]/10 to-[blue-700]/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
                   <span className="relative z-10 flex items-center justify-center">
                     Find local resources
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -360,14 +360,14 @@ export default function Resources() {
       {resourceCategories.find(category => category.title === "International Resources") && (
         <div className="mt-16 mb-6">
           <h2 className="text-2xl font-bold mb-6 text-center">
-            <span className="bg-gradient-to-r from-[blue-600] to-[blue-600] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[blue-700] to-[blue-700] bg-clip-text text-transparent">
               International Resources
             </span>
           </h2>
-          <Card className="shadow-lg hover:shadow-xl transition-shadow border-t-4 border-t-[blue-600]">
+          <Card className="shadow-lg hover:shadow-xl transition-shadow border-t-4 border-t-[blue-700]">
             <CardHeader>
               <div className="flex items-center gap-3">
-                <Globe className="h-6 w-6 text-[blue-600]" />
+                <Globe className="h-6 w-6 text-[blue-700]" />
                 <CardTitle>Support for Veterans Worldwide</CardTitle>
               </div>
               <CardDescription className="text-base mt-2">
@@ -378,7 +378,7 @@ export default function Resources() {
             {/* FMP Detailed Section */}
             <div className="mb-8 bg-white p-6 rounded-lg shadow-md border border-gray-100">
               <h3 className="text-xl font-bold mb-4 text-[#003366] flex items-center gap-2">
-                <Globe className="h-6 w-6 text-[blue-600]" />
+                <Globe className="h-6 w-6 text-[blue-700]" />
                 Foreign Medical Program (FMP)
               </h3>
               <p className="mb-4">
@@ -390,7 +390,7 @@ export default function Resources() {
                   <span className="font-bold mr-2">📞 U.S. Toll-Free:</span>
                   <button 
                     onClick={() => trackResourceClick("call", () => window.location.href = "tel:18773458179")}
-                    className="text-[blue-600] hover:underline"
+                    className="text-[blue-700] hover:underline"
                   >
                     1-877-345-8179
                   </button>
@@ -399,7 +399,7 @@ export default function Resources() {
                   <span className="font-bold mr-2">📞 International:</span>
                   <button 
                     onClick={() => trackResourceClick("call", () => window.location.href = "tel:+13033317590")}
-                    className="text-[blue-600] hover:underline"
+                    className="text-[blue-700] hover:underline"
                   >
                     +1-303-331-7590
                   </button>
@@ -408,7 +408,7 @@ export default function Resources() {
                   <span className="font-bold mr-2">📧 Email:</span>
                   <a 
                     href="mailto:vhacofmp@va.gov" 
-                    className="text-[blue-600] hover:underline"
+                    className="text-[blue-700] hover:underline"
                     onClick={() => trackResourceClick("website", () => {})}
                   >
                     vhacofmp@va.gov
@@ -420,7 +420,7 @@ export default function Resources() {
                     href="https://www.va.gov/vaforms/medical/pdf/VA%20Form%2010-7959f-1.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[blue-600] hover:underline"
+                    className="text-[blue-700] hover:underline"
                     onClick={() => trackResourceClick("website", () => {})}
                   >
                     VA Form 10-7959f-1 (PDF)
@@ -432,7 +432,7 @@ export default function Resources() {
                     href="https://www.va.gov/health-care/foreign-medical-program/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[blue-600] hover:underline"
+                    className="text-[blue-700] hover:underline"
                     onClick={() => trackResourceClick("website", () => {})}
                   >
                     Visit FMP Site
@@ -460,7 +460,7 @@ export default function Resources() {
                     📞{' '}
                     <button 
                       onClick={() => trackResourceClick("call", () => window.location.href = "tel:0018002738255")}
-                      className="text-[blue-600] hover:underline focus:outline-none"
+                      className="text-[blue-700] hover:underline focus:outline-none"
                     >
                       001-800-273-8255
                     </button>
@@ -469,7 +469,7 @@ export default function Resources() {
                     ✉️{' '}
                     <button 
                       onClick={() => trackResourceClick("text", () => window.location.href = "sms:838255")}
-                      className="text-[blue-600] hover:underline focus:outline-none"
+                      className="text-[blue-700] hover:underline focus:outline-none"
                     >
                       Text to 838255
                     </button>
@@ -477,7 +477,7 @@ export default function Resources() {
                 </div>
                 <Button 
                   variant="link" 
-                  className="p-0 h-auto text-[blue-600] group relative overflow-hidden mt-2"
+                  className="p-0 h-auto text-[blue-700] group relative overflow-hidden mt-2"
                   onClick={() => trackResourceClick("website", () => window.open("https://www.veteranscrisisline.net/get-help/military-crisis-line", "_blank", "noopener,noreferrer"))}
                 >
                   <span className="inline-flex items-center">
@@ -485,7 +485,7 @@ export default function Resources() {
                       Visit Website
                       <Globe className="h-3 w-3 ml-1 transition-transform duration-300 group-hover:translate-x-1 group-hover:scale-110" />
                     </span>
-                    <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[blue-600]/40 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
+                    <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[blue-700]/40 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
                   </span>
                 </Button>
               </div>
@@ -495,10 +495,10 @@ export default function Resources() {
               <Button 
                 asChild 
                 variant="outline" 
-                className="w-full group transition-all duration-300 relative overflow-hidden hover:border-[blue-600] hover:text-[blue-600]"
+                className="w-full group transition-all duration-300 relative overflow-hidden hover:border-[blue-700] hover:text-[blue-700]"
               >
                 <Link href="/resource-locator" className="flex items-center justify-center">
-                  <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-[blue-600]/0 via-[blue-600]/10 to-[blue-600]/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
+                  <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-[blue-700]/0 via-[blue-700]/10 to-[blue-700]/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
                   <span className="relative z-10 flex items-center justify-center">
                     Find Country-Specific Resources
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -519,7 +519,7 @@ export default function Resources() {
         </p>
         <Button 
           asChild 
-          className="bg-[blue-600] hover:bg-[#2a4bba] transition-all duration-300 relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98]"
+          className="bg-[blue-700] hover:bg-[#2a4bba] transition-all duration-300 relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98]"
         >
           <Link href="/resource-locator" className="flex items-center justify-center">
             <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>

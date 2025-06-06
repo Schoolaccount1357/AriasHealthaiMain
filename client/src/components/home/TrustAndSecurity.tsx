@@ -15,7 +15,7 @@ export function TrustAndSecurity() {
       <div className="flex flex-col md:flex-row items-center">
         <div className="md:w-1/3 mb-6 md:mb-0 md:pr-6">
           <div className="flex justify-center">
-            <Shield className="h-24 w-24 text-[#0d9488]" />
+            <Shield className="h-24 w-24 text-emerald-700" />
           </div>
         </div>
         <div className="md:w-2/3">
@@ -24,7 +24,7 @@ export function TrustAndSecurity() {
           <div className="grid grid-cols-2 gap-2">
             {securityFeatures.map((feature) => (
               <div key={feature.id} className="flex items-start">
-                <CheckCircle className="h-5 w-5 text-[#0d9488] mr-2 mt-0.5" />
+                <CheckCircle className="h-5 w-5 text-emerald-700 mr-2 mt-0.5" />
                 <span className="text-sm">{feature.label}</span>
               </div>
             ))}
@@ -32,13 +32,13 @@ export function TrustAndSecurity() {
           <div className="mt-4">
             <Link 
               href="/privacy-policy" 
-              className="text-blue-600 hover:text-blue-800 font-medium text-sm"
+              className="text-blue-700 hover:text-blue-800 font-medium text-sm"
             >
               View our Privacy Policy
             </Link> | 
             <Link 
               href="/terms-of-service" 
-              className="text-blue-600 hover:text-blue-800 font-medium text-sm ml-1"
+              className="text-blue-700 hover:text-blue-800 font-medium text-sm ml-1"
             >
               Terms of Service
             </Link>
