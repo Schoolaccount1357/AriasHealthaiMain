@@ -4,22 +4,27 @@ import { ArrowRight } from "lucide-react";
 export function AboutSUDS() {
   return (
     <section className="mb-12 bg-white p-5 sm:p-6 md:p-8 rounded-lg shadow-lg">
-      <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-foreground">How Peer Support Helps Veterans</h2>
+      <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-foreground">Understanding Substance Use Disorders</h2>
       
       <div className="prose max-w-none prose-sm sm:prose-base">
+        <p className="mb-3 sm:mb-4 text-sm sm:text-base">
+          Substance Use Disorders (SUDs) affect many veterans as they navigate the complexities of military-to-civilian transition. 
+          These challenges require specialized understanding and support.
+        </p>
+        
         <div className="bg-accent/20 p-3 sm:p-4 rounded-lg my-4">
-          <h3 className="font-medium mb-2 text-primary text-base sm:text-lg">Benefits of Peer Connection:</h3>
+          <h3 className="font-medium mb-2 text-primary text-base sm:text-lg">Key Facts About Veterans & SUDs:</h3>
           <ul className="list-disc pl-4 sm:pl-5 space-y-1 text-sm sm:text-base">
-            <li>Reduces feelings of isolation</li>
-            <li>Provides practical advice from those with similar experiences</li>
-            <li>Creates accountability in recovery</li>
-            <li>Offers hope through seeing others' progress</li>
+            <li>Veterans are twice as likely to develop substance use disorders compared to civilians</li>
+            <li>Combat exposure and trauma significantly increase risk factors</li>
+            <li>Co-occurring mental health conditions are common</li>
+            <li>Early intervention and peer support improve outcomes significantly</li>
           </ul>
         </div>
         
         <p className="mb-3 sm:mb-4 text-sm sm:text-base">
-          Our AI-powered matching system connects you with veterans who understand your specific challenges,
-          creating meaningful relationships that support long-term recovery and wellness.
+          Our platform recognizes these unique challenges and provides specialized matching that considers 
+          military experience, trauma exposure, and recovery stage to create the most effective peer connections.
         </p>
       </div>
       
