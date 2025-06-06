@@ -45,7 +45,7 @@ export default function Resources() {
   const resourceCategories = [
     {
       title: "Crisis Support",
-      icon: <Phone className="h-6 w-6 text-[#10066A]" />,
+      icon: <Phone className="h-6 w-6 text-[#0d9488]" />,
       resources: [
         {
           name: "Veterans Crisis Line",
@@ -75,7 +75,7 @@ export default function Resources() {
     },
     {
       title: "Substance Use Treatment",
-      icon: <Activity className="h-6 w-6 text-[#10066A]" />,
+      icon: <Activity className="h-6 w-6 text-[#0d9488]" />,
       resources: [
         {
           name: "VA Substance Use Disorder Program",
@@ -94,7 +94,7 @@ export default function Resources() {
     },
     {
       title: "Peer Support Groups",
-      icon: <HeartHandshake className="h-6 w-6 text-[#10066A]" />,
+      icon: <HeartHandshake className="h-6 w-6 text-[#0d9488]" />,
       resources: [
         {
           name: "Wounded Warrior Project",
@@ -111,7 +111,7 @@ export default function Resources() {
     },
     {
       title: "VA Programs & Benefits",
-      icon: <Building2 className="h-6 w-6 text-[#10066A]" />,
+      icon: <Building2 className="h-6 w-6 text-[#0d9488]" />,
       resources: [
         {
           name: "VA Health Care",
@@ -144,7 +144,7 @@ export default function Resources() {
     },
     {
       title: "Online Communities",
-      icon: <Globe className="h-6 w-6 text-[#10066A]" />,
+      icon: <Globe className="h-6 w-6 text-[#0d9488]" />,
       resources: [
         {
           name: "Rally Point",
@@ -160,7 +160,7 @@ export default function Resources() {
     },
     {
       title: "International Resources",
-      icon: <Globe className="h-6 w-6 text-[#10066A]" />,
+      icon: <Globe className="h-6 w-6 text-[#0d9488]" />,
       resources: [
         {
           name: "Foreign Medical Program (FMP)",

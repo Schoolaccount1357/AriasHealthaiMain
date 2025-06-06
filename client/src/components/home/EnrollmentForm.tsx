@@ -75,7 +75,7 @@ export function EnrollmentForm() {
           </p>
         </div>
         
-        <h2 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-teal-600 to-emerald-700 bg-clip-text text-transparent mb-3 sm:mb-4">Join the Waitlist</h2>
+        <h2 className="text-2xl sm:text-3xl font-bold text-[#0d9488] mb-3 sm:mb-4">Join the Waitlist</h2>
         <p className="text-sm sm:text-base text-gray-600 mb-2">
           Be among the first to access AriasHealth.ai's revolutionary peer support platform when we launch
         </p>
