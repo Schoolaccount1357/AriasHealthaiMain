@@ -110,10 +110,33 @@ export function PlatformPreview() {
         </div>
       </div>
       
+      {/* Additional Key Features */}
+      <div className="grid md:grid-cols-2 gap-6 mt-8">
+        <div className="bg-gradient-to-br from-[#10066A]/5 to-[#3e64dd]/10 p-6 rounded-xl shadow-lg border border-[#10066A]/20">
+          <h4 className="font-semibold text-lg mb-3 text-[#10066A] flex items-center">
+            <Brain className="h-5 w-5 mr-2" />
+            Predictive Relapse Detection
+          </h4>
+          <p className="text-gray-700 text-sm">
+            Advanced AI helps identify early warning signs before they become serious problems.
+          </p>
+        </div>
+        
+        <div className="bg-gradient-to-br from-[#10066A]/5 to-[#3e64dd]/10 p-6 rounded-xl shadow-lg border border-[#10066A]/20">
+          <h4 className="font-semibold text-lg mb-3 text-[#10066A] flex items-center">
+            <Video className="h-5 w-5 mr-2" />
+            Real-Time Peer Support Tools
+          </h4>
+          <p className="text-gray-700 text-sm">
+            Connect through secure video, chat, and messaging when you need support most.
+          </p>
+        </div>
+      </div>
+      
       <div className="mt-8 text-center">
         <p className="text-sm text-gray-500 mb-4">Coming soon - join our waitlist to be the first to experience the future of veteran mental health support</p>
         <Button 
-          className="bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800"
+          className="bg-gradient-to-r from-[#10066A] to-[#3e64dd] hover:from-[#2a4bba] hover:to-[#10066A] text-white"
           onClick={() => {
             const enrollmentFormSection = document.getElementById('enrollment-form');
             if (enrollmentFormSection) {

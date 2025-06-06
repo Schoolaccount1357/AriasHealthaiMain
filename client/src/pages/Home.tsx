@@ -24,7 +24,6 @@ export default function Home() {
         
         <AboutSUDS />
         <PlatformPreview />
-        <KeyFeatures />
         <section id="enrollment-form" className="scroll-mt-20 pt-4">
           <EnrollmentForm />
         </section>
