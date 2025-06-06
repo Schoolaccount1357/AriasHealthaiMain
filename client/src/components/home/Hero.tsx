@@ -52,50 +52,50 @@ export function Hero() {
         
         <div className="prose max-w-none prose-sm sm:prose-base">
           <p className="mb-3 sm:mb-4 text-sm sm:text-base">
-            Veterans face unique challenges as they navigate military-to-civilian transition, with substance use disorders 
-            affecting veterans at twice the rate of civilians. Many face isolation, stigma, and barriers to care — 
-            especially in substance use recovery. Traditional services don't always meet them where they are.
+            Military service brings unique experiences that can impact wellness during the transition to civilian life. 
+            Many veterans find strength through connecting with others who share similar backgrounds and understand 
+            their journey. Our platform facilitates these meaningful connections.
           </p>
           
           <div className="grid md:grid-cols-3 gap-4 sm:gap-6 mb-4">
-            {/* Challenges */}
+            {/* Transition Considerations */}
             <div className="bg-gray-50 rounded-lg p-3 sm:p-4">
-              <h3 className="font-medium mb-2 text-foreground text-base sm:text-lg">Common Challenges:</h3>
+              <h3 className="font-medium mb-2 text-foreground text-base sm:text-lg">Transition Considerations:</h3>
               <ul className="list-disc pl-4 sm:pl-5 space-y-1 sm:space-y-2 text-sm sm:text-base">
-                <li>Limited access to timely mental health support</li>
-                <li>Difficulty connecting with peers who understand their experiences</li>
-                <li>Stigma around seeking help for substance use disorders</li>
-                <li>Lack of privacy and anonymity in traditional support environments</li>
+                <li>Navigating civilian healthcare systems</li>
+                <li>Finding peers who understand military experiences</li>
+                <li>Accessing confidential and judgment-free support</li>
+                <li>Connecting with others on similar wellness journeys</li>
               </ul>
             </div>
             
-            {/* Key Facts */}
+            {/* Evidence & Research */}
             <div className="bg-blue-50 rounded-lg p-3 sm:p-4">
-              <h3 className="font-medium mb-2 text-[#10066A] text-base sm:text-lg">Key Facts About Veterans & SUDs:</h3>
+              <h3 className="font-medium mb-2 text-[#10066A] text-base sm:text-lg">Research Shows:</h3>
               <ul className="list-disc pl-4 sm:pl-5 space-y-1 text-sm sm:text-base">
-                <li>Veterans are twice as likely to develop substance use disorders</li>
-                <li>Combat exposure and trauma significantly increase risk factors</li>
-                <li>Co-occurring mental health conditions are common</li>
-                <li>Early intervention and peer support improve outcomes significantly</li>
+                <li>Peer support significantly improves wellness outcomes</li>
+                <li>Shared military experiences enhance therapeutic connections</li>
+                <li>Early intervention leads to better long-term wellness</li>
+                <li>Veterans prefer support from those with similar backgrounds</li>
               </ul>
             </div>
             
-            {/* Solutions */}
+            {/* Connection Benefits */}
             <div className="bg-accent/20 rounded-lg p-3 sm:p-4">
-              <h3 className="font-medium mb-2 text-primary text-base sm:text-lg">How Peer Support Helps:</h3>
+              <h3 className="font-medium mb-2 text-primary text-base sm:text-lg">Benefits of Peer Connection:</h3>
               <ul className="list-disc pl-4 sm:pl-5 space-y-1 text-sm sm:text-base">
-                <li>Reduces feelings of isolation through shared experiences</li>
-                <li>Provides practical advice from those with similar journeys</li>
-                <li>Creates accountability and motivation in recovery</li>
-                <li>Offers hope by seeing others' progress and success</li>
+                <li>Creates meaningful relationships with shared understanding</li>
+                <li>Provides practical insights from lived experiences</li>
+                <li>Builds community and reduces isolation</li>
+                <li>Offers hope through witnessing others' wellness journeys</li>
               </ul>
             </div>
           </div>
           
           <p className="mb-3 sm:mb-4 text-sm sm:text-base">
-            At AriasHealth.ai, we combine AI technology with peer-to-peer connection to create
-            a powerful support system that recognizes these unique challenges and provides specialized matching 
-            considering military experience, trauma exposure, and recovery stage.
+            AriasHealth.ai uses thoughtful AI matching to connect veterans based on shared experiences, 
+            service background, and wellness goals, creating supportive relationships that honor the 
+            strength and resilience inherent in military service.
           </p>
         </div>
       </div>
