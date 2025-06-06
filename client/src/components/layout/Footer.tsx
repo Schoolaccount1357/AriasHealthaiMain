@@ -60,10 +60,17 @@ export function Footer() {
         
         {/* Footer Bottom */}
         <div className="mt-8 pt-8 border-t border-white/20 text-center text-sm text-white/80">
+          {/* Final CTA Section */}
+          <div className="mb-6 bg-[#3e64dd]/10 -mx-8 px-8 py-6 rounded-lg">
+            <h2 className="text-2xl font-bold text-white">
+              You don't have to do this alone. Find your people. Stay connected.
+            </h2>
+          </div>
+          
           <div className="mb-2">
             <p>AriasHealth.ai was incubated at Harvard University and MIT</p>
           </div>
-          <p className="mb-6">
+          <p>
             &copy; {currentYear} AriasHealth.ai. All rights reserved. | 
             <Link href="/privacy-policy" className="text-white hover:text-white/80 transition-colors ml-1 mr-1 font-medium">
               Privacy Policy
@@ -72,22 +79,6 @@ export function Footer() {
               Terms of Service
             </Link>
           </p>
-          
-          {/* Final CTA Section */}
-          <div className="border-t border-white/20 pt-6 bg-[#3e64dd]/10 -mx-8 px-8 pb-8 rounded-lg">
-            <h2 className="text-2xl font-bold mb-4 text-white">
-              You don't have to do this alone. Find your people. Stay connected.
-            </h2>
-            <Button 
-              asChild
-              className="bg-[#3e64dd] text-white hover:bg-[#2a4bba] transition-colors"
-              size="lg"
-            >
-              <Link href="#enrollment-form">
-                Join the Waitlist
-              </Link>
-            </Button>
-          </div>
         </div>
       </div>
     </footer>
