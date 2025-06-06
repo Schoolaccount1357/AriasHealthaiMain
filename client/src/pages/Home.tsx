@@ -22,12 +22,12 @@ export default function Home() {
         
         {/* Crisis resources removed from main content */}
         
+        <AboutSUDS />
         <KeyFeatures />
         <section id="enrollment-form" className="scroll-mt-20 pt-4">
           <EnrollmentForm />
         </section>
         <PlatformPreview />
-        <AboutSUDS />
         <TrustAndSecurity />
         <FAQSection />
         <FinalCTA />
