@@ -208,6 +208,43 @@ body {
   }
 }
 
+/* Enhanced button visibility for form navigation */
+.form-nav-button {
+  position: relative;
+  z-index: 10;
+  min-height: 56px !important;
+  font-weight: 600 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  border-radius: 8px !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+.form-nav-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2) !important;
+}
+
+.form-nav-button.primary {
+  background: hsl(var(--primary)) !important;
+  color: hsl(var(--primary-foreground)) !important;
+  border: 2px solid hsl(var(--primary)) !important;
+}
+
+.form-nav-button.primary:hover {
+  background: hsl(var(--primary) / 0.9) !important;
+}
+
+/* Ensure buttons are always visible */
+.form-button-container {
+  background: hsl(var(--background));
+  border-top: 2px solid hsl(var(--border));
+  padding: 24px 0;
+  margin-top: 32px;
+  position: sticky;
+  bottom: 0;
+  z-index: 20;
+}
+
 @layer base {
   :root {
     --background: 0 0% 97%;

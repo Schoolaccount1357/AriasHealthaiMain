@@ -566,41 +566,50 @@ export function EnhancedEnrollmentForm() {
               <form onSubmit={waitlistForm.handleSubmit(onSubmit)} className="space-y-6">
                 {renderStepContent()}
 
-                {/* Navigation buttons with mobile optimization */}
-                <div className="flex flex-col sm:flex-row gap-3 pt-6 border-t">
-                  {currentStep > 1 && (
-                    <Button 
-                      type="button" 
-                      variant="outline" 
-                      onClick={previousStep}
-                      className="h-12 flex-1 text-base touch-manipulation min-h-[44px]"
-                      aria-label="Go to previous step"
-                    >
-                      <ChevronLeft className="h-4 w-4 mr-2" aria-hidden="true" />
-                      Previous
-                    </Button>
-                  )}
-                  
-                  {currentStep < totalSteps ? (
-                    <Button 
-                      type="button" 
-                      onClick={nextStep}
-                      className="h-12 flex-1 text-base bg-primary hover:bg-primary/90 touch-manipulation min-h-[44px]"
-                      aria-label="Go to next step"
-                    >
-                      Next
-                      <ChevronRight className="h-4 w-4 ml-2" aria-hidden="true" />
-                    </Button>
-                  ) : (
-                    <Button 
-                      type="submit" 
-                      className="h-12 flex-1 text-base bg-primary hover:bg-primary/90 touch-manipulation min-h-[44px]"
-                      disabled={waitlistSubmitMutation.isPending}
-                      aria-label="Submit enrollment form"
-                    >
-                      {waitlistSubmitMutation.isPending ? "Joining..." : "Join Waitlist"}
-                    </Button>
-                  )}
+                {/* Navigation buttons with enhanced visibility */}
+                <div className="form-button-container">
+                  <div className="flex flex-col sm:flex-row gap-4 w-full">
+                    {currentStep > 1 && (
+                      <Button 
+                        type="button" 
+                        variant="outline" 
+                        onClick={previousStep}
+                        className="form-nav-button flex-1 text-base touch-manipulation"
+                        aria-label="Go to previous step"
+                      >
+                        <ChevronLeft className="h-5 w-5 mr-2" aria-hidden="true" />
+                        Previous
+                      </Button>
+                    )}
+                    
+                    {currentStep < totalSteps ? (
+                      <Button 
+                        type="button" 
+                        onClick={nextStep}
+                        className="form-nav-button primary flex-1 text-base touch-manipulation"
+                        aria-label="Go to next step"
+                      >
+                        Next Step
+                        <ChevronRight className="h-5 w-5 ml-2" aria-hidden="true" />
+                      </Button>
+                    ) : (
+                      <Button 
+                        type="submit" 
+                        className="form-nav-button primary flex-1 text-base touch-manipulation"
+                        disabled={waitlistSubmitMutation.isPending}
+                        aria-label="Submit enrollment form"
+                      >
+                        {waitlistSubmitMutation.isPending ? (
+                          <>
+                            <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
+                            Joining...
+                          </>
+                        ) : (
+                          "Join Waitlist"
+                        )}
+                      </Button>
+                    )}
+                  </div>
                 </div>
               </form>
             </Form>
