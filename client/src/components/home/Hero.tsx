@@ -76,7 +76,6 @@ export function Hero() {
                 <li>Peer support significantly improves wellness outcomes</li>
                 <li>Shared military experiences enhance therapeutic connections</li>
                 <li>Early intervention leads to better long-term wellness</li>
-                <li>Veterans prefer support from those with similar backgrounds</li>
               </ul>
             </div>
             
