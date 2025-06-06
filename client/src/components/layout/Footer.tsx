@@ -5,14 +5,14 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="bg-[#2c3e50] text-white">
+    <footer className="bg-[#141e2f] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Column 1 - About */}
           <div>
             <h3 className="font-bold text-xl mb-4">AriasHealth.ai</h3>
             <p className="text-white/80 text-sm mb-4">
-              AI-powered peer support to reduce isolation and prevent substance use
+              AI-powered peer matching for veterans dealing with substance use disorders.
             </p>
             <div className="flex space-x-4">
               <a href="https://www.instagram.com/p/DIwQCspJw6o/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition-colors" aria-label="Instagram">

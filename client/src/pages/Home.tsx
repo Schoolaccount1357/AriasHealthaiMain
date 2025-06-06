@@ -3,7 +3,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/home/Hero";
 import { ProgramOverview } from "@/components/home/ProgramOverview";
 import { EnrollmentForm } from "@/components/home/EnrollmentForm";
-
+import { PlatformPreview } from "@/components/home/PlatformPreview";
 import { AboutSUDS } from "@/components/home/AboutSUDS";
 import { FAQSection } from "@/components/home/FAQSection";
 import { TrustAndSecurity } from "@/components/home/TrustAndSecurity";
@@ -17,20 +17,20 @@ export default function Home() {
     <div className="min-h-screen flex flex-col">
       <Header />
       
-      <main className="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-16">
+      <main className="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Hero />
         
         {/* Crisis resources removed from main content */}
         
         <KeyFeatures />
-        
-        <section id="enrollment-form" className="scroll-mt-20">
+        <section id="enrollment-form" className="scroll-mt-20 pt-4">
           <EnrollmentForm />
         </section>
-        
+        <PlatformPreview />
+        <AboutSUDS />
         <TrustAndSecurity />
-        
         <FAQSection />
+        <FinalCTA />
       </main>
       
       <Footer />

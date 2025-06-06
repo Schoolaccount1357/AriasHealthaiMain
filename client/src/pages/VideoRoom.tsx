@@ -81,7 +81,7 @@ export default function VideoRoom() {
               
               <Button
                 type="submit"
-                className="w-full bg-[blue-600]"
+                className="w-full bg-[#3e64dd]"
                 disabled={!username.trim() || !customRoomId.trim()}
               >
                 Join Room

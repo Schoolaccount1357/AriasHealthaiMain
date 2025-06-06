@@ -67,7 +67,7 @@ export function EnrollmentForm() {
   return (
     <div className="w-full max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-5 sm:p-6 md:p-10">
       <div className="text-center mb-6 sm:mb-10">
-        <div className="max-w-3xl mx-auto bg-[#2c3e50] p-4 rounded-lg text-white mb-6 sm:mb-8">
+        <div className="max-w-3xl mx-auto bg-gradient-to-r from-[#141e2f] to-[#2a4bba] p-4 rounded-lg text-white mb-6 sm:mb-8">
           <h3 className="text-base sm:text-lg font-bold mb-2">Help Shape the Future of Peer Support</h3>
           <p className="text-xs sm:text-sm">
             We're conducting a research study to improve mental health resources through technology.
@@ -75,7 +75,7 @@ export function EnrollmentForm() {
           </p>
         </div>
         
-        <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-3 sm:mb-4">Join the Waitlist</h2>
+        <h2 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-700 bg-clip-text text-transparent mb-3 sm:mb-4">Join the Waitlist</h2>
         <p className="text-sm sm:text-base text-gray-600 mb-2">
           Be among the first to access AriasHealth.ai's revolutionary peer support platform when we launch
         </p>
@@ -176,7 +176,7 @@ export function EnrollmentForm() {
           <div className="flex justify-center pt-2 sm:pt-4">
             <Button 
               type="submit" 
-              className="w-full py-6 sm:py-3 text-base sm:max-w-md bg-gradient-to-r from-teal-600 to-emerald-700 hover:from-teal-700 hover:to-emerald-800 text-white font-semibold relative overflow-hidden group transition-all duration-300 shadow-md hover:shadow-lg active:scale-[0.98]"
+              className="w-full py-6 sm:py-3 text-base sm:max-w-md bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 text-white font-semibold relative overflow-hidden group transition-all duration-300 shadow-md hover:shadow-lg active:scale-[0.98]"
               disabled={waitlistSubmitMutation.isPending}
             >
               <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>

@@ -4,28 +4,37 @@ import { ArrowRight } from "lucide-react";
 export function AboutSUDS() {
   return (
     <section className="mb-12 bg-white p-5 sm:p-6 md:p-8 rounded-lg shadow-lg">
-      <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-foreground">Evidence-Based Peer Support</h2>
+      <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-foreground">The Challenges Veterans Face</h2>
       
       <div className="prose max-w-none prose-sm sm:prose-base">
         <p className="mb-3 sm:mb-4 text-sm sm:text-base">
-          Research consistently shows that peer support programs significantly improve recovery outcomes for veterans. 
-          Our platform is built on evidence-based practices that enhance traditional treatment approaches.
+          Many Veterans face isolation, stigma, and barriers to care — especially in substance use recovery.
+          Traditional services don't always meet them where they are.
         </p>
         
-        <div className="bg-accent/20 p-3 sm:p-4 rounded-lg my-4">
-          <h3 className="font-medium mb-2 text-primary text-base sm:text-lg">Research-Backed Benefits:</h3>
-          <ul className="list-disc pl-4 sm:pl-5 space-y-1 text-sm sm:text-base">
-            <li>80% reduction in hospitalization rates when peer support is included in treatment</li>
-            <li>Improved medication adherence and treatment engagement</li>
-            <li>Decreased feelings of stigma and increased help-seeking behavior</li>
-            <li>Enhanced long-term recovery sustainability and relapse prevention</li>
+        <div className="mb-4 bg-gray-50 rounded-lg p-3 sm:p-4">
+          <ul className="list-disc pl-4 sm:pl-5 space-y-1 sm:space-y-2 text-sm sm:text-base">
+            <li>Limited access to timely mental health support</li>
+            <li>Difficulty connecting with peers who truly understand their experiences</li>
+            <li>Stigma around seeking help for substance use disorders</li>
+            <li>Lack of privacy and anonymity in traditional support environments</li>
           </ul>
         </div>
         
         <p className="mb-3 sm:mb-4 text-sm sm:text-base">
-          Our AI-powered matching system uses validated assessment tools to connect veterans with peers who share 
-          similar experiences, ensuring the most effective therapeutic relationships for lasting recovery.
+          At AriasHealth.ai, we believe that combining AI technology with peer-to-peer connection creates
+          a powerful support system that meets veterans exactly where they are in their recovery journey.
         </p>
+        
+        <div className="bg-accent/20 p-3 sm:p-4 rounded-lg my-4">
+          <h3 className="font-medium mb-2 text-primary text-base sm:text-lg">How Peer Support Helps:</h3>
+          <ul className="list-disc pl-4 sm:pl-5 space-y-1 text-sm sm:text-base">
+            <li>Reduces feelings of isolation</li>
+            <li>Provides practical advice from those with similar experiences</li>
+            <li>Creates accountability in recovery</li>
+            <li>Offers hope through seeing others' progress</li>
+          </ul>
+        </div>
       </div>
       
       <div className="mt-5 sm:mt-6">
