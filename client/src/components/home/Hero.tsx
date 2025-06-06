@@ -42,25 +42,22 @@ export function Hero() {
             >
               Get Support – Join the Waitlist
             </Button>
-
-            <p className="mt-2 text-xs md:text-sm text-white/80">
-              <span className="font-semibold">Early Access:</span> Be among the first to experience veteran-matched support.
-            </p>
           </div>
         </div>
       </div>
 
-      {/* The Challenges Veterans Face & How Peer Support Helps */}
+      {/* Understanding Veteran Challenges & Substance Use Disorders */}
       <div className="mt-12 mb-8 bg-white p-5 sm:p-6 md:p-8 rounded-lg shadow-lg">
-        <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-foreground">Breaking Down Barriers Through Peer Connection</h2>
+        <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-foreground">Understanding Veteran Challenges & How Peer Support Helps</h2>
         
         <div className="prose max-w-none prose-sm sm:prose-base">
           <p className="mb-3 sm:mb-4 text-sm sm:text-base">
-            Many Veterans face isolation, stigma, and barriers to care — especially in substance use recovery.
-            Traditional services don't always meet them where they are.
+            Veterans face unique challenges as they navigate military-to-civilian transition, with substance use disorders 
+            affecting veterans at twice the rate of civilians. Many face isolation, stigma, and barriers to care — 
+            especially in substance use recovery. Traditional services don't always meet them where they are.
           </p>
           
-          <div className="grid md:grid-cols-2 gap-4 sm:gap-6 mb-4">
+          <div className="grid md:grid-cols-3 gap-4 sm:gap-6 mb-4">
             {/* Challenges */}
             <div className="bg-gray-50 rounded-lg p-3 sm:p-4">
               <h3 className="font-medium mb-2 text-foreground text-base sm:text-lg">Common Challenges:</h3>
@@ -69,6 +66,17 @@ export function Hero() {
                 <li>Difficulty connecting with peers who understand their experiences</li>
                 <li>Stigma around seeking help for substance use disorders</li>
                 <li>Lack of privacy and anonymity in traditional support environments</li>
+              </ul>
+            </div>
+            
+            {/* Key Facts */}
+            <div className="bg-blue-50 rounded-lg p-3 sm:p-4">
+              <h3 className="font-medium mb-2 text-[#10066A] text-base sm:text-lg">Key Facts About Veterans & SUDs:</h3>
+              <ul className="list-disc pl-4 sm:pl-5 space-y-1 text-sm sm:text-base">
+                <li>Veterans are twice as likely to develop substance use disorders</li>
+                <li>Combat exposure and trauma significantly increase risk factors</li>
+                <li>Co-occurring mental health conditions are common</li>
+                <li>Early intervention and peer support improve outcomes significantly</li>
               </ul>
             </div>
             
@@ -86,7 +94,8 @@ export function Hero() {
           
           <p className="mb-3 sm:mb-4 text-sm sm:text-base">
             At AriasHealth.ai, we combine AI technology with peer-to-peer connection to create
-            a powerful support system that meets veterans exactly where they are in their recovery journey.
+            a powerful support system that recognizes these unique challenges and provides specialized matching 
+            considering military experience, trauma exposure, and recovery stage.
           </p>
         </div>
       </div>
@@ -105,13 +114,13 @@ export function Hero() {
             <p className="text-sm sm:text-base text-gray-600 group-hover:text-gray-800 transition-colors duration-300">Fill out a simple form to reserve your spot.</p>
             {/* Right arrow for desktop */}
             <div className="hidden md:block absolute right-0 top-1/3 transform translate-x-1/2 z-10 transition-all duration-300 group-hover:translate-x-[60%]">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-[#3e64dd]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-[#10066A]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
             </div>
             {/* Down arrow for mobile */}
             <div className="md:hidden mt-2 transition-all duration-300 group-hover:translate-y-1">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[#3e64dd] mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[#10066A] mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
               </svg>
             </div>
@@ -127,13 +136,13 @@ export function Hero() {
             <p className="text-sm sm:text-base text-gray-600 group-hover:text-gray-800 transition-colors duration-300">We'll connect you with peers who truly understand your journey.</p>
             {/* Right arrow for desktop */}
             <div className="hidden md:block absolute right-0 top-1/3 transform translate-x-1/2 z-10 transition-all duration-300 group-hover:translate-x-[60%]">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-[#3e64dd]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-[#10066A]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
             </div>
             {/* Down arrow for mobile and tablet */}
             <div className="md:hidden mt-2 transition-all duration-300 group-hover:translate-y-1">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[#3e64dd] mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[#10066A] mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
               </svg>
             </div>
