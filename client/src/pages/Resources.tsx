@@ -307,7 +307,7 @@ export default function Resources() {
                               const textNumber = resource.text?.toString().split(' ')[1] || "838255";
                               trackResourceClick("text", () => window.location.href = `sms:${textNumber}`);
                             }}
-                            className="text-[#3e64dd] hover:underline focus:outline-none"
+                            className="text-blue-600 hover:underline focus:outline-none"
                           >
                             {resource.text}
                           </button>
@@ -317,7 +317,7 @@ export default function Resources() {
                   </div>
                   <Button 
                     variant="link" 
-                    className="p-0 h-auto text-[#3e64dd] group relative overflow-hidden"
+                    className="p-0 h-auto text-blue-600 group relative overflow-hidden"
                     onClick={() => {
                       // Track resource usage with a generic "website" type
                       trackResourceClick("website", () => window.open(resource.website, "_blank", "noopener,noreferrer"));
@@ -328,7 +328,7 @@ export default function Resources() {
                         Visit Website
                         <Globe className="h-3 w-3 ml-1 transition-transform duration-300 group-hover:translate-x-1 group-hover:scale-110" />
                       </span>
-                      <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#3e64dd]/40 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
+                      <span className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600/40 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
                     </span>
                   </Button>
                 </div>
