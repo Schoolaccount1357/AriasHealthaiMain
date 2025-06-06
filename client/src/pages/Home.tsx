@@ -44,8 +44,14 @@ export default function Home() {
           <EnrollmentForm />
         </section>
         <TrustAndSecurity />
-        <FAQSection />
       </main>
+      
+      {/* FAQ Section - Positioned before footer */}
+      <div className="bg-gradient-to-b from-background to-muted/30 py-12">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <FAQSection />
+        </div>
+      </div>
       
       <Footer />
     </div>

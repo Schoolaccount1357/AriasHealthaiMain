@@ -35,6 +35,7 @@ export interface PeerMatch {
 export interface SecurityFeature {
   id: number;
   label: string;
+  icon?: React.ReactNode;
 }
 
 // Waitlist form data (simpler than the full enrollment form)
