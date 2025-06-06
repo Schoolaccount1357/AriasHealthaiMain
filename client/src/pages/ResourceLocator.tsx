@@ -998,7 +998,7 @@ export default function ResourceLocator() {
         {
           name: "VA Medical Center - Birmingham",
           description: "Primary VA healthcare facility in Alabama",
-          address: "700 19th Street South, Birmingham, AL 35233",
+          address: "700 19th St S, Birmingham, AL 35233",
           phone: "(205) 933-8101",
           website: "https://www.va.gov/birmingham-health-care/",
           category: "VA",
