@@ -3,7 +3,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/home/Hero";
 import { ProgramOverview } from "@/components/home/ProgramOverview";
 import { EnrollmentForm } from "@/components/home/EnrollmentForm";
-import { PlatformPreview } from "@/components/home/PlatformPreview";
+
 import { AboutSUDS } from "@/components/home/AboutSUDS";
 import { FAQSection } from "@/components/home/FAQSection";
 import { TrustAndSecurity } from "@/components/home/TrustAndSecurity";
@@ -26,7 +26,6 @@ export default function Home() {
         <section id="enrollment-form" className="scroll-mt-20 pt-4">
           <EnrollmentForm />
         </section>
-        <PlatformPreview />
         <AboutSUDS />
         <TrustAndSecurity />
         <FAQSection />
