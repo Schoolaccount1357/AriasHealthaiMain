@@ -25,12 +25,6 @@ export default function Home() {
         
         <AboutSUDS />
         <PlatformPreview />
-        
-        {/* Crisis Resources Section */}
-        <div className="mb-12">
-          <CrisisResources />
-        </div>
-        
         <section id="enrollment-form" className="scroll-mt-20 pt-4">
           <EnrollmentForm />
         </section>
