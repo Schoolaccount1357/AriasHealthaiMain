@@ -21,8 +21,8 @@ export function Hero() {
             alt="Support group discussion in a bright, supportive environment" 
             className="h-full w-full object-cover object-center"
           />
-          {/* Gradient overlay - bottom to top for mobile, left to right for desktop */}
-          <div className="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-[#0F172A] via-[#0F172A]/60 to-transparent sm:from-transparent sm:via-[#0F172A]/60 sm:to-[#0F172A]"></div>
+          {/* Gradient overlay - top to bottom for mobile, left to right for desktop */}
+          <div className="absolute inset-0 bg-gradient-to-b sm:bg-gradient-to-r from-transparent via-[#0F172A]/40 to-[#0F172A] sm:from-transparent sm:via-[#0F172A]/60 sm:to-[#0F172A]"></div>
         </div>
 
         {/* Content area - positioned at bottom for mobile, right side for desktop */}
@@ -40,11 +40,11 @@ export function Hero() {
               className="bg-[#3e64dd] text-white hover:bg-[#2a4bba] transition-all duration-300 rounded-md py-2 px-4 text-sm font-medium"
               size="default"
             >
-              Get Support – Join the Waitlist
+              Get early access to PairLink
             </Button>
 
             <p className="mt-2 text-xs md:text-sm text-white/80">
-              Get early access to PairLink by joining the waitlist.
+              Join our waitlist
             </p>
           </div>
         </div>
