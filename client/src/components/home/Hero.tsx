@@ -28,9 +28,8 @@ export function Hero() {
         {/* Content area - positioned at bottom for mobile, right side for desktop */}
         <div className="absolute bottom-0 sm:top-0 sm:right-0 w-full sm:w-1/2 p-6 pb-8 sm:p-0 flex flex-col justify-end sm:justify-center items-center sm:items-start sm:pl-8">
           <div className="max-w-xs mx-auto sm:mx-0 text-center sm:text-left">
-            <h1 className="text-3xl md:text-4xl font-bold mb-2">
-              <span className="text-yellow-400">You</span>
-              <span className="text-white"> are not alone.</span>
+            <h1 className="text-3xl md:text-4xl font-bold mb-2 text-white" style={{ textShadow: '0 0 20px rgba(255, 193, 7, 0.6), 0 0 40px rgba(255, 193, 7, 0.3)' }}>
+              You are not alone.
             </h1>
             <p className="text-sm md:text-base text-white/90 mb-4">
               Confidential veteran-to-veteran support, built with care.
