@@ -50,7 +50,57 @@ export function Hero() {
         </div>
       </div>
 
-
+      {/* Subtle Crisis Support Banner - Integrated with Hero */}
+      <div className="bg-gradient-to-r from-[#0F172A] to-[#1e293b] border-t border-white/10 px-6 py-3 -mt-1">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+            {/* Header - More Subtle */}
+            <div className="flex items-center">
+              <Phone className="h-4 w-4 mr-2 text-[#3e64dd] opacity-80" />
+              <span className="text-white/90 text-sm font-medium">Need immediate help?</span>
+              <span className="text-white/60 text-xs ml-2 hidden sm:inline">Crisis support available 24/7</span>
+            </div>
+            
+            {/* Compact Button Group */}
+            <div className="flex flex-wrap gap-2 text-xs">
+              <Button 
+                onClick={() => trackResourceClick("call", () => window.location.href = "tel:988")}
+                size="sm"
+                className="bg-[#3e64dd]/80 hover:bg-[#3e64dd] text-white text-xs px-3 py-1.5 h-auto"
+              >
+                <Phone className="h-3 w-3 mr-1" />
+                Call 988
+              </Button>
+              <Button 
+                onClick={() => trackResourceClick("text", () => window.location.href = "sms:838255")}
+                size="sm"
+                variant="outline"
+                className="border-white/30 text-white/90 hover:bg-white/10 text-xs px-3 py-1.5 h-auto"
+              >
+                Text 838255
+              </Button>
+              <Button 
+                onClick={() => trackResourceClick("chat", () => window.open("https://www.my.vavet.sites.va.gov/vclchat", "_blank"))}
+                size="sm"
+                variant="outline"
+                className="border-white/30 text-white/90 hover:bg-white/10 text-xs px-3 py-1.5 h-auto"
+              >
+                <Globe className="h-3 w-3 mr-1" />
+                Chat
+              </Button>
+              <span className="text-white/50 text-xs self-center mx-2 hidden sm:inline">|</span>
+              <Button 
+                onClick={() => trackResourceClick("call", () => window.location.href = "tel:001-800-273-8255")}
+                size="sm"
+                variant="ghost"
+                className="text-white/70 hover:text-white hover:bg-white/10 text-xs px-3 py-1.5 h-auto"
+              >
+                International: 001-800-273-8255
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
