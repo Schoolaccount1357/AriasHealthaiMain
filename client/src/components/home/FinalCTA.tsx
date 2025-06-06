@@ -69,7 +69,7 @@ export function FinalCTA() {
               <a href="#" className="hover:text-white/70 transition-colors ml-1">Terms of Service</a>
             </p>
             <div className="border-t border-white/20 pt-4">
-              <h2 className="text-2xl font-bold mb-4 text-white">
+              <h2 className="text-2xl font-bold mb-4 text-white drop-shadow-[0_0_20px_rgba(255,255,255,0.4)]" style={{textShadow: '0 0 25px rgba(255, 255, 255, 0.5), 0 0 35px rgba(255, 255, 255, 0.3), 0 0 45px rgba(255, 255, 255, 0.2)'}}>
                 You don't have to do this alone. Find your people. Stay connected.
               </h2>
               <Button 
