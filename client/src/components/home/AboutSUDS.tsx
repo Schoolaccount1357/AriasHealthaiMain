@@ -3,34 +3,75 @@ import { ArrowRight } from "lucide-react";
 
 export function AboutSUDS() {
   return (
-    <section className="mb-12 bg-gradient-to-br from-slate-50 to-blue-50 p-5 sm:p-6 md:p-8 rounded-xl shadow-lg border border-blue-100">
-      <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-[#10066A] text-center">The Challenges Veterans Face</h2>
-      
-      <div className="prose max-w-none prose-sm sm:prose-base">
-        <p className="mb-3 sm:mb-4 text-sm sm:text-base text-gray-700 text-center max-w-3xl mx-auto">
-          Many veterans face barriers to care — especially in substance use recovery.
-          Traditional services don't always meet them where they are.
-        </p>
+    <section className="mb-12 bg-gradient-to-br from-[#10066A]/5 via-white to-blue-50/30 p-6 sm:p-8 md:p-10 rounded-2xl shadow-xl border border-[#10066A]/10">
+      <div className="max-w-5xl mx-auto">
+        <div className="text-center mb-8">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-[#10066A]">
+            The Challenges Veterans Face
+          </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-[#10066A] to-blue-400 mx-auto mb-6"></div>
+          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            Many veterans face barriers to care — especially in substance use recovery.
+            Traditional services don't always meet them where they are.
+          </p>
+        </div>
         
-        <div className="mb-4 bg-white/70 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-blue-200 shadow-sm">
-          <ul className="grid md:grid-cols-2 gap-3 sm:gap-4 text-sm sm:text-base">
-            <li className="flex items-start space-x-3 p-3 bg-white rounded-lg shadow-sm border-l-4 border-red-400">
-              <div className="w-2 h-2 bg-red-400 rounded-full mt-2 flex-shrink-0"></div>
-              <span className="text-gray-700">Limited access to timely mental health support</span>
-            </li>
-            <li className="flex items-start space-x-3 p-3 bg-white rounded-lg shadow-sm border-l-4 border-orange-400">
-              <div className="w-2 h-2 bg-orange-400 rounded-full mt-2 flex-shrink-0"></div>
-              <span className="text-gray-700">Difficulty connecting with peers who truly understand their experiences</span>
-            </li>
-            <li className="flex items-start space-x-3 p-3 bg-white rounded-lg shadow-sm border-l-4 border-amber-400">
-              <div className="w-2 h-2 bg-amber-400 rounded-full mt-2 flex-shrink-0"></div>
-              <span className="text-gray-700">Stigma around seeking help for substance use disorders</span>
-            </li>
-            <li className="flex items-start space-x-3 p-3 bg-white rounded-lg shadow-sm border-l-4 border-yellow-400">
-              <div className="w-2 h-2 bg-yellow-400 rounded-full mt-2 flex-shrink-0"></div>
-              <span className="text-gray-700">Lack of privacy and anonymity in traditional support environments</span>
-            </li>
-          </ul>
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+          <div className="group bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-red-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <div className="flex items-start space-x-4">
+              <div className="w-12 h-12 bg-gradient-to-br from-red-400 to-red-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div className="flex-1">
+                <h3 className="text-lg font-semibold text-gray-800 mb-2">Limited Access</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">Limited access to timely mental health support when veterans need it most</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="group bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-orange-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <div className="flex items-start space-x-4">
+              <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-orange-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </div>
+              <div className="flex-1">
+                <h3 className="text-lg font-semibold text-gray-800 mb-2">Peer Connection</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">Difficulty connecting with peers who truly understand their military experiences</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="group bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-amber-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <div className="flex items-start space-x-4">
+              <div className="w-12 h-12 bg-gradient-to-br from-amber-400 to-amber-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.878 9.878L3 3m6.878 6.878L21 21" />
+                </svg>
+              </div>
+              <div className="flex-1">
+                <h3 className="text-lg font-semibold text-gray-800 mb-2">Stigma Barriers</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">Stigma around seeking help for substance use disorders and mental health</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="group bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-blue-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <div className="flex items-start space-x-4">
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+              </div>
+              <div className="flex-1">
+                <h3 className="text-lg font-semibold text-gray-800 mb-2">Privacy Concerns</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">Lack of privacy and anonymity in traditional support environments</p>
+              </div>
+            </div>
+          </div>
         </div>
         
         <p className="mb-3 sm:mb-4 text-sm sm:text-base">
