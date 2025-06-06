@@ -9,7 +9,7 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [location] = useLocation();
   const [activeLink, setActiveLink] = useState("/");
-
+  
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/resources", label: "Resources" },
@@ -45,7 +45,7 @@ export function Header() {
               <span className="-ml-4 text-xl font-semibold transition-all duration-300 group-hover:bg-clip-text group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-[#0d9488] group-hover:to-[#252577]" style={{ color: "#030C54" }}>AriasHealth.ai</span>
             </div>
           </Link>
-
+          
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8 text-sm font-medium">
             {navLinks.map((link) => (
@@ -65,7 +65,7 @@ export function Header() {
               </Link>
             ))}
           </nav>
-
+          
           {/* Mobile Navigation */}
           <div className="md:hidden">
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
