@@ -11,7 +11,7 @@ export function Hero() {
   };
 
   return (
-    <section className="mb-12">
+    <section className="mb-12 hero-section">
       {/* Hero Banner - Using the new Peertopeer.jpg image */}
       <div className="relative h-[400px] sm:h-[300px] md:h-[400px] overflow-hidden bg-[#134e4a]">
         {/* Left side - Image of veterans in support group */}
