@@ -74,16 +74,14 @@ export function Hero() {
               <Button 
                 onClick={() => trackResourceClick("text", () => window.location.href = "sms:838255")}
                 size="sm"
-                variant="outline"
-                className="border-white/30 text-white/90 hover:bg-white/10 text-xs px-3 py-1.5 h-auto"
+                className="bg-[#3e64dd]/80 hover:bg-[#3e64dd] text-white text-xs px-3 py-1.5 h-auto"
               >
                 Text 838255
               </Button>
               <Button 
                 onClick={() => trackResourceClick("chat", () => window.open("https://www.my.vavet.sites.va.gov/vclchat", "_blank"))}
                 size="sm"
-                variant="outline"
-                className="border-white/30 text-white/90 hover:bg-white/10 text-xs px-3 py-1.5 h-auto"
+                className="bg-[#3e64dd]/80 hover:bg-[#3e64dd] text-white text-xs px-3 py-1.5 h-auto"
               >
                 <Globe className="h-3 w-3 mr-1" />
                 Chat
@@ -92,8 +90,7 @@ export function Hero() {
               <Button 
                 onClick={() => trackResourceClick("call", () => window.location.href = "tel:001-800-273-8255")}
                 size="sm"
-                variant="ghost"
-                className="text-white/70 hover:text-white hover:bg-white/10 text-xs px-3 py-1.5 h-auto"
+                className="bg-[#3e64dd]/60 hover:bg-[#3e64dd]/80 text-white text-xs px-3 py-1.5 h-auto"
               >
                 International: 001-800-273-8255
               </Button>
