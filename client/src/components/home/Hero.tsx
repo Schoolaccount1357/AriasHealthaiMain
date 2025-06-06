@@ -22,7 +22,7 @@ export function Hero() {
             className="h-full w-full object-cover object-center"
           />
           {/* Gradient overlay - top to bottom for mobile, left to right for desktop */}
-          <div className="absolute inset-0 bg-gradient-to-b sm:bg-gradient-to-r from-transparent via-[#0F172A]/40 to-[#0F172A] sm:from-transparent sm:via-[#0F172A]/60 sm:to-[#0F172A]"></div>
+          <div className="absolute inset-0 bg-gradient-to-b sm:bg-gradient-to-r from-[#0F172A] via-[#0F172A]/40 to-transparent sm:from-transparent sm:via-[#0F172A]/60 sm:to-[#0F172A]"></div>
         </div>
 
         {/* Content area - positioned at bottom for mobile, right side for desktop */}
