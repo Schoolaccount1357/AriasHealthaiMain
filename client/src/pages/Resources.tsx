@@ -200,27 +200,21 @@ export default function Resources() {
             <div className="flex flex-wrap gap-4">
               <Button 
                 onClick={() => trackResourceClick("call", () => window.location.href = "tel:988")}
-                className="bg-[blue-700] hover:bg-[#2a4bba] transition-all duration-300 relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98]"
+                className="bg-blue-700 hover:bg-blue-800"
                 size="lg"
               >
-                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
-                <span className="relative z-10 flex items-center">
-                  <Phone className="h-4 w-4 mr-2 transition-transform duration-300 group-hover:scale-110" />
-                  Call 988 - Press 1
-                </span>
+                <Phone className="h-4 w-4 mr-2" />
+                Call 988 - Press 1
               </Button>
               <Button 
                 onClick={() => trackResourceClick("text", () => window.location.href = "sms:838255")}
-                className="bg-[blue-700] hover:bg-[#2a4bba] transition-all duration-300 relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98]"
+                className="bg-blue-700 hover:bg-blue-800"
                 size="lg"
               >
-                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
-                <span className="relative z-10 flex items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 transition-transform duration-300 group-hover:scale-110" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-                  </svg>
-                  Text 838255
-                </span>
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                </svg>
+                Text 838255
               </Button>
             </div>
           </div>
@@ -230,27 +224,21 @@ export default function Resources() {
             <div className="flex flex-wrap gap-4">
               <Button 
                 onClick={() => trackResourceClick("call", () => window.location.href = "tel:0018002738255")}
-                className="bg-[blue-700] hover:bg-[#2a4bba] transition-all duration-300 relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98]"
+                className="bg-blue-700 hover:bg-blue-800"
                 size="lg"
               >
-                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
-                <span className="relative z-10 flex items-center">
-                  <Phone className="h-4 w-4 mr-2 transition-transform duration-300 group-hover:scale-110" />
-                  Call 001-800-273-8255
-                </span>
+                <Phone className="h-4 w-4 mr-2" />
+                Call 001-800-273-8255
               </Button>
               <Button 
                 onClick={() => trackResourceClick("text", () => window.location.href = "sms:838255")}
-                className="bg-[blue-700] hover:bg-[#2a4bba] transition-all duration-300 relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98]"
+                className="bg-blue-700 hover:bg-blue-800"
                 size="lg"
               >
-                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
-                <span className="relative z-10 flex items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 transition-transform duration-300 group-hover:scale-110" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-                  </svg>
-                  Text to 838255
-                </span>
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                </svg>
+                Text to 838255
               </Button>
             </div>
           </div>
@@ -258,14 +246,11 @@ export default function Resources() {
         
         <Button 
           onClick={() => trackResourceClick("chat", () => window.open("https://www.veteranscrisisline.net/get-help/chat", "_blank"))}
-          className="bg-[blue-700] hover:bg-[#2a4bba] transition-all duration-300 relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98] w-full"
+          className="bg-blue-700 hover:bg-blue-800 w-full"
           size="lg"
         >
-          <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
-          <span className="relative z-10 flex items-center">
-            <Globe className="h-4 w-4 mr-2 transition-transform duration-300 group-hover:scale-110" />
-            Chat Online (Available Worldwide)
-          </span>
+          <Globe className="h-4 w-4 mr-2" />
+          Chat Online (Available Worldwide)
         </Button>
       </div>
 
@@ -292,7 +277,7 @@ export default function Resources() {
                             const phoneNumber = resource.phone?.split(' ')[0].replace(/-/g, '');
                             trackResourceClick("call", () => window.location.href = `tel:${phoneNumber}`);
                           }}
-                          className="text-[blue-700] hover:underline focus:outline-none"
+                          className="text-blue-700 hover:underline focus:outline-none"
                         >
                           {resource.phone}
                         </button>
@@ -317,19 +302,14 @@ export default function Resources() {
                   </div>
                   <Button 
                     variant="link" 
-                    className="p-0 h-auto text-blue-700 group relative overflow-hidden"
+                    className="p-0 h-auto text-blue-700 hover:text-blue-800"
                     onClick={() => {
                       // Track resource usage with a generic "website" type
                       trackResourceClick("website", () => window.open(resource.website, "_blank", "noopener,noreferrer"));
                     }}
                   >
-                    <span className="inline-flex items-center">
-                      <span className="relative z-10 inline-flex items-center transition-all duration-300 group-hover:translate-x-1">
-                        Visit Website
-                        <Globe className="h-3 w-3 ml-1 transition-transform duration-300 group-hover:translate-x-1 group-hover:scale-110" />
-                      </span>
-                      <span className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-700/40 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
-                    </span>
+                    Visit Website
+                    <Globe className="h-3 w-3 ml-1" />
                   </Button>
                 </div>
               ))}
