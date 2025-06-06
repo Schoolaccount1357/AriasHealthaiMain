@@ -567,14 +567,14 @@ export function EnhancedEnrollmentForm() {
                 {renderStepContent()}
 
                 {/* Navigation buttons with enhanced visibility */}
-                <div className="form-button-container">
-                  <div className="flex flex-col sm:flex-row gap-4 w-full">
+                <div className="pt-6 mt-6 border-t border-border">
+                  <div className="flex flex-col sm:flex-row gap-3 w-full">
                     {currentStep > 1 && (
                       <Button 
                         type="button" 
                         variant="outline" 
                         onClick={previousStep}
-                        className="form-nav-button flex-1 text-base touch-manipulation"
+                        className="h-12 sm:h-14 flex-1 text-base font-semibold touch-manipulation min-h-[44px] border-2"
                         aria-label="Go to previous step"
                       >
                         <ChevronLeft className="h-5 w-5 mr-2" aria-hidden="true" />
@@ -586,7 +586,7 @@ export function EnhancedEnrollmentForm() {
                       <Button 
                         type="button" 
                         onClick={nextStep}
-                        className="form-nav-button primary flex-1 text-base touch-manipulation"
+                        className="h-12 sm:h-14 flex-1 text-base font-semibold bg-primary hover:bg-primary/90 text-primary-foreground touch-manipulation min-h-[44px] shadow-md"
                         aria-label="Go to next step"
                       >
                         Next Step
@@ -595,7 +595,7 @@ export function EnhancedEnrollmentForm() {
                     ) : (
                       <Button 
                         type="submit" 
-                        className="form-nav-button primary flex-1 text-base touch-manipulation"
+                        className="h-12 sm:h-14 flex-1 text-base font-semibold bg-primary hover:bg-primary/90 text-primary-foreground touch-manipulation min-h-[44px] shadow-md"
                         disabled={waitlistSubmitMutation.isPending}
                         aria-label="Submit enrollment form"
                       >
