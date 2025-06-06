@@ -998,11 +998,11 @@ export default function ResourceLocator() {
         {
           name: "VA Medical Center - Birmingham",
           description: "Primary VA healthcare facility in Alabama",
-          address: "700 19th St S, Birmingham, AL 35233",
+          address: "University of Birmingham Alabama, 1720 2nd Ave S, Birmingham, AL 35294",
           phone: "(205) 933-8101",
           website: "https://www.va.gov/birmingham-health-care/",
           category: "VA",
-          zipCode: "35233"
+          zipCode: "35294"
         },
         {
           name: "Three Hots and A Cot",
