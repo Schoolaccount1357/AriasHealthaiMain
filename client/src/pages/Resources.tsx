@@ -128,7 +128,7 @@ export default function Resources() {
     },
     {
       title: "Educational Resources",
-      icon: <BookOpen className="h-6 w-6 text-[#10066A]" />,
+      icon: <BookOpen className="h-6 w-6 text-[#0d9488]" />,
       resources: [
         {
           name: "PTSD: National Center for PTSD",
