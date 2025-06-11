@@ -237,7 +237,7 @@ export function SimpleEnrollmentForm() {
           </div>
         </div>
 
-        <Card className="max-w-2xl mx-auto">
+        <Card className="max-w-2xl mx-auto glass-card">
           <CardHeader>
             <div className="flex items-center justify-between mb-4">
               <div>
