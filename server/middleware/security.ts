@@ -122,10 +122,6 @@ export const speedLimiter = slowDown({
   windowMs: 5 * 60 * 1000, // 5 minutes
   delayAfter: 50, // slow down after 50 requests in window
   delayMs: (hits) => hits * 50, // add 50ms per hit over threshold
-  onLimitReached: async (req, res, options) => {
-    const ip = getClientIp(req) || 'unknown';
-    await logSecurityEvent(req, 'SPEED_LIMIT', `Speed limit reached for IP: ${ip}, hits: ${options.delayAfter}`);
-  }
 });
 
 /**
