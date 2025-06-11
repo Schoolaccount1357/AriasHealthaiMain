@@ -32,14 +32,16 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <AccessibilityProvider>
-        <div className="min-h-screen relative">
+        <div className="min-h-screen relative overflow-hidden">
           {/* Frosted Glass Morphism Background */}
-          <div className="glass-morphism-bg"></div>
+          <div className="glass-morphism-bg fixed inset-0 z-0"></div>
           
-          <Router />
-          <Toaster />
-          <AccessibilityPanel />
-          <ScreenReaderAnnouncements />
+          <div className="relative z-10">
+            <Router />
+            <Toaster />
+            <AccessibilityPanel />
+            <ScreenReaderAnnouncements />
+          </div>
         </div>
       </AccessibilityProvider>
     </QueryClientProvider>

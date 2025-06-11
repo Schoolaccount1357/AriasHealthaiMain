@@ -9,16 +9,19 @@
   left: 0;
   right: 0;
   bottom: 0;
+  width: 100vw;
+  height: 100vh;
   z-index: -1;
   background: linear-gradient(135deg, 
-    rgba(255, 255, 255, 0.1), 
-    rgba(255, 255, 255, 0.05) 25%, 
-    rgba(173, 216, 230, 0.08) 50%, 
-    rgba(240, 248, 255, 0.06) 75%, 
-    rgba(255, 255, 255, 0.03)
+    rgba(255, 255, 255, 0.15), 
+    rgba(255, 255, 255, 0.08) 25%, 
+    rgba(173, 216, 230, 0.12) 50%, 
+    rgba(240, 248, 255, 0.10) 75%, 
+    rgba(255, 255, 255, 0.05)
   );
   background-size: 400% 400%;
   animation: glassMorphismFloat 20s ease-in-out infinite;
+  pointer-events: none;
 }
 
 .glass-morphism-bg::before {
@@ -118,7 +121,8 @@
 }
 
 body {
-  background-color: #f8f8fc;
+  background: linear-gradient(135deg, #f8f8fc 0%, #e8f2f8 50%, #f0f8ff 100%);
+  min-height: 100vh;
 }
 
 .text-gradient {
