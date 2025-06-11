@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 export function AboutSUDS() {
   return (
-    <section className="mb-16 bg-gradient-to-br from-[#10066A]/5 via-white to-[#10066A]/10 p-4 sm:p-6 md:p-8 rounded-2xl shadow-xl border border-[#10066A]/10">
+    <section className="mb-16 glass-card p-4 sm:p-6 md:p-8 rounded-2xl mx-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-8 sm:mb-10">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 text-[#10066A]">
