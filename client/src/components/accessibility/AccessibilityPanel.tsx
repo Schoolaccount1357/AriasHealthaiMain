@@ -28,13 +28,12 @@ export function AccessibilityPanel() {
             <Button
               size="lg"
               className="rounded-full w-14 h-14 shadow-lg bg-primary hover:bg-primary/90 focus:ring-2 focus:ring-primary focus:ring-offset-2"
-              aria-label="Open accessibility settings. Accessibility spelled out: A-C-C-E-S-S-I-B-I-L-I-T-Y"
+              aria-label="Accessibility Settings - Click to open panel with vision and reading options"
               title="Accessibility Settings"
             >
-              <Accessibility className="h-6 w-6" aria-hidden="true" />
+              <Accessibility className="h-7 w-7 text-primary-foreground" aria-hidden="true" />
               <span className="sr-only">
-                Accessibility menu button. The word accessibility is spelled: A-C-C-E-S-S-I-B-I-L-I-T-Y. 
-                Click to open accessibility options including high contrast mode, font size adjustment, and reduced motion settings.
+                Accessibility settings button. Opens a panel with options to improve readability including high contrast mode for better visibility, font size adjustment for easier reading, and reduced motion settings for comfort.
               </span>
             </Button>
           </DialogTrigger>
