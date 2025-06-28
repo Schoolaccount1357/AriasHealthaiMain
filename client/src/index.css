@@ -189,30 +189,50 @@ body {
   --ring: #ffffff;
 }
 
+.accessibility-high-contrast {
+  background: #000000 !important;
+  color: #ffffff !important;
+}
+
 .accessibility-high-contrast * {
   color: white !important;
-  background-color: black !important;
+  background-color: transparent !important;
   border-color: white !important;
 }
 
-.accessibility-high-contrast button,
-.accessibility-high-contrast .bg-primary {
-  background-color: white !important;
-  color: black !important;
+.accessibility-high-contrast body {
+  background: #000000 !important;
+}
+
+.accessibility-high-contrast .glass-morphism-bg {
+  display: none !important;
+}
+
+.accessibility-high-contrast .bg-white,
+.accessibility-high-contrast .bg-gray-50,
+.accessibility-high-contrast .bg-muted,
+.accessibility-high-contrast .glass-card,
+.accessibility-high-contrast .glass-nav,
+.accessibility-high-contrast .glass-modal {
+  background-color: #000000 !important;
+  backdrop-filter: none !important;
   border: 2px solid white !important;
 }
 
-.accessibility-high-contrast button:hover {
+.accessibility-high-contrast button,
+.accessibility-high-contrast .bg-primary,
+.accessibility-high-contrast [role="button"] {
+  background-color: white !important;
+  color: black !important;
+  border: 2px solid white !important;
+  font-weight: bold !important;
+}
+
+.accessibility-high-contrast button:hover,
+.accessibility-high-contrast button:focus {
   background-color: #cccccc !important;
   color: black !important;
-}
-
-.accessibility-high-contrast .text-white {
-  color: white !important;
-}
-
-.accessibility-high-contrast .bg-muted {
-  background-color: #333333 !important;
+  outline: 3px solid white !important;
 }
 
 .accessibility-high-contrast input,
@@ -220,7 +240,39 @@ body {
 .accessibility-high-contrast select {
   background-color: white !important;
   color: black !important;
-  border: 2px solid white !important;
+  border: 3px solid white !important;
+  font-size: 1.1rem !important;
+}
+
+.accessibility-high-contrast input:focus,
+.accessibility-high-contrast textarea:focus,
+.accessibility-high-contrast select:focus {
+  outline: 3px solid yellow !important;
+  outline-offset: 2px !important;
+}
+
+.accessibility-high-contrast h1,
+.accessibility-high-contrast h2,
+.accessibility-high-contrast h3,
+.accessibility-high-contrast h4,
+.accessibility-high-contrast h5,
+.accessibility-high-contrast h6 {
+  color: white !important;
+  font-weight: bold !important;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8) !important;
+}
+
+.accessibility-high-contrast a {
+  color: #00ffff !important;
+  text-decoration: underline !important;
+  font-weight: bold !important;
+}
+
+.accessibility-high-contrast a:hover,
+.accessibility-high-contrast a:focus {
+  color: #ffff00 !important;
+  background-color: #000000 !important;
+  outline: 2px solid #ffff00 !important;
 }
 
 /* Font Size Adjustments */
@@ -230,20 +282,43 @@ body {
 
 .accessibility-font-large h1 {
   font-size: 3rem !important;
+  line-height: 1.2 !important;
 }
 
 .accessibility-font-large h2 {
   font-size: 2.5rem !important;
+  line-height: 1.3 !important;
 }
 
 .accessibility-font-large h3 {
   font-size: 2rem !important;
+  line-height: 1.3 !important;
+}
+
+.accessibility-font-large h4,
+.accessibility-font-large h5,
+.accessibility-font-large h6 {
+  font-size: 1.5rem !important;
+  line-height: 1.4 !important;
 }
 
 .accessibility-font-large p,
 .accessibility-font-large span,
-.accessibility-font-large div {
+.accessibility-font-large div,
+.accessibility-font-large button,
+.accessibility-font-large input,
+.accessibility-font-large label,
+.accessibility-font-large a {
   font-size: 1.125rem !important;
+  line-height: 1.5 !important;
+}
+
+.accessibility-font-large .text-sm {
+  font-size: 1rem !important;
+}
+
+.accessibility-font-large .text-xs {
+  font-size: 0.875rem !important;
 }
 
 .accessibility-font-extra-large {
@@ -252,28 +327,106 @@ body {
 
 .accessibility-font-extra-large h1 {
   font-size: 3.5rem !important;
+  line-height: 1.2 !important;
 }
 
 .accessibility-font-extra-large h2 {
   font-size: 3rem !important;
+  line-height: 1.3 !important;
 }
 
 .accessibility-font-extra-large h3 {
   font-size: 2.5rem !important;
+  line-height: 1.3 !important;
+}
+
+.accessibility-font-extra-large h4,
+.accessibility-font-extra-large h5,
+.accessibility-font-extra-large h6 {
+  font-size: 1.75rem !important;
+  line-height: 1.4 !important;
 }
 
 .accessibility-font-extra-large p,
 .accessibility-font-extra-large span,
-.accessibility-font-extra-large div {
+.accessibility-font-extra-large div,
+.accessibility-font-extra-large button,
+.accessibility-font-extra-large input,
+.accessibility-font-extra-large label,
+.accessibility-font-extra-large a {
   font-size: 1.25rem !important;
+  line-height: 1.5 !important;
+}
+
+.accessibility-font-extra-large .text-sm {
+  font-size: 1.125rem !important;
+}
+
+.accessibility-font-extra-large .text-xs {
+  font-size: 1rem !important;
+}
+
+/* Mobile font size adjustments */
+@media (max-width: 768px) {
+  .accessibility-font-large h1 {
+    font-size: 2.5rem !important;
+  }
+  
+  .accessibility-font-large h2 {
+    font-size: 2rem !important;
+  }
+  
+  .accessibility-font-large h3 {
+    font-size: 1.75rem !important;
+  }
+  
+  .accessibility-font-extra-large h1 {
+    font-size: 3rem !important;
+  }
+  
+  .accessibility-font-extra-large h2 {
+    font-size: 2.5rem !important;
+  }
+  
+  .accessibility-font-extra-large h3 {
+    font-size: 2rem !important;
+  }
 }
 
 /* Reduced Motion */
+.accessibility-reduced-motion,
 .accessibility-reduced-motion * {
   animation-duration: 0.01ms !important;
   animation-iteration-count: 1 !important;
   transition-duration: 0.01ms !important;
   scroll-behavior: auto !important;
+  transform: none !important;
+}
+
+.accessibility-reduced-motion .glass-morphism-bg {
+  animation: none !important;
+}
+
+.accessibility-reduced-motion .glass-morphism-bg::before,
+.accessibility-reduced-motion .glass-morphism-bg::after {
+  animation: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .glass-morphism-bg,
+  .glass-morphism-bg::before,
+  .glass-morphism-bg::after {
+    animation: none !important;
+  }
 }
 
 /* Focus indicators for keyboard navigation */

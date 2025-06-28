@@ -22,26 +22,35 @@ export function AccessibilityPanel() {
   return (
     <>
       {/* Floating accessibility button */}
-      <div className="fixed bottom-6 right-6 z-50">
+      <div className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50">
         <Dialog open={isOpen} onOpenChange={setIsOpen}>
           <DialogTrigger asChild>
             <Button
               size="lg"
-              className="rounded-full w-14 h-14 shadow-lg bg-primary hover:bg-primary/90 focus:ring-2 focus:ring-primary focus:ring-offset-2"
-              aria-label="Open accessibility settings - A-C-C-E-S-S-I-B-I-L-I-T-Y"
+              className="rounded-full w-16 h-16 md:w-14 md:h-14 shadow-lg bg-primary hover:bg-primary/90 focus:ring-2 focus:ring-primary focus:ring-offset-2 touch-manipulation"
+              aria-label="Open accessibility settings. Accessibility spelled out: A-C-C-E-S-S-I-B-I-L-I-T-Y"
+              title="Accessibility Settings"
             >
-              <Accessibility className="h-6 w-6" />
-              <span className="sr-only">Accessibility spelled out: A-C-C-E-S-S-I-B-I-L-I-T-Y</span>
+              <Accessibility className="h-6 w-6" aria-hidden="true" />
+              <span className="sr-only">
+                Accessibility menu button. The word accessibility is spelled: A-C-C-E-S-S-I-B-I-L-I-T-Y. 
+                Click to open accessibility options including high contrast mode, font size adjustment, and reduced motion settings.
+              </span>
             </Button>
           </DialogTrigger>
-          <DialogContent className="sm:max-w-md glass-modal max-h-[90vh] overflow-y-auto">
+          <DialogContent 
+            className="sm:max-w-md glass-modal max-h-[90vh] overflow-y-auto"
+            aria-describedby="accessibility-description"
+          >
             <DialogHeader>
-              <DialogTitle className="flex items-center gap-2">
-                <Settings className="h-5 w-5" />
-                <span aria-label="A-C-C-E-S-S-I-B-I-L-I-T-Y Settings">Accessibility Settings</span>
+              <DialogTitle id="accessibility-title" className="flex items-center gap-2">
+                <Settings className="h-5 w-5" aria-hidden="true" />
+                <span>Accessibility Settings</span>
+                <span className="sr-only">A-C-C-E-S-S-I-B-I-L-I-T-Y spelled out</span>
               </DialogTitle>
-              <DialogDescription>
+              <DialogDescription id="accessibility-description">
                 Customize your viewing experience with accessibility options. This panel is fully scrollable on mobile devices.
+                Available options include high contrast mode, font size adjustment, and reduced motion settings.
               </DialogDescription>
             </DialogHeader>
             
