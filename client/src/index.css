@@ -393,6 +393,51 @@ body {
   }
 }
 
+/* iPad and tablet-specific adjustments */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* iPad portrait and landscape */
+  .accessibility-font-large h1 {
+    font-size: 2.75rem !important;
+  }
+  
+  .accessibility-font-large h2 {
+    font-size: 2.25rem !important;
+  }
+  
+  .accessibility-font-extra-large h1 {
+    font-size: 3.25rem !important;
+  }
+  
+  .accessibility-font-extra-large h2 {
+    font-size: 2.75rem !important;
+  }
+
+  /* Accessibility button positioning for tablets */
+  .fixed.bottom-4.right-4 {
+    bottom: 2rem;
+    right: 2rem;
+  }
+
+  /* Touch targets for tablets */
+  button, 
+  [role="button"] {
+    min-height: 48px !important;
+    min-width: 48px !important;
+    padding: 14px !important;
+  }
+}
+
+/* Large tablets and small laptops */
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .accessibility-font-large h1 {
+    font-size: 3rem !important;
+  }
+  
+  .accessibility-font-extra-large h1 {
+    font-size: 3.5rem !important;
+  }
+}
+
 /* Reduced Motion */
 .accessibility-reduced-motion,
 .accessibility-reduced-motion * {
@@ -443,7 +488,7 @@ body {
 }
 
 /* Better touch targets for mobile */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   button, 
   [role="button"], 
   input[type="submit"], 
@@ -463,6 +508,33 @@ body {
   .accessibility-font-extra-large [role="button"] {
     min-height: 52px !important;
     padding: 16px !important;
+  }
+}
+
+/* iPad specific optimizations */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  /* iPad portrait mode optimizations */
+  .grid.md\\:grid-cols-2 {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+  
+  .container {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  /* iPad landscape mode optimizations */
+  .grid.md\\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 2rem !important;
+  }
+  
+  .container {
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
   }
 }
 
