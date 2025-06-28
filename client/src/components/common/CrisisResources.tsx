@@ -1,6 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Phone, Globe } from "lucide-react";
 import { useResourceTracking } from "@/hooks/use-resource-tracking";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 interface CrisisResourcesProps {
   variant?: "full" | "compact";
@@ -9,7 +17,7 @@ interface CrisisResourcesProps {
 
 export function CrisisResources({ variant = "full", className = "" }: CrisisResourcesProps) {
   const { trackResourceClick } = useResourceTracking();
-  
+
   if (variant === "compact") {
     return (
       <div className={`p-3 rounded-lg border border-[#3e64dd]/30 bg-[#3e64dd]/5 ${className}`}>
@@ -40,7 +48,7 @@ export function CrisisResources({ variant = "full", className = "" }: CrisisReso
       </div>
     );
   }
-  
+
   return (
     <div className={`p-5 rounded-lg bg-[#141e2f] text-white ${className}`}>
       <div className="flex flex-col space-y-4">
@@ -53,7 +61,7 @@ export function CrisisResources({ variant = "full", className = "" }: CrisisReso
             If you're in crisis or having thoughts of suicide, speak with a trained counselor now.
           </p>
         </div>
-        
+
         <div className="flex flex-wrap gap-3">
           <Button 
             onClick={() => trackResourceClick("call", () => window.location.href = "tel:988")}
@@ -66,7 +74,7 @@ export function CrisisResources({ variant = "full", className = "" }: CrisisReso
               Call 988 - Press 1
             </span>
           </Button>
-          
+
           <Button 
             onClick={() => trackResourceClick("text", () => window.location.href = "sms:838255")}
             className="bg-[#3e64dd] hover:bg-[#2a4bba] transition-all duration-300 relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98]"
@@ -80,7 +88,7 @@ export function CrisisResources({ variant = "full", className = "" }: CrisisReso
               Text 838255
             </span>
           </Button>
-          
+
           <Button 
             onClick={() => trackResourceClick("chat", () => window.open("https://www.veteranscrisisline.net/get-help/chat", "_blank"))}
             className="bg-[#3e64dd] hover:bg-[#2a4bba] transition-all duration-300 relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98]"
