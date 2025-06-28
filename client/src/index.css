@@ -438,54 +438,20 @@ body {
   }
 }
 
-/* Mobile accessibility panel positioning */
-@media (max-width: 767px) {
-  .glass-modal {
-    width: calc(100vw - 2rem) !important;
-    max-width: calc(100vw - 2rem) !important;
-    max-height: calc(100vh - 4rem) !important;
-    position: fixed !important;
-    top: 2rem !important;
-    left: 1rem !important;
-    right: 1rem !important;
-    transform: none !important;
-    margin: 0 !important;
-    overflow-y: auto !important;
-  }
-}
-
-/* Tablet accessibility panel positioning */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .glass-modal {
-    width: min(28rem, calc(100vw - 4rem)) !important;
-    max-width: min(28rem, calc(100vw - 4rem)) !important;
-    max-height: calc(100vh - 4rem) !important;
-    position: fixed !important;
-    top: 50% !important;
-    left: 50% !important;
-    transform: translate(-50%, -50%) !important;
-    margin: 0 !important;
-    overflow-y: auto !important;
-  }
-}
-
-/* Desktop accessibility panel positioning */
-@media (min-width: 1024px) {
-  .glass-modal {
-    width: 28rem !important;
-    max-width: 28rem !important;
-    max-height: calc(100vh - 4rem) !important;
-    position: fixed !important;
-    top: 50% !important;
-    left: 50% !important;
-    transform: translate(-50%, -50%) !important;
-    margin: 0 !important;
-    overflow-y: auto !important;
-  }
+/* Accessibility panel responsive positioning through Radix selectors only */
+.glass-modal {
+  overflow-y: auto !important;
 }
 
 /* Ensure dialog overlay is properly positioned */
 [data-radix-popper-content-wrapper] {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 50 !important;
+}
+
+/* Dialog overlay positioning */
+[data-radix-dialog-overlay] {
   position: fixed !important;
   inset: 0 !important;
   z-index: 50 !important;
@@ -497,6 +463,7 @@ body {
   z-index: 51 !important;
 }
 
+/* Mobile positioning */
 @media (max-width: 767px) {
   [data-radix-dialog-content] {
     top: 2rem !important;
@@ -508,11 +475,15 @@ body {
   }
 }
 
+/* Desktop positioning - center the modal properly */
 @media (min-width: 768px) {
   [data-radix-dialog-content] {
     top: 50% !important;
     left: 50% !important;
     transform: translate(-50%, -50%) !important;
+    width: 28rem !important;
+    max-width: 28rem !important;
+    max-height: calc(100vh - 4rem) !important;
   }
 }
 
