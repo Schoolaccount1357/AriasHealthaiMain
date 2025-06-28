@@ -47,9 +47,9 @@ export function Hero() {
               onClick={scrollToEnrollmentForm}
               className="bg-[#3e64dd] text-white hover:bg-[#2a4bba] transition-all duration-300 rounded-md py-3 px-6 text-sm font-medium w-full sm:w-auto"
               size="default"
-              aria-label="Get early access to PairLink - Navigate to enrollment form"
+              aria-label="Get early access to Willow - Navigate to enrollment form"
             >
-              Get early access to PairLink
+              Get early access to Willow
             </Button>
           </div>
         </div>
