@@ -6,13 +6,19 @@ import {
   UserCog,
   BookOpen,
   PenTool,
-  MapPin
+  MapPin,
+  MessageCircle
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
 export function PlatformPreview() {
   const supportFeatures = [
+    {
+      name: "Secure, Peer-to-Peer Chat Support",
+      description: "Private, encrypted chat connections with fellow veterans",
+      type: "chat"
+    },
     {
       name: "Mindfulness Habit Tracker",
       description: "Track your daily mindfulness practices and build healthy habits",
@@ -22,11 +28,6 @@ export function PlatformPreview() {
       name: "Coping Skill Reminders",
       description: "Personalized reminders for coping strategies and techniques",
       type: "reminders"
-    },
-    {
-      name: "Relapse Triggers",
-      description: "Identify and track personal triggers for better awareness",
-      type: "triggers"
     },
     {
       name: "Willow Diary",
@@ -50,9 +51,9 @@ export function PlatformPreview() {
               {supportFeatures.map((feature, index) => (
                 <div key={index} className="flex items-center p-3 bg-white rounded shadow-sm">
                   <div className="w-10 h-10 rounded-full bg-gradient-to-r from-green-500 to-blue-600 flex items-center justify-center text-white font-medium text-sm mr-3">
-                    {feature.type === 'tracker' ? <Heart className="h-4 w-4" /> : 
+                    {feature.type === 'chat' ? <MessageCircle className="h-4 w-4" /> :
+                     feature.type === 'tracker' ? <Heart className="h-4 w-4" /> : 
                      feature.type === 'reminders' ? <Brain className="h-4 w-4" /> : 
-                     feature.type === 'triggers' ? <Shield className="h-4 w-4" /> :
                      <PenTool className="h-4 w-4" />}
                   </div>
                   <div className="flex-1">
