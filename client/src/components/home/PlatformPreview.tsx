@@ -5,8 +5,8 @@ import {
   Brain,
   UserCog,
   BookOpen,
-  Phone,
-  Globe
+  PenTool,
+  MapPin
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -14,22 +14,24 @@ import { Badge } from "@/components/ui/badge";
 export function PlatformPreview() {
   const supportFeatures = [
     {
-      name: "Crisis Support",
-      description: "24/7 confidential support",
-      status: "Available Now",
-      type: "immediate"
+      name: "Mindfulness Habit Tracker",
+      description: "Track your daily mindfulness practices and build healthy habits",
+      type: "tracker"
     },
     {
-      name: "Resource Library",
-      description: "Comprehensive mental health resources",
-      status: "Available Now", 
-      type: "educational"
+      name: "Coping Skill Reminders",
+      description: "Personalized reminders for coping strategies and techniques",
+      type: "reminders"
     },
     {
-      name: "Treatment Locator",
-      description: "Find local support services",
-      status: "Available Now",
-      type: "location"
+      name: "Relapse Triggers",
+      description: "Identify and track personal triggers for better awareness",
+      type: "triggers"
+    },
+    {
+      name: "Willow Diary",
+      description: "Private journal for thoughts, progress, and reflections",
+      type: "diary"
     }
   ];
 
@@ -41,23 +43,21 @@ export function PlatformPreview() {
         <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
           <h3 className="font-semibold text-lg mb-4 flex items-center">
             <Heart className="h-5 w-5 mr-2 text-primary" />
-            Comprehensive Support Resources
+            Willow Platform Features
           </h3>
           <div className="bg-muted rounded-lg p-4 border border-border mb-4">
             <div className="space-y-4">
               {supportFeatures.map((feature, index) => (
                 <div key={index} className="flex items-center p-3 bg-white rounded shadow-sm">
                   <div className="w-10 h-10 rounded-full bg-gradient-to-r from-green-500 to-blue-600 flex items-center justify-center text-white font-medium text-sm mr-3">
-                    {feature.type === 'immediate' ? <Phone className="h-4 w-4" /> : 
-                     feature.type === 'educational' ? <BookOpen className="h-4 w-4" /> : 
-                     <Globe className="h-4 w-4" />}
+                    {feature.type === 'tracker' ? <Heart className="h-4 w-4" /> : 
+                     feature.type === 'reminders' ? <Brain className="h-4 w-4" /> : 
+                     feature.type === 'triggers' ? <Shield className="h-4 w-4" /> :
+                     <PenTool className="h-4 w-4" />}
                   </div>
                   <div className="flex-1">
                     <div className="flex justify-between items-center">
                       <h4 className="font-medium">{feature.name}</h4>
-                      <Badge variant="default" className="bg-green-100 text-green-800 hover:bg-green-200">
-                        {feature.status}
-                      </Badge>
                     </div>
                     <p className="text-xs text-gray-500">{feature.description}</p>
                   </div>
@@ -66,7 +66,7 @@ export function PlatformPreview() {
             </div>
           </div>
           <p className="text-foreground">
-            Access to vetted, publicly funded mental health resources and crisis support services designed specifically for veterans.
+            Comprehensive tools designed to support your mental wellness journey with habit tracking, mindfulness reminders, and personal reflection.
           </p>
         </div>
         
