@@ -438,6 +438,35 @@ body {
   }
 }
 
+/* Desktop accessibility panel positioning */
+@media (min-width: 1024px) {
+  .glass-modal {
+    width: 28rem !important;
+    max-width: 28rem !important;
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    margin: 0 !important;
+  }
+}
+
+/* Ensure dialog overlay is properly positioned */
+[data-radix-popper-content-wrapper] {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 50 !important;
+}
+
+/* Dialog content positioning */
+.dialog-content {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  z-index: 51 !important;
+}
+
 /* Reduced Motion */
 .accessibility-reduced-motion,
 .accessibility-reduced-motion * {
@@ -605,6 +634,13 @@ a:hover {
   .glass-modal {
     max-height: 90vh !important;
     overflow-y: auto !important;
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 95vw !important;
+    max-width: 28rem !important;
+    margin: 0 !important;
   }
   
   /* Better mobile navigation spacing */

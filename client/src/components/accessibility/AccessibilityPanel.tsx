@@ -38,7 +38,7 @@ export function AccessibilityPanel() {
               </span>
             </Button>
           </DialogTrigger>
-          <DialogContent className="sm:max-w-md glass-modal">
+          <DialogContent className="sm:max-w-md max-w-[95vw] w-full mx-auto glass-modal fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 max-h-[90vh] overflow-y-auto">
             <DialogHeader>
               <DialogTitle className="flex items-center gap-2">
                 <Settings className="h-5 w-5" aria-hidden="true" />
