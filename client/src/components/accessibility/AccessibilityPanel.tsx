@@ -45,7 +45,7 @@ export function AccessibilityPanel() {
               </DialogDescription>
             </DialogHeader>
             
-            <div className="space-y-6 max-h-[60vh] overflow-y-auto pr-2"">
+            <div className="space-y-6 max-h-[60vh] overflow-y-auto pr-2">
               {/* High Contrast Mode */}
               <Card>
                 <CardHeader className="pb-3">

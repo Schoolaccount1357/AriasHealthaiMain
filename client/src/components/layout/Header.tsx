@@ -108,7 +108,6 @@ export function Header() {
                     ))}
                   </div>
                 </nav>
-                </div>
               </SheetContent>
             </Sheet>
           </div>
