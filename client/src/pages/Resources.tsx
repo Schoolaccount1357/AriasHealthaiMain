@@ -92,23 +92,7 @@ export default function Resources() {
         }
       ]
     },
-    {
-      title: "Peer Support Groups",
-      icon: <HeartHandshake className="h-6 w-6 text-[#3e64dd]" />,
-      resources: [
-        {
-          name: "Wounded Warrior Project",
-          description: "Programs and services to meet needs of wounded veterans",
-          phone: "1-888-997-2586",
-          website: "https://www.woundedwarriorproject.org"
-        },
-        {
-          name: "Make the Connection",
-          description: "Veterans sharing real stories of strength and recovery",
-          website: "https://www.maketheconnection.net"
-        }
-      ]
-    },
+    
     {
       title: "VA Programs & Benefits",
       icon: <Building2 className="h-6 w-6 text-[#3e64dd]" />,
