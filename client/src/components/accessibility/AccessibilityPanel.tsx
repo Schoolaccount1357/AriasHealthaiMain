@@ -38,17 +38,14 @@ export function AccessibilityPanel() {
               </span>
             </Button>
           </DialogTrigger>
-          <DialogContent 
-            className="w-[95vw] max-w-md sm:max-w-lg md:max-w-md lg:max-w-lg glass-modal max-h-[90vh] md:max-h-[80vh] lg:max-h-[75vh] overflow-y-auto m-4"
-            aria-describedby="accessibility-description"
-          >
+          <DialogContent className="w-[95vw] max-w-md sm:max-w-lg md:max-w-md lg:max-w-lg glass-modal max-h-[90vh] md:max-h-[80vh] lg:max-h-[75vh] overflow-y-auto m-4">
             <DialogHeader className="space-y-2 md:space-y-1">
-              <DialogTitle id="accessibility-title" className="flex items-center gap-2 text-lg md:text-base">
+              <DialogTitle className="flex items-center gap-2 text-lg md:text-base">
                 <Settings className="h-5 w-5 md:h-4 md:w-4" aria-hidden="true" />
                 <span>Accessibility Settings</span>
                 <span className="sr-only">A-C-C-E-S-S-I-B-I-L-I-T-Y spelled out</span>
               </DialogTitle>
-              <DialogDescription id="accessibility-description" className="text-sm md:text-xs">
+              <DialogDescription className="text-sm md:text-xs">
                 Customize your viewing experience with accessibility options. This panel is fully scrollable on mobile devices.
                 Available options include high contrast mode, font size adjustment, and reduced motion settings.
               </DialogDescription>
