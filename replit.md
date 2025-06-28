@@ -109,3 +109,4 @@ Preferred communication style: Simple, everyday language.
 
 Changelog:
 - June 28, 2025. Initial setup
+- June 28, 2025. Removed all peer-to-peer video chat functionality including Socket.IO server, video chat components, and related routing. Replaced "PairLink" branding with "Willow" throughout the application. Ensured all linked resources are publicly funded or nonprofit services.
