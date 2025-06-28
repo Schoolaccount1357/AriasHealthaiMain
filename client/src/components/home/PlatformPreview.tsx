@@ -56,7 +56,10 @@ export function PlatformPreview() {
       <div className="grid md:grid-cols-2 gap-8">
         {/* Mental Health Support Resources */}
         <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-
+          <h3 className="font-semibold text-lg mb-4 flex items-center">
+            <Heart className="h-5 w-5 mr-2 text-primary" />
+            Willow Platform Features
+          </h3>
           <div className="bg-muted rounded-lg p-4 border border-border mb-4">
             <div className="space-y-4">
               {supportFeatures.map((feature, index) => (
@@ -94,27 +97,48 @@ export function PlatformPreview() {
             <div className="mb-4 border-b pb-3">
               <h4 className="font-medium mb-2 flex items-center">
                 <UserCog className="h-4 w-4 mr-2 text-primary" />
-                Anonymous Access
+                Privacy-First Access
               </h4>
-              <p className="text-sm text-muted-foreground">Access resources and support without requiring personal identification or login credentials.</p>
+              <p className="text-sm text-muted-foreground">Connect and explore support without providing personal information or login credentials</p>
             </div>
             <div className="mb-4 border-b pb-3">
               <h4 className="font-medium mb-2 flex items-center">
                 <Brain className="h-4 w-4 mr-2 text-primary" />
                 Trauma-Informed Design
               </h4>
-              <p className="text-sm text-muted-foreground">Interface designed with understanding of military trauma and veteran-specific mental health needs.</p>
+              <p className="text-sm text-muted-foreground">Built around deep insights into military experiences and veteran mental health needs</p>
+            </div>
+            <div className="mb-4 border-b pb-3">
+              <h4 className="font-medium mb-2 flex items-center">
+                <BookOpen className="h-4 w-4 mr-2 text-primary" />
+                Curated Veteran Resources
+              </h4>
+              <p className="text-sm text-muted-foreground">Offers vetted tools and referrals from leading veteran-focused organizations</p>
+            </div>
+            <div className="mb-4 border-b pb-3">
+              <h4 className="font-medium mb-2 flex items-center">
+                <Users className="h-4 w-4 mr-2 text-primary" />
+                Community-Led Insight
+              </h4>
+              <p className="text-sm text-muted-foreground">Shaped by lived service and family perspectives within the veteran community</p>
+            </div>
+            <div className="mb-4 border-b pb-3">
+              <h4 className="font-medium mb-2 flex items-center">
+                <HeartHandshake className="h-4 w-4 mr-2 text-primary" />
+                Guided Oversight
+              </h4>
+              <p className="text-sm text-muted-foreground">Conversations are supported by experienced peers and military caregivers when needed</p>
             </div>
             <div>
               <h4 className="font-medium mb-2 flex items-center">
-                <Users className="h-4 w-4 mr-2 text-primary" />
-                Veteran-Focused Resources
+                <Lock className="h-4 w-4 mr-2 text-primary" />
+                Inclusive Anonymity
               </h4>
-              <p className="text-sm text-muted-foreground">Curated resources from trusted organizations like VA, SAMHSA, and established veteran support nonprofits.</p>
+              <p className="text-sm text-muted-foreground">Empowers honest sharing without revealing identity, fostering open peer connections</p>
             </div>
           </div>
           <p className="text-foreground">
-            Built by veterans, for veterans, with deep understanding of military culture and mental health challenges.
+            Built to support the well-being of veterans, informed by their lived experiences.
           </p>
         </div>
       </div>
