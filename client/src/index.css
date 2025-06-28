@@ -325,6 +325,19 @@ body {
   textarea {
     font-size: 16px; /* Prevents zoom on iOS */
   }
+  
+  /* Mobile accessibility panel improvements */
+  .glass-modal {
+    max-height: 90vh !important;
+    overflow-y: auto !important;
+  }
+  
+  /* Better mobile navigation spacing */
+  .md\:hidden nav a {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+  }
 }
 
 /* Mobile-first responsive design improvements */

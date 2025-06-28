@@ -72,32 +72,42 @@ export function Header() {
               <SheetTrigger asChild>
                 <Button 
                   variant="ghost" 
-                  size="icon" 
-                  aria-label="Menu"
-                  className="group transition-all duration-200 hover:bg-[#10066A]/5"
+                  size="sm"
+                  aria-label="Menu - M-E-N-U"
+                  className="group transition-all duration-200 hover:bg-[#10066A]/5 px-3 py-2"
                 >
-                  <Menu className="h-6 w-6 transition-transform duration-300 group-hover:scale-110 group-hover:text-primary" />
+                  <span className="text-sm font-medium">Menu</span>
+                  <span className="sr-only">Menu spelled out: M-E-N-U</span>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right">
-                <div className="flex flex-col space-y-4 mt-8">
-                  {navLinks.map((link) => (
-                    <Link 
-                      key={link.href} 
-                      href={link.href}
-                      onClick={() => setIsOpen(false)}
-                      className={cn(
-                        "relative py-2 px-2 transition-all duration-200 ease-in-out",
-                        "hover:text-primary hover:pl-4",
-                        "after:absolute after:left-0 after:top-0 after:bottom-0 after:w-0.5 after:bg-primary after:transition-all after:duration-200 after:ease-out",
-                        activeLink === link.href ? 
-                          "pl-4 text-primary font-semibold after:h-full" : 
-                          "text-foreground after:h-0 hover:after:h-full"
-                      )}
-                    >
-                      {link.label}
-                    </Link>
-                  ))}
+              <SheetContent side="right" className="w-80">
+                <nav aria-label="Mobile navigation menu" className="mt-8">
+                  <div className="flex flex-col space-y-4">
+                    {navLinks.map((link, index) => (
+                      <Link 
+                        key={link.href} 
+                        href={link.href}
+                        onClick={() => setIsOpen(false)}
+                        className={cn(
+                          "relative py-3 px-3 transition-all duration-200 ease-in-out text-lg",
+                          "hover:text-primary hover:pl-6 focus:text-primary focus:pl-6",
+                          "after:absolute after:left-0 after:top-0 after:bottom-0 after:w-0.5 after:bg-primary after:transition-all after:duration-200 after:ease-out",
+                          "focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded",
+                          activeLink === link.href ? 
+                            "pl-6 text-primary font-semibold after:h-full" : 
+                            "text-foreground after:h-0 hover:after:h-full focus:after:h-full"
+                        )}
+                        aria-label={`Navigate to ${link.label} page`}
+                        tabIndex={0}
+                      >
+                        <span aria-hidden="false">{link.label}</span>
+                        <span className="sr-only">
+                          {link.label.split('').join('-')} - Navigation item {index + 1} of {navLinks.length}
+                        </span>
+                      </Link>
+                    ))}
+                  </div>
+                </nav>
                 </div>
               </SheetContent>
             </Sheet>
