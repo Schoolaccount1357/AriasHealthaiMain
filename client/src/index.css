@@ -189,50 +189,30 @@ body {
   --ring: #ffffff;
 }
 
-.accessibility-high-contrast {
-  background: #000000 !important;
-  color: #ffffff !important;
-}
-
 .accessibility-high-contrast * {
   color: white !important;
-  background-color: transparent !important;
+  background-color: black !important;
   border-color: white !important;
 }
 
-.accessibility-high-contrast body {
-  background: #000000 !important;
-}
-
-.accessibility-high-contrast .glass-morphism-bg {
-  display: none !important;
-}
-
-.accessibility-high-contrast .bg-white,
-.accessibility-high-contrast .bg-gray-50,
-.accessibility-high-contrast .bg-muted,
-.accessibility-high-contrast .glass-card,
-.accessibility-high-contrast .glass-nav,
-.accessibility-high-contrast .glass-modal {
-  background-color: #000000 !important;
-  backdrop-filter: none !important;
-  border: 2px solid white !important;
-}
-
 .accessibility-high-contrast button,
-.accessibility-high-contrast .bg-primary,
-.accessibility-high-contrast [role="button"] {
+.accessibility-high-contrast .bg-primary {
   background-color: white !important;
   color: black !important;
   border: 2px solid white !important;
-  font-weight: bold !important;
 }
 
-.accessibility-high-contrast button:hover,
-.accessibility-high-contrast button:focus {
+.accessibility-high-contrast button:hover {
   background-color: #cccccc !important;
   color: black !important;
-  outline: 3px solid white !important;
+}
+
+.accessibility-high-contrast .text-white {
+  color: white !important;
+}
+
+.accessibility-high-contrast .bg-muted {
+  background-color: #333333 !important;
 }
 
 .accessibility-high-contrast input,
@@ -240,39 +220,7 @@ body {
 .accessibility-high-contrast select {
   background-color: white !important;
   color: black !important;
-  border: 3px solid white !important;
-  font-size: 1.1rem !important;
-}
-
-.accessibility-high-contrast input:focus,
-.accessibility-high-contrast textarea:focus,
-.accessibility-high-contrast select:focus {
-  outline: 3px solid yellow !important;
-  outline-offset: 2px !important;
-}
-
-.accessibility-high-contrast h1,
-.accessibility-high-contrast h2,
-.accessibility-high-contrast h3,
-.accessibility-high-contrast h4,
-.accessibility-high-contrast h5,
-.accessibility-high-contrast h6 {
-  color: white !important;
-  font-weight: bold !important;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.8) !important;
-}
-
-.accessibility-high-contrast a {
-  color: #00ffff !important;
-  text-decoration: underline !important;
-  font-weight: bold !important;
-}
-
-.accessibility-high-contrast a:hover,
-.accessibility-high-contrast a:focus {
-  color: #ffff00 !important;
-  background-color: #000000 !important;
-  outline: 2px solid #ffff00 !important;
+  border: 2px solid white !important;
 }
 
 /* Font Size Adjustments */
@@ -282,43 +230,20 @@ body {
 
 .accessibility-font-large h1 {
   font-size: 3rem !important;
-  line-height: 1.2 !important;
 }
 
 .accessibility-font-large h2 {
   font-size: 2.5rem !important;
-  line-height: 1.3 !important;
 }
 
 .accessibility-font-large h3 {
   font-size: 2rem !important;
-  line-height: 1.3 !important;
-}
-
-.accessibility-font-large h4,
-.accessibility-font-large h5,
-.accessibility-font-large h6 {
-  font-size: 1.5rem !important;
-  line-height: 1.4 !important;
 }
 
 .accessibility-font-large p,
 .accessibility-font-large span,
-.accessibility-font-large div,
-.accessibility-font-large button,
-.accessibility-font-large input,
-.accessibility-font-large label,
-.accessibility-font-large a {
+.accessibility-font-large div {
   font-size: 1.125rem !important;
-  line-height: 1.5 !important;
-}
-
-.accessibility-font-large .text-sm {
-  font-size: 1rem !important;
-}
-
-.accessibility-font-large .text-xs {
-  font-size: 0.875rem !important;
 }
 
 .accessibility-font-extra-large {
@@ -327,305 +252,39 @@ body {
 
 .accessibility-font-extra-large h1 {
   font-size: 3.5rem !important;
-  line-height: 1.2 !important;
 }
 
 .accessibility-font-extra-large h2 {
   font-size: 3rem !important;
-  line-height: 1.3 !important;
 }
 
 .accessibility-font-extra-large h3 {
   font-size: 2.5rem !important;
-  line-height: 1.3 !important;
-}
-
-.accessibility-font-extra-large h4,
-.accessibility-font-extra-large h5,
-.accessibility-font-extra-large h6 {
-  font-size: 1.75rem !important;
-  line-height: 1.4 !important;
 }
 
 .accessibility-font-extra-large p,
 .accessibility-font-extra-large span,
-.accessibility-font-extra-large div,
-.accessibility-font-extra-large button,
-.accessibility-font-extra-large input,
-.accessibility-font-extra-large label,
-.accessibility-font-extra-large a {
+.accessibility-font-extra-large div {
   font-size: 1.25rem !important;
-  line-height: 1.5 !important;
-}
-
-.accessibility-font-extra-large .text-sm {
-  font-size: 1.125rem !important;
-}
-
-.accessibility-font-extra-large .text-xs {
-  font-size: 1rem !important;
-}
-
-/* Mobile font size adjustments */
-@media (max-width: 768px) {
-  .accessibility-font-large h1 {
-    font-size: 2.5rem !important;
-  }
-  
-  .accessibility-font-large h2 {
-    font-size: 2rem !important;
-  }
-  
-  .accessibility-font-large h3 {
-    font-size: 1.75rem !important;
-  }
-  
-  .accessibility-font-extra-large h1 {
-    font-size: 3rem !important;
-  }
-  
-  .accessibility-font-extra-large h2 {
-    font-size: 2.5rem !important;
-  }
-  
-  .accessibility-font-extra-large h3 {
-    font-size: 2rem !important;
-  }
-}
-
-/* iPad and tablet-specific adjustments */
-@media (min-width: 768px) and (max-width: 1024px) {
-  /* iPad portrait and landscape */
-  .accessibility-font-large h1 {
-    font-size: 2.75rem !important;
-  }
-  
-  .accessibility-font-large h2 {
-    font-size: 2.25rem !important;
-  }
-  
-  .accessibility-font-extra-large h1 {
-    font-size: 3.25rem !important;
-  }
-  
-  .accessibility-font-extra-large h2 {
-    font-size: 2.75rem !important;
-  }
-
-  /* Accessibility button positioning for tablets */
-  .fixed.bottom-4.right-4 {
-    bottom: 2rem;
-    right: 2rem;
-  }
-
-  /* Touch targets for tablets */
-  button, 
-  [role="button"] {
-    min-height: 48px !important;
-    min-width: 48px !important;
-    padding: 14px !important;
-  }
-}
-
-/* Large tablets and small laptops */
-@media (min-width: 1024px) and (max-width: 1280px) {
-  .accessibility-font-large h1 {
-    font-size: 3rem !important;
-  }
-  
-  .accessibility-font-extra-large h1 {
-    font-size: 3.5rem !important;
-  }
-}
-
-/* Accessibility panel responsive positioning through Radix selectors only */
-.glass-modal {
-  overflow-y: auto !important;
-}
-
-/* Ensure dialog overlay is properly positioned */
-[data-radix-popper-content-wrapper] {
-  position: fixed !important;
-  inset: 0 !important;
-  z-index: 50 !important;
-}
-
-/* Dialog overlay positioning */
-[data-radix-dialog-overlay] {
-  position: fixed !important;
-  inset: 0 !important;
-  z-index: 50 !important;
-}
-
-/* Dialog content positioning - responsive */
-[data-radix-dialog-content] {
-  position: fixed !important;
-  z-index: 51 !important;
-}
-
-/* Mobile positioning - ensure accessibility panel fits on mobile screens */
-@media (max-width: 767px) {
-  [data-radix-dialog-content] {
-    top: 2rem !important;
-    left: 1rem !important;
-    right: 1rem !important;
-    transform: none !important;
-    width: calc(100vw - 2rem) !important;
-    max-width: calc(100vw - 2rem) !important;
-    max-height: calc(100vh - 4rem) !important;
-    margin: 0 !important;
-    position: fixed !important;
-  }
-}
-
-/* Tablet positioning */
-@media (min-width: 768px) and (max-width: 1023px) {
-  [data-radix-dialog-content] {
-    top: 50% !important;
-    left: 50% !important;
-    transform: translate(-50%, -50%) !important;
-    width: min(28rem, calc(100vw - 4rem)) !important;
-    max-width: min(28rem, calc(100vw - 4rem)) !important;
-    max-height: calc(100vh - 4rem) !important;
-    position: fixed !important;
-  }
-}
-
-/* Desktop positioning - center the modal properly */
-@media (min-width: 1024px) {
-  [data-radix-dialog-content] {
-    top: 50% !important;
-    left: 50% !important;
-    transform: translate(-50%, -50%) !important;
-    width: 28rem !important;
-    max-width: 28rem !important;
-    max-height: calc(100vh - 4rem) !important;
-    position: fixed !important;
-  }
 }
 
 /* Reduced Motion */
-.accessibility-reduced-motion,
 .accessibility-reduced-motion * {
   animation-duration: 0.01ms !important;
   animation-iteration-count: 1 !important;
   transition-duration: 0.01ms !important;
   scroll-behavior: auto !important;
-  transform: none !important;
-}
-
-.accessibility-reduced-motion .glass-morphism-bg {
-  animation: none !important;
-}
-
-.accessibility-reduced-motion .glass-morphism-bg::before,
-.accessibility-reduced-motion .glass-morphism-bg::after {
-  animation: none !important;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-  
-  .glass-morphism-bg,
-  .glass-morphism-bg::before,
-  .glass-morphism-bg::after {
-    animation: none !important;
-  }
 }
 
 /* Focus indicators for keyboard navigation */
 *:focus-visible {
   outline: 3px solid #3e64dd !important;
   outline-offset: 2px !important;
-  border-radius: 4px;
 }
 
 .accessibility-high-contrast *:focus-visible {
   outline: 3px solid white !important;
   outline-offset: 2px !important;
-  background-color: #000000 !important;
-}
-
-/* Better touch targets for mobile */
-@media (max-width: 767px) {
-  button, 
-  [role="button"], 
-  input[type="submit"], 
-  input[type="button"] {
-    min-height: 44px !important;
-    min-width: 44px !important;
-    padding: 12px !important;
-  }
-  
-  .accessibility-font-large button,
-  .accessibility-font-large [role="button"] {
-    min-height: 48px !important;
-    padding: 14px !important;
-  }
-  
-  .accessibility-font-extra-large button,
-  .accessibility-font-extra-large [role="button"] {
-    min-height: 52px !important;
-    padding: 16px !important;
-  }
-}
-
-/* iPad specific optimizations */
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-  /* iPad portrait mode optimizations */
-  .grid.md\\:grid-cols-2 {
-    grid-template-columns: 1fr !important;
-    gap: 1.5rem !important;
-  }
-  
-  .container {
-    padding-left: 2rem !important;
-    padding-right: 2rem !important;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  /* iPad landscape mode optimizations */
-  .grid.md\\:grid-cols-2 {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 2rem !important;
-  }
-  
-  .container {
-    padding-left: 3rem !important;
-    padding-right: 3rem !important;
-  }
-}
-
-/* Enhanced visibility for interactive elements */
-button:hover,
-[role="button"]:hover,
-a:hover {
-  transform: scale(1.02);
-  transition: transform 0.1s ease;
-}
-
-.accessibility-reduced-motion button:hover,
-.accessibility-reduced-motion [role="button"]:hover,
-.accessibility-reduced-motion a:hover {
-  transform: none !important;
-  transition: none !important;
-}
-
-/* Ensure sufficient color contrast for all text */
-.accessibility-high-contrast p,
-.accessibility-high-contrast span,
-.accessibility-high-contrast div,
-.accessibility-high-contrast label {
-  font-weight: 500 !important;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.8) !important;
 }
 
 /* Screen reader only content */
@@ -671,13 +330,6 @@ a:hover {
   .glass-modal {
     max-height: 90vh !important;
     overflow-y: auto !important;
-    position: fixed !important;
-    top: 50% !important;
-    left: 50% !important;
-    transform: translate(-50%, -50%) !important;
-    width: 95vw !important;
-    max-width: 28rem !important;
-    margin: 0 !important;
   }
   
   /* Better mobile navigation spacing */

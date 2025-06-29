@@ -19,38 +19,18 @@ export function AccessibilityProvider({ children }: { children: ReactNode }) {
   const [reducedMotion, setReducedMotion] = useState(false);
   const [screenReaderAnnouncements, setScreenReaderAnnouncements] = useState<string[]>([]);
 
-  // Load settings from localStorage on mount and respect system preferences
+  // Load settings from localStorage on mount
   useEffect(() => {
     const savedHighContrast = localStorage.getItem('accessibility-high-contrast') === 'true';
     const savedFontSize = localStorage.getItem('accessibility-font-size') as 'normal' | 'large' | 'extra-large' || 'normal';
-    let savedReducedMotion = localStorage.getItem('accessibility-reduced-motion') === 'true';
+    const savedReducedMotion = localStorage.getItem('accessibility-reduced-motion') === 'true';
 
-    // Check system preference for reduced motion if not explicitly set
-    if (localStorage.getItem('accessibility-reduced-motion') === null) {
-      savedReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    }
-
-    // Check system preference for high contrast if not explicitly set
-    let systemHighContrast = savedHighContrast;
-    if (localStorage.getItem('accessibility-high-contrast') === null) {
-      systemHighContrast = window.matchMedia('(prefers-contrast: high)').matches || 
-                           window.matchMedia('(prefers-color-scheme: high-contrast)').matches;
-    }
-
-    setIsHighContrast(systemHighContrast);
+    setIsHighContrast(savedHighContrast);
     setFontSize(savedFontSize);
     setReducedMotion(savedReducedMotion);
 
     // Apply initial accessibility classes
-    updateDocumentClasses(systemHighContrast, savedFontSize, savedReducedMotion);
-    
-    // Save system preferences if they were detected
-    if (localStorage.getItem('accessibility-reduced-motion') === null) {
-      localStorage.setItem('accessibility-reduced-motion', savedReducedMotion.toString());
-    }
-    if (localStorage.getItem('accessibility-high-contrast') === null) {
-      localStorage.setItem('accessibility-high-contrast', systemHighContrast.toString());
-    }
+    updateDocumentClasses(savedHighContrast, savedFontSize, savedReducedMotion);
   }, []);
 
   const updateDocumentClasses = (highContrast: boolean, fontSizeVal: string, reducedMotionVal: boolean) => {
