@@ -37,14 +37,14 @@ export function AccessibilityPanel() {
               </span>
             </Button>
           </DialogTrigger>
-          <DialogContent className="w-[calc(100vw-1rem)] max-w-[95vw] sm:w-full sm:max-w-md lg:max-w-lg glass-modal max-h-[90vh] overflow-y-auto">
-            <DialogHeader>
-              <DialogTitle className="flex items-center gap-2">
-                <Settings className="h-5 w-5" aria-hidden="true" />
+          <DialogContent className="w-[calc(100vw-1rem)] max-w-[90vw] sm:max-w-md md:max-w-lg glass-modal max-h-[85vh] sm:max-h-[80vh] overflow-y-auto p-4 sm:p-6">
+            <DialogHeader className="pb-2 sm:pb-4">
+              <DialogTitle className="flex items-center gap-2 text-lg sm:text-xl">
+                <Settings className="h-4 w-4 sm:h-5 sm:w-5" aria-hidden="true" />
                 <span>Accessibility Settings</span>
                 <span className="sr-only">A-C-C-E-S-S-I-B-I-L-I-T-Y spelled out</span>
               </DialogTitle>
-              <DialogDescription>
+              <DialogDescription className="text-sm sm:text-base">
                 Customize your viewing experience with accessibility options.
               </DialogDescription>
             </DialogHeader>
@@ -52,12 +52,12 @@ export function AccessibilityPanel() {
             <div className="space-y-4 sm:space-y-6">
               {/* High Contrast Mode */}
               <Card>
-                <CardHeader className="pb-3">
-                  <CardTitle className="text-base flex items-center gap-2">
-                    <Eye className="h-4 w-4" aria-hidden="true" />
+                <CardHeader className="pb-2 sm:pb-3">
+                  <CardTitle className="text-sm sm:text-base flex items-center gap-2">
+                    <Eye className="h-3 w-3 sm:h-4 sm:w-4" aria-hidden="true" />
                     <span aria-label="High Contrast Mode - H-I-G-H C-O-N-T-R-A-S-T M-O-D-E">High Contrast Mode</span>
                   </CardTitle>
-                  <CardDescription>
+                  <CardDescription className="text-xs sm:text-sm">
                     Increases contrast for better visibility
                   </CardDescription>
                 </CardHeader>
@@ -81,12 +81,12 @@ export function AccessibilityPanel() {
 
               {/* Font Size */}
               <Card>
-                <CardHeader className="pb-3">
-                  <CardTitle className="text-base flex items-center gap-2">
-                    <Type className="h-4 w-4" aria-hidden="true" />
+                <CardHeader className="pb-2 sm:pb-3">
+                  <CardTitle className="text-sm sm:text-base flex items-center gap-2">
+                    <Type className="h-3 w-3 sm:h-4 sm:w-4" aria-hidden="true" />
                     <span aria-label="Font Size - F-O-N-T S-I-Z-E">Font Size</span>
                   </CardTitle>
-                  <CardDescription>
+                  <CardDescription className="text-xs sm:text-sm">
                     Adjust text size for better readability
                   </CardDescription>
                 </CardHeader>
