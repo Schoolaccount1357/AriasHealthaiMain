@@ -22,22 +22,22 @@ export function AccessibilityPanel() {
   return (
     <>
       {/* Floating accessibility button */}
-      <div className="fixed bottom-6 right-6 z-50">
+      <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50">
         <Dialog open={isOpen} onOpenChange={setIsOpen}>
           <DialogTrigger asChild>
             <Button
               size="lg"
-              className="rounded-full w-14 h-14 shadow-lg bg-primary hover:bg-primary/90 focus:ring-2 focus:ring-primary focus:ring-offset-2"
+              className="rounded-full w-12 h-12 sm:w-14 sm:h-14 shadow-lg bg-primary hover:bg-primary/90 focus:ring-2 focus:ring-primary focus:ring-offset-2"
               aria-label="Accessibility Settings - Click to open panel with vision and reading options"
               title="Accessibility Settings"
             >
-              <Accessibility className="h-7 w-7 text-primary-foreground" aria-hidden="true" />
+              <Accessibility className="h-6 w-6 sm:h-7 sm:w-7 text-primary-foreground" aria-hidden="true" />
               <span className="sr-only">
                 Accessibility settings button. Opens a panel with options to improve readability including high contrast mode for better visibility, font size adjustment for easier reading, and reduced motion settings for comfort.
               </span>
             </Button>
           </DialogTrigger>
-          <DialogContent className="glass-modal">
+          <DialogContent className="w-[calc(100vw-1rem)] max-w-[95vw] sm:w-full sm:max-w-md lg:max-w-lg glass-modal max-h-[90vh] overflow-y-auto">
             <DialogHeader>
               <DialogTitle className="flex items-center gap-2">
                 <Settings className="h-5 w-5" aria-hidden="true" />
@@ -49,7 +49,7 @@ export function AccessibilityPanel() {
               </DialogDescription>
             </DialogHeader>
             
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               {/* High Contrast Mode */}
               <Card>
                 <CardHeader className="pb-3">
