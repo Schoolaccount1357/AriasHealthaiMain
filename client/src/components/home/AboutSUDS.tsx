@@ -11,7 +11,7 @@ export function AboutSUDS() {
           </h2>
           <div className="w-16 sm:w-24 h-1 bg-gradient-to-r from-[#10066A] to-[#3e64dd] mx-auto mb-4 sm:mb-6"></div>
           <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed px-2">
-            Many veterans face barriers to care — especially in substance use recovery.
+            Many veterans face barriers to care especially in substance use recovery.
             Traditional services don't always meet them where they are.
           </p>
         </div>
