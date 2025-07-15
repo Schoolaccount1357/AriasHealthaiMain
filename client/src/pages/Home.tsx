@@ -40,8 +40,6 @@ export default function Home() {
         
         {/* Crisis resources removed from main content */}
         
-        <MVPPreview />
-        
         <AboutSUDS />
         <PlatformPreview />
         <section id="enrollment-form" className="scroll-mt-20 pt-4">

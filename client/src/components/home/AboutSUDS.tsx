@@ -1,22 +1,40 @@
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
+import MVPPreviewImg from "@assets/Preview_1752600978042.png";
 
 export function AboutSUDS() {
   return (
     <section className="mb-16 glass-card p-4 sm:p-6 md:p-8 rounded-2xl mx-4">
       <div className="max-w-6xl mx-auto">
+        {/* Header Section */}
         <div className="text-center mb-8 sm:mb-10">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 text-[#10066A]">
             The Challenges Veterans Face
           </h2>
           <div className="w-16 sm:w-24 h-1 bg-gradient-to-r from-[#10066A] to-[#3e64dd] mx-auto mb-4 sm:mb-6"></div>
-          <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed px-2">
-            Many veterans face barriers to care especially in substance use recovery.
-            Traditional services don't always meet them where they are.
-          </p>
         </div>
-        
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
+
+        {/* Main Content with MVP Preview */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start mb-8 sm:mb-10">
+          {/* MVP Preview - Left Side */}
+          <div className="flex justify-center lg:justify-start">
+            <div className="max-w-xs sm:max-w-sm">
+              <img 
+                src={MVPPreviewImg} 
+                alt="Willow MVP Preview showing mobile app interface"
+                className="w-full h-auto object-contain"
+              />
+            </div>
+          </div>
+
+          {/* Description and Challenges - Right Side */}
+          <div className="space-y-6">
+            <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
+              Many veterans face barriers to care especially in substance use recovery.
+              Traditional services don't always meet them where they are.
+            </p>
+            {/* Challenges Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
           <div className="group bg-white/90 backdrop-blur-sm rounded-xl p-4 sm:p-6 shadow-lg border border-[#10066A]/10 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
             <div className="flex items-start space-x-3 sm:space-x-4">
               <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-[#10066A] to-[#3e64dd] rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
@@ -70,6 +88,7 @@ export function AboutSUDS() {
                 <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-1 sm:mb-2">Privacy Concerns</h3>
                 <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">Lack of privacy and anonymity in traditional support environments</p>
               </div>
+            </div>
             </div>
           </div>
         </div>
