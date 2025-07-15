@@ -89,8 +89,9 @@ export function AboutSUDS() {
                 <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">Lack of privacy and anonymity in traditional support environments</p>
               </div>
             </div>
-            </div>
           </div>
+        </div>
+        </div>
         </div>
         
         <p className="mb-3 sm:mb-4 text-sm sm:text-base mt-8 sm:mt-10">
