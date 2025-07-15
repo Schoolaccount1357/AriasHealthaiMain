@@ -40,7 +40,7 @@ export function Hero() {
               You are not alone.
             </h1>
             <p className="text-sm md:text-base text-white/90 mb-6" aria-describedby="hero-heading">
-              We're building bridges of support for people at high risk of loneliness, depression, and relapse starting with veterans and front-line communities. Through empathetic peer connection and real-time emotional insight, we're creating spaces where technology helps people feel seen, supported, and heard.
+              We're building bridges of support for people at high risk, beginning with veterans and front-line communities, to ensure no one has to navigate loneliness, depression, or relapse without support.
             </p>
 
             <Button 
