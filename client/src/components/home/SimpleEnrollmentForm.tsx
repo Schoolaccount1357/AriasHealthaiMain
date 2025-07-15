@@ -63,11 +63,25 @@ export function SimpleEnrollmentForm() {
       waitlistForm.reset();
       setCurrentStep(1);
     },
-    onError: (error: Error) => {
+    onError: (error: any) => {
+      let title = "Error";
+      let description = "Failed to join waitlist. Please try again.";
+      let variant: "destructive" | "default" = "destructive";
+      
+      if (error.message) {
+        if (error.message.includes("already on our waitlist")) {
+          title = "Already Registered";
+          description = "This email is already on our waitlist. You'll be notified when we launch!";
+          variant = "default";
+        } else {
+          description = error.message;
+        }
+      }
+      
       toast({
-        title: "Error",
-        description: error.message || "Failed to join waitlist. Please try again.",
-        variant: "destructive"
+        title,
+        description,
+        variant
       });
     }
   });
