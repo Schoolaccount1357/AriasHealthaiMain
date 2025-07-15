@@ -15,8 +15,6 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import MVPPreviewImg from "@assets/Preview_1752600978042.png";
-
 export function PlatformPreview() {
   const supportFeatures = [
     {
@@ -54,17 +52,6 @@ export function PlatformPreview() {
   return (
     <section className="mb-12 mt-6">
       <h3 className="text-xl font-semibold mb-4">Willow Platform Features</h3>
-      
-      {/* MVP Preview Image */}
-      <div className="flex justify-center mb-8">
-        <div className="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
-          <img 
-            src={MVPPreviewImg} 
-            alt="Willow MVP Preview showing mobile app interface"
-            className="w-full h-auto object-contain"
-          />
-        </div>
-      </div>
       
       <div className="grid md:grid-cols-2 gap-8">
         {/* Mental Health Support Resources */}
