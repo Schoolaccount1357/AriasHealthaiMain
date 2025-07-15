@@ -40,7 +40,7 @@ export function Hero() {
               You are not alone.
             </h1>
             <p className="text-sm md:text-base text-white/90 mb-6" aria-describedby="hero-heading">
-              Confidential veteran-to-veteran support, built with care.
+              Building AI-powered tools to support individuals at high risk of loneliness, depression, and relapse by using empathetic peer connection and real-time emotional insight to listen, support, and heal.
             </p>
 
             <Button 
