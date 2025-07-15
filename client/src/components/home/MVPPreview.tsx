@@ -10,27 +10,17 @@ export function MVPPreview() {
             Willow MVP Preview
           </h2>
           <div className="w-16 sm:w-24 h-1 bg-gradient-to-r from-[#10066A] to-[#3e64dd] mx-auto mb-4 sm:mb-6"></div>
-          <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            A glimpse at our upcoming mobile experience designed to connect veterans through peer support and AI-powered insights.
-          </p>
         </div>
 
-        {/* Image Container with Responsive Design */}
+        {/* Image Container with Responsive Design - Half Size */}
         <div className="flex justify-center">
-          <div className="relative max-w-full w-full sm:max-w-2xl md:max-w-3xl lg:max-w-4xl">
+          <div className="relative max-w-full w-full sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl">
             <img 
               src={MVPPreviewImg} 
               alt="Willow MVP Preview showing mobile app interface with AriasHealth.ai branding and Welcome to Willow screens"
-              className="w-full h-auto object-contain rounded-lg shadow-lg"
+              className="w-full h-auto object-contain"
             />
           </div>
-        </div>
-
-        {/* Optional Caption */}
-        <div className="text-center mt-4 sm:mt-6">
-          <p className="text-xs sm:text-sm text-gray-500 max-w-xl mx-auto">
-            Early preview of Willow's mobile interface designed for seamless peer connection and support
-          </p>
         </div>
       </div>
     </section>
