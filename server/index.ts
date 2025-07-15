@@ -28,6 +28,9 @@ if (!fs.existsSync(logsDir)) {
 
 const app = express();
 
+// Trust proxy for proper rate limiting and IP detection
+app.set('trust proxy', true);
+
 // Basic Express middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
