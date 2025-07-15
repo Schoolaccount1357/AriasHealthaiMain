@@ -105,8 +105,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // API endpoint for joining the waitlist
   app.post("/api/waitlist/join", async (req: Request, res: Response) => {
     try {
-      // Validate the waitlist data using the schema
-      const validatedEntry = waitlistSchema.parse(req.body);
+      // Validate the waitlist data using the insertWaitlistSchema which is more flexible
+      const validatedEntry = insertWaitlistSchema.parse(req.body);
       
       // Check if email already exists in the waitlist
       const existingEntry = await storage.getWaitlistByEmail(validatedEntry.email);

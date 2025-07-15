@@ -20,15 +20,15 @@ import {
   FormMessage 
 } from "@/components/ui/form";
 import { ChevronLeft, ChevronRight, Clock, Users, Heart, Shield } from "lucide-react";
-import { waitlistSchema } from "@shared/schema";
+import { simpleWaitlistSchema } from "@shared/schema";
 
 export function SimpleEnrollmentForm() {
   const { toast } = useToast();
   const [currentStep, setCurrentStep] = useState(1);
   const totalSteps = 4;
   
-  const waitlistForm = useForm<z.infer<typeof waitlistSchema>>({
-    resolver: zodResolver(waitlistSchema),
+  const waitlistForm = useForm<z.infer<typeof simpleWaitlistSchema>>({
+    resolver: zodResolver(simpleWaitlistSchema),
     defaultValues: {
       firstName: "",
       lastName: "",
@@ -51,7 +51,7 @@ export function SimpleEnrollmentForm() {
   };
 
   const waitlistSubmitMutation = useMutation({
-    mutationFn: async (data: z.infer<typeof waitlistSchema>) => {
+    mutationFn: async (data: z.infer<typeof simpleWaitlistSchema>) => {
       const response = await apiRequest("POST", "/api/waitlist/join", data);
       return response;
     },
@@ -72,7 +72,7 @@ export function SimpleEnrollmentForm() {
     }
   });
 
-  const onSubmit = (values: z.infer<typeof waitlistSchema>) => {
+  const onSubmit = (values: z.infer<typeof simpleWaitlistSchema>) => {
     waitlistSubmitMutation.mutate(values);
   };
 

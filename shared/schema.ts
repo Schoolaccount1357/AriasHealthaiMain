@@ -129,6 +129,15 @@ export const insertWaitlistSchema = createInsertSchema(waitlist).omit({
 export type InsertWaitlist = z.infer<typeof insertWaitlistSchema>;
 export type Waitlist = typeof waitlist.$inferSelect;
 
+// Simple waitlist validation schema for basic form
+export const simpleWaitlistSchema = z.object({
+  email: z.string().email("Invalid email address"),
+  firstName: z.string().min(1, "First name is required"),
+  lastName: z.string().min(1, "Last name is required"),
+  serviceStatus: z.string().min(1, "Please select your service status"),
+  reasonForInterest: z.string().optional(),
+});
+
 // Waitlist validation schema with enhanced demographics
 export const waitlistSchema = z.object({
   email: z.string().email("Invalid email address"),
