@@ -40,7 +40,7 @@ export function Hero() {
               You are not alone.
             </h1>
             <p className="text-sm md:text-base text-white/90 mb-6" aria-describedby="hero-heading">
-              Building AI-powered tools for people at high risk of loneliness, depression, and relapse starting with veterans and front-line communities. Through empathetic peer connection and real-time emotional insight, we're creating technology that listens, supports, and heals.
+              We're building bridges of support for people at high risk of loneliness, depression, and relapse starting with veterans and front-line communities. Through empathetic peer connection and real-time emotional insight, we're creating spaces where technology helps people feel seen, supported, and heard.
             </p>
 
             <Button 
