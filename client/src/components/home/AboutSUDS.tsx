@@ -1,6 +1,5 @@
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
-import MVPPreviewImg from "@assets/Preview_1752600978042.png";
 
 export function AboutSUDS() {
   return (
@@ -14,83 +13,70 @@ export function AboutSUDS() {
           <div className="w-16 sm:w-24 h-1 bg-gradient-to-r from-[#10066A] to-[#3e64dd] mx-auto mb-4 sm:mb-6"></div>
         </div>
 
-        {/* Main Content with MVP Preview */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start mb-8 sm:mb-10">
-          {/* MVP Preview - Left Side */}
-          <div className="flex justify-center lg:justify-start">
-            <div className="max-w-xs sm:max-w-sm">
-              <img 
-                src={MVPPreviewImg} 
-                alt="Willow MVP Preview showing mobile app interface"
-                className="w-full h-auto object-contain"
-              />
+        {/* Main Content */}
+        <div className="mb-8 sm:mb-10">
+          <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed mb-6">
+            Many veterans face barriers to care especially in substance use recovery.
+            Traditional services don't always meet them where they are.
+          </p>
+          
+          {/* Challenges Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+            <div className="group bg-white/90 backdrop-blur-sm rounded-xl p-4 sm:p-6 shadow-lg border border-[#10066A]/10 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="flex items-start space-x-3 sm:space-x-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-[#10066A] to-[#3e64dd] rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                  <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-1 sm:mb-2">Limited Access</h3>
+                  <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">Limited access to timely mental health support when veterans need it most</p>
+                </div>
+              </div>
             </div>
-          </div>
 
-          {/* Description and Challenges - Right Side */}
-          <div className="space-y-6">
-            <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
-              Many veterans face barriers to care especially in substance use recovery.
-              Traditional services don't always meet them where they are.
-            </p>
-            {/* Challenges Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-          <div className="group bg-white/90 backdrop-blur-sm rounded-xl p-4 sm:p-6 shadow-lg border border-[#10066A]/10 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-            <div className="flex items-start space-x-3 sm:space-x-4">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-[#10066A] to-[#3e64dd] rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
-                <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-1 sm:mb-2">Limited Access</h3>
-                <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">Limited access to timely mental health support when veterans need it most</p>
+            <div className="group bg-white/90 backdrop-blur-sm rounded-xl p-4 sm:p-6 shadow-lg border border-[#10066A]/10 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="flex items-start space-x-3 sm:space-x-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-[#3e64dd] to-[#2a4bba] rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                  <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-1 sm:mb-2">Peer Connection</h3>
+                  <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">Difficulty connecting with peers who truly understand their military experiences</p>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="group bg-white/90 backdrop-blur-sm rounded-xl p-4 sm:p-6 shadow-lg border border-[#10066A]/10 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-            <div className="flex items-start space-x-3 sm:space-x-4">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-[#3e64dd] to-[#2a4bba] rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
-                <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-1 sm:mb-2">Peer Connection</h3>
-                <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">Difficulty connecting with peers who truly understand their military experiences</p>
+            <div className="group bg-white/90 backdrop-blur-sm rounded-xl p-4 sm:p-6 shadow-lg border border-[#10066A]/10 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="flex items-start space-x-3 sm:space-x-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-[#141e2f] to-[#10066A] rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                  <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.878 9.878L3 3m6.878 6.878L21 21" />
+                  </svg>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-1 sm:mb-2">Stigma Barriers</h3>
+                  <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">Stigma around seeking help for substance use disorders and mental health</p>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="group bg-white/90 backdrop-blur-sm rounded-xl p-4 sm:p-6 shadow-lg border border-[#10066A]/10 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-            <div className="flex items-start space-x-3 sm:space-x-4">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-[#141e2f] to-[#10066A] rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
-                <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.878 9.878L3 3m6.878 6.878L21 21" />
-                </svg>
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-1 sm:mb-2">Stigma Barriers</h3>
-                <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">Stigma around seeking help for substance use disorders and mental health</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="group bg-white/90 backdrop-blur-sm rounded-xl p-4 sm:p-6 shadow-lg border border-[#10066A]/10 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-            <div className="flex items-start space-x-3 sm:space-x-4">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-[#2a4bba] to-[#141e2f] rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
-                <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                </svg>
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-1 sm:mb-2">Privacy Concerns</h3>
-                <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">Lack of privacy and anonymity in traditional support environments</p>
+            <div className="group bg-white/90 backdrop-blur-sm rounded-xl p-4 sm:p-6 shadow-lg border border-[#10066A]/10 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="flex items-start space-x-3 sm:space-x-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-[#2a4bba] to-[#141e2f] rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                  <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                  </svg>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-1 sm:mb-2">Privacy Concerns</h3>
+                  <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">Lack of privacy and anonymity in traditional support environments</p>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
         </div>
         </div>
         
