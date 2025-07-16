@@ -6,7 +6,7 @@ import PeerSupportImg from "@assets/AdobeStock_1368008048.jpeg";
 
 export function Hero() {
   const { trackResourceClick } = useResourceTracking();
-  
+
   const scrollToEnrollmentForm = () => {
     const enrollmentFormSection = document.getElementById('enrollment-form');
     if (enrollmentFormSection) {
@@ -40,7 +40,7 @@ export function Hero() {
               You are not alone.
             </h1>
             <p className="text-sm md:text-base text-white/90 mb-6" aria-describedby="hero-heading">
-              Everyone deserves a peer circle to lean on. Wherever you are in your journey, we're here to walk alongside you. Willow is our private effort to create steady, peer-to-peer support system, beginning with the communities that have carried the heaviest loads.
+              Everyone deserves a circle to lean on. WILLOW is our quiet effort to build steady peer support, starting with the communities that have carried the heaviest loads.
             </p>
 
             <Button 
@@ -65,7 +65,7 @@ export function Hero() {
               <span className="text-white/90 text-sm font-medium">Need immediate help?</span>
               <span className="text-white/60 text-xs ml-2 hidden sm:inline">Crisis support available 24/7</span>
             </div>
-            
+
             {/* Compact Button Group */}
             <div className="flex flex-wrap gap-2 text-xs">
               <Button 
