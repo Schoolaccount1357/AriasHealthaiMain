@@ -40,7 +40,7 @@ export function Hero() {
               You are not alone.
             </h1>
             <p className="text-sm md:text-base text-white/90 mb-6" aria-describedby="hero-heading">
-              Everyone deserves a circle to lean on. WILLOW is our quiet effort to build steady peer support, starting with the communities that have carried the heaviest loads.
+              Everyone deserves a circle to lean on. Willow is our quiet effort to build steady peer support, starting with the communities that have carried the heaviest loads.
             </p>
 
             <Button 
