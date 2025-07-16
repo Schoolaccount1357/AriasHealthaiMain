@@ -40,7 +40,7 @@ export function Hero() {
               You are not alone.
             </h1>
             <p className="text-sm md:text-base text-white/90 mb-6" aria-describedby="hero-heading">
-              Everyone deserves a peer circle to lean on. Wherever you are in your journey, we're here to walk alongside you. Willow is our quiet effort to make that support feel human, accessible, and lasting.
+              Everyone deserves a peer circle to lean on. Wherever you are in your journey, we're here to walk alongside you. Willow is our private effort to create steady, peer-to-peer support system, beginning with the communities that have carried the heaviest loads.
             </p>
 
             <Button 
