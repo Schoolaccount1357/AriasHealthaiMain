@@ -207,6 +207,19 @@ body {
   color: black !important;
 }
 
+/* Accessibility floating button specific styling */
+.accessibility-high-contrast [aria-label*="accessibility settings"] {
+  background-color: black !important;
+  color: white !important;
+  border: 3px solid white !important;
+}
+
+.accessibility-high-contrast [aria-label*="accessibility settings"]:hover {
+  background-color: #333333 !important;
+  color: white !important;
+  border: 3px solid white !important;
+}
+
 .accessibility-high-contrast .text-white {
   color: white !important;
 }

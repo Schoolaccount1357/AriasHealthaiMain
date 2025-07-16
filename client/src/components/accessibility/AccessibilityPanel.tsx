@@ -27,7 +27,7 @@ export function AccessibilityPanel() {
           <DialogTrigger asChild>
             <Button
               size="lg"
-              className="rounded-full w-14 h-14 shadow-lg bg-primary hover:bg-primary/90 focus:ring-2 focus:ring-primary focus:ring-offset-2"
+              className="rounded-full w-14 h-14 shadow-xl bg-slate-900 text-white hover:bg-slate-800 focus:ring-2 focus:ring-slate-900 focus:ring-offset-2 border-2 border-white/20 backdrop-blur-sm"
               aria-label="Open accessibility settings - A-C-C-E-S-S-I-B-I-L-I-T-Y"
             >
               <Accessibility className="h-6 w-6" />
