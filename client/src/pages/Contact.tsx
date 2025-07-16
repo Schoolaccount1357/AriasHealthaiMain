@@ -213,7 +213,7 @@ export default function Contact() {
               )}
             />
             
-            <Button type="submit" disabled={isSubmitting}>
+            <Button type="submit" disabled={isSubmitting} className="bg-white text-black border-2 border-gray-300 hover:bg-gray-100 font-medium">
               {isSubmitting ? "Sending..." : "Submit"}
             </Button>
           </form>
