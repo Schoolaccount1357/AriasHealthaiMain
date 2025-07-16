@@ -17,9 +17,9 @@ export function Hero() {
   return (
     <section className="mb-8 sm:mb-12">
       {/* Hero Banner - Using the new Peertopeer.jpg image */}
-      <div className="relative h-[500px] sm:h-[350px] md:h-[500px] lg:h-[600px] overflow-hidden bg-[#0F172A] -mx-4 sm:-mx-6 lg:-mx-8">
+      <div className="relative h-[500px] sm:h-[300px] md:h-[400px] overflow-hidden bg-[#0F172A]">
         {/* Left side - Image of veterans in support group */}
-        <div className="absolute top-0 left-0 h-full w-full sm:w-2/3 overflow-hidden"></div>
+        <div className="absolute top-0 left-0 h-full w-full sm:w-2/3 overflow-hidden">
           <img 
             src={PeerSupportImg} 
             alt="Support group discussion in a bright, supportive environment" 
@@ -30,7 +30,7 @@ export function Hero() {
         </div>
 
         {/* Content area - positioned at bottom for mobile, right side for desktop */}
-        <div className="absolute bottom-0 sm:top-0 sm:right-0 w-full sm:w-1/2 p-6 pb-12 sm:p-8 md:p-12 lg:p-16 flex flex-col justify-end sm:justify-center items-center sm:items-start"></div>
+        <div className="absolute bottom-0 sm:top-0 sm:right-0 w-full sm:w-1/2 p-6 pb-12 sm:p-0 flex flex-col justify-end sm:justify-center items-center sm:items-start sm:pl-8">
           <div className="w-full max-w-sm mx-auto sm:mx-0 text-center sm:text-left" role="main" aria-labelledby="hero-heading">
             <h1 
               id="hero-heading"
@@ -56,7 +56,7 @@ export function Hero() {
       </div>
 
       {/* Subtle Crisis Support Banner - Integrated with Hero */}
-      <div className="bg-gradient-to-r from-[#0F172A] to-[#1e293b] border-t border-white/10 px-6 py-3 -mt-1 -mx-4 sm:-mx-6 lg:-mx-8"></div>
+      <div className="bg-gradient-to-r from-[#0F172A] to-[#1e293b] border-t border-white/10 px-6 py-3 -mt-1">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
             {/* Header - More Subtle */}
