@@ -40,7 +40,7 @@ export function Hero() {
               You are not alone.
             </h1>
             <p className="text-sm md:text-base text-white/90 mb-6" aria-describedby="hero-heading">
-              We're building bridges of support for people at high risk. We're beginning with veterans and front-line communities, knowing that no one should face loneliness, depression, or relapse without support.
+              Everyone deserves a peer circle to lean on. Wherever you are in your journey, we're here to walk alongside you. Willow is our quiet effort to make that support feel human, accessible, and lasting.
             </p>
 
             <Button 
