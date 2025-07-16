@@ -41,8 +41,8 @@ export function Footer() {
               <li><Link href="/#how-it-works" className="hover:text-white transition-colors">How It Works</Link></li>
               <li><Link href="/#success-stories" className="hover:text-white transition-colors">Success Stories</Link></li>
               <li><Link href="/#research" className="hover:text-white transition-colors">Research & Outcomes</Link></li>
-              <li><Link href="/contact" className="hover:text-white transition-colors">Partner With Us</Link></li>
-              <li><Link href="/contact" className="hover:text-white transition-colors">Volunteer</Link></li>
+              <li><Link href="/contact" className="text-black bg-white px-3 py-1 rounded hover:bg-gray-200 transition-colors font-medium">Partner With Us</Link></li>
+              <li><Link href="/contact" className="text-black bg-white px-3 py-1 rounded hover:bg-gray-200 transition-colors font-medium">Volunteer</Link></li>
             </ul>
           </div>
           
