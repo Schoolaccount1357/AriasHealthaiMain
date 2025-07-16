@@ -213,9 +213,23 @@ export default function Contact() {
               )}
             />
             
-            <Button type="submit" disabled={isSubmitting} className="bg-white text-black border-2 border-gray-300 hover:bg-gray-100 font-medium">
-              {isSubmitting ? "Sending..." : "Submit"}
-            </Button>
+            <div className="flex gap-4 pt-4">
+              <Button 
+                type="button" 
+                variant="outline" 
+                onClick={() => window.history.back()}
+                className="flex-1 bg-white text-gray-700 border-2 border-gray-300 hover:bg-gray-50 font-medium"
+              >
+                Cancel
+              </Button>
+              <Button 
+                type="submit" 
+                disabled={isSubmitting} 
+                className="flex-1 bg-white text-black border-2 border-gray-300 hover:bg-gray-100 font-medium"
+              >
+                {isSubmitting ? "Sending..." : "Submit"}
+              </Button>
+            </div>
           </form>
         </Form>
       </div>
