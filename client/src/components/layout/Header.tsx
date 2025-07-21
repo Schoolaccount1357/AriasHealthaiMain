@@ -13,7 +13,7 @@ export function Header() {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/resources", label: "Veteran Resources" },
-    { href: "/resource-locator", label: "Find Local Support" }
+    { href: "/resource-locator", label: "Public Support" }
   ];
 
   useEffect(() => {

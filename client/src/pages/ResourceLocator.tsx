@@ -1222,6 +1222,42 @@ export default function ResourceLocator() {
           website: "https://www.vetsresource.org",
           category: "Crisis",
           zipCode: "95811"
+        },
+        {
+          name: "California Department of Public Health - Mental Health Services",
+          description: "State-funded mental health services for all residents including crisis intervention and substance abuse treatment",
+          address: "1615 Capitol Ave, Sacramento, CA 95814",
+          phone: "(916) 558-1784",
+          website: "https://www.cdph.ca.gov/Programs/CID/DMH/Pages/Mental-Health-Services.aspx",
+          category: "Treatment",
+          zipCode: "95814"
+        },
+        {
+          name: "California Crisis Support Services",
+          description: "Statewide crisis hotline and support services for mental health emergencies available to all residents",
+          address: "Statewide Service",
+          phone: "1-855-845-7415",
+          website: "https://www.dhcs.ca.gov/services/MH/Pages/CrisisServices.aspx",
+          category: "Crisis",
+          zipCode: "90210"
+        },
+        {
+          name: "CalJOBS - California Employment Development Department",
+          description: "State employment services including job training and placement assistance for all residents",
+          address: "800 Capitol Mall, Sacramento, CA 95814",
+          phone: "(916) 654-8210",
+          website: "https://www.caljobs.ca.gov/",
+          category: "Employment",
+          zipCode: "95814"
+        },
+        {
+          name: "California Housing Finance Agency",
+          description: "State housing assistance programs for low-income residents including emergency housing",
+          address: "500 Capitol Mall, Suite 1400, Sacramento, CA 95814",
+          phone: "(916) 326-8000",
+          website: "https://www.calhfa.ca.gov/",
+          category: "Housing",
+          zipCode: "95814"
         }
       ]
     },
@@ -1485,6 +1521,38 @@ export default function ResourceLocator() {
           phone: "(727) 549-3600",
           website: "https://www.va.gov/find-locations/facility/vc_0525V",
           category: "Treatment"
+        },
+        {
+          name: "Florida Department of Children and Families - Mental Health Services",
+          description: "State mental health services including crisis intervention, substance abuse treatment, and community mental health programs for all residents",
+          address: "1317 Winewood Blvd, Tallahassee, FL 32399",
+          phone: "(850) 717-4000",
+          website: "https://www.myflfamilies.com/service-programs/mental-health/",
+          category: "Treatment"
+        },
+        {
+          name: "Florida Crisis & Access Line",
+          description: "24/7 statewide crisis hotline providing immediate mental health support and resource navigation for all residents",
+          address: "Statewide Service",
+          phone: "1-866-762-2237",
+          website: "https://www.flcrisisline.org/",
+          category: "Crisis"
+        },
+        {
+          name: "CareerSource Florida",
+          description: "State employment services including job training, career counseling, and workforce development programs for all residents",
+          address: "107 E Madison St, Suite 300, Tallahassee, FL 32399",
+          phone: "(850) 921-1119",
+          website: "https://www.careersourceflorida.com/",
+          category: "Employment"
+        },
+        {
+          name: "Florida Housing Finance Corporation",
+          description: "State housing assistance programs including affordable housing, emergency rental assistance, and homeownership programs",
+          address: "227 N Bronough St, Tallahassee, FL 32301",
+          phone: "(850) 488-4197",
+          website: "https://www.floridahousing.org/",
+          category: "Housing"
         }
       ]
     },
@@ -3326,6 +3394,38 @@ export default function ResourceLocator() {
           phone: "1-877-4AID-VET (1-877-424-3838)",
           website: "https://www.va.gov/homeless/nationalcallcenter.asp",
           category: "Crisis"
+        },
+        {
+          name: "Texas Health and Human Services - Mental Health Services",
+          description: "State mental health services including crisis intervention, substance abuse treatment, and community support programs for all residents",
+          address: "4900 N Lamar Blvd, Austin, TX 78751",
+          phone: "(512) 424-6500",
+          website: "https://www.hhs.texas.gov/services/mental-health-substance-use",
+          category: "Treatment"
+        },
+        {
+          name: "Texas Crisis Text Line",
+          description: "24/7 statewide crisis support via text and phone for mental health emergencies available to all residents",
+          address: "Statewide Service",
+          phone: "Text HOME to 741741",
+          website: "https://www.hhs.texas.gov/services/mental-health-substance-use/crisis-services",
+          category: "Crisis"
+        },
+        {
+          name: "Texas Workforce Commission",
+          description: "State employment services including job training, career counseling, and workforce development programs for all residents",
+          address: "101 E 15th St, Austin, TX 78778",
+          phone: "(512) 463-2222",
+          website: "https://www.twc.texas.gov/",
+          category: "Employment"
+        },
+        {
+          name: "Texas Department of Housing and Community Affairs",
+          description: "State housing assistance programs including affordable housing, emergency rental assistance, and homeownership programs",
+          address: "221 E 11th St, Austin, TX 78701",
+          phone: "(512) 475-3800",
+          website: "https://www.tdhca.state.tx.us/",
+          category: "Housing"
         }
       ]
     },
@@ -3488,8 +3588,8 @@ export default function ResourceLocator() {
   return (
     <MainLayout>
       <PageHeader
-        title="Find Local Support Resources"
-        description="Connect with veteran support services in your area. Select your state or enter your ZIP code to find resources near you."
+        title="Public Support Resources"
+        description="Connect with veteran support services and public mental health resources in your area. Select your state or enter your ZIP code to find resources near you."
       />
 
       <div className="bg-[#141e2f] text-white p-4 sm:p-6 rounded-lg mb-6 sm:mb-10">
