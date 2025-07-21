@@ -16,7 +16,7 @@ export function Hero() {
   };
 
   return (
-    <section className="mb-0 sm:mb-8 lg:mb-12">
+    <section className="-mx-2 sm:-mx-8 mb-0 sm:mb-8 lg:mb-12">
       {/* Full-Width Hero Section */}
       <div className="relative w-full h-[60vh] sm:h-[70vh] lg:h-[80vh] overflow-hidden">
         {/* Background Image */}

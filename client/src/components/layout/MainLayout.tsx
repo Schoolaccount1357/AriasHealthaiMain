@@ -12,7 +12,7 @@ export function MainLayout({ children }: MainLayoutProps) {
       <Header />
 
       <main className="flex-1">
-        <div className="container mx-auto px-0 sm:px-4 py-0 sm:py-8">
+        <div className="container mx-auto px-2 sm:px-8 py-0 sm:py-8">
           {children}
         </div>
       </main>
