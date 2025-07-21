@@ -167,7 +167,7 @@ export default function Resources() {
     <MainLayout>
       <PageHeader
         title="Veteran Resources"
-        description="Many veterans face barriers to care especially in substance use recovery. Traditional services don't always meet them where they are. Here is a comprehensive support for veterans and their families. Understanding the unique challenges of military service and connecting you with specialized resources."
+        description=""
       />
 
       {/* The Challenges Veterans Face - White Box Section */}
