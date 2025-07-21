@@ -26,43 +26,35 @@ export function Hero() {
         for free, confidential emotional support — for anyone, anytime.
       </div>
 
-      {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-blue-50 via-white to-gray-50 py-12 sm:py-16 lg:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            
-            {/* Left Content */}
-            <div className="flex flex-col justify-center">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                You are not alone.
-              </h1>
-              <p className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed">
-                Everyone deserves a circle to lean on. WILLOW is our digital offering to build steady peer support, starting with the communities that carry the heaviest loads.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
-                  onClick={scrollToEnrollmentForm}
-                  size="lg"
-                  className="bg-[#3e64dd] hover:bg-[#2a4bba] text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
-                  aria-label="Get early access to Willow - Navigate to enrollment form"
-                >
-                  Get early access to Willow
-                </Button>
-              </div>
-            </div>
-
-            {/* Right Image */}
-            <div className="relative">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <img 
-                  src={PeerSupportImg} 
-                  alt="Support group discussion in a bright, supportive environment" 
-                  className="w-full h-[400px] sm:h-[500px] object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-              </div>
-            </div>
-
+      {/* Full-Width Hero Section */}
+      <div className="relative w-full h-[60vh] sm:h-[70vh] lg:h-[80vh] overflow-hidden">
+        {/* Background Image */}
+        <img 
+          src={PeerSupportImg} 
+          alt="Support group discussion in a bright, supportive environment" 
+          className="w-full h-full object-cover"
+        />
+        
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/40"></div>
+        
+        {/* Content Overlay - Right Side */}
+        <div className="absolute inset-0 flex items-center justify-end">
+          <div className="max-w-lg mx-4 sm:mx-8 lg:mx-16 text-right text-white">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
+              You are not alone.
+            </h1>
+            <p className="text-lg sm:text-xl mb-6 leading-relaxed opacity-90">
+              Everyone deserves a circle to lean on. WILLOW is our digital offering to build steady peer support, starting with the communities that carry the heaviest loads.
+            </p>
+            <Button 
+              onClick={scrollToEnrollmentForm}
+              size="lg"
+              className="bg-[#3e64dd] hover:bg-[#2a4bba] text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+              aria-label="Get early access to Willow - Navigate to enrollment form"
+            >
+              Get early access to Willow
+            </Button>
           </div>
         </div>
       </div>
