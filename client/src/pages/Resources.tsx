@@ -166,7 +166,7 @@ export default function Resources() {
   return (
     <MainLayout>
       <PageHeader
-        title="Veteran Resources"
+        title=""
         description=""
       />
 
@@ -176,8 +176,13 @@ export default function Resources() {
           <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
             {/* Header */}
             <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold text-[#4a5568] mb-4">The Challenges Veterans Face</h2>
-              <div className="w-24 h-1 bg-[#4a5568] mx-auto mb-6"></div>
+              <h2 className="text-3xl font-bold text-[#10066A] mb-4">The Challenges Veterans Face</h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-[#10066A] to-[#3e64dd] mx-auto mb-6"></div>
+              <div className="max-w-4xl mx-auto">
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  Many veterans face barriers to care especially in substance use recovery. Traditional services don't always meet them where they are. Here is a comprehensive support for veterans and their families. Understanding the unique challenges of military service and connecting you with specialized resources.
+                </p>
+              </div>
             </div>
 
             {/* Challenge Cards */}
