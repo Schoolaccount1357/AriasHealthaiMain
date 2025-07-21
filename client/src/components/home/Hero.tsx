@@ -15,7 +15,7 @@ export function Hero() {
   };
 
   return (
-    <section className="relative w-screen min-h-[120vh] sm:min-h-[130vh] -ml-4 sm:-ml-6 lg:-ml-8 xl:-ml-[calc((100vw-1280px)/2)] -mr-4 sm:-mr-6 lg:-mr-8 xl:-mr-[calc((100vw-1280px)/2)] -mt-16 sm:-mt-20 mb-8 sm:mb-12 lg:mb-16">
+    <section className="relative w-screen h-screen -ml-4 sm:-ml-6 lg:-ml-8 xl:-ml-[calc((100vw-1280px)/2)] -mr-4 sm:-mr-6 lg:-mr-8 xl:-mr-[calc((100vw-1280px)/2)] -mt-16 sm:-mt-20 mb-0">
       {/* Full-Width Hero Section */}
       <div className="relative w-full h-full overflow-hidden">
         {/* Background Image */}
@@ -29,17 +29,17 @@ export function Hero() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/40 hero-overlay"></div>
         
         {/* Content Overlay - Left-aligned with Enhanced Contrast */}
-        <div className="absolute inset-0 flex items-center justify-start pt-16 sm:pt-20 pb-16 sm:pb-20">
-          <div className="max-w-2xl ml-4 sm:ml-8 lg:ml-16 xl:ml-20 text-left text-white px-4 sm:px-6 lg:px-8">
+        <div className="absolute inset-0 flex items-center justify-start pt-16 sm:pt-20 pb-20">
+          <div className="max-w-xl lg:max-w-2xl ml-4 sm:ml-8 lg:ml-16 xl:ml-20 text-left text-white px-4 sm:px-6 lg:px-8">
             {/* Enhanced Background for Text Readability */}
-            <div className="backdrop-blur-sm bg-black/30 rounded-2xl p-4 sm:p-6 md:p-8 lg:p-10 border border-white/20 shadow-2xl hero-glassmorphism hero-mobile-padding">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold mb-4 sm:mb-6 md:mb-8 leading-tight text-white hero-text-shadow hero-mobile-text hero-tablet-text" 
+            <div className="backdrop-blur-sm bg-black/30 rounded-xl p-3 sm:p-4 md:p-5 lg:p-6 border border-white/20 shadow-2xl hero-glassmorphism hero-mobile-padding">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-3 sm:mb-4 md:mb-5 leading-tight text-white hero-text-shadow hero-mobile-text hero-tablet-text" 
                   style={{
                     textShadow: '2px 2px 4px rgba(0,0,0,0.8), 0 0 20px rgba(255,255,255,0.8), 0 0 40px rgba(255,255,255,0.6), 0 0 60px rgba(255,248,220,0.4)'
                   }}>
                 Stronger Every Day.
               </h1>
-              <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl mb-6 sm:mb-8 md:mb-10 leading-relaxed text-white/95 max-w-3xl font-medium hero-text-shadow hero-mobile-subtitle hero-tablet-subtitle"
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-4 sm:mb-5 md:mb-6 leading-relaxed text-white/95 max-w-2xl font-medium hero-text-shadow hero-mobile-subtitle hero-tablet-subtitle"
                  style={{
                    textShadow: '1px 1px 2px rgba(0,0,0,0.8)'
                  }}>
@@ -48,7 +48,7 @@ export function Hero() {
               <Button 
                 onClick={scrollToEnrollmentForm}
                 size="lg"
-                className="bg-[#3e64dd] hover:bg-[#2a4bba] text-white px-8 sm:px-10 lg:px-12 py-4 sm:py-5 lg:py-6 text-lg sm:text-xl lg:text-2xl font-bold rounded-xl shadow-2xl hover:shadow-3xl transition-all duration-300 w-full sm:w-auto border-2 border-white/20 hover:border-white/40 hero-button"
+                className="bg-[#3e64dd] hover:bg-[#2a4bba] text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-bold rounded-lg shadow-2xl hover:shadow-3xl transition-all duration-300 w-full sm:w-auto border-2 border-white/20 hover:border-white/40 hero-button"
                 aria-label="Get early access to Willow - Navigate to enrollment form"
                 style={{
                   textShadow: '1px 1px 2px rgba(0,0,0,0.5)'
