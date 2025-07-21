@@ -23,6 +23,7 @@ export function Hero() {
           src={PeerSupportImg} 
           alt="Support group discussion in a bright, supportive environment" 
           className="w-full h-full object-cover"
+          style={{ objectPosition: 'center 30%' }}
         />
         
         {/* Enhanced Dark Overlay for Better Contrast */}
