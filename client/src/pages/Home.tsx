@@ -6,7 +6,7 @@ import { SimpleEnrollmentForm } from "@/components/home/SimpleEnrollmentForm";
 import { PlatformPreview } from "@/components/home/PlatformPreview";
 import { MVPPreview } from "@/components/home/MVPPreview";
 
-import { AboutSUDS } from "@/components/home/AboutSUDS";
+
 import { FAQSection } from "@/components/home/FAQSection";
 import { TrustAndSecurity } from "@/components/home/TrustAndSecurity";
 import { StudyInvitation } from "@/components/home/StudyInvitation";
@@ -40,7 +40,6 @@ export default function Home() {
 
         {/* Spacing between hero and next section */}
         <div className="mt-8 sm:mt-12 lg:mt-16">
-          <AboutSUDS />
         </div>
         <PlatformPreview />
 
