@@ -44,32 +44,6 @@ export default function Resources() {
   
   const resourceCategories = [
     {
-      title: "Understanding the Challenge",
-      icon: <HeartHandshake className="h-6 w-6 text-[#3e64dd]" />,
-      resources: [
-        {
-          name: "Unique Veteran Challenges",
-          description: "Military service creates specific mental health challenges including combat trauma, military sexual trauma, moral injury, and difficult transitions to civilian life. These experiences require specialized understanding and support.",
-          website: "https://www.mentalhealth.va.gov/understanding-veteran-challenges/",
-        },
-        {
-          name: "Why Peer Support Matters",
-          description: "Veterans often find that connecting with others who share similar experiences provides understanding that traditional therapy alone cannot offer. Peer support bridges gaps in formal treatment.",
-          website: "https://www.va.gov/health-care/health-needs-conditions/mental-health/peer-support/",
-        },
-        {
-          name: "Building Community Resilience",
-          description: "Strong communities support all members facing challenges. Understanding veteran experiences helps build more inclusive, trauma-informed support systems that benefit everyone.",
-          website: "https://www.samhsa.gov/trauma-informed-care",
-        },
-        {
-          name: "Family and Caregiver Impact",
-          description: "Military service affects entire families and social circles. Secondary trauma and caregiver stress require community-wide awareness and support systems.",
-          website: "https://www.va.gov/family-member-benefits/",
-        }
-      ]
-    },
-    {
       title: "Crisis Support",
       icon: <Phone className="h-6 w-6 text-[#3e64dd]" />,
       resources: [
@@ -192,9 +166,47 @@ export default function Resources() {
   return (
     <MainLayout>
       <PageHeader
-        title="Mental Health & Recovery Resources"
-        description="Understanding challenges and finding support - whether you're a veteran, family member, or community supporter. Everyone deserves access to quality mental health resources."
+        title="Veteran Resources"
+        description="Comprehensive support for veterans and their families. Understanding the unique challenges of military service and connecting you with specialized resources."
       />
+
+      {/* Understanding the Challenge Section */}
+      <div className="mb-10 bg-gradient-to-r from-[#141e2f] to-[#1a2746] text-white p-8 rounded-xl shadow-2xl border border-[#3e64dd]/20">
+        <div className="flex items-center mb-6">
+          <HeartHandshake className="h-8 w-8 mr-4 text-[#3e64dd]" />
+          <h2 className="text-3xl font-bold">Understanding the Challenge</h2>
+        </div>
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="space-y-4">
+            <div className="bg-[#1b2c45]/60 p-4 rounded-lg border-l-4 border-[#3e64dd]">
+              <h3 className="font-semibold text-lg mb-2 text-[#8defc9]">Unique Veteran Challenges</h3>
+              <p className="text-gray-200 text-sm leading-relaxed">
+                Military service creates specific mental health challenges including combat trauma, military sexual trauma, moral injury, and difficult transitions to civilian life. These experiences require specialized understanding and support.
+              </p>
+            </div>
+            <div className="bg-[#1b2c45]/60 p-4 rounded-lg border-l-4 border-[#3e64dd]">
+              <h3 className="font-semibold text-lg mb-2 text-[#8defc9]">Why Peer Support Matters</h3>
+              <p className="text-gray-200 text-sm leading-relaxed">
+                Veterans often find that connecting with others who share similar experiences provides understanding that traditional therapy alone cannot offer. Peer support bridges gaps in formal treatment.
+              </p>
+            </div>
+          </div>
+          <div className="space-y-4">
+            <div className="bg-[#1b2c45]/60 p-4 rounded-lg border-l-4 border-[#3e64dd]">
+              <h3 className="font-semibold text-lg mb-2 text-[#8defc9]">Building Community Resilience</h3>
+              <p className="text-gray-200 text-sm leading-relaxed">
+                Strong communities support all members facing challenges. Understanding veteran experiences helps build more inclusive, trauma-informed support systems that benefit everyone.
+              </p>
+            </div>
+            <div className="bg-[#1b2c45]/60 p-4 rounded-lg border-l-4 border-[#3e64dd]">
+              <h3 className="font-semibold text-lg mb-2 text-[#8defc9]">Family and Caregiver Impact</h3>
+              <p className="text-gray-200 text-sm leading-relaxed">
+                Military service affects entire families and social circles. Secondary trauma and caregiver stress require community-wide awareness and support systems.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div className="mb-10 bg-[#141e2f] text-white p-6 rounded-lg">
         <div className="flex items-center mb-4">
