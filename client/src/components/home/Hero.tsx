@@ -51,7 +51,8 @@ export function Hero() {
                 className="bg-[#2d5a27] hover:bg-[#1f4019] text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-bold rounded-lg shadow-2xl hover:shadow-3xl transition-all duration-300 w-full sm:w-auto border-2 border-white/20 hover:border-white/40 hero-button"
                 aria-label="Get early access to Willow - Navigate to enrollment form"
                 style={{
-                  textShadow: '1px 1px 2px rgba(0,0,0,0.5)'
+                  textShadow: '1px 1px 2px rgba(0,0,0,0.5)',
+                  boxShadow: '0 0 20px rgba(45, 90, 39, 0.6), 0 0 40px rgba(45, 90, 39, 0.4), inset 0 1px 0 rgba(255,255,255,0.2)'
                 }}
               >
                 Get early access to Willow
