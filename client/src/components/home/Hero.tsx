@@ -41,7 +41,10 @@ export function Hero() {
         {/* Content Overlay - Bottom Left */}
         <div className="absolute inset-0 flex items-end justify-start">
           <div className="max-w-lg mx-4 sm:mx-8 lg:mx-16 mb-8 sm:mb-12 lg:mb-16 text-left text-white">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight" 
+                style={{
+                  textShadow: '0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 248, 220, 0.4), 0 0 80px rgba(255, 248, 220, 0.2)'
+                }}>
               Stronger Every Day.
             </h1>
             <p className="text-lg sm:text-xl mb-6 leading-relaxed opacity-90">
