@@ -16,7 +16,7 @@ export function Hero() {
   };
 
   return (
-    <section className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mb-0 sm:mb-8 lg:mb-12">
+    <section className="relative w-screen -mx-4 sm:-mx-6 lg:-mx-8 xl:-mx-[calc((100vw-1280px)/2)] mb-8 sm:mb-12 lg:mb-16">
       {/* Full-Width Hero Section */}
       <div className="relative w-full h-[60vh] sm:h-[70vh] lg:h-[80vh] overflow-hidden">
         {/* Background Image */}
