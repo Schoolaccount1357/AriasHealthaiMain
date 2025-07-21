@@ -166,20 +166,13 @@ export default function Resources() {
   return (
     <MainLayout>
       <PageHeader
-        title="Veteran Resources"
-        description="Comprehensive support for veterans and their families. Understanding the unique challenges of military service and connecting you with specialized resources."
+        title="The Challenges Veterans Face"
+        description="Many veterans face barriers to care especially in substance use recovery. Traditional services don't always meet them where they are. Here is a comprehensive support for veterans and their families. Understanding the unique challenges of military service and connecting you with specialized resources."
       />
 
       {/* The Challenges Veterans Face Section */}
       <section className="mb-16 px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-[#10066A] mb-4">The Challenges Veterans Face</h2>
-            <div className="w-24 h-1 bg-[#10066A] mx-auto mb-6"></div>
-            <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Many veterans face barriers to care especially in substance use recovery. Traditional services don't always meet them where they are.
-            </p>
-          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {/* Limited Access Card */}
