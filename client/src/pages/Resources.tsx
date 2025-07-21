@@ -324,39 +324,7 @@ export default function Resources() {
               </div>
             </div>
 
-            {/* Solution Statement */}
-            <div className="text-center mb-6">
-              <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed mb-6">
-                At AriasHealth.ai, we believe that combining AI technology with peer-to-peer connection creates a powerful support system that meets veterans exactly where they are in their recovery journey.
-              </p>
-            </div>
 
-            {/* How Peer Support Helps */}
-            <div className="bg-green-50 rounded-xl p-6 mb-6">
-              <h3 className="text-xl font-semibold text-gray-700 mb-4 text-center">How Peer Support Helps:</h3>
-              <div className="grid md:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <div className="flex items-start">
-                    <div className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    <span className="text-gray-700">Reduces feelings of isolation</span>
-                  </div>
-                  <div className="flex items-start">
-                    <div className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    <span className="text-gray-700">Provides practical advice from those with similar experiences</span>
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <div className="flex items-start">
-                    <div className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    <span className="text-gray-700">Creates accountability in recovery</span>
-                  </div>
-                  <div className="flex items-start">
-                    <div className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    <span className="text-gray-700">Offers hope through seeing others' progress</span>
-                  </div>
-                </div>
-              </div>
-            </div>
 
             {/* Visit Website Button */}
             <div className="text-center">
