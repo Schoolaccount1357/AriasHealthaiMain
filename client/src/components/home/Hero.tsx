@@ -1,3 +1,4 @@
+
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Phone, Globe } from "lucide-react";
@@ -25,45 +26,48 @@ export function Hero() {
         for free, confidential emotional support — for anyone, anytime.
       </div>
 
-      {/* Full-Bleed Hero Section - FitFlow Style */}
-      <div className="w-full min-h-screen flex flex-col md:flex-row items-center justify-between relative bg-gradient-to-br from-slate-50 via-white to-gray-100">
+      {/* Hero Section */}
+      <div className="relative bg-gradient-to-br from-blue-50 via-white to-gray-50 py-12 sm:py-16 lg:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            
+            {/* Left Content */}
+            <div className="flex flex-col justify-center">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                You are not alone.
+              </h1>
+              <p className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed">
+                Everyone deserves a circle to lean on. WILLOW is our digital offering to build steady peer support, starting with the communities that carry the heaviest loads.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button 
+                  onClick={scrollToEnrollmentForm}
+                  size="lg"
+                  className="bg-[#3e64dd] hover:bg-[#2a4bba] text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                  aria-label="Get early access to Willow - Navigate to enrollment form"
+                >
+                  Get early access to Willow
+                </Button>
+              </div>
+            </div>
 
-        {/* Left Content Container */}
-        <div className="z-10 w-full md:w-1/2 px-6 md:px-20 py-16 md:py-0 flex flex-col justify-center">
-          <div className="max-w-xl">
-            <h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
-              You are not alone.
-            </h1>
-            <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
-              Everyone deserves a circle to lean on. WILLOW is our digital offering to build steady peer support, starting with the communities that carry the heaviest loads.
-            </p>
-            <Button 
-              onClick={scrollToEnrollmentForm}
-              className="bg-[#3e64dd] hover:bg-[#2a4bba] text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
-              size="lg"
-              aria-label="Get early access to Willow - Navigate to enrollment form"
-            >
-              Get early access to Willow
-            </Button>
+            {/* Right Image */}
+            <div className="relative">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                <img 
+                  src={PeerSupportImg} 
+                  alt="Support group discussion in a bright, supportive environment" 
+                  className="w-full h-[400px] sm:h-[500px] object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+              </div>
+            </div>
+
           </div>
-        </div>
-
-        {/* Right Visual Container */}
-        <div className="relative w-full md:w-1/2 h-[400px] md:h-screen mt-12 md:mt-0 overflow-hidden">
-          <img 
-            src={PeerSupportImg} 
-            alt="Support group discussion in a bright, supportive environment" 
-            className="w-full h-full object-cover object-center"
-          />
-          {/* Gradient Overlay for better text contrast and visual blend */}
-          <div className="absolute inset-0 bg-gradient-to-l from-transparent via-white/20 to-white/60 md:bg-gradient-to-r md:from-white/60 md:via-white/20 md:to-transparent"></div>
-
-          {/* Optional: Subtle color tint for healthcare feel */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#3e64dd]/10 to-transparent opacity-30"></div>
         </div>
       </div>
 
-      {/* Integrated Crisis Resources - Streamlined */}
+      {/* Crisis Resources Footer */}
       <div className="bg-gradient-to-r from-gray-800 to-gray-900 border-t border-gray-700 px-6 py-4">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
