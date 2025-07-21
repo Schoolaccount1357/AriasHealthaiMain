@@ -38,9 +38,9 @@ export function Hero() {
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/40"></div>
         
-        {/* Content Overlay - Right Side */}
-        <div className="absolute inset-0 flex items-center justify-end">
-          <div className="max-w-lg mx-4 sm:mx-8 lg:mx-16 text-right text-white">
+        {/* Content Overlay - Bottom Left */}
+        <div className="absolute inset-0 flex items-end justify-start">
+          <div className="max-w-lg mx-4 sm:mx-8 lg:mx-16 mb-8 sm:mb-12 lg:mb-16 text-left text-white">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
               Stronger Every Day.
             </h1>
