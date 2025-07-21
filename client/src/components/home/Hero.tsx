@@ -45,7 +45,7 @@ export function Hero() {
               Stronger Every Day.
             </h1>
             <p className="text-lg sm:text-xl mb-6 leading-relaxed opacity-90">
-              Everyone deserves a circle to lean on. WILLOW is our digital offering to build steady peer support, starting with the communities that carry the heaviest loads.
+              Strength grows in circles, and everyone deserves one to lean on. Willow is our digital offering designed to build steady peer support, starting with the communities that carry the heaviest loads.
             </p>
             <Button 
               onClick={scrollToEnrollmentForm}
