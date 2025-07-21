@@ -274,12 +274,28 @@ export default function Resources() {
 
             {/* Visit Website Button */}
             <div className="text-center">
-              <Button 
-                onClick={() => window.scrollTo({ top: document.getElementById('enrollment-form')?.offsetTop || 0, behavior: 'smooth' })}
-                className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-2 rounded-lg transition-colors duration-300"
+              <a 
+                href="#enrollment-form"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const enrollmentSection = document.getElementById('enrollment-form');
+                  if (enrollmentSection) {
+                    enrollmentSection.scrollIntoView({ behavior: 'smooth' });
+                  } else {
+                    // If on different page, navigate to home page with enrollment section
+                    window.location.href = '/#enrollment-form';
+                  }
+                }}
+                className="group text-primary hover:text-secondary font-medium inline-flex items-center text-sm sm:text-base relative overflow-hidden"
               >
-                Visit Website →
-              </Button>
+                <span className="relative z-10 inline-flex items-center transition-all duration-300 group-hover:translate-x-1">
+                  Visit Website
+                  <svg className="h-4 w-4 sm:h-5 sm:w-5 ml-1 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-secondary transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
+              </a>
             </div>
           </div>
         </div>
