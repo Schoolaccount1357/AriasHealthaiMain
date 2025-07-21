@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Phone, Globe } from "lucide-react";
 import { useResourceTracking } from "@/hooks/use-resource-tracking";
-import PeerSupportImg from "@assets/AdobeStock_1254483208_1753072290086.jpeg";
+import PeerSupportVideo from "@assets/20250721_0049_Futuristic Touchscreen Interaction_simple_compose_01k0nn15jjfzy8d6pzrx8vh508_1753073434277.mp4";
 
 export function Hero() {
   const { trackResourceClick } = useResourceTracking();
@@ -18,10 +18,13 @@ export function Hero() {
     <section className="relative w-screen h-screen -ml-4 sm:-ml-6 lg:-ml-8 xl:-ml-[calc((100vw-1280px)/2)] -mr-4 sm:-mr-6 lg:-mr-8 xl:-mr-[calc((100vw-1280px)/2)] -mt-16 sm:-mt-20 mb-0">
       {/* Full-Width Hero Section */}
       <div className="relative w-full h-full overflow-hidden">
-        {/* Background Image */}
-        <img 
-          src={PeerSupportImg} 
-          alt="Support group discussion in a bright, supportive environment" 
+        {/* Background Video */}
+        <video
+          src={PeerSupportVideo}
+          autoPlay
+          loop
+          muted
+          playsInline
           className="w-full h-full object-cover"
           style={{ objectPosition: 'center 30%' }}
         />
