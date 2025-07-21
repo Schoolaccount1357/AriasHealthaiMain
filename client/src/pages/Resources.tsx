@@ -166,100 +166,120 @@ export default function Resources() {
   return (
     <MainLayout>
       <PageHeader
-        title="The Challenges Veterans Face"
+        title="Veteran Resources"
         description="Many veterans face barriers to care especially in substance use recovery. Traditional services don't always meet them where they are. Here is a comprehensive support for veterans and their families. Understanding the unique challenges of military service and connecting you with specialized resources."
       />
 
-      {/* The Challenges Veterans Face Section */}
+      {/* The Challenges Veterans Face - White Box Section */}
       <section className="mb-16 px-4">
         <div className="max-w-6xl mx-auto">
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {/* Limited Access Card */}
-            <div className="glass-card p-6 rounded-xl hover:shadow-lg transition-all duration-300 group">
-              <div className="bg-[#10066A] rounded-lg p-3 w-fit mb-4 group-hover:scale-110 transition-transform duration-300">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-[#10066A] mb-3">Limited Access</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Limited access to timely mental health support when veterans need it most
+          <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            {/* Header */}
+            <div className="text-center mb-8">
+              <h2 className="text-3xl font-bold text-[#4a5568] mb-4">The Challenges Veterans Face</h2>
+              <div className="w-24 h-1 bg-[#4a5568] mx-auto mb-6"></div>
+              <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                Many veterans face barriers to care especially in substance use recovery. Traditional services don't always meet them where they are.
               </p>
             </div>
 
-            {/* Peer Connection Card */}
-            <div className="glass-card p-6 rounded-xl hover:shadow-lg transition-all duration-300 group">
-              <div className="bg-[#10066A] rounded-lg p-3 w-fit mb-4 group-hover:scale-110 transition-transform duration-300">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
+            {/* Challenge Cards */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+              {/* Limited Access Card */}
+              <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                <div className="bg-[#4a5568] rounded-lg p-3 w-fit mb-4">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-semibold text-[#4a5568] mb-3">Limited Access</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Limited access to timely mental health support when veterans need it most
+                </p>
               </div>
-              <h3 className="text-lg font-semibold text-[#10066A] mb-3">Peer Connection</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Difficulty connecting with peers who truly understand their military experiences
-              </p>
+
+              {/* Peer Connection Card */}
+              <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                <div className="bg-[#4a5568] rounded-lg p-3 w-fit mb-4">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-semibold text-[#4a5568] mb-3">Peer Connection</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Difficulty connecting with peers who truly understand their military experiences
+                </p>
+              </div>
+
+              {/* Stigma Barriers Card */}
+              <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                <div className="bg-[#4a5568] rounded-lg p-3 w-fit mb-4">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-semibold text-[#4a5568] mb-3">Stigma Barriers</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Stigma around seeking help for substance use disorders and mental health
+                </p>
+              </div>
+
+              {/* Privacy Concerns Card */}
+              <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                <div className="bg-[#4a5568] rounded-lg p-3 w-fit mb-4">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-semibold text-[#4a5568] mb-3">Privacy Concerns</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Lack of privacy and anonymity in traditional support environments
+                </p>
+              </div>
             </div>
 
-            {/* Stigma Barriers Card */}
-            <div className="glass-card p-6 rounded-xl hover:shadow-lg transition-all duration-300 group">
-              <div className="bg-[#10066A] rounded-lg p-3 w-fit mb-4 group-hover:scale-110 transition-transform duration-300">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-[#10066A] mb-3">Stigma Barriers</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Stigma around seeking help for substance use disorders and mental health
-              </p>
-            </div>
-
-            {/* Privacy Concerns Card */}
-            <div className="glass-card p-6 rounded-xl hover:shadow-lg transition-all duration-300 group">
-              <div className="bg-[#10066A] rounded-lg p-3 w-fit mb-4 group-hover:scale-110 transition-transform duration-300">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-[#10066A] mb-3">Privacy Concerns</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Concerns about confidentiality and privacy when seeking mental health services
-              </p>
-            </div>
-          </div>
-
-          {/* Solution Section */}
-          <div className="text-center mb-12">
-            <div className="max-w-3xl mx-auto mb-8 p-6 bg-gradient-to-r from-[#10066A]/5 to-[#3e64dd]/5 rounded-xl border border-[#10066A]/10">
-              <p className="text-lg text-[#10066A] font-medium leading-relaxed">
+            {/* Solution Statement */}
+            <div className="text-center mb-6">
+              <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed mb-6">
                 At AriasHealth.ai, we believe that combining AI technology with peer-to-peer connection creates a powerful support system that meets veterans exactly where they are in their recovery journey.
               </p>
             </div>
-            
-            <h3 className="text-2xl font-bold text-[#10066A] mb-6">How Peer Support Helps:</h3>
-            <div className="max-w-4xl mx-auto">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="text-left space-y-3">
+
+            {/* How Peer Support Helps */}
+            <div className="bg-green-50 rounded-xl p-6 mb-6">
+              <h3 className="text-xl font-semibold text-gray-700 mb-4 text-center">How Peer Support Helps:</h3>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="space-y-2">
                   <div className="flex items-start">
-                    <div className="w-2 h-2 bg-[#10066A] rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                     <span className="text-gray-700">Reduces feelings of isolation</span>
                   </div>
                   <div className="flex items-start">
-                    <div className="w-2 h-2 bg-[#10066A] rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                     <span className="text-gray-700">Provides practical advice from those with similar experiences</span>
                   </div>
                 </div>
-                <div className="text-left space-y-3">
+                <div className="space-y-2">
                   <div className="flex items-start">
-                    <div className="w-2 h-2 bg-[#10066A] rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                     <span className="text-gray-700">Creates accountability in recovery</span>
                   </div>
                   <div className="flex items-start">
-                    <div className="w-2 h-2 bg-[#10066A] rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                     <span className="text-gray-700">Offers hope through seeing others' progress</span>
                   </div>
                 </div>
               </div>
+            </div>
+
+            {/* Visit Website Button */}
+            <div className="text-center">
+              <Button 
+                onClick={() => window.scrollTo({ top: document.getElementById('enrollment-form')?.offsetTop || 0, behavior: 'smooth' })}
+                className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-2 rounded-lg transition-colors duration-300"
+              >
+                Visit Website →
+              </Button>
             </div>
           </div>
         </div>
