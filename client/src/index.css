@@ -2,6 +2,103 @@
 @tailwind components;
 @tailwind utilities;
 
+/* High Contrast Mode Support for WCAG 3.0 Compliance */
+@media (prefers-contrast: high) {
+  .hero-text-shadow {
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 1) !important;
+  }
+  
+  .hero-glassmorphism {
+    background: rgba(0, 0, 0, 0.85) !important;
+    border: 3px solid rgba(255, 255, 255, 0.9) !important;
+  }
+  
+  .hero-overlay {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)) !important;
+  }
+  
+  .hero-button {
+    background: #000 !important;
+    border: 3px solid #fff !important;
+    color: #fff !important;
+  }
+  
+  .hero-button:hover {
+    background: #333 !important;
+    border-color: #fff !important;
+  }
+  
+  .crisis-footer {
+    background: rgba(0, 0, 0, 0.95) !important;
+    border-top: 4px solid rgba(255, 255, 255, 0.9) !important;
+  }
+  
+  .crisis-button {
+    border: 3px solid rgba(255, 255, 255, 0.9) !important;
+  }
+  
+  .glass-card {
+    background: rgba(255, 255, 255, 0.95) !important;
+    border: 2px solid rgba(0, 0, 0, 0.8) !important;
+    color: #000 !important;
+  }
+  
+  .glass-card h3 {
+    color: #000 !important;
+  }
+  
+  .glass-card p {
+    color: #333 !important;
+  }
+}
+
+/* Forced Colors Mode (Windows High Contrast) */
+@media (forced-colors: active) {
+  .hero-glassmorphism {
+    background: Canvas !important;
+    border: 2px solid ButtonText !important;
+    color: CanvasText !important;
+  }
+  
+  .hero-button {
+    background: ButtonFace !important;
+    border: 2px solid ButtonText !important;
+    color: ButtonText !important;
+  }
+  
+  .crisis-footer {
+    background: Canvas !important;
+    border-top: 2px solid ButtonText !important;
+  }
+}
+
+/* Enhanced mobile responsiveness for Hero section */
+@media (max-width: 640px) {
+  .hero-mobile-text {
+    font-size: 2rem !important;
+    line-height: 1.2;
+  }
+  
+  .hero-mobile-subtitle {
+    font-size: 1.125rem !important;
+    line-height: 1.5;
+  }
+  
+  .hero-mobile-padding {
+    padding: 1rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-tablet-text {
+    font-size: 2.5rem !important;
+  }
+  
+  .hero-tablet-subtitle {
+    font-size: 1.25rem !important;
+  }
+}
+
 /* Frosted Glass Morphism Background */
 .glass-morphism-bg {
   position: fixed;
