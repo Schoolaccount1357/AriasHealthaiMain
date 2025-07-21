@@ -38,50 +38,7 @@ export default function Home() {
       <main className="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-0 pb-2 sm:py-8">
         <Hero />
 
-        {/* Crisis Support Section - Below Hero */}
-        <section className="mt-4 sm:mt-6">
-          <div className="bg-gradient-to-r from-red-50 to-orange-50 border border-red-200 rounded-xl p-4 sm:p-6 shadow-lg">
-            <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
-              {/* Header */}
-              <div className="flex items-center gap-2">
-                <Phone className="h-4 w-4 sm:h-5 sm:w-5 text-red-600" />
-                <span className="text-red-800 text-sm sm:text-base font-semibold">
-                  Need immediate support?
-                </span>
-                <span className="text-red-700 text-xs sm:text-sm font-medium">
-                  24/7 for everyone
-                </span>
-              </div>
 
-              {/* Action Buttons */}
-              <div className="flex gap-2 sm:gap-3">
-                <Button 
-                  onClick={() => trackResourceClick("call", () => window.location.href = "tel:988")}
-                  size="sm"
-                  className="bg-red-600 hover:bg-red-700 text-white text-xs sm:text-sm font-bold px-3 sm:px-4 py-2 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
-                >
-                  <Phone className="h-3 w-3 sm:h-4 sm:w-4 mr-1" />
-                  Call 988
-                </Button>
-                <Button 
-                  onClick={() => trackResourceClick("text", () => window.location.href = "sms:838255")}
-                  size="sm"
-                  className="bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-bold px-3 sm:px-4 py-2 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
-                >
-                  Text 838255
-                </Button>
-                <Button 
-                  onClick={() => trackResourceClick("chat", () => window.open("https://988lifeline.org/chat", "_blank"))}
-                  size="sm"
-                  className="bg-green-600 hover:bg-green-700 text-white text-xs sm:text-sm font-bold px-3 sm:px-4 py-2 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
-                >
-                  <Globe className="h-3 w-3 sm:h-4 sm:w-4 mr-1" />
-                  Chat
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* Peer Support Information Section */}
         <section className="mt-8 sm:mt-12 lg:mt-16 mb-8 sm:mb-12 lg:mb-16">
