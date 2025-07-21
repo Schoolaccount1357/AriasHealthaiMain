@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Phone, Globe } from "lucide-react";
 import { useResourceTracking } from "@/hooks/use-resource-tracking";
-import HeroImage from "@assets/AdobeStock_79077826_1753076811454.jpeg";
+import HeroImage from "@assets/AdobeStock_1239437287_1753077279835.jpeg";
 
 export function Hero() {
   const { trackResourceClick } = useResourceTracking();
@@ -23,7 +23,7 @@ export function Hero() {
           src={HeroImage}
           alt="Supporting veterans through peer connection"
           className="w-full h-full object-cover"
-          style={{ objectPosition: 'center center' }}
+          style={{ objectPosition: 'right center' }}
         />
         
         {/* Enhanced Dark Overlay for Better Contrast */}
