@@ -170,6 +170,90 @@ export default function Resources() {
         description=""
       />
 
+      {/* Crisis Support Box - Moved to top */}
+      <div className="mb-10 bg-[#141e2f] text-white p-6 rounded-lg mx-4">
+        <div className="flex items-center mb-4">
+          <PanelLeftOpen className="h-8 w-8 mr-3 text-[#3e64dd]" />
+          <h2 className="text-2xl font-semibold">Need immediate help?</h2>
+        </div>
+        <p className="mb-3">
+          If you're in crisis or having thoughts of suicide, speak with a trained counselor now.
+        </p>
+        <div className="mb-5">
+          <div className="bg-[#1b2c45] p-4 rounded-md mb-3">
+            <h3 className="font-semibold text-lg mb-2">In the United States</h3>
+            <div className="flex flex-wrap gap-4">
+              <Button 
+                onClick={() => trackResourceClick("call", () => window.location.href = "tel:988")}
+                className="bg-[#3e64dd] hover:bg-[#2a4bba] transition-all duration-300 relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98]"
+                size="lg"
+              >
+                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
+                <span className="relative z-10 flex items-center">
+                  <Phone className="h-4 w-4 mr-2 transition-transform duration-300 group-hover:scale-110" />
+                  Call 988 - Press 1
+                </span>
+              </Button>
+              <Button 
+                onClick={() => trackResourceClick("text", () => window.location.href = "sms:838255")}
+                className="bg-[#3e64dd] hover:bg-[#2a4bba] transition-all duration-300 relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98]"
+                size="lg"
+              >
+                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
+                <span className="relative z-10 flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 transition-transform duration-300 group-hover:scale-110" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                  </svg>
+                  Text 838255
+                </span>
+              </Button>
+            </div>
+          </div>
+          
+          <div className="bg-[#1b2c45] p-4 rounded-md">
+            <h3 className="font-semibold text-lg mb-2">International</h3>
+            <div className="flex flex-wrap gap-4">
+              <Button 
+                onClick={() => trackResourceClick("call", () => window.location.href = "tel:0018002738255")}
+                className="bg-[#3e64dd] hover:bg-[#2a4bba] transition-all duration-300 relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98]"
+                size="lg"
+              >
+                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
+                <span className="relative z-10 flex items-center">
+                  <Phone className="h-4 w-4 mr-2 transition-transform duration-300 group-hover:scale-110" />
+                  Call 001-800-273-8255
+                </span>
+              </Button>
+              <Button 
+                onClick={() => trackResourceClick("text", () => window.location.href = "sms:838255")}
+                className="bg-[#3e64dd] hover:bg-[#2a4bba] transition-all duration-300 relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98]"
+                size="lg"
+              >
+                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
+                <span className="relative z-10 flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 transition-transform duration-300 group-hover:scale-110" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                  </svg>
+                  Text to 838255
+                </span>
+              </Button>
+            </div>
+          </div>
+        </div>
+        
+        <Button 
+          onClick={() => trackResourceClick("chat", () => window.open("https://www.my.vavet.sites.va.gov/vclchat", "_blank"))}
+          className="bg-[#3e64dd] hover:bg-[#2a4bba] transition-all duration-300 relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98] w-full"
+          size="lg"
+        >
+          <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
+          <span className="relative z-10 flex items-center">
+            <Globe className="h-4 w-4 mr-2 transition-transform duration-300 group-hover:scale-110" />
+            Chat Online (Available Worldwide)
+          </span>
+        </Button>
+      </div>
+
       {/* The Challenges Veterans Face - White Box Section */}
       <section className="mb-16 px-4">
         <div className="max-w-6xl mx-auto">
@@ -296,88 +380,7 @@ export default function Resources() {
         </div>
       </section>
 
-      <div className="mb-10 bg-[#141e2f] text-white p-6 rounded-lg">
-        <div className="flex items-center mb-4">
-          <PanelLeftOpen className="h-8 w-8 mr-3 text-[#3e64dd]" />
-          <h2 className="text-2xl font-semibold">Need immediate help?</h2>
-        </div>
-        <p className="mb-3">
-          If you're in crisis or having thoughts of suicide, speak with a trained counselor now.
-        </p>
-        <div className="mb-5">
-          <div className="bg-[#1b2c45] p-4 rounded-md mb-3">
-            <h3 className="font-semibold text-lg mb-2">In the United States</h3>
-            <div className="flex flex-wrap gap-4">
-              <Button 
-                onClick={() => trackResourceClick("call", () => window.location.href = "tel:988")}
-                className="bg-[#3e64dd] hover:bg-[#2a4bba] transition-all duration-300 relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98]"
-                size="lg"
-              >
-                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
-                <span className="relative z-10 flex items-center">
-                  <Phone className="h-4 w-4 mr-2 transition-transform duration-300 group-hover:scale-110" />
-                  Call 988 - Press 1
-                </span>
-              </Button>
-              <Button 
-                onClick={() => trackResourceClick("text", () => window.location.href = "sms:838255")}
-                className="bg-[#3e64dd] hover:bg-[#2a4bba] transition-all duration-300 relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98]"
-                size="lg"
-              >
-                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
-                <span className="relative z-10 flex items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 transition-transform duration-300 group-hover:scale-110" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-                  </svg>
-                  Text 838255
-                </span>
-              </Button>
-            </div>
-          </div>
-          
-          <div className="bg-[#1b2c45] p-4 rounded-md">
-            <h3 className="font-semibold text-lg mb-2">International</h3>
-            <div className="flex flex-wrap gap-4">
-              <Button 
-                onClick={() => trackResourceClick("call", () => window.location.href = "tel:0018002738255")}
-                className="bg-[#3e64dd] hover:bg-[#2a4bba] transition-all duration-300 relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98]"
-                size="lg"
-              >
-                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
-                <span className="relative z-10 flex items-center">
-                  <Phone className="h-4 w-4 mr-2 transition-transform duration-300 group-hover:scale-110" />
-                  Call 001-800-273-8255
-                </span>
-              </Button>
-              <Button 
-                onClick={() => trackResourceClick("text", () => window.location.href = "sms:838255")}
-                className="bg-[#3e64dd] hover:bg-[#2a4bba] transition-all duration-300 relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98]"
-                size="lg"
-              >
-                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
-                <span className="relative z-10 flex items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 transition-transform duration-300 group-hover:scale-110" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-                  </svg>
-                  Text to 838255
-                </span>
-              </Button>
-            </div>
-          </div>
-        </div>
-        
-        <Button 
-          onClick={() => trackResourceClick("chat", () => window.open("https://www.my.vavet.sites.va.gov/vclchat", "_blank"))}
-          className="bg-[#3e64dd] hover:bg-[#2a4bba] transition-all duration-300 relative overflow-hidden group shadow-md hover:shadow-lg active:scale-[0.98] w-full"
-          size="lg"
-        >
-          <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
-          <span className="relative z-10 flex items-center">
-            <Globe className="h-4 w-4 mr-2 transition-transform duration-300 group-hover:scale-110" />
-            Chat Online (Available Worldwide)
-          </span>
-        </Button>
-      </div>
+
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {resourceCategories.filter(category => category.title !== "International Resources").map((category, index) => (
