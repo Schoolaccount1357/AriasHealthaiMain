@@ -17,15 +17,6 @@ export function Hero() {
 
   return (
     <section className="mb-8 sm:mb-12">
-      {/* Inclusive Crisis Support Banner */}
-      <div className="w-full bg-red-100 text-red-800 text-center py-2 text-sm border-b">
-        In crisis? Call <strong>988</strong> (USA) or visit{" "}
-        <a href="https://988lifeline.org" className="underline font-medium hover:text-red-900">
-          988lifeline.org
-        </a>{" "}
-        for free, confidential emotional support — for anyone, anytime.
-      </div>
-
       {/* Full-Width Hero Section */}
       <div className="relative w-full h-[60vh] sm:h-[70vh] lg:h-[80vh] overflow-hidden">
         {/* Background Image */}
