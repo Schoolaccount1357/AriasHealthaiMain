@@ -52,7 +52,7 @@ export function PlatformPreview() {
   return (
     <section className="mb-12 mt-6">
       <h3 className="text-xl font-semibold mb-4">Willow Platform Features</h3>
-      
+
       <div className="grid md:grid-cols-2 gap-8">
         {/* Mental Health Support Resources */}
         <div className="glass-card p-6 rounded-xl">
@@ -86,7 +86,7 @@ export function PlatformPreview() {
             Comprehensive tools designed to support your mental wellness journey with habit tracking, mindfulness reminders, and personal reflection.
           </p>
         </div>
-        
+
         {/* Privacy-First Approach */}
         <div className="glass-card p-6 rounded-xl">
           <h3 className="font-semibold text-lg mb-4 flex items-center">

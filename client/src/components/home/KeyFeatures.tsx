@@ -30,9 +30,9 @@ export function KeyFeatures() {
         {features.map((feature, index) => (
           <div 
             key={index} 
-            className="relative glass-card p-6 rounded-xl flex flex-col items-center text-center hover:shadow-lg transition-all duration-300 cursor-pointer group hover:-translate-y-1"
+            className="relative backdrop-blur-lg bg-white/20 border border-white/30 p-6 rounded-xl flex flex-col items-center text-center hover:shadow-lg transition-all duration-300 cursor-pointer group hover:-translate-y-1 hover:bg-white/25"
           >
-            <div className="mb-4 transform transition-transform duration-300 group-hover:scale-110">
+            <div className="bg-[#3e64dd]/80 backdrop-blur-sm w-16 h-16 rounded-full flex items-center justify-center mb-4 transform transition-transform duration-300 group-hover:scale-110 border border-white/30">
               {feature.icon}
             </div>
             <h3 className="text-xl font-semibold mb-2 text-[#10066A]">{feature.title}</h3>

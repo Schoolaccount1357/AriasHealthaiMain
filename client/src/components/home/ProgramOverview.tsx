@@ -22,13 +22,13 @@ export function ProgramOverview() {
   return (
     <section className="mb-12">
       <h2 className="text-2xl font-bold mb-6 text-foreground">How to Sign Up</h2>
-      
-      <div className="grid md:grid-cols-3 gap-6">
-        {programSteps.map((step) => (
-          <div key={step.id} className="glass-card p-6 rounded-xl hover:shadow-lg transition-all duration-300 group hover:-translate-y-1">
-            <div className="rounded-full bg-accent w-12 h-12 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-              <span className="text-white font-bold">{step.id}</span>
-            </div>
+
+      <div className="grid md:grid-cols-3 gap-8">
+        {programSteps.map((step, index) => (
+          <div key={index} className="backdrop-blur-lg bg-white/20 border border-white/30 rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group relative hover:bg-white/25">
+              <div className="bg-[#3e64dd]/80 backdrop-blur-sm w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 border border-white/30">
+                <span className="text-white font-bold">{step.id}</span>
+              </div>
             <h3 className="font-semibold text-lg mb-2">{step.title}</h3>
             <p className="text-muted-foreground">{step.description}</p>
           </div>
