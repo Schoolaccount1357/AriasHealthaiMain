@@ -44,6 +44,32 @@ export default function Resources() {
   
   const resourceCategories = [
     {
+      title: "Understanding the Challenge",
+      icon: <HeartHandshake className="h-6 w-6 text-[#3e64dd]" />,
+      resources: [
+        {
+          name: "Unique Veteran Challenges",
+          description: "Military service creates specific mental health challenges including combat trauma, military sexual trauma, moral injury, and difficult transitions to civilian life. These experiences require specialized understanding and support.",
+          website: "https://www.mentalhealth.va.gov/understanding-veteran-challenges/",
+        },
+        {
+          name: "Why Peer Support Matters",
+          description: "Veterans often find that connecting with others who share similar experiences provides understanding that traditional therapy alone cannot offer. Peer support bridges gaps in formal treatment.",
+          website: "https://www.va.gov/health-care/health-needs-conditions/mental-health/peer-support/",
+        },
+        {
+          name: "Building Community Resilience",
+          description: "Strong communities support all members facing challenges. Understanding veteran experiences helps build more inclusive, trauma-informed support systems that benefit everyone.",
+          website: "https://www.samhsa.gov/trauma-informed-care",
+        },
+        {
+          name: "Family and Caregiver Impact",
+          description: "Military service affects entire families and social circles. Secondary trauma and caregiver stress require community-wide awareness and support systems.",
+          website: "https://www.va.gov/family-member-benefits/",
+        }
+      ]
+    },
+    {
       title: "Crisis Support",
       icon: <Phone className="h-6 w-6 text-[#3e64dd]" />,
       resources: [
@@ -166,8 +192,8 @@ export default function Resources() {
   return (
     <MainLayout>
       <PageHeader
-        title="Veteran Support Resources"
-        description="We've compiled trusted resources to support your journey. If you're in crisis, please call the Veterans Crisis Line at 1-800-273-8255 and Press 1."
+        title="Mental Health & Recovery Resources"
+        description="Understanding challenges and finding support - whether you're a veteran, family member, or community supporter. Everyone deserves access to quality mental health resources."
       />
 
       <div className="mb-10 bg-[#141e2f] text-white p-6 rounded-lg">
