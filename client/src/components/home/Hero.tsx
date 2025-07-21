@@ -29,8 +29,8 @@ export function Hero() {
         {/* Enhanced Dark Overlay for Better Contrast */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/40 hero-overlay"></div>
         
-        {/* Content Overlay - Bottom Left for Desktop, Centered for Mobile */}
-        <div className="absolute inset-0 flex items-center justify-center sm:items-center sm:justify-center lg:items-end lg:justify-start pt-16 sm:pt-20 pb-24 lg:pb-32 xl:pb-40">
+        {/* Content Overlay - Moved Lower in Layout */}
+        <div className="absolute inset-0 flex items-end justify-center sm:items-end sm:justify-center lg:items-end lg:justify-start pt-16 sm:pt-20 pb-32 lg:pb-40 xl:pb-48">
           <div className="max-w-xl lg:max-w-2xl ml-0 sm:ml-0 lg:ml-16 xl:ml-20 text-center sm:text-center lg:text-left text-white px-4 sm:px-6 lg:px-8">
             {/* Enhanced Background for Text Readability */}
             <div className="backdrop-blur-sm bg-black/30 rounded-xl p-3 sm:p-4 md:p-5 lg:p-6 border border-white/20 shadow-2xl hero-glassmorphism hero-mobile-padding">
@@ -63,8 +63,8 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Crisis Resources Footer - Positioned Higher */}
-      <div className="absolute bottom-12 sm:bottom-16 lg:bottom-20 left-0 right-0 backdrop-blur-xl bg-black/50 border border-white/20 rounded-lg mx-4 sm:mx-6 lg:mx-8 px-3 sm:px-4 py-2 sm:py-3 shadow-xl crisis-footer">
+      {/* Crisis Resources Footer - Moved Lower */}
+      <div className="absolute bottom-4 sm:bottom-6 lg:bottom-8 left-0 right-0 backdrop-blur-xl bg-black/50 border border-white/20 rounded-lg mx-4 sm:mx-6 lg:mx-8 px-3 sm:px-4 py-2 sm:py-3 shadow-xl crisis-footer">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between sm:gap-3">
             {/* Header */}
