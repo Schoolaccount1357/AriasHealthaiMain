@@ -15,7 +15,7 @@ export function Hero() {
   };
 
   return (
-    <section className="relative w-screen h-screen -ml-4 sm:-ml-6 lg:-ml-8 xl:-ml-[calc((100vw-1280px)/2)] -mr-4 sm:-mr-6 lg:-mr-8 xl:-mr-[calc((100vw-1280px)/2)] -mt-16 sm:-mt-20 mb-0">
+    <section className="relative w-screen h-[70vh] sm:h-[75vh] lg:h-[80vh] -ml-4 sm:-ml-6 lg:-ml-8 xl:-ml-[calc((100vw-1280px)/2)] -mr-4 sm:-mr-6 lg:-mr-8 xl:-mr-[calc((100vw-1280px)/2)] -mt-16 sm:-mt-20 mb-0">
       {/* Full-Width Hero Section */}
       <div className="relative w-full h-full overflow-hidden">
         {/* Background Image */}

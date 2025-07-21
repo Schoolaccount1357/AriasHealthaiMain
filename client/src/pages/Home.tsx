@@ -38,6 +38,9 @@ export default function Home() {
       <main className="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-0 pb-2 sm:py-8">
         <Hero />
 
+        {/* Spacing between hero and next section */}
+        <div className="mt-8 sm:mt-12 lg:mt-16">
+        </div>
         <PlatformPreview />
 
 
