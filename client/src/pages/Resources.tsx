@@ -277,17 +277,10 @@ export default function Resources() {
             {/* Visit Website Button */}
             <div className="text-center">
               <a 
-                href="#enrollment-form"
-                onClick={(e) => {
-                  e.preventDefault();
-                  const enrollmentSection = document.getElementById('enrollment-form');
-                  if (enrollmentSection) {
-                    enrollmentSection.scrollIntoView({ behavior: 'smooth' });
-                  } else {
-                    // If on different page, navigate to home page with enrollment section
-                    window.location.href = '/#enrollment-form';
-                  }
-                }}
+                href="https://www.va.gov/health-care/health-needs-conditions/substance-use-problems/"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => trackResourceClick("va-substance-use", () => {})}
                 className="group text-primary hover:text-secondary font-medium inline-flex items-center text-sm sm:text-base relative overflow-hidden"
               >
                 <span className="relative z-10 inline-flex items-center transition-all duration-300 group-hover:translate-x-1">
