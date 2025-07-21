@@ -26,7 +26,7 @@ export function Hero() {
           muted
           playsInline
           className="w-full h-full object-cover"
-          style={{ objectPosition: 'center 30%' }}
+          style={{ objectPosition: 'center 15%' }}
         />
         
         {/* Enhanced Dark Overlay for Better Contrast */}
