@@ -178,9 +178,12 @@ export default function Resources() {
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold text-[#4a5568] mb-4">The Challenges Veterans Face</h2>
               <div className="w-24 h-1 bg-[#4a5568] mx-auto mb-6"></div>
-              <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                Many veterans face barriers to care especially in substance use recovery. Traditional services don't always meet them where they are.
-              </p>
+              <div className="max-w-4xl mx-auto">
+                <h3 className="text-xl font-semibold text-[#4a5568] mb-3">Veteran Resources</h3>
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  Many veterans face barriers to care especially in substance use recovery. Traditional services don't always meet them where they are. Here is a comprehensive support for veterans and their families. Understanding the unique challenges of military service and connecting you with specialized resources.
+                </p>
+              </div>
             </div>
 
             {/* Challenge Cards */}
