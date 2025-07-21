@@ -42,7 +42,7 @@ export function Hero() {
         <div className="absolute inset-0 flex items-center justify-end">
           <div className="max-w-lg mx-4 sm:mx-8 lg:mx-16 text-right text-white">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
-              You are not alone.
+              Stronger Every Day.
             </h1>
             <p className="text-lg sm:text-xl mb-6 leading-relaxed opacity-90">
               Everyone deserves a circle to lean on. WILLOW is our digital offering to build steady peer support, starting with the communities that carry the heaviest loads.
