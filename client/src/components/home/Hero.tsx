@@ -63,8 +63,8 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Crisis Resources Footer - Moved Lower */}
-      <div className="absolute bottom-4 sm:bottom-6 lg:bottom-8 left-0 right-0 backdrop-blur-xl bg-black/50 border border-white/20 rounded-lg mx-4 sm:mx-6 lg:mx-8 px-3 sm:px-4 py-2 sm:py-3 shadow-xl crisis-footer">
+      {/* Crisis Resources Footer - Bottom of Hero */}
+      <div className="absolute bottom-0 left-0 right-0 backdrop-blur-xl bg-black/50 border border-white/20 rounded-lg mx-4 sm:mx-6 lg:mx-8 px-3 sm:px-4 py-2 sm:py-3 shadow-xl crisis-footer">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between sm:gap-3">
             {/* Header */}
