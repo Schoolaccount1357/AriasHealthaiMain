@@ -1,0 +1,103 @@
+🎯 Replit Prompt: Hero Redesign (Framer-Style Layout for Healthcare)
+🛠️ TECH STACK CONTEXT
+You are working within a full-stack TypeScript environment:
+
+Frontend: React (TypeScript) + Tailwind CSS + Radix UI
+
+Backend: Node.js with Express + PostgreSQL (Drizzle ORM)
+
+Build tool: Vite
+
+Folders:
+
+Frontend in /client
+
+Backend in /server
+
+Static assets in /client/public
+
+🔧 OBJECTIVE
+Update the landing page layout of AriasHealth.ai to adopt a full-bleed, immersive hero section modeled on the FitFlow style (see attached reference), while:
+
+Keeping your existing content and mobile menu
+
+Updating the crisis support line to be inclusive of everyone
+
+Ensuring layout reflects trustworthy healthcare design
+
+🧱 HERO LAYOUT OVERVIEW
+VISUAL STRUCTURE (FitFlow-Style):
+Full-screen section with:
+
+Left-anchored white/neutral text block
+
+Right-side full-height image/video with dark color overlay
+
+Rounded corners not required; your version should be edge-to-edge unless design calls for subtle framing
+
+BREAKDOWN:
+Element	FitFlow Reference	AriasHealth.ai Target
+Typography	Bold, left-aligned, responsive	Use Tailwind text-5xl md:text-6xl font-extrabold
+Subtext	Small, readable, bottom right-aligned	Move subtext below headline in left container
+Button	Rounded CTA with strong verb	“Get Early Access” or “Start My Journey”
+Hero Visual	Female fitness photo with color blend	Use image or video of supportive interaction
+Layout	Glass card look (optional)	Prefer cleaner full-bleed banner layout
+Mobile Menu	Simple Menu toggle (top-right)	Keep your current implementation
+
+🖼️ SAMPLE COMPONENT STRUCTURE (HeroBanner.tsx)
+tsx
+Copy
+Edit
+<section className="w-full min-h-screen flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-16 bg-gradient-to-br from-white via-slate-50 to-gray-100 relative">
+  {/* Mobile Menu Button (Retain Your Implementation) */}
+
+  {/* Left Content */}
+  <div className="z-10 max-w-xl text-left">
+    <h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 mb-6">
+      Emotional Care.<br />Human Connection.<br />Reimagined.
+    </h1>
+    <p className="text-lg text-gray-700 mb-6">
+      AriasHealth.ai helps Veterans, caregivers, and all individuals reconnect through emotionally intelligent peer support systems.
+    </p>
+    <button className="bg-yellow-400 text-black px-6 py-3 rounded-full hover:bg-yellow-500 font-semibold">
+      Get Early Access
+    </button>
+  </div>
+
+  {/* Right Visual */}
+  <div className="relative w-full md:w-1/2 h-[400px] md:h-full mt-12 md:mt-0 overflow-hidden rounded-xl shadow-xl">
+    <img src=\"/assets/hero-shot.jpg\" alt=\"Hero\" className=\"w-full h-full object-cover\" />
+    <div className="absolute inset-0 bg-gradient-to-t from-white/60 to-transparent"></div>
+  </div>
+</section>
+📛 CRISIS SUPPORT LINE — PUBLIC + INCLUSIVE
+Include this just below the navbar (or fixed above Hero):
+
+tsx
+Copy
+Edit
+<div className="w-full bg-red-100 text-red-800 text-center py-2 text-sm">
+  In crisis? Call <strong>988</strong> (USA) or visit <a href="https://988lifeline.org" className="underline">988lifeline.org</a> for free, confidential emotional support — for anyone, anytime.
+</div>
+Why This Works:
+988 is federally managed and non-branded
+
+Inclusive to all groups (not only Veterans)
+
+Can also include international links like:
+
+Canada: 1-833-456-4566 (Talk Suicide Canada)
+
+UK: Samaritans 116 123
+
+✅ IMPLEMENTATION CHECKLIST
+ Replace <Hero /> in Home.tsx with updated HeroBanner.tsx
+
+ Keep <Navbar /> and mobile drawer toggle logic unchanged
+
+ Add new section for global crisis line (optional DismissibleBanner component)
+
+ Upload hero image/video to /public/assets/
+
+ Confirm mobile-first layout using Chrome dev tools
+
