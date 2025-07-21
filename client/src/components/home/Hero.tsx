@@ -28,9 +28,9 @@ export function Hero() {
         {/* Enhanced Dark Overlay for Better Contrast */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/40 hero-overlay"></div>
         
-        {/* Content Overlay - Left-aligned with Enhanced Contrast */}
-        <div className="absolute inset-0 flex items-center justify-start pt-16 sm:pt-20 pb-20">
-          <div className="max-w-xl lg:max-w-2xl ml-4 sm:ml-8 lg:ml-16 xl:ml-20 text-left text-white px-4 sm:px-6 lg:px-8">
+        {/* Content Overlay - Bottom Left for Desktop, Centered for Mobile */}
+        <div className="absolute inset-0 flex items-center justify-center sm:items-center sm:justify-center lg:items-end lg:justify-start pt-16 sm:pt-20 pb-24 lg:pb-32 xl:pb-40">
+          <div className="max-w-xl lg:max-w-2xl ml-0 sm:ml-0 lg:ml-16 xl:ml-20 text-center sm:text-center lg:text-left text-white px-4 sm:px-6 lg:px-8">
             {/* Enhanced Background for Text Readability */}
             <div className="backdrop-blur-sm bg-black/30 rounded-xl p-3 sm:p-4 md:p-5 lg:p-6 border border-white/20 shadow-2xl hero-glassmorphism hero-mobile-padding">
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-3 sm:mb-4 md:mb-5 leading-tight text-white hero-text-shadow hero-mobile-text hero-tablet-text" 
