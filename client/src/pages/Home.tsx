@@ -1,7 +1,3 @@
-The requested changes involve applying glassmorphism to the challenge cards in the Challenges Veterans Face section and ensuring the hero image bleeds on all edges.
-```
-
-```replit_final_file
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/home/Hero";
