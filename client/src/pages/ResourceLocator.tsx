@@ -3081,6 +3081,44 @@ export default function ResourceLocator() {
           website: "https://www.veteranscrisisline.net/",
           category: "Crisis"
         }
+      ],
+      publicResources: [
+        {
+          name: "Maine Department of Health and Human Services - Behavioral Health",
+          description: "State mental health and substance abuse services for all Maine residents",
+          address: "11 State House Station, Augusta, ME 04333",
+          phone: "(207) 287-2595",
+          website: "https://www.maine.gov/dhhs/samhs/",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "Maine Crisis Hotline",
+          description: "24/7 statewide crisis support and suicide prevention services",
+          address: "Statewide Service",
+          phone: "1-888-568-1112",
+          website: "https://www.crisistextline.org/",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "Maine Department of Labor - CareerCenter",
+          description: "State employment services including job training and career assistance for all residents",
+          address: "54 State House Station, Augusta, ME 04333",
+          phone: "(207) 623-7900",
+          website: "https://www.maine.gov/labor/",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "Maine State Housing Authority",
+          description: "State housing assistance programs including affordable housing and homebuyer assistance",
+          address: "353 Water Street, Augusta, ME 04330",
+          phone: "(207) 626-4600",
+          website: "https://www.mainehousing.org/",
+          category: "Housing",
+          targetAudience: "public"
+        }
       ]
     },
     "Maryland": {
@@ -3164,6 +3202,44 @@ export default function ResourceLocator() {
           phone: "988, then press 1",
           website: "https://www.veteranscrisisline.net/",
           category: "Crisis"
+        }
+      ],
+      publicResources: [
+        {
+          name: "Maryland Department of Health - Behavioral Health Administration",
+          description: "State mental health and substance abuse services for all Maryland residents",
+          address: "55 Wade Avenue, Catonsville, MD 21228",
+          phone: "(410) 402-8300",
+          website: "https://bha.health.maryland.gov/",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "Maryland Crisis Hotline",
+          description: "24/7 statewide crisis support and suicide prevention services",
+          address: "Statewide Service",
+          phone: "211",
+          website: "https://www.211md.org/",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "Maryland Department of Labor - Workforce Development",
+          description: "State employment services including job training and career assistance for all residents",
+          address: "1100 N Eutaw Street, Baltimore, MD 21201",
+          phone: "(410) 767-2173",
+          website: "https://www.dllr.state.md.us/",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "Maryland Department of Housing and Community Development",
+          description: "State housing assistance programs including affordable housing and homebuyer assistance",
+          address: "7800 Harkins Road, Lanham, MD 20706",
+          phone: "(301) 429-7400",
+          website: "https://dhcd.maryland.gov/",
+          category: "Housing",
+          targetAudience: "public"
         }
       ]
     },
@@ -3249,6 +3325,44 @@ export default function ResourceLocator() {
           website: "https://www.veteranscrisisline.net/",
           category: "Crisis"
         }
+      ],
+      publicResources: [
+        {
+          name: "Massachusetts Department of Mental Health",
+          description: "State mental health services and support for all Massachusetts residents",
+          address: "25 Staniford Street, Boston, MA 02114",
+          phone: "(617) 626-8000",
+          website: "https://www.mass.gov/orgs/department-of-mental-health",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "Massachusetts Crisis Line",
+          description: "24/7 statewide crisis support and suicide prevention services",
+          address: "Statewide Service",
+          phone: "1-877-382-1609",
+          website: "https://www.mass.gov/service-details/massachusetts-crisis-resources",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "MassHire Department of Career Services",
+          description: "State employment services including job training and career assistance for all residents",
+          address: "19 Staniford Street, Boston, MA 02114",
+          phone: "(617) 626-5300",
+          website: "https://www.mass.gov/orgs/department-of-career-services",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "Massachusetts Housing Partnership",
+          description: "State housing assistance programs including affordable housing and homebuyer assistance",
+          address: "160 Federal Street, Boston, MA 02110",
+          phone: "(617) 854-1000",
+          website: "https://www.mhp.net/",
+          category: "Housing",
+          targetAudience: "public"
+        }
       ]
     },
     "Michigan": {
@@ -3324,6 +3438,44 @@ export default function ResourceLocator() {
           phone: "988, then press 1",
           website: "https://www.veteranscrisisline.net/",
           category: "Crisis"
+        }
+      ],
+      publicResources: [
+        {
+          name: "Michigan Department of Health and Human Services - Behavioral Health",
+          description: "State mental health and substance abuse services for all Michigan residents",
+          address: "333 S Grand Ave, Lansing, MI 48933",
+          phone: "(517) 241-1970",
+          website: "https://www.michigan.gov/mdhhs/inside-mdhhs/bureaus-offices/behavioral-developmental-health-services",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "Michigan Crisis Line",
+          description: "24/7 statewide crisis support and suicide prevention services",
+          address: "Statewide Service",
+          phone: "1-800-273-8255",
+          website: "https://michigan.gov/mdhhs/adult-child-services/mentalhealth/crisis",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "Michigan Works! - Workforce Development",
+          description: "State employment services including job training and career assistance for all residents",
+          address: "201 N Washington Square, Lansing, MI 48913",
+          phone: "(517) 335-5858",
+          website: "https://www.michiganworks.org/",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "Michigan State Housing Development Authority",
+          description: "State housing assistance programs including affordable housing and homebuyer assistance",
+          address: "735 E Michigan Ave, Lansing, MI 48912",
+          phone: "(517) 373-8370",
+          website: "https://www.michigan.gov/mshda",
+          category: "Housing",
+          targetAudience: "public"
         }
       ]
     },
@@ -3401,6 +3553,44 @@ export default function ResourceLocator() {
           website: "https://www.veteranscrisisline.net/",
           category: "Crisis"
         }
+      ],
+      publicResources: [
+        {
+          name: "Minnesota Department of Human Services - Behavioral Health",
+          description: "State mental health and substance abuse services for all Minnesota residents",
+          address: "444 Lafayette Road N, Saint Paul, MN 55155",
+          phone: "(651) 431-2000",
+          website: "https://mn.gov/dhs/general-public/about-dhs/behavioral-health/",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "Minnesota Crisis Line",
+          description: "24/7 statewide crisis support and suicide prevention services",
+          address: "Statewide Service",
+          phone: "1-800-273-8255",
+          website: "https://mn.gov/dhs/general-public/about-dhs/behavioral-health/crisis-services/",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "Minnesota Department of Employment and Economic Development - WorkForce Centers",
+          description: "State employment services including job training and career assistance for all residents",
+          address: "1st National Bank Building, 332 Minnesota Street, Saint Paul, MN 55101",
+          phone: "(651) 259-7114",
+          website: "https://mn.gov/deed/",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "Minnesota Housing Finance Agency",
+          description: "State housing assistance programs including affordable housing and homebuyer assistance",
+          address: "400 Sibley Street, Saint Paul, MN 55101",
+          phone: "(651) 296-7608",
+          website: "https://www.mnhousing.gov/",
+          category: "Housing",
+          targetAudience: "public"
+        }
       ]
     },
     "Mississippi": {
@@ -3476,6 +3666,44 @@ export default function ResourceLocator() {
           phone: "988, then press 1",
           website: "https://www.veteranscrisisline.net/",
           category: "Crisis"
+        }
+      ],
+      publicResources: [
+        {
+          name: "Mississippi Department of Mental Health",
+          description: "State mental health and substance abuse services for all Mississippi residents",
+          address: "1101 Robert E Lee Building, Jackson, MS 39201",
+          phone: "(601) 359-1288",
+          website: "https://www.dmh.ms.gov/",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "Mississippi Crisis Line",
+          description: "24/7 statewide crisis support and suicide prevention services",
+          address: "Statewide Service",
+          phone: "1-877-210-8513",
+          website: "https://www.dmh.ms.gov/crisis-services/",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "Mississippi Department of Employment Security - WIN Job Centers",
+          description: "State employment services including job training and career assistance for all residents",
+          address: "1235 Echelon Parkway, Jackson, MS 39213",
+          phone: "(601) 321-6000",
+          website: "https://mdes.ms.gov/",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "Mississippi Home Corporation",
+          description: "State housing assistance programs including affordable housing and homebuyer assistance",
+          address: "735 Riverside Drive, Jackson, MS 39202",
+          phone: "(601) 718-4642",
+          website: "https://www.mshc.com/",
+          category: "Housing",
+          targetAudience: "public"
         }
       ]
     },
@@ -3553,6 +3781,44 @@ export default function ResourceLocator() {
           website: "https://www.veteranscrisisline.net/",
           category: "Crisis"
         }
+      ],
+      publicResources: [
+        {
+          name: "Missouri Department of Mental Health",
+          description: "State mental health and substance abuse services for all Missouri residents",
+          address: "1706 E Elm Street, Jefferson City, MO 65102",
+          phone: "(573) 751-4122",
+          website: "https://dmh.missouri.gov/",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "Missouri Crisis Line",
+          description: "24/7 statewide crisis support and suicide prevention services",
+          address: "Statewide Service",
+          phone: "1-800-273-8255",
+          website: "https://dmh.missouri.gov/mental-health/mental-health-crisis-services",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "Missouri Job Centers - Department of Higher Education and Workforce Development",
+          description: "State employment services including job training and career assistance for all residents",
+          address: "3420 N Ten Mile Dr, Jefferson City, MO 65109",
+          phone: "(573) 751-3349",
+          website: "https://jobs.mo.gov/",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "Missouri Housing Development Commission",
+          description: "State housing assistance programs including affordable housing and homebuyer assistance",
+          address: "3435 Broadway, Kansas City, MO 64111",
+          phone: "(816) 759-6600",
+          website: "https://www.mhdc.com/",
+          category: "Housing",
+          targetAudience: "public"
+        }
       ]
     },
     "Montana": {
@@ -3629,6 +3895,44 @@ export default function ResourceLocator() {
           website: "https://www.veteranscrisisline.net/",
           category: "Crisis"
         }
+      ],
+      publicResources: [
+        {
+          name: "Montana Department of Public Health and Human Services - Behavioral Health",
+          description: "State mental health and substance abuse services for all Montana residents",
+          address: "111 N Sanders Street, Helena, MT 59604",
+          phone: "(406) 444-3964",
+          website: "https://dphhs.mt.gov/amdd",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "Montana Crisis Line",
+          description: "24/7 statewide crisis support and suicide prevention services",
+          address: "Statewide Service",
+          phone: "1-800-273-8255",
+          website: "https://dphhs.mt.gov/suicideprevention/Crisis",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "Montana Department of Labor & Industry - Job Service",
+          description: "State employment services including job training and career assistance for all residents",
+          address: "1315 Lockey Avenue, Helena, MT 59601",
+          phone: "(406) 444-4100",
+          website: "https://montanaworks.gov/",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "Montana Board of Housing",
+          description: "State housing assistance programs including affordable housing and homebuyer assistance",
+          address: "301 S Park Ave, Helena, MT 59601",
+          phone: "(406) 841-2840",
+          website: "https://housing.mt.gov/",
+          category: "Housing",
+          targetAudience: "public"
+        }
       ]
     },
     "Nebraska": {
@@ -3640,6 +3944,44 @@ export default function ResourceLocator() {
           phone: "(402) 346-8800",
           website: "https://www.nebraska.va.gov/",
           category: "VA"
+        }
+      ],
+      publicResources: [
+        {
+          name: "Nebraska Department of Health and Human Services - Behavioral Health",
+          description: "State mental health and substance abuse services for all Nebraska residents",
+          address: "301 Centennial Mall South, Lincoln, NE 68509",
+          phone: "(402) 471-3121",
+          website: "https://dhhs.ne.gov/Pages/Behavioral-Health.aspx",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "Nebraska Crisis Line",
+          description: "24/7 statewide crisis support and suicide prevention services",
+          address: "Statewide Service",
+          phone: "1-800-273-8255",
+          website: "https://dhhs.ne.gov/Pages/Behavioral-Health-Crisis-Services.aspx",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "Nebraska Department of Labor - NEworks",
+          description: "State employment services including job training and career assistance for all residents",
+          address: "550 S 16th Street, Lincoln, NE 68508",
+          phone: "(402) 471-9000",
+          website: "https://dol.nebraska.gov/",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "Nebraska Investment Finance Authority",
+          description: "State housing assistance programs including affordable housing and homebuyer assistance",
+          address: "1230 O Street, Lincoln, NE 68508",
+          phone: "(402) 434-3900",
+          website: "https://www.nifa.org/",
+          category: "Housing",
+          targetAudience: "public"
         }
       ]
     },
@@ -3653,6 +3995,44 @@ export default function ResourceLocator() {
           website: "https://www.lasvegas.va.gov/",
           category: "VA"
         }
+      ],
+      publicResources: [
+        {
+          name: "Nevada Department of Health and Human Services - Behavioral Health",
+          description: "State mental health and substance abuse services for all Nevada residents",
+          address: "4126 Technology Way, Carson City, NV 89706",
+          phone: "(775) 684-5943",
+          website: "https://dhhs.nv.gov/Programs/Behavioral/",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "Nevada Crisis Line",
+          description: "24/7 statewide crisis support and suicide prevention services",
+          address: "Statewide Service",
+          phone: "1-800-273-8255",
+          website: "https://dhhs.nv.gov/Programs/Behavioral/Crisis/",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "Nevada Department of Employment, Training and Rehabilitation - Nevada JobConnect",
+          description: "State employment services including job training and career assistance for all residents",
+          address: "2800 E St. Louis Ave, Las Vegas, NV 89104",
+          phone: "(702) 486-0100",
+          website: "https://detr.nv.gov/",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "Nevada Housing Division",
+          description: "State housing assistance programs including affordable housing and homebuyer assistance",
+          address: "1535 Old Hot Springs Road, Carson City, NV 89706",
+          phone: "(775) 687-2040",
+          website: "https://housing.nv.gov/",
+          category: "Housing",
+          targetAudience: "public"
+        }
       ]
     },
     "New Hampshire": {
@@ -3664,6 +4044,44 @@ export default function ResourceLocator() {
           phone: "(603) 624-4366",
           website: "https://www.manchester.va.gov/",
           category: "VA"
+        }
+      ],
+      publicResources: [
+        {
+          name: "New Hampshire Department of Health and Human Services - Bureau of Mental Health Services",
+          description: "State mental health and substance abuse services for all New Hampshire residents",
+          address: "105 Pleasant Street, Concord, NH 03301",
+          phone: "(603) 271-5000",
+          website: "https://www.dhhs.nh.gov/programs-services/mental-health-substance-use",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "New Hampshire Crisis Line",
+          description: "24/7 statewide crisis support and suicide prevention services",
+          address: "Statewide Service",
+          phone: "1-800-273-8255",
+          website: "https://www.dhhs.nh.gov/programs-services/mental-health-substance-use/crisis-services",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "New Hampshire Employment Security - NH Works",
+          description: "State employment services including job training and career assistance for all residents",
+          address: "45 South Fruit Street, Concord, NH 03301",
+          phone: "(603) 224-3311",
+          website: "https://www.nhes.nh.gov/",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "New Hampshire Housing Finance Authority",
+          description: "State housing assistance programs including affordable housing and homebuyer assistance",
+          address: "32 Constitution Drive, Bedford, NH 03110",
+          phone: "(603) 472-8623",
+          website: "https://www.nhhfa.org/",
+          category: "Housing",
+          targetAudience: "public"
         }
       ]
     },
@@ -3677,6 +4095,44 @@ export default function ResourceLocator() {
           website: "https://www.newjersey.va.gov/",
           category: "VA"
         }
+      ],
+      publicResources: [
+        {
+          name: "New Jersey Department of Human Services - Division of Mental Health and Addiction Services",
+          description: "State mental health and substance abuse services for all New Jersey residents",
+          address: "222 South Warren Street, Trenton, NJ 08608",
+          phone: "(609) 777-0702",
+          website: "https://www.nj.gov/humanservices/dmhas/home/",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "New Jersey Crisis Line",
+          description: "24/7 statewide crisis support and suicide prevention services",
+          address: "Statewide Service",
+          phone: "211",
+          website: "https://nj211.org/",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "New Jersey Department of Labor and Workforce Development - One-Stop Career Centers",
+          description: "State employment services including job training and career assistance for all residents",
+          address: "1 John Fitch Plaza, Trenton, NJ 08625",
+          phone: "(609) 659-9045",
+          website: "https://www.nj.gov/labor/",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "New Jersey Housing and Mortgage Finance Agency",
+          description: "State housing assistance programs including affordable housing and homebuyer assistance",
+          address: "637 South Clinton Avenue, Trenton, NJ 08611",
+          phone: "(609) 278-7400",
+          website: "https://www.njhmfa.gov/",
+          category: "Housing",
+          targetAudience: "public"
+        }
       ]
     },
     "New Mexico": {
@@ -3688,6 +4144,44 @@ export default function ResourceLocator() {
           phone: "(505) 265-1711",
           website: "https://www.albuquerque.va.gov/",
           category: "VA"
+        }
+      ],
+      publicResources: [
+        {
+          name: "New Mexico Department of Health - Behavioral Health Services",
+          description: "State mental health and substance abuse services for all New Mexico residents",
+          address: "1190 St. Francis Drive, Santa Fe, NM 87505",
+          phone: "(505) 827-2658",
+          website: "https://www.nmhealth.org/about/behsu/",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "New Mexico Crisis Line",
+          description: "24/7 statewide crisis support and suicide prevention services",
+          address: "Statewide Service",
+          phone: "1-855-662-7474",
+          website: "https://www.nmcrisisline.com/",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "New Mexico Department of Workforce Solutions",
+          description: "State employment services including job training and career assistance for all residents",
+          address: "401 Broadway Blvd NE, Albuquerque, NM 87103",
+          phone: "(505) 841-8405",
+          website: "https://www.dws.state.nm.us/",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "New Mexico Mortgage Finance Authority",
+          description: "State housing assistance programs including affordable housing and homebuyer assistance",
+          address: "344 Fourth Street SW, Albuquerque, NM 87102",
+          phone: "(505) 843-6880",
+          website: "https://www.housingnm.org/",
+          category: "Housing",
+          targetAudience: "public"
         }
       ]
     },
@@ -3701,6 +4195,44 @@ export default function ResourceLocator() {
           website: "https://www.nyharbor.va.gov/",
           category: "VA"
         }
+      ],
+      publicResources: [
+        {
+          name: "New York State Office of Mental Health",
+          description: "State mental health services and support for all New York residents",
+          address: "44 Holland Avenue, Albany, NY 12229",
+          phone: "(518) 474-4403",
+          website: "https://omh.ny.gov/",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "New York State Crisis Line",
+          description: "24/7 statewide crisis support and suicide prevention services",
+          address: "Statewide Service",
+          phone: "1-800-273-8255",
+          website: "https://omh.ny.gov/omhweb/crisis_services/",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "New York State Department of Labor - Career Centers",
+          description: "State employment services including job training and career assistance for all residents",
+          address: "Building 12, State Office Campus, Albany, NY 12240",
+          phone: "(518) 457-9000",
+          website: "https://dol.ny.gov/",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "New York State Homes and Community Renewal",
+          description: "State housing assistance programs including affordable housing and homebuyer assistance",
+          address: "25 Beaver Street, New York, NY 10004",
+          phone: "(212) 480-7300",
+          website: "https://hcr.ny.gov/",
+          category: "Housing",
+          targetAudience: "public"
+        }
       ]
     },
     "North Carolina": {
@@ -3712,6 +4244,44 @@ export default function ResourceLocator() {
           phone: "(919) 286-0411",
           website: "https://www.durham.va.gov/",
           category: "VA"
+        }
+      ],
+      publicResources: [
+        {
+          name: "North Carolina Department of Health and Human Services - Division of Mental Health",
+          description: "State mental health and substance abuse services for all North Carolina residents",
+          address: "2001 Mail Service Center, Raleigh, NC 27699",
+          phone: "(919) 733-7011",
+          website: "https://www.ncdhhs.gov/divisions/mental-health-developmental-disabilities-and-substance-use-services",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "North Carolina Crisis Line",
+          description: "24/7 statewide crisis support and suicide prevention services",
+          address: "Statewide Service",
+          phone: "1-800-273-8255",
+          website: "https://www.ncdhhs.gov/divisions/mental-health-developmental-disabilities-and-substance-use-services/mental-health/crisis-services",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "North Carolina Department of Commerce - NCWorks",
+          description: "State employment services including job training and career assistance for all residents",
+          address: "301 N Wilmington Street, Raleigh, NC 27601",
+          phone: "(919) 814-4600",
+          website: "https://www.nccommerce.com/",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "North Carolina Housing Finance Agency",
+          description: "State housing assistance programs including affordable housing and homebuyer assistance",
+          address: "3508 Bush Street, Raleigh, NC 27609",
+          phone: "(919) 877-5700",
+          website: "https://www.nchfa.com/",
+          category: "Housing",
+          targetAudience: "public"
         }
       ]
     },
