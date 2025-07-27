@@ -49,11 +49,11 @@ export function Hero() {
               <Button 
                 onClick={scrollToEnrollmentForm}
                 size="default"
-                className="bg-[#4a6b45] hover:bg-[#3a5336] text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-bold rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 w-full sm:w-auto border border-white/20 hover:border-white/40 min-h-[48px] sm:min-h-[52px]"
+                className="bg-slate-600/80 hover:bg-slate-700/90 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-bold rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 w-full sm:w-auto min-h-[48px] sm:min-h-[52px]"
                 aria-label="Get early access to Willow - Navigate to enrollment form"
                 style={{
                   textShadow: '1px 1px 2px rgba(0,0,0,0.5)',
-                  boxShadow: '0 0 15px rgba(74, 107, 69, 0.4), 0 0 30px rgba(74, 107, 69, 0.2), inset 0 1px 0 rgba(255,255,255,0.2)'
+                  boxShadow: '0 0 15px rgba(100, 116, 139, 0.3), 0 0 30px rgba(100, 116, 139, 0.1), inset 0 1px 0 rgba(255,255,255,0.1)'
                 }}
               >
                 Get early access to Willow
