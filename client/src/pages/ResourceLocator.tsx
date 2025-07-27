@@ -1660,6 +1660,129 @@ export default function ResourceLocator() {
           targetAudience: "public"
         }
       ]
+    },
+    "Canada": {
+      veteranResources: [
+        {
+          name: "Veterans Affairs Canada (VAC)",
+          description: "Primary government department providing benefits, services, and commemoration for Canadian veterans",
+          address: "161 Grafton Street, Charlottetown, PE C1A 1K9",
+          phone: "1-866-522-2122",
+          website: "https://www.veterans.gc.ca/",
+          category: "VA",
+          targetAudience: "veteran"
+        },
+        {
+          name: "Operational Stress Injury Social Support (OSISS)",
+          description: "Peer support network for Canadian Armed Forces members, veterans, and families affected by operational stress injuries",
+          address: "National program - contact local coordinator",
+          phone: "1-800-268-7708",
+          website: "https://www.veterans.gc.ca/eng/health/mental-health/osiss",
+          category: "Treatment",
+          targetAudience: "veteran"
+        },
+        {
+          name: "Veterans Crisis Line - Canada",
+          description: "24/7 crisis support specifically for Canadian veterans and their families",
+          address: "National Service",
+          phone: "1-800-268-7708",
+          website: "https://www.veterans.gc.ca/eng/contact/talk-to-a-professional",
+          category: "Crisis",
+          targetAudience: "veteran"
+        },
+        {
+          name: "Canadian Armed Forces Transition Group",
+          description: "Employment and career transition support for military members releasing from service",
+          address: "101 Colonel By Drive, Ottawa, ON K1A 0K2",
+          phone: "1-800-267-0685",
+          website: "https://www.canada.ca/en/department-national-defence/services/benefits-military/transition.html",
+          category: "Employment",
+          targetAudience: "veteran"
+        },
+        {
+          name: "Canada Mortgage and Housing Corporation - Veterans Housing",
+          description: "Housing assistance programs specifically available to Canadian veterans",
+          address: "700 Montreal Road, Ottawa, ON K1A 0P7",
+          phone: "1-800-668-2642",
+          website: "https://www.cmhc-schl.gc.ca/",
+          category: "Housing",
+          targetAudience: "veteran"
+        },
+        {
+          name: "Royal Canadian Legion",
+          description: "Veteran service organization providing advocacy, benefits assistance, and community support",
+          address: "86 Aird Place, Kanata, ON K2L 0A1",
+          phone: "613-591-3335",
+          website: "https://www.legion.ca/",
+          category: "VA",
+          targetAudience: "veteran"
+        },
+        {
+          name: "U.S. Veterans in Canada - Foreign Medical Program",
+          description: "Healthcare benefits for U.S. veterans with VA-rated, service-connected conditions residing in Canada",
+          address: "PO Box 200, Spring City, PA 19475, USA",
+          phone: "Canada: 1-877-345-8179",
+          website: "https://www.va.gov/health-care/foreign-medical-program/",
+          category: "VA",
+          targetAudience: "veteran"
+        }
+      ],
+      publicResources: [
+        {
+          name: "Health Canada - Mental Health Services",
+          description: "National mental health resources and crisis support for all Canadian residents",
+          address: "Tunney's Pasture, Ottawa, ON K1A 0K9",
+          phone: "1-866-225-0709",
+          website: "https://www.canada.ca/en/health-canada/services/mental-health-services.html",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "Talk Suicide Canada",
+          description: "24/7 bilingual crisis support and suicide prevention services nationwide",
+          address: "National Service",
+          phone: "1-833-456-4566",
+          website: "https://talksuicide.ca/",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "Crisis Services Canada",
+          description: "National network providing 24/7 crisis support via phone, text, and chat",
+          address: "National Service",
+          phone: "1-833-456-4566 or text 45645",
+          website: "https://www.crisisservicescanada.ca/",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "Employment and Social Development Canada (ESDC)",
+          description: "Federal employment services including job search assistance and career counseling",
+          address: "Service Canada offices nationwide",
+          phone: "1-800-622-6232",
+          website: "https://www.canada.ca/en/employment-social-development.html",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "Canada Mortgage and Housing Corporation (CMHC)",
+          description: "National housing agency providing affordable housing programs and homebuyer assistance",
+          address: "700 Montreal Road, Ottawa, ON K1A 0P7",
+          phone: "1-800-668-2642",
+          website: "https://www.cmhc-schl.gc.ca/",
+          category: "Housing",
+          targetAudience: "public"
+        },
+        {
+          name: "Canadian Mental Health Association (CMHA)",
+          description: "National charitable organization providing mental health services and advocacy",
+          address: "1301-595 Montreal Road, Ottawa, ON K1K 4L2",
+          phone: "613-745-7750",
+          website: "https://cmha.ca/",
+          category: "Treatment",
+          targetAudience: "public"
+        }
+      ]
     }
   };
   
