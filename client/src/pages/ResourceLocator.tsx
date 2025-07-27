@@ -1117,14 +1117,16 @@ export default function ResourceLocator() {
       ]
     },
     "Alaska": {
-      resources: [
+      veteranResources: [
         {
           name: "Colonel Mary Louise Rasmuson Campus - Alaska VA Healthcare System",
           description: "Comprehensive primary care, mental health services, and programs for homeless veterans",
           address: "1201 North Muldoon Road, Anchorage, AK 99504-6104",
           phone: "888-353-7574",
           website: "https://www.va.gov/alaska-health-care/",
-          category: "VA"
+          category: "VA",
+          zipCode: "99504",
+          targetAudience: "veteran"
         },
         {
           name: "Joint Base Elmendorf-Richardson VA Medical Center",
@@ -1132,7 +1134,9 @@ export default function ResourceLocator() {
           address: "5955 Zeamer Avenue, Joint Base Elmendorf-Richardson, AK 99506-3702",
           phone: "888-353-7574",
           website: "https://www.va.gov/alaska-health-care/locations/joint-base-elmendorf-richardson/",
-          category: "VA"
+          category: "VA",
+          zipCode: "99506",
+          targetAudience: "veteran"
         },
         {
           name: "Fairbanks VA Clinic",
@@ -1140,7 +1144,9 @@ export default function ResourceLocator() {
           address: "2555 Phillips Field Road, Fairbanks, AK 99709-3933",
           phone: "888-353-7574",
           website: "https://www.va.gov/alaska-health-care/locations/fairbanks-va-clinic/",
-          category: "Treatment"
+          category: "Treatment",
+          zipCode: "99709",
+          targetAudience: "veteran"
         },
         {
           name: "Anchorage Vet Center",
@@ -1148,7 +1154,9 @@ export default function ResourceLocator() {
           address: "4201 Tudor Centre Drive, Suite 115, Anchorage, AK 99508",
           phone: "907-563-6966",
           website: "https://www.va.gov/find-locations/facility/vc_0521V",
-          category: "Crisis"
+          category: "Crisis",
+          zipCode: "99508",
+          targetAudience: "veteran"
         },
         {
           name: "Alaska Office of Veterans Affairs",
@@ -1156,12 +1164,36 @@ export default function ResourceLocator() {
           address: "1111 West 8th Street, Juneau, AK 99801",
           phone: "907-465-2151",
           website: "https://veterans.alaska.gov/",
-          category: "Employment"
+          category: "Employment",
+          zipCode: "99801",
+          targetAudience: "veteran"
+        }
+      ],
+      publicResources: [
+        {
+          name: "Alaska Department of Health - Mental Health Services",
+          description: "State mental health services for all Alaska residents",
+          address: "350 Main St, Juneau, AK 99801",
+          phone: "(907) 465-3370",
+          website: "https://dhss.alaska.gov/dbh/Pages/default.aspx",
+          category: "Treatment",
+          zipCode: "99801",
+          targetAudience: "public"
+        },
+        {
+          name: "Alaska Crisis Line",
+          description: "24/7 crisis support for all Alaska residents",
+          address: "Statewide Service",
+          phone: "1-877-266-4357",
+          website: "https://alaskacrisisline.org/",
+          category: "Crisis",
+          zipCode: "99501",
+          targetAudience: "public"
         }
       ]
     },
     "Arizona": {
-      resources: [
+      veteranResources: [
         {
           name: "Phoenix VA Health Care System",
           description: "Comprehensive VA healthcare in Arizona",
@@ -1169,7 +1201,8 @@ export default function ResourceLocator() {
           phone: "(602) 277-5551",
           website: "https://www.va.gov/phoenix-health-care/",
           category: "VA",
-          zipCode: "85012"
+          zipCode: "85012",
+          targetAudience: "veteran"
         },
         {
           name: "U.S.VETS - Phoenix",
@@ -1178,7 +1211,8 @@ export default function ResourceLocator() {
           phone: "(602) 305-8585",
           website: "https://usvets.org/locations/phoenix/",
           category: "Housing",
-          zipCode: "85012"
+          zipCode: "85012",
+          targetAudience: "veteran"
         },
         {
           name: "Arizona Veterans StandDown Alliance",
@@ -1187,16 +1221,8 @@ export default function ResourceLocator() {
           phone: "(602) 340-9393",
           website: "https://arizonastanddown.org",
           category: "Employment",
-          zipCode: "85007"
-        },
-        {
-          name: "Southwest Behavioral Health Services",
-          description: "Mental health and substance abuse treatment",
-          address: "3450 N. 3rd Street, Phoenix, AZ 85012",
-          phone: "(602) 265-8338",
-          website: "https://www.sbhservices.org/",
-          category: "Treatment",
-          zipCode: "85012"
+          zipCode: "85007",
+          targetAudience: "veteran"
         },
         {
           name: "Arizona Coalition for Military Families",
@@ -1205,12 +1231,35 @@ export default function ResourceLocator() {
           phone: "(602) 753-8802",
           website: "https://arizonacoalition.org/",
           category: "Crisis",
-          zipCode: "85012"
+          zipCode: "85012",
+          targetAudience: "veteran"
+        }
+      ],
+      publicResources: [
+        {
+          name: "Arizona Department of Health Services - Mental Health",
+          description: "State mental health services for all Arizona residents",
+          address: "150 N 18th Ave, Phoenix, AZ 85007",
+          phone: "(602) 542-1025",
+          website: "https://www.azdhs.gov/behavioral-health-services/",
+          category: "Treatment",
+          zipCode: "85007",
+          targetAudience: "public"
+        },
+        {
+          name: "Arizona Crisis Response Network",
+          description: "24/7 crisis support for all Arizona residents",
+          address: "Statewide Service",
+          phone: "1-844-746-2648",
+          website: "https://www.azcrisisresponse.org/",
+          category: "Crisis",
+          zipCode: "85012",
+          targetAudience: "public"
         }
       ]
     },
     "Arkansas": {
-      resources: [
+      veteranResources: [
         {
           name: "Central Arkansas Veterans Healthcare System",
           description: "VA healthcare services in Arkansas",
@@ -1218,7 +1267,8 @@ export default function ResourceLocator() {
           phone: "(501) 257-1000",
           website: "https://www.va.gov/central-arkansas-health-care/",
           category: "VA",
-          zipCode: "72205"
+          zipCode: "72205",
+          targetAudience: "veteran"
         },
 
         {
@@ -1228,7 +1278,8 @@ export default function ResourceLocator() {
           phone: "(501) 257-3288",
           website: "https://arkansasveterans.org",
           category: "Employment",
-          zipCode: "72114"
+          zipCode: "72114",
+          targetAudience: "veteran"
         },
         {
           name: "Veterans Recovery Center",
@@ -1237,7 +1288,8 @@ export default function ResourceLocator() {
           phone: "(501) 372-4361",
           website: "https://vrcarkansas.org",
           category: "Treatment",
-          zipCode: "72201"
+          zipCode: "72201",
+          targetAudience: "veteran"
         },
         {
           name: "Arkansas Veterans Crisis Line",
@@ -1246,7 +1298,20 @@ export default function ResourceLocator() {
           phone: "(800) 273-8255",
           website: "https://arkansasveteranscrisis.org",
           category: "Crisis",
-          zipCode: "72205"
+          zipCode: "72205",
+          targetAudience: "veteran"
+        }
+      ],
+      publicResources: [
+        {
+          name: "Arkansas Department of Human Services - Mental Health",
+          description: "State mental health services for all Arkansas residents",
+          address: "305 S Main St, Little Rock, AR 72201",
+          phone: "(501) 682-1001",
+          website: "https://humanservices.arkansas.gov/about-dhs/division-of-behavioral-health-services/",
+          category: "Treatment",
+          zipCode: "72201",
+          targetAudience: "public"
         }
       ]
     },
