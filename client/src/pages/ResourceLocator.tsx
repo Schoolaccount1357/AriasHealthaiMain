@@ -3879,7 +3879,101 @@ export default function ResourceLocator() {
             Resources in {isInternational ? selectedCountry : selectedState}
           </h2>
 
-          {/* Veteran Resources Section */}
+          {/* Public Resources Section - APPEARS FIRST */}
+          {((isInternational && selectedCountry && countryData[selectedCountry]?.publicResources?.filter(r => category === "all" || r.category === category).length > 0) ||
+            (!isInternational && selectedState && stateData[selectedState]?.publicResources?.filter(r => category === "all" || r.category === category).length > 0)) && (
+            <div className="mb-8">
+              <h3 className="text-lg font-bold mb-4 text-green-600 flex items-center">
+                <Building className="h-5 w-5 mr-2" />
+                General Public Resources
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                {(isInternational ? 
+                  countryData[selectedCountry]?.publicResources?.filter(r => category === "all" || r.category === category) || [] :
+                  stateData[selectedState]?.publicResources?.filter(r => category === "all" || r.category === category) || []
+                ).map((resource, index) => (
+                  <Card key={`public-${index}`} className="shadow-md overflow-hidden border-l-4 border-l-green-500">
+                    <CardHeader className="pb-2 pt-4 px-4 sm:px-6">
+                      <div className="flex items-start justify-between">
+                        <div>
+                          <div className="flex items-start sm:items-center flex-col sm:flex-row sm:gap-2">
+                            <div className="mb-2 sm:mb-0">
+                              {getCategoryIcon(resource.category)}
+                            </div>
+                            <CardTitle className="text-base sm:text-lg md:text-xl break-words">{resource.name}</CardTitle>
+                          </div>
+                          <div className="mt-1">
+                            <span className="inline-flex items-center rounded-full bg-green-500/10 px-2 py-1 text-xs font-medium text-green-600">
+                              {resource.category} • General Public
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </CardHeader>
+                    <CardContent className="pt-2 px-4 sm:px-6">
+                      <CardDescription className="mb-4 text-sm sm:text-base">{resource.description}</CardDescription>
+                      {resource.address && (
+                        <div className="flex items-start gap-2 text-xs sm:text-sm mb-2">
+                          <MapPin className="h-4 w-4 mt-0.5 text-green-600 flex-shrink-0" />
+                          <span className="break-words">{resource.address}</span>
+                        </div>
+                      )}
+                      {resource.phone && (
+                        <div className="flex items-center gap-2 text-xs sm:text-sm">
+                          <Phone className="h-4 w-4 text-green-600 flex-shrink-0" />
+                          <span>{resource.phone}</span>
+                        </div>
+                      )}
+                    </CardContent>
+                    <CardFooter className="border-t pt-4 flex flex-col sm:flex-row sm:justify-between gap-3 px-4 sm:px-6">
+                      <Button 
+                        variant="outline"
+                        className="w-full sm:w-auto justify-center text-green-600 border-green-600/30 hover:bg-green-600/10"
+                        onClick={() => {
+                          if (isInternational) {
+                            trackStateResourceClick({
+                              state: selectedCountry,
+                              resourceName: resource.name,
+                              category: resource.category
+                            }, () => {
+                              window.open(resource.website, "_blank", "noopener,noreferrer");
+                            });
+                          } else {
+                            trackStateResourceClick({
+                              state: selectedState,
+                              resourceName: resource.name,
+                              category: resource.category
+                            }, () => {
+                              window.open(resource.website, "_blank", "noopener,noreferrer");
+                            });
+                          }
+                        }}
+                      >
+                        Visit Website
+                      </Button>
+                      {resource.address && (
+                        <Button 
+                          variant="outline" 
+                          className="w-full sm:w-auto justify-center"
+                          onClick={() => {
+                            window.open(
+                              `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(resource.address || '')}`,
+                              "_blank",
+                              "noopener,noreferrer"
+                            );
+                          }}
+                        >
+                          Get Directions
+                        </Button>
+                      )}
+                    </CardFooter>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Veteran Resources Section - APPEARS SECOND */}
           {((isInternational && selectedCountry && countryData[selectedCountry]?.veteranResources.filter(r => category === "all" || r.category === category).length > 0) ||
             (!isInternational && selectedState && stateData[selectedState]?.veteranResources?.filter(r => category === "all" || r.category === category).length > 0)) && (
             <div className="mb-8">
@@ -3947,84 +4041,6 @@ export default function ResourceLocator() {
                               window.open(resource.website, "_blank", "noopener,noreferrer");
                             });
                           }
-                        }}
-                      >
-                        Visit Website
-                      </Button>
-                      {resource.address && (
-                        <Button 
-                          variant="outline" 
-                          className="w-full sm:w-auto justify-center"
-                          onClick={() => {
-                            window.open(
-                              `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(resource.address || '')}`,
-                              "_blank",
-                              "noopener,noreferrer"
-                            );
-                          }}
-                        >
-                          Get Directions
-                        </Button>
-                      )}
-                    </CardFooter>
-                  </Card>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* Public Resources Section */}
-          {((isInternational && selectedCountry && countryData[selectedCountry]?.publicResources?.filter(r => category === "all" || r.category === category).length > 0) ||
-            (!isInternational && selectedState && stateData[selectedState]?.publicResources?.filter(r => category === "all" || r.category === category).length > 0)) && (
-            <div className="mb-8">
-              <h3 className="text-lg font-bold mb-4 text-green-600 flex items-center">
-                <Building className="h-5 w-5 mr-2" />
-                General Public Resources
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-                {(isInternational ? 
-                  countryData[selectedCountry]?.publicResources?.filter(r => category === "all" || r.category === category) || [] :
-                  stateData[selectedState]?.publicResources?.filter(r => category === "all" || r.category === category) || []
-                ).map((resource, index) => (
-                  <Card key={`public-${index}`} className="shadow-md overflow-hidden border-l-4 border-l-green-500">
-                    <CardHeader className="pb-2 pt-4 px-4 sm:px-6">
-                      <div className="flex items-start justify-between">
-                        <div>
-                          <div className="flex items-start sm:items-center flex-col sm:flex-row sm:gap-2">
-                            <div className="mb-2 sm:mb-0">
-                              {getCategoryIcon(resource.category)}
-                            </div>
-                            <CardTitle className="text-base sm:text-lg md:text-xl break-words">{resource.name}</CardTitle>
-                          </div>
-                          <div className="mt-1">
-                            <span className="inline-flex items-center rounded-full bg-green-500/10 px-2 py-1 text-xs font-medium text-green-600">
-                              {resource.category} • General Public
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </CardHeader>
-                    <CardContent className="pt-2 px-4 sm:px-6">
-                      <CardDescription className="mb-4 text-sm sm:text-base">{resource.description}</CardDescription>
-                      {resource.address && (
-                        <div className="flex items-start gap-2 text-xs sm:text-sm mb-2">
-                          <MapPin className="h-4 w-4 mt-0.5 text-green-600 flex-shrink-0" />
-                          <span className="break-words">{resource.address}</span>
-                        </div>
-                      )}
-                      {resource.phone && (
-                        <div className="flex items-center gap-2 text-xs sm:text-sm">
-                          <Phone className="h-4 w-4 text-green-600 flex-shrink-0" />
-                          <span>{resource.phone}</span>
-                        </div>
-                      )}
-                    </CardContent>
-                    <CardFooter className="border-t pt-4 flex flex-col sm:flex-row sm:justify-between gap-3 px-4 sm:px-6">
-                      <Button 
-                        variant="outline"
-                        className="w-full sm:w-auto justify-center text-green-600 border-green-500/30 hover:bg-green-500/10"
-                        onClick={() => {
-                          window.open(resource.website, "_blank", "noopener,noreferrer");
                         }}
                       >
                         Visit Website
