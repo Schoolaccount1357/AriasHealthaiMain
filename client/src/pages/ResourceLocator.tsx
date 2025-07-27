@@ -364,6 +364,8 @@ export default function ResourceLocator() {
           phone: "+44 808 1914 218",
           website: "https://www.gov.uk/government/organisations/veterans-uk",
           category: "Housing"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Combat Stress",
@@ -372,6 +374,8 @@ export default function ResourceLocator() {
           phone: "+44 800 138 1619",
           website: "https://combatstress.org.uk/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "The Poppy Factory",
@@ -380,6 +384,8 @@ export default function ResourceLocator() {
           phone: "+44 20 8940 3305",
           website: "https://www.poppyfactory.org/",
           category: "Employment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Veterans Crisis Line UK",
@@ -388,6 +394,8 @@ export default function ResourceLocator() {
           phone: "+44 20 3695 0097",
           website: "https://www.veteranscrisisline.net/get-help/european-support",
           category: "Crisis"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Op COURAGE",
@@ -396,6 +404,8 @@ export default function ResourceLocator() {
           phone: "+44 0300 323 0117",
           website: "https://www.nhs.uk/nhs-services/armed-forces-community/mental-health/veterans-reservists/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Togetherall",
@@ -404,6 +414,8 @@ export default function ResourceLocator() {
           phone: "N/A - Online Service",
           website: "https://togetherall.com/en-gb/",
           category: "Crisis"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "SSAFA - The Armed Forces Charity",
@@ -412,6 +424,8 @@ export default function ResourceLocator() {
           phone: "+44 800 260 6767",
           website: "https://www.ssafa.org.uk/",
           category: "Housing"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Forces Employment Charity",
@@ -420,6 +434,8 @@ export default function ResourceLocator() {
           phone: "+44 121 236 0058",
           website: "https://www.forcesemployment.org.uk/",
           category: "Employment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Veterans' Gateway",
@@ -428,6 +444,46 @@ export default function ResourceLocator() {
           phone: "+44 808 802 1212",
           website: "https://www.veteransgateway.org.uk/",
           category: "Crisis"
+        ,
+          targetAudience: "veteran"
+        }
+      ],
+      publicResources: [
+        {
+          name: "NHS Mental Health Services",
+          description: "National Health Service mental health support and crisis services for all UK residents",
+          address: "Available nationwide through NHS Trusts",
+          phone: "111 (NHS 111)",
+          website: "https://www.nhs.uk/mental-health/",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "Samaritans UK Crisis Line",
+          description: "24/7 confidential emotional support for anyone experiencing distress or despair",
+          address: "Nationwide Service",
+          phone: "116 123",
+          website: "https://www.samaritans.org/",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "Jobcentre Plus",
+          description: "UK government employment services including job search assistance and benefits",
+          address: "Available at locations nationwide",
+          phone: "0800 169 0310",
+          website: "https://www.gov.uk/contact-jobcentre-plus",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "Citizens Advice Housing",
+          description: "Free housing advice and support for UK residents facing housing issues",
+          address: "Available at local Citizens Advice offices",
+          phone: "0800 144 8848",
+          website: "https://www.citizensadvice.org.uk/housing/",
+          category: "Housing",
+          targetAudience: "public"
         }
       ]
     },
@@ -440,6 +496,8 @@ export default function ResourceLocator() {
           phone: "+39 081 811 6000",
           website: "https://naples.tricare.mil/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "American Red Cross - Naples",
@@ -448,6 +506,8 @@ export default function ResourceLocator() {
           phone: "+39 081 568 4788",
           website: "https://www.redcross.org/local/overseas/italy.html",
           category: "Housing"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Behavioral Health Services - Aviano Air Base",
@@ -456,6 +516,8 @@ export default function ResourceLocator() {
           phone: "+39 0434 30 5321",
           website: "https://aviano.tricare.mil/Health-Services/Mental-Health",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Transition Assistance Program - Naples",
@@ -464,6 +526,8 @@ export default function ResourceLocator() {
           phone: "+39 081 811 6372",
           website: "https://www.cnic.navy.mil/regions/cnreurafcent/installations/nsa_naples/ffr/support_services/career_support/transition_assistance.html",
           category: "Employment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Military Crisis Line - Europe",
@@ -472,6 +536,8 @@ export default function ResourceLocator() {
           phone: "00800 1273 8255 (TALK)",
           website: "https://www.veteranscrisisline.net/get-help/european-support",
           category: "Crisis"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "U.S. Army Garrison (USAG) Italy - Vicenza",
@@ -480,6 +546,8 @@ export default function ResourceLocator() {
           phone: "+39 0444 71 7114",
           website: "https://home.army.mil/italy/index.php/about/Garrison/directorate-health-services",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "American University of Rome - Veterans Aid",
@@ -488,6 +556,8 @@ export default function ResourceLocator() {
           phone: "+39 06 5833 0919",
           website: "https://aur.edu/admissions/veterans",
           category: "Employment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "John Cabot University - Veteran Benefits",
@@ -496,6 +566,46 @@ export default function ResourceLocator() {
           phone: "+39 06 681 9121",
           website: "https://www.johncabot.edu/admissions/veterans-benefits.aspx",
           category: "Employment"
+        ,
+          targetAudience: "veteran"
+        }
+      ],
+      publicResources: [
+        {
+          name: "Servizio Sanitario Nazionale - Salute Mentale",
+          description: "National Health Service mental health services for all Italian residents",
+          address: "Available through local ASL health authorities",
+          phone: "1500 (Health Ministry)",
+          website: "https://www.salute.gov.it/portale/saluteMentale/",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "Telefono Amico Italia",
+          description: "24/7 emotional support and crisis intervention services",
+          address: "Nationwide Service",
+          phone: "02 2327 2327",
+          website: "https://www.telefonoamico.it/",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "Centri per l'Impiego",
+          description: "Public employment centers providing job placement and training services",
+          address: "Available in all Italian regions",
+          phone: "Contact local centers",
+          website: "https://www.anpal.gov.it/",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "Ministero delle Infrastrutture - Casa Italia",
+          description: "National housing programs and assistance for Italian residents",
+          address: "Via Nomentana 2, Rome",
+          phone: "06 4412 1",
+          website: "https://www.mit.gov.it/",
+          category: "Housing",
+          targetAudience: "public"
         }
       ]
     },
@@ -508,6 +618,8 @@ export default function ResourceLocator() {
           phone: "+66 2 205 4000",
           website: "https://th.usembassy.gov/u-s-citizen-services/veterans-affairs/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Joint U.S. Military Advisory Group Thailand (JUSMAGTHAI)",
@@ -516,6 +628,8 @@ export default function ResourceLocator() {
           phone: "+66 2 287 1036",
           website: "https://myarmybenefits.us.army.mil/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "The Beekeeper House",
@@ -524,6 +638,8 @@ export default function ResourceLocator() {
           phone: "+66 62 436 3975",
           website: "https://beekeeperhouse.com/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Bangkok Mental Health Hospital",
@@ -532,6 +648,8 @@ export default function ResourceLocator() {
           phone: "+66 2 136 3888",
           website: "https://bangkokmentalhealthhospital.com/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Miracles Asia",
@@ -540,6 +658,8 @@ export default function ResourceLocator() {
           phone: "+66 98 317 1919",
           website: "https://miraclesasia.com/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "The Diamond Rehab Thailand",
@@ -548,6 +668,8 @@ export default function ResourceLocator() {
           phone: "+66 98 721 8529",
           website: "https://diamondrehabthailand.com/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Veterans of Foreign Wars (VFW) Post 9951",
@@ -556,6 +678,8 @@ export default function ResourceLocator() {
           phone: "+66 81 889 0202",
           website: "https://vfw9951.org/",
           category: "Housing"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Veterans of Foreign Wars (VFW) Post 9876",
@@ -564,6 +688,8 @@ export default function ResourceLocator() {
           phone: "+66 89 807 2335",
           website: "https://vfw9876.org/",
           category: "Crisis"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Veterans of Foreign Wars (VFW) Post 12074",
@@ -572,6 +698,8 @@ export default function ResourceLocator() {
           phone: "+66 81 111 5956",
           website: "https://vfw12146.org/",
           category: "Housing"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "American Legion Thailand Post TH01",
@@ -580,6 +708,8 @@ export default function ResourceLocator() {
           phone: "+66 89 999 1570",
           website: "https://americanlegionthailand.com/",
           category: "Housing"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Veterans First Pattaya",
@@ -588,6 +718,8 @@ export default function ResourceLocator() {
           phone: "+66 89 249 1646",
           website: "https://www.facebook.com/VeteransFirstPattaya/",
           category: "Crisis"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Horizon Rehab Center",
@@ -596,6 +728,8 @@ export default function ResourceLocator() {
           phone: "+66 82 695 3494",
           website: "https://recovery.com/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Manarom Hospital",
@@ -604,6 +738,46 @@ export default function ResourceLocator() {
           phone: "+66 2 282 0796",
           website: "https://www.manarom.com/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
+        }
+      ],
+      publicResources: [
+        {
+          name: "Department of Mental Health Thailand",
+          description: "National mental health services and crisis support for Thai residents",
+          address: "88/20 Tiwanond Road, Nonthaburi 11000",
+          phone: "1323 (Mental Health Hotline)",
+          website: "https://www.dmh.go.th/",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "Thailand Mental Health Crisis Line",
+          description: "24/7 mental health crisis support and counseling services",
+          address: "Nationwide Service",
+          phone: "1323",
+          website: "https://www.dmh.go.th/service/view.asp?id=147",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "Department of Employment Thailand",
+          description: "Government employment services and job placement assistance",
+          address: "Mitmaitri Road, Din Daeng, Bangkok 10400",
+          phone: "1694",
+          website: "https://www.doe.go.th/",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "National Housing Authority",
+          description: "Government housing programs and affordable housing initiatives",
+          address: "61 Chaeng Watthana Road, Bangkok 10210",
+          phone: "02 142 5000",
+          website: "https://www.nha.co.th/",
+          category: "Housing",
+          targetAudience: "public"
         }
       ]
     },
@@ -616,6 +790,8 @@ export default function ResourceLocator() {
           phone: "+84 24 3850 5000",
           website: "https://vn.usembassy.gov/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "U.S. Consulate General - Ho Chi Minh City",
@@ -624,6 +800,8 @@ export default function ResourceLocator() {
           phone: "+84 28 3520 4200",
           website: "https://vn.usembassy.gov/embassy-consulate/ho-chi-minh-city/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Foreign Medical Program (FMP) - Vietnam",
@@ -632,6 +810,8 @@ export default function ResourceLocator() {
           phone: "+1-833-930-0816",
           website: "https://www.va.gov/health-care/foreign-medical-program/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Family Medical Practice Vietnam",
@@ -640,6 +820,8 @@ export default function ResourceLocator() {
           phone: "+84 28 3822 7848",
           website: "https://www.vietnammedicalpractice.com",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "International SOS Vietnam",
@@ -648,6 +830,8 @@ export default function ResourceLocator() {
           phone: "+84 28 3829 8520",
           website: "https://www.internationalsos.com/locations/asia-pacific/vietnam",
           category: "Crisis"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Veterans Crisis Line - International Access",
@@ -656,6 +840,46 @@ export default function ResourceLocator() {
           phone: "Dial 988, then press 1",
           website: "https://www.veteranscrisisline.net/",
           category: "Crisis"
+        ,
+          targetAudience: "veteran"
+        }
+      ],
+      publicResources: [
+        {
+          name: "Ministry of Health - Mental Health Department",
+          description: "National mental health services for Vietnamese residents",
+          address: "138A Giảng Võ, Ba Đình, Hà Nội",
+          phone: "024 3826 9167",
+          website: "https://moh.gov.vn/",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "Vietnam Mental Health Crisis Line",
+          description: "Crisis support and mental health counseling services",
+          address: "Nationwide Service",
+          phone: "1900 0167",
+          website: "https://moh.gov.vn/hoat-dong-cua-lanh-dao-bo",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "Ministry of Labour - Employment Services",
+          description: "Government employment services and vocational training programs",
+          address: "12 Ngô Quyền, Hoàn Kiếm, Hà Nội",
+          phone: "024 3825 6191",
+          website: "https://molisa.gov.vn/",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "Ministry of Construction - Housing Programs",
+          description: "National housing development and assistance programs",
+          address: "37 Lê Đại Hành, Hai Bà Trưng, Hà Nội",
+          phone: "024 3822 3079",
+          website: "https://moc.gov.vn/",
+          category: "Housing",
+          targetAudience: "public"
         }
       ]
     },
@@ -668,6 +892,8 @@ export default function ResourceLocator() {
           phone: "+61 2 9373 9200",
           website: "https://au.usembassy.gov/embassy-consulates/sydney/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Returned and Services League (RSL) Clubs",
@@ -676,6 +902,8 @@ export default function ResourceLocator() {
           phone: "+61 2 9264 8188",
           website: "https://www.rslnational.org/",
           category: "Housing"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Veterans Mental Health Services - Melbourne",
@@ -684,6 +912,8 @@ export default function ResourceLocator() {
           phone: "+61 3 9662 2911",
           website: "https://www.openarms.gov.au/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "U.S. Veterans Employment Network - Australia",
@@ -692,6 +922,8 @@ export default function ResourceLocator() {
           phone: "+61 7 3305 1400",
           website: "https://www.dva.gov.au/civilian-life/finding-employment-after-service",
           category: "Employment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Open Arms - Veterans & Families Counselling",
@@ -700,6 +932,8 @@ export default function ResourceLocator() {
           phone: "+61 1800 011 046",
           website: "https://www.openarms.gov.au/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Soldier On Australia",
@@ -708,6 +942,8 @@ export default function ResourceLocator() {
           phone: "+61 1300 620 380",
           website: "https://soldieron.org.au/",
           category: "Crisis"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Veteran Employment Program",
@@ -716,6 +952,8 @@ export default function ResourceLocator() {
           phone: "+61 1800 555 254",
           website: "https://veteransemployment.gov.au/",
           category: "Employment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "RSL Veterans' Employment Program",
@@ -724,6 +962,46 @@ export default function ResourceLocator() {
           phone: "+61 2 9264 8188",
           website: "https://rslnsw.org.au/veterans-services/employment/",
           category: "Employment"
+        ,
+          targetAudience: "veteran"
+        }
+      ],
+      publicResources: [
+        {
+          name: "Beyond Blue",
+          description: "National mental health organization providing support and information",
+          address: "Nationwide Service",
+          phone: "1300 22 4636",
+          website: "https://www.beyondblue.org.au/",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "Lifeline Australia",
+          description: "24/7 crisis support and suicide prevention services",
+          address: "Nationwide Service",
+          phone: "13 11 14",
+          website: "https://www.lifeline.org.au/",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "Centrelink - Services Australia",
+          description: "Government employment services and job search assistance",
+          address: "Available at service centers nationwide",
+          phone: "132 850",
+          website: "https://www.servicesaustralia.gov.au/",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "Australian Government Housing",
+          description: "National housing assistance and affordable housing programs",
+          address: "Available through state housing authorities",
+          phone: "Contact local housing authority",
+          website: "https://www.dss.gov.au/housing-support",
+          category: "Housing",
+          targetAudience: "public"
         }
       ]
     },
@@ -736,6 +1014,8 @@ export default function ResourceLocator() {
           phone: "Main: +1-833-930-0816 or Australia Toll-Free: 1-800-354-965",
           website: "https://www.va.gov/health-care/foreign-medical-program/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Veterans' Affairs New Zealand (VANZ)",
@@ -744,6 +1024,8 @@ export default function ResourceLocator() {
           phone: "NZ: 0800 483 8372 | Australia: 1800 483 837 | International: +64 4 495 2070",
           website: "https://www.veteransaffairs.mil.nz/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Mental Health Services for Veterans - Wellington",
@@ -752,6 +1034,8 @@ export default function ResourceLocator() {
           phone: "+64 4 801 5050",
           website: "https://www.mentalhealth.org.nz/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Wellington Hospital Mental Health Services",
@@ -760,6 +1044,8 @@ export default function ResourceLocator() {
           phone: "+64 4 385 5999",
           website: "https://www.ccdhb.org.nz/our-services/mental-health-addiction-and-intellectual-disability-service/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Royal New Zealand Returned and Services' Association (RSA)",
@@ -768,6 +1054,8 @@ export default function ResourceLocator() {
           phone: "+64 4 384 7994",
           website: "https://www.rsa.org.nz/",
           category: "Employment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Veterans Crisis Support - Lifeline Aotearoa",
@@ -776,6 +1064,8 @@ export default function ResourceLocator() {
           phone: "0800 543 354",
           website: "https://www.lifeline.org.nz/",
           category: "Crisis"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Samaritans New Zealand",
@@ -784,6 +1074,8 @@ export default function ResourceLocator() {
           phone: "0800 726 666",
           website: "https://www.samaritans.org.nz/",
           category: "Crisis"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Need to Talk - New Zealand",
@@ -792,6 +1084,8 @@ export default function ResourceLocator() {
           phone: "1737 (call or text)",
           website: "https://1737.org.nz/",
           category: "Crisis"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "NZDF4U Support Line",
@@ -800,6 +1094,46 @@ export default function ResourceLocator() {
           phone: "0800 693 348",
           website: "https://www.nzdf.mil.nz/nzdf/health-and-wellbeing/",
           category: "Crisis"
+        ,
+          targetAudience: "veteran"
+        }
+      ],
+      publicResources: [
+        {
+          name: "Mental Health Foundation of New Zealand",
+          description: "National mental health support and resources for all residents",
+          address: "Building F, 74 Taharoto Road, Takapuna, Auckland",
+          phone: "09 623 4812",
+          website: "https://www.mentalhealth.org.nz/",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "1737 Need to Talk?",
+          description: "24/7 free call, text, or webchat mental health support",
+          address: "Nationwide Service",
+          phone: "1737",
+          website: "https://1737.org.nz/",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "Work and Income New Zealand",
+          description: "Government employment services and job placement assistance",
+          address: "Available at service centers nationwide",
+          phone: "0800 559 009",
+          website: "https://www.workandincome.govt.nz/",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "Kāinga Ora - Homes and Communities",
+          description: "Government housing agency providing affordable housing solutions",
+          address: "Level 1, 55 Fanshawe Street, Auckland",
+          phone: "0800 801 601",
+          website: "https://kaingaora.govt.nz/",
+          category: "Housing",
+          targetAudience: "public"
         }
       ]
     },
@@ -812,6 +1146,8 @@ export default function ResourceLocator() {
           phone: "Main: +1-833-930-0816 or Germany Toll-Free: 0800-1800-011",
           website: "https://www.va.gov/health-care/foreign-medical-program/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "American Hospital of Paris",
@@ -820,6 +1156,8 @@ export default function ResourceLocator() {
           phone: "+33 1 46 41 25 25",
           website: "https://www.american-hospital.org/en/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Sainte-Anne Hospital Center",
@@ -828,6 +1166,8 @@ export default function ResourceLocator() {
           phone: "+33 1 45 65 81 00",
           website: "http://www.ch-sainte-anne.fr/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Medical and Psychological Emergency Units (CUMP)",
@@ -836,6 +1176,8 @@ export default function ResourceLocator() {
           phone: "Emergency: 15 (SAMU)",
           website: "https://www.gouvernement.fr/risques",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Suicide Écoute",
@@ -844,6 +1186,8 @@ export default function ResourceLocator() {
           phone: "+33 1 45 39 40 00",
           website: "https://www.suicide-ecoute.fr/",
           category: "Crisis"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "3114 – National Suicide Prevention Number",
@@ -852,6 +1196,8 @@ export default function ResourceLocator() {
           phone: "3114",
           website: "https://3114.fr/",
           category: "Crisis"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "U.S. Veterans Network - France",
@@ -860,6 +1206,46 @@ export default function ResourceLocator() {
           phone: "+33 1 42 60 38 48",
           website: "https://www.legion.org/veteransbenefits/employment",
           category: "Employment"
+        ,
+          targetAudience: "veteran"
+        }
+      ],
+      publicResources: [
+        {
+          name: "Santé Publique France - Santé Mentale",
+          description: "National public health agency mental health services",
+          address: "12 rue du Val d'Osne, 94415 Saint-Maurice",
+          phone: "01 41 79 67 00",
+          website: "https://www.santepubliquefrance.fr/",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "SOS Amitié",
+          description: "24/7 emotional support and crisis intervention hotline",
+          address: "Nationwide Service",
+          phone: "09 72 39 40 50",
+          website: "https://www.sos-amitie.org/",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "Pôle Emploi",
+          description: "National employment agency providing job search and training services",
+          address: "Available at agencies nationwide",
+          phone: "3949",
+          website: "https://www.pole-emploi.fr/",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "Action Logement",
+          description: "National housing assistance and affordable housing programs",
+          address: "Available through regional offices",
+          phone: "0 805 69 00 59",
+          website: "https://www.actionlogement.fr/",
+          category: "Housing",
+          targetAudience: "public"
         }
       ]
     },
@@ -872,6 +1258,8 @@ export default function ResourceLocator() {
           phone: "+351 21 727 3300",
           website: "https://pt.usembassy.gov/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Lajes Field - Terceira Island, Azores",
@@ -880,6 +1268,8 @@ export default function ResourceLocator() {
           phone: "+351 295 57 1115",
           website: "https://www.facebook.com/LajesField/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "U.S. Embassy Medical Referrals",
@@ -888,6 +1278,8 @@ export default function ResourceLocator() {
           phone: "+351 21 727 3300",
           website: "https://pt.usembassy.gov/u-s-citizen-services/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Hospital da Luz",
@@ -896,6 +1288,8 @@ export default function ResourceLocator() {
           phone: "+351 21 710 4400",
           website: "https://www.hospitaldaluz.pt/en/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Foreign Medical Program Support",
@@ -904,6 +1298,46 @@ export default function ResourceLocator() {
           phone: "Main: +1-833-930-0816",
           website: "https://www.va.gov/health-care/foreign-medical-program/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
+        }
+      ],
+      publicResources: [
+        {
+          name: "Serviço Nacional de Saúde - Saúde Mental",
+          description: "National Health Service mental health services for Portuguese residents",
+          address: "Available through health centers nationwide",
+          phone: "808 24 24 24 (SNS 24)",
+          website: "https://www.sns.gov.pt/",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "SOS Voz Amiga",
+          description: "24/7 emotional support and crisis counseling services",
+          address: "Nationwide Service",
+          phone: "213 544 545",
+          website: "https://www.sosvozamiga.org/",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "Instituto do Emprego e Formação Profissional",
+          description: "National employment and vocational training institute",
+          address: "Available at job centers nationwide",
+          phone: "707 474 747",
+          website: "https://www.iefp.pt/",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "Instituto da Habitação e da Reabilitação Urbana",
+          description: "National housing institute providing housing assistance programs",
+          address: "Av. de Berlim 15, 1800-031 Lisboa",
+          phone: "218 221 100",
+          website: "https://www.portaldahabitacao.pt/",
+          category: "Housing",
+          targetAudience: "public"
         }
       ]
     },
@@ -916,6 +1350,8 @@ export default function ResourceLocator() {
           phone: "+32 2 811 4000",
           website: "https://be.usembassy.gov/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "SHAPE Healthcare Facility",
@@ -924,6 +1360,8 @@ export default function ResourceLocator() {
           phone: "+32 65 44 5824",
           website: "https://mhs-europe.tricare.mil/SHAPE",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Community Help Service (CHS) - Brussels",
@@ -932,6 +1370,8 @@ export default function ResourceLocator() {
           phone: "+32 2 648 40 14",
           website: "https://www.chsbelgium.org/",
           category: "Crisis"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "NATO Employment Opportunities",
@@ -940,6 +1380,8 @@ export default function ResourceLocator() {
           phone: "+32 65 44 3333",
           website: "https://www.nato.int/careers",
           category: "Employment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Foreign Medical Program Support",
@@ -948,6 +1390,8 @@ export default function ResourceLocator() {
           phone: "Main: +1-833-930-0816 or Germany Toll-Free: 0800-1800-011",
           website: "https://www.va.gov/health-care/foreign-medical-program/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         }
       ]
     },
@@ -960,6 +1404,8 @@ export default function ResourceLocator() {
           phone: "+30 210 721 2951",
           website: "https://www.va.gov/health-care/foreign-medical-program/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Athens Medical Center",
@@ -968,6 +1414,8 @@ export default function ResourceLocator() {
           phone: "+30 210 686 7000",
           website: "https://www.iatriko.gr/en/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Veterans Mental Health Support - Athens",
@@ -976,6 +1424,8 @@ export default function ResourceLocator() {
           phone: "+30 210 364 5104",
           website: "https://www.athenscounseling.com/",
           category: "Crisis"
+        ,
+          targetAudience: "veteran"
         }
       ]
     },
@@ -988,6 +1438,8 @@ export default function ResourceLocator() {
           phone: "+972 3 519 7575",
           website: "https://il.usembassy.gov/u-s-citizen-services/veterans-affairs/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Tel Aviv University - National PTSD Clinic",
@@ -996,6 +1448,8 @@ export default function ResourceLocator() {
           phone: "+972 3 640 8111",
           website: "https://english.tau.ac.il/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Foreign Medical Program Support",
@@ -1004,6 +1458,46 @@ export default function ResourceLocator() {
           phone: "Main: +1-833-930-0816",
           website: "https://www.va.gov/health-care/foreign-medical-program/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
+        }
+      ],
+      publicResources: [
+        {
+          name: "Ministry of Health - Mental Health Services",
+          description: "National mental health services for Israeli residents",
+          address: "39 Yirmiyahu Street, Jerusalem",
+          phone: "*5400",
+          website: "https://www.health.gov.il/",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "ERAN - Crisis Support",
+          description: "24/7 emotional crisis support and suicide prevention hotline",
+          address: "Nationwide Service",
+          phone: "1201",
+          website: "https://www.eran.org.il/",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "Ministry of Labor - Employment Service",
+          description: "National employment services and job placement assistance",
+          address: "Available at employment bureaus nationwide",
+          phone: "*6050",
+          website: "https://www.gov.il/he/departments/ministry_of_labor_social_affairs_and_social_services",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "Ministry of Housing - Public Housing",
+          description: "National housing assistance and affordable housing programs",
+          address: "8 Bank of Israel Street, Jerusalem",
+          phone: "*9080",
+          website: "https://www.gov.il/he/departments/ministry_of_construction_and_housing",
+          category: "Housing",
+          targetAudience: "public"
         }
       ]
     },
@@ -1016,6 +1510,8 @@ export default function ResourceLocator() {
           phone: "+971 2 414 2200",
           website: "https://ae.usembassy.gov/u-s-citizen-services/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "American Hospital Dubai",
@@ -1024,6 +1520,8 @@ export default function ResourceLocator() {
           phone: "+971 4 377 6666",
           website: "https://www.ahdubai.com/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Aspris Wellbeing Centre - Abu Dhabi",
@@ -1032,6 +1530,8 @@ export default function ResourceLocator() {
           phone: "+971 2 651 8111",
           website: "https://www.asprismentalhealth.ae/",
           category: "Crisis"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Foreign Medical Program Support",
@@ -1040,6 +1540,46 @@ export default function ResourceLocator() {
           phone: "Main: +1-833-930-0816",
           website: "https://www.va.gov/health-care/foreign-medical-program/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
+        }
+      ],
+      publicResources: [
+        {
+          name: "UAE Ministry of Health - Mental Health Services",
+          description: "National mental health services for UAE residents",
+          address: "Available through health centers nationwide",
+          phone: "800 1717",
+          website: "https://www.mohap.gov.ae/",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "UAE Mental Health Crisis Line",
+          description: "24/7 mental health crisis support services",
+          address: "Nationwide Service",
+          phone: "800 4673",
+          website: "https://www.mohap.gov.ae/en/services/mental-health-services",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "Ministry of Human Resources - Employment Services",
+          description: "National employment services and career development programs",
+          address: "Available at Tasheel centers nationwide",
+          phone: "600 590000",
+          website: "https://www.mohre.gov.ae/",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "Mohammed bin Rashid Housing Programme",
+          description: "Housing assistance and affordable housing programs for citizens",
+          address: "Available through Dubai Municipality",
+          phone: "800 9090",
+          website: "https://www.dm.gov.ae/",
+          category: "Housing",
+          targetAudience: "public"
         }
       ]
     },
@@ -1052,6 +1592,8 @@ export default function ResourceLocator() {
           phone: "+27 12 431 4000",
           website: "https://za.usembassy.gov/u-s-citizen-services/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Mediclinic Cape Town",
@@ -1060,6 +1602,8 @@ export default function ResourceLocator() {
           phone: "+27 21 464 5500",
           website: "https://www.mediclinic.co.za/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Recovery Direct - Johannesburg",
@@ -1068,6 +1612,8 @@ export default function ResourceLocator() {
           phone: "+27 11 884 4030",
           website: "https://www.recoverydirect.net/",
           category: "Crisis"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Foreign Medical Program Support",
@@ -1076,6 +1622,8 @@ export default function ResourceLocator() {
           phone: "Main: +1-833-930-0816",
           website: "https://www.va.gov/health-care/foreign-medical-program/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         }
       ]
     }
@@ -1660,6 +2208,8 @@ export default function ResourceLocator() {
           phone: "(727) 398-6661",
           website: "https://www.va.gov/bay-pines-health-care/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Bruce W. Carter VA Medical Center",
@@ -1668,6 +2218,8 @@ export default function ResourceLocator() {
           phone: "(305) 575-7000",
           website: "https://www.va.gov/miami-health-care/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Malcom Randall VA Medical Center",
@@ -1676,6 +2228,8 @@ export default function ResourceLocator() {
           phone: "(352) 376-1611",
           website: "https://www.northflorida.va.gov/locations/gainesville.asp",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Lake City VA Medical Center",
@@ -1684,6 +2238,8 @@ export default function ResourceLocator() {
           phone: "(386) 755-3016",
           website: "https://www.northflorida.va.gov/locations/lakecity.asp",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Orlando VA Medical Center",
@@ -1692,6 +2248,8 @@ export default function ResourceLocator() {
           phone: "(407) 631-1000",
           website: "https://www.va.gov/orlando-health-care/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "West Palm Beach VA Medical Center",
@@ -1700,6 +2258,8 @@ export default function ResourceLocator() {
           phone: "(561) 422-8262",
           website: "https://www.va.gov/west-palm-beach-health-care/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Florida Veterans Support Line",
@@ -1708,6 +2268,8 @@ export default function ResourceLocator() {
           phone: "1-844-MyFLVet (1-844-693-5838)",
           website: "https://www.myflfamilies.com/service-programs/mental-health/florida-veterans-support-line/",
           category: "Crisis"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Home Base Florida",
@@ -1716,6 +2278,8 @@ export default function ResourceLocator() {
           phone: "(239) 338-8389",
           website: "https://homebase.org/florida/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "HUD-VASH Program Florida",
@@ -1724,6 +2288,8 @@ export default function ResourceLocator() {
           phone: "Contact local VA Medical Center",
           website: "https://www.va.gov/homeless/hud-vash.asp",
           category: "Housing"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Volunteers of America Florida",
@@ -1732,6 +2298,8 @@ export default function ResourceLocator() {
           phone: "(407) 273-6686",
           website: "https://www.voaflorida.org/veterans/",
           category: "Housing"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Florida Department of Veterans' Affairs (FDVA)",
@@ -1740,6 +2308,8 @@ export default function ResourceLocator() {
           phone: "(727) 518-3202",
           website: "https://www.floridavets.org/",
           category: "Employment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Wounded Warrior Project - Jacksonville",
@@ -1748,6 +2318,8 @@ export default function ResourceLocator() {
           phone: "(904) 296-7350",
           website: "https://www.woundedwarriorproject.org/",
           category: "Employment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Clearwater Vet Center",
@@ -1756,6 +2328,8 @@ export default function ResourceLocator() {
           phone: "(727) 549-3600",
           website: "https://www.va.gov/find-locations/facility/vc_0525V",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Florida Department of Children and Families - Mental Health Services",
@@ -1764,6 +2338,8 @@ export default function ResourceLocator() {
           phone: "(850) 717-4000",
           website: "https://www.myflfamilies.com/service-programs/mental-health/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Florida Crisis & Access Line",
@@ -1772,6 +2348,8 @@ export default function ResourceLocator() {
           phone: "1-866-762-2237",
           website: "https://www.flcrisisline.org/",
           category: "Crisis"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "CareerSource Florida",
@@ -1780,6 +2358,8 @@ export default function ResourceLocator() {
           phone: "(850) 921-1119",
           website: "https://www.careersourceflorida.com/",
           category: "Employment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Florida Housing Finance Corporation",
@@ -1788,6 +2368,8 @@ export default function ResourceLocator() {
           phone: "(850) 488-4197",
           website: "https://www.floridahousing.org/",
           category: "Housing"
+        ,
+          targetAudience: "veteran"
         }
       ],
       publicResources: [
@@ -1838,6 +2420,8 @@ export default function ResourceLocator() {
           phone: "(404) 321-6111",
           website: "https://www.va.gov/atlanta-health-care/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Charlie Norwood VA Medical Center",
@@ -1846,6 +2430,8 @@ export default function ResourceLocator() {
           phone: "(706) 733-0188",
           website: "https://www.va.gov/augusta-health-care/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Carl Vinson VA Medical Center",
@@ -1854,6 +2440,8 @@ export default function ResourceLocator() {
           phone: "(478) 272-1210",
           website: "https://www.va.gov/dublin-health-care/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Albany VA Clinic",
@@ -1862,6 +2450,8 @@ export default function ResourceLocator() {
           phone: "(229) 446-9000",
           website: "https://www.va.gov/dublin-health-care/locations/albany-va-clinic/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Athens VA Clinic",
@@ -1870,6 +2460,8 @@ export default function ResourceLocator() {
           phone: "(706) 227-4534",
           website: "https://www.va.gov/atlanta-health-care/locations/athens-va-clinic/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Brunswick VA Clinic",
@@ -1878,6 +2470,8 @@ export default function ResourceLocator() {
           phone: "(912) 261-2355",
           website: "https://www.va.gov/charleston-health-care/locations/brunswick-va-clinic/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Atlanta Vet Center",
@@ -1886,6 +2480,8 @@ export default function ResourceLocator() {
           phone: "(404) 347-7264",
           website: "https://www.va.gov/find-locations/facility/vc_0221V",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Augusta Vet Center",
@@ -1894,6 +2490,8 @@ export default function ResourceLocator() {
           phone: "(706) 729-5762",
           website: "https://www.va.gov/find-locations/facility/vc_0204V",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Columbus Vet Center",
@@ -1902,6 +2500,8 @@ export default function ResourceLocator() {
           phone: "(706) 257-7308",
           website: "https://www.va.gov/find-locations/facility/vc_0203V",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Georgia War Veterans Nursing Home",
@@ -1910,6 +2510,8 @@ export default function ResourceLocator() {
           phone: "(706) 721-2531",
           website: "https://veterans.georgia.gov/georgia-war-veterans-nursing-homes",
           category: "Housing"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Georgia Department of Veterans Service",
@@ -1918,6 +2520,8 @@ export default function ResourceLocator() {
           phone: "(404) 656-2300",
           website: "https://veterans.georgia.gov/",
           category: "Employment"
+        ,
+          targetAudience: "veteran"
         }
       ],
       publicResources: [
@@ -1968,6 +2572,8 @@ export default function ResourceLocator() {
           phone: "(808) 433-0600",
           website: "https://www.va.gov/pacific-islands-health-care/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Daniel K. Akaka VA Clinic",
@@ -1976,6 +2582,8 @@ export default function ResourceLocator() {
           phone: "(800) 214-1306",
           website: "https://www.va.gov/pacific-islands-health-care/locations/daniel-k-akaka-department-of-veterans-affairs-outpatient-clinic/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Hilo Community-Based Outpatient Clinic",
@@ -1984,6 +2592,8 @@ export default function ResourceLocator() {
           phone: "(808) 935-3781",
           website: "https://www.va.gov/pacific-islands-health-care/locations/hilo-community-based-outpatient-clinic/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Kailua-Kona Community-Based Outpatient Clinic",
@@ -1992,6 +2602,8 @@ export default function ResourceLocator() {
           phone: "(808) 329-0774",
           website: "https://www.va.gov/pacific-islands-health-care/locations/kailua-kona-community-based-outpatient-clinic/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Maui Community-Based Outpatient Clinic",
@@ -2000,6 +2612,8 @@ export default function ResourceLocator() {
           phone: "(808) 871-2454",
           website: "https://www.va.gov/pacific-islands-health-care/locations/maui-community-based-outpatient-clinic/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Kauai Community-Based Outpatient Clinic",
@@ -2008,6 +2622,8 @@ export default function ResourceLocator() {
           phone: "(808) 246-0497",
           website: "https://www.va.gov/pacific-islands-health-care/locations/kauai-community-based-outpatient-clinic/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "National Center for PTSD – Pacific Islands Division",
@@ -2016,6 +2632,8 @@ export default function ResourceLocator() {
           phone: "(808) 566-1546",
           website: "https://www.ptsd.va.gov/about/divisions/pacific/index.asp",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Honolulu Vet Center",
@@ -2024,6 +2642,8 @@ export default function ResourceLocator() {
           phone: "(808) 973-8387",
           website: "https://www.va.gov/find-locations/facility/vc_0237V",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Hilo Vet Center",
@@ -2032,6 +2652,8 @@ export default function ResourceLocator() {
           phone: "(808) 969-3833",
           website: "https://www.va.gov/find-locations/facility/vc_0228V",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Kona Vet Center",
@@ -2040,6 +2662,8 @@ export default function ResourceLocator() {
           phone: "(808) 329-0574",
           website: "https://www.va.gov/find-locations/facility/vc_0543V",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Maui Vet Center",
@@ -2048,6 +2672,8 @@ export default function ResourceLocator() {
           phone: "(808) 242-8557",
           website: "https://www.va.gov/find-locations/facility/vc_0233V",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Kauai Vet Center",
@@ -2056,6 +2682,8 @@ export default function ResourceLocator() {
           phone: "(808) 246-1163",
           website: "https://www.va.gov/find-locations/facility/vc_0224V",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "West Oahu Vet Center",
@@ -2064,6 +2692,8 @@ export default function ResourceLocator() {
           phone: "(808) 674-2414",
           website: "https://www.va.gov/find-locations/facility/vc_0217V",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Veterans Crisis Line",
@@ -2072,6 +2702,8 @@ export default function ResourceLocator() {
           phone: "988, then press 1",
           website: "https://www.veteranscrisisline.net/",
           category: "Crisis"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "U.S. VETS – Barber's Point",
@@ -2080,6 +2712,8 @@ export default function ResourceLocator() {
           phone: "(808) 672-2977",
           website: "https://www.usvetsinc.org/hawaii/",
           category: "Housing"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Hawaii Public Housing Authority – VASH Program",
@@ -2088,6 +2722,8 @@ export default function ResourceLocator() {
           phone: "(808) 832-4692",
           website: "https://hpha.hawaii.gov/federally_funded_programs/",
           category: "Housing"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Hawaii Department of Labor – Veterans Program",
@@ -2096,6 +2732,8 @@ export default function ResourceLocator() {
           phone: "(808) 586-8841",
           website: "https://labor.hawaii.gov/jobs/vets/",
           category: "Employment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "U.S. VETS – Employment Services",
@@ -2104,6 +2742,8 @@ export default function ResourceLocator() {
           phone: "(808) 672-2977",
           website: "https://www.usvetsinc.org/hawaii/",
           category: "Employment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Hawaii State Office of Veterans Services",
@@ -2112,6 +2752,8 @@ export default function ResourceLocator() {
           phone: "(808) 433-0420",
           website: "https://dod.hawaii.gov/ovs/",
           category: "Employment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Legal Aid Society of Hawaii – Veterans Project",
@@ -2120,6 +2762,8 @@ export default function ResourceLocator() {
           phone: "(808) 536-4302",
           website: "https://www.legalaidhawaii.org/veterans-project.html",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         }
       ],
       publicResources: [
@@ -2170,6 +2814,8 @@ export default function ResourceLocator() {
           phone: "(208) 422-1000",
           website: "https://www.va.gov/boise-health-care/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Caldwell VA Clinic",
@@ -2178,6 +2824,8 @@ export default function ResourceLocator() {
           phone: "(208) 454-4820",
           website: "https://www.va.gov/boise-health-care/locations/caldwell-va-clinic/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Coeur d'Alene VA Clinic",
@@ -2186,6 +2834,8 @@ export default function ResourceLocator() {
           phone: "(208) 665-1711",
           website: "https://www.va.gov/boise-health-care/locations/coeur-dalene-va-clinic/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Idaho Falls VA Clinic",
@@ -2194,6 +2844,8 @@ export default function ResourceLocator() {
           phone: "(208) 522-2922",
           website: "https://www.va.gov/boise-health-care/locations/idaho-falls-va-clinic/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Twin Falls VA Clinic",
@@ -2202,6 +2854,8 @@ export default function ResourceLocator() {
           phone: "(208) 732-0959",
           website: "https://www.va.gov/boise-health-care/locations/twin-falls-va-clinic/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Boise Vet Center",
@@ -2210,6 +2864,8 @@ export default function ResourceLocator() {
           phone: "(208) 342-3612",
           website: "https://www.va.gov/find-locations/facility/vc_0507V",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "East Idaho Vet Center",
@@ -2218,6 +2874,8 @@ export default function ResourceLocator() {
           phone: "(208) 232-0316",
           website: "https://www.va.gov/find-locations/facility/vc_0548V",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Veterans Crisis Line",
@@ -2226,6 +2884,8 @@ export default function ResourceLocator() {
           phone: "988, then press 1",
           website: "https://www.veteranscrisisline.net/",
           category: "Crisis"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Boise Veterans Home",
@@ -2234,6 +2894,8 @@ export default function ResourceLocator() {
           phone: "(208) 780-1600",
           website: "https://veterans.idaho.gov/veterans-homes/",
           category: "Housing"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Lewiston Veterans Home",
@@ -2242,6 +2904,8 @@ export default function ResourceLocator() {
           phone: "(208) 750-3600",
           website: "https://veterans.idaho.gov/veterans-homes/",
           category: "Housing"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Pocatello Veterans Home",
@@ -2250,6 +2914,8 @@ export default function ResourceLocator() {
           phone: "(208) 235-7800",
           website: "https://veterans.idaho.gov/veterans-homes/",
           category: "Housing"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Idaho Division of Veterans Services Employment Services",
@@ -2258,6 +2924,8 @@ export default function ResourceLocator() {
           phone: "(208) 780-1300",
           website: "https://veterans.idaho.gov/benefits-and-services/",
           category: "Employment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Idaho Legal Aid Services - Veterans",
@@ -2266,6 +2934,8 @@ export default function ResourceLocator() {
           phone: "(208) 746-7541",
           website: "https://www.idaholegalaid.org/node/2232/veterans-issues",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Idaho Veterans Chamber of Commerce",
@@ -2274,6 +2944,8 @@ export default function ResourceLocator() {
           phone: "(208) 917-5612",
           website: "https://idahoveteranschamber.org/",
           category: "Employment"
+        ,
+          targetAudience: "veteran"
         }
       ],
       publicResources: [
@@ -2324,6 +2996,8 @@ export default function ResourceLocator() {
           phone: "(312) 569-8387",
           website: "https://www.va.gov/chicago-health-care/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Edward Hines Jr. VA Hospital",
@@ -2332,6 +3006,8 @@ export default function ResourceLocator() {
           phone: "(708) 202-8387",
           website: "https://www.va.gov/hines-health-care/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "VA Illiana Health Care System",
@@ -2340,6 +3016,8 @@ export default function ResourceLocator() {
           phone: "(217) 554-3000",
           website: "https://www.va.gov/illiana-health-care/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Captain James A. Lovell Federal Health Care Center",
@@ -2348,6 +3026,8 @@ export default function ResourceLocator() {
           phone: "(847) 688-1900",
           website: "https://www.va.gov/lovell-federal-health-care-va/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Aurora VA Clinic",
@@ -2356,6 +3036,8 @@ export default function ResourceLocator() {
           phone: "(630) 859-2504",
           website: "https://www.va.gov/hines-health-care/locations/aurora-va-clinic/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Bloomington VA Clinic",
@@ -2364,6 +3046,8 @@ export default function ResourceLocator() {
           phone: "(309) 663-6574",
           website: "https://www.va.gov/illiana-health-care/locations/bloomington-va-clinic/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Carbondale VA Clinic",
@@ -2372,6 +3056,8 @@ export default function ResourceLocator() {
           phone: "(618) 351-1031",
           website: "https://www.va.gov/marion-health-care/locations/carbondale-va-clinic/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Chicago Heights Vet Center",
@@ -2380,6 +3066,8 @@ export default function ResourceLocator() {
           phone: "(708) 754-0340",
           website: "https://www.va.gov/find-locations/facility/vc_0227V",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Evanston Vet Center",
@@ -2388,6 +3076,8 @@ export default function ResourceLocator() {
           phone: "(847) 332-1019",
           website: "https://www.va.gov/find-locations/facility/vc_0215V",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Oak Park Vet Center",
@@ -2396,6 +3086,8 @@ export default function ResourceLocator() {
           phone: "(708) 383-3225",
           website: "https://www.va.gov/find-locations/facility/vc_0223V",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Illinois Veterans' Home at Anna",
@@ -2404,6 +3096,8 @@ export default function ResourceLocator() {
           phone: "(618) 833-6302",
           website: "https://www2.illinois.gov/veterans/facilities/Pages/anna.aspx",
           category: "Housing"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Illinois Veterans' Home at LaSalle",
@@ -2412,6 +3106,8 @@ export default function ResourceLocator() {
           phone: "(815) 223-0303",
           website: "https://www2.illinois.gov/veterans/facilities/Pages/lasalle.aspx",
           category: "Housing"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Illinois Veterans' Home at Manteno",
@@ -2420,6 +3116,8 @@ export default function ResourceLocator() {
           phone: "(815) 468-6581",
           website: "https://www2.illinois.gov/veterans/facilities/Pages/manteno.aspx",
           category: "Housing"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Illinois Veterans' Home at Quincy",
@@ -2428,6 +3126,8 @@ export default function ResourceLocator() {
           phone: "(217) 222-8641",
           website: "https://www2.illinois.gov/veterans/facilities/Pages/quincy.aspx",
           category: "Housing"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Illinois Department of Veterans' Affairs",
@@ -2436,6 +3136,8 @@ export default function ResourceLocator() {
           phone: "(217) 782-6641",
           website: "https://www2.illinois.gov/veterans/",
           category: "Employment"
+        ,
+          targetAudience: "veteran"
         }
       ],
       publicResources: [
@@ -2486,6 +3188,8 @@ export default function ResourceLocator() {
           phone: "(317) 554-0000",
           website: "https://www.va.gov/indiana-health-care/locations/richard-l-roudebush-va-medical-center/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "VA Northern Indiana Health Care System – Fort Wayne Campus",
@@ -2494,6 +3198,8 @@ export default function ResourceLocator() {
           phone: "(260) 426-5431",
           website: "https://www.va.gov/northern-indiana-health-care/locations/fort-wayne-va-medical-center/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "VA Northern Indiana Health Care System – Marion Campus",
@@ -2502,6 +3208,8 @@ export default function ResourceLocator() {
           phone: "(765) 674-3321",
           website: "https://www.va.gov/northern-indiana-health-care/locations/marion-va-medical-center/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Adam Benjamin Jr. Outpatient Clinic",
@@ -2510,6 +3218,8 @@ export default function ResourceLocator() {
           phone: "(219) 662-5000",
           website: "https://www.va.gov/northern-indiana-health-care/locations/crown-point-va-clinic/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Bloomington VA Clinic",
@@ -2518,6 +3228,8 @@ export default function ResourceLocator() {
           phone: "(812) 336-5723",
           website: "https://www.va.gov/indiana-health-care/locations/bloomington-va-clinic/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Hoosier Veterans Assistance Foundation",
@@ -2526,6 +3238,8 @@ export default function ResourceLocator() {
           phone: "(317) 951-0688",
           website: "https://hvafofindiana.org/",
           category: "Housing"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "INVET's Veteran Employment Program",
@@ -2534,6 +3248,8 @@ export default function ResourceLocator() {
           phone: "(844) 480-0009",
           website: "https://www.in.gov/dva/veteran-services/employment/",
           category: "Employment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Indiana Veterans Crisis Response Team",
@@ -2542,6 +3258,8 @@ export default function ResourceLocator() {
           phone: "988, then press 1",
           website: "https://www.veteranscrisisline.net/",
           category: "Crisis"
+        ,
+          targetAudience: "veteran"
         }
       ],
       publicResources: [
@@ -2592,6 +3310,8 @@ export default function ResourceLocator() {
           phone: "(319) 338-0581",
           website: "https://www.va.gov/iowa-city-health-care/locations/iowa-city-va-medical-center/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Des Moines VA Medical Center",
@@ -2600,6 +3320,8 @@ export default function ResourceLocator() {
           phone: "(515) 699-5999",
           website: "https://www.va.gov/central-iowa-health-care/locations/des-moines-va-medical-center/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Cedar Rapids VA Clinic",
@@ -2608,6 +3330,8 @@ export default function ResourceLocator() {
           phone: "(319) 369-3500",
           website: "https://www.va.gov/iowa-city-health-care/locations/cedar-rapids-va-clinic/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Waterloo VA Clinic",
@@ -2616,6 +3340,8 @@ export default function ResourceLocator() {
           phone: "(319) 272-2323",
           website: "https://www.va.gov/iowa-city-health-care/locations/waterloo-va-clinic/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Iowa Veterans Home",
@@ -2624,6 +3350,8 @@ export default function ResourceLocator() {
           phone: "(641) 752-1501",
           website: "https://ivh.iowa.gov/",
           category: "Housing"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Iowa Workforce Development Veterans Services",
@@ -2632,6 +3360,8 @@ export default function ResourceLocator() {
           phone: "(515) 281-5387",
           website: "https://www.iowaworkforcedevelopment.gov/veteran-services",
           category: "Employment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Iowa Veterans Crisis Line",
@@ -2640,6 +3370,8 @@ export default function ResourceLocator() {
           phone: "988, then press 1",
           website: "https://www.veteranscrisisline.net/",
           category: "Crisis"
+        ,
+          targetAudience: "veteran"
         }
       ],
       publicResources: [
@@ -2690,6 +3422,8 @@ export default function ResourceLocator() {
           phone: "(316) 685-2221",
           website: "https://www.va.gov/eastern-kansas-health-care/locations/robert-j-dole-va-medical-center/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Colmery-O'Neil VA Medical Center",
@@ -2698,6 +3432,8 @@ export default function ResourceLocator() {
           phone: "(785) 350-3111",
           website: "https://www.va.gov/eastern-kansas-health-care/locations/colmery-oneil-va-medical-center/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Dwight D. Eisenhower VA Medical Center",
@@ -2706,6 +3442,8 @@ export default function ResourceLocator() {
           phone: "(913) 682-2000",
           website: "https://www.va.gov/eastern-kansas-health-care/locations/dwight-d-eisenhower-va-medical-center/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Dodge City VA Clinic",
@@ -2714,6 +3452,8 @@ export default function ResourceLocator() {
           phone: "(620) 225-9049",
           website: "https://www.va.gov/eastern-kansas-health-care/locations/dodge-city-va-clinic/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Hays VA Clinic",
@@ -2722,6 +3462,8 @@ export default function ResourceLocator() {
           phone: "(785) 625-8700",
           website: "https://www.va.gov/wichita-health-care/locations/hays-community-based-outpatient-clinic/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Kansas Commission on Veterans Affairs Office",
@@ -2730,6 +3472,8 @@ export default function ResourceLocator() {
           phone: "(785) 296-3976",
           website: "https://kcva.ks.gov/",
           category: "Employment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Kansas Soldiers' Home",
@@ -2738,6 +3482,8 @@ export default function ResourceLocator() {
           phone: "(620) 227-2121",
           website: "https://kcva.ks.gov/veteran-homes/fort-dodge-home",
           category: "Housing"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Kansas Veterans Crisis Line",
@@ -2746,6 +3492,8 @@ export default function ResourceLocator() {
           phone: "988, then press 1",
           website: "https://www.veteranscrisisline.net/",
           category: "Crisis"
+        ,
+          targetAudience: "veteran"
         }
       ],
       publicResources: [
@@ -2796,6 +3544,8 @@ export default function ResourceLocator() {
           phone: "(859) 233-4511",
           website: "https://www.va.gov/lexington-health-care/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Robley Rex VA Medical Center",
@@ -2804,6 +3554,8 @@ export default function ResourceLocator() {
           phone: "(502) 287-4000",
           website: "https://www.va.gov/louisville-health-care/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Bowling Green VA Clinic",
@@ -2812,6 +3564,8 @@ export default function ResourceLocator() {
           phone: "(270) 782-0120",
           website: "https://www.va.gov/tennessee-valley-health-care/locations/bowling-green-community-based-outpatient-clinic/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Owensboro VA Clinic",
@@ -2820,6 +3574,8 @@ export default function ResourceLocator() {
           phone: "(270) 684-5034",
           website: "https://www.va.gov/louisville-health-care/locations/owensboro-va-clinic/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Hazard VA Clinic",
@@ -2828,6 +3584,8 @@ export default function ResourceLocator() {
           phone: "(606) 436-2350",
           website: "https://www.va.gov/lexington-health-care/locations/hazard-va-clinic/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Kentucky Department of Veterans Affairs",
@@ -2836,6 +3594,8 @@ export default function ResourceLocator() {
           phone: "(502) 564-9203",
           website: "https://veterans.ky.gov/",
           category: "Employment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Thomson-Hood Veterans Center",
@@ -2844,6 +3604,8 @@ export default function ResourceLocator() {
           phone: "(859) 858-2814",
           website: "https://veterans.ky.gov/nursinghomes/Pages/thomson-hood.aspx",
           category: "Housing"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Kentucky Veterans Crisis Line",
@@ -2852,6 +3614,8 @@ export default function ResourceLocator() {
           phone: "988, then press 1",
           website: "https://www.veteranscrisisline.net/",
           category: "Crisis"
+        ,
+          targetAudience: "veteran"
         }
       ],
       publicResources: [
@@ -2902,6 +3666,8 @@ export default function ResourceLocator() {
           phone: "(504) 568-0811",
           website: "https://www.va.gov/southeast-louisiana-health-care/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Overton Brooks VA Medical Center",
@@ -2910,6 +3676,8 @@ export default function ResourceLocator() {
           phone: "(318) 221-8411",
           website: "https://www.va.gov/shreveport-health-care/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Alexandria VA Medical Center",
@@ -2918,6 +3686,8 @@ export default function ResourceLocator() {
           phone: "(318) 473-0010",
           website: "https://www.va.gov/alexandria-health-care/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Baton Rouge VA Clinic",
@@ -2926,6 +3696,8 @@ export default function ResourceLocator() {
           phone: "(225) 761-3400",
           website: "https://www.va.gov/southeast-louisiana-health-care/locations/baton-rouge-va-clinic/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Lafayette VA Clinic",
@@ -2934,6 +3706,8 @@ export default function ResourceLocator() {
           phone: "(337) 262-0870",
           website: "https://www.va.gov/alexandria-health-care/locations/lafayette-va-clinic/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Houma VA Clinic",
@@ -2942,6 +3716,8 @@ export default function ResourceLocator() {
           phone: "(985) 851-0188",
           website: "https://www.va.gov/southeast-louisiana-health-care/locations/houma-va-clinic/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Louisiana Department of Veterans Affairs",
@@ -2950,6 +3726,8 @@ export default function ResourceLocator() {
           phone: "(225) 219-5000",
           website: "https://vetaffairs.la.gov/",
           category: "Employment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Louisiana Veterans Home",
@@ -2958,6 +3736,8 @@ export default function ResourceLocator() {
           phone: "(225) 634-5265",
           website: "https://vetaffairs.la.gov/benefit/veteran-homes/",
           category: "Housing"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Louisiana Veterans Crisis Line",
@@ -2966,6 +3746,8 @@ export default function ResourceLocator() {
           phone: "988, then press 1",
           website: "https://www.veteranscrisisline.net/",
           category: "Crisis"
+        ,
+          targetAudience: "veteran"
         }
       ],
       publicResources: [
@@ -3016,6 +3798,8 @@ export default function ResourceLocator() {
           phone: "(207) 623-8411",
           website: "https://www.va.gov/maine-health-care/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Bangor VA Clinic",
@@ -3024,6 +3808,8 @@ export default function ResourceLocator() {
           phone: "(207) 561-3600",
           website: "https://www.va.gov/maine-health-care/locations/bangor-va-clinic/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Portland VA Clinic",
@@ -3032,6 +3818,8 @@ export default function ResourceLocator() {
           phone: "(207) 623-8411 x7490",
           website: "https://www.va.gov/maine-health-care/locations/portland-va-clinic/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Lewiston VA Clinic",
@@ -3040,6 +3828,8 @@ export default function ResourceLocator() {
           phone: "(207) 330-2700",
           website: "https://www.va.gov/maine-health-care/locations/lewiston-auburn-va-clinic/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Caribou VA Clinic",
@@ -3048,6 +3838,8 @@ export default function ResourceLocator() {
           phone: "(207) 493-3800",
           website: "https://www.va.gov/maine-health-care/locations/caribou-va-clinic/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Bangor Vet Center",
@@ -3056,6 +3848,8 @@ export default function ResourceLocator() {
           phone: "(207) 947-3391",
           website: "https://www.va.gov/find-locations/facility/vc_0524V",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Veterans Inc. Housing Program",
@@ -3064,6 +3858,8 @@ export default function ResourceLocator() {
           phone: "(800) 482-2565",
           website: "https://www.veteransinc.org/services/housing-programs/",
           category: "Housing"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Maine Bureau of Veterans' Services",
@@ -3072,6 +3868,8 @@ export default function ResourceLocator() {
           phone: "(207) 430-6035",
           website: "https://www.maine.gov/veterans/",
           category: "Employment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Maine Veterans Crisis Line",
@@ -3080,6 +3878,8 @@ export default function ResourceLocator() {
           phone: "988, then press 1",
           website: "https://www.veteranscrisisline.net/",
           category: "Crisis"
+        ,
+          targetAudience: "veteran"
         }
       ],
       publicResources: [
@@ -3130,6 +3930,8 @@ export default function ResourceLocator() {
           phone: "(410) 605-7000",
           website: "https://www.va.gov/maryland-health-care/locations/baltimore-va-medical-center/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Perry Point VA Medical Center",
@@ -3138,6 +3940,8 @@ export default function ResourceLocator() {
           phone: "(410) 642-2411",
           website: "https://www.va.gov/maryland-health-care/locations/perry-point-va-medical-center/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Loch Raven VA Medical Center",
@@ -3146,6 +3950,8 @@ export default function ResourceLocator() {
           phone: "(410) 605-7000",
           website: "https://www.va.gov/maryland-health-care/locations/loch-raven-va-medical-center/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Glen Burnie VA Outpatient Clinic",
@@ -3154,6 +3960,8 @@ export default function ResourceLocator() {
           phone: "(410) 590-4140",
           website: "https://www.va.gov/maryland-health-care/locations/glen-burnie-va-outpatient-clinic/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Cambridge VA Outpatient Clinic",
@@ -3162,6 +3970,8 @@ export default function ResourceLocator() {
           phone: "(410) 228-6243",
           website: "https://www.va.gov/maryland-health-care/locations/cambridge-va-outpatient-clinic/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Fort Meade VA Outpatient Clinic",
@@ -3170,6 +3980,8 @@ export default function ResourceLocator() {
           phone: "(410) 305-5300",
           website: "https://www.va.gov/maryland-health-care/locations/fort-meade-va-outpatient-clinic/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Baltimore Vet Center",
@@ -3178,6 +3990,8 @@ export default function ResourceLocator() {
           phone: "(410) 764-9400",
           website: "https://www.va.gov/find-locations/facility/vc_0407V",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Maryland Center for Veterans Education and Training (MCVET)",
@@ -3186,6 +4000,8 @@ export default function ResourceLocator() {
           phone: "(410) 576-9626",
           website: "http://www.mcvet.org/",
           category: "Housing"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Maryland Department of Veterans Affairs",
@@ -3194,6 +4010,8 @@ export default function ResourceLocator() {
           phone: "(410) 260-3838",
           website: "https://veterans.maryland.gov/",
           category: "Employment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Maryland Veterans Crisis Line",
@@ -3202,6 +4020,8 @@ export default function ResourceLocator() {
           phone: "988, then press 1",
           website: "https://www.veteranscrisisline.net/",
           category: "Crisis"
+        ,
+          targetAudience: "veteran"
         }
       ],
       publicResources: [
@@ -3252,6 +4072,8 @@ export default function ResourceLocator() {
           phone: "(857) 364-4000",
           website: "https://www.va.gov/boston-health-care/locations/jamaica-plain-campus/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "West Roxbury VA Medical Center",
@@ -3260,6 +4082,8 @@ export default function ResourceLocator() {
           phone: "(857) 364-4000",
           website: "https://www.va.gov/boston-health-care/locations/west-roxbury-campus/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Brockton VA Medical Center",
@@ -3268,6 +4092,8 @@ export default function ResourceLocator() {
           phone: "(508) 583-4500",
           website: "https://www.va.gov/boston-health-care/locations/brockton-campus/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Edith Nourse Rogers Memorial Veterans Hospital",
@@ -3276,6 +4102,8 @@ export default function ResourceLocator() {
           phone: "(781) 687-2000",
           website: "https://www.va.gov/bedford-health-care/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Edward P. Boland VA Medical Center",
@@ -3284,6 +4112,8 @@ export default function ResourceLocator() {
           phone: "(413) 584-4040",
           website: "https://www.va.gov/central-western-massachusetts-health-care/locations/northampton-va-medical-center/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Boston Vet Center",
@@ -3292,6 +4122,8 @@ export default function ResourceLocator() {
           phone: "(857) 203-6461",
           website: "https://www.va.gov/find-locations/facility/vc_0606V",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Lowell VA Clinic",
@@ -3300,6 +4132,8 @@ export default function ResourceLocator() {
           phone: "(978) 671-9000",
           website: "https://www.va.gov/bedford-health-care/locations/lowell-va-clinic/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "New England Center and Home for Veterans",
@@ -3308,6 +4142,8 @@ export default function ResourceLocator() {
           phone: "(617) 371-1800",
           website: "https://www.nechv.org/",
           category: "Housing"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Massachusetts Department of Veterans' Services",
@@ -3316,6 +4152,8 @@ export default function ResourceLocator() {
           phone: "(617) 210-5480",
           website: "https://www.mass.gov/orgs/massachusetts-department-of-veterans-services",
           category: "Employment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Massachusetts Veterans Crisis Line",
@@ -3324,6 +4162,8 @@ export default function ResourceLocator() {
           phone: "988, then press 1",
           website: "https://www.veteranscrisisline.net/",
           category: "Crisis"
+        ,
+          targetAudience: "veteran"
         }
       ],
       publicResources: [
@@ -3374,6 +4214,8 @@ export default function ResourceLocator() {
           phone: "(313) 576-1000",
           website: "https://www.va.gov/detroit-health-care/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Battle Creek VA Medical Center",
@@ -3382,6 +4224,8 @@ export default function ResourceLocator() {
           phone: "(269) 966-5600",
           website: "https://www.va.gov/battle-creek-health-care/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Ann Arbor VA Medical Center",
@@ -3390,6 +4234,8 @@ export default function ResourceLocator() {
           phone: "(734) 769-7100",
           website: "https://www.va.gov/ann-arbor-health-care/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Oscar G. Johnson VA Medical Center",
@@ -3398,6 +4244,8 @@ export default function ResourceLocator() {
           phone: "(906) 774-3300",
           website: "https://www.va.gov/iron-mountain-health-care/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Grand Rapids VA Clinic",
@@ -3406,6 +4254,8 @@ export default function ResourceLocator() {
           phone: "(616) 365-9575",
           website: "https://www.va.gov/battle-creek-health-care/locations/grand-rapids-va-clinic/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Detroit Vet Center",
@@ -3414,6 +4264,8 @@ export default function ResourceLocator() {
           phone: "(313) 831-6509",
           website: "https://www.va.gov/find-locations/facility/vc_0310V",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Volunteers of America Michigan Veterans Housing Program",
@@ -3422,6 +4274,8 @@ export default function ResourceLocator() {
           phone: "(517) 484-4414",
           website: "https://www.voami.org/veterans-services",
           category: "Housing"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Michigan Veterans Affairs Agency",
@@ -3430,6 +4284,8 @@ export default function ResourceLocator() {
           phone: "(800) 642-4838",
           website: "https://www.michigan.gov/mvaa",
           category: "Employment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Michigan Veterans Crisis Line",
@@ -3438,6 +4294,8 @@ export default function ResourceLocator() {
           phone: "988, then press 1",
           website: "https://www.veteranscrisisline.net/",
           category: "Crisis"
+        ,
+          targetAudience: "veteran"
         }
       ],
       publicResources: [
@@ -3488,6 +4346,8 @@ export default function ResourceLocator() {
           phone: "(612) 725-2000",
           website: "https://www.va.gov/minneapolis-health-care/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "St. Cloud VA Health Care System",
@@ -3496,6 +4356,8 @@ export default function ResourceLocator() {
           phone: "(320) 252-1670",
           website: "https://www.va.gov/st-cloud-health-care/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Rochester VA Clinic",
@@ -3504,6 +4366,8 @@ export default function ResourceLocator() {
           phone: "(507) 252-0885",
           website: "https://www.va.gov/minneapolis-health-care/locations/rochester-va-clinic/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Maplewood VA Clinic",
@@ -3512,6 +4376,8 @@ export default function ResourceLocator() {
           phone: "(651) 290-3040",
           website: "https://www.va.gov/minneapolis-health-care/locations/maplewood-va-clinic/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Duluth VA Clinic",
@@ -3520,6 +4386,8 @@ export default function ResourceLocator() {
           phone: "(715) 398-2400", 
           website: "https://www.va.gov/minneapolis-health-care/locations/twin-ports-va-clinic/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "St. Paul Vet Center",
@@ -3528,6 +4396,8 @@ export default function ResourceLocator() {
           phone: "(651) 644-4022",
           website: "https://www.va.gov/find-locations/facility/vc_0643V",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Minnesota Assistance Council for Veterans (MACV)",
@@ -3536,6 +4406,8 @@ export default function ResourceLocator() {
           phone: "(833) 222-6228",
           website: "https://www.mac-v.org/",
           category: "Housing"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Minnesota Department of Veterans Affairs",
@@ -3544,6 +4416,8 @@ export default function ResourceLocator() {
           phone: "(651) 296-2562",
           website: "https://mn.gov/mdva/",
           category: "Employment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Minnesota Veterans Crisis Line",
@@ -3552,6 +4426,8 @@ export default function ResourceLocator() {
           phone: "988, then press 1",
           website: "https://www.veteranscrisisline.net/",
           category: "Crisis"
+        ,
+          targetAudience: "veteran"
         }
       ],
       publicResources: [
@@ -3602,6 +4478,8 @@ export default function ResourceLocator() {
           phone: "(601) 362-4471",
           website: "https://www.va.gov/jackson-health-care/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Gulf Coast Veterans Health Care System",
@@ -3610,6 +4488,8 @@ export default function ResourceLocator() {
           phone: "(228) 523-5000",
           website: "https://www.va.gov/gulf-coast-health-care/locations/biloxi-va-medical-center/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Kosciusko VA Clinic",
@@ -3618,6 +4498,8 @@ export default function ResourceLocator() {
           phone: "(601) 362-4471 x5800",
           website: "https://www.va.gov/jackson-health-care/locations/kosciusko-va-clinic/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Meridian VA Clinic",
@@ -3626,6 +4508,8 @@ export default function ResourceLocator() {
           phone: "(601) 482-3275",
           website: "https://www.va.gov/jackson-health-care/locations/meridian-va-clinic/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Greenville VA Clinic",
@@ -3634,6 +4518,8 @@ export default function ResourceLocator() {
           phone: "(662) 332-9872",
           website: "https://www.va.gov/jackson-health-care/locations/greenville-va-clinic/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Jackson Vet Center",
@@ -3642,6 +4528,8 @@ export default function ResourceLocator() {
           phone: "(601) 965-5477",
           website: "https://www.va.gov/find-locations/facility/vc_0734V",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Mississippi State Veterans Homes",
@@ -3650,6 +4538,8 @@ export default function ResourceLocator() {
           phone: "(601) 576-4850",
           website: "https://www.msva.ms.gov/state-veterans-homes",
           category: "Housing"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Mississippi Department of Veterans Affairs",
@@ -3658,6 +4548,8 @@ export default function ResourceLocator() {
           phone: "(601) 576-4850",
           website: "https://www.msva.ms.gov/",
           category: "Employment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Mississippi Veterans Crisis Line",
@@ -3666,6 +4558,8 @@ export default function ResourceLocator() {
           phone: "988, then press 1",
           website: "https://www.veteranscrisisline.net/",
           category: "Crisis"
+        ,
+          targetAudience: "veteran"
         }
       ],
       publicResources: [
@@ -3716,6 +4610,8 @@ export default function ResourceLocator() {
           phone: "(573) 814-6000",
           website: "https://www.va.gov/columbia-missouri-health-care/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Kansas City VA Medical Center",
@@ -3724,6 +4620,8 @@ export default function ResourceLocator() {
           phone: "(816) 861-4700",
           website: "https://www.va.gov/kansas-city-health-care/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "St. Louis VA Health Care System - John Cochran Division",
@@ -3732,6 +4630,8 @@ export default function ResourceLocator() {
           phone: "(314) 652-4100",
           website: "https://www.va.gov/st-louis-health-care/locations/john-cochran-division/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "St. Louis VA Health Care System - Jefferson Barracks Division",
@@ -3740,6 +4640,8 @@ export default function ResourceLocator() {
           phone: "(314) 652-4100",
           website: "https://www.va.gov/st-louis-health-care/locations/jefferson-barracks-division/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Gene Taylor VA Clinic",
@@ -3748,6 +4650,8 @@ export default function ResourceLocator() {
           phone: "(417) 466-4000",
           website: "https://www.va.gov/fayetteville-arkansas-health-care/locations/gene-taylor-community-based-outpatient-clinic/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Columbia Vet Center",
@@ -3756,6 +4660,8 @@ export default function ResourceLocator() {
           phone: "(573) 814-6206",
           website: "https://www.va.gov/find-locations/facility/vc_0704V",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "St. Louis Veterans Home",
@@ -3764,6 +4670,8 @@ export default function ResourceLocator() {
           phone: "(314) 340-6389",
           website: "https://mvc.dps.mo.gov/homes/stlouis.php",
           category: "Housing"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Missouri Veterans Commission",
@@ -3772,6 +4680,8 @@ export default function ResourceLocator() {
           phone: "(573) 751-3779",
           website: "https://mvc.dps.mo.gov/",
           category: "Employment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Missouri Veterans Crisis Line",
@@ -3780,6 +4690,8 @@ export default function ResourceLocator() {
           phone: "988, then press 1",
           website: "https://www.veteranscrisisline.net/",
           category: "Crisis"
+        ,
+          targetAudience: "veteran"
         }
       ],
       publicResources: [
@@ -3830,6 +4742,8 @@ export default function ResourceLocator() {
           phone: "(406) 442-6410",
           website: "https://www.va.gov/montana-health-care/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Benjamin Charles Steele VA Clinic",
@@ -3838,6 +4752,8 @@ export default function ResourceLocator() {
           phone: "(406) 373-3500",
           website: "https://www.va.gov/montana-health-care/locations/benjamin-charles-steele-va-clinic/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Anaconda VA Clinic",
@@ -3846,6 +4762,8 @@ export default function ResourceLocator() {
           phone: "(406) 496-3000",
           website: "https://www.va.gov/montana-health-care/locations/anaconda-va-clinic/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Bozeman VA Clinic",
@@ -3854,6 +4772,8 @@ export default function ResourceLocator() {
           phone: "(406) 582-5300",
           website: "https://www.va.gov/montana-health-care/locations/bozeman-va-clinic/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Great Falls VA Clinic",
@@ -3862,6 +4782,8 @@ export default function ResourceLocator() {
           phone: "(406) 791-3200",
           website: "https://www.va.gov/montana-health-care/locations/great-falls-va-clinic/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Missoula VA Clinic",
@@ -3870,6 +4792,8 @@ export default function ResourceLocator() {
           phone: "(406) 829-5400",
           website: "https://www.va.gov/montana-health-care/locations/david-j-thatcher-va-clinic/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Montana Veterans' Home",
@@ -3878,6 +4802,8 @@ export default function ResourceLocator() {
           phone: "(406) 892-3256",
           website: "https://dphhs.mt.gov/sltc/homelivingoptions/montanaveteranshomes/index",
           category: "Housing"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Montana Veterans Affairs Division",
@@ -3886,6 +4812,8 @@ export default function ResourceLocator() {
           phone: "(406) 324-3740",
           website: "https://montanadma.org/montana-veterans-affairs",
           category: "Employment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Montana Veterans Crisis Line",
@@ -3894,6 +4822,8 @@ export default function ResourceLocator() {
           phone: "988, then press 1",
           website: "https://www.veteranscrisisline.net/",
           category: "Crisis"
+        ,
+          targetAudience: "veteran"
         }
       ],
       publicResources: [
@@ -3944,6 +4874,8 @@ export default function ResourceLocator() {
           phone: "(402) 346-8800",
           website: "https://www.nebraska.va.gov/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         }
       ],
       publicResources: [
@@ -3994,6 +4926,8 @@ export default function ResourceLocator() {
           phone: "(702) 791-9000",
           website: "https://www.lasvegas.va.gov/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         }
       ],
       publicResources: [
@@ -4044,6 +4978,8 @@ export default function ResourceLocator() {
           phone: "(603) 624-4366",
           website: "https://www.manchester.va.gov/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         }
       ],
       publicResources: [
@@ -4094,6 +5030,8 @@ export default function ResourceLocator() {
           phone: "(973) 676-1000",
           website: "https://www.newjersey.va.gov/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         }
       ],
       publicResources: [
@@ -4144,6 +5082,8 @@ export default function ResourceLocator() {
           phone: "(505) 265-1711",
           website: "https://www.albuquerque.va.gov/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         }
       ],
       publicResources: [
@@ -4194,6 +5134,8 @@ export default function ResourceLocator() {
           phone: "(212) 686-7500",
           website: "https://www.nyharbor.va.gov/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         }
       ],
       publicResources: [
@@ -4244,6 +5186,8 @@ export default function ResourceLocator() {
           phone: "(919) 286-0411",
           website: "https://www.durham.va.gov/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         }
       ],
       publicResources: [
@@ -4294,6 +5238,8 @@ export default function ResourceLocator() {
           phone: "(701) 232-3241",
           website: "https://www.fargo.va.gov/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         }
       ],
       publicResources: [
@@ -4344,6 +5290,8 @@ export default function ResourceLocator() {
           phone: "(216) 791-3800",
           website: "https://www.cleveland.va.gov/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         }
       ],
       publicResources: [
@@ -4394,6 +5342,8 @@ export default function ResourceLocator() {
           phone: "(405) 456-1000",
           website: "https://www.oklahoma.va.gov/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         }
       ],
       publicResources: [
@@ -4444,6 +5394,8 @@ export default function ResourceLocator() {
           phone: "(503) 220-8262",
           website: "https://www.portland.va.gov/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Oregon Department of Veterans' Affairs (ODVA)",
@@ -4452,6 +5404,8 @@ export default function ResourceLocator() {
           phone: "(800) 692-9666",
           website: "https://www.oregon.gov/odva/",
           category: "Employment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Vet Centers in Oregon",
@@ -4460,6 +5414,8 @@ export default function ResourceLocator() {
           phone: "(877) 927-8387",
           website: "https://www.va.gov/find-locations/?facilityType=vet_center&state=OR",
           category: "Crisis"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Portland VA Research Foundation (PVARF)",
@@ -4468,6 +5424,8 @@ export default function ResourceLocator() {
           phone: "(503) 220-8262 ext. 56937",
           website: "https://www.pvarf.org/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Center to Improve Veteran Involvement in Care (CIVIC)",
@@ -4476,6 +5434,8 @@ export default function ResourceLocator() {
           phone: "(503) 220-8262",
           website: "https://www.portland.va.gov/research/civic/",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Veteran Readiness and Employment (VR&E) Program - Oregon",
@@ -4484,6 +5444,8 @@ export default function ResourceLocator() {
           phone: "(800) 827-1000",
           website: "https://www.va.gov/careers-employment/vocational-rehabilitation/",
           category: "Employment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Oregon Veterans' Emergency Financial Assistance Program",
@@ -4492,6 +5454,8 @@ export default function ResourceLocator() {
           phone: "(800) 692-9666",
           website: "https://www.oregon.gov/odva/Connect/Pages/Assistance.aspx",
           category: "Housing"
+        ,
+          targetAudience: "veteran"
         }
       ],
       publicResources: [
@@ -4542,6 +5506,8 @@ export default function ResourceLocator() {
           phone: "(215) 823-5800",
           website: "https://www.philadelphia.va.gov/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         }
       ],
       publicResources: [
@@ -4592,6 +5558,8 @@ export default function ResourceLocator() {
           phone: "(401) 273-7100",
           website: "https://www.providence.va.gov/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         }
       ],
       publicResources: [
@@ -4642,6 +5610,8 @@ export default function ResourceLocator() {
           phone: "(803) 776-4000",
           website: "https://www.columbia.va.gov/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         }
       ],
       publicResources: [
@@ -4692,6 +5662,8 @@ export default function ResourceLocator() {
           phone: "(605) 336-3230",
           website: "https://www.va.gov/sioux-falls-health-care/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "VA Black Hills Health Care System - Fort Meade",
@@ -4700,6 +5672,8 @@ export default function ResourceLocator() {
           phone: "(605) 347-2511",
           website: "https://www.va.gov/black-hills-health-care/locations/fort-meade-va-medical-center/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "VA Black Hills Health Care System - Hot Springs",
@@ -4708,6 +5682,8 @@ export default function ResourceLocator() {
           phone: "(605) 745-2000",
           website: "https://www.va.gov/black-hills-health-care/locations/hot-springs-va-medical-center/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Sioux Falls Vet Center",
@@ -4716,6 +5692,8 @@ export default function ResourceLocator() {
           phone: "(605) 330-4552",
           website: "https://www.va.gov/find-locations/facility/vc_0631V",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Rapid City Vet Center",
@@ -4724,6 +5702,8 @@ export default function ResourceLocator() {
           phone: "(605) 348-0077",
           website: "https://www.va.gov/find-locations/facility/vc_0632V",
           category: "Treatment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Veterans Crisis Line",
@@ -4732,6 +5712,8 @@ export default function ResourceLocator() {
           phone: "988, then press 1",
           website: "https://www.veteranscrisisline.net/",
           category: "Crisis"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "South Dakota Veterans Cemetery",
@@ -4740,6 +5722,8 @@ export default function ResourceLocator() {
           phone: "(605) 336-3230",
           website: "https://vetaffairs.sd.gov/veteranscemetery/default.aspx",
           category: "Housing"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Black Hills National Cemetery",
@@ -4748,6 +5732,8 @@ export default function ResourceLocator() {
           phone: "(605) 347-3830",
           website: "https://www.cem.va.gov/cems/nchp/blackhills.asp",
           category: "Housing"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "University of South Dakota - Veterans' Services",
@@ -4756,6 +5742,8 @@ export default function ResourceLocator() {
           phone: "(605) 677-5331",
           website: "https://www.usd.edu/veterans",
           category: "Employment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Veteran Readiness and Employment (VR&E) Program",
@@ -4764,6 +5752,8 @@ export default function ResourceLocator() {
           phone: "(605) 341-8165",
           website: "https://www.benefits.va.gov/vocrehab/",
           category: "Employment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "South Dakota Department of Veterans Affairs",
@@ -4772,6 +5762,8 @@ export default function ResourceLocator() {
           phone: "(605) 773-3269",
           website: "https://vetaffairs.sd.gov/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         }
       ],
       publicResources: [
@@ -4822,6 +5814,8 @@ export default function ResourceLocator() {
           phone: "(615) 327-4751",
           website: "https://www.tennesseevalley.va.gov/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         }
       ],
       publicResources: [
@@ -4872,6 +5866,8 @@ export default function ResourceLocator() {
           phone: "(713) 791-1414",
           website: "https://www.va.gov/houston-health-care/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "HUD-Veterans Affairs Supportive Housing (HUD-VASH)",
@@ -4880,6 +5876,8 @@ export default function ResourceLocator() {
           phone: "Contact your local VA Medical Center",
           website: "https://www.va.gov/homeless/hud-vash.asp",
           category: "Housing"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Supportive Services for Veteran Families (SSVF)",
@@ -4888,6 +5886,8 @@ export default function ResourceLocator() {
           phone: "1-877-4AID-VET (1-877-424-3838)",
           website: "https://www.va.gov/homeless/ssvf/",
           category: "Housing"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Veterans Housing Assistance Program (VHAP)",
@@ -4896,6 +5896,8 @@ export default function ResourceLocator() {
           phone: "1-800-252-8387",
           website: "https://vlb.texas.gov/homes/index.html",
           category: "Housing"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Endeavors",
@@ -4904,6 +5906,8 @@ export default function ResourceLocator() {
           phone: "(210) 431-6466",
           website: "https://endeavors.org/veteran-services/",
           category: "Housing"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Operation Homefront",
@@ -4912,6 +5916,8 @@ export default function ResourceLocator() {
           phone: "(210) 659-7756",
           website: "https://operationhomefront.org/",
           category: "Housing"
+        ,
+          targetAudience: "veteran"
         },
 
         {
@@ -4921,14 +5927,19 @@ export default function ResourceLocator() {
           phone: "1-877-4AID-VET (1-877-424-3838)",
           website: "https://www.va.gov/homeless/nationalcallcenter.asp",
           category: "Crisis"
-        },
+        ,
+          targetAudience: "veteran"
+        }
+      ],
+      publicResources: [
         {
           name: "Texas Health and Human Services - Mental Health Services",
           description: "State mental health services including crisis intervention, substance abuse treatment, and community support programs for all residents",
           address: "4900 N Lamar Blvd, Austin, TX 78751",
           phone: "(512) 424-6500",
           website: "https://www.hhs.texas.gov/services/mental-health-substance-use",
-          category: "Treatment"
+          category: "Treatment",
+          targetAudience: "public"
         },
         {
           name: "Texas Crisis Text Line",
@@ -4936,7 +5947,8 @@ export default function ResourceLocator() {
           address: "Statewide Service",
           phone: "Text HOME to 741741",
           website: "https://www.hhs.texas.gov/services/mental-health-substance-use/crisis-services",
-          category: "Crisis"
+          category: "Crisis",
+          targetAudience: "public"
         },
         {
           name: "Texas Workforce Commission",
@@ -4944,7 +5956,8 @@ export default function ResourceLocator() {
           address: "101 E 15th St, Austin, TX 78778",
           phone: "(512) 463-2222",
           website: "https://www.twc.texas.gov/",
-          category: "Employment"
+          category: "Employment",
+          targetAudience: "public"
         },
         {
           name: "Texas Department of Housing and Community Affairs",
@@ -4952,7 +5965,8 @@ export default function ResourceLocator() {
           address: "221 E 11th St, Austin, TX 78701",
           phone: "(512) 475-3800",
           website: "https://www.tdhca.state.tx.us/",
-          category: "Housing"
+          category: "Housing",
+          targetAudience: "public"
         }
       ]
     },
@@ -4965,6 +5979,8 @@ export default function ResourceLocator() {
           phone: "(801) 582-1565",
           website: "https://www.va.gov/salt-lake-city-health-care/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         }
       ],
       publicResources: [
@@ -5015,6 +6031,8 @@ export default function ResourceLocator() {
           phone: "(802) 295-9363",
           website: "https://www.whiteriver.va.gov/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         }
       ],
       publicResources: [
@@ -5065,6 +6083,8 @@ export default function ResourceLocator() {
           phone: "(804) 675-5000",
           website: "https://www.va.gov/richmond-health-care/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "HUD-Veterans Affairs Supportive Housing (HUD-VASH)",
@@ -5073,6 +6093,8 @@ export default function ResourceLocator() {
           phone: "(877) 424-3838",
           website: "https://www.va.gov/homeless/hud-vash.asp",
           category: "Housing"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Supportive Services for Veteran Families (SSVF)",
@@ -5081,6 +6103,8 @@ export default function ResourceLocator() {
           phone: "(877) 424-3838",
           website: "https://www.va.gov/homeless/ssvf/",
           category: "Housing"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Virginia Department of Veterans Services (DVS)",
@@ -5089,6 +6113,8 @@ export default function ResourceLocator() {
           phone: "(804) 786-0286",
           website: "https://www.dvs.virginia.gov/",
           category: "Employment"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Virginia Disabled American Veterans (DAV)",
@@ -5097,6 +6123,8 @@ export default function ResourceLocator() {
           phone: "(804) 917-3650",
           website: "https://dav.org/veterans/find-your-local-office/",
           category: "Crisis"
+        ,
+          targetAudience: "veteran"
         },
         {
           name: "Virginia Beach Community Development Corporation",
@@ -5105,6 +6133,8 @@ export default function ResourceLocator() {
           phone: "(757) 463-9516",
           website: "https://www.vbcdc.org",
           category: "Housing"
+        ,
+          targetAudience: "veteran"
         }
       ],
       publicResources: [
@@ -5155,6 +6185,8 @@ export default function ResourceLocator() {
           phone: "(206) 762-1010",
           website: "https://www.pugetsound.va.gov/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         }
       ],
       publicResources: [
@@ -5205,6 +6237,8 @@ export default function ResourceLocator() {
           phone: "(304) 429-6741",
           website: "https://www.huntington.va.gov/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         }
       ],
       publicResources: [
@@ -5255,6 +6289,8 @@ export default function ResourceLocator() {
           phone: "(608) 256-1901",
           website: "https://www.madison.va.gov/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         }
       ],
       publicResources: [
@@ -5305,6 +6341,8 @@ export default function ResourceLocator() {
           phone: "(307) 778-7550",
           website: "https://www.cheyenne.va.gov/",
           category: "VA"
+        ,
+          targetAudience: "veteran"
         }
       ],
       publicResources: [
