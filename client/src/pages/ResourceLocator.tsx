@@ -2543,6 +2543,44 @@ export default function ResourceLocator() {
           website: "https://www.veteranscrisisline.net/",
           category: "Crisis"
         }
+      ],
+      publicResources: [
+        {
+          name: "Indiana Family and Social Services Administration - Mental Health",
+          description: "State mental health and substance abuse services for all Indiana residents",
+          address: "402 W Washington Street, Indianapolis, IN 46204",
+          phone: "(317) 234-3700",
+          website: "https://www.in.gov/fssa/dmha/",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "Indiana Crisis Hotline",
+          description: "24/7 statewide crisis support and suicide prevention services",
+          address: "Statewide Service",
+          phone: "1-800-273-8255",
+          website: "https://www.in.gov/fssa/dmha/mental-health-services/crisis-services/",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "Indiana Department of Workforce Development",
+          description: "State employment services including job training and career assistance for all residents",
+          address: "10 N Senate Ave, Indianapolis, IN 46204",
+          phone: "(317) 232-7670",
+          website: "https://www.in.gov/dwd/",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "Indiana Housing and Community Development Authority",
+          description: "State housing assistance programs including affordable housing and homebuyer assistance",
+          address: "30 S Meridian Street, Indianapolis, IN 46204",
+          phone: "(317) 232-7777",
+          website: "https://www.in.gov/ihcda/",
+          category: "Housing",
+          targetAudience: "public"
+        }
       ]
     },
     "Iowa": {
@@ -2602,6 +2640,44 @@ export default function ResourceLocator() {
           phone: "988, then press 1",
           website: "https://www.veteranscrisisline.net/",
           category: "Crisis"
+        }
+      ],
+      publicResources: [
+        {
+          name: "Iowa Department of Human Services - Mental Health",
+          description: "State mental health and substance abuse services for all Iowa residents",
+          address: "1305 E Walnut Street, Des Moines, IA 50319",
+          phone: "(515) 281-5087",
+          website: "https://dhs.iowa.gov/mental-health-substance-abuse",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "Iowa Crisis Chat and Text Line",
+          description: "24/7 statewide crisis support via chat, text, and phone",
+          address: "Statewide Service",
+          phone: "1-855-325-4296",
+          website: "https://yourlifeiowa.org/",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "IowaWORKS - Workforce Development",
+          description: "State employment services including job training and career assistance for all residents",
+          address: "1000 E Grand Ave, Des Moines, IA 50319",
+          phone: "(515) 281-5387",
+          website: "https://www.iowaworkforcedevelopment.gov/",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "Iowa Finance Authority - Housing Programs",
+          description: "State housing assistance programs including affordable housing and homebuyer assistance",
+          address: "1963 Bell Avenue, Des Moines, IA 50315",
+          phone: "(515) 725-4900",
+          website: "https://www.iowafinanceauthority.gov/",
+          category: "Housing",
+          targetAudience: "public"
         }
       ]
     },
@@ -2671,6 +2747,44 @@ export default function ResourceLocator() {
           website: "https://www.veteranscrisisline.net/",
           category: "Crisis"
         }
+      ],
+      publicResources: [
+        {
+          name: "Kansas Department for Aging and Disability Services - Mental Health",
+          description: "State mental health and substance abuse services for all Kansas residents",
+          address: "503 S Kansas Ave, Topeka, KS 66603",
+          phone: "(785) 296-3271",
+          website: "https://www.kdads.ks.gov/behavioral-health",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "Kansas Crisis Hotline",
+          description: "24/7 statewide crisis support and suicide prevention services",
+          address: "Statewide Service",
+          phone: "1-800-273-8255",
+          website: "https://www.kansascrisishotline.org/",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "Kansas Department of Commerce - Workforce Services",
+          description: "State employment services including job training and career assistance for all residents",
+          address: "1000 SW Jackson Street, Topeka, KS 66612",
+          phone: "(785) 296-5298",
+          website: "https://www.kansascommerce.gov/",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "Kansas Housing Resources Corporation",
+          description: "State housing assistance programs including affordable housing and homebuyer assistance",
+          address: "611 S Kansas Ave, Topeka, KS 66603",
+          phone: "(785) 217-2001",
+          website: "https://www.kshousingcorp.org/",
+          category: "Housing",
+          targetAudience: "public"
+        }
       ]
     },
     "Kentucky": {
@@ -2738,6 +2852,44 @@ export default function ResourceLocator() {
           phone: "988, then press 1",
           website: "https://www.veteranscrisisline.net/",
           category: "Crisis"
+        }
+      ],
+      publicResources: [
+        {
+          name: "Kentucky Department for Behavioral Health - Mental Health Services",
+          description: "State mental health and substance abuse services for all Kentucky residents",
+          address: "275 E Main Street, Frankfort, KY 40621",
+          phone: "(502) 564-4527",
+          website: "https://dbhdid.ky.gov/",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "Kentucky Crisis and Information Hotline",
+          description: "24/7 statewide crisis support and mental health information",
+          address: "Statewide Service",
+          phone: "1-800-372-2273",
+          website: "https://www.kentuckystatepolice.org/crisis-intervention/",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "Kentucky Career Center - Workforce Development",
+          description: "State employment services including job training and career assistance for all residents",
+          address: "275 E Main Street, Frankfort, KY 40621",
+          phone: "(502) 564-7456",
+          website: "https://kcc.ky.gov/",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "Kentucky Housing Corporation",
+          description: "State housing assistance programs including affordable housing and homebuyer assistance",
+          address: "1231 Louisville Road, Frankfort, KY 40601",
+          phone: "(502) 564-7630",
+          website: "https://www.kyhousing.org/",
+          category: "Housing",
+          targetAudience: "public"
         }
       ]
     },
@@ -2814,6 +2966,44 @@ export default function ResourceLocator() {
           phone: "988, then press 1",
           website: "https://www.veteranscrisisline.net/",
           category: "Crisis"
+        }
+      ],
+      publicResources: [
+        {
+          name: "Louisiana Department of Health - Office of Behavioral Health",
+          description: "State mental health and substance abuse services for all Louisiana residents",
+          address: "628 N 4th Street, Baton Rouge, LA 70802",
+          phone: "(225) 342-9500",
+          website: "https://ldh.la.gov/page/78",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "Louisiana Crisis Line",
+          description: "24/7 statewide crisis support and suicide prevention services",
+          address: "Statewide Service",
+          phone: "1-800-273-8255",
+          website: "https://louisianacrisislline.org/",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "Louisiana Workforce Commission",
+          description: "State employment services including job training and career assistance for all residents",
+          address: "1001 N 23rd Street, Baton Rouge, LA 70802",
+          phone: "(225) 342-3111",
+          website: "https://www.laworks.net/",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "Louisiana Housing Finance Agency",
+          description: "State housing assistance programs including affordable housing and homebuyer assistance",
+          address: "2415 Quail Dr, Baton Rouge, LA 70808",
+          phone: "(225) 763-8700",
+          website: "https://www.lhfa.state.la.us/",
+          category: "Housing",
+          targetAudience: "public"
         }
       ]
     },
