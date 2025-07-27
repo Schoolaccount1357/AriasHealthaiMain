@@ -16,7 +16,7 @@ export function AboutSUDS() {
         {/* Main Content */}
         <div className="mb-8 sm:mb-10">
           <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed mb-6">
-            Many veterans face barriers to care especially in substance use recovery.
+            Many people face barriers to care especially in substance use recovery.
             Traditional services don't always meet them where they are.
           </p>
           
@@ -31,7 +31,7 @@ export function AboutSUDS() {
                 </div>
                 <div className="flex-1 min-w-0">
                   <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-1 sm:mb-2">Limited Access</h3>
-                  <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">Limited access to timely mental health support when veterans need it most</p>
+                  <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">Limited access to timely mental health support when people need it most</p>
                 </div>
               </div>
             </div>
