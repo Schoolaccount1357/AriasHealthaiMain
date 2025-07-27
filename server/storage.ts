@@ -17,30 +17,30 @@ export interface IStorage {
   getUser(id: number): Promise<User | undefined>;
   getUserByUsername(username: string): Promise<User | undefined>;
   createUser(user: InsertUser): Promise<User>;
-  
+
   // Veteran form operations
   createVeteranForm(form: InsertVeteran): Promise<Veteran>;
   getVeteranForm(id: number): Promise<Veteran | undefined>;
   getVeteranFormByEmail(email: string): Promise<Veteran | undefined>;
   getAllVeteranForms(): Promise<Veteran[]>;
   updateVeteranFormStatus(id: number, status: string): Promise<Veteran | undefined>;
-  
+
   // Waitlist operations
   addToWaitlist(entry: InsertWaitlist): Promise<Waitlist>;
   getWaitlistByEmail(email: string): Promise<Waitlist | undefined>;
   getAllWaitlistEntries(): Promise<Waitlist[]>;
-  
+
   // Resource Usage operations
   logResourceUsage(data: InsertResourceUsage): Promise<ResourceUsage>;
   getResourceUsageStats(): Promise<{ resourceType: string; count: number }[]>;
   getResourceUsageByType(type: string): Promise<ResourceUsage[]>;
-  
+
   // State Resource Usage operations
   logStateResourceUsage(data: InsertStateResourceUsage): Promise<StateResourceUsage>;
   getStateResourceUsageStats(): Promise<{ state: string; count: number }[]>;
   getStateResourceUsageByState(state: string): Promise<StateResourceUsage[]>;
   getStateResourceUsageByCategory(category: string): Promise<StateResourceUsage[]>;
-  
+
   // Navigation Tracking operations
   logNavUsage(data: InsertNavUsage): Promise<NavUsage>;
   getNavUsageStats(): Promise<{ navType: string; count: number }[]>;
@@ -48,7 +48,7 @@ export interface IStorage {
   getStateClicksAnalytics(): Promise<{ state: string; count: number }[]>;
   getCountryClicksAnalytics(): Promise<{ country: string; count: number }[]>;
   getRegionTypeComparison(): Promise<{ regionType: string; count: number }[]>;
-  
+
   // Security Logging operations
   logSecurityEvent(data: InsertSecurityLog): Promise<SecurityLog>;
   getSecurityEventsByIP(ip: string): Promise<SecurityLog[]>;
@@ -73,7 +73,16 @@ export interface IStorage {
   }[]>;
   getCountryOriginStats(): Promise<{ countryCode: string; countryName: string; count: number }[]>;
   getTrendingIPs(limit?: number): Promise<{ ipAddress: string; count: number; lastSeen: Date }[]>;
-  
+  getSecurityAnalyticsBreakdown(): Promise<{
+    totalRows: number;
+    eventTypeBreakdown: { eventType: string; count: number; percentage: string }[];
+    severityBreakdown: { severity: string; count: number; percentage: string }[];
+    countryBreakdown: { countryCode: string; countryName: string; count: number; percentage: string }[];
+    ipReputationBreakdown: { range: string; count: number; percentage: string }[];
+    botActivityBreakdown: { category: string; count: number; percentage: string }[];
+    timeRangeBreakdown: { period: string; count: number; percentage: string }[];
+  }>;
+
   // Visitor Activity Logging operations
   logVisitorActivity(data: InsertVisitorActivityLog): Promise<VisitorActivityLog>;
   getVisitorActivityByCountry(countryCode: string): Promise<VisitorActivityLog[]>;
@@ -143,7 +152,7 @@ export class DatabaseStorage implements IStorage {
       .returning();
     return updatedVeteran || undefined;
   }
-  
+
   // Waitlist operations
   async addToWaitlist(entry: InsertWaitlist): Promise<Waitlist> {
     const [waitlistEntry] = await db
@@ -179,7 +188,7 @@ export class DatabaseStorage implements IStorage {
       })
       .from(resourceUsage)
       .groupBy(resourceUsage.resourceType);
-    
+
     return result;
   }
 
@@ -189,7 +198,7 @@ export class DatabaseStorage implements IStorage {
       .from(resourceUsage)
       .where(eq(resourceUsage.resourceType, type));
   }
-  
+
   // State Resource Usage operations
   async logStateResourceUsage(data: InsertStateResourceUsage): Promise<StateResourceUsage> {
     const [usage] = await db
@@ -207,7 +216,7 @@ export class DatabaseStorage implements IStorage {
       })
       .from(stateResourceUsage)
       .groupBy(stateResourceUsage.state);
-    
+
     return result;
   }
 
@@ -217,14 +226,14 @@ export class DatabaseStorage implements IStorage {
       .from(stateResourceUsage)
       .where(eq(stateResourceUsage.state, state));
   }
-  
+
   async getStateResourceUsageByCategory(category: string): Promise<StateResourceUsage[]> {
     return await db
       .select()
       .from(stateResourceUsage)
       .where(eq(stateResourceUsage.category, category));
   }
-  
+
   // Navigation tracking operations
   async logNavUsage(data: InsertNavUsage): Promise<NavUsage> {
     const [usage] = await db
@@ -233,7 +242,7 @@ export class DatabaseStorage implements IStorage {
       .returning();
     return usage;
   }
-  
+
   async getNavUsageStats(): Promise<{ navType: string; count: number }[]> {
     const result = await db
       .select({
@@ -242,17 +251,17 @@ export class DatabaseStorage implements IStorage {
       })
       .from(navUsage)
       .groupBy(navUsage.navType);
-    
+
     return result;
   }
-  
+
   async getNavUsageByType(navType: string): Promise<NavUsage[]> {
     return await db
       .select()
       .from(navUsage)
       .where(eq(navUsage.navType, navType));
   }
-  
+
   // Analytics for state clicks
   async getStateClicksAnalytics(): Promise<{ state: string; count: number }[]> {
     const result = await db
@@ -264,10 +273,10 @@ export class DatabaseStorage implements IStorage {
       .where(eq(navUsage.navType, 'state_select'))
       .groupBy(navUsage.value)
       .orderBy(sql`count(*) desc`);
-    
+
     return result;
   }
-  
+
   // Analytics for country clicks
   async getCountryClicksAnalytics(): Promise<{ country: string; count: number }[]> {
     const result = await db
@@ -279,10 +288,10 @@ export class DatabaseStorage implements IStorage {
       .where(eq(navUsage.navType, 'country_select'))
       .groupBy(navUsage.value)
       .orderBy(sql`count(*) desc`);
-    
+
     return result;
   }
-  
+
   // Analytics for US vs International toggle comparison
   async getRegionTypeComparison(): Promise<{ regionType: string; count: number }[]> {
     const result = await db
@@ -294,10 +303,10 @@ export class DatabaseStorage implements IStorage {
       .where(eq(navUsage.navType, 'toggle'))
       .groupBy(navUsage.value)
       .orderBy(sql`count(*) desc`);
-    
+
     return result;
   }
-  
+
   // Security Logging operations
   async logSecurityEvent(data: InsertSecurityLog): Promise<SecurityLog> {
     const [log] = await db
@@ -326,7 +335,7 @@ export class DatabaseStorage implements IStorage {
   async getHighSeverityEvents(daysBack: number = 7): Promise<SecurityLog[]> {
     const dateThreshold = new Date();
     dateThreshold.setDate(dateThreshold.getDate() - daysBack);
-    
+
     return await db
       .select()
       .from(securityLogs)
@@ -385,7 +394,7 @@ export class DatabaseStorage implements IStorage {
       })
       .where(eq(securityLogs.id, id))
       .returning();
-    
+
     return event || undefined;
   }
 
@@ -398,7 +407,7 @@ export class DatabaseStorage implements IStorage {
       .from(securityLogs)
       .groupBy(securityLogs.eventType)
       .orderBy(sql`count(*) desc`);
-    
+
     return result;
   }
 
@@ -413,12 +422,12 @@ export class DatabaseStorage implements IStorage {
       .groupBy(securityLogs.ipAddress)
       .orderBy(sql`count(*) desc`)
       .limit(limit);
-    
+
     return result;
   }
-  
+
   // New methods for enhanced security logging and reporting
-  
+
   async getBotActivityStats(): Promise<{ botCategory: string; count: number; severity: string; isSuspicious: boolean }[]> {
     const result = await db
       .select({
@@ -436,7 +445,7 @@ export class DatabaseStorage implements IStorage {
       )
       .groupBy(securityLogs.eventType, securityLogs.severity)
       .orderBy(sql`count(*) desc`);
-    
+
     // Add isSuspicious flag based on event type and severity
     return result.map(item => ({
       ...item,
@@ -446,7 +455,7 @@ export class DatabaseStorage implements IStorage {
                     (item.botCategory.includes('BOT') && !item.botCategory.includes('LEGITIMATE'))
     }));
   }
-  
+
   async getBotActivityList(limit: number = 20): Promise<{
     id: number;
     timestamp: Date;
@@ -477,7 +486,7 @@ export class DatabaseStorage implements IStorage {
       )
       .orderBy(desc(securityLogs.timestamp))
       .limit(limit);
-    
+
     // Add isSuspicious flag
     return result.map(item => ({
       ...item,
@@ -487,7 +496,184 @@ export class DatabaseStorage implements IStorage {
                     (item.botCategory.includes('BOT') && !item.botCategory.includes('LEGITIMATE'))
     }));
   }
-  
+
+  async getSecurityAnalyticsBreakdown(): Promise<{
+    totalRows: number;
+    eventTypeBreakdown: { eventType: string; count: number; percentage: string }[];
+    severityBreakdown: { severity: string; count: number; percentage: string }[];
+    countryBreakdown: { countryCode: string; countryName: string; count: number; percentage: string }[];
+    ipReputationBreakdown: { range: string; count: number; percentage: string }[];
+    botActivityBreakdown: { category: string; count: number; percentage: string }[];
+    timeRangeBreakdown: { period: string; count: number; percentage: string }[];
+  }> {
+    // Get total count first
+    const totalResult = await db
+      .select({ count: sql<number>`count(*)` })
+      .from(securityLogs);
+    const totalRows = totalResult[0].count;
+
+    // Event Type Breakdown
+    const eventTypes = await db
+      .select({
+        eventType: securityLogs.eventType,
+        count: sql<number>`count(*)`,
+      })
+      .from(securityLogs)
+      .groupBy(securityLogs.eventType)
+      .orderBy(sql`count(*) desc`);
+
+    // Severity Breakdown
+    const severities = await db
+      .select({
+        severity: securityLogs.severity,
+        count: sql<number>`count(*)`,
+      })
+      .from(securityLogs)
+      .groupBy(securityLogs.severity)
+      .orderBy(sql`count(*) desc`);
+
+    // Country Breakdown
+    const countries = await db
+      .select({
+        countryCode: securityLogs.countryCode,
+        count: sql<number>`count(*)`,
+      })
+      .from(securityLogs)
+      .where(sql`${securityLogs.countryCode} IS NOT NULL`)
+      .groupBy(securityLogs.countryCode)
+      .orderBy(sql`count(*) desc`);
+
+    // IP Reputation Breakdown
+    const ipReputation = await db
+      .select({
+        range: sql<string>`
+          CASE 
+            WHEN ${securityLogs.ipReputation} >= 80 THEN 'Excellent (80-100)'
+            WHEN ${securityLogs.ipReputation} >= 60 THEN 'Good (60-79)'
+            WHEN ${securityLogs.ipReputation} >= 40 THEN 'Fair (40-59)'
+            WHEN ${securityLogs.ipReputation} >= 20 THEN 'Poor (20-39)'
+            WHEN ${securityLogs.ipReputation} < 20 THEN 'Very Poor (0-19)'
+            ELSE 'Unknown'
+          END
+        `,
+        count: sql<number>`count(*)`,
+      })
+      .from(securityLogs)
+      .groupBy(sql`
+        CASE 
+          WHEN ${securityLogs.ipReputation} >= 80 THEN 'Excellent (80-100)'
+          WHEN ${securityLogs.ipReputation} >= 60 THEN 'Good (60-79)'
+          WHEN ${securityLogs.ipReputation} >= 40 THEN 'Fair (40-59)'
+          WHEN ${securityLogs.ipReputation} >= 20 THEN 'Poor (20-39)'
+          WHEN ${securityLogs.ipReputation} < 20 THEN 'Very Poor (0-19)'
+          ELSE 'Unknown'
+        END
+      `)
+      .orderBy(sql`count(*) desc`);
+
+    // Bot Activity Breakdown
+    const botActivity = await db
+      .select({
+        category: sql<string>`
+          CASE 
+            WHEN ${securityLogs.eventType} LIKE '%LEGITIMATE_BOT%' THEN 'Legitimate Bots'
+            WHEN ${securityLogs.eventType} LIKE '%SUSPICIOUS_BOT%' THEN 'Suspicious Bots'
+            WHEN ${securityLogs.eventType} LIKE '%HIGH_VELOCITY%' THEN 'High Velocity Traffic'
+            WHEN ${securityLogs.eventType} LIKE '%RATE_LIMIT%' THEN 'Rate Limited'
+            WHEN ${securityLogs.eventType} LIKE '%MULTIPLE_USER_AGENTS%' THEN 'Multiple User Agents'
+            WHEN ${securityLogs.eventType} LIKE '%BOT%' THEN 'Other Bot Activity'
+            ELSE 'Non-Bot Security Events'
+          END
+        `,
+        count: sql<number>`count(*)`,
+      })
+      .from(securityLogs)
+      .groupBy(sql`
+        CASE 
+          WHEN ${securityLogs.eventType} LIKE '%LEGITIMATE_BOT%' THEN 'Legitimate Bots'
+          WHEN ${securityLogs.eventType} LIKE '%SUSPICIOUS_BOT%' THEN 'Suspicious Bots'
+          WHEN ${securityLogs.eventType} LIKE '%HIGH_VELOCITY%' THEN 'High Velocity Traffic'
+          WHEN ${securityLogs.eventType} LIKE '%RATE_LIMIT%' THEN 'Rate Limited'
+          WHEN ${securityLogs.eventType} LIKE '%MULTIPLE_USER_AGENTS%' THEN 'Multiple User Agents'
+          WHEN ${securityLogs.eventType} LIKE '%BOT%' THEN 'Other Bot Activity'
+          ELSE 'Non-Bot Security Events'
+        END
+      `)
+      .orderBy(sql`count(*) desc`);
+
+    // Time Range Breakdown (last 7 days, 30 days, etc.)
+    const timeRanges = await db
+      .select({
+        period: sql<string>`
+          CASE 
+            WHEN ${securityLogs.timestamp} >= NOW() - INTERVAL '1 day' THEN 'Last 24 Hours'
+            WHEN ${securityLogs.timestamp} >= NOW() - INTERVAL '7 days' THEN 'Last 7 Days'
+            WHEN ${securityLogs.timestamp} >= NOW() - INTERVAL '30 days' THEN 'Last 30 Days'
+            WHEN ${securityLogs.timestamp} >= NOW() - INTERVAL '90 days' THEN 'Last 90 Days'
+            ELSE 'Older than 90 Days'
+          END
+        `,
+        count: sql<number>`count(*)`,
+      })
+      .from(securityLogs)
+      .groupBy(sql`
+        CASE 
+          WHEN ${securityLogs.timestamp} >= NOW() - INTERVAL '1 day' THEN 'Last 24 Hours'
+          WHEN ${securityLogs.timestamp} >= NOW() - INTERVAL '7 days' THEN 'Last 7 Days'
+          WHEN ${securityLogs.timestamp} >= NOW() - INTERVAL '30 days' THEN 'Last 30 Days'
+          WHEN ${securityLogs.timestamp} >= NOW() - INTERVAL '90 days' THEN 'Last 90 Days'
+          ELSE 'Older than 90 Days'
+        END
+      `)
+      .orderBy(sql`count(*) desc`);
+
+    // Country mapping
+    const countryMap: {[key: string]: string} = {
+      "US": "United States", "GB": "United Kingdom", "CA": "Canada",
+      "AU": "Australia", "DE": "Germany", "FR": "France", "JP": "Japan",
+      "KR": "South Korea", "CN": "China", "RU": "Russia", "IN": "India",
+      "BR": "Brazil", "ZA": "South Africa", "SG": "Singapore", "NZ": "New Zealand"
+    };
+
+    // Calculate percentages
+    const calculatePercentage = (count: number) => ((count / totalRows) * 100).toFixed(2);
+
+    return {
+      totalRows,
+      eventTypeBreakdown: eventTypes.map(item => ({
+        eventType: item.eventType,
+        count: item.count,
+        percentage: calculatePercentage(item.count) + '%'
+      })),
+      severityBreakdown: severities.map(item => ({
+        severity: item.severity,
+        count: item.count,
+        percentage: calculatePercentage(item.count) + '%'
+      })),
+      countryBreakdown: countries.map(item => ({
+        countryCode: item.countryCode || 'unknown',
+        countryName: item.countryCode ? (countryMap[item.countryCode] || `Unknown (${item.countryCode})`) : 'Unknown',
+        count: item.count,
+        percentage: calculatePercentage(item.count) + '%'
+      })),
+      ipReputationBreakdown: ipReputation.map(item => ({
+        range: item.range,
+        count: item.count,
+        percentage: calculatePercentage(item.count) + '%'
+      })),
+      botActivityBreakdown: botActivity.map(item => ({
+        category: item.category,
+        count: item.count,
+        percentage: calculatePercentage(item.count) + '%'
+      })),
+      timeRangeBreakdown: timeRanges.map(item => ({
+        period: item.period,
+        count: item.count,
+        percentage: calculatePercentage(item.count) + '%'
+      }))
+    };
+  }
+
   async getCountryOriginStats(): Promise<{ countryCode: string; countryName: string; count: number }[]> {
     // Since we don't currently store country names, we'll just use the country code for now
     // In a real implementation, we would join with a country lookup table
@@ -501,11 +687,11 @@ export class DatabaseStorage implements IStorage {
       .where(sql`${securityLogs.countryCode} IS NOT NULL`)
       .groupBy(securityLogs.countryCode)
       .orderBy(sql`count(*) desc`);
-    
+
     // Map the country codes to names (in a real implementation this would be from a DB table)
     const countryMap: {[key: string]: string} = {
       "US": "United States",
-      "GB": "United Kingdom",
+      "GB": "United Kingdom", 
       "CA": "Canada",
       "AU": "Australia",
       "DE": "Germany",
@@ -519,16 +705,16 @@ export class DatabaseStorage implements IStorage {
       "ZA": "South Africa",
       // Add more mappings as needed
     };
-    
+
     return result.map(item => ({
       countryCode: item.countryCode || 'unknown',
       countryName: item.countryCode ? (countryMap[item.countryCode] || `Unknown (${item.countryCode})`) : 'Unknown',
       count: item.count
     }));
   }
-  
+
   // Visitor Activity Logging operations
-  
+
   async logVisitorActivity(data: InsertVisitorActivityLog): Promise<VisitorActivityLog> {
     const [log] = await db
       .insert(visitorActivityLog)
@@ -536,7 +722,7 @@ export class DatabaseStorage implements IStorage {
       .returning();
     return log;
   }
-  
+
   async getVisitorActivityByCountry(countryCode: string): Promise<VisitorActivityLog[]> {
     return await db
       .select()
@@ -544,7 +730,7 @@ export class DatabaseStorage implements IStorage {
       .where(eq(visitorActivityLog.countryCode, countryCode))
       .orderBy(desc(visitorActivityLog.timestamp));
   }
-  
+
   async getVisitorActivityByEventType(eventType: string): Promise<VisitorActivityLog[]> {
     return await db
       .select()
@@ -552,7 +738,7 @@ export class DatabaseStorage implements IStorage {
       .where(eq(visitorActivityLog.eventType, eventType))
       .orderBy(desc(visitorActivityLog.timestamp));
   }
-  
+
   async getVisitorActivityByDateRange(startDate: Date, endDate: Date): Promise<VisitorActivityLog[]> {
     return await db
       .select()
@@ -565,7 +751,7 @@ export class DatabaseStorage implements IStorage {
       )
       .orderBy(desc(visitorActivityLog.timestamp));
   }
-  
+
   async getVisitorActivityStats(): Promise<{ eventType: string; count: number }[]> {
     const result = await db
       .select({
@@ -575,10 +761,10 @@ export class DatabaseStorage implements IStorage {
       .from(visitorActivityLog)
       .groupBy(visitorActivityLog.eventType)
       .orderBy(sql`count(*) desc`);
-    
+
     return result;
   }
-  
+
   async getBotVisitorStats(): Promise<{ botCategory: string; count: number }[]> {
     const result = await db
       .select({
@@ -589,13 +775,13 @@ export class DatabaseStorage implements IStorage {
       .where(eq(visitorActivityLog.isBotDetected, true))
       .groupBy(visitorActivityLog.botCategory)
       .orderBy(sql`count(*) desc`);
-    
+
     return result.map(item => ({
       botCategory: item.botCategory || 'Unknown Bot',
       count: item.count
     }));
   }
-  
+
   async getVisitorCountryStats(): Promise<{ countryCode: string; countryName: string; count: number }[]> {
     const result = await db
       .select({
@@ -607,14 +793,14 @@ export class DatabaseStorage implements IStorage {
       .where(sql`${visitorActivityLog.countryCode} IS NOT NULL`)
       .groupBy(visitorActivityLog.countryCode, visitorActivityLog.countryName)
       .orderBy(sql`count(*) desc`);
-    
+
     return result.map(item => ({
       countryCode: item.countryCode || 'unknown',
       countryName: item.countryName || 'Unknown',
       count: item.count
     }));
   }
-  
+
   async getDeviceTypeStats(): Promise<{ deviceType: string; count: number }[]> {
     const result = await db
       .select({
@@ -625,13 +811,13 @@ export class DatabaseStorage implements IStorage {
       .where(sql`${visitorActivityLog.deviceType} IS NOT NULL`)
       .groupBy(visitorActivityLog.deviceType)
       .orderBy(sql`count(*) desc`);
-    
+
     return result.map(item => ({
       deviceType: item.deviceType || 'unknown',
       count: item.count
     }));
   }
-  
+
   async getBrowserStats(): Promise<{ browser: string; count: number }[]> {
     const result = await db
       .select({
@@ -642,13 +828,13 @@ export class DatabaseStorage implements IStorage {
       .where(sql`${visitorActivityLog.browser} IS NOT NULL`)
       .groupBy(visitorActivityLog.browser)
       .orderBy(sql`count(*) desc`);
-    
+
     return result.map(item => ({
       browser: item.browser || 'unknown',
       count: item.count
     }));
   }
-  
+
   async getOperatingSystemStats(): Promise<{ operatingSystem: string; count: number }[]> {
     const result = await db
       .select({
@@ -659,17 +845,18 @@ export class DatabaseStorage implements IStorage {
       .where(sql`${visitorActivityLog.operatingSystem} IS NOT NULL`)
       .groupBy(visitorActivityLog.operatingSystem)
       .orderBy(sql`count(*) desc`);
-    
+
     return result.map(item => ({
       operatingSystem: item.operatingSystem || 'unknown',
       count: item.count
     }));
   }
-  
+
   async getMostViewedPages(limit: number = 10): Promise<{ pageViewed: string; count: number }[]> {
     const result = await db
       .select({
-        pageViewed: visitorActivityLog.pageViewed,
+        ```text
+pageViewed: visitorActivityLog.pageViewed,
         count: sql<number>`count(*)`,
       })
       .from(visitorActivityLog)
@@ -677,13 +864,13 @@ export class DatabaseStorage implements IStorage {
       .groupBy(visitorActivityLog.pageViewed)
       .orderBy(sql`count(*) desc`)
       .limit(limit);
-    
+
     return result.map(item => ({
       pageViewed: item.pageViewed || '/',
       count: item.count
     }));
   }
-  
+
   async getTopReferrers(limit: number = 10): Promise<{ referrer: string; count: number }[]> {
     const result = await db
       .select({
@@ -701,7 +888,7 @@ export class DatabaseStorage implements IStorage {
       .groupBy(visitorActivityLog.referrer)
       .orderBy(sql`count(*) desc`)
       .limit(limit);
-    
+
     return result.map(item => ({
       referrer: item.referrer || 'unknown',
       count: item.count

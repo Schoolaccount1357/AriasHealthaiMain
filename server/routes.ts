@@ -386,6 +386,22 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
   
+  // API endpoint for comprehensive security analytics breakdown
+  app.get("/api/security/analytics-breakdown", async (_req: Request, res: Response) => {
+    try {
+      const breakdown = await storage.getSecurityAnalyticsBreakdown();
+      return res.status(200).json({
+        message: "Security analytics breakdown retrieved successfully",
+        data: breakdown
+      });
+    } catch (error) {
+      console.error("Error getting security analytics breakdown:", error);
+      return res.status(500).json({
+        message: "An error occurred while retrieving security analytics breakdown"
+      });
+    }
+  });
+
   // API endpoint for getting country origin statistics from security logs
   app.get("/api/security/country-origins", async (_req: Request, res: Response) => {
     try {
