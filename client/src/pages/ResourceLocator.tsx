@@ -31,11 +31,13 @@ interface StateResource {
   website: string;
   category: "VA" | "Crisis" | "Treatment" | "Housing" | "Employment";
   zipCode?: string;
+  targetAudience: "veteran" | "public";
 }
 
 interface StateData {
   [state: string]: {
-    resources: StateResource[];
+    veteranResources: StateResource[];
+    publicResources: StateResource[];
   };
 }
 
@@ -52,21 +54,23 @@ export default function ResourceLocator() {
   // Create an interface for the country data
   interface CountryData {
     [country: string]: {
-      resources: StateResource[];
+      veteranResources: StateResource[];
+      publicResources: StateResource[];
     };
   }
   
   // Sample international data with countries that have U.S. military veterans 
   const countryData: CountryData = {
     "Philippines": {
-      resources: [
+      veteranResources: [
         {
           name: "Manila VA Outpatient Clinic",
           description: "The only full-service VA clinic outside U.S. territories, offering primary care, mental health services, and assistance with FMP",
           address: "1501 Roxas Boulevard, NOX3 Seafront Compound, Pasay City, PH 01302",
           phone: "+63 (02) 8550-3888 / U.S. Line: 808-433-5254",
           website: "https://www.va.gov/manila-philippines-health-care/",
-          category: "VA"
+          category: "VA",
+          targetAudience: "veteran"
         },
         {
           name: "Veterans Service Center - Manila",
@@ -74,7 +78,8 @@ export default function ResourceLocator() {
           address: "1131 Roxas Boulevard, Ermita, Manila, 0930 Philippines",
           phone: "Toll-Free (Philippines): #MyVA (#6982)",
           website: "https://www.benefits.va.gov/manila/",
-          category: "VA"
+          category: "VA",
+          targetAudience: "veteran"
         },
         {
           name: "Foreign Medical Program (FMP) - Philippines",
@@ -82,15 +87,8 @@ export default function ResourceLocator() {
           address: "PO Box 200, Spring City, PA 19475, USA",
           phone: "Main: +1-833-930-0816 or U.S./Canada Toll-Free: 877-345-8179",
           website: "https://www.va.gov/health-care/foreign-medical-program/",
-          category: "VA"
-        },
-        {
-          name: "Philippine Crisis Support",
-          description: "Mental health support, suicide prevention resources for veterans",
-          address: "U.S. Embassy, 1201 Roxas Boulevard, Ermita, Manila, 1000 Philippines",
-          phone: "+63 (2) 5301-2000",
-          website: "https://ph.usembassy.gov/u-s-citizen-services/",
-          category: "Crisis"
+          category: "VA",
+          targetAudience: "veteran"
         },
         {
           name: "Veterans Crisis Line (International Access)",
@@ -98,7 +96,46 @@ export default function ResourceLocator() {
           address: "Nationwide service",
           phone: "Pacific Region: 844-702-5493 or DSN 988",
           website: "https://www.veteranscrisisline.net/",
-          category: "Crisis"
+          category: "Crisis",
+          targetAudience: "veteran"
+        }
+      ],
+      publicResources: [
+        {
+          name: "Philippine Department of Health Mental Health Services",
+          description: "National mental health programs and crisis intervention services available to all residents",
+          address: "Building 1, San Lazaro Compound, Rizal Avenue, Sta. Cruz, Manila 1003",
+          phone: "+63 (02) 8651-7800",
+          website: "https://doh.gov.ph/mental-health",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "National Center for Mental Health",
+          description: "Premier psychiatric facility providing comprehensive mental health services to the general public",
+          address: "Nueve de Febrero St, Mauway, Mandaluyong, 1550 Metro Manila",
+          phone: "+63 (02) 8531-9001",
+          website: "https://ncmh.gov.ph/",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "Philippine General Hospital Department of Psychiatry",
+          description: "Public hospital psychiatric services available to all Filipino citizens and residents",
+          address: "Taft Avenue, Ermita, Manila, 1000 Metro Manila",
+          phone: "+63 (02) 8548-8100",
+          website: "https://www.pgh.gov.ph/",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "Department of Social Welfare and Development (DSWD)",
+          description: "Social services, housing assistance, and employment programs for all citizens",
+          address: "Constitution Hills, Batasan Complex, Quezon City 1126",
+          phone: "+63 (02) 8931-8101",
+          website: "https://www.dswd.gov.ph/",
+          category: "Housing",
+          targetAudience: "public"
         }
       ]
     },
@@ -994,7 +1031,7 @@ export default function ResourceLocator() {
   
   const stateData: StateData = {
     "Alabama": {
-      resources: [
+      veteranResources: [
         {
           name: "VA Medical Center - Birmingham",
           description: "313-bed VA healthcare facility located at University of Alabama at Birmingham",
@@ -1002,7 +1039,8 @@ export default function ResourceLocator() {
           phone: "(205) 933-8101",
           website: "https://www.va.gov/birmingham-health-care/",
           category: "VA",
-          zipCode: "35233"
+          zipCode: "35233",
+          targetAudience: "veteran"
         },
         {
           name: "Three Hots and A Cot",
@@ -1011,7 +1049,8 @@ export default function ResourceLocator() {
           phone: "(205) 377-3779",
           website: "https://cotsforvets.org",
           category: "Housing",
-          zipCode: "35216"
+          zipCode: "35216",
+          targetAudience: "veteran"
         },
         {
           name: "Still Serving Veterans",
@@ -1020,7 +1059,8 @@ export default function ResourceLocator() {
           phone: "(256) 883-7035",
           website: "https://ssv.org",
           category: "Employment",
-          zipCode: "35801"
+          zipCode: "35801",
+          targetAudience: "veteran"
         },
         {
           name: "Veterans Recovery Program",
@@ -1029,7 +1069,8 @@ export default function ResourceLocator() {
           phone: "(205) 481-7223",
           website: "https://veteransrecovery.org",
           category: "Treatment",
-          zipCode: "35235"
+          zipCode: "35235",
+          targetAudience: "veteran"
         },
         {
           name: "Alabama Veterans Crisis Center",
@@ -1038,7 +1079,40 @@ export default function ResourceLocator() {
           phone: "(205) 212-4000",
           website: "https://alvetscenter.org",
           category: "Crisis",
-          zipCode: "35233"
+          zipCode: "35233",
+          targetAudience: "veteran"
+        }
+      ],
+      publicResources: [
+        {
+          name: "Alabama Department of Mental Health",
+          description: "State mental health services for all residents including crisis intervention and counseling",
+          address: "100 North Union Street, Montgomery, AL 36130",
+          phone: "(334) 242-3454",
+          website: "https://mh.alabama.gov/",
+          category: "Treatment",
+          zipCode: "36130",
+          targetAudience: "public"
+        },
+        {
+          name: "Alabama Crisis Center",
+          description: "24/7 crisis hotline and support services for all Alabama residents",
+          address: "Crisis Hotline - Statewide",
+          phone: "211 or 1-800-273-8255",
+          website: "https://alabamacrisis.org/",
+          category: "Crisis",
+          zipCode: "35233",
+          targetAudience: "public"
+        },
+        {
+          name: "Alabama Department of Labor - Career Centers",
+          description: "State employment services including job training and placement assistance",
+          address: "649 Monroe Street, Montgomery, AL 36131",
+          phone: "(334) 242-8003",
+          website: "https://www.labor.alabama.gov/",
+          category: "Employment",
+          zipCode: "36131",
+          targetAudience: "public"
         }
       ]
     },
@@ -1177,7 +1251,7 @@ export default function ResourceLocator() {
       ]
     },
     "California": {
-      resources: [
+      veteranResources: [
         {
           name: "VA Palo Alto Health Care System",
           description: "Comprehensive healthcare services for Veterans",
@@ -1185,7 +1259,8 @@ export default function ResourceLocator() {
           phone: "(650) 493-5000",
           website: "https://www.paloalto.va.gov/",
           category: "VA",
-          zipCode: "94304"
+          zipCode: "94304",
+          targetAudience: "veteran"
         },
         {
           name: "New Directions for Veterans",
@@ -1194,7 +1269,8 @@ export default function ResourceLocator() {
           phone: "(310) 914-4045",
           website: "https://ndvets.org",
           category: "Housing",
-          zipCode: "90073"
+          zipCode: "90073",
+          targetAudience: "veteran"
         },
         {
           name: "Veterans Village of San Diego",
@@ -1203,7 +1279,8 @@ export default function ResourceLocator() {
           phone: "(619) 393-2000",
           website: "https://vvsd.net",
           category: "Treatment",
-          zipCode: "92110"
+          zipCode: "92110",
+          targetAudience: "veteran"
         },
         {
           name: "Swords to Plowshares",
@@ -1212,7 +1289,8 @@ export default function ResourceLocator() {
           phone: "(415) 252-4788",
           website: "https://www.swords-to-plowshares.org",
           category: "Employment",
-          zipCode: "94103"
+          zipCode: "94103",
+          targetAudience: "veteran"
         },
         {
           name: "Veterans Resource Center - Sacramento",
@@ -1221,8 +1299,11 @@ export default function ResourceLocator() {
           phone: "(916) 393-8387",
           website: "https://www.vetsresource.org",
           category: "Crisis",
-          zipCode: "95811"
-        },
+          zipCode: "95811",
+          targetAudience: "veteran"
+        }
+      ],
+      publicResources: [
         {
           name: "California Department of Public Health - Mental Health Services",
           description: "State-funded mental health services for all residents including crisis intervention and substance abuse treatment",
@@ -1230,7 +1311,8 @@ export default function ResourceLocator() {
           phone: "(916) 558-1784",
           website: "https://www.cdph.ca.gov/Programs/CID/DMH/Pages/Mental-Health-Services.aspx",
           category: "Treatment",
-          zipCode: "95814"
+          zipCode: "95814",
+          targetAudience: "public"
         },
         {
           name: "California Crisis Support Services",
@@ -1239,7 +1321,8 @@ export default function ResourceLocator() {
           phone: "1-855-845-7415",
           website: "https://www.dhcs.ca.gov/services/MH/Pages/CrisisServices.aspx",
           category: "Crisis",
-          zipCode: "90210"
+          zipCode: "90210",
+          targetAudience: "public"
         },
         {
           name: "CalJOBS - California Employment Development Department",
@@ -1248,7 +1331,8 @@ export default function ResourceLocator() {
           phone: "(916) 654-8210",
           website: "https://www.caljobs.ca.gov/",
           category: "Employment",
-          zipCode: "95814"
+          zipCode: "95814",
+          targetAudience: "public"
         },
         {
           name: "California Housing Finance Agency",
@@ -1257,7 +1341,8 @@ export default function ResourceLocator() {
           phone: "(916) 326-8000",
           website: "https://www.calhfa.ca.gov/",
           category: "Housing",
-          zipCode: "95814"
+          zipCode: "95814",
+          targetAudience: "public"
         }
       ]
     },
@@ -3573,17 +3658,20 @@ export default function ResourceLocator() {
   };
 
   // Get resources based on whether domestic or international is selected
-  const filteredResources = isInternational
-    ? (selectedCountry 
-        ? countryData[selectedCountry]?.resources.filter(
-            resource => category === "all" || resource.category === category
-          ) || []
-        : [])
-    : (selectedState
-        ? stateData[selectedState]?.resources.filter(
-            resource => category === "all" || resource.category === category
-          ) || []
-        : []);
+  const getFilteredResources = () => {
+    if (isInternational && selectedCountry && countryData[selectedCountry]) {
+      const countryResources = countryData[selectedCountry];
+      const allResources = [...countryResources.veteranResources, ...countryResources.publicResources];
+      return allResources.filter(resource => category === "all" || resource.category === category);
+    } else if (!isInternational && selectedState && stateData[selectedState]) {
+      const stateResources = stateData[selectedState];
+      const allResources = [...stateResources.veteranResources, ...stateResources.publicResources];
+      return allResources.filter(resource => category === "all" || resource.category === category);
+    }
+    return [];
+  };
+
+  const filteredResources = getFilteredResources();
 
   return (
     <MainLayout>
@@ -3726,86 +3814,64 @@ export default function ResourceLocator() {
             Resources in {isInternational ? selectedCountry : selectedState}
           </h2>
 
-          {filteredResources.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-              {filteredResources.map((resource, index) => (
-                <Card key={index} className="shadow-md overflow-hidden">
-                  <CardHeader className="pb-2 pt-4 px-4 sm:px-6">
-                    <div className="flex items-start justify-between">
-                      <div>
-                        <div className="flex items-start sm:items-center flex-col sm:flex-row sm:gap-2">
-                          <div className="mb-2 sm:mb-0">
-                            {getCategoryIcon(resource.category)}
+          {/* Veteran Resources Section */}
+          {((isInternational && selectedCountry && countryData[selectedCountry]?.veteranResources.filter(r => category === "all" || r.category === category).length > 0) ||
+            (!isInternational && selectedState && stateData[selectedState]?.veteranResources?.filter(r => category === "all" || r.category === category).length > 0)) && (
+            <div className="mb-8">
+              <h3 className="text-lg font-bold mb-4 text-[#3e64dd] flex items-center">
+                <Shield className="h-5 w-5 mr-2" />
+                Veteran-Specific Resources
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                {(isInternational ? 
+                  countryData[selectedCountry]?.veteranResources?.filter(r => category === "all" || r.category === category) || [] :
+                  stateData[selectedState]?.veteranResources?.filter(r => category === "all" || r.category === category) || []
+                ).map((resource, index) => (
+                  <Card key={`veteran-${index}`} className="shadow-md overflow-hidden border-l-4 border-l-[#3e64dd]">
+                    <CardHeader className="pb-2 pt-4 px-4 sm:px-6">
+                      <div className="flex items-start justify-between">
+                        <div>
+                          <div className="flex items-start sm:items-center flex-col sm:flex-row sm:gap-2">
+                            <div className="mb-2 sm:mb-0">
+                              {getCategoryIcon(resource.category)}
+                            </div>
+                            <CardTitle className="text-base sm:text-lg md:text-xl break-words">{resource.name}</CardTitle>
                           </div>
-                          <CardTitle className="text-base sm:text-lg md:text-xl break-words">{resource.name}</CardTitle>
+                          <div className="mt-1">
+                            <span className="inline-flex items-center rounded-full bg-[#3e64dd]/10 px-2 py-1 text-xs font-medium text-[#3e64dd]">
+                              {resource.category} • Veteran-Specific
+                            </span>
+                          </div>
                         </div>
-                        <div className="mt-1">
-                          <span className="inline-flex items-center rounded-full bg-[#141e2f]/10 px-2 py-1 text-xs font-medium text-[#3e64dd]">
-                            {resource.category}
-                          </span>
+                      </div>
+                    </CardHeader>
+                    <CardContent className="pt-2 px-4 sm:px-6">
+                      <CardDescription className="mb-4 text-sm sm:text-base">{resource.description}</CardDescription>
+                      {resource.address && (
+                        <div className="flex items-start gap-2 text-xs sm:text-sm mb-2">
+                          <MapPin className="h-4 w-4 mt-0.5 text-[#3e64dd] flex-shrink-0" />
+                          <span className="break-words">{resource.address}</span>
                         </div>
-                      </div>
-                    </div>
-                  </CardHeader>
-                  <CardContent className="pt-2 px-4 sm:px-6">
-                    <CardDescription className="mb-4 text-sm sm:text-base">{resource.description}</CardDescription>
-                    {resource.address && (
-                      <div className="flex items-start gap-2 text-xs sm:text-sm mb-2">
-                        <MapPin className="h-4 w-4 mt-0.5 text-[#3e64dd] flex-shrink-0" />
-                        <span className="break-words">{resource.address}</span>
-                      </div>
-                    )}
-                    {resource.phone && (
-                      <div className="flex items-center gap-2 text-xs sm:text-sm">
-                        <Phone className="h-4 w-4 text-[#3e64dd] flex-shrink-0" />
-                        <span>{resource.phone}</span>
-                      </div>
-                    )}
-                  </CardContent>
-                  <CardFooter className="border-t pt-4 flex flex-col sm:flex-row sm:justify-between gap-3 px-4 sm:px-6">
-                    <Button 
-                      variant="outline"
-                      className="w-full sm:w-auto justify-center text-[#3e64dd] border-[#3e64dd]/30 hover:bg-[#3e64dd]/10"
-                      onClick={() => {
-                        // Track based on whether we're looking at a state or country
-                        if (isInternational) {
-                          trackStateResourceClick({
-                            state: selectedCountry, // Use country as the "state" for tracking
-                            resourceName: resource.name,
-                            category: resource.category
-                          }, () => {
-                            window.open(resource.website, "_blank", "noopener,noreferrer");
-                          });
-                        } else {
-                          trackStateResourceClick({
-                            state: selectedState,
-                            resourceName: resource.name,
-                            category: resource.category
-                          }, () => {
-                            window.open(resource.website, "_blank", "noopener,noreferrer");
-                          });
-                        }
-                      }}
-                    >
-                      Visit Website
-                    </Button>
-                    {resource.address && (
+                      )}
+                      {resource.phone && (
+                        <div className="flex items-center gap-2 text-xs sm:text-sm">
+                          <Phone className="h-4 w-4 text-[#3e64dd] flex-shrink-0" />
+                          <span>{resource.phone}</span>
+                        </div>
+                      )}
+                    </CardContent>
+                    <CardFooter className="border-t pt-4 flex flex-col sm:flex-row sm:justify-between gap-3 px-4 sm:px-6">
                       <Button 
-                        variant="outline" 
-                        className="w-full sm:w-auto justify-center"
+                        variant="outline"
+                        className="w-full sm:w-auto justify-center text-[#3e64dd] border-[#3e64dd]/30 hover:bg-[#3e64dd]/10"
                         onClick={() => {
-                          // Track based on whether we're looking at a state or country
                           if (isInternational) {
                             trackStateResourceClick({
-                              state: selectedCountry, // Use country as the "state" for tracking
+                              state: selectedCountry,
                               resourceName: resource.name,
                               category: resource.category
                             }, () => {
-                              window.open(
-                                `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(resource.address || '')}`,
-                                "_blank",
-                                "noopener,noreferrer"
-                              );
+                              window.open(resource.website, "_blank", "noopener,noreferrer");
                             });
                           } else {
                             trackStateResourceClick({
@@ -3813,23 +3879,120 @@ export default function ResourceLocator() {
                               resourceName: resource.name,
                               category: resource.category
                             }, () => {
-                              window.open(
-                                `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(resource.address || '')}`,
-                                "_blank",
-                                "noopener,noreferrer"
-                              );
+                              window.open(resource.website, "_blank", "noopener,noreferrer");
                             });
                           }
                         }}
                       >
-                        Get Directions
+                        Visit Website
                       </Button>
-                    )}
-                  </CardFooter>
-                </Card>
-              ))}
+                      {resource.address && (
+                        <Button 
+                          variant="outline" 
+                          className="w-full sm:w-auto justify-center"
+                          onClick={() => {
+                            window.open(
+                              `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(resource.address || '')}`,
+                              "_blank",
+                              "noopener,noreferrer"
+                            );
+                          }}
+                        >
+                          Get Directions
+                        </Button>
+                      )}
+                    </CardFooter>
+                  </Card>
+                ))}
+              </div>
             </div>
-          ) : (
+          )}
+
+          {/* Public Resources Section */}
+          {((isInternational && selectedCountry && countryData[selectedCountry]?.publicResources?.filter(r => category === "all" || r.category === category).length > 0) ||
+            (!isInternational && selectedState && stateData[selectedState]?.publicResources?.filter(r => category === "all" || r.category === category).length > 0)) && (
+            <div className="mb-8">
+              <h3 className="text-lg font-bold mb-4 text-green-600 flex items-center">
+                <Building className="h-5 w-5 mr-2" />
+                General Public Resources
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                {(isInternational ? 
+                  countryData[selectedCountry]?.publicResources?.filter(r => category === "all" || r.category === category) || [] :
+                  stateData[selectedState]?.publicResources?.filter(r => category === "all" || r.category === category) || []
+                ).map((resource, index) => (
+                  <Card key={`public-${index}`} className="shadow-md overflow-hidden border-l-4 border-l-green-500">
+                    <CardHeader className="pb-2 pt-4 px-4 sm:px-6">
+                      <div className="flex items-start justify-between">
+                        <div>
+                          <div className="flex items-start sm:items-center flex-col sm:flex-row sm:gap-2">
+                            <div className="mb-2 sm:mb-0">
+                              {getCategoryIcon(resource.category)}
+                            </div>
+                            <CardTitle className="text-base sm:text-lg md:text-xl break-words">{resource.name}</CardTitle>
+                          </div>
+                          <div className="mt-1">
+                            <span className="inline-flex items-center rounded-full bg-green-500/10 px-2 py-1 text-xs font-medium text-green-600">
+                              {resource.category} • General Public
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </CardHeader>
+                    <CardContent className="pt-2 px-4 sm:px-6">
+                      <CardDescription className="mb-4 text-sm sm:text-base">{resource.description}</CardDescription>
+                      {resource.address && (
+                        <div className="flex items-start gap-2 text-xs sm:text-sm mb-2">
+                          <MapPin className="h-4 w-4 mt-0.5 text-green-600 flex-shrink-0" />
+                          <span className="break-words">{resource.address}</span>
+                        </div>
+                      )}
+                      {resource.phone && (
+                        <div className="flex items-center gap-2 text-xs sm:text-sm">
+                          <Phone className="h-4 w-4 text-green-600 flex-shrink-0" />
+                          <span>{resource.phone}</span>
+                        </div>
+                      )}
+                    </CardContent>
+                    <CardFooter className="border-t pt-4 flex flex-col sm:flex-row sm:justify-between gap-3 px-4 sm:px-6">
+                      <Button 
+                        variant="outline"
+                        className="w-full sm:w-auto justify-center text-green-600 border-green-500/30 hover:bg-green-500/10"
+                        onClick={() => {
+                          window.open(resource.website, "_blank", "noopener,noreferrer");
+                        }}
+                      >
+                        Visit Website
+                      </Button>
+                      {resource.address && (
+                        <Button 
+                          variant="outline" 
+                          className="w-full sm:w-auto justify-center"
+                          onClick={() => {
+                            window.open(
+                              `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(resource.address || '')}`,
+                              "_blank",
+                              "noopener,noreferrer"
+                            );
+                          }}
+                        >
+                          Get Directions
+                        </Button>
+                      )}
+                    </CardFooter>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* No Resources Found */}
+          {((isInternational && selectedCountry && 
+             (!countryData[selectedCountry]?.veteranResources?.filter(r => category === "all" || r.category === category).length &&
+              !countryData[selectedCountry]?.publicResources?.filter(r => category === "all" || r.category === category).length)) ||
+            (!isInternational && selectedState && 
+             (!stateData[selectedState]?.veteranResources?.filter(r => category === "all" || r.category === category).length &&
+              !stateData[selectedState]?.publicResources?.filter(r => category === "all" || r.category === category).length))) && (
             <div className="text-center py-8 sm:py-12 bg-gray-50 rounded-lg">
               <p className="text-base sm:text-lg text-gray-600">No resources found with the selected filters.</p>
               <p className="mt-2 text-sm sm:text-base">Try changing your search criteria or <Link href="/resources" className="text-[#3e64dd] hover:underline">browse all resources</Link>.</p>
@@ -3838,16 +4001,14 @@ export default function ResourceLocator() {
         </div>
       )}
 
-      {/* Crisis resources section removed for now since international emergency numbers aren't available yet */}
-      
       {!selectedState && !selectedCountry && (
         <div className="bg-gray-50 rounded-lg p-4 sm:p-8 text-center">
           {isInternational ? (
             <>
               <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">Select a country to view international resources</h3>
-              <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">Find resources for U.S. veterans living overseas in these countries.</p>
+              <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">Find resources for U.S. veterans living overseas and general public resources in these countries.</p>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 sm:gap-3 max-h-[60vh] overflow-y-auto p-1">
-                {Object.entries(countryData).map(([country, data]) => (
+                {Object.entries(countryData).map(([country]) => (
                   <Button 
                     key={country}
                     variant="outline" 
@@ -3865,9 +4026,9 @@ export default function ResourceLocator() {
           ) : (
             <>
               <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">Select a state to view resources</h3>
-              <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">Select a state below to view available local resources for veterans.</p>
+              <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">Select a state below to view available veteran-specific and general public resources.</p>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 sm:gap-3 max-h-[60vh] overflow-y-auto p-1">
-                {Object.entries(stateData).map(([state, data]) => (
+                {Object.entries(stateData).map(([state]) => (
                   <Button 
                     key={state}
                     variant="outline" 
@@ -3885,9 +4046,7 @@ export default function ResourceLocator() {
           )}
         </div>
       )}
-      
-      {/* We've moved the crisis resources section above the state/country selectors */}
-      
+
       {/* Floating help button removed since emergency numbers are location-dependent */}
     </MainLayout>
   );
