@@ -82,7 +82,7 @@ export function AboutSUDS() {
         
         <p className="mb-3 sm:mb-4 text-sm sm:text-base mt-8 sm:mt-10">
           At AriasHealth.ai, we believe that combining AI technology with peer-to-peer connection creates
-          a powerful support system that meets veterans exactly where they are in their recovery journey.
+          a powerful support system that meets people exactly where they are in their recovery journey.
         </p>
         
         <div className="bg-accent/20 p-3 sm:p-4 rounded-lg my-4">
