@@ -80,6 +80,7 @@ export function AboutSUDS() {
         </div>
         </div>
         
+        {/* Updated: Force cache refresh - meets PEOPLE exactly where they are */}
         <p className="mb-3 sm:mb-4 text-sm sm:text-base mt-8 sm:mt-10">
           At AriasHealth.ai, we believe that combining AI technology with peer-to-peer connection creates
           a powerful support system that meets people exactly where they are in their recovery journey.
