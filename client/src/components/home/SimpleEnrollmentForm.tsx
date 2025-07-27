@@ -97,10 +97,10 @@ export function SimpleEnrollmentForm() {
       case 1:
         return (
           <div className="space-y-6">
-            <div className="text-center mb-6">
-              <Users className="h-12 w-12 text-primary mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Basic Information</h3>
-              <p className="text-muted-foreground text-sm">Let's start with some basic details about you</p>
+            <div className="text-center mb-6 sm:mb-8">
+              <Users className="h-12 w-12 sm:h-16 sm:w-16 text-primary mx-auto mb-4 sm:mb-6" />
+              <h3 className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-3">Basic Information</h3>
+              <p className="text-muted-foreground text-sm sm:text-base">Let's start with some basic details about you</p>
             </div>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -111,7 +111,7 @@ export function SimpleEnrollmentForm() {
                   <FormItem>
                     <FormLabel>First Name *</FormLabel>
                     <FormControl>
-                      <Input placeholder="Enter your first name" className="h-12" {...field} />
+                      <Input placeholder="Enter your first name" className="h-12 sm:h-14 text-base sm:text-lg px-4 sm:px-5 touch-manipulation" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -125,7 +125,7 @@ export function SimpleEnrollmentForm() {
                   <FormItem>
                     <FormLabel>Last Name *</FormLabel>
                     <FormControl>
-                      <Input placeholder="Enter your last name" className="h-12" {...field} />
+                      <Input placeholder="Enter your last name" className="h-12 sm:h-14 text-base sm:text-lg px-4 sm:px-5 touch-manipulation" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -140,7 +140,7 @@ export function SimpleEnrollmentForm() {
                 <FormItem>
                   <FormLabel>Email Address *</FormLabel>
                   <FormControl>
-                    <Input type="email" placeholder="Enter your email" className="h-12" {...field} />
+                    <Input type="email" placeholder="Enter your email" className="h-12 sm:h-14 text-base sm:text-lg px-4 sm:px-5 touch-manipulation" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -166,7 +166,7 @@ export function SimpleEnrollmentForm() {
                   <FormLabel>Service Status *</FormLabel>
                   <Select onValueChange={field.onChange} defaultValue={field.value}>
                     <FormControl>
-                      <SelectTrigger className="h-12">
+                      <SelectTrigger className="h-12 sm:h-14 text-base sm:text-lg px-4 sm:px-5 touch-manipulation">
                         <SelectValue placeholder="Select your service status" />
                       </SelectTrigger>
                     </FormControl>
@@ -202,7 +202,7 @@ export function SimpleEnrollmentForm() {
                   <FormControl>
                     <Textarea 
                       placeholder="Tell us what draws you to our platform..." 
-                      className="resize-none min-h-[100px]" 
+                      className="resize-none min-h-[120px] sm:min-h-[140px] text-base sm:text-lg px-4 sm:px-5 py-3 sm:py-4 touch-manipulation" 
                       {...field} 
                     />
                   </FormControl>
@@ -236,58 +236,58 @@ export function SimpleEnrollmentForm() {
   };
 
   return (
-    <section className="py-8 bg-gradient-to-b from-background to-muted/30">
-      <div className="max-w-4xl mx-auto px-4">
-        <div className="text-center mb-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+    <section className="py-8 sm:py-12 bg-gradient-to-b from-background to-muted/30">
+      <div className="max-w-2xl sm:max-w-3xl lg:max-w-4xl mx-auto px-4 sm:px-6">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4 sm:mb-6">
             Join the Waitlist for Early Access
           </h2>
-          <p className="text-muted-foreground text-sm md:text-base">
+          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
             Be among the first to experience AI-powered peer support when we launch.
           </p>
-          <div className="mt-4 flex items-center justify-center gap-2 text-sm text-muted-foreground">
-            <Clock className="h-4 w-4" />
+          <div className="mt-6 sm:mt-8 flex items-center justify-center gap-3 text-sm sm:text-base text-muted-foreground">
+            <Clock className="h-4 w-4 sm:h-5 sm:w-5" />
             <span>Estimated completion time: 2-3 minutes</span>
           </div>
         </div>
 
-        <Card className="max-w-2xl mx-auto glass-card">
-          <CardHeader>
-            <div className="flex items-center justify-between mb-4">
-              <div>
-                <CardTitle className="text-lg">Step {currentStep} of {totalSteps}</CardTitle>
-                <CardDescription>
+        <Card className="max-w-xl sm:max-w-2xl mx-auto glass-card border-0 shadow-xl">
+          <CardHeader className="px-4 sm:px-6 pt-6 sm:pt-8">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 sm:mb-6">
+              <div className="mb-2 sm:mb-0">
+                <CardTitle className="text-lg sm:text-xl">Step {currentStep} of {totalSteps}</CardTitle>
+                <CardDescription className="text-base sm:text-lg mt-1">
                   {currentStep === 1 && "Basic Information"}
                   {currentStep === 2 && "Service Information"}
                   {currentStep === 3 && "Your Interest"}
                   {currentStep === 4 && "Review & Submit"}
                 </CardDescription>
               </div>
-              <div className="text-sm text-muted-foreground">
+              <div className="text-sm sm:text-base text-muted-foreground font-medium">
                 {Math.round(progressPercentage)}% Complete
               </div>
             </div>
-            <Progress value={progressPercentage} className="h-2" />
+            <Progress value={progressPercentage} className="h-3 sm:h-4" />
           </CardHeader>
 
-          <CardContent>
+          <CardContent className="px-4 sm:px-6 pb-6 sm:pb-8">
             <Form {...waitlistForm}>
-              <form onSubmit={waitlistForm.handleSubmit(onSubmit)} className="space-y-6">
+              <form onSubmit={waitlistForm.handleSubmit(onSubmit)} className="space-y-6 sm:space-y-8">
                 {renderStepContent()}
               </form>
             </Form>
             
-            {/* Navigation buttons - clearly visible */}
-            <div className="mt-8 pt-6 border-t-2 border-muted">
-              <div className="flex gap-4">
+            {/* Navigation buttons - Mobile optimized */}
+            <div className="mt-8 sm:mt-10 pt-6 sm:pt-8 border-t-2 border-muted">
+              <div className="flex gap-3 sm:gap-4">
                 {currentStep > 1 && (
                   <Button 
                     type="button" 
                     variant="outline" 
                     onClick={previousStep}
-                    className="flex-1 h-14 text-lg font-semibold"
+                    className="flex-1 h-14 sm:h-16 text-base sm:text-lg font-semibold min-h-[56px] touch-manipulation"
                   >
-                    <ChevronLeft className="h-5 w-5 mr-2" />
+                    <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6 mr-2" />
                     Previous
                   </Button>
                 )}
@@ -296,16 +296,16 @@ export function SimpleEnrollmentForm() {
                   <Button 
                     type="button" 
                     onClick={nextStep}
-                    className="flex-1 h-14 text-lg font-bold bg-blue-600 hover:bg-blue-700 text-white"
+                    className="flex-1 h-14 sm:h-16 text-base sm:text-lg font-bold bg-blue-600 hover:bg-blue-700 text-white min-h-[56px] touch-manipulation"
                   >
                     Next Step
-                    <ChevronRight className="h-5 w-5 ml-2" />
+                    <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6 ml-2" />
                   </Button>
                 ) : (
                   <Button 
                     type="button"
                     onClick={waitlistForm.handleSubmit(onSubmit)}
-                    className="flex-1 h-14 text-lg font-bold bg-blue-600 hover:bg-blue-700 text-white"
+                    className="flex-1 h-14 sm:h-16 text-base sm:text-lg font-bold bg-blue-600 hover:bg-blue-700 text-white min-h-[56px] touch-manipulation"
                     disabled={waitlistSubmitMutation.isPending}
                   >
                     {waitlistSubmitMutation.isPending ? (
