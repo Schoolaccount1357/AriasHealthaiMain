@@ -44,7 +44,7 @@ export function Hero() {
                  style={{
                    textShadow: '1px 1px 2px rgba(0,0,0,0.8)'
                  }}>
-                Strength grows within community circles, and everyone deserves one to lean on. Willow is our digital offering for our veterans designed to build steady peer support, starting with the communities that carry the heaviest loads.
+                Strength grows within community circles, and everyone deserves one to lean on. Willow is our digital offering designed to build steady peer support, starting with the communities that carry the heaviest loads.
               </p>
               <Button 
                 onClick={scrollToEnrollmentForm}
