@@ -855,8 +855,7 @@ export class DatabaseStorage implements IStorage {
   async getMostViewedPages(limit: number = 10): Promise<{ pageViewed: string; count: number }[]> {
     const result = await db
       .select({
-        ```text
-pageViewed: visitorActivityLog.pageViewed,
+        pageViewed: visitorActivityLog.pageViewed,
         count: sql<number>`count(*)`,
       })
       .from(visitorActivityLog)
