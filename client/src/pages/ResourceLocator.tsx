@@ -1591,8 +1591,7 @@ export default function ResourceLocator() {
           address: "877 Pretorius Street, Arcadia, Pretoria, 0083, South Africa",
           phone: "+27 12 431 4000",
           website: "https://za.usembassy.gov/u-s-citizen-services/",
-          category: "VA"
-        ,
+          category: "VA",
           targetAudience: "veteran"
         },
         {
@@ -1601,8 +1600,7 @@ export default function ResourceLocator() {
           address: "21 Hof Street, Oranjezicht, Cape Town, 8001, South Africa",
           phone: "+27 21 464 5500",
           website: "https://www.mediclinic.co.za/",
-          category: "Treatment"
-        ,
+          category: "Treatment",
           targetAudience: "veteran"
         },
         {
@@ -1611,8 +1609,7 @@ export default function ResourceLocator() {
           address: "Sandton, Johannesburg, South Africa",
           phone: "+27 11 884 4030",
           website: "https://www.recoverydirect.net/",
-          category: "Crisis"
-        ,
+          category: "Crisis",
           targetAudience: "veteran"
         },
         {
@@ -1621,9 +1618,46 @@ export default function ResourceLocator() {
           address: "PO Box 200, Spring City, PA 19475, USA",
           phone: "Main: +1-833-930-0816",
           website: "https://www.va.gov/health-care/foreign-medical-program/",
-          category: "VA"
-        ,
+          category: "VA",
           targetAudience: "veteran"
+        }
+      ],
+      publicResources: [
+        {
+          name: "South African Department of Health - Mental Health",
+          description: "National mental health services for South African residents",
+          address: "Private Bag X828, Pretoria 0001",
+          phone: "+27 12 395 8000",
+          website: "https://www.health.gov.za/",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "South African Depression and Anxiety Group (SADAG)",
+          description: "24/7 mental health crisis support and counseling services",
+          address: "Nationwide Service",
+          phone: "0800 567 567",
+          website: "https://www.sadag.org/",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "Department of Employment and Labour",
+          description: "Government employment services and job placement assistance",
+          address: "Laboria House, 215 Schoeman Street, Pretoria",
+          phone: "+27 12 309 4000",
+          website: "https://www.labour.gov.za/",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "Department of Human Settlements",
+          description: "National housing programs and assistance for South African residents",
+          address: "196 Paul Kruger Street, Pretoria",
+          phone: "+27 12 421 1411",
+          website: "https://www.dhs.gov.za/",
+          category: "Housing",
+          targetAudience: "public"
         }
       ]
     }
