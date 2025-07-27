@@ -3826,7 +3826,7 @@ export default function ResourceLocator() {
     <MainLayout>
       <PageHeader
         title="Public Support Resources"
-        description="Connect with veteran support services and public mental health resources in your area. Select your state or enter your ZIP code to find resources near you."
+        description="Access mental health and support services in your area and beyond. Select your state, enter your ZIP code, or explore international options to find public and additional resources tailored to your needs."
       />
 
       <div className="bg-[#141e2f] text-white p-4 sm:p-6 rounded-lg mb-6 sm:mb-10">
