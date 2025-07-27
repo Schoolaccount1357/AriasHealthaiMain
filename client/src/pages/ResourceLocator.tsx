@@ -1412,7 +1412,7 @@ export default function ResourceLocator() {
       ]
     },
     "Colorado": {
-      resources: [
+      veteranResources: [
         {
           name: "VA Eastern Colorado Health Care System",
           description: "VA healthcare services in Colorado",
@@ -1420,7 +1420,8 @@ export default function ResourceLocator() {
           phone: "(303) 399-8020",
           website: "https://www.va.gov/eastern-colorado-health-care/",
           category: "VA",
-          zipCode: "80045"
+          zipCode: "80045",
+          targetAudience: "veteran"
         },
         {
           name: "Colorado Veterans Resource Coalition",
@@ -1429,7 +1430,8 @@ export default function ResourceLocator() {
           phone: "(719) 477-2560",
           website: "https://cvrc.org",
           category: "Housing",
-          zipCode: "80905"
+          zipCode: "80905",
+          targetAudience: "veteran"
         },
         {
           name: "Denver Vet Center",
@@ -1438,16 +1440,8 @@ export default function ResourceLocator() {
           phone: "(303) 326-0645",
           website: "https://www.va.gov/denver-vet-center/",
           category: "Treatment",
-          zipCode: "80230"
-        },
-        {
-          name: "Veterans Crisis Line Colorado",
-          description: "24/7 crisis support and suicide prevention",
-          address: "1055 Clermont Street, Denver, CO 80220",
-          phone: "(800) 273-8255",
-          website: "https://www.veteranscrisisline.net",
-          category: "Crisis",
-          zipCode: "80220"
+          zipCode: "80230",
+          targetAudience: "veteran"
         },
         {
           name: "Colorado Veterans Job Connect",
@@ -1456,12 +1450,35 @@ export default function ResourceLocator() {
           phone: "(303) 318-8850",
           website: "https://cdle.colorado.gov/vets",
           category: "Employment",
-          zipCode: "80202"
+          zipCode: "80202",
+          targetAudience: "veteran"
+        }
+      ],
+      publicResources: [
+        {
+          name: "Colorado Department of Human Services - Mental Health",
+          description: "State mental health services for all Colorado residents",
+          address: "1575 Sherman St, Denver, CO 80203",
+          phone: "(303) 866-7400",
+          website: "https://www.colorado.gov/cdhs/behavioral-health",
+          category: "Treatment",
+          zipCode: "80203",
+          targetAudience: "public"
+        },
+        {
+          name: "Colorado Crisis Services",
+          description: "24/7 crisis support for all Colorado residents",
+          address: "Statewide Service",
+          phone: "1-844-493-8255",
+          website: "https://coloradocrisisservices.org/",
+          category: "Crisis",
+          zipCode: "80220",
+          targetAudience: "public"
         }
       ]
     },
     "Connecticut": {
-      resources: [
+      veteranResources: [
         {
           name: "VA Connecticut Healthcare System",
           description: "VA healthcare services in Connecticut",
@@ -1469,7 +1486,8 @@ export default function ResourceLocator() {
           phone: "(203) 932-5711",
           website: "https://www.va.gov/connecticut-health-care/",
           category: "VA",
-          zipCode: "06516"
+          zipCode: "06516",
+          targetAudience: "veteran"
         },
         {
           name: "Columbus House Veterans Program",
@@ -1478,7 +1496,8 @@ export default function ResourceLocator() {
           phone: "(203) 401-4400",
           website: "https://www.columbushouse.org/programs/veterans",
           category: "Housing",
-          zipCode: "06519"
+          zipCode: "06519",
+          targetAudience: "veteran"
         },
         {
           name: "CT Veterans Job Program",
@@ -1487,7 +1506,8 @@ export default function ResourceLocator() {
           phone: "(860) 263-6000",
           website: "https://www.ctdol.state.ct.us/veterans/default.htm",
           category: "Employment",
-          zipCode: "06106"
+          zipCode: "06106",
+          targetAudience: "veteran"
         },
         {
           name: "Veterans Recovery Center - CT",
@@ -1496,21 +1516,25 @@ export default function ResourceLocator() {
           phone: "(860) 224-7885",
           website: "https://www.wheelerhealth.org/services/veterans-services/",
           category: "Treatment",
-          zipCode: "06052"
-        },
+          zipCode: "06052",
+          targetAudience: "veteran"
+        }
+      ],
+      publicResources: [
         {
-          name: "CT Veterans Crisis Support",
-          description: "24/7 crisis intervention and support",
-          address: "1 Long Wharf Drive, New Haven, CT 06511",
-          phone: "(800) 273-8255",
-          website: "https://www.211ct.org/search/veterans",
-          category: "Crisis",
-          zipCode: "06511"
+          name: "Connecticut Department of Mental Health - Community Services",
+          description: "State mental health services for all Connecticut residents",
+          address: "410 Capitol Ave, Hartford, CT 06134",
+          phone: "(860) 418-7000",
+          website: "https://portal.ct.gov/DMHAS",
+          category: "Treatment",
+          zipCode: "06134",
+          targetAudience: "public"
         }
       ]
     },
     "Delaware": {
-      resources: [
+      veteranResources: [
         {
           name: "Wilmington VA Medical Center",
           description: "VA healthcare services in Delaware",
@@ -1518,7 +1542,8 @@ export default function ResourceLocator() {
           phone: "(302) 994-2511",
           website: "https://www.va.gov/wilmington-health-care/",
           category: "VA",
-          zipCode: "19805"
+          zipCode: "19805",
+          targetAudience: "veteran"
         },
         {
           name: "Veterans Outreach Center",
@@ -1527,7 +1552,8 @@ export default function ResourceLocator() {
           phone: "(302) 777-1800",
           website: "https://delawareveterans.org",
           category: "Housing",
-          zipCode: "19801"
+          zipCode: "19801",
+          targetAudience: "veteran"
         },
         {
           name: "Delaware Veterans Job Bank",
@@ -1536,7 +1562,8 @@ export default function ResourceLocator() {
           phone: "(302) 761-8200",
           website: "https://labor.delaware.gov/divisions/employment-training/veterans-services/",
           category: "Employment",
-          zipCode: "19802"
+          zipCode: "19802",
+          targetAudience: "veteran"
         },
         {
           name: "Delaware Veterans Treatment Center",
@@ -1545,16 +1572,20 @@ export default function ResourceLocator() {
           phone: "(302) 655-3261",
           website: "https://www.delawarevetcenter.org",
           category: "Treatment",
-          zipCode: "19801"
-        },
+          zipCode: "19801",
+          targetAudience: "veteran"
+        }
+      ],
+      publicResources: [
         {
-          name: "Delaware Veterans Crisis Line",
-          description: "24/7 crisis support and intervention",
-          address: "1901 North DuPont Highway, New Castle, DE 19720",
-          phone: "(800) 273-8255",
-          website: "https://veterans.delaware.gov/crisis",
-          category: "Crisis",
-          zipCode: "19720"
+          name: "Delaware Department of Health - Mental Health Services",
+          description: "State mental health services for all Delaware residents",
+          address: "417 Federal St, Dover, DE 19901",
+          phone: "(302) 255-9040",
+          website: "https://dhss.delaware.gov/dhss/dsamh/",
+          category: "Treatment",
+          zipCode: "19901",
+          targetAudience: "public"
         }
       ]
     },
