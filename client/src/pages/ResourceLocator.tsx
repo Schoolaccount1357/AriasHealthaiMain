@@ -1790,7 +1790,44 @@ export default function ResourceLocator() {
           category: "Housing"
         }
       ],
-      publicResources: []
+      publicResources: [
+        {
+          name: "Florida Department of Children and Families - Mental Health",
+          description: "State mental health services and crisis intervention for all Florida residents",
+          address: "1317 Winewood Blvd, Tallahassee, FL 32399",
+          phone: "(850) 717-4000",
+          website: "https://www.myflfamilies.com/service-programs/mental-health/",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "Florida Crisis & Access Line",
+          description: "24/7 statewide crisis hotline providing immediate mental health support for all residents",
+          address: "Statewide Service",
+          phone: "1-866-762-2237",
+          website: "https://www.flcrisisline.org/",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "CareerSource Florida",
+          description: "State employment services including job training and workforce development for all residents",
+          address: "107 E Madison St, Suite 300, Tallahassee, FL 32399",
+          phone: "(850) 921-1119",
+          website: "https://www.careersourceflorida.com/",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "Florida Housing Finance Corporation",
+          description: "State housing assistance programs including affordable housing and emergency rental assistance",
+          address: "227 N Bronough St, Tallahassee, FL 32301",
+          phone: "(850) 488-4197",
+          website: "https://www.floridahousing.org/",
+          category: "Housing",
+          targetAudience: "public"
+        }
+      ]
     },
     "Georgia": {
       veteranResources: [
@@ -1883,7 +1920,44 @@ export default function ResourceLocator() {
           category: "Employment"
         }
       ],
-      publicResources: []
+      publicResources: [
+        {
+          name: "Georgia Department of Behavioral Health and Developmental Disabilities",
+          description: "State mental health and addiction services for all Georgia residents",
+          address: "2 Peachtree Street NW, Atlanta, GA 30303",
+          phone: "(404) 657-2252",
+          website: "https://dbhdd.georgia.gov/",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "Georgia Crisis & Access Line",
+          description: "24/7 statewide crisis support and mental health services navigation",
+          address: "Statewide Service",
+          phone: "1-800-715-4225",
+          website: "https://georgiacollaborative.com/",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "Georgia Department of Labor - WorkSource Georgia",
+          description: "State employment services including job training and career development for all residents",
+          address: "148 Andrew Young International Blvd NE, Atlanta, GA 30303",
+          phone: "(404) 232-3500",
+          website: "https://www.dol.state.ga.us/",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "Georgia Department of Community Affairs - Housing",
+          description: "State housing assistance including affordable housing and emergency rental programs",
+          address: "60 Executive Park South NE, Atlanta, GA 30329",
+          phone: "(404) 679-4840",
+          website: "https://www.dca.ga.gov/",
+          category: "Housing",
+          targetAudience: "public"
+        }
+      ]
     },
     "Hawaii": {
       veteranResources: [
@@ -2048,7 +2122,44 @@ export default function ResourceLocator() {
           category: "Treatment"
         }
       ],
-      publicResources: []
+      publicResources: [
+        {
+          name: "Hawaii Department of Health - Behavioral Health Administration",
+          description: "State mental health and substance abuse services for all Hawaii residents",
+          address: "3627 Kilauea Avenue, Honolulu, HI 96816",
+          phone: "(808) 733-9333",
+          website: "https://health.hawaii.gov/substance-abuse/",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "Hawaii Crisis Line",
+          description: "24/7 statewide crisis support and suicide prevention services",
+          address: "Statewide Service",
+          phone: "1-800-753-6879",
+          website: "https://www.crisislinehawaii.org/",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "Hawaii Department of Labor - Workforce Development",
+          description: "State employment services including job training and career assistance for all residents",
+          address: "830 Punchbowl Street, Honolulu, HI 96813",
+          phone: "(808) 586-8700",
+          website: "https://labor.hawaii.gov/",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "Hawaii Housing Finance and Development Corporation",
+          description: "State housing assistance programs including affordable housing and rental assistance",
+          address: "677 Queen Street, Suite 300, Honolulu, HI 96813",
+          phone: "(808) 587-0597",
+          website: "https://dbedt.hawaii.gov/hhfdc/",
+          category: "Housing",
+          targetAudience: "public"
+        }
+      ]
     },
     "Idaho": {
       veteranResources: [
@@ -2165,7 +2276,44 @@ export default function ResourceLocator() {
           category: "Employment"
         }
       ],
-      publicResources: []
+      publicResources: [
+        {
+          name: "Idaho Department of Health and Welfare - Behavioral Health",
+          description: "State mental health and substance abuse services for all Idaho residents",
+          address: "450 W State Street, Boise, ID 83702",
+          phone: "(208) 334-5500",
+          website: "https://healthandwelfare.idaho.gov/services-programs/behavioral-health",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "Idaho Crisis & Suicide Hotline",
+          description: "24/7 statewide crisis support and suicide prevention services",
+          address: "Statewide Service",
+          phone: "1-855-552-4377",
+          website: "https://idahosuicideprevention.org/",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "Idaho Department of Labor - Workforce Development",
+          description: "State employment services including job training and career assistance for all residents",
+          address: "317 W Main Street, Boise, ID 83735",
+          phone: "(208) 332-3570",
+          website: "https://www.labor.idaho.gov/",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "Idaho Housing and Finance Association",
+          description: "State housing assistance programs including affordable housing and homebuyer assistance",
+          address: "565 W Myrtle Street, Boise, ID 83702",
+          phone: "(208) 331-4700",
+          website: "https://www.idahohousing.com/",
+          category: "Housing",
+          targetAudience: "public"
+        }
+      ]
     },
     "Illinois": {
       veteranResources: [
@@ -2288,6 +2436,44 @@ export default function ResourceLocator() {
           phone: "(217) 782-6641",
           website: "https://www2.illinois.gov/veterans/",
           category: "Employment"
+        }
+      ],
+      publicResources: [
+        {
+          name: "Illinois Department of Human Services - Mental Health",
+          description: "State mental health and substance abuse services for all Illinois residents",
+          address: "100 W Randolph Street, Chicago, IL 60601",
+          phone: "(217) 782-1200",
+          website: "https://www.dhs.state.il.us/page.aspx?item=29737",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "Illinois Warm Line",
+          description: "24/7 peer support and crisis intervention services for all residents",
+          address: "Statewide Service",
+          phone: "1-866-359-7953",
+          website: "https://www.illinois.gov/hfs/MedicalPrograms/HCBS/ILWarmLine/Pages/default.aspx",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "Illinois Department of Commerce and Economic Opportunity - Workforce Development",
+          description: "State employment services including job training and career assistance for all residents",
+          address: "100 W Randolph Street, Chicago, IL 60601",
+          phone: "(312) 814-7179",
+          website: "https://www2.illinois.gov/dceo/Pages/default.aspx",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "Illinois Housing Development Authority",
+          description: "State housing assistance programs including affordable housing and homebuyer assistance",
+          address: "111 E Wacker Drive, Chicago, IL 60601",
+          phone: "(312) 836-5200",
+          website: "https://www.ihda.org/",
+          category: "Housing",
+          targetAudience: "public"
         }
       ]
     },
