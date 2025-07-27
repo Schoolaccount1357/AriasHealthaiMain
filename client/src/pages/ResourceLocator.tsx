@@ -4295,6 +4295,44 @@ export default function ResourceLocator() {
           website: "https://www.fargo.va.gov/",
           category: "VA"
         }
+      ],
+      publicResources: [
+        {
+          name: "North Dakota Department of Human Services - Behavioral Health",
+          description: "State mental health and substance abuse services for all North Dakota residents",
+          address: "1237 W Divide Avenue, Bismarck, ND 58501",
+          phone: "(701) 328-8920",
+          website: "https://www.nd.gov/dhs/services/mentalhealth/",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "North Dakota Crisis Line",
+          description: "24/7 statewide crisis support and suicide prevention services",
+          address: "Statewide Service",
+          phone: "1-800-273-8255",
+          website: "https://www.nd.gov/dhs/services/mentalhealth/crisis.html",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "Job Service North Dakota",
+          description: "State employment services including job training and career assistance for all residents",
+          address: "1000 E Divide Avenue, Bismarck, ND 58501",
+          phone: "(701) 328-5000",
+          website: "https://www.jobsnd.com/",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "North Dakota Housing Finance Agency",
+          description: "State housing assistance programs including affordable housing and homebuyer assistance",
+          address: "2624 Vermont Avenue, Bismarck, ND 58503",
+          phone: "(701) 328-8080",
+          website: "https://www.ndhfa.org/",
+          category: "Housing",
+          targetAudience: "public"
+        }
       ]
     },
     "Ohio": {
@@ -4307,6 +4345,44 @@ export default function ResourceLocator() {
           website: "https://www.cleveland.va.gov/",
           category: "VA"
         }
+      ],
+      publicResources: [
+        {
+          name: "Ohio Department of Mental Health and Addiction Services",
+          description: "State mental health and substance abuse services for all Ohio residents",
+          address: "30 E Broad Street, Columbus, OH 43215",
+          phone: "(614) 466-2596",
+          website: "https://mha.ohio.gov/",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "Ohio Crisis Text Line",
+          description: "24/7 statewide crisis support via text and phone",
+          address: "Statewide Service",
+          phone: "1-800-273-8255",
+          website: "https://mha.ohio.gov/services-providers/crisis-services",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "OhioMeansJobs - Workforce Development",
+          description: "State employment services including job training and career assistance for all residents",
+          address: "30 E Broad Street, Columbus, OH 43215",
+          phone: "(614) 466-2100",
+          website: "https://ohiomeansjobs.com/",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "Ohio Housing Finance Agency",
+          description: "State housing assistance programs including affordable housing and homebuyer assistance",
+          address: "57 E Main Street, Columbus, OH 43215",
+          phone: "(614) 466-7970",
+          website: "https://www.ohiohome.org/",
+          category: "Housing",
+          targetAudience: "public"
+        }
       ]
     },
     "Oklahoma": {
@@ -4318,6 +4394,44 @@ export default function ResourceLocator() {
           phone: "(405) 456-1000",
           website: "https://www.oklahoma.va.gov/",
           category: "VA"
+        }
+      ],
+      publicResources: [
+        {
+          name: "Oklahoma Department of Mental Health and Substance Abuse Services",
+          description: "State mental health and substance abuse services for all Oklahoma residents",
+          address: "1200 NE 13th Street, Oklahoma City, OK 73117",
+          phone: "(405) 522-3908",
+          website: "https://oklahoma.gov/odmhsas.html",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "Oklahoma Crisis Line",
+          description: "24/7 statewide crisis support and suicide prevention services",
+          address: "Statewide Service",
+          phone: "1-800-273-8255",
+          website: "https://oklahoma.gov/odmhsas/treatment/crisis-intervention.html",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "Oklahoma Employment Security Commission",
+          description: "State employment services including job training and career assistance for all residents",
+          address: "Will Rogers Memorial Office Building, Oklahoma City, OK 73105",
+          phone: "(405) 557-7100",
+          website: "https://www.ok.gov/oesc/",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "Oklahoma Housing Finance Agency",
+          description: "State housing assistance programs including affordable housing and homebuyer assistance",
+          address: "5500 N Western Avenue, Oklahoma City, OK 73118",
+          phone: "(405) 848-1144",
+          website: "https://www.ohfa.org/",
+          category: "Housing",
+          targetAudience: "public"
         }
       ]
     },
@@ -4379,6 +4493,44 @@ export default function ResourceLocator() {
           website: "https://www.oregon.gov/odva/Connect/Pages/Assistance.aspx",
           category: "Housing"
         }
+      ],
+      publicResources: [
+        {
+          name: "Oregon Health Authority - Behavioral Health Division",
+          description: "State mental health and substance abuse services for all Oregon residents",
+          address: "500 Summer Street NE, Salem, OR 97301",
+          phone: "(503) 945-5944",
+          website: "https://www.bethoughtfull.org/",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "Oregon Crisis Line",
+          description: "24/7 statewide crisis support and suicide prevention services",
+          address: "Statewide Service",
+          phone: "1-800-273-8255",
+          website: "https://www.crisis.bethoughtfull.org/",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "Oregon Employment Department - WorkSource Centers",
+          description: "State employment services including job training and career assistance for all residents",
+          address: "875 Union Street NE, Salem, OR 97311",
+          phone: "(503) 947-1394",
+          website: "https://www.oregon.gov/employ/",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "Oregon Housing and Community Services",
+          description: "State housing assistance programs including affordable housing and homebuyer assistance",
+          address: "725 Summer Street NE, Salem, OR 97301",
+          phone: "(503) 986-2000",
+          website: "https://www.oregon.gov/ohcs/",
+          category: "Housing",
+          targetAudience: "public"
+        }
       ]
     },
     "Pennsylvania": {
@@ -4390,6 +4542,44 @@ export default function ResourceLocator() {
           phone: "(215) 823-5800",
           website: "https://www.philadelphia.va.gov/",
           category: "VA"
+        }
+      ],
+      publicResources: [
+        {
+          name: "Pennsylvania Department of Human Services - Mental Health",
+          description: "State mental health and substance abuse services for all Pennsylvania residents",
+          address: "625 Forster Street, Harrisburg, PA 17120",
+          phone: "(717) 787-6443",
+          website: "https://www.dhs.pa.gov/services/mental-health-services/",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "Pennsylvania Crisis Line",
+          description: "24/7 statewide crisis support and suicide prevention services",
+          address: "Statewide Service",
+          phone: "1-800-273-8255",
+          website: "https://www.dhs.pa.gov/services/mental-health-services/Pages/Crisis-Services.aspx",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "Pennsylvania CareerLink - Department of Labor & Industry",
+          description: "State employment services including job training and career assistance for all residents",
+          address: "651 Boas Street, Harrisburg, PA 17121",
+          phone: "(717) 787-5279",
+          website: "https://www.pacareerlink.pa.gov/",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "Pennsylvania Housing Finance Agency",
+          description: "State housing assistance programs including affordable housing and homebuyer assistance",
+          address: "211 N Front Street, Harrisburg, PA 17101",
+          phone: "(717) 780-3800",
+          website: "https://www.phfa.org/",
+          category: "Housing",
+          targetAudience: "public"
         }
       ]
     },
@@ -4403,6 +4593,44 @@ export default function ResourceLocator() {
           website: "https://www.providence.va.gov/",
           category: "VA"
         }
+      ],
+      publicResources: [
+        {
+          name: "Rhode Island Department of Behavioral Healthcare",
+          description: "State mental health and substance abuse services for all Rhode Island residents",
+          address: "14 Harrington Road, Cranston, RI 02920",
+          phone: "(401) 462-2003",
+          website: "https://bhddh.ri.gov/",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "Rhode Island Crisis Line",
+          description: "24/7 statewide crisis support and suicide prevention services",
+          address: "Statewide Service",
+          phone: "1-800-273-8255",
+          website: "https://bhddh.ri.gov/sections_offices/behavioral_health/crisis.php",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "Rhode Island Department of Labor and Training - netWORKri",
+          description: "State employment services including job training and career assistance for all residents",
+          address: "1511 Pontiac Avenue, Cranston, RI 02920",
+          phone: "(401) 462-8000",
+          website: "https://www.dlt.ri.gov/",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "Rhode Island Housing",
+          description: "State housing assistance programs including affordable housing and homebuyer assistance",
+          address: "44 Washington Street, Providence, RI 02903",
+          phone: "(401) 457-1234",
+          website: "https://www.rihousing.com/",
+          category: "Housing",
+          targetAudience: "public"
+        }
       ]
     },
     "South Carolina": {
@@ -4414,6 +4642,44 @@ export default function ResourceLocator() {
           phone: "(803) 776-4000",
           website: "https://www.columbia.va.gov/",
           category: "VA"
+        }
+      ],
+      publicResources: [
+        {
+          name: "South Carolina Department of Mental Health",
+          description: "State mental health services for all South Carolina residents",
+          address: "2414 Bull Street, Columbia, SC 29201",
+          phone: "(803) 898-8581",
+          website: "https://scdmh.net/",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "South Carolina Crisis Line",
+          description: "24/7 statewide crisis support and suicide prevention services",
+          address: "Statewide Service",
+          phone: "1-800-273-8255",
+          website: "https://scdmh.net/mental-health-services/crisis-services/",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "SC Works - Department of Employment and Workforce",
+          description: "State employment services including job training and career assistance for all residents",
+          address: "1550 Gadsden Street, Columbia, SC 29202",
+          phone: "(803) 737-2400",
+          website: "https://scworks.org/",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "South Carolina State Housing Finance and Development Authority",
+          description: "State housing assistance programs including affordable housing and homebuyer assistance",
+          address: "300-C Outlet Pointe Blvd, Columbia, SC 29210",
+          phone: "(803) 896-9001",
+          website: "https://www.schousing.com/",
+          category: "Housing",
+          targetAudience: "public"
         }
       ]
     },
@@ -4507,6 +4773,44 @@ export default function ResourceLocator() {
           website: "https://vetaffairs.sd.gov/",
           category: "VA"
         }
+      ],
+      publicResources: [
+        {
+          name: "South Dakota Department of Social Services - Behavioral Health",
+          description: "State mental health and substance abuse services for all South Dakota residents",
+          address: "700 Governors Drive, Pierre, SD 57501",
+          phone: "(605) 773-3123",
+          website: "https://dss.sd.gov/behavioralhealth/default.aspx",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "South Dakota Crisis Line",
+          description: "24/7 statewide crisis support and suicide prevention services",
+          address: "Statewide Service",
+          phone: "1-800-273-8255",
+          website: "https://dss.sd.gov/behavioralhealth/crisis.aspx",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "South Dakota Department of Labor and Regulation",
+          description: "State employment services including job training and career assistance for all residents",
+          address: "700 Governors Drive, Pierre, SD 57501",
+          phone: "(605) 773-3101",
+          website: "https://dlr.sd.gov/",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "South Dakota Housing Development Authority",
+          description: "State housing assistance programs including affordable housing and homebuyer assistance",
+          address: "3060 E Elizabeth Street, Pierre, SD 57501",
+          phone: "(605) 773-3181",
+          website: "https://www.sdhda.org/",
+          category: "Housing",
+          targetAudience: "public"
+        }
       ]
     },
     "Tennessee": {
@@ -4518,6 +4822,44 @@ export default function ResourceLocator() {
           phone: "(615) 327-4751",
           website: "https://www.tennesseevalley.va.gov/",
           category: "VA"
+        }
+      ],
+      publicResources: [
+        {
+          name: "Tennessee Department of Mental Health and Substance Abuse Services",
+          description: "State mental health and substance abuse services for all Tennessee residents",
+          address: "Andrew Johnson Tower, Nashville, TN 37243",
+          phone: "(615) 532-6500",
+          website: "https://www.tn.gov/behavioral-health.html",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "Tennessee Crisis Line",
+          description: "24/7 statewide crisis support and suicide prevention services",
+          address: "Statewide Service",
+          phone: "1-855-274-7471",
+          website: "https://www.tn.gov/behavioral-health/mental-health-services/crisis-services.html",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "Tennessee Department of Labor and Workforce Development - Career Centers",
+          description: "State employment services including job training and career assistance for all residents",
+          address: "220 French Landing Drive, Nashville, TN 37243",
+          phone: "(844) 224-5627",
+          website: "https://www.tn.gov/workforce.html",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "Tennessee Housing Development Agency",
+          description: "State housing assistance programs including affordable housing and homebuyer assistance",
+          address: "502 Deaderick Street, Nashville, TN 37243",
+          phone: "(615) 815-2200",
+          website: "https://thda.org/",
+          category: "Housing",
+          targetAudience: "public"
         }
       ]
     },
@@ -4624,6 +4966,44 @@ export default function ResourceLocator() {
           website: "https://www.va.gov/salt-lake-city-health-care/",
           category: "VA"
         }
+      ],
+      publicResources: [
+        {
+          name: "Utah Department of Human Services - Substance Abuse and Mental Health",
+          description: "State mental health and substance abuse services for all Utah residents",
+          address: "195 N 1950 W, Salt Lake City, UT 84116",
+          phone: "(801) 538-4270",
+          website: "https://dsamh.utah.gov/",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "Utah Crisis Line",
+          description: "24/7 statewide crisis support and suicide prevention services",
+          address: "Statewide Service",
+          phone: "1-800-273-8255",
+          website: "https://dsamh.utah.gov/crisis-services",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "Utah Department of Workforce Services",
+          description: "State employment services including job training and career assistance for all residents",
+          address: "140 E 300 S, Salt Lake City, UT 84111",
+          phone: "(801) 526-9675",
+          website: "https://jobs.utah.gov/",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "Utah Housing Corporation",
+          description: "State housing assistance programs including affordable housing and homebuyer assistance",
+          address: "2479 S Lake Park Blvd, West Valley City, UT 84120",
+          phone: "(801) 902-8200",
+          website: "https://www.utahhousingcorp.org/",
+          category: "Housing",
+          targetAudience: "public"
+        }
       ]
     },
     "Vermont": {
@@ -4635,6 +5015,44 @@ export default function ResourceLocator() {
           phone: "(802) 295-9363",
           website: "https://www.whiteriver.va.gov/",
           category: "VA"
+        }
+      ],
+      publicResources: [
+        {
+          name: "Vermont Department of Mental Health",
+          description: "State mental health services for all Vermont residents",
+          address: "280 State Drive, Waterbury, VT 05671",
+          phone: "(802) 241-0090",
+          website: "https://mentalhealth.vermont.gov/",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "Vermont Crisis Line",
+          description: "24/7 statewide crisis support and suicide prevention services",
+          address: "Statewide Service",
+          phone: "1-800-273-8255",
+          website: "https://mentalhealth.vermont.gov/services/crisis-services",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "Vermont Department of Labor - Career Resource Centers",
+          description: "State employment services including job training and career assistance for all residents",
+          address: "5 Green Mountain Drive, Montpelier, VT 05601",
+          phone: "(802) 828-4000",
+          website: "https://labor.vermont.gov/",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "Vermont State Housing Authority",
+          description: "State housing assistance programs including affordable housing and homebuyer assistance",
+          address: "164 State Street, Montpelier, VT 05602",
+          phone: "(802) 828-3295",
+          website: "https://www.vsha.org/",
+          category: "Housing",
+          targetAudience: "public"
         }
       ]
     },
@@ -4688,6 +5106,44 @@ export default function ResourceLocator() {
           website: "https://www.vbcdc.org",
           category: "Housing"
         }
+      ],
+      publicResources: [
+        {
+          name: "Virginia Department of Behavioral Health and Developmental Services",
+          description: "State mental health and substance abuse services for all Virginia residents",
+          address: "1220 Bank Street, Richmond, VA 23219",
+          phone: "(804) 786-3921",
+          website: "https://dbhds.virginia.gov/",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "Virginia Crisis Line",
+          description: "24/7 statewide crisis support and suicide prevention services",
+          address: "Statewide Service",
+          phone: "1-800-273-8255",
+          website: "https://dbhds.virginia.gov/clinical-administrative-services/office-of-licensing/crisis-services/",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "Virginia Employment Commission - Virginia Career Works",
+          description: "State employment services including job training and career assistance for all residents",
+          address: "703 E Main Street, Richmond, VA 23219",
+          phone: "(866) 832-2363",
+          website: "https://www.vec.virginia.gov/",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "Virginia Housing Development Authority",
+          description: "State housing assistance programs including affordable housing and homebuyer assistance",
+          address: "601 S Belvidere Street, Richmond, VA 23220",
+          phone: "(804) 343-5540",
+          website: "https://www.vhda.com/",
+          category: "Housing",
+          targetAudience: "public"
+        }
       ]
     },
     "Washington": {
@@ -4699,6 +5155,44 @@ export default function ResourceLocator() {
           phone: "(206) 762-1010",
           website: "https://www.pugetsound.va.gov/",
           category: "VA"
+        }
+      ],
+      publicResources: [
+        {
+          name: "Washington State Department of Health - Behavioral Health",
+          description: "State mental health and substance abuse services for all Washington residents",
+          address: "1011 Plum Street SE, Olympia, WA 98504",
+          phone: "(360) 236-4200",
+          website: "https://www.doh.wa.gov/YouandYourFamily/MentalHealthandBehavioralHealth",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "Washington Crisis Line",
+          description: "24/7 statewide crisis support and suicide prevention services",
+          address: "Statewide Service",
+          phone: "1-800-273-8255",
+          website: "https://www.doh.wa.gov/YouandYourFamily/MentalHealthandBehavioralHealth/SuicidePrevention",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "Washington State Employment Security Department - WorkSource",
+          description: "State employment services including job training and career assistance for all residents",
+          address: "212 Maple Park Ave SE, Olympia, WA 98504",
+          phone: "(360) 902-9500",
+          website: "https://esd.wa.gov/",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "Washington State Housing Finance Commission",
+          description: "State housing assistance programs including affordable housing and homebuyer assistance",
+          address: "1000 2nd Avenue, Seattle, WA 98104",
+          phone: "(206) 464-7139",
+          website: "https://www.wshfc.org/",
+          category: "Housing",
+          targetAudience: "public"
         }
       ]
     },
@@ -4712,6 +5206,44 @@ export default function ResourceLocator() {
           website: "https://www.huntington.va.gov/",
           category: "VA"
         }
+      ],
+      publicResources: [
+        {
+          name: "West Virginia Department of Health and Human Resources - Bureau for Behavioral Health",
+          description: "State mental health and substance abuse services for all West Virginia residents",
+          address: "350 Capitol Street, Charleston, WV 25301",
+          phone: "(304) 356-4811",
+          website: "https://dhhr.wv.gov/BBH/",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "West Virginia Crisis Line",
+          description: "24/7 statewide crisis support and suicide prevention services",
+          address: "Statewide Service",
+          phone: "1-800-273-8255",
+          website: "https://dhhr.wv.gov/BBH/Pages/Crisis-Services.aspx",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "WorkForce West Virginia",
+          description: "State employment services including job training and career assistance for all residents",
+          address: "112 California Avenue, Charleston, WV 25305",
+          phone: "(304) 558-7024",
+          website: "https://www.workforcewv.org/",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "West Virginia Housing Development Fund",
+          description: "State housing assistance programs including affordable housing and homebuyer assistance",
+          address: "814 Virginia Street E, Charleston, WV 25301",
+          phone: "(304) 345-6475",
+          website: "https://www.wvhdf.com/",
+          category: "Housing",
+          targetAudience: "public"
+        }
       ]
     },
     "Wisconsin": {
@@ -4724,6 +5256,44 @@ export default function ResourceLocator() {
           website: "https://www.madison.va.gov/",
           category: "VA"
         }
+      ],
+      publicResources: [
+        {
+          name: "Wisconsin Department of Health Services - Division of Mental Health and Substance Abuse Services",
+          description: "State mental health and substance abuse services for all Wisconsin residents",
+          address: "1 W Wilson Street, Madison, WI 53703",
+          phone: "(608) 266-2717",
+          website: "https://www.dhs.wisconsin.gov/mh/index.htm",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "Wisconsin Crisis Line",
+          description: "24/7 statewide crisis support and suicide prevention services",
+          address: "Statewide Service",
+          phone: "1-800-273-8255",
+          website: "https://www.dhs.wisconsin.gov/mh/crisis.htm",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "Wisconsin Department of Workforce Development - Job Centers",
+          description: "State employment services including job training and career assistance for all residents",
+          address: "201 E Washington Avenue, Madison, WI 53703",
+          phone: "(608) 266-3131",
+          website: "https://dwd.wisconsin.gov/",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "Wisconsin Housing and Economic Development Authority",
+          description: "State housing assistance programs including affordable housing and homebuyer assistance",
+          address: "201 W Washington Avenue, Madison, WI 53703",
+          phone: "(608) 266-7884",
+          website: "https://www.wheda.com/",
+          category: "Housing",
+          targetAudience: "public"
+        }
       ]
     },
     "Wyoming": {
@@ -4735,6 +5305,44 @@ export default function ResourceLocator() {
           phone: "(307) 778-7550",
           website: "https://www.cheyenne.va.gov/",
           category: "VA"
+        }
+      ],
+      publicResources: [
+        {
+          name: "Wyoming Department of Health - Behavioral Health Division",
+          description: "State mental health and substance abuse services for all Wyoming residents",
+          address: "6101 Yellowstone Road, Cheyenne, WY 82002",
+          phone: "(307) 777-7656",
+          website: "https://health.wyo.gov/behavioralhealth/",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "Wyoming Crisis Line",
+          description: "24/7 statewide crisis support and suicide prevention services",
+          address: "Statewide Service",
+          phone: "1-800-273-8255",
+          website: "https://health.wyo.gov/behavioralhealth/crisis-services/",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "Wyoming Department of Workforce Services",
+          description: "State employment services including job training and career assistance for all residents",
+          address: "5221 Yellowstone Road, Cheyenne, WY 82009",
+          phone: "(307) 777-8728",
+          website: "https://www.wyomingworkforce.org/",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "Wyoming Community Development Authority",
+          description: "State housing assistance programs including affordable housing and homebuyer assistance",
+          address: "155 N Beech Street, Casper, WY 82601",
+          phone: "(307) 265-0603",
+          website: "https://www.wyomingcda.com/",
+          category: "Housing",
+          targetAudience: "public"
         }
       ]
     }
