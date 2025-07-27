@@ -32,15 +32,15 @@ export function Hero() {
         {/* Content Overlay - Optimized for Mobile */}
         <div className="absolute inset-0 flex items-center justify-center lg:items-end lg:justify-start pt-20 sm:pt-16 pb-24 sm:pb-28 lg:pb-20 xl:pb-24">
           <div className="max-w-sm sm:max-w-lg lg:max-w-2xl ml-0 lg:ml-8 xl:ml-12 text-center lg:text-left text-white px-3 sm:px-6 lg:px-8 w-full">
-            {/* Enhanced Background for Text Readability */}
-            <div className="backdrop-blur-sm bg-black/40 rounded-2xl p-4 sm:p-5 md:p-6 lg:p-6 border border-white/25 shadow-2xl mx-2 sm:mx-0">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-5 md:mb-6 leading-tight text-white" 
+            {/* Compact Text Container */}
+            <div className="backdrop-blur-sm bg-black/30 rounded-xl p-3 sm:p-4 md:p-5 border border-white/20 shadow-xl mx-2 sm:mx-0 max-w-xl">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 leading-tight text-white" 
                   style={{
                     textShadow: '2px 2px 4px rgba(0,0,0,0.8), 0 0 20px rgba(255,255,255,0.8), 0 0 40px rgba(255,255,255,0.6), 0 0 60px rgba(255,248,220,0.4)'
                   }}>
                 Stronger Every Day.
               </h1>
-              <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-5 sm:mb-6 md:mb-7 leading-relaxed text-white/95 max-w-2xl font-medium"
+              <p className="text-sm sm:text-base md:text-lg mb-4 sm:mb-5 md:mb-6 leading-relaxed text-white/95 font-medium"
                  style={{
                    textShadow: '1px 1px 2px rgba(0,0,0,0.8)'
                  }}>
@@ -48,12 +48,12 @@ export function Hero() {
               </p>
               <Button 
                 onClick={scrollToEnrollmentForm}
-                size="lg"
-                className="bg-[#4a6b45] hover:bg-[#3a5336] text-white px-8 sm:px-10 py-4 sm:py-5 text-lg sm:text-xl font-bold rounded-xl shadow-2xl hover:shadow-3xl transition-all duration-300 w-full sm:w-auto border-2 border-white/20 hover:border-white/40 min-h-[56px] sm:min-h-[60px]"
+                size="default"
+                className="bg-[#4a6b45] hover:bg-[#3a5336] text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-bold rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 w-full sm:w-auto border border-white/20 hover:border-white/40 min-h-[48px] sm:min-h-[52px]"
                 aria-label="Get early access to Willow - Navigate to enrollment form"
                 style={{
                   textShadow: '1px 1px 2px rgba(0,0,0,0.5)',
-                  boxShadow: '0 0 20px rgba(74, 107, 69, 0.5), 0 0 40px rgba(74, 107, 69, 0.3), inset 0 1px 0 rgba(255,255,255,0.2)'
+                  boxShadow: '0 0 15px rgba(74, 107, 69, 0.4), 0 0 30px rgba(74, 107, 69, 0.2), inset 0 1px 0 rgba(255,255,255,0.2)'
                 }}
               >
                 Get early access to Willow
