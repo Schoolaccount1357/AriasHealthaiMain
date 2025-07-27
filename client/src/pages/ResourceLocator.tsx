@@ -140,14 +140,15 @@ export default function ResourceLocator() {
       ]
     },
     "Germany": {
-      resources: [
+      veteranResources: [
         {
           name: "Landstuhl Regional Medical Center",
           description: "The largest U.S. military hospital outside the United States",
           address: "Dr. Hitzelberger Straße, 66849 Landstuhl, Germany",
           phone: "+49 6371 9464 0",
           website: "https://landstuhl.tricare.mil/",
-          category: "VA"
+          category: "VA",
+          targetAudience: "veteran"
         },
         {
           name: "Foreign Medical Program (FMP) - Germany",
@@ -155,7 +156,8 @@ export default function ResourceLocator() {
           address: "PO Box 200, Spring City, PA 19475, USA",
           phone: "Main: +1-833-930-0816 or Germany Toll-Free: 0800-1800-011",
           website: "https://www.va.gov/health-care/foreign-medical-program/",
-          category: "VA"
+          category: "VA",
+          targetAudience: "veteran"
         },
         {
           name: "Veterans of Foreign Wars - Post 10810",
@@ -163,7 +165,8 @@ export default function ResourceLocator() {
           address: "CMR 480 Box G.D., APO, AE 09128",
           phone: "+49 151 9048 81899",
           website: "https://www.vfw10810.org/",
-          category: "Treatment"
+          category: "Treatment",
+          targetAudience: "veteran"
         },
         {
           name: "American Medical Center - Landstuhl",
@@ -171,7 +174,8 @@ export default function ResourceLocator() {
           address: "66849 Landstuhl, Germany",
           phone: "+49 6371 9464 0",
           website: "https://landstuhl.tricare.mil/",
-          category: "Treatment"
+          category: "Treatment",
+          targetAudience: "veteran"
         },
         {
           name: "USO Kaiserslautern",
@@ -179,7 +183,8 @@ export default function ResourceLocator() {
           address: "Kleber Kaserne, Kaiserslautern, Germany",
           phone: "+49 61114 3541 5100",
           website: "https://europe.uso.org/kaiserslautern/",
-          category: "Employment"
+          category: "Employment",
+          targetAudience: "veteran"
         },
         {
           name: "Veterans Crisis Line - Europe",
@@ -187,19 +192,32 @@ export default function ResourceLocator() {
           address: "Ramstein Air Base, 66877 Ramstein-Miesenbach, Germany",
           phone: "Europe: 844-702-5495 or DSN 988",
           website: "https://www.veteranscrisisline.net/get-help/european-support",
-          category: "Crisis"
+          category: "Crisis",
+          targetAudience: "veteran"
+        }
+      ],
+      publicResources: [
+        {
+          name: "Telefonseelsorge - German Crisis Line",
+          description: "Free 24/7 crisis counseling service available to all residents of Germany",
+          address: "Nationwide Service",
+          phone: "0800 111 0 111 or 0800 111 0 222",
+          website: "https://www.telefonseelsorge.de/",
+          category: "Crisis",
+          targetAudience: "public"
         }
       ]
     },
     "Japan": {
-      resources: [
+      veteranResources: [
         {
           name: "U.S. Naval Hospital Yokosuka",
           description: "Medical support for veterans in Japan",
           address: "United States Fleet Activities Yokosuka, Japan",
           phone: "+81 46 816 5600",
           website: "https://yokosuka.tricare.mil/",
-          category: "VA"
+          category: "VA",
+          targetAudience: "veteran"
         },
         {
           name: "Foreign Medical Program (FMP) - Japan",
@@ -207,7 +225,8 @@ export default function ResourceLocator() {
           address: "PO Box 200, Spring City, PA 19475, USA",
           phone: "Japan Toll-Free: 00531-13-0871",
           website: "https://www.va.gov/health-care/foreign-medical-program/",
-          category: "VA"
+          category: "VA",
+          targetAudience: "veteran"
         },
         {
           name: "Veterans of Foreign Wars - Post 1054",
@@ -215,7 +234,8 @@ export default function ResourceLocator() {
           address: "Building 6002, Yokosuka Naval Base, Japan",
           phone: "+81 46 896 5801",
           website: "https://vfwpacific.org/di/vfw/v2/default.asp",
-          category: "Housing"
+          category: "Housing",
+          targetAudience: "veteran"
         },
         {
           name: "Meguro Counseling Center - Tokyo",
@@ -223,7 +243,8 @@ export default function ResourceLocator() {
           address: "Meguro, Tokyo, Japan",
           phone: "+81 3 5431 3096",
           website: "https://megurocounseling.com/",
-          category: "Treatment"
+          category: "Treatment",
+          targetAudience: "veteran"
         },
         {
           name: "USO Okinawa",
@@ -231,7 +252,8 @@ export default function ResourceLocator() {
           address: "Building 217, Kadena Air Base, Okinawa, Japan",
           phone: "+81 98 970 7788",
           website: "https://okinawa.uso.org/",
-          category: "Employment"
+          category: "Employment",
+          targetAudience: "veteran"
         },
         {
           name: "Veterans Crisis Line - Pacific",
@@ -239,19 +261,32 @@ export default function ResourceLocator() {
           address: "Accessible throughout Japan",
           phone: "Pacific Region: 844-702-5493 or DSN 988",
           website: "https://www.veteranscrisisline.net/get-help/",
-          category: "Crisis"
+          category: "Crisis",
+          targetAudience: "veteran"
+        }
+      ],
+      publicResources: [
+        {
+          name: "TELL Japan - Mental Health Support",
+          description: "English-language mental health counseling and crisis support available to all residents",
+          address: "Tokyo, Japan",
+          phone: "+81 3 5774 0992",
+          website: "https://telljp.com/",
+          category: "Crisis",
+          targetAudience: "public"
         }
       ]
     },
     "South Korea": {
-      resources: [
+      veteranResources: [
         {
           name: "Brian D. Allgood Army Community Hospital",
           description: "Comprehensive medical care for active-duty, retirees, and families (formerly 121st Combat Support Hospital)",
           address: "USAG Humphreys, Pyeongtaek, South Korea",
           phone: "+82 2 7917 3155",
           website: "https://briandallgood.tricare.mil/",
-          category: "VA"
+          category: "VA",
+          targetAudience: "veteran"
         },
         {
           name: "Foreign Medical Program (FMP) - South Korea",
@@ -259,7 +294,8 @@ export default function ResourceLocator() {
           address: "PO Box 200, Spring City, PA 19475, USA",
           phone: "Main: +1-833-930-0816 or U.S./Canada Toll-Free: 877-345-8179",
           website: "https://www.va.gov/health-care/foreign-medical-program/",
-          category: "VA"
+          category: "VA",
+          targetAudience: "veteran"
         },
         {
           name: "Veterans of Foreign Wars - Post 10223",
@@ -267,7 +303,8 @@ export default function ResourceLocator() {
           address: "Anjeong-ri, near Camp Humphreys, Pyeongtaek, South Korea",
           phone: "+82 31 691 9900",
           website: "https://www.vfw10223.org/",
-          category: "Housing"
+          category: "Housing",
+          targetAudience: "veteran"
         },
         {
           name: "Army Substance Abuse Program (ASAP) - USAG Humphreys",
@@ -275,7 +312,8 @@ export default function ResourceLocator() {
           address: "USAG Humphreys, Pyeongtaek, South Korea",
           phone: "+82 2 7913 3445",
           website: "https://crg.health.mil/",
-          category: "Treatment"
+          category: "Treatment",
+          targetAudience: "veteran"
         },
         {
           name: "Military OneSource - Camp Humphreys",
@@ -283,7 +321,8 @@ export default function ResourceLocator() {
           address: "USAG Camp Humphreys, Pyeongtaek, South Korea",
           phone: "+82 31 690 7311",
           website: "https://www.militaryonesource.mil/",
-          category: "Employment"
+          category: "Employment",
+          targetAudience: "veteran"
         },
         {
           name: "Veterans Crisis Line - Pacific",
@@ -291,12 +330,24 @@ export default function ResourceLocator() {
           address: "Accessible throughout South Korea",
           phone: "Pacific Region: 844-702-5493 or DSN 988",
           website: "https://www.veteranscrisisline.net/get-help/",
-          category: "Crisis"
+          category: "Crisis",
+          targetAudience: "veteran"
+        }
+      ],
+      publicResources: [
+        {
+          name: "Korea Mental Health Helpline",
+          description: "24/7 mental health support line available to all residents of South Korea",
+          address: "Nationwide Service",
+          phone: "1393",
+          website: "https://www.moh.go.kr/eng/",
+          category: "Crisis",
+          targetAudience: "public"
         }
       ]
     },
     "United Kingdom": {
-      resources: [
+      veteranResources: [
         {
           name: "RAF Lakenheath Hospital (48th Medical Group)",
           description: "Medical care for U.S. military personnel, families, and eligible veterans stationed in the UK",
@@ -380,7 +431,7 @@ export default function ResourceLocator() {
       ]
     },
     "Italy": {
-      resources: [
+      veteranResources: [
         {
           name: "U.S. Naval Hospital Naples",
           description: "Comprehensive medical care for active-duty service members, retirees, and their families",
@@ -448,7 +499,7 @@ export default function ResourceLocator() {
       ]
     },
     "Thailand": {
-      resources: [
+      veteranResources: [
         {
           name: "U.S. Embassy Bangkok - Veterans Affairs",
           description: "Information on applying for VA benefits and assistance for U.S. veterans in Thailand",
@@ -556,7 +607,7 @@ export default function ResourceLocator() {
       ]
     },
     "Vietnam": {
-      resources: [
+      veteranResources: [
         {
           name: "U.S. Embassy & Consulate Services - Vietnam",
           description: "Assistance with Veterans Affairs benefits, claims processing, and information on available services",
@@ -608,7 +659,7 @@ export default function ResourceLocator() {
       ]
     },
     "Australia": {
-      resources: [
+      veteranResources: [
         {
           name: "U.S. Consulate General - Sydney",
           description: "Consular services including assistance with Federal Benefits Unit (FBU) claims and medical referrals",
@@ -676,7 +727,7 @@ export default function ResourceLocator() {
       ]
     },
     "New Zealand": {
-      resources: [
+      veteranResources: [
         {
           name: "Foreign Medical Program (FMP) - New Zealand",
           description: "Provides healthcare benefits to U.S. veterans with VA-rated, service-connected conditions residing in New Zealand",
@@ -752,7 +803,7 @@ export default function ResourceLocator() {
       ]
     },
     "France": {
-      resources: [
+      veteranResources: [
         {
           name: "Foreign Medical Program (FMP) - France",
           description: "Provides healthcare benefits to U.S. veterans with VA-rated, service-connected conditions residing in France",
@@ -812,7 +863,7 @@ export default function ResourceLocator() {
       ]
     },
     "Portugal": {
-      resources: [
+      veteranResources: [
         {
           name: "U.S. Embassy Lisbon",
           description: "Provides assistance with information related to the Foreign Medical Program (FMP) and other consular services for U.S. veterans",
@@ -856,7 +907,7 @@ export default function ResourceLocator() {
       ]
     },
     "Belgium": {
-      resources: [
+      veteranResources: [
         {
           name: "U.S. Embassy Brussels",
           description: "Provides assistance with FMP-related inquiries and other consular services for veterans",
@@ -900,7 +951,7 @@ export default function ResourceLocator() {
       ]
     },
     "Greece": {
-      resources: [
+      veteranResources: [
         {
           name: "Veterans Support - Athens",
           description: "FMP assistance and medical referrals",
@@ -928,7 +979,7 @@ export default function ResourceLocator() {
       ]
     },
     "Israel": {
-      resources: [
+      veteranResources: [
         {
           name: "U.S. Embassy Branch Office - Tel Aviv",
           description: "Provides assistance to veterans, including information on the Foreign Medical Program (FMP) and medical referrals",
@@ -956,7 +1007,7 @@ export default function ResourceLocator() {
       ]
     },
     "United Arab Emirates": {
-      resources: [
+      veteranResources: [
         {
           name: "U.S. Embassy - Abu Dhabi",
           description: "Provides assistance to veterans with FMP information and consular services",
@@ -992,7 +1043,7 @@ export default function ResourceLocator() {
       ]
     },
     "South Africa": {
-      resources: [
+      veteranResources: [
         {
           name: "U.S. Embassy - Pretoria",
           description: "Provides FMP assistance and medical referrals for U.S. veterans in South Africa",
@@ -1590,14 +1641,16 @@ export default function ResourceLocator() {
       ]
     },
     "Florida": {
-      resources: [
+      veteranResources: [
         {
           name: "James A. Haley Veterans' Hospital",
           description: "Comprehensive healthcare services for Veterans",
           address: "13000 Bruce B. Downs Blvd, Tampa, FL 33612",
           phone: "(813) 972-2000",
           website: "https://www.va.gov/tampa-health-care/",
-          category: "VA"
+          category: "VA",
+          zipCode: "33612",
+          targetAudience: "veteran"
         },
         {
           name: "Bay Pines VA Healthcare System",
@@ -1738,7 +1791,7 @@ export default function ResourceLocator() {
       ]
     },
     "Georgia": {
-      resources: [
+      veteranResources: [
         {
           name: "Atlanta VA Medical Center",
           description: "Comprehensive care including primary, specialty, and mental health services",
@@ -1830,7 +1883,7 @@ export default function ResourceLocator() {
       ]
     },
     "Hawaii": {
-      resources: [
+      veteranResources: [
         {
           name: "Spark M. Matsunaga VA Medical Center",
           description: "Primary and specialty care, mental health services, PTSD treatment, geriatrics, suicide prevention, and more",
@@ -1994,7 +2047,7 @@ export default function ResourceLocator() {
       ]
     },
     "Idaho": {
-      resources: [
+      veteranResources: [
         {
           name: "Boise VA Medical Center",
           description: "Primary and specialty care, mental health services, surgery, pain management, social work, vision care, and more",
@@ -2110,7 +2163,7 @@ export default function ResourceLocator() {
       ]
     },
     "Illinois": {
-      resources: [
+      veteranResources: [
         {
           name: "Jesse Brown VA Medical Center",
           description: "Comprehensive care including primary, specialty, and mental health services",
@@ -2234,7 +2287,7 @@ export default function ResourceLocator() {
       ]
     },
     "Indiana": {
-      resources: [
+      veteranResources: [
         {
           name: "Richard L. Roudebush VA Medical Center",
           description: "Primary VA healthcare facility in Indianapolis",
@@ -2302,7 +2355,7 @@ export default function ResourceLocator() {
       ]
     },
     "Iowa": {
-      resources: [
+      veteranResources: [
         {
           name: "Iowa City VA Medical Center",
           description: "Comprehensive medical, surgical, and mental health services for veterans in eastern Iowa",
@@ -2362,7 +2415,7 @@ export default function ResourceLocator() {
       ]
     },
     "Kansas": {
-      resources: [
+      veteranResources: [
         {
           name: "Robert J. Dole VA Medical Center",
           description: "Comprehensive healthcare services for veterans in southern Kansas",
@@ -2430,7 +2483,7 @@ export default function ResourceLocator() {
       ]
     },
     "Kentucky": {
-      resources: [
+      veteranResources: [
         {
           name: "Lexington VA Health Care System",
           description: "Comprehensive medical, surgical, and mental health services for Kentucky veterans",
@@ -2498,7 +2551,7 @@ export default function ResourceLocator() {
       ]
     },
     "Louisiana": {
-      resources: [
+      veteranResources: [
         {
           name: "Southeast Louisiana Veterans Health Care System",
           description: "Comprehensive healthcare services for veterans in New Orleans and surrounding areas",
@@ -2574,7 +2627,7 @@ export default function ResourceLocator() {
       ]
     },
     "Maine": {
-      resources: [
+      veteranResources: [
         {
           name: "Togus VA Medical Center",
           description: "Comprehensive medical care, including emergency services, mental health care, and specialty services",
@@ -2650,7 +2703,7 @@ export default function ResourceLocator() {
       ]
     },
     "Maryland": {
-      resources: [
+      veteranResources: [
         {
           name: "Baltimore VA Medical Center",
           description: "Comprehensive healthcare services including primary care, specialty services, and emergency care",
@@ -2734,7 +2787,7 @@ export default function ResourceLocator() {
       ]
     },
     "Massachusetts": {
-      resources: [
+      veteranResources: [
         {
           name: "Jamaica Plain VA Medical Center",
           description: "Comprehensive healthcare services including primary care, specialty care, and mental health services",
@@ -2818,7 +2871,7 @@ export default function ResourceLocator() {
       ]
     },
     "Michigan": {
-      resources: [
+      veteranResources: [
         {
           name: "John D. Dingell VA Medical Center",
           description: "Comprehensive medical care including acute medical, surgical, psychiatric, neurological, and dermatological inpatient care",
@@ -2894,7 +2947,7 @@ export default function ResourceLocator() {
       ]
     },
     "Minnesota": {
-      resources: [
+      veteranResources: [
         {
           name: "Minneapolis VA Health Care System",
           description: "Full range of services including primary care, specialty care, and mental health services",
@@ -2970,7 +3023,7 @@ export default function ResourceLocator() {
       ]
     },
     "Mississippi": {
-      resources: [
+      veteranResources: [
         {
           name: "G.V. (Sonny) Montgomery VA Medical Center",
           description: "Comprehensive medical services including primary care, specialty care, mental health services, and more",
@@ -3046,7 +3099,7 @@ export default function ResourceLocator() {
       ]
     },
     "Missouri": {
-      resources: [
+      veteranResources: [
         {
           name: "Harry S. Truman Memorial Veterans' Hospital",
           description: "Primary care and specialty health services including audiology, mental health care, cardiology, surgery, dentistry, neurology, and orthopedics",
@@ -3122,7 +3175,7 @@ export default function ResourceLocator() {
       ]
     },
     "Montana": {
-      resources: [
+      veteranResources: [
         {
           name: "Fort Harrison VA Medical Center",
           description: "Comprehensive range of health services including primary care, mental health services, and specialty care",
@@ -3198,7 +3251,7 @@ export default function ResourceLocator() {
       ]
     },
     "Nebraska": {
-      resources: [
+      veteranResources: [
         {
           name: "VA Nebraska-Western Iowa Health Care System",
           description: "VA healthcare services in Nebraska",
@@ -3210,7 +3263,7 @@ export default function ResourceLocator() {
       ]
     },
     "Nevada": {
-      resources: [
+      veteranResources: [
         {
           name: "VA Southern Nevada Healthcare System",
           description: "VA healthcare services in Nevada",
@@ -3222,7 +3275,7 @@ export default function ResourceLocator() {
       ]
     },
     "New Hampshire": {
-      resources: [
+      veteranResources: [
         {
           name: "Manchester VA Medical Center",
           description: "VA healthcare services in New Hampshire",
@@ -3234,7 +3287,7 @@ export default function ResourceLocator() {
       ]
     },
     "New Jersey": {
-      resources: [
+      veteranResources: [
         {
           name: "VA New Jersey Health Care System",
           description: "VA healthcare services in New Jersey",
@@ -3246,7 +3299,7 @@ export default function ResourceLocator() {
       ]
     },
     "New Mexico": {
-      resources: [
+      veteranResources: [
         {
           name: "Raymond G. Murphy VA Medical Center",
           description: "VA healthcare services in New Mexico",
@@ -3258,7 +3311,7 @@ export default function ResourceLocator() {
       ]
     },
     "New York": {
-      resources: [
+      veteranResources: [
         {
           name: "VA NY Harbor Healthcare System",
           description: "VA healthcare services in New York",
@@ -3270,7 +3323,7 @@ export default function ResourceLocator() {
       ]
     },
     "North Carolina": {
-      resources: [
+      veteranResources: [
         {
           name: "Durham VA Medical Center",
           description: "VA healthcare services in North Carolina",
@@ -3282,7 +3335,7 @@ export default function ResourceLocator() {
       ]
     },
     "North Dakota": {
-      resources: [
+      veteranResources: [
         {
           name: "Fargo VA Health Care System",
           description: "VA healthcare services in North Dakota",
@@ -3294,7 +3347,7 @@ export default function ResourceLocator() {
       ]
     },
     "Ohio": {
-      resources: [
+      veteranResources: [
         {
           name: "Louis Stokes Cleveland VA Medical Center",
           description: "VA healthcare services in Ohio",
@@ -3306,7 +3359,7 @@ export default function ResourceLocator() {
       ]
     },
     "Oklahoma": {
-      resources: [
+      veteranResources: [
         {
           name: "Oklahoma City VA Health Care System",
           description: "VA healthcare services in Oklahoma",
@@ -3318,7 +3371,7 @@ export default function ResourceLocator() {
       ]
     },
     "Oregon": {
-      resources: [
+      veteranResources: [
         {
           name: "VA Portland Health Care System",
           description: "Comprehensive medical services including primary and specialty care, mental health services, rehabilitation, caregiver support, and resources for homeless veterans",
@@ -3378,7 +3431,7 @@ export default function ResourceLocator() {
       ]
     },
     "Pennsylvania": {
-      resources: [
+      veteranResources: [
         {
           name: "Corporal Michael J. Crescenz VA Medical Center",
           description: "VA healthcare services in Pennsylvania",
@@ -3390,7 +3443,7 @@ export default function ResourceLocator() {
       ]
     },
     "Rhode Island": {
-      resources: [
+      veteranResources: [
         {
           name: "Providence VA Medical Center",
           description: "VA healthcare services in Rhode Island",
@@ -3402,7 +3455,7 @@ export default function ResourceLocator() {
       ]
     },
     "South Carolina": {
-      resources: [
+      veteranResources: [
         {
           name: "William Jennings Bryan Dorn VA Medical Center",
           description: "VA healthcare services in South Carolina",
@@ -3414,7 +3467,7 @@ export default function ResourceLocator() {
       ]
     },
     "South Dakota": {
-      resources: [
+      veteranResources: [
         {
           name: "Sioux Falls VA Health Care System",
           description: "Primary and specialty care, mental health, PTSD treatment, rehabilitation, palliative care, and more",
@@ -3506,7 +3559,7 @@ export default function ResourceLocator() {
       ]
     },
     "Tennessee": {
-      resources: [
+      veteranResources: [
         {
           name: "Tennessee Valley Healthcare System",
           description: "VA healthcare services in Tennessee",
@@ -3518,7 +3571,7 @@ export default function ResourceLocator() {
       ]
     },
     "Texas": {
-      resources: [
+      veteranResources: [
         {
           name: "Michael E. DeBakey VA Medical Center",
           description: "VA healthcare services in Texas",
@@ -3611,7 +3664,7 @@ export default function ResourceLocator() {
       ]
     },
     "Utah": {
-      resources: [
+      veteranResources: [
         {
           name: "VA Salt Lake City Health Care System",
           description: "VA healthcare services in Utah",
@@ -3623,7 +3676,7 @@ export default function ResourceLocator() {
       ]
     },
     "Vermont": {
-      resources: [
+      veteranResources: [
         {
           name: "White River Junction VA Medical Center",
           description: "VA healthcare services in Vermont",
@@ -3635,7 +3688,7 @@ export default function ResourceLocator() {
       ]
     },
     "Virginia": {
-      resources: [
+      veteranResources: [
         {
           name: "Richmond VA Medical Center",
           description: "Comprehensive healthcare including addiction care, mental health services, primary and specialty care, and hospice support",
@@ -3687,7 +3740,7 @@ export default function ResourceLocator() {
       ]
     },
     "Washington": {
-      resources: [
+      veteranResources: [
         {
           name: "VA Puget Sound Health Care System",
           description: "VA healthcare services in Washington",
@@ -3699,7 +3752,7 @@ export default function ResourceLocator() {
       ]
     },
     "West Virginia": {
-      resources: [
+      veteranResources: [
         {
           name: "Huntington VA Medical Center",
           description: "VA healthcare services in West Virginia",
@@ -3711,7 +3764,7 @@ export default function ResourceLocator() {
       ]
     },
     "Wisconsin": {
-      resources: [
+      veteranResources: [
         {
           name: "William S. Middleton Memorial Veterans Hospital",
           description: "VA healthcare services in Wisconsin",
@@ -3723,7 +3776,7 @@ export default function ResourceLocator() {
       ]
     },
     "Wyoming": {
-      resources: [
+      veteranResources: [
         {
           name: "Cheyenne VA Medical Center",
           description: "VA healthcare services in Wyoming",
