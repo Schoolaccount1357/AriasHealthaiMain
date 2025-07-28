@@ -45,7 +45,7 @@ export default function Home() {
           <div className="bg-gradient-to-r from-blue-50 to-green-50 rounded-xl p-6 sm:p-8 lg:p-10 border border-gray-200 shadow-lg">
             <div className="max-w-4xl mx-auto">
               <p className="text-lg sm:text-xl lg:text-2xl text-gray-800 mb-6 leading-relaxed font-medium">
-                At AriasHealth.ai, we believe that combining AI technology with peer-to-peer connection creates a powerful support system that meets veterans exactly where they are in their recovery journey.
+                At AriasHealth.ai, we believe that combining AI technology with peer-to-peer connection creates a powerful support system that meets people exactly where they are in their recovery journey.
               </p>
               
               <div className="bg-white rounded-lg p-6 shadow-inner">
