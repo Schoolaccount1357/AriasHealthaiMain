@@ -9,11 +9,11 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [location] = useLocation();
   const [activeLink, setActiveLink] = useState("/");
-  
+
   const navLinks = [
     { href: "/", label: "Home" },
+    { href: "/resource-locator", label: "Public Support" },
     { href: "/resources", label: "Veteran Resources" },
-    { href: "/resource-locator", label: "Public Support" }
   ];
 
   useEffect(() => {
@@ -45,7 +45,7 @@ export function Header() {
               <span className="-ml-3 sm:-ml-4 text-lg sm:text-xl font-semibold transition-all duration-300 group-hover:bg-clip-text group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-[#10066A] group-hover:to-[#3e64dd]" style={{ color: "#10066A" }}>AriasHealth.ai</span>
             </div>
           </Link>
-          
+
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8 text-sm font-medium">
             {navLinks.map((link) => (
@@ -65,7 +65,7 @@ export function Header() {
               </Link>
             ))}
           </nav>
-          
+
           {/* Mobile Navigation */}
           <div className="md:hidden">
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -83,6 +83,16 @@ export function Header() {
               <SheetContent side="right" className="w-80">
                 <nav aria-label="Mobile navigation menu" className="mt-8">
                   <div className="flex flex-col space-y-4">
+                    <Link href="/resource-locator">
+                      <a className="flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                        Public Support
+                      </a>
+                    </Link>
+                    <Link href="/resources">
+                      <a className="flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                        Veterans Resources
+                      </a>
+                    </Link>
                     {navLinks.map((link, index) => (
                       <Link 
                         key={link.href} 
