@@ -23,7 +23,7 @@ export function Hero() {
           src={HeroImage}
           alt="Supporting veterans through peer connection"
           className="w-full h-full object-cover"
-          style={{ objectPosition: 'center center', transform: 'scale(1.3)' }}
+          style={{ objectPosition: 'center center', transform: 'scale(1.3) scaleX(-1)' }}
         />
         
         {/* Brightened Dark Overlay - 40% lighter than original */}
