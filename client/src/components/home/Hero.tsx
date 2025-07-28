@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Phone, Globe } from "lucide-react";
 import { useResourceTracking } from "@/hooks/use-resource-tracking";
-import HeroImage from "@assets/AdobeStock_1079982482_1753584922406.jpeg";
+import HeroImage from "@assets/AdobeStock_1239437287_1753745095757.jpeg";
 
 export function Hero() {
   const { trackResourceClick } = useResourceTracking();
