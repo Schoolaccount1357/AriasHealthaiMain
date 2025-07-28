@@ -26,8 +26,7 @@ export function Hero() {
           style={{ objectPosition: 'right center' }}
         />
         
-        {/* Enhanced Dark Overlay for Better Contrast */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/40 hero-overlay"></div>
+        
         
         {/* Content Overlay - Optimized for Mobile */}
         <div className="absolute inset-0 flex items-center justify-center lg:items-end lg:justify-start pt-20 sm:pt-16 pb-24 sm:pb-28 lg:pb-20 xl:pb-24">
