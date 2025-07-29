@@ -44,7 +44,7 @@ export function Hero() {
                  style={{
                    textShadow: '1px 1px 2px rgba(0,0,0,0.8)'
                  }}>
-                Strength grows within community circles, and everyone deserves one to lean on. Willow is our digital offering designed to build steady peer support, starting with the communities that carry the heaviest loads.
+                Connect with fellow veterans who truly understand your journey. Willow provides 24/7 peer support through secure, anonymous conversations - helping you feel less isolated and more empowered in your recovery.
               </p>
               <Button 
                 onClick={scrollToEnrollmentForm}
