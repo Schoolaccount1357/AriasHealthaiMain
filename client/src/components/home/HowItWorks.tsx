@@ -30,7 +30,7 @@ export function HowItWorks() {
   ];
 
   return (
-    <section className="py-12 bg-gradient-to-b from-white to-gray-50">
+    <section className="py-12 bg-gradient-to-b from-gray-50 to-gray-100">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -49,7 +49,7 @@ export function HowItWorks() {
                 <div className="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-gray-200 transform -translate-y-1/2 z-0"></div>
               )}
               
-              <div className="relative z-10 bg-white rounded-lg p-6 shadow-lg border-t-4 border-[#4a6b45]">
+              <div className="relative z-10 backdrop-blur-sm bg-white/80 rounded-lg p-6 shadow-lg border-t-4 border-[#4a6b45]"></div>
                 <div className="mb-4 flex justify-center">
                   <div className="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center">
                     {step.icon}
@@ -70,7 +70,7 @@ export function HowItWorks() {
         </div>
 
         <div className="text-center mt-12">
-          <div className="bg-[#4a6b45] text-white px-6 py-3 rounded-lg inline-block">
+          <div className="backdrop-blur-sm bg-black/20 text-white px-6 py-3 rounded-lg inline-block border border-white/20">
             <p className="font-semibold">Privacy First • Veteran Focused • Always Free</p>
           </div>
         </div>
