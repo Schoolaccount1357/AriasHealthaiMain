@@ -3620,7 +3620,7 @@ export default function ResourceLocator() {
           description: "24/7 statewide crisis support and suicide prevention services",
           address: "Statewide Service",
           phone: "1-800-273-8255",
-          website: "https://www.in.gov/fssa/dmha/mental-health-services/crisis-services/",
+          website: "https://988indiana.org/",
           category: "Crisis",
           targetAudience: "public"
         },
@@ -5340,7 +5340,7 @@ export default function ResourceLocator() {
           description: "24/7 statewide crisis support and suicide prevention services",
           address: "Statewide Service",
           phone: "1-800-273-8255",
-          website: "https://www.dhhs.nh.gov/programs-services/mental-health-substance-use/crisis-services",
+          website: "https://www.naminh.org/crisis-lines/",
           category: "Crisis",
           targetAudience: "public"
         },
@@ -5548,7 +5548,7 @@ export default function ResourceLocator() {
           description: "24/7 statewide crisis support and suicide prevention services",
           address: "Statewide Service",
           phone: "1-800-273-8255",
-          website: "https://www.ncdhhs.gov/divisions/mental-health-developmental-disabilities-and-substance-use-services/mental-health/crisis-services",
+          website: "https://www.ncdhhs.gov/divisions/mental-health-developmental-disabilities-and-substance-use-services/crisis-services",
           category: "Crisis",
           targetAudience: "public"
         },
@@ -6651,7 +6651,7 @@ export default function ResourceLocator() {
           description: "24/7 statewide crisis support and suicide prevention services",
           address: "Statewide Service",
           phone: "1-800-273-8255",
-          website: "https://www.dhs.wisconsin.gov/mh/crisis.htm",
+          website: "https://www.dhs.wisconsin.gov/crisis/988.htm",
           category: "Crisis",
           targetAudience: "public"
         },
