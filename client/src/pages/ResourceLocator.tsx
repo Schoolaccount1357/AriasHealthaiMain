@@ -432,7 +432,7 @@ export default function ResourceLocator() {
           description: "Career advice, job placements, and training programs for veterans",
           address: "First Floor, 10 Victoria Street, London, SW1H 0NB, UK",
           phone: "+44 121 236 0058",
-          website: "https://www.forcesemployment.org.uk/",
+          website: "https://www.veteransgateway.org.uk/",
           category: "Employment"
         ,
           targetAudience: "veteran"
@@ -504,7 +504,7 @@ export default function ResourceLocator() {
           description: "Emergency communication services, financial assistance, and referral services for veterans and families",
           address: "Village Forum Building, PSC 817 Box 27, FPO AE 09622, Naples, Italy",
           phone: "+39 081 568 4788",
-          website: "https://www.redcross.org/local/overseas/italy.html",
+          website: "https://www.redcross.org/get-help/military-families",
           category: "Housing"
         ,
           targetAudience: "veteran"
@@ -2301,13 +2301,13 @@ export default function ResourceLocator() {
           targetAudience: "veteran"
         },
         {
-          name: "Veterans Resource Center - Sacramento",
-          description: "Crisis intervention and support services",
-          address: "1001 S Street, Sacramento, CA 95811",
-          phone: "(916) 393-8387",
-          website: "https://www.vetsresource.org",
+          name: "Sacramento Vet Center - VA",
+          description: "Free confidential counseling for PTSD, depression, military sexual trauma, substance abuse, and crisis intervention",
+          address: "1111 Howe Avenue, Suite 390, Sacramento, CA 95825",
+          phone: "(916) 361-8387",
+          website: "https://www.va.gov/sacramento-vet-center/",
           category: "Crisis",
-          zipCode: "95811",
+          zipCode: "95825",
           targetAudience: "veteran"
         }
       ],
