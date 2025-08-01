@@ -6897,25 +6897,7 @@ export default function ResourceLocator() {
         >
           Search Resources
         </Button>
-        
-        {/* Important Disclaimer - Always visible right under Search Resources button */}
-        <div className="mt-4 p-3 bg-slate-800 border border-slate-600 rounded-lg">
-          <div className="flex items-start">
-            <Shield className="h-4 w-4 text-white mr-2 mt-0.5 flex-shrink-0" />
-            <div>
-              <h3 className="text-sm font-semibold text-white mb-1">Important Disclaimer</h3>
-              <p className="text-white text-xs leading-relaxed mb-1">
-                <strong>External Links:</strong> Resources below link to external government agencies and nonprofits. AriasHealth.ai provides these for convenience only.
-              </p>
-              <p className="text-white text-xs leading-relaxed mb-1">
-                <strong>No Endorsement:</strong> We don't endorse or guarantee external content, accuracy, or availability.
-              </p>
-              <p className="text-white text-xs leading-relaxed">
-                <strong>Public Resources:</strong> All resources are publicly funded or nonprofit services. Verify eligibility directly with providers.
-              </p>
-            </div>
-          </div>
-        </div>
+
       </div>
 
       {(selectedState || selectedCountry) && (
