@@ -1877,12 +1877,12 @@ export default function ResourceLocator() {
         },
         {
           name: "Three Hots and A Cot",
-          description: "Transitional housing for veterans",
-          address: "2124 Old Montgomery Highway, Birmingham, AL 35216",
-          phone: "(205) 377-3779",
-          website: "https://cotsforvets.org",
+          description: "Nonprofit transitional housing serving homeless veterans with comprehensive support services",
+          address: "2124 Old Springville Rd, Birmingham, AL 35215",
+          phone: "(205) 202-5124",
+          website: "https://www.cotsforvets.org/",
           category: "Housing",
-          zipCode: "35216",
+          zipCode: "35215",
           targetAudience: "veteran"
         },
         {
@@ -1906,11 +1906,21 @@ export default function ResourceLocator() {
           targetAudience: "veteran"
         },
         {
-          name: "Alabama Veterans Crisis Center",
-          description: "24/7 crisis intervention and support",
-          address: "1721 University Boulevard, Birmingham, AL 35233",
-          phone: "(205) 212-4000",
-          website: "https://alvetscenter.org",
+          name: "Alabama Department of Veterans Affairs",
+          description: "Official state department providing benefits, services, and assistance for Alabama veterans",
+          address: "770 Washington Ave, Suite 470, Montgomery, AL 36102",
+          phone: "(334) 242-5077",
+          website: "https://va.alabama.gov/",
+          category: "VA",
+          zipCode: "36102",
+          targetAudience: "veteran"
+        },
+        {
+          name: "Veterans Crisis Line",
+          description: "24/7 confidential crisis intervention for veterans, service members, and their families nationwide",
+          address: "Nationwide Service - Available in Alabama",
+          phone: "988, Press 1 or Text 838255",
+          website: "https://www.veteranscrisisline.net/",
           category: "Crisis",
           zipCode: "35233",
           targetAudience: "veteran"
@@ -1928,12 +1938,32 @@ export default function ResourceLocator() {
           targetAudience: "public"
         },
         {
-          name: "Alabama Crisis Center",
-          description: "24/7 crisis hotline and support services for all Alabama residents",
-          address: "Crisis Hotline - Statewide",
-          phone: "211 or 1-800-273-8255",
-          website: "https://alabamacrisis.org/",
+          name: "988 Crisis Lifeline - Alabama",
+          description: "24/7 crisis support for mental health, substance use, and suicide prevention",
+          address: "Statewide Service",
+          phone: "988",
+          website: "https://988lifeline.org/",
           category: "Crisis",
+          zipCode: "35233",
+          targetAudience: "public"
+        },
+        {
+          name: "Alabama Crisis Centers",
+          description: "Six 24/7 crisis stabilization centers providing immediate mental health emergency services",
+          address: "Multiple locations: Mobile, Huntsville, Montgomery, Birmingham, Tuscaloosa, Dothan",
+          phone: "988 or local crisis center",
+          website: "https://mh.alabama.gov/crisis-centers/",
+          category: "Crisis",
+          zipCode: "35233",
+          targetAudience: "public"
+        },
+        {
+          name: "Alabama 211",
+          description: "Information and referral service connecting residents to health, housing, and social services",
+          address: "Statewide Service",
+          phone: "211",
+          website: "https://www.alabama211.org/",
+          category: "Housing",
           zipCode: "35233",
           targetAudience: "public"
         },
