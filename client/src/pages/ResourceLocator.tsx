@@ -5816,7 +5816,7 @@ export default function ResourceLocator() {
           description: "24/7 statewide crisis support and suicide prevention services",
           address: "Statewide Service",
           phone: "1-800-273-8255",
-          website: "https://www.crisis.bethoughtfull.org/",
+          website: "https://www.netcareaccess.org/",
           category: "Crisis",
           targetAudience: "public"
         },
@@ -5920,7 +5920,7 @@ export default function ResourceLocator() {
           description: "24/7 statewide crisis support and suicide prevention services",
           address: "Statewide Service",
           phone: "1-800-273-8255",
-          website: "https://bhddh.ri.gov/sections_offices/behavioral_health/crisis.php",
+          website: "https://bhddh.ri.gov/behavioral-health/mental-health/individual-and-family-information/where-get-help",
           category: "Crisis",
           targetAudience: "public"
         },
@@ -6176,7 +6176,7 @@ export default function ResourceLocator() {
           description: "24/7 statewide crisis support and suicide prevention services",
           address: "Statewide Service",
           phone: "1-855-274-7471",
-          website: "https://www.tn.gov/behavioral-health/mental-health-services/crisis-services.html",
+          website: "https://www.tn.gov/behavioral-health/crisis.html",
           category: "Crisis",
           targetAudience: "public"
         },
@@ -6289,7 +6289,7 @@ export default function ResourceLocator() {
           description: "24/7 statewide crisis support via text and phone for mental health emergencies available to all residents",
           address: "Statewide Service",
           phone: "Text HOME to 741741",
-          website: "https://www.hhs.texas.gov/services/mental-health-substance-use/crisis-services",
+          website: "https://988lifeline.org/",
           category: "Crisis",
           targetAudience: "public"
         },
@@ -6393,7 +6393,7 @@ export default function ResourceLocator() {
           description: "24/7 statewide crisis support and suicide prevention services",
           address: "Statewide Service",
           phone: "1-800-273-8255",
-          website: "https://mentalhealth.vermont.gov/services/crisis-services",
+          website: "https://gethelpvt.org/",
           category: "Crisis",
           targetAudience: "public"
         },
@@ -6495,7 +6495,7 @@ export default function ResourceLocator() {
           description: "24/7 statewide crisis support and suicide prevention services",
           address: "Statewide Service",
           phone: "1-800-273-8255",
-          website: "https://dbhds.virginia.gov/clinical-administrative-services/office-of-licensing/crisis-services/",
+          website: "https://988va.org/",
           category: "Crisis",
           targetAudience: "public"
         },
@@ -6703,7 +6703,7 @@ export default function ResourceLocator() {
           description: "24/7 statewide crisis support and suicide prevention services",
           address: "Statewide Service",
           phone: "1-800-273-8255",
-          website: "https://health.wyo.gov/behavioralhealth/crisis-services/",
+          website: "https://988lifeline.org/",
           category: "Crisis",
           targetAudience: "public"
         },
