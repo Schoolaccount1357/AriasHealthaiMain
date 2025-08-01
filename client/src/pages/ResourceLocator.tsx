@@ -4240,7 +4240,7 @@ export default function ResourceLocator() {
           description: "24/7 statewide crisis support and suicide prevention services",
           address: "Statewide Service",
           phone: "1-888-568-1112",
-          website: "https://www.crisistextline.org/",
+          website: "https://www.opportunityalliance.org/crisis",
           category: "Crisis",
           targetAudience: "public"
         },
@@ -5184,7 +5184,7 @@ export default function ResourceLocator() {
           description: "24/7 statewide crisis support and suicide prevention services",
           address: "Statewide Service",
           phone: "1-800-273-8255",
-          website: "https://dphhs.mt.gov/suicideprevention/Crisis",
+          website: "https://www.mhaofmt.org/",
           category: "Crisis",
           targetAudience: "public"
         },
@@ -5236,7 +5236,7 @@ export default function ResourceLocator() {
           description: "24/7 statewide crisis support and suicide prevention services",
           address: "Statewide Service",
           phone: "1-800-273-8255",
-          website: "https://dhhs.ne.gov/Pages/Behavioral-Health-Crisis-Services.aspx",
+          website: "https://988lifeline.org/",
           category: "Crisis",
           targetAudience: "public"
         },
@@ -5288,7 +5288,7 @@ export default function ResourceLocator() {
           description: "24/7 statewide crisis support and suicide prevention services",
           address: "Statewide Service",
           phone: "1-800-273-8255",
-          website: "https://dhhs.nv.gov/Programs/Behavioral/Crisis/",
+          website: "https://cssnv.org/",
           category: "Crisis",
           targetAudience: "public"
         },
@@ -5704,7 +5704,7 @@ export default function ResourceLocator() {
           description: "24/7 statewide crisis support and suicide prevention services",
           address: "Statewide Service",
           phone: "1-800-273-8255",
-          website: "https://oklahoma.gov/odmhsas/treatment/crisis-intervention.html",
+          website: "https://988oklahoma.com/",
           category: "Crisis",
           targetAudience: "public"
         },
