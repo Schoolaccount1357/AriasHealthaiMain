@@ -191,7 +191,7 @@ export default function ResourceLocator() {
           description: "24/7 crisis intervention services for veterans in Germany and Europe",
           address: "Ramstein Air Base, 66877 Ramstein-Miesenbach, Germany",
           phone: "Europe: 844-702-5495 or DSN 988",
-          website: "https://www.veteranscrisisline.net/get-help/european-support",
+          website: "https://www.veteranscrisisline.net/",
           category: "Crisis",
           targetAudience: "veteran"
         }
@@ -392,7 +392,7 @@ export default function ResourceLocator() {
           description: "Crisis support for U.S. veterans residing in the UK",
           address: "RAF Croughton, Nr Brackley NN13 5NQ, UK",
           phone: "+44 20 3695 0097",
-          website: "https://www.veteranscrisisline.net/get-help/european-support",
+          website: "https://www.veteranscrisisline.net/",
           category: "Crisis"
         ,
           targetAudience: "veteran"
@@ -531,10 +531,10 @@ export default function ResourceLocator() {
         },
         {
           name: "Military Crisis Line - Europe",
-          description: "24/7 confidential support to veterans in crisis",
+          description: "24/7 confidential support to veterans in crisis",  
           address: "Accessible throughout Europe",
           phone: "00800 1273 8255 (TALK)",
-          website: "https://www.veteranscrisisline.net/get-help/european-support",
+          website: "https://www.veteranscrisisline.net/",
           category: "Crisis"
         ,
           targetAudience: "veteran"
@@ -2048,7 +2048,7 @@ export default function ResourceLocator() {
           description: "24/7 crisis support for all Alaska residents",
           address: "Statewide Service",
           phone: "1-877-266-4357",
-          website: "https://alaskacrisisline.org/",
+          website: "https://carelinealaska.com/",
           category: "Crisis",
           zipCode: "99501",
           targetAudience: "public"
@@ -2689,7 +2689,7 @@ export default function ResourceLocator() {
           description: "24/7 statewide crisis hotline providing immediate mental health support and resource navigation for all residents",
           address: "Statewide Service",
           phone: "1-866-762-2237",
-          website: "https://www.flcrisisline.org/",
+          website: "https://www.floridahealth.gov/programs-and-services/prevention/mental-health/links.html",
           category: "Crisis"
         ,
           targetAudience: "veteran"
@@ -2726,11 +2726,11 @@ export default function ResourceLocator() {
           targetAudience: "public"
         },
         {
-          name: "Florida Crisis & Access Line",
+          name: "Florida Crisis & Access Line", 
           description: "24/7 statewide crisis hotline providing immediate mental health support for all residents",
           address: "Statewide Service",
           phone: "1-866-762-2237",
-          website: "https://www.flcrisisline.org/",
+          website: "https://www.floridahealth.gov/programs-and-services/prevention/mental-health/links.html",
           category: "Crisis",
           targetAudience: "public"
         },
@@ -3124,7 +3124,7 @@ export default function ResourceLocator() {
           description: "24/7 statewide crisis support and suicide prevention services",
           address: "Statewide Service",
           phone: "1-800-753-6879",
-          website: "https://www.crisislinehawaii.org/",
+          website: "https://hicares.hawaii.gov/",
           category: "Crisis",
           targetAudience: "public"
         },
