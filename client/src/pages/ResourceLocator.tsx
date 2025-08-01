@@ -6899,19 +6899,19 @@ export default function ResourceLocator() {
         </Button>
         
         {/* Important Disclaimer - Always visible right under Search Resources button */}
-        <div className="mt-6 p-4 bg-amber-50 border border-amber-200 rounded-lg">
+        <div className="mt-4 p-3 bg-slate-800 border border-slate-600 rounded-lg">
           <div className="flex items-start">
-            <Shield className="h-5 w-5 text-amber-600 mr-3 mt-0.5 flex-shrink-0" />
+            <Shield className="h-4 w-4 text-white mr-2 mt-0.5 flex-shrink-0" />
             <div>
-              <h3 className="text-base font-semibold text-amber-800 mb-2">Important Disclaimer</h3>
-              <p className="text-amber-700 text-sm leading-relaxed mb-2">
-                <strong>External Resource Links:</strong> The resources listed below are links to external websites and services operated by government agencies, healthcare providers, and nonprofit organizations. AriasHealth.ai provides these links solely as a convenience and reference.
+              <h3 className="text-sm font-semibold text-white mb-1">Important Disclaimer</h3>
+              <p className="text-white text-xs leading-relaxed mb-1">
+                <strong>External Links:</strong> Resources below link to external government agencies and nonprofits. AriasHealth.ai provides these for convenience only.
               </p>
-              <p className="text-amber-700 text-sm leading-relaxed mb-2">
-                <strong>No Endorsement or Responsibility:</strong> We do not endorse, guarantee, or assume responsibility for the content, accuracy, completeness, or availability of information on external websites. We are not responsible for the services, policies, or practices of external organizations.
+              <p className="text-white text-xs leading-relaxed mb-1">
+                <strong>No Endorsement:</strong> We don't endorse or guarantee external content, accuracy, or availability.
               </p>
-              <p className="text-amber-700 text-sm leading-relaxed">
-                <strong>Public Resources:</strong> All listed resources are publicly funded services or nonprofit organizations that provide services to the general public or eligible veterans. Please verify eligibility requirements and current availability directly with each provider.
+              <p className="text-white text-xs leading-relaxed">
+                <strong>Public Resources:</strong> All resources are publicly funded or nonprofit services. Verify eligibility directly with providers.
               </p>
             </div>
           </div>
