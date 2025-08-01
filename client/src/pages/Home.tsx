@@ -1,7 +1,7 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/home/Hero";
-import { HowItWorks } from "@/components/home/HowItWorks";
+
 import { ProgramOverview } from "@/components/home/ProgramOverview";
 import { SimpleEnrollmentForm } from "@/components/home/SimpleEnrollmentForm";
 import { PlatformPreview } from "@/components/home/PlatformPreview";
@@ -10,7 +10,7 @@ import { MVPPreview } from "@/components/home/MVPPreview";
 
 import { FAQSection } from "@/components/home/FAQSection";
 import { TrustAndSecurity } from "@/components/home/TrustAndSecurity";
-import { TrustIndicators } from "@/components/home/TrustIndicators";
+
 import { StudyInvitation } from "@/components/home/StudyInvitation";
 import { KeyFeatures } from "@/components/home/KeyFeatures";
 import { FinalCTA } from "@/components/home/FinalCTA";
@@ -39,10 +39,6 @@ export default function Home() {
 
       <main className="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-0 pb-2 sm:py-8">
         <Hero />
-
-        <HowItWorks />
-
-        <TrustIndicators />
 
         {/* Peer Support Information Section */}
         <section className="mt-8 sm:mt-12 lg:mt-16 mb-8 sm:mb-12 lg:mb-16">
