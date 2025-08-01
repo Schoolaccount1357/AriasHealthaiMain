@@ -83,16 +83,6 @@ export function Header() {
               <SheetContent side="right" className="w-80">
                 <nav aria-label="Mobile navigation menu" className="mt-8">
                   <div className="flex flex-col space-y-4">
-                    <Link href="/resource-locator">
-                      <a className="flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors">
-                        Public Support
-                      </a>
-                    </Link>
-                    <Link href="/resources">
-                      <a className="flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors">
-                        Veterans Resources
-                      </a>
-                    </Link>
                     {navLinks.map((link, index) => (
                       <Link 
                         key={link.href} 

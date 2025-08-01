@@ -49,7 +49,7 @@ export function HowItWorks() {
                 <div className="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-gray-200 transform -translate-y-1/2 z-0"></div>
               )}
               
-              <div className="relative z-10 backdrop-blur-sm bg-white/80 rounded-lg p-6 shadow-lg border-t-4 border-[#4a6b45]"></div>
+              <div className="relative z-10 backdrop-blur-sm bg-white/80 rounded-lg p-6 shadow-lg border-t-4 border-[#4a6b45]">
                 <div className="mb-4 flex justify-center">
                   <div className="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center">
                     {step.icon}
