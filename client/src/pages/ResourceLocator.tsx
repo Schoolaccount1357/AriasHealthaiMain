@@ -2069,6 +2069,86 @@ export default function ResourceLocator() {
           category: "Treatment",
           zipCode: "72201",
           targetAudience: "public"
+        },
+        {
+          name: "Arkansas Crisis Center",
+          description: "24/7 crisis support hotline and chat services for mental health emergencies",
+          address: "Statewide Service",
+          phone: "1-888-274-7472",
+          website: "https://www.arcrisis.org/",
+          category: "Crisis",
+          zipCode: "72201",
+          targetAudience: "public"
+        },
+        {
+          name: "Arkansas Mental Health Hotline",
+          description: "Free 24/7 crisis support for Arkansas residents experiencing mental health challenges",
+          address: "Statewide Service",  
+          phone: "866-903-3787",
+          website: "https://mentalhealthhotline.org/arkansas/",
+          category: "Crisis",
+          zipCode: "72201",
+          targetAudience: "public"
+        },
+        {
+          name: "Arisa Health Crisis Services",
+          description: "24/7 crisis response teams and stabilization services in Conway and Craighead County",
+          address: "Multiple locations - Conway, Craighead County",
+          phone: "800-356-3035",
+          website: "https://www.arisahealth.org/services/emergency-crisis-services",
+          category: "Crisis",
+          zipCode: "72032",
+          targetAudience: "public"
+        },
+        {
+          name: "Crisis Stabilization Unit - Pulaski County",
+          description: "Alternative to emergency rooms for mental health crises serving 6-county region",
+          address: "3001 W. Roosevelt Road, Little Rock, AR 72204",
+          phone: "(501) 340-6646",
+          website: "https://humanservices.arkansas.gov/divisions-shared-services/shared-services/office-of-substance-abuse-and-mental-health/crisis-stabilization-units/",
+          category: "Crisis",
+          zipCode: "72204",
+          targetAudience: "public"
+        },
+        {
+          name: "Crisis Stabilization Unit - Sebastian County",
+          description: "Crisis intervention alternative serving Sebastian, Crawford, Franklin, Logan, Scott, Polk counties",
+          address: "3113 South 70th Street, Fort Smith, AR 72903",
+          phone: "(479) 785-9480",
+          website: "https://humanservices.arkansas.gov/divisions-shared-services/shared-services/office-of-substance-abuse-and-mental-health/crisis-stabilization-units/",
+          category: "Crisis",
+          zipCode: "72903",
+          targetAudience: "public"
+        },
+        {
+          name: "Arkansas 211",
+          description: "Free 24/7 referral service connecting people to health and human services statewide",
+          address: "Statewide Service",
+          phone: "2-1-1",
+          website: "https://www.arkansas211.org/",
+          category: "Treatment",
+          zipCode: "72201",
+          targetAudience: "public"
+        },
+        {
+          name: "Arkansas Workforce Services",
+          description: "State employment services, job training, and workforce development programs",
+          address: "Multiple locations statewide",
+          phone: "(501) 682-2121",
+          website: "https://www.dws.arkansas.gov/",
+          category: "Employment",
+          zipCode: "72201",
+          targetAudience: "public"
+        },
+        {
+          name: "Arkansas Development Finance Authority - Housing",
+          description: "State housing assistance programs including first-time homebuyer and rental assistance",
+          address: "900 West Capitol Avenue, Little Rock, AR 72201",
+          phone: "(501) 682-5900",
+          website: "https://www.arkansas.gov/adfa/",
+          category: "Housing",
+          zipCode: "72201",
+          targetAudience: "public"
         }
       ]
     },
@@ -4187,7 +4267,7 @@ export default function ResourceLocator() {
           description: "State mental health and substance abuse services for all Maryland residents",
           address: "55 Wade Avenue, Catonsville, MD 21228",
           phone: "(410) 402-8300",
-          website: "https://bha.health.maryland.gov/",
+          website: "https://health.maryland.gov/bha/Pages/Index.aspx",
           category: "Treatment",
           targetAudience: "public"
         },
