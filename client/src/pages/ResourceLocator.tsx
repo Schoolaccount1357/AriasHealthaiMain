@@ -712,12 +712,12 @@ export default function ResourceLocator() {
           targetAudience: "veteran"
         },
         {
-          name: "Veterans First Pattaya",
-          description: "Supports veterans' mental health with personalized treatment plans addressing trauma and PTSD",
+          name: "Veterans First Healthcare & Medical Evaluation Center",
+          description: "Third-party medical clinic providing primary care and mental health services for veterans through VA Foreign Medical Program",
           address: "Pattaya, Thailand",
           phone: "+66 89 249 1646",
-          website: "https://www.facebook.com/VeteransFirstPattaya/",
-          category: "Crisis"
+          website: "https://vfhmec.com/",
+          category: "Treatment"
         ,
           targetAudience: "veteran"
         },
@@ -1262,12 +1262,12 @@ export default function ResourceLocator() {
           targetAudience: "veteran"
         },
         {
-          name: "Lajes Field - Terceira Island, Azores",
-          description: "U.S. military base with medical facilities and various support services potentially accessible to veterans",
-          address: "Lajes Field, Azores, Portugal",
-          phone: "+351 295 57 1115",
-          website: "https://www.facebook.com/LajesField/",
-          category: "Treatment"
+          name: "U.S. Embassy Lisbon - Consular Services",
+          description: "Provides assistance with Veterans Affairs benefits and medical referrals for U.S. veterans in Portugal and Azores",
+          address: "Avenida das Forças Armadas 1600-081 Lisbon, Portugal",
+          phone: "+351 21 727 3300",
+          website: "https://pt.usembassy.gov/u-s-citizen-services/",
+          category: "VA"
         ,
           targetAudience: "veteran"
         },
