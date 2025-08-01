@@ -31,9 +31,9 @@ export function Hero() {
         
         {/* Content Overlay - Optimized for Mobile */}
         <div className="absolute inset-0 flex items-center justify-center lg:items-end lg:justify-start pt-20 sm:pt-16 pb-24 sm:pb-28 lg:pb-20 xl:pb-24">
-          <div className="max-w-sm sm:max-w-lg lg:max-w-2xl ml-0 lg:ml-8 xl:ml-12 text-center lg:text-left text-white px-3 sm:px-6 lg:px-8 w-full">
-            {/* Compact Text Container - Increased saturation */}
-            <div className="backdrop-blur-sm bg-black/35 rounded-xl p-3 sm:p-4 md:p-5 shadow-xl mx-2 sm:mx-0 max-w-xl">
+          <div className="max-w-xs sm:max-w-md lg:max-w-lg ml-0 lg:ml-8 xl:ml-12 text-center lg:text-left text-white px-3 sm:px-6 lg:px-8 w-full">
+            {/* Compact Text Container - Smaller size */}
+            <div className="backdrop-blur-sm bg-black/35 rounded-xl p-2 sm:p-3 md:p-4 shadow-xl mx-2 sm:mx-0 max-w-md">
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 leading-tight text-white" 
                   style={{
                     textShadow: '2px 2px 4px rgba(0,0,0,0.8), 0 0 20px rgba(255,255,255,0.8), 0 0 40px rgba(255,255,255,0.6), 0 0 60px rgba(255,248,220,0.4)'
