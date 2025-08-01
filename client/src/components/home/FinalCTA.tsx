@@ -13,7 +13,7 @@ export function FinalCTA() {
             <div>
               <h3 className="font-semibold text-lg mb-4">AriasHealth.ai</h3>
               <p className="text-sm text-white/70 mb-4">
-                Helping people who understand each other connect. Powered by AI, guided by empathy.
+                Human support at the center. AI helps make the right connections.
               </p>
               <div className="flex space-x-3">
                 <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-white transition-colors">
