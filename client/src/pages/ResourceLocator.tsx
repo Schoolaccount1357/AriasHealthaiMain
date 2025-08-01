@@ -2105,33 +2105,33 @@ export default function ResourceLocator() {
         },
 
         {
-          name: "Arkansas Veterans Industries",
-          description: "Employment and job training for veterans",
-          address: "2200 Fort Roots Drive, North Little Rock, AR 72114",
-          phone: "(501) 257-3288",
-          website: "https://arkansasveterans.org",
+          name: "Arkansas Department of Veterans Affairs",
+          description: "Official state department providing benefits, services, and employment assistance for Arkansas veterans",
+          address: "501 Woodlane Drive, Suite 401N, Little Rock, AR 72201",
+          phone: "(501) 683-2382",
+          website: "https://www.veterans.arkansas.gov/",
           category: "Employment",
-          zipCode: "72114",
-          targetAudience: "veteran"
-        },
-        {
-          name: "Veterans Recovery Center",
-          description: "Mental health and substance abuse treatment",
-          address: "1000 Main Street, Little Rock, AR 72201",
-          phone: "(501) 372-4361",
-          website: "https://vrcarkansas.org",
-          category: "Treatment",
           zipCode: "72201",
           targetAudience: "veteran"
         },
         {
-          name: "Arkansas Veterans Crisis Line",
-          description: "24/7 crisis support and intervention",
-          address: "1200 John Barrow Rd, Little Rock, AR 72205",
-          phone: "(800) 273-8255",
-          website: "https://arkansasveteranscrisis.org",
-          category: "Crisis",
+          name: "VA Central Arkansas - Substance Use Disorder Program",
+          description: "Comprehensive substance abuse treatment and recovery programs specifically for veterans",
+          address: "4300 West Seventh Street, Little Rock, AR 72205",
+          phone: "(501) 257-1000",
+          website: "https://www.va.gov/central-arkansas-health-care/programs/substance-use-disorder-programs/",
+          category: "Treatment",
           zipCode: "72205",
+          targetAudience: "veteran"
+        },
+        {
+          name: "Veterans Crisis Line",
+          description: "24/7 confidential crisis intervention for veterans, service members, and their families nationwide",
+          address: "Nationwide Service - Available in Arkansas",
+          phone: "988, Press 1 or Text 838255",
+          website: "https://www.veteranscrisisline.net/",
+          category: "Crisis",
+          zipCode: "72201",
           targetAudience: "veteran"
         }
       ],
