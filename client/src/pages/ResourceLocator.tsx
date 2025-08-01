@@ -4920,7 +4920,7 @@ export default function ResourceLocator() {
           description: "24/7 statewide crisis support and suicide prevention services",
           address: "Statewide Service",
           phone: "1-877-210-8513",
-          website: "https://www.dmh.ms.gov/crisis-services/",
+          website: "https://www.dmh.ms.gov/help/crisis-services/",
           category: "Crisis",
           targetAudience: "public"
         },
@@ -5052,7 +5052,7 @@ export default function ResourceLocator() {
           description: "24/7 statewide crisis support and suicide prevention services",
           address: "Statewide Service",
           phone: "1-800-273-8255",
-          website: "https://dmh.missouri.gov/mental-health/mental-health-crisis-services",
+          website: "https://dmh.mo.gov/behavioral-health/treatment-services/specialized-programs/crisis-services",
           category: "Crisis",
           targetAudience: "public"
         },
@@ -5444,7 +5444,7 @@ export default function ResourceLocator() {
           description: "24/7 statewide crisis support and suicide prevention services",
           address: "Statewide Service",
           phone: "1-855-662-7474",
-          website: "https://www.nmcrisisline.com/",
+          website: "https://nmcrisisline.com/",
           category: "Crisis",
           targetAudience: "public"
         },
@@ -5496,7 +5496,7 @@ export default function ResourceLocator() {
           description: "24/7 statewide crisis support and suicide prevention services",
           address: "Statewide Service",
           phone: "1-800-273-8255",
-          website: "https://omh.ny.gov/omhweb/crisis_services/",
+          website: "https://omh.ny.gov/omhweb/bootstrap/crisis.html",
           category: "Crisis",
           targetAudience: "public"
         },
@@ -5652,7 +5652,7 @@ export default function ResourceLocator() {
           description: "24/7 statewide crisis support via text and phone",
           address: "Statewide Service",
           phone: "1-800-273-8255",
-          website: "https://mha.ohio.gov/services-providers/crisis-services",
+          website: "https://988lifeline.org/",
           category: "Crisis",
           targetAudience: "public"
         },
@@ -5972,7 +5972,7 @@ export default function ResourceLocator() {
           description: "24/7 statewide crisis support and suicide prevention services",
           address: "Statewide Service",
           phone: "1-800-273-8255",
-          website: "https://scdmh.net/mental-health-services/crisis-services/",
+          website: "https://www.scdmh.org/",
           category: "Crisis",
           targetAudience: "public"
         },
@@ -6124,7 +6124,7 @@ export default function ResourceLocator() {
           description: "24/7 statewide crisis support and suicide prevention services",
           address: "Statewide Service",
           phone: "1-800-273-8255",
-          website: "https://dss.sd.gov/behavioralhealth/crisis.aspx",
+          website: "https://sdbehavioralhealth.gov/988",
           category: "Crisis",
           targetAudience: "public"
         },
@@ -6341,7 +6341,7 @@ export default function ResourceLocator() {
           description: "24/7 statewide crisis support and suicide prevention services",
           address: "Statewide Service",
           phone: "1-800-273-8255",
-          website: "https://dsamh.utah.gov/crisis-services",
+          website: "https://988.utah.gov/",
           category: "Crisis",
           targetAudience: "public"
         },
