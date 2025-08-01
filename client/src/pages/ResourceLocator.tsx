@@ -1393,6 +1393,44 @@ export default function ResourceLocator() {
         ,
           targetAudience: "veteran"
         }
+      ],
+      publicResources: [
+        {
+          name: "Federal Public Service Health - Mental Health Belgium",
+          description: "National mental health services for Belgian residents",
+          address: "Place Victor Horta 40, 1060 Saint-Gilles, Belgium",
+          phone: "+32 2 524 97 97",
+          website: "https://www.health.belgium.be/",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "Centre de Prévention du Suicide",
+          description: "24/7 suicide prevention hotline and crisis support services",
+          address: "Rue de la Caserne 7, 1000 Brussels, Belgium",
+          phone: "0800 32 123",
+          website: "https://www.preventionsuicide.be/",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "VDAB (Flemish Employment Service)",
+          description: "Employment services and job training for residents in Flanders",
+          address: "Multiple locations in Flanders",
+          phone: "0800 30 700",
+          website: "https://www.vdab.be/",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "Flemish Housing Agency",
+          description: "Social housing and rental assistance programs in Flanders",
+          address: "Multiple locations in Flanders",
+          phone: "1700",
+          website: "https://www.wonenvlaanderen.be/",
+          category: "Housing",
+          targetAudience: "public"
+        }
       ]
     },
     "Greece": {
@@ -1426,6 +1464,44 @@ export default function ResourceLocator() {
           category: "Crisis"
         ,
           targetAudience: "veteran"
+        }
+      ],
+      publicResources: [
+        {
+          name: "Greek Ministry of Health - Mental Health Services",
+          description: "National mental health services for Greek residents",
+          address: "Aristotelous 17, 10187 Athens, Greece",
+          phone: "+30 213 216 5000",
+          website: "https://www.moh.gov.gr/",
+          category: "Treatment",
+          targetAudience: "public"
+        },
+        {
+          name: "KLIMAKA NGO - Crisis Support",
+          description: "24/7 crisis hotline and mental health support services",
+          address: "Athens, Greece",
+          phone: "1018",
+          website: "https://www.klimaka.org.gr/",
+          category: "Crisis",
+          targetAudience: "public"
+        },
+        {
+          name: "Public Employment Service (DYPA)",
+          description: "National employment services and job placement assistance",
+          address: "Multiple locations nationwide",
+          phone: "+30 210 998 9000",
+          website: "https://www.dypa.gov.gr/",
+          category: "Employment",
+          targetAudience: "public"
+        },
+        {
+          name: "Workers' Housing Organization (OEK)",
+          description: "Public housing assistance programs for Greek residents",
+          address: "Korai 4, 10564 Athens, Greece",
+          phone: "+30 210 324 4856",
+          website: "https://www.oek.gr/",
+          category: "Housing",
+          targetAudience: "public"
         }
       ]
     },
@@ -6662,6 +6738,25 @@ export default function ResourceLocator() {
         title="Public Support Resources"
         description="Access mental health and support services in your area and beyond. Select your state, enter your ZIP code, or explore international options to find public and additional resources tailored to your needs."
       />
+
+      {/* Important Disclaimer */}
+      <div className="mb-8 p-6 bg-amber-50 border border-amber-200 rounded-lg">
+        <div className="flex items-start">
+          <Shield className="h-6 w-6 text-amber-600 mr-3 mt-0.5 flex-shrink-0" />
+          <div>
+            <h3 className="text-lg font-semibold text-amber-800 mb-2">Important Disclaimer</h3>
+            <p className="text-amber-700 text-sm leading-relaxed mb-3">
+              <strong>External Resource Links:</strong> The resources listed below are links to external websites and services operated by government agencies, healthcare providers, and nonprofit organizations. AriasHealth.ai provides these links solely as a convenience and reference.
+            </p>
+            <p className="text-amber-700 text-sm leading-relaxed mb-3">
+              <strong>No Endorsement or Responsibility:</strong> We do not endorse, guarantee, or assume responsibility for the content, accuracy, completeness, or availability of information on external websites. We are not responsible for the services, policies, or practices of external organizations.
+            </p>
+            <p className="text-amber-700 text-sm leading-relaxed">
+              <strong>Public Resources:</strong> All listed resources are publicly funded services or nonprofit organizations that provide services to the general public or eligible veterans. Please verify eligibility requirements and current availability directly with each provider.
+            </p>
+          </div>
+        </div>
+      </div>
 
       <div className="bg-[#141e2f] text-white p-4 sm:p-6 rounded-lg mb-6 sm:mb-10">
         {/* Toggle between US and International */}

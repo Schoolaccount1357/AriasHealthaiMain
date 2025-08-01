@@ -106,6 +106,39 @@ export default function TermsOfService() {
           You agree not to download, copy, reproduce, distribute, or otherwise exploit any part of the Services without express permission.
         </p>
 
+        <h3 className="text-xl font-semibold mt-8 mb-4 bg-amber-50 p-4 rounded-md border-l-4 border-amber-500">7.5. External Resource Links and Third-Party Content</h3>
+        <h4 className="text-lg font-medium mt-6 mb-2">7.5.1. Disclaimer of Responsibility</h4>
+        <p className="mb-4">
+          <strong>AriasHealth.ai provides links to external websites and resources operated by government agencies, healthcare providers, nonprofit organizations, and other third parties solely as a convenience and reference for users.</strong> These external links are provided for informational purposes only.
+        </p>
+        
+        <h4 className="text-lg font-medium mt-6 mb-2">7.5.2. No Endorsement</h4>
+        <p className="mb-4">
+          <strong>We do not endorse, guarantee, or assume any responsibility for:</strong>
+        </p>
+        <ul className="list-disc pl-6 mb-4">
+          <li>The content, accuracy, completeness, or timeliness of information on external websites</li>
+          <li>The availability or continued operation of external services</li>
+          <li>The services, policies, practices, or quality of care provided by external organizations</li>
+          <li>Any outcomes or results from the use of external services</li>
+        </ul>
+        
+        <h4 className="text-lg font-medium mt-6 mb-2">7.5.3. User Responsibility</h4>
+        <p className="mb-4">
+          <strong>Users are solely responsible for:</strong>
+        </p>
+        <ul className="list-disc pl-6 mb-4">
+          <li>Verifying the accuracy and current availability of external resources</li>
+          <li>Determining their eligibility for services provided by external organizations</li>
+          <li>Contacting external providers directly to confirm services, costs, and requirements</li>
+          <li>Evaluating the suitability and safety of external services for their individual needs</li>
+        </ul>
+        
+        <h4 className="text-lg font-medium mt-6 mb-2">7.5.4. Public Resources</h4>
+        <p className="mb-4">
+          All resources listed in our Resource Locator are publicly funded services (government agencies) or nonprofit organizations that provide services to the general public or eligible veterans. We do not include proprietary or for-profit services in our resource directory.
+        </p>
+
         <h3 className="text-xl font-semibold mt-8 mb-4">8. Warranties</h3>
         <p>
           THE SERVICES ARE PROVIDED "AS IS." ARIASHEALTH.AI DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF ACCURACY, RELIABILITY, MERCHANTABILITY, NON-INFRINGEMENT, FITNESS FOR A PARTICULAR PURPOSE, OR PERFORMANCE.

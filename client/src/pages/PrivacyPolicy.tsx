@@ -142,6 +142,17 @@ export default function PrivacyPolicy() {
           We encourage users to wait until the fully secured platform is available before sharing any protected health information.
         </p>
 
+        <h3 className="text-xl font-semibold mt-8 mb-4 bg-amber-50 p-4 rounded-md border-l-4 border-amber-500">10.5. External Resource Links</h3>
+        <p className="mb-4">
+          <strong>Third-Party Resources:</strong> Our Resource Locator provides links to external websites and services operated by government agencies, healthcare providers, and nonprofit organizations. These links are provided solely for convenience and informational purposes.
+        </p>
+        <p className="mb-4">
+          <strong>No Data Sharing:</strong> We do not share your personal information with these external organizations through the links provided. Any information you choose to share with external providers is subject to their own privacy policies and practices.
+        </p>
+        <p className="mb-4">
+          <strong>User Responsibility:</strong> We are not responsible for the privacy practices, data collection, or security measures of external websites. We encourage you to review the privacy policies of any external sites before providing personal information.
+        </p>
+
         <h3 className="text-xl font-semibold mt-8 mb-4">11. Changes to this Privacy Policy</h3>
         <p>
           We may update this Privacy Policy from time to time to reflect changes in our practices or applicable laws. We encourage you to review this page periodically for the latest information. Your continued use of the service after changes are made constitutes acceptance of the revised Privacy Policy.
