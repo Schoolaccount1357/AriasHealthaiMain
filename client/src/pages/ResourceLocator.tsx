@@ -1932,7 +1932,7 @@ export default function ResourceLocator() {
           description: "State mental health services for all Alaska residents",
           address: "350 Main St, Juneau, AK 99801",
           phone: "(907) 465-3370",
-          website: "https://dhss.alaska.gov/dbh/Pages/default.aspx",
+          website: "https://health.alaska.gov/dbh",
           category: "Treatment",
           zipCode: "99801",
           targetAudience: "public"
@@ -2008,7 +2008,7 @@ export default function ResourceLocator() {
           description: "24/7 crisis support for all Arizona residents",
           address: "Statewide Service",
           phone: "1-844-746-2648",
-          website: "https://www.azcrisisresponse.org/",
+          website: "https://azcrisisresponse.org/",
           category: "Crisis",
           zipCode: "85012",
           targetAudience: "public"
@@ -2065,7 +2065,7 @@ export default function ResourceLocator() {
           description: "State mental health services for all Arkansas residents",
           address: "305 S Main St, Little Rock, AR 72201",
           phone: "(501) 682-1001",
-          website: "https://humanservices.arkansas.gov/about-dhs/division-of-behavioral-health-services/",
+          website: "https://humanservices.arkansas.gov/divisions-shared-services/aging-adult-behavioral-health-services/",
           category: "Treatment",
           zipCode: "72201",
           targetAudience: "public"
@@ -2131,7 +2131,7 @@ export default function ResourceLocator() {
           description: "State-funded mental health services for all residents including crisis intervention and substance abuse treatment",
           address: "1615 Capitol Ave, Sacramento, CA 95814",
           phone: "(916) 558-1784",
-          website: "https://www.cdph.ca.gov/Programs/CID/DMH/Pages/Mental-Health-Services.aspx",
+          website: "https://www.dhcs.ca.gov/services/Pages/MentalHealthPrograms-Svcs.aspx",
           category: "Treatment",
           zipCode: "95814",
           targetAudience: "public"
@@ -2217,7 +2217,7 @@ export default function ResourceLocator() {
           description: "State mental health services for all Colorado residents",
           address: "1575 Sherman St, Denver, CO 80203",
           phone: "(303) 866-7400",
-          website: "https://www.colorado.gov/cdhs/behavioral-health",
+          website: "https://cdhs.colorado.gov/civil-forensic-mental-health",
           category: "Treatment",
           zipCode: "80203",
           targetAudience: "public"
@@ -2535,7 +2535,7 @@ export default function ResourceLocator() {
           description: "State mental health services and crisis intervention for all Florida residents",
           address: "1317 Winewood Blvd, Tallahassee, FL 32399",
           phone: "(850) 717-4000",
-          website: "https://www.myflfamilies.com/service-programs/mental-health/",
+          website: "https://www.myflfamilies.com/services/samh/adult-mental-health",
           category: "Treatment",
           targetAudience: "public"
         },
@@ -3659,7 +3659,7 @@ export default function ResourceLocator() {
           description: "State mental health and substance abuse services for all Kansas residents",
           address: "503 S Kansas Ave, Topeka, KS 66603",
           phone: "(785) 296-3271",
-          website: "https://www.kdads.ks.gov/behavioral-health",
+          website: "https://www.kdads.ks.gov/services-programs/behavioral-health",
           category: "Treatment",
           targetAudience: "public"
         },
@@ -4045,7 +4045,7 @@ export default function ResourceLocator() {
           description: "State mental health and substance abuse services for all Maine residents",
           address: "11 State House Station, Augusta, ME 04333",
           phone: "(207) 287-2595",
-          website: "https://www.maine.gov/dhhs/samhs/",
+          website: "https://www.maine.gov/dhhs/obh/support-services/mental-health-services",
           category: "Treatment",
           targetAudience: "public"
         },
