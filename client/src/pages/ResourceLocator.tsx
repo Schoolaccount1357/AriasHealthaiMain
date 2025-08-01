@@ -1962,7 +1962,7 @@ export default function ResourceLocator() {
           description: "Information and referral service connecting residents to health, housing, and social services",
           address: "Statewide Service",
           phone: "211",
-          website: "https://www.alabama211.org/",
+          website: "https://www.211connectsalabama.org/",
           category: "Housing",
           zipCode: "35233",
           targetAudience: "public"
