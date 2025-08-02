@@ -6575,8 +6575,8 @@ export default function ResourceLocator() {
           name: "West Virginia Crisis Line",
           description: "24/7 statewide crisis support and suicide prevention services",
           address: "Statewide Service",
-          phone: "1-800-273-8255",
-          website: "https://988lifeline.org/",
+          phone: "1-844-HELP4WV",
+          website: "https://www.help4wv.com/",
           category: "Crisis",
           targetAudience: "public"
         },
