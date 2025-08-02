@@ -106,7 +106,7 @@ export default function ResourceLocator() {
           description: "National mental health programs and crisis intervention services available to all residents",
           address: "Building 1, San Lazaro Compound, Rizal Avenue, Sta. Cruz, Manila 1003",
           phone: "+63 (02) 8651-7800",
-          website: "https://doh.gov.ph/mental-health",
+          website: "https://doh.gov.ph/national-mental-health-program",
           category: "Crisis",
           targetAudience: "public"
         },
@@ -2082,7 +2082,7 @@ export default function ResourceLocator() {
           description: "Employment and job training services",
           address: "1125 W. Jackson Street, Phoenix, AZ 85007",
           phone: "(602) 340-9393",
-          website: "https://arizonastanddown.org",
+          website: "https://azhousingcoalition.org/avsa/",
           category: "Employment",
           zipCode: "85007",
           targetAudience: "veteran"
@@ -2391,7 +2391,7 @@ export default function ResourceLocator() {
           description: "Employment services and job training",
           address: "1515 Arapahoe Street, Denver, CO 80202",
           phone: "(303) 318-8850",
-          website: "https://cdle.colorado.gov/vets",
+          website: "https://cdle.colorado.gov/jobs-training/veterans",
           category: "Employment",
           zipCode: "80202",
           targetAudience: "veteran"
@@ -2493,7 +2493,7 @@ export default function ResourceLocator() {
           description: "Housing assistance and support services",
           address: "802 West Street, Wilmington, DE 19801",
           phone: "(302) 777-1800",
-          website: "https://delawareveterans.org",
+          website: "https://vets.delaware.gov/",
           category: "Housing",
           zipCode: "19801",
           targetAudience: "veteran"
@@ -2851,9 +2851,8 @@ export default function ResourceLocator() {
           description: "Skilled nursing care facility managed by the Georgia Department of Veterans Service",
           address: "1101 15th Street, Augusta, GA 30901",
           phone: "(706) 721-2531",
-          website: "https://veterans.georgia.gov/georgia-war-veterans-nursing-homes",
-          category: "Housing"
-        ,
+          website: "https://veterans.georgia.gov/services/war-veterans-homes",
+          category: "Housing",
           targetAudience: "veteran"
         },
         {
@@ -3073,9 +3072,8 @@ export default function ResourceLocator() {
           description: "Employment and training services including job search assistance, resume writing, and interview preparation",
           address: "830 Punchbowl Street, Room 329, Honolulu, HI 96813",
           phone: "(808) 586-8841",
-          website: "https://labor.hawaii.gov/jobs/vets/",
-          category: "Employment"
-        ,
+          website: "https://labor.hawaii.gov/wdd/job-seekers/vets/",
+          category: "Employment",
           targetAudience: "veteran"
         },
         {
@@ -3265,9 +3263,8 @@ export default function ResourceLocator() {
           description: "Assistance with job training, employment accommodations, and job placement",
           address: "351 Collins Road, Boise, ID 83702",
           phone: "(208) 780-1300",
-          website: "https://veterans.idaho.gov/benefits-and-services/",
-          category: "Employment"
-        ,
+          website: "https://veterans.idaho.gov/benefits-services/employment-services/",
+          category: "Employment",
           targetAudience: "veteran"
         },
         {
@@ -3276,8 +3273,7 @@ export default function ResourceLocator() {
           address: "1447 S. Tyrell Lane, Boise, ID 83706",
           phone: "(208) 746-7541",
           website: "https://www.idaholegalaid.org/node/2232/veterans-issues",
-          category: "Treatment"
-        ,
+          category: "Treatment",
           targetAudience: "veteran"
         },
         {
@@ -3285,9 +3281,8 @@ export default function ResourceLocator() {
           description: "Support in education, housing, entrepreneurship, workforce management, family, and wellness services",
           address: "Boise, ID",
           phone: "(208) 917-5612",
-          website: "https://idahoveteranschamber.org/",
-          category: "Employment"
-        ,
+          website: "https://www.idahoveterans.org/",
+          category: "Employment",
           targetAudience: "veteran"
         }
       ],
@@ -3589,9 +3584,8 @@ export default function ResourceLocator() {
           description: "Career counseling, job placement, and employment assistance",
           address: "777 N. Meridian St., Indianapolis, IN 46204",
           phone: "(844) 480-0009",
-          website: "https://www.in.gov/dva/veteran-services/employment/",
-          category: "Employment"
-        ,
+          website: "https://www.in.gov/dva/state-of-indiana-benefits-and-services/employment-assistance/",
+          category: "Employment",
           targetAudience: "veteran"
         },
         {
@@ -3813,9 +3807,8 @@ export default function ResourceLocator() {
           description: "State agency providing benefits assistance and support services",
           address: "700 SW Jackson St., Suite 1004, Topeka, KS 66603",
           phone: "(785) 296-3976",
-          website: "https://kcva.ks.gov/",
-          category: "Employment"
-        ,
+          website: "https://www.kovs.ks.gov/",
+          category: "Employment",
           targetAudience: "veteran"
         },
         {
@@ -3823,9 +3816,8 @@ export default function ResourceLocator() {
           description: "Long-term care and housing for eligible Kansas veterans",
           address: "15810 Fort Dodge Rd., Fort Dodge, KS 67843",
           phone: "(620) 227-2121",
-          website: "https://kcva.ks.gov/veteran-homes/fort-dodge-home",
-          category: "Housing"
-        ,
+          website: "https://www.kovs.ks.gov/veteran-homes/kansas-soldiers-home-fort-dodge",
+          category: "Housing",
           targetAudience: "veteran"
         },
         {
@@ -3935,9 +3927,8 @@ export default function ResourceLocator() {
           description: "State agency providing benefits assistance and support services",
           address: "1111 Louisville Road, Frankfort, KY 40601",
           phone: "(502) 564-9203",
-          website: "https://veterans.ky.gov/",
-          category: "Employment"
-        ,
+          website: "https://veterans.ky.gov/Pages/index.aspx",
+          category: "Employment",
           targetAudience: "veteran"
         },
         {
@@ -3985,7 +3976,7 @@ export default function ResourceLocator() {
           description: "State employment services including job training and career assistance for all residents",
           address: "275 E Main Street, Frankfort, KY 40621",
           phone: "(502) 564-7456",
-          website: "https://kcc.ky.gov/",
+          website: "https://dbhdid.ky.gov/",
           category: "Employment",
           targetAudience: "public"
         },
@@ -4077,9 +4068,8 @@ export default function ResourceLocator() {
           description: "Long-term care and nursing home services for Louisiana veterans",
           address: "4739 Highway 10, Jackson, LA 70748",
           phone: "(225) 634-5265",
-          website: "https://vetaffairs.la.gov/benefit/veteran-homes/",
-          category: "Housing"
-        ,
+          website: "https://vetaffairs.la.gov/benefit/la-veterans-homes/",
+          category: "Housing",
           targetAudience: "veteran"
         },
         {
@@ -4099,7 +4089,7 @@ export default function ResourceLocator() {
           description: "State mental health and substance abuse services for all Louisiana residents",
           address: "628 N 4th Street, Baton Rouge, LA 70802",
           phone: "(225) 342-9500",
-          website: "https://ldh.la.gov/page/78",
+          website: "https://ldh.la.gov/office-of-behavioral-health",
           category: "Treatment",
           targetAudience: "public"
         },
@@ -4515,7 +4505,7 @@ export default function ResourceLocator() {
           description: "State mental health services and support for all Massachusetts residents",
           address: "25 Staniford Street, Boston, MA 02114",
           phone: "(617) 626-8000",
-          website: "https://www.mass.gov/orgs/department-of-mental-health",
+          website: "https://www.mass.gov/orgs/massachusetts-department-of-mental-health",
           category: "Treatment",
           targetAudience: "public"
         },
@@ -4647,7 +4637,7 @@ export default function ResourceLocator() {
           description: "State mental health and substance abuse services for all Michigan residents",
           address: "333 S Grand Ave, Lansing, MI 48933",
           phone: "(517) 241-1970",
-          website: "https://www.michigan.gov/mdhhs/inside-mdhhs/bureaus-offices/behavioral-developmental-health-services",
+          website: "https://www.michigan.gov/mdhhs/keep-mi-healthy/mentalhealth/specialty-behavioral-health-services",
           category: "Treatment",
           targetAudience: "public"
         },
@@ -4879,9 +4869,8 @@ export default function ResourceLocator() {
           description: "Long-term care facilities specifically for Mississippi veterans",
           address: "Multiple locations across Mississippi",
           phone: "(601) 576-4850",
-          website: "https://www.msva.ms.gov/state-veterans-homes",
-          category: "Housing"
-        ,
+          website: "https://www.msva.ms.gov/homes",
+          category: "Housing",
           targetAudience: "veteran"
         },
         {
@@ -5043,7 +5032,7 @@ export default function ResourceLocator() {
           description: "State mental health and substance abuse services for all Missouri residents",
           address: "1706 E Elm Street, Jefferson City, MO 65102",
           phone: "(573) 751-4122",
-          website: "https://dmh.missouri.gov/",
+          website: "https://dmh.mo.gov/",
           category: "Treatment",
           targetAudience: "public"
         },
@@ -5124,8 +5113,7 @@ export default function ResourceLocator() {
           address: "1417 9th Street South, Suite 200, Great Falls, MT 59405",
           phone: "(406) 791-3200",
           website: "https://www.va.gov/montana-health-care/locations/great-falls-va-clinic/",
-          category: "Treatment"
-        ,
+          category: "Treatment",
           targetAudience: "veteran"
         },
         {
@@ -5134,8 +5122,7 @@ export default function ResourceLocator() {
           address: "2687 Palmer Street, Suite C, Missoula, MT 59808",
           phone: "(406) 829-5400",
           website: "https://www.va.gov/montana-health-care/locations/david-j-thatcher-va-clinic/",
-          category: "Treatment"
-        ,
+          category: "Treatment",
           targetAudience: "veteran"
         },
         {
@@ -5143,9 +5130,8 @@ export default function ResourceLocator() {
           description: "Long-term care facility for Montana veterans",
           address: "400 Veterans Drive, Columbia Falls, MT 59912",
           phone: "(406) 892-3256",
-          website: "https://dphhs.mt.gov/sltc/homelivingoptions/montanaveteranshomes/index",
-          category: "Housing"
-        ,
+          website: "https://dphhs.mt.gov/healthcarefacilities/mvh/",
+          category: "Housing",
           targetAudience: "veteran"
         },
         {
@@ -5154,8 +5140,7 @@ export default function ResourceLocator() {
           address: "1956 Mt. Majo Street, Fort Harrison, MT 59636",
           phone: "(406) 324-3740",
           website: "https://montanadma.org/montana-veterans-affairs",
-          category: "Employment"
-        ,
+          category: "Employment",
           targetAudience: "veteran"
         },
         {
@@ -5297,7 +5282,7 @@ export default function ResourceLocator() {
           description: "State employment services including job training and career assistance for all residents",
           address: "2800 E St. Louis Ave, Las Vegas, NV 89104",
           phone: "(702) 486-0100",
-          website: "https://detr.nv.gov/",
+          website: "https://detr.nv.gov/Page/Veteran_Services",
           category: "Employment",
           targetAudience: "public"
         },
@@ -5331,7 +5316,7 @@ export default function ResourceLocator() {
           description: "State mental health and substance abuse services for all New Hampshire residents",
           address: "105 Pleasant Street, Concord, NH 03301",
           phone: "(603) 271-5000",
-          website: "https://www.dhhs.nh.gov/programs-services/mental-health-substance-use",
+          website: "https://www.dhhs.nh.gov/programs-services/mental-health",
           category: "Treatment",
           targetAudience: "public"
         },
@@ -5435,7 +5420,7 @@ export default function ResourceLocator() {
           description: "State mental health and substance abuse services for all New Mexico residents",
           address: "1190 St. Francis Drive, Santa Fe, NM 87505",
           phone: "(505) 827-2658",
-          website: "https://www.nmhealth.org/about/behsu/",
+          website: "https://www.hca.nm.gov/about_the_department/behavioral_health_services_division/",
           category: "Treatment",
           targetAudience: "public"
         },
@@ -5900,8 +5885,7 @@ export default function ResourceLocator() {
           address: "830 Chalkstone Avenue, Providence, RI 02908",
           phone: "(401) 273-7100",
           website: "https://www.providence.va.gov/",
-          category: "VA"
-        ,
+          category: "VA",
           targetAudience: "veteran"
         }
       ],
@@ -5952,8 +5936,7 @@ export default function ResourceLocator() {
           address: "6439 Garners Ferry Road, Columbia, SC 29209",
           phone: "(803) 776-4000",
           website: "https://www.columbia.va.gov/",
-          category: "VA"
-        ,
+          category: "VA",
           targetAudience: "veteran"
         }
       ],
@@ -6004,8 +5987,7 @@ export default function ResourceLocator() {
           address: "2501 W 22nd St, Sioux Falls, SD 57105",
           phone: "(605) 336-3230",
           website: "https://www.va.gov/sioux-falls-health-care/",
-          category: "VA"
-        ,
+          category: "VA",
           targetAudience: "veteran"
         },
         {
@@ -6014,8 +5996,7 @@ export default function ResourceLocator() {
           address: "113 Comanche Rd, Fort Meade, SD 57741",
           phone: "(605) 347-2511",
           website: "https://www.va.gov/black-hills-health-care/locations/fort-meade-va-medical-center/",
-          category: "VA"
-        ,
+          category: "VA",
           targetAudience: "veteran"
         },
         {
@@ -6024,8 +6005,7 @@ export default function ResourceLocator() {
           address: "500 N 5th St, Hot Springs, SD 57747",
           phone: "(605) 745-2000",
           website: "https://www.va.gov/black-hills-health-care/locations/hot-springs-va-medical-center/",
-          category: "VA"
-        ,
+          category: "VA",
           targetAudience: "veteran"
         },
         {
@@ -6034,8 +6014,7 @@ export default function ResourceLocator() {
           address: "3800 S Kiwanis Ave, Suite 100, Sioux Falls, SD 57105",
           phone: "(605) 330-4552",
           website: "https://www.va.gov/find-locations/facility/vc_0631V",
-          category: "Treatment"
-        ,
+          category: "Treatment",
           targetAudience: "veteran"
         },
         {
@@ -6402,7 +6381,7 @@ export default function ResourceLocator() {
           description: "State employment services including job training and career assistance for all residents",
           address: "5 Green Mountain Drive, Montpelier, VT 05601",
           phone: "(802) 828-4000",
-          website: "https://labor.vermont.gov/",
+          website: "https://labor.vermont.gov/workforce-development",
           category: "Employment",
           targetAudience: "public"
         },
