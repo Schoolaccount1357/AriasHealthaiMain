@@ -6506,8 +6506,7 @@ export default function ResourceLocator() {
           address: "1660 South Columbian Way, Seattle, WA 98108",
           phone: "(206) 762-1010",
           website: "https://www.pugetsound.va.gov/",
-          category: "VA"
-        ,
+          category: "VA",
           targetAudience: "veteran"
         }
       ],
@@ -6526,7 +6525,7 @@ export default function ResourceLocator() {
           description: "24/7 statewide crisis support and suicide prevention services",
           address: "Statewide Service",
           phone: "1-800-273-8255",
-          website: "https://988lifeline.org/",
+          website: "https://www.hca.wa.gov/free-or-low-cost-health-care/i-need-behavioral-health-support/mental-health-crisis-lines",
           category: "Crisis",
           targetAudience: "public"
         },
@@ -6558,8 +6557,7 @@ export default function ResourceLocator() {
           address: "1540 Spring Valley Drive, Huntington, WV 25704",
           phone: "(304) 429-6741",
           website: "https://www.huntington.va.gov/",
-          category: "VA"
-        ,
+          category: "VA",
           targetAudience: "veteran"
         }
       ],
