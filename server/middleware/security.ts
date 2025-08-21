@@ -4,9 +4,9 @@ import rateLimit from 'express-rate-limit';
 import slowDown from 'express-slow-down';
 
 /**
- * SANITIZED SECURITY MIDDLEWARE
- * All personal data tracking has been removed for sharing
- * Replace with your production security implementation
+ * COMPLETELY SANITIZED SECURITY MIDDLEWARE
+ * All personal data, IP tracking, and user analytics removed for sharing
+ * This is a placeholder implementation for company migration
  */
 
 /**
@@ -22,7 +22,7 @@ export function additionalSecurityHeaders(req: Request, res: Response, next: Nex
 }
 
 /**
- * Basic rate limiting (no IP tracking)
+ * Basic rate limiting (no personal data storage)
  */
 export const simpleRateLimit = rateLimit({
   windowMs: 60 * 1000, // 1 minute
@@ -30,7 +30,6 @@ export const simpleRateLimit = rateLimit({
   standardHeaders: true,
   legacyHeaders: false,
   handler: (req, res) => {
-    console.log('Rate limit exceeded');
     res.status(429).json({
       error: 'Too many requests, please try again later.'
     });
@@ -47,25 +46,15 @@ export const speedLimiter = slowDown({
 });
 
 /**
- * Basic bot detection (no data storage)
+ * Basic bot detection (no data logging)
  */
 export async function botDetection(req: Request, res: Response, next: NextFunction) {
-  // Simple check without logging personal data
-  const isSuspiciousBot = /selenium|webdriver|puppeteer|playwright|headless|zgrab|python-requests|curl|wget/i.test(req.headers['user-agent'] || '');
-  
-  if (isSuspiciousBot) {
-    // Add small delay for suspicious requests
-    setTimeout(() => {
-      next();
-    }, 500);
-    return;
-  }
-  
+  // Placeholder - implement your own bot detection
   next();
 }
 
 /**
- * Basic IP reputation check (placeholder)
+ * IP reputation check placeholder
  */
 export async function checkIpReputation(req: Request, res: Response, next: NextFunction) {
   // Placeholder - implement your own IP reputation service
@@ -73,7 +62,7 @@ export async function checkIpReputation(req: Request, res: Response, next: NextF
 }
 
 /**
- * Basic logging without personal data
+ * Basic request logging (no personal data)
  */
 export function enhancedLogging(req: Request, res: Response, next: NextFunction) {
   console.log(`${req.method} ${req.path}`);
@@ -132,32 +121,29 @@ export async function conditionalCaptcha(req: Request, res: Response, next: Next
 }
 
 /**
- * Basic form protection
+ * Placeholder form protection
  */
 export function formProtection(route = 'default') {
   return (req: Request, res: Response, next: NextFunction) => {
-    // Placeholder - implement your own brute force protection
+    // Placeholder - implement your own protection
     next();
   };
 }
 
 /**
- * Placeholder country info middleware
+ * Placeholder middleware functions
  */
 export function countryInfoMiddleware(req: Request, res: Response, next: NextFunction) {
   // Placeholder - implement your own geo detection
   next();
 }
 
-/**
- * Placeholder visitor activity logger
- */
 export async function visitorActivityLogger(req: Request, res: Response, next: NextFunction) {
   // Placeholder - implement your own analytics
   next();
 }
 
-// Export placeholder functions for compatibility
+// Placeholder export functions for compatibility
 export const logSecurityEvent = async () => {
   // Placeholder function
 };
