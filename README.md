@@ -2,13 +2,15 @@
 
 ## 🚫 NOTICE — COMPANY PROPERTY WITH PROTECTED EXCEPTIONS
 
-**All files in this repository that relate to AriasHealth.ai operations, product, or branding are the property of the company under the Confidential Information and Inventions Assignment Agreement (CIIA) and may be used for company purposes consistent with that agreement.**
+**All files in this repository that relate to AriasHealth.ai operations, product, or branding are the property of the company under the Confidential Information and Inventions Assignment Agreement (CIAA) and may be used for company purposes consistent with that agreement.**
 
-If any personal identifiable information (PII), personal notes, academic work, or sensitive data (including personal API keys, accounts, or credentials) of the original developer are inadvertently discovered in this repository, such information remains the sole property of the creator and is **not authorized for company use, storage, modification, distribution, or commercial exploitation.**
+**DOMAIN & OPERATIONAL NOTICE:** This platform and domain remain under company control until **February 29th, 2024** (or earlier upon notification), at which point Joyce S. Lee will unplug the domain and cease operational support unless alternative arrangements are made.
 
-### 🔒 Examples of Protected Personal Information (not covered by CIIA):
+If any personal identifiable information (PII), personal notes, academic work, or sensitive data (including personal API keys, accounts, or credentials) of Joyce S. Lee are inadvertently discovered in this repository, such information remains the sole property of the creator and is **not authorized for company use, storage, modification, distribution, or commercial exploitation.**
 
-- Name, email addresses, personal identifiers
+### 🔒 Examples of Protected Personal Information (not covered by CIAA):
+
+- Joyce S. Lee's email addresses, personal identifiers
 - Development methodologies, personal coding patterns, comments, or commit notes
 - Academic or creative work not specifically developed for AriasHealth.ai
 - Personal API keys, accounts, credentials, or security tokens used during early incubation
