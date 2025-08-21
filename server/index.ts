@@ -18,7 +18,7 @@ import {
   countryInfoMiddleware,
   visitorActivityLogger
 } from './middleware/security';
-import { defaultLogger } from './utils/logger';
+import { logger } from './utils/logger';
 
 // Create logs directory if it doesn't exist
 const logsDir = path.join(process.cwd(), 'logs');
