@@ -1,0 +1,96 @@
+
+import { Request, Response, NextFunction } from 'express';
+import rateLimit from 'express-rate-limit';
+import slowDown from 'express-slow-down';
+
+/**
+ * Sanitized Security Middleware
+ * Personal tracking code removed for sharing
+ */
+
+/**
+ * Basic security headers
+ */
+export function additionalSecurityHeaders(req: Request, res: Response, next: NextFunction) {
+  res.setHeader('Permissions-Policy', 'camera=self, microphone=self, geolocation=self, interest-cohort=()');
+  res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
+  res.setHeader('X-Content-Type-Options', 'nosniff');
+  res.setHeader('X-Frame-Options', 'SAMEORIGIN');
+  res.setHeader('X-XSS-Protection', '1; mode=block');
+  next();
+}
+
+/**
+ * Basic rate limiting
+ */
+export const simpleRateLimit = rateLimit({
+  windowMs: 60 * 1000, // 1 minute
+  max: 100, // Max 100 requests per minute per IP
+  standardHeaders: true,
+  legacyHeaders: false,
+  handler: (req, res) => {
+    res.status(429).json({
+      error: 'Too many requests, please try again later.'
+    });
+  }
+});
+
+/**
+ * Speed limiting
+ */
+export const speedLimiter = slowDown({
+  windowMs: 5 * 60 * 1000, // 5 minutes
+  delayAfter: 50,
+  delayMs: (hits) => hits * 50,
+});
+
+/**
+ * Basic input sanitization
+ */
+export function sanitizeInputs(req: Request, res: Response, next: NextFunction) {
+  const sanitize = (str: string): string => {
+    if (!str) return str;
+    return str
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#x27;')
+      .replace(/\//g, '&#x2F;');
+  };
+
+  if (req.query) {
+    Object.keys(req.query).forEach(key => {
+      if (typeof req.query[key] === 'string') {
+        req.query[key] = sanitize(req.query[key] as string);
+      }
+    });
+  }
+
+  if (req.is('application/json') && req.body) {
+    const sanitizeObject = (obj: any): any => {
+      const result: any = {};
+      Object.keys(obj).forEach(key => {
+        if (typeof obj[key] === 'string') {
+          result[key] = sanitize(obj[key]);
+        } else if (typeof obj[key] === 'object' && obj[key] !== null) {
+          result[key] = sanitizeObject(obj[key]);
+        } else {
+          result[key] = obj[key];
+        }
+      });
+      return result;
+    };
+
+    (req as any).sanitizedBody = sanitizeObject(req.body);
+  }
+
+  next();
+}
+
+/**
+ * Basic logging (personal data removed)
+ */
+export function basicLogging(req: Request, res: Response, next: NextFunction) {
+  console.log(`${req.method} ${req.path}`);
+  next();
+}
