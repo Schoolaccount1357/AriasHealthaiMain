@@ -4,7 +4,7 @@
 
 **All files in this repository that relate to AriasHealth.ai operations, product, or branding are the property of the company under the Confidential Information and Inventions Assignment Agreement (CIIA) and may be used for company purposes consistent with that agreement.**
 
-If any personal identifiable information (PII), personal notes, academic work, or sensitive data (including personal API keys, accounts, or credentials) of Joyce S. Lee are inadvertently discovered in this repository, such information remains the sole property of the creator and is **not authorized for company use, storage, modification, distribution, or commercial exploitation.**
+If any personal identifiable information (PII), personal notes, academic work, or sensitive data (including personal API keys, accounts, or credentials) of the original developer are inadvertently discovered in this repository, such information remains the sole property of the creator and is **not authorized for company use, storage, modification, distribution, or commercial exploitation.**
 
 ### 🔒 Examples of Protected Personal Information (not covered by CIIA):
 

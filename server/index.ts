@@ -1,7 +1,7 @@
 import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
-import { getClientIp } from 'request-ip';
+// IP tracking removed for sharing
 import helmet from "helmet";
 import path from "path";
 import fs from "fs";
@@ -20,11 +20,7 @@ import {
 } from './middleware/security';
 import { logger } from './utils/logger';
 
-// Create logs directory if it doesn't exist
-const logsDir = path.join(process.cwd(), 'logs');
-if (!fs.existsSync(logsDir)) {
-  fs.mkdirSync(logsDir, { recursive: true });
-}
+// Logs directory creation removed for sharing
 
 const app = express();
 
@@ -109,37 +105,11 @@ app.use((req, res, next) => {
   next();
 });
 
-// Log detailed information about each request
+// Basic request logging (personal data removed)
 app.use((req, res, next) => {
-  const ip = getClientIp(req) || req.ip || 'unknown';
-  const userAgent = req.headers['user-agent'] || 'unknown';
-  const referer = req.headers['referer'] || 'none';
-  
-  // Add request start time for response time calculation
-  const requestStartTime = Date.now();
-  
-  // Intercept res.end to calculate response time
-  const originalEnd = res.end;
-  res.end = function(...args) {
-    const responseTime = Date.now() - requestStartTime;
-    
-    // Only log detailed information for API routes
-    if (req.path.startsWith('/api')) {
-      defaultLogger.info({
-        type: 'REQUEST',
-        method: req.method,
-        path: req.path,
-        ip: ip,
-        userAgent: userAgent,
-        referer: referer,
-        statusCode: res.statusCode,
-        responseTime: responseTime
-      });
-    }
-    
-    return originalEnd.apply(res, args);
-  };
-  
+  if (req.path.startsWith('/api')) {
+    console.log(`${req.method} ${req.path}`);
+  }
   next();
 });
 
