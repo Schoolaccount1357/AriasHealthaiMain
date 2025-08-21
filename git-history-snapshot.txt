@@ -1,0 +1,10 @@
+4330977 Checkpoint before assistant change: Add handoff notice and checklist for project completion and transfer
+1d5c86f Assistant checkpoint: Enhanced README with merged content and protection
+b69e9e4 Assistant checkpoint: Updated README with domain deadline and attribution
+f4011dd Checkpoint before assistant change: Update security audit report with new findings and metrics
+f38dd07 Assistant checkpoint: Remove personal data references from comments
+00d5607 Checkpoint before assistant change: Update security audit report with latest findings
+37414fa Assistant checkpoint: Remove IP address and hash columns from database
+43803d7 Checkpoint before assistant change: Update audit date in security report
+99d3de0 Assistant checkpoint: Remove personal data tables from schema
+b870608 Checkpoint before assistant change: Address security audit findings by removing sensitive data
