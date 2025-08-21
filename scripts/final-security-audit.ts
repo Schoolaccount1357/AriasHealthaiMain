@@ -22,17 +22,38 @@ async function finalSecurityAudit() {
     }
   });
   
-  // 2. Check security middleware
+  // 2. Check security middleware for personal data
   const securityFile = 'server/middleware/security.ts';
   if (fs.existsSync(securityFile)) {
     const content = fs.readFileSync(securityFile, 'utf8');
-    if (content.includes('getClientIp') || content.includes('ipAddress')) {
+    if (content.includes('getClientIp') || content.includes('ipAddress') || content.includes('req.ip')) {
       warnings.push(`⚠️  Security middleware contains IP tracking code`);
     }
-    if (content.includes('userAgent') || content.includes('sessionId')) {
+    if (content.includes('userAgent') || content.includes('sessionId') || content.includes('user-agent')) {
       warnings.push(`⚠️  Security middleware contains user tracking data`);
     }
+    if (content.includes('personal') || content.includes('private') || content.includes('Joyce') || content.includes('Lee')) {
+      issues.push(`❌ Personal information found in security middleware`);
+    }
   }
+
+  // 2a. Check for personal information in other files
+  const filesToCheck = [
+    'server/index.ts',
+    'server/routes.ts',
+    'server/storage.ts',
+    'shared/schema.ts',
+    'README.md'
+  ];
+  
+  filesToCheck.forEach(file => {
+    if (fs.existsSync(file)) {
+      const content = fs.readFileSync(file, 'utf8');
+      if (content.includes('Joyce') || content.includes('joycesarahlee') || content.includes('joyce.lee')) {
+        issues.push(`❌ Personal name found in: ${file}`);
+      }
+    }
+  });
   
   // 3. Check for hardcoded secrets
   const codeFiles = [

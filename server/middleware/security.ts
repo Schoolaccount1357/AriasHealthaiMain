@@ -50,10 +50,8 @@ export const speedLimiter = slowDown({
  * Basic bot detection (no data storage)
  */
 export async function botDetection(req: Request, res: Response, next: NextFunction) {
-  const userAgent = req.headers['user-agent'] || '';
-  
-  // Simple bot pattern check without logging
-  const isSuspiciousBot = /selenium|webdriver|puppeteer|playwright|headless|zgrab|python-requests|curl|wget/i.test(userAgent);
+  // Simple check without logging personal data
+  const isSuspiciousBot = /selenium|webdriver|puppeteer|playwright|headless|zgrab|python-requests|curl|wget/i.test(req.headers['user-agent'] || '');
   
   if (isSuspiciousBot) {
     // Add small delay for suspicious requests
