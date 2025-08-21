@@ -264,7 +264,7 @@ export const visitorActivityLog = pgTable("visitor_activity_log", {
   eventData: json("event_data"), // Additional data about the event
   sessionId: varchar("session_id", { length: 255 }), // For tracking user journey
   userId: integer("user_id"), // If authenticated
-  isBotDetected: boolean("is_bot_detected").default(false), // Flag for bot traffic
+  isBotDetected: boolean("is_bot_detected").default(false), // Flag for bot detectionag for bot traffic
   botCategory: varchar("bot_category", { length: 50 }), // 'SEARCH_ENGINE', 'SCRAPER', 'UNKNOWN', etc.
   botConfidence: integer("bot_confidence"), // 0-100 confidence score
   createdAt: timestamp("created_at").defaultNow().notNull()
