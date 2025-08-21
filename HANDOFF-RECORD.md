@@ -89,4 +89,16 @@
 
 **Delivered by:** Joyce S. Lee  
 **Date:** ${new Date().toLocaleDateString()}  
-**Time:** ${new Date().toLocaleTimeString()}  
+**Time:** ${new Date().toLocaleTimeString()}
+
+## 🚨 MANDATORY NOTIFICATION REQUIREMENT
+
+Any future software engineers, developers, or technical staff who discover:
+- Missed personal data, credentials, or PII in this codebase
+- Security exposures or sensitive information
+- Personal accounts still connected to Joyce S. Lee
+- Any content not explicitly listed in the exclusions above
+
+**MUST immediately contact Joyce S. Lee before proceeding with any changes.**
+
+This requirement is legally binding and protects both the company and Joyce S. Lee from potential data exposure or legal issues.  

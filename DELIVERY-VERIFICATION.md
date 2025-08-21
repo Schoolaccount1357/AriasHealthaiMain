@@ -42,3 +42,18 @@ This documentation provides evidence that you:
 4. Established clear boundaries and timelines
 
 **Keep this record safe - it's your legal protection.**
+
+## ⚠️ FUTURE ENGINEER NOTIFICATION CLAUSE
+
+**IMPORTANT:** Any future software engineers, developers, or technical personnel who work on this codebase and discover:
+
+- Personal data, credentials, or PII that was missed during sanitization
+- Security vulnerabilities or exposure of sensitive information
+- Personal accounts, API keys, or services still connected to Joyce S. Lee
+- Any content not listed in the exclusions above
+
+**MUST immediately notify Joyce S. Lee at [your contact email] before proceeding.**
+
+This notification requirement protects both parties and ensures proper handling of any overlooked personal data or security issues. Failure to report such findings could result in legal complications.
+
+**This clause is legally binding and part of the handoff documentation.**
