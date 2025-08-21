@@ -4,8 +4,8 @@ import rateLimit from 'express-rate-limit';
 import slowDown from 'express-slow-down';
 
 /**
- * COMPLETELY SANITIZED SECURITY MIDDLEWARE
- * All personal data, IP tracking, and user analytics removed for sharing
+ * SANITIZED SECURITY MIDDLEWARE
+ * All tracking data and analytics removed for sharing
  * This is a placeholder implementation for company migration
  */
 
@@ -22,7 +22,7 @@ export function additionalSecurityHeaders(req: Request, res: Response, next: Nex
 }
 
 /**
- * Basic rate limiting (no personal data storage)
+ * Basic rate limiting (no data storage)
  */
 export const simpleRateLimit = rateLimit({
   windowMs: 60 * 1000, // 1 minute
@@ -62,7 +62,7 @@ export async function checkIpReputation(req: Request, res: Response, next: NextF
 }
 
 /**
- * Basic request logging (no personal data)
+ * Basic request logging (no data collection)
  */
 export function enhancedLogging(req: Request, res: Response, next: NextFunction) {
   console.log(`${req.method} ${req.path}`);
