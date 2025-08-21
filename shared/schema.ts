@@ -177,7 +177,6 @@ export const resourceUsage = pgTable("resource_usage", {
   resourceType: text("resource_type").notNull(), // 'call', 'text', 'chat'
   timestamp: timestamp("timestamp").defaultNow().notNull(),
   userAgent: text("user_agent"), // Store browser/device info
-  ipHash: text("ip_hash"), // Store hashed IP to avoid duplicate counting while preserving privacy
   referrer: text("referrer"), // Which page they came from
   createdAt: timestamp("created_at").defaultNow().notNull()
 });
@@ -198,7 +197,6 @@ export const stateResourceUsage = pgTable("state_resource_usage", {
   category: text("category").notNull(), // 'VA', 'Crisis', 'Treatment', 'Housing', 'Employment'
   timestamp: timestamp("timestamp").defaultNow().notNull(),
   userAgent: text("user_agent"),
-  ipHash: text("ip_hash"),
   referrer: text("referrer"),
   createdAt: timestamp("created_at").defaultNow().notNull()
 });
@@ -218,7 +216,6 @@ export const navUsage = pgTable("nav_usage", {
   value: text("value").notNull(), // what was clicked/selected
   timestamp: timestamp("timestamp").defaultNow().notNull(),
   userAgent: text("user_agent"),
-  ipHash: text("ip_hash"),
   referrer: text("referrer"),
   createdAt: timestamp("created_at").defaultNow().notNull()
 });
@@ -253,7 +250,6 @@ export type SecurityEvent = typeof securityEvents.$inferSelect;
 export const visitorActivityLog = pgTable("visitor_activity_log", {
   id: serial("id").primaryKey(),
   timestamp: timestamp("timestamp").defaultNow().notNull(),
-  ipAddress: varchar("ip_address", { length: 50 }).notNull(), // Store hashed IP for privacy
   countryCode: varchar("country_code", { length: 2 }), // Country code
   countryName: varchar("country_name", { length: 100 }), // Full country name
   city: varchar("city", { length: 100 }), // City if available
