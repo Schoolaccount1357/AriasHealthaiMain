@@ -11,7 +11,7 @@
 
 If any personal identifiable information (PII), personal notes, academic work, or sensitive data (including personal API keys, accounts, or credentials) of Joyce S. Lee are inadvertently discovered in this repository, such information remains the sole property of the creator and is **not authorized for company use, storage, modification, distribution, or commercial exploitation.**
 
-### 🔒 Examples of Protected Personal Information (not covered by CIAA):
+### 🔒 Examples of Protected Personal Information (not covered by CIIA):
 
 - Joyce S. Lee's email addresses, personal identifiers
 - Development methodologies, personal coding patterns, comments, or commit notes
