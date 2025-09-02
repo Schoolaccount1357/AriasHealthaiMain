@@ -3,7 +3,7 @@
 
 ## 🚫 NOTICE — COMPANY PROPERTY WITH PROTECTED EXCEPTIONS
 
-**All files in this repository that relate to AriasHealth.ai operations, product, or branding are the property of the company under the Confidential Information and Inventions Assignment Agreement (CIAA) and may be used for company purposes consistent with that agreement.**
+**All files in this repository that relate to AriasHealth.ai operations, product, or branding are the property of the company under the Confidential Information and Inventions Assignment Agreement (CIIA) and may be used for company purposes consistent with that agreement.**
 
 **DOMAIN & OPERATIONAL NOTICE:** This platform and domain remain under company control until **February 29th, 2024** (or earlier upon notification), at which point Joyce S. Lee will unplug the domain and cease operational support unless alternative arrangements are made.
 
@@ -20,8 +20,8 @@ If any personal identifiable information (PII), personal notes, academic work, o
 
 ### ⚖️ Disclaimer
 
-- This notice does not alter or limit AriasHealth.ai's rights under the CIAA.
-- Unauthorized use of personal, academic, or sensitive content outside the scope of the CIAA may result in legal action.
+- This notice does not alter or limit AriasHealth.ai's rights under the CIIA.
+- Unauthorized use of personal, academic, or sensitive content outside the scope of the CIIA may result in legal action.
 
 ---
 
