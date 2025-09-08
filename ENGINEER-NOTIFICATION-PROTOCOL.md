@@ -61,4 +61,4 @@ Keep a record of:
 
 **This protocol is part of the legal handoff documentation and must be followed by all technical personnel.**
 
-**Last Updated:** ${new Date().toISOString()}
+**Last Updated:** SEPT 7TH 2025
